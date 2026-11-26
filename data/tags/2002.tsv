@@ -1,0 +1,33 @@
+hash	tag	value
+3382fbb60d1	Subject	Re: [HACKERS] timestamp_part() bug?
+3382fbb60d1	Date	Sat, 02 Mar 2002 11:29:53 +0900
+7ab74673181	prime	I chose 256 instead of 257). This allows the catcache to lookup
+d5e99ab4d67	support	drop, alter, rename commands work for tables in non-default
+3767970cbf2	variables	JOIN/ON should allow references to contained JOINs.
+dd4ca824cc9	BAD	INSERT INTO tab (col1, col2) VALUES ('val1');
+dd4ca824cc9	GOOD	INSERT INTO tab (col1, col2) VALUES ('val1', 'val2');
+7312c19ab5a	ERROR	ExecInsert: rejected due to CHECK constraint insert_con
+7312c19ab5a	ERROR	ExecInsert: rejected due to CHECK constraint "insert_con" on
+a6c76819973	ERROR	parser: parse error at or near ";"
+a6c76819973	ERROR	current transaction is aborted, queries ignored until end of
+a6c76819973	ERROR	parser: parse error at or near ";"
+a6c76819973	WARNING	current transaction is aborted, queries ignored until end
+46aaa5dda3a	ERROR	data type newint has no default operator class for access method
+54124240ae4	ERROR	parser: parse error at or near "frum" at character 10
+54124240ae4	ERROR	parse: parse error at end of input
+6ebc90b0455	NB	full recompile is recommended due to changes of Node type numbers.
+d86dee3eddf	ERROR	Requested length too large
+d86dee3eddf	ERROR	Requested length too large
+fbb1966cf31	ERROR	index named "foo" already exists
+dc4e983ff6f	ERROR	Cannot display a value of type RECORD
+f490dbe5946	ERROR	infinite recursion detected
+ac355d558e2	doing	it failed for cases where B depends on C while both auto-depend
+9a2e9c68044	Subject	Suggested change to pgbench
+9a2e9c68044	From	Tom Lane <tgl@sss.pgh.pa.us>
+9a2e9c68044	To	Tatsuo Ishii <t-ishii@sra.co.jp>
+9a2e9c68044	Cc	pgsql-patches@postgreSQL.org
+9a2e9c68044	Date	Sun, 06 Oct 2002 12:37:27 -0400
+89caf56b863	aggregates	tuple_fraction has to be adjusted before passing it to
+f68f11928d5	operations	make sure we use operators that are compatible, as determined
+8fc86dd593b	CREDITS	The KAME Project  (Initial patch) Nigel Kukard  <nkukard@lbsd.net> Johan Jordaan  <johanj@lando.co.za>
+a0fa0117a5a	computation	reduce the bucket number mod nbatch.  This changes the

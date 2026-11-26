@@ -1,0 +1,23 @@
+hash	tag	value
+98f27aaef34	CVE-2007-4769	Inadequate check on the range of backref numbers allows
+98f27aaef34	CVE-2007-4772	Infinite loop in regex optimizer for pattern '($|^)*'.
+98f27aaef34	CVE-2007-6067	Very slow optimizer cleanup for regex with a large NFA
+98f27aaef34	Security	CVE-2007-4769, CVE-2007-4772, CVE-2007-6067
+eedb068c0a7	Security	CVE-2007-6600
+919c9f6ccee	Security	CVE-2007-6601
+019fac777df	Security	CVE-2007-4769, CVE-2007-4772, CVE-2007-6067, CVE-2007-6600, CVE-2007-6601
+2bf121e40b9	Security	CVE-2007-4769, CVE-2007-4772, CVE-2007-6067, CVE-2007-6600, CVE-2007-6601
+6a6522529fb	changes	we have to reject candidate mergejoin clauses if either side was
+f78611bba4b	Message-ID	<a595de7a0801060326qbfc790ax2a60573043c2e2be@mail.gmail.com>
+8dd6c4b4bef	programs	use puts with a compile-time-constant string.
+a7b7b07af34	Author	Robert Lor <Robert.Lor@sun.com>
+6f093f3825d	Author	Bernd Helmle <mailings@oopsware.de>
+e1bdd07c3c3	Author	Euler Taveira de Oliveira <euler@timbira.com>
+d4af2a64816	joins	it's the fraction of the left input that has (at least one) match
+11f53b1063e	Author	Michelle Caisse <Michelle.Caisse@Sun.COM>
+dad4cb62583	Note	I removed nodeFunctionscan's mark/restore support, instead of bothering
+34f89cb4af8	tuplestore	in READFILE state tuplestore_select_read_pointer must
+79d306c84ab	Author	Julius Stroffek <Julius.Stroffek@Sun.COM>
+84aa797292f	Author	Robert Haas <robertmhaas@gmail.com>
+254aecb7047	Author	Robert Haas <robertmhaas@gmail.com>
+f426fbf746c	Author	Garick Hamlin <ghamlin@isc.upenn.edu>

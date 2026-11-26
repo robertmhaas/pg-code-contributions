@@ -1,0 +1,43 @@
+hash	tag	value
+8cf82ac53e9	Closes	#6366
+7064fd06489	Author	Alexander Shulgin
+3b11247aadf	Author	Nikhil Sontakke
+74ab96a45ef	Author	Kevin Grittner
+08146775acd	Author	Noah Misch
+b2e431a4db8	Author	Gabriele Bartolini
+b2e431a4db8	Reviewer	Josh Kupershmidt
+0c88086df3f	Author	Lionel Elie Mamane
+891e6e7bfd9	Security	CVE-2012-0866
+077711c2e3e	Security	CVE-2012-0867
+89e0bac86db	Security	CVE-2012-0868
+b2ce60703ab	Security	CVE-2012-0866, CVE-2012-0867, CVE-2012-0868
+cb3a7c2b95a	Author	Noah Misch
+41e3c94cac0	Author	Noah Misch
+dd4134ea56c	misguided	there is no reason to expect that EquivalenceClass child members
+814e08e895a	Author	Alex Hunsaker
+9d23a70d513	Author	Joachim Wieland
+0339047bc93	Note	although this patch touches pg_proc.h, no need for catversion
+b035cb9db7a	Author	Alexander Shulgin
+09ff76fcdb2	Author	Nikhil Sontakke
+fe2534e534c	initdb	Add -T option
+fe2534e534c	oid2name	Put options in some non-random order
+11b335ac4cc	Author	Josh Kupershmidt
+3ff15883b1b	Note	This makes SQL_ASCII to behave more leniently. We used to map
+17351fce4e0	Security	CVE-2012-3489
+adc97d03b92	Security	CVE-2012-3488
+46c508fbcf9	outputs	all we really need to do is reserve the PARAM_EXEC slot number,
+ae90ffada4c	Author	Josh Kupershmidt
+ff7e5b4841e	Author	KaiGai Kohei
+2164f9a1254	Author	KaiGai Kohei
+994c36e01d1	Author	KaiGai Kohei
+a66ee69add6	Author	Andres Freund
+7b583b20b1c	Author	Joel Jacobson
+f4c4335a4aa	Author	KaiGai Kohei, slightly revised by me
+04f28bdb847	Authors	Alvaro Herrera, Dimitri Fontaine
+da07a1e8565	started	right after postmaster start (in which case they mustn't ask
+da07a1e8565	data	if shared memory was requested, then all other connections are
+da07a1e8565	Author	Álvaro Herrera
+da07a1e8565	Reviewed by	KaiGai Kohei, Markus Wanner, Andres Freund,
+eaa1f7220ae	Author	Andres Freund
+24eca7977ed	Author	Andres Freund
+5ab3af46ddd	Author	Andres Freund

@@ -1,0 +1,1061 @@
+hash	tag	value
+efa318bcfac	Author	Adam Brightwell
+abb1733922f	Author	Marko Tiikkaja
+a967613911f	Author	Michael Paquier
+a967613911f	Backpatch	all supported branches
+b1a9bad9e74	Author	Michael Paquier
+b1a9bad9e74	Reviewer	Haribabu Kommi
+e9282e95320	Author	Michael Paquier
+c618e1b5067	From	Petr Jelinek <petr@2ndquadrant.com>
+948c97958bf	Author	Tomáš Vondra
+948c97958bf	Review	Peter Geoghegan
+c8642d909fd	Author	Michael Paquier
+c8642d909fd	Review	Noah Misch
+d0f2f53cd6f	From	Andreas Karlsson <andreas@proxel.se>
+6ae4c8de00c	From	Andreas Karlsson <andreas@proxel.se>
+8bea3d22198	Author	Fabien Coelho
+8bea3d22198	Review	Michaël Paquier, Álvaro Herrera
+7f46eaf0354	Discussion	CAMkU=1x8zFkpfnozXyt40zmR3Ub_kHu58LtRmwHUKRgQss7=iQ@mail.gmail.com
+e37483857dc	Backpatch-to	9.5.
+80db1ca2d79	Patch-by	Filip Rembiałkowski
+80db1ca2d79	Reviewed-by	Robert Haas
+80db1ca2d79	Backpatch-through	9.5
+c35c4ec4544	Patch-by	Oleksandr Shulgin
+c35c4ec4544	Reviewed-by	Craig Ringer and Fujii Masao
+c35c4ec4544	Backpatch-through	9.4 where logical decoding was introduced
+b6037664960	Author	Fabien Coelho
+b6037664960	Reviewed-by	Michael Paquier, Álvaro Herrera
+b319356f0e9	Author	Ildus Kurbangaliev
+b319356f0e9	Reviewed-by	Amit Kapila, Robert Haas
+2251179e6ad	Author	Amit Kapila
+2251179e6ad	Reviewed-by	Alexander Korotkov, Robert Haas
+e51ab85cd95	Author	Michael Paquier
+89611c4dfa6	Author	Fujii Masao
+89611c4dfa6	Reviewed-by	Michael Paquier, Masahiko Sawada
+1d0c3b3f8a9	Author	Fabien Coelho
+1d0c3b3f8a9	Reviewer	Michaël Paquier, Álvaro Herrera
+f25d07d99f4	Author	Alexander Korotkov
+f25d07d99f4	Report by	Artur Zakirov
+3cb5867b7d3	Author	Etsuro Fujita
+3cb5867b7d3	Discussion	http://www.postgresql.org/message-id/56AA0FC5.9000207@lab.ntt.co.jp
+3cb5867b7d3	Reviewed-by	David Rowley, Robert Haas
+7d17e683fcc	Reviewed-by	Pavel Stěhule <pavel.stehule@gmail.com>
+a6897efab92	Bug	#13863
+a6897efab92	Reported-By	'wrb'
+a6897efab92	Diagnosed-By	Dean Rasheed
+a6897efab92	Author	Andrew Gierth
+a6897efab92	Reviewed-By	Dean Rasheed and Andres Freund
+a6897efab92	Discussion	20160113183558.12989.56904@wrigleys.postgresql.org
+a6897efab92	Backpatch	9.5, where grouping sets were introduced
+f8a1c1d5a30	Reported-By	Tom Lane
+3bb3f42f374	Security	CVE-2016-0773
+02292845ac6	Security	CVE-2016-0773
+07d25a964b2	Author	Jim Nasby
+d03130d378b	test	once the deadlock detector fires, it's uncertain whether step s7a8 or
+db94419ffd6	Reported-By	Jeff Janes
+db94419ffd6	Discussion	https://www.postgresql.org/message-id/CAMkU=1zxKUbLPOt9hQWFp14pTc=V0cGo2GQBbn2GsK2Pu+8ZfA@mail.gmail.com
+59a884e9854	Author	Joe Conway, Bruce Momjian
+59a884e9854	Reviewed-by	Michael Paquier, Alvaro Herrera
+59a884e9854	Backpatch-through	master
+13a6fa3634a	Reported-by	Michael Paquier
+31b6606c48e	Author	Masahiko Sawada
+31b6606c48e	Reviewed-by	Michael Paquier, Fujii Masao
+db76b1efbba	Discussion	20160118163908.GW10941@awork2.anarazel.de
+5df44d14ba9	Backpatch-through	9.1.
+7975c5e0a99	Discussion	20160118163908.GW10941@awork2.anarazel.de
+597f7e3a6ec	Author	Kyotaro Horiguchi
+597f7e3a6ec	Reviewed-by	Fujii Masao
+597f7e3a6ec	Backpatch	9.2
+597f7e3a6ec	Discussion	http://www.postgresql.org/message-id/20160203.125119.66820697.horiguchi.kyotaro@lab.ntt.co.jp
+ab0757c1f1b	Reported-by	Tatsuo Ishii
+ab0757c1f1b	Backpatch-through	9.5
+3386f34cdcf	Reported-by	IRC
+3386f34cdcf	Backpatch-through	9.3, where delete script tests were added
+53874c5228f	Author	Pavel Stehule with various improvements by Vitaly Burovoy
+53874c5228f	Discussion	http://www.postgresql.org/message-id/CAFj8pRD-tGoDKnxdYgECzA4On01_uRqPrwF-8LdkSE-6bDHp0w@mail.gmail.com
+53874c5228f	Reviewed-by	Vitaly Burovoy, Oleksandr Shulgin, Kyotaro Horiguchi, Michael Paquier and Robert Haas
+ea56b06cf77	Reported-By	Takashi Horikawa
+ea56b06cf77	Discussion	73FA3881462C614096F815F75628AFCD035A48C3@BPXM01GP.gisp.nec.co.jp
+ea56b06cf77	Backpatch	9.5, where thew new ref count infrastructure was introduced
+bda0b081984	Author	Craig Ringer
+bda0b081984	Reviewed by	Michaël Paquier
+e64009303d4	Author	Craig Ringer
+e64009303d4	Reviewed by	Michaël Paquier
+89ac7004dad	Author	Michael Paquier
+49148645f7f	Author	Michaël Paquier, a bit of help from Amir Rohan
+49148645f7f	Reviewed by	Amir Rohan, Stas Kelvich, Kyotaro Horiguchi, Victor Wagner,
+49148645f7f	Discussion	http://www.postgresql.org/message-id/CAB7nPqTf7V6rswrFa=q_rrWeETUWagP=h8LX8XAov2Jcxw0DRg@mail.gmail.com
+49148645f7f	Discussion	http://www.postgresql.org/message-id/trinity-b4a8035d-59af-4c42-a37e-258f0f28e44a-1443795007012@3capp-mailcom-lxa08
+c9578135f76	Discussion	https://www.postgresql.org/message-id/20141212205254.GC1768%40alvh.no-ip.org
+41fedc24626	Bug	#13988
+41fedc24626	Reported-by	Adam Guthrie
+41fedc24626	Backpatch-to	9.4, where updatable SB views were introduced
+54638f5708e	Discussion	https://www.postgresql.org/message-id/19294.1456551587%40sss.pgh.pa.us
+1c7c189fc19	Reported-By	Slawomir Sudnik
+1c7c189fc19	Backpatch-To	9.1
+1c7c189fc19	Bug	#13894
+10b4852215a	Author	Amit Langote
+5847397deca	Author	Michael Paquier
+8d8ff5f7db7	Discussion	1456176604.17219.9.camel@jordogskog.no
+3d523564c53	LOG	could not send data to client: Broken pipe
+3d523564c53	FATAL	connection to client lost
+88802e06801	Author	Kyotaro Horiguchi
+88802e06801	Reviewed-By	Craig Ringer
+cc6077d4d54	Author	Kyotaro Horiguchi
+cc6077d4d54	Reviewed-By	Craig Ringer, Alvaro Herrera
+7c17aac69dc	Reported-By	Weiping Qu
+7c17aac69dc	Diagnosed-By	Artur Zakirov
+7c17aac69dc	Discussion	56D4197E.9050706@informatik.uni-kl.de, 56D42918.1010108@postgrespro.ru
+7c17aac69dc	Backpatch	9.5, where 5aa235042 originates.
+5bec1ad4648	Author	Craig Ringer
+7d9a4301c08	Author	Craig Ringer
+2c83f435a3d	Author	Craig Ringer. Some tweaks by Álvaro Herrera
+2c83f435a3d	Reviewed-By	Michaël Paquier
+d561f1caecb	Author	Fabien Coelho
+d561f1caecb	Reviewed-by	Michaël Paquier
+1986c3c4401	Backpatch	9.4, where logical decoding was added
+52fe6f4e02f	Author	Michaël Paquier
+52fe6f4e02f	Reviewed-by	Craig Ringer
+52fe6f4e02f	Discussion	https://www.postgresql.org/message-id/CAB7nPqRet6UAP2APhZAZw%3DVhJ6w-Q-gGLdZkrOqFgd2vc9-ZDw%40mail.gmail.com
+d78a7d9c7fa	Author	Artur Zakirov with editorization by me
+d34794f7d55	Author	Michael Paquier
+d34794f7d55	Reviewed-By	Julien Rouhaud
+d34794f7d55	Reported-By	Greg Clough
+d34794f7d55	Backpatch	9.4, where recovery_min_apply_delay was added
+d34794f7d55	Bug	#13770
+d34794f7d55	Discussion	http://www.postgresql.org/message-id/20151111155006.2644.84564@wrigleys.postgresql.org
+d9e903f3cbb	Reported-By	Jarred Ward
+d9e903f3cbb	Bug	#13844
+d9e903f3cbb	Discussion	20160105033249.1087.66040@wrigleys.postgresql.org
+d9e903f3cbb	Backpatch	9.4, where logical decoding was added
+0bda14d54cf	Backpatch	9.4, where logical decoding was added
+c8f621c43a5	Reported-By	Adam Dratwiński
+c8f621c43a5	Discussion	CAKg6ypLd7773AOX4DiOGRwQk1TVOQKhNwjYiVjJnpq8Wo+i62Q@mail.gmail.com
+2b46259b46b	Author	Guillaume Lelarge
+fd45d16f621	Backpatch	9.4, like the previous commit.
+b63bea5fd3b	Backpatch	9.4, like c8f621c43.
+6f56b41ac0c	Author	Masahiko Sawada, slightly revised by me.
+6f56b41ac0c	Discussion	20160215211313.GB31273@momjian.us
+ba0a198fb13	Discussion	56D77803.6080503@BlueTreble.com
+e66197fa2ef	Author	Alex Hunsaker
+e66197fa2ef	Reported-By	Andres Freund / valgrind / buildfarm animal skink
+e66197fa2ef	Discussion	20160308063240.usnzg6bsbjrne667@alap3.anarazel.de
+e66197fa2ef	Backpatch	9.1-
+7a1d4a2448c	Author	Andres Freund
+7a1d4a2448c	Reported-By	Andres Freund / valgrind / buildarm animal skink
+7a1d4a2448c	Backpatch	9.1-
+0d0644dce82	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+92d4294d4bb	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+a2fd62dd53f	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+a40814d7aac	From	Michael Paquier <michael.paquier@gmail.com>
+5e43bee8307	Author	Andres Freund
+5e43bee8307	Backpatch	9.4, where we started to maintain valgrind suppressions
+2f1f4439306	Author	Andres Freund
+2f1f4439306	Backpatch	9.4, where we started to maintain valgrind suppressions
+188f359d39e	Author	Jeff Janes
+a298a1e06fb	Note	the given test case doesn't actually fail in unpatched 9.1, evidently
+a31aaec4064	Authors	Craig Ringer, Pallavi Sontakke
+a31aaec4064	Reviewed-By	Álvaro Herrera
+28f6df3c367	Author	Craig Ringer
+28f6df3c367	Reviewed-By	Michael Paquier, Salvador Fandino, Álvaro Herrera
+28f6df3c367	Commitfest-URL	https://commitfest.postgresql.org/9/569/
+606e0f9841b	Author	Michael Paquier, Andres Freund
+606e0f9841b	Discussion	56583BDD.9060302@2ndquadrant.com
+606e0f9841b	Backpatch	All supported branches
+1d4a0ab19a7	Reported-By	Tomas Vondra
+1d4a0ab19a7	Author	Michael Paquier, Tomas Vondra, Andres Freund
+1d4a0ab19a7	Discussion	56583BDD.9060302@2ndquadrant.com
+1d4a0ab19a7	Backpatch	All supported branches
+9d90388247e	Author	Christian Ullrich
+a3a8309d450	Author	Álvaro Herrera
+a3a8309d450	Reported-By	Julien Rouhaud, Tom Lane
+a3a8309d450	Reviewed-By	Emre Hasegeli
+a3a8309d450	Discussion	https://www.postgresql.org/message-id/56CF604E.9000303%40dalibo.com
+a3a8309d450	Backpatch	9.5, where BRIN was introduced
+428b1d6b29c	Discussion	alpine.DEB.2.10.1506011320000.28433@sto
+428b1d6b29c	Author	Fabien Coelho and Andres Freund
+9cd00c457e6	Discussion	alpine.DEB.2.10.1506011320000.28433@sto
+9cd00c457e6	Author	Fabien Coelho and Andres Freund
+c94f0c29cec	Reported-By	Peter Eisentraut
+c94f0c29cec	Discussion	56E2239E.1050607@gmx.net
+73e7e49da3b	Discussion	20160216.184755.59721141.horiguchi.kyotaro@lab.ntt.co.jp
+73e7e49da3b	Author	Kyotaro Horiguchi
+92f03fe76fe	Author	Craig Ringer and Julien Rouhaud
+92f03fe76fe	Review	Petr Jelinek
+6943a946c7e	Author	Stas Kelvich with some editorization by me
+6943a946c7e	Reviewers	Tomas Vondram, Teodor Sigaev
+8829af47ef6	Author	Artur Zakirov
+b1fdc727c37	Author	Stas Kelvich
+7a8d8748362	Author	Julien Rouhaud
+3adf9ced17d	Author	KaiGai Kohei, adjusted by me.
+3adf9ced17d	Reviewed-by	Petr Jelinek
+3adf9ced17d	Discussion	56E0D547.1030101@2ndquadrant.com
+9a206d063c4	Author	Leonard Benedetti
+5871b88487c	Author	Artur Zakirov
+f576b17cd6b	Author	Alexander Korotkov, Artur Zakirov
+f4c454e9ba5	Reviewed-by	Andreas Karlsson <andreas@proxel.se>
+fc201dfd950	Reviewed-by	Andreas Karlsson <andreas@proxel.se>
+f4ceed6ceba	Author	Artur Zakirov with heavy editorization by me
+696684d8787	Bug	#14030
+696684d8787	Reported-By	Chris Pacejo
+3187d6de0e5	Author	Pavel Stehule with minor editorization by me and Jim Nasby
+6bc4d95fcc2	Discussion	20160114143931.GG10941@awork2.anarazel.de 20151230173734.hx7jj2fnwyljfqek@alap3.anarazel.de
+6bc4d95fcc2	Reviewed-By	Robert Haas
+c17966201c7	Discussion	20160114143931.GG10941@awork2.anarazel.de
+c17966201c7	Reviewed-By	Robert Haas
+c4901a1e03a	Discussion	CA+TgmoYc1Zm+Szoc_Qbzi92z2c1vRHZmjhfPn5uC=w8bXv6Avg@mail.gmail.com
+c4901a1e03a	Reviewed-By	Robert Haas
+b555ed81026	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+b555ed81026	Reviewed-by	David Steele <david@pgmasters.net>
+6eb2be15b5d	Reported-By	Jeff Janes
+6eb2be15b5d	Discussion	CAMkU=1zGxREwoyaCrp_CHadEB+dPgpVyKBysCJ+6xP9gCOvAuw@mail.gmail.com
+9a83564c58b	From	Christoph Berg <myon@debian.org>
+9a83564c58b	Reviewed-by	Alvaro Herrera <alvherre@alvh.no-ip.org>
+7bafffea647	Author	Fabien Coelho
+7bafffea647	Reviewed-By	Andres Freund, Robert Haas, Álvaro Herrera, Michaël Paquier
+7bafffea647	Discussion	http://www.postgresql.org/message-id/alpine.DEB.2.10.1603160721240.1666@sto
+326d73c86fd	Author	David Rowley
+326d73c86fd	Discussion	CAKJS1f_9CCi_t+LEgV5GWoCj3wjavcMoDc5qfcf_A0UwpQoPoA@mail.gmail.com
+72e2d21c124	Discussion	20160114143931.GG10941@awork2.anarazel.de
+98a64d0bd71	Reported-By	Dmitry Vasilyev Discussion:
+473b9328704	Authors	Alexander Korotkov, Petr Jelínek
+473b9328704	Reviewed-By	Teodor Sigaev, Petr Jelínek, Jim Nasby
+473b9328704	Commitfest-URL	https://commitfest.postgresql.org/9/353/
+473b9328704	Discussion	https://www.postgresql.org/message-id/CAPpHfdsXwZmojm6Dx+TJnpYk27kT4o7Ri6X_4OSWcByu1Rm+VA@mail.gmail.com
+af4472bcb88	Discussion	20150811154237.GD17575@awork2.anarazel.de
+af4472bcb88	Backpatch	All supported branches
+1a7a43672bf	Discussion	CA+TgmoZP5KakLGP6B4vUjgMBUW0woq_dJYi0paOz-My0Hwt_vQ@mail.gmail.com
+a6c845946da	Author	Michael Paquier
+a6c845946da	Reported-By	Michael Paquier
+a6c845946da	Discussion	CAB7nPqRnOw30gOXe2_SPLjh37bgm4V+txbYAPwoXb97nGQ297w@mail.gmail.com
+a6c845946da	Backpatch	9.5, where pg_rewind was introduced
+408f0438531	Reported-By	Andres Freund
+408f0438531	Author	Michael Paquier, somewhat edited by me
+408f0438531	Discussion	20160310034352.iuqgvpmg5qmnxtkz@alap3.anarazel.de CAB7nPqSytVG1o4S3S2pA1O=692ekurJ+fckW2PywEG3sNw54Ow@mail.gmail.com
+408f0438531	Backpatch	9.5, where pg_rewind was introduced
+86ebf30fd6d	Security	CVE-2016-2193
+3e1338475ff	Security	CVE-2016-3065
+4c46f83386a	Security	CVE-2016-2193, CVE-2016-3065
+37732a2555f	Author	Michaël Paquier
+cad3edef4f5	Author	Michaël Paquier
+80b986cf528	Author	Petr Jediný
+80b986cf528	Reviewed-By	Fujii Masao, Emre Hasegeli
+9bd61311bd4	Author	Craig Ringer
+61d66c44f18	Author	Artur Zakirov
+61d66c44f18	BUG	#13964
+a1c935d3b71	Author	Jeff Janes, Fabien Coelho
+ccd6eb49a4a	Author	Alexander Lebedev, Teodor Sigaev
+87545f54127	Author	Alexander Lebedev
+acdf2a8b372	Author	Alexander Lebedev with editorization by Emre Hasegeli and me
+50861cd683e	Note	this patch is by no means intended to guarantee that the geometric
+24c5f1a103c	Author	Craig Ringer
+24c5f1a103c	Reviewed-By	Oleksii Kliukin, Andres Freund, Petr Jelínek
+3501f71c21e	Author	Konstantin Knizhnik
+61608d38361	Author	Michaël Paquier
+65578341af1	Author	Alexander Korotkov with a help of Petr Jelinek, Markus Nullmeier and minor editorization by my
+65578341af1	Reviewers	Petr Jelinek, Alvaro Herrera, Teodor Sigaev, Jim Nasby, Michael Paquier
+9ee014fc899	Author	Teodor Sigaev, Alexander Korotkov
+9ee014fc899	Reviewers	Aleksander Alekseev, Michael Paquier, Jim Nasby
+a361c22ebfa	Author	Erik Rijkers
+5cb882675ae	Author	Fabien Coelho
+e3161b231cf	PGresults	the text of the last query sent to the server.  We must add that
+84f9a35e398	Author	Tomas Vondra, with some hacking be me
+84f9a35e398	Reviewed-by	Mark Dilger, Alexander Korotkov, Dean Rasheed and Tom Lane
+84f9a35e398	Discussion	http://www.postgresql.org/message-id/flat/56CD0381.5060502@2ndquadrant.com
+09adc9a8c09	Discussion	14166.1458924422@sss.pgh.pa.us
+f2fcad27d59	Author	Abhijit Menon-Sen
+f2fcad27d59	Reviewed-by	Alexander Korotkov, Álvaro Herrera
+f2fcad27d59	Discussion	http://www.postgresql.org/message-id/20160115062649.GA5068@toroid.org
+989be0810df	Authors	Sawada Masahiko, Beena Emerson, Michael Paquier, Fujii Masao
+989be0810df	Reviewed-By	Kyotaro Horiguchi, Amit Kapila, Robert Haas, Simon Riggs,
+3fe3511d051	Author	Petr Jelinek and Andres Freund
+3fe3511d051	Reviewers	Artur Zakirov, Tomas Vondra, Simon Riggs
+3fe3511d051	Discussion	5685F999.6010202@2ndquadrant.com
+3b3fcc4eeae	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+0b62fd036e1	Author	Dmitry Dolgov
+0b62fd036e1	Reviewers	Petr Jelinek, Vitaly Burovoy, Andrew Dunstan
+015e88942aa	Author	Tomas Vondra, with fastpath and comments added by me
+015e88942aa	Reviewers	David Rowley, Simon Riggs
+bb140506df6	Authors	Teodor Sigaev, Oleg Bartunov, Dmitry Ivanov
+bb140506df6	Reviewers	Alexander Korotkov, Artur Zakirov
+fcff8a57519	Author	Thomas Munro, with minor editing of docs by me
+fcff8a57519	Reviewed-by	Marko Tiikkaja, Kevin Grittner
+137805f89ac	Authors	Tomas Vondra and David Rowley
+196b72fb9a5	Authors	Suraj Kharage, Michael Paquier, Masahiko Sawada, refactored by me
+196b72fb9a5	Reviewed-By	Kyotaro Horiguchi
+2f1d2b7a75f	From	Grzegorz Sampolski <grzsmp@gmail.com>
+2f1d2b7a75f	Reviewed-by	Haribabu Kommi <kommi.haribabu@gmail.com>
+5364b357fb1	Author	Amit Kapila and Andres Freund
+5364b357fb1	Discussion	CAA4eK1+-=18HOrdqtLXqOMwZDbC_15WTyHiFruz7BvVArZPaAw@mail.gmail.com
+5c3c3cd0a30	Author	Pavel Stehule
+5c3c3cd0a30	Reviewers	Catalin Iacob, Peter Eisentraut, Jim Nasby
+386e3d7609c	Author	Anastasia Lubennikova with minor editorializing by me
+386e3d7609c	Reviewers	David Rowley, Peter Geoghegan, Jeff Janes
+1ec4c7c055c	Author	Dmitry Ivanov
+7c7d4fddab8	From	Peter Geoghegan <pg@bowt.ie>
+35e2e357cb0	Author	Christian Ullrich
+35e2e357cb0	Reviewed by	Robbie Harwood, Alvaro Herrera, me
+c1ddd2361f6	Discussion	20160304193704.elq773pyg5fyl3mi@alap3.anarazel.de
+c09b18f21c5	query	instead of a vertical display of rows, the data values are placed
+c09b18f21c5	Author	Daniel Verité
+c09b18f21c5	Reviewed-by	Pavel Stehule, Dean Rasheed
+48354581a49	Author	Alexander Korotkov and Andres Freund
+48354581a49	Discussion	2400449.GjM57CE0Yg@dinodell
+008608b9d51	Author	Andres Freund
+008608b9d51	Discussion	CAA4eK1+ZeB8PMwwktf+3bRS0Pt4Ux6Rs6Aom0uip8c6shJWmyg@mail.gmail.com 20160327121858.zrmrjegmji2ymnvr@alap3.anarazel.de
+d1b7d4877b9	Discussion	<4065.1452450340@sss.pgh.pa.us>
+6b93fcd1493	Reported-By	Tom Lane
+6b93fcd1493	Discussion	1881.1460431476@sss.pgh.pa.us
+6cead413bb9	Discussion	<20228.1460575691@sss.pgh.pa.us>
+80abbeba23d	Reported-By	Tom Lane
+80abbeba23d	Discussion	4369.1460435533@sss.pgh.pa.us
+be65eddd800	Author	Petr Jelinek
+be65eddd800	Reported-By	Andres Freund
+be65eddd800	Discussion	20160406142513.wotqy3ba3kanr423@alap3.anarazel.de
+6a3d3965d6d	Discussion	<20160413094117.GC21485@msg.credativ.de>
+4b74c6a40e7	Discussion	4369.1460435533@sss.pgh.pa.us
+8f1911d5e6d	Discussion	CAKJS1f8TQYgTRDyF1_u9PVCKWRWz+DkieH=U7954HeHVPJKaKg@mail.gmail.com
+d2de44c2ce5	From	Alexander Law <exclusion@gmail.com>
+d460c7cc0fd	From	Michael Paquier <michael.paquier@gmail.com>
+4db0d2d2fe9	Discussion	<18241.1461073100@sss.pgh.pa.us>
+bde361fef5e	Report	<571276DD.5050303@dalibo.com>
+cbabb70f35b	Discussion	<13969.1461191936@sss.pgh.pa.us>
+1f7c85b8208	Report	<20160421001832.GB7976@moraine.isi.edu>
+abb164655c7	Report	<ED37E303-1B0A-4CD8-8E1E-B9C4C2DD9A17@elevated-dev.com>
+c8e81afc600	Discussion	<22094.1461273324@sss.pgh.pa.us>
+915cee45950	Reported-by	Emre Hasegeli
+b87b2f4bda1	From	Erik Rijkers <er@xs4all.nl>
+8f91d87d43d	Reported-By	Magnus Hagander, Fujii Masao
+8f91d87d43d	Discussion	CAHGQGwETyTG5VYQQ5C_srwxWX7RXvFcD3dKROhvAWWhoSBdmZw@mail.gmail.com
+96687497b64	From	Andreas Seltenreich <andreas.seltenreich@credativ.de>
+b7351ced425	Author	Daniel Gustafsson
+77cd477c4ba	Discussion	20160420174631.3qjjhpwsvvx5bau5@alap3.anarazel.de
+c6ff84b06a6	Important	This adds a new WAL record, but as the patch has to be
+c6ff84b06a6	Reported-By	Васильев Дмитрий, Masahiko Sawada
+c6ff84b06a6	Discussion	CAB-SwXY6oH=9twBkXJtgR4UC1NqT-vpYAtxCseME62ADwyK5OA@mail.gmail.com CAD21AoDpZ6Xjg=gFrGPnSn4oTRRcwK1EBrWCq9OqOHuAcMMC=w@mail.gmail.com
+72a98a63957	Reported-By	Thom Brown
+72a98a63957	Author	Andres Freund, Abhijit Menon-Sen
+72a98a63957	Reviewd-By	Robert Haas, Fabien Coehlo
+72a98a63957	Discussion	CAA-aLv6Dp_ZsV-44QA-2zgkqWKQq=GedBX2dRSrWpxqovXK=Pg@mail.gmail.com
+72a98a63957	Fixes	428b1d6b29ca599c5700d4bc4f4ce4c5880369bf
+59eb5512790	Discussion	12585.1460737650@sss.pgh.pa.us
+360ca27a9b9	Discussion	CAM3SWZT-i6R9JU5YXa8MJUou2_r3LfGJZpQ9tYa1BYxfkj0=cQ@mail.gmail.com
+360ca27a9b9	Discussion	CAM3SWZRUOLsYoTT83QgdUy9D8ehYWm_nvbrrfcOOzikiRfFY7g@mail.gmail.com
+a31212b429c	Discussion	24748.1461764666@sss.pgh.pa.us
+f8467f7da86	Author	Nikolay Shaplov with addition for contrib/bloom
+59455018a81	Reported-By	Nick Cleaton, Magnus Hagander
+59455018a81	Author	Nick Cleaton
+59455018a81	Discussion	CAFgz3kus=rC_avEgBV=+hRK5HYJ8vXskJRh8yEAbahJGTzF2VQ@mail.gmail.com CABUevExsjROqDcD0A2rnJ6HK6FuKGyewJr3PL12pw85BHFGS2Q@mail.gmail.com
+59455018a81	Backpatch	9.4, were 5a991ef8 introduced the use of feedback messages during shutdown.
+a03bda323b0	Author	Thomas Munro
+82881b2b432	From	Dmitry Igrishin <dmitigr@gmail.com>
+c45bf5751b6	Report	<871t5pgwdt.fsf@credativ.de>
+a956bf43958	From	Guillaume Lelarge <guillaume@lelarge.info>
+234a266066d	Author	Álvaro Herrera, Craig Ringer
+613fb29a384	From	Alexander Law <exclusion@gmail.com>
+a712487087c	Reported-By	Thom Brown
+a712487087c	Discussion	CAA-aLv72QazLvPdKZYpVn4a_Eh+i4_cxuB03k+iCuZM_xjc+6Q@mail.gmail.com
+6535bf39989	From	Alexander Law <exclusion@gmail.com>
+18a02ad2a50	Author	Dean Rasheed
+18a02ad2a50	Reviewed-by	Tom Lane
+18a02ad2a50	Discussion	http://www.postgresql.org/message-id/CAEZATCUj3U-cQj0jjoia=qgs0SjE3auroxh8swvNKvZWUqegrg@mail.gmail.com
+18a02ad2a50	See-also	http://www.postgresql.org/message-id/CAEZATCV7w+8iB=07dJ8Q0zihXQT1semcQuTeK+4_rogC_zq5Hw@mail.gmail.com
+0b9a2344328	Discussion	<4875.1462210058@sss.pgh.pa.us>
+93a8c6fd6c5	Author	Dean Rasheed
+93a8c6fd6c5	Reviewed-by	Peter Eisentraut
+93a8c6fd6c5	Discussion	http://www.postgresql.org/message-id/CAEZATCWZjCgKRyM-agE0p8ax15j9uyQoF=qew7D2xB6cF76T8A@mail.gmail.com
+9b66aa006f8	Author	Dean Rasheed
+9b66aa006f8	Reviewed-by	Peter Eisentraut
+9b66aa006f8	Discussion	http://www.postgresql.org/message-id/CAEZATCWZjCgKRyM-agE0p8ax15j9uyQoF=qew7D2xB6cF76T8A@mail.gmail.com
+9515299485a	Discussion	<9188.1462475559@sss.pgh.pa.us>
+1a2c17f8e22	arose	(1) ALTER TABLE RESET didn't grab an exclusive lock, so that the
+1a2c17f8e22	Discussion	<8110.1462291671@sss.pgh.pa.us>
+b8180884082	Note	the reason jacana hasn't actually reported any failures in the
+48aaba4acf4	Source-Git-URL	git://git.postgresql.org/git/pgtranslation/messages.git
+48aaba4acf4	Source-Git-Hash	17bf3e8564abf600274789fcc90e72532d5e7c05
+15739393e4c	Discussion	https://www.postgresql.org/message-id/572B63B1.3030603%40flexibee.eu https://www.postgresql.org/message-id/572A1072.5080308%40flexibee.eu
+26e66184d61	Report	<20160510190350.2608.48667@wrigleys.postgresql.org>
+122b99478a7	From	Martín Marqués <martin@2ndquadrant.com>
+8eec44be6b4	From	Alexander Law <exclusion@gmail.com>
+9b7bfc3a88e	From	Alexander Law <exclusion@gmail.com>
+960be4a9986	Discussion	<20160520165824.22598.31426@wrigleys.postgresql.org>
+50e5315a585	Discussion	<20160520165824.22598.31426@wrigleys.postgresql.org>
+82eafabeaaf	Discussion	<CAKFQuwbAX=iO9QbpN7_jr+BnUWm9FYX8WbEPUvG0p+nZhp6TZg@mail.gmail.com>
+768d6f90f9e	Discussion	<88E617F2-7721-4C4E-84F4-886A2041C1D0@yesql.se>
+8a4930e3faf	Report	<CAGoxFiFPAGyPAJLcFxTB5cGhTW2yOVBDYeqDugYwV4dEd1L_Ag@mail.gmail.com>
+465e09da631	Discussion	<27861.1464040417@sss.pgh.pa.us>
+eae1ad9b64e	Report	<20160521232802.22598.13537@wrigleys.postgresql.org>
+1e0d6512e57	Report	<CAM3SWZTNjHFYW_UG8bu0BnogqQ2HfsTgkzXLueuUhfTcYbu5HA@mail.gmail.com>
+23f11dc21b0	Discussion	<20160521140046.22591.24672@wrigleys.postgresql.org>
+c45fb43c844	Discussion	<0A3221C70F24FB45833433255569204D1F578FC3@G01JPEXMBYT05>
+996d273978c	Report	<CAPpHfdspOkmiQsxh-UZw2chM6dRMwXAJGEmmbmqYR=yvM7-s6A@mail.gmail.com>
+2d2e40e3bef	Discussion	<8564.1464116473@sss.pgh.pa.us>
+abaffa90758	Report	<20160524144146.22598.42558@wrigleys.postgresql.org>
+9abd64ec997	Report	<2458.1450894615@sss.pgh.pa.us>
+52e8fc3e2e6	Report	<56AD41AC.1030509@gmx.net>
+b898eb63678	Discussion	<1593237.l7oKHRpxSe@nataraj-amd64>
+cae2bb1986b	Report	<20160526.185551.242041780.horiguchi.kyotaro@lab.ntt.co.jp>
+aeb9ae64578	Report	<20160526021235.w4nq7k3gnheg7vit@alap3.anarazel.de>
+9dd4178cec3	Discussion	<8693.1464314819@sss.pgh.pa.us>
+83dbde94f72	Report	<20160527070433.19424.81712@wrigleys.postgresql.org>
+807b45375be	Discussion	<zarafa.570306bd.3418.074bf1420d8f2ba2@root.aegaeon.de>
+6b3094c26f9	Discussion	<25239.1464386067@sss.pgh.pa.us>
+210981a4a9f	Discussion	<15583.1464462418@sss.pgh.pa.us>
+975ad4e602f	Discussion	https://www.postgresql.org/message-id/87mvni77jh.fsf@elite.ansel.ydns.eu
+87a3023c60f	Backpatch	-
+22b27b4c9ed	Prior-Discussion	<1718942738eb65c8407fcd864883f4c8@fuzzy.cz>
+22b27b4c9ed	Patch	<4625.1464202586@sss.pgh.pa.us>
+763eec6b6d6	Discussion	<5086.1464793073@sss.pgh.pa.us>
+e652273e073	Original-Patch	<7005.1464657274@sss.pgh.pa.us>
+e652273e073	Discussion	<20160602.174941.256342236.horiguchi.kyotaro@lab.ntt.co.jp>
+ee4af347ba8	Discussion	<23767.1464926580@sss.pgh.pa.us>
+69f526aa494	Report	<20160603124628.9932.41279@wrigleys.postgresql.org>
+05104f69364	Report	<fa0535ec6d6428cfec40c7e8a6d11156@mail.gmail.com>
+8a859691d54	Report	<20160511154904.2603.43889@wrigleys.postgresql.org>
+c6dbf1fe792	Discussion	CAA4eK1KOKGqmz9bGu+Z42qhRwMbm4R5rfnqsLCNqFs9j14jzEA@mail.gmail.com
+f64340e7436	Report	<ef99c1bd-ff60-5f32-2733-c7b504eb960c@ato.waw.pl>
+cfd4804b1eb	Discussion	<CAB7nPqQB8dcFmY1uodmiJOSZdhBFOx-us-uW6rfYrzhpEiBR2g@mail.gmail.com>
+77ba610805e	Discussion	<20160429102531.GA13701@huehner.biz>
+4f04b66f97f	Author	Michael Paquier
+4f04b66f97f	Discussion	https://www.postgresql.org/message-id/CAB7nPqTzdZdu8J7EF8SXr_R2U5bSUUYNOT3oAWBZdEoggnwhGA@mail.gmail.com
+7feb60c1bb0	Discussion	<CAEZATCW3yzJo-NMSiQs5jXNFbTsCEftZS-Og8=FvFdiU+kYuSA@mail.gmail.com>
+2f153ddfdd3	Discussion	<20160527185853.ziol2os2zskahl7v@alap3.anarazel.de>
+4bc0f165cb4	Discussion	CAD__OuhPmc6XH=wYRm_+Q657yQE88DakN4=Ybh2oveFasHkoeA@mail.gmail.com
+cd9b4f24ce5	Report	<20160613140119.5798.78501@wrigleys.postgresql.org>
+89d53515e53	Report	<20756.1465834072@sss.pgh.pa.us>
+783cb6e48b2	Report	<20160613163159.5798.52928@wrigleys.postgresql.org>
+2910fc8239f	consistency	if it were somehow used in a query, that would be fine as
+fab9d1da4a2	Reported-by	Jonathan Rogers
+fab9d1da4a2	Discussion	https://www.postgresql.org/message-id/flat/561E749D.4090301%40socialserve.com
+8383486f108	Report	<352F9B77DB5D3082578D17BB@eje.land.credativ.lan>
+9901d8ac2e7	Discussion	<20160612145532.GA22965@postgresql.kr>
+0b0baf26211	Report	<20160615204036.2d35d86a@firost>
+75be66464cb	Discussion	<17170.1465830165@sss.pgh.pa.us>
+4c56f3269a8	Report	<20160616182222.5798.959@wrigleys.postgresql.org>
+292794f82b4	Discussion	<bfd204ab-ab1a-792a-b345-0274a09a4b5f@2ndquadrant.com>
+915b703e169	Discussion	<8229.1466109074@sss.pgh.pa.us>
+100340e2dcd	Discussion	<31041.1465069446@sss.pgh.pa.us>
+9bc3332372f	Discussion	<1417.1466289901@sss.pgh.pa.us>
+705ad7f3b52	Report	<20160619121113.5789.68274@wrigleys.postgresql.org>
+47981a4665d	Source-Git-URL	git://git.postgresql.org/git/pgtranslation/messages.git
+47981a4665d	Source-Git-Hash	0c374f8d25ed31833a10d24252bc928d41438838
+9c852566a3c	Report	<20160620115321.5792.10766@wrigleys.postgresql.org>
+3557b1791b7	Discussion	20160617155108.GC19359@momjian.us
+3557b1791b7	Reviewed-by	Michael Paquier
+1fe1204e87c	Report	<874m8nn0hv.fsf@elite.ansel.ydns.eu>
+342921078a7	Discussion	<20160620160047.5792.49827@wrigleys.postgresql.org>
+3e9df858f0d	Reported-by	David G. Johnston
+3e9df858f0d	Discussion	CAKFQuwZZvnxwSq9tNtvL+uyuDKGgV91zR_agtPxQHRWMWQRP8g@mail.gmail.com
+e45e990e4b5	Discussion	<CA+YdpwxPUADrmxSD7+Td=uOshMB1KkDN7G7cf+FGmNjjxMhjbw@mail.gmail.com>
+f8ace5477ef	Discussion	<27247.1466185504@sss.pgh.pa.us>
+bd1693e89e7	Report	<10050.1466637736@sss.pgh.pa.us>
+8cf739de850	Report	<20160623162507.17237.39471@wrigleys.postgresql.org>
+19e972d5580	Discussion	<29309.1466699160@sss.pgh.pa.us>
+874fe3aea12	Report	<20160202161407.2778.24659@wrigleys.postgresql.org>
+c12f02ffc94	Report	<CAGPqQf2iLB8t6t-XrL-zR233DFTXxEsfVZ4WSqaYfLupEoDxXA@mail.gmail.com>
+675684fc23f	Reported-by	Thomas Munro
+675684fc23f	Discussion	CAEepm=3-TW9PLwGZhqjSSiEQ9UzJEKE-HELQDzRE0QUSCp8dgw@mail.gmail.com
+69769a3a6e7	Reported-by	Tatsuo Ishii
+69769a3a6e7	Discussion	20160618.210417.343199294611427151.t-ishii@sraoss.co.jp
+8a395e0b9a2	Reported-by	Manlio Perillo
+8a395e0b9a2	Bug	14016
+8a395e0b9a2	Discussion	20160311163928.6674.94707@wrigleys.postgresql.org
+8a395e0b9a2	Reviewed-by	David G. Johnston
+b32e63506cf	Report	<20160629183338.1397.43514@wrigleys.postgresql.org>
+9ed551e0a4f	Author	Michaël Paquier, Álvaro Herrera
+9ed551e0a4f	Review by	Vik Fearing
+9ed551e0a4f	Discussion	https://www.postgresql.org/message-id/CAB7nPqStg4M561obo7ryZ5G+fUydG4v1Ajs1xZT1ujtu+woRag@mail.gmail.com
+8ebb69f8544	Discussion	<16002.1466972724@sss.pgh.pa.us>
+3154e16737a	Report	<CAM184AcjqKYZSdQqBHDrnENXHhW=mXbUC46QYPJ=nAh0gUHCGA@mail.gmail.com>
+f8c58554db4	Report	<20160622144830.5791.22512@wrigleys.postgresql.org>
+0daeba0e927	Report	<20160629224349.1407.32667@wrigleys.postgresql.org>
+1bdae16fca8	Author	Michaël Paquier
+548af97fcec	Report	<31398.1467036827@sss.pgh.pa.us>
+548af97fcec	Report	<20150916200959.GB32090@msg.df7cb.de>
+48bfeb244ff	Author	Masahiko Sawada
+48bfeb244ff	Discussion	CAD21AoBD=Of1OzL90Xx4Q-3j=-2q7=S87cs75HfutE=eCday2w@mail.gmail.com
+7b67a0a49c1	Report	<874m89rw7x.fsf@credativ.de>
+b54f7a9ac96	Discussion	20160617154311.GB19359@momjian.us
+b54f7a9ac96	Backpatch-through	9.1
+420c1661630	Report	<20160702131056.GD3165@huehner.biz>
+9c810a2edcc	Report	<4C976D6B-76B4-434C-8052-D009F7B7AEDA@reaktor.fi>
+1109164913c	Author	Masahiko Sawada
+60d50769b70	Author	Michael Paquier
+51dc30856ef	Author	Alexander Law
+88cf37d2a86	Discussion	<CAM-w4HMwwcwaVvYcAH0_FGtG5GeXdYVRfvG81pXnSJWHnCfosQ@mail.gmail.com>
+30b2731bd21	Discussion	<20160704.160213.111134711.horiguchi.kyotaro@lab.ntt.co.jp>
+87d84d67bb1	Report by	Francesco Canovai in bug #14230
+87d84d67bb1	Author	Marco Nenciarini
+87d84d67bb1	Reviewed by	Michael Paquier and Amit Kapila
+a670c24c382	Discussion	<CAB7nPqTR3Vu3xKOZOYqSm-+bSZV0kqgeGAXD6w5GLbkbfd5Q6w@mail.gmail.com>
+4d042999f94	BTW	the particular case of IndexScan didn't cause visible duplication
+4d042999f94	Report	<CAFj8pRAimq+NK-menjt+3J4-LFoodDD8Or6=Lc_stcFD+eD4DA@mail.gmail.com>
+d3fbd5929ce	From	Alexander Law <exclusion@gmail.com>
+baebab3ace4	Report	<CAHyXU0wpHf2bbtKGL1gtUEFATCY86r=VKxfcACVcTMQ70mCyig@mail.gmail.com>
+cec55013943	Discussion	<CAM3SWZSgxehDkDMq1FdiW2A0Dxc79wH0hz1x-TnGy=1BXEL+nw@mail.gmail.com>
+1acf7572554	Report	<20160708151747.1426.60150@wrigleys.postgresql.org>
+1acf7572554	Discussion	<28685.1468246504@sss.pgh.pa.us>
+3aed52a622b	From	Alexander Law <exclusion@gmail.com>
+ce150e7e0fc	Discussion	<A737B7A37273E048B164557ADEF4A58B5386C6E1@ntex2010i.host.magwien.gv.at>
+533e9c6b062	update	verify whether the two operations conflict, and if not, carry on
+533e9c6b062	Discussion	https://www.postgresql.org/message-id/560AA479.4080807@odoo.com https://www.postgresql.org/message-id/20151014164844.3019.25750@wrigleys.postgresql.org
+45639a0525a	Discussion	<d49c1e5b-f059-20f4-c132-e9752ee0113e@lab.ntt.co.jp>
+a4d357bfbd5	Discussion	20160715192319.ubfuzim4zv3rqnxv@alap3.anarazel.de
+a4d357bfbd5	Backpatch	9.3, the oldest branch on which 0ac5ad5 is present.
+bfa2ab56bb8	Author	Masahiko Sawada and Andres Freund
+bfa2ab56bb8	Reported-By	Different aspects by Thomas Munro, Noah Misch, and others
+bfa2ab56bb8	Discussion	CAEepm=3fWAbWryVW9swHyLTY4sXVf0xbLvXqOwUoDiNCx9mBjQ@mail.gmail.com
+bfa2ab56bb8	Backpatch	9.1/all supported versions
+99dd8b05aa5	Discussion	<7615.1468598094@sss.pgh.pa.us>
+745513c7028	Discussion	<20160713110357.1410.30407@wrigleys.postgresql.org>
+278148907a9	Report	<87d1md1xji.fsf@credativ.de>
+9563d5b5e4c	Patch	<CAM3SWZTBAo4hjbBd780+MrOKiKp_TMo1N3A0Rw9_im8gbD7fQA@mail.gmail.com>
+18555b1323b	Discussion	<16638.1468620817@sss.pgh.pa.us>
+eca0f1db14a	Reviewed-By	Robert Haas, Amit Kapila and Andres Freund
+eca0f1db14a	Author	Masahiko Sawada, heavily revised by Andres Freund
+eca0f1db14a	Discussion	CAEepm=3fWAbWryVW9swHyLTY4sXVf0xbLvXqOwUoDiNCx9mBjQ@mail.gmail.com
+eca0f1db14a	Backpatch	-
+7d676065690	Source-Git-URL	git://git.postgresql.org/git/pgtranslation/messages.git
+7d676065690	Source-Git-Hash	3d71988dffd3c0798a8864c55ca4b7833b48abb1
+ade64d05a0c	Discussion	<20160718181437.1414.40802@wrigleys.postgresql.org>
+b3399cb0f68	Report	<CAMkU=1w-cEDbA+XHdNb=YS_4wvZbs66Ni9KeSJKAJGNJyOsgQw@mail.gmail.com>
+13bf801a255	Patch	<d674a3f1-6b63-519c-ef3f-f3188ed6a178@lab.ntt.co.jp>
+9d7abca901f	Patch	<CAMkU=1zx-pqcfSApL2pYDQurPOCfcYU0wJorsmY1OrYPiXRbLw@mail.gmail.com>
+6d85bb1ba79	Report	<CAMkU=1xfuPf2edAe4ZGXTmJpU7jxuKukKyvNtEXwu35B7dvejg@mail.gmail.com>
+2a0f89cd717	Author	Michaël Paquier
+1804d1555f5	Author	Masahiko Sawada
+c1a95425780	Author	Ildar Musin
+4452000f310	Report	<20160708024746.1410.57282@wrigleys.postgresql.org>
+d8411a6c8b6	Report	<E1TurJE-0006Es-TK@wrigleys.postgresql.org>
+de8c92e6caf	Author	Alexander Law
+d9e74959a7f	Discussion	<d279e817-02b5-caa6-215f-cfb05dce109a@postgrespro.ru>
+46b773d4fe0	Discussion	<20160728151154.AABE64016B@smtp.hushmail.com>
+9492cf86e40	Discussion	<10682.1469566308@sss.pgh.pa.us>
+80b346c2084	Patch	<20160728.185228.58375982.horiguchi.kyotaro@lab.ntt.co.jp>
+af33039317d	Discussion	<32763.1469821037@sss.pgh.pa.us>
+9e765bb10fc	Reported-by	Alexander Law
+9e765bb10fc	Discussion	5786638C.8080508@gmail.com
+9e765bb10fc	Backpatch-through	9.4
+6335c80ef41	Reported-by	Daniel Gustafsson
+6335c80ef41	Discussion	48DB4EDA-96F8-4B2F-99C4-110900FC7540@yesql.se
+6335c80ef41	Author	Daniel Gustafsson
+f9e439b1ca8	Discovered by	Philippe BEAUDOIN
+f9e439b1ca8	Reviewed by	Michael Paquier
+11653cd87f6	Discussion	<CAM3SWZRVANbj9GA9j40fAwheQCZQtSwqTN1GBTVwRrRbmSf7cg@mail.gmail.com>
+74d8c95b745	Reported-By	Jeff Janes
+74d8c95b745	Reviewed-By	Amit Kapila
+74d8c95b745	Discussion	CAMkU=1x+GwjSayc57v6w87ij6iRGFWt=hVfM0B64b1_bPVKRqg@mail.gmail.com
+887feefe87b	Discussion	<1661.1469996911@sss.pgh.pa.us>
+e2e95f5ef3c	Report	<20151207163520.2628.95990@wrigleys.postgresql.org>
+e2e95f5ef3c	Report	<20160801021955.1430.47434@wrigleys.postgresql.org>
+b6a97b91ffe	Discussion	<14869.1470083848@sss.pgh.pa.us>
+a253a88594f	Discussion	20160702155517.GD18610@momjian.us
+a253a88594f	Reviewed-by	Christoph Berg
+a253a88594f	Backpatch-through	9.1
+c6ea616ff70	Discussion	<CAEepm=1VOnbVx4wsgQFvj94hu9jVt2nVabCr7QiooUSvPJXkgQ@mail.gmail.com>
+6eb5b05d225	Author	Amit Langote
+b26f7fa6ae2	Author	Michaël Paquier
+2b8fd4fa676	From	Clément Prévost <prevostclement@gmail.com>
+6a9e09c49e1	From	Clément Prévost <prevostclement@gmail.com>
+ef1b5af8233	Discussion	<14111.1470082717@sss.pgh.pa.us>
+a3c7a993d5e	Report	<20160727005725.7438.26021@wrigleys.postgresql.org>
+a3c7a993d5e	Discussion	<9578.1469645245@sss.pgh.pa.us>
+8d498a5c8a4	Discussion	<1637882.WfYN5gPf1A@abook>
+4eb4b3f2456	Reported-by	Jerry Sievers
+4eb4b3f2456	Discussion	20160726161946.GA3511@momjian.us
+e7caacf733f	Reviewed-By	Robert Haas, Andres Freund
+e7caacf733f	Author	Amit Kapila
+e7caacf733f	Discussion	CAEepm=3fWAbWryVW9swHyLTY4sXVf0xbLvXqOwUoDiNCx9mBjQ@mail.gmail.com
+e7caacf733f	Backpatch	-
+5ebad9a580d	Discussion	20160802165116.GC32575@momjian.us
+c50d192ce33	Discussion	<87invhoj6e.fsf@credativ.de>
+f10eab73df2	Discussion	<87invhoj6e.fsf@credativ.de>
+fc509cd8244	Report	<57A4E6DF.8070209@dunslane.net>
+69dc5ae408f	Patch	<802ec140-635d-ad86-5fdf-d3af0e260c22@2ndquadrant.com>
+e89526d4f35	Discussion	<20160803.173116.111915228.horiguchi.kyotaro@lab.ntt.co.jp>
+bcbecbce2fd	Discussion	<20160804191757.1430.39011@wrigleys.postgresql.org>
+07a601eedab	Report	<87vazemeda.fsf@credativ.de>
+07a601eedab	Report	<20160807051854.1427.32414@wrigleys.postgresql.org>
+9ee1cf04ab6	standing	since we don't detoast data while sticking it into a portal's
+9ee1cf04ab6	Discussion	<87vazemeda.fsf@credativ.de>
+8a8c6b53810	Report	<87y448l3ag.fsf@credativ.de>
+95bee941be4	Report	<VisenaEmail.26.df42f82acae38a58.156463942b8@tc7-visena>
+95bee941be4	Discussion	<16143.1470350371@sss.pgh.pa.us>
+a1f8b6bd14a	From	Alexander Law <exclusion@gmail.com>
+984e5beb38a	Security	CVE-2016-5424
+9d924e9a64b	Security	CVE-2016-5424
+c400717172d	Security	CVE-2016-5424
+142c24c2344	Security	CVE-2016-5424
+bd65371851b	Security	CVE-2016-5424
+41f18f021a0	Security	CVE-2016-5424
+fcd15f13581	Security	CVE-2016-5424
+f0c7b789ab1	Report	https://github.com/greenplum-db/gpdb/pull/327
+f0c7b789ab1	Report	<4DDCEEB8.50602@enterprisedb.com>
+f0c7b789ab1	Security	CVE-2016-5423
+34927b2920a	Source-Git-URL	git://git.postgresql.org/git/pgtranslation/messages.git
+34927b2920a	Source-Git-Hash	cda21c1d7b160b303dc21dfe9d4169f2c8064c60
+9b8271c5a65	Security	CVE-2016-5423, CVE-2016-5424
+cfdadf5f930	Author	Oleg Bartunov
+0f249fe5f5c	Report	<97218716-480B-4527-B5CD-D08D798A0C7B@dresources.com>
+4b234fd8bf2	Discussion	<081c0540-ecaa-bd29-3fd2-6358f3b359a9@postgrespro.ru>
+49978781930	Discussion	<20160805104837.1412.84915@wrigleys.postgresql.org>
+ed0097e4f9e	Discussion	<87mvl5on7n.fsf@news-spur.riddles.org.uk>
+d6c9e05cb7d	Report	<CAMkU=1xEUuBphDwDmB1WjN4+td4kpnEniFaTBxnk1xzHCw8_OQ@mail.gmail.com>
+9389fbd0385	Discussion	<2895.1471195721@sss.pgh.pa.us>
+a7b5573d665	Discussion	<1471332659.4410.67.camel@postgresql.org>
+a3bce17ef1c	Discussion	<21969.1471287988@sss.pgh.pa.us>
+f0fe1c8f70b	From	Alexander Law <exclusion@gmail.com>
+63916664110	From	Jeff Janes <jeff.janes@gmail.com>
+4bc4cfe3bd1	Report	<f845d3a6-5328-3e2a-924f-f8e91aa2b6d2@2ndquadrant.com>
+0bb51aa9678	Discussion	<30058.1463091294@sss.pgh.pa.us>
+d125d257909	Backpatch-through	9.6
+09215546571	Discussion	<0A3221C70F24FB45833433255569204D1F5BE3E8@G01JPEXMBYT05>
+bfaaacc805a	Discussion	<17863.1469142152@sss.pgh.pa.us>
+6657acc0100	Patch	<B97BDCB7-A3B3-4734-90B5-EDD586941629@yesql.se>
+2d7e591007a	Analysis	Andrew Gierth
+2d7e591007a	Reported-By	md@chewy.com
+2d7e591007a	Author	Michael Paquier
+2d7e591007a	Discussion	<20160705173502.1398.70934@wrigleys.postgresql.org>
+2d7e591007a	Backpatch	9.4, where replication slots were introduced
+cf9b0fea5f6	Discussion	<CAE2gYzy42sna2ME_e3y1KLQ-4UBrB-eVF0SWn8QG39sQSeVhEw@mail.gmail.com>
+07ef0351295	Reported-By	Viren Negi, Oskari Saarenmaa
+07ef0351295	Author	Oskari Saarenmaa, edited a bit by me
+07ef0351295	Bug	#14150
+07ef0351295	Discussion	<20160519123338.12513.20271@wrigleys.postgresql.org>
+07ef0351295	Backpatch	9.5, where ON CONFLICT was introduced
+8d3b9cce81c	Reviewed-By	Michael Paquier
+8d3b9cce81c	Discussion	<CAB7nPqQvO4sxLFeS9D+NM3wpy08ieZdAj_6e117MQHZAfxBFsg@mail.gmail.com>
+fa878703f45	Author	Michael Paquier
+fa878703f45	Discussion	<CAB7nPqQvO4sxLFeS9D+NM3wpy08ieZdAj_6e117MQHZAfxBFsg@mail.gmail.com>
+f9d747a4e90	Patch	<CAE2gYzzF24ZHWqkMukkHwqa0otbES9Rex22LrjQUNbi=oKziNQ@mail.gmail.com>
+49917dbd76b	Patch	<CAMkU=1z0gxEOLg2BWa69P4X4Ot8xBxipGUiGkXe_tC+raj79-Q@mail.gmail.com>
+8019b5a89c3	Patch	<5724132E.1030804@2ndquadrant.com>
+5697522d841	Report	<20160818174414.1529.37913@wrigleys.postgresql.org>
+9595383bc6f	Discussion	<7969.1471484738@sss.pgh.pa.us>
+9595383bc6f	Backpatch	9.6, like the test in the aforementioned commit
+5285c5e873d	Reported-by	https://www.postgresql.org/message-id/45016837-6cf3-3136-f959-763d06a28076%402ndquadrant.com
+5285c5e873d	Backpatch-through	9.6
+da1c91631e3	Discussion	<3740.1471538387@sss.pgh.pa.us>
+8299471c37f	Discussion	<56E87CD8.60007@ohmu.fi>
+6471045230f	Patch	<alpine.DEB.2.20.1607090922170.3412@sto>
+a00c5831474	Discussion	<CAHeEsBeAe1FeBypT3E8R1ZVZU0e8xv3A-7BHg6bEOi=jZny2Uw@mail.gmail.com>
+f2e016f8d55	Reported-by	Jeff Janes
+f2e016f8d55	Backpatch-through	9.6
+d2ddee63b43	Discussion	<CAE2gYzxtth9qatW_OAqdOjykS0bxq7AYHLuyAQLPgT7H9ZU0Cw@mail.gmail.com>
+ff066481b04	Discussion	dcc4113d-1eda-4f60-d1c5-f50eee160bad@gmail.com
+ff066481b04	Author	Alexander Law <exclusion@gmail.com>
+ff066481b04	Backpatch-through	9.6
+77e2906821e	Discussion	<CAE2gYzxtth9qatW_OAqdOjykS0bxq7AYHLuyAQLPgT7H9ZU0Cw@mail.gmail.com>
+0e4cc1fc51c	From	Alexander Law <exclusion@gmail.com>
+2c00fad2864	Report	<CAM2+6=VY8ykfLT5Q8vb9B6EbeBk-NGuLbT6seaQ+Fq4zXvrDcA@mail.gmail.com>
+ca9cb940d23	Reported-by	Alexander Law
+ca9cb940d23	Author	Alexander Law
+ca9cb940d23	Backpatch-through	9.6
+ae4760d667c	Report	<20160824114320.15676.45171@wrigleys.postgresql.org>
+2533ff0aa51	Discussion	<5983.1471371667@sss.pgh.pa.us>
+ae025a15988	Discussion	<56E90A76.5000503@lab.ntt.co.jp>
+fbf28b6b52c	Discussion	<19757.1472151987@sss.pgh.pa.us>
+78dcd027e8f	Discussion	<16610.1472222135@sss.pgh.pa.us>
+26fa446da64	Discussion	<A88E0006-13CB-49C6-95CC-1A77D717213C@eggerapps.at>
+ea268cdc9a2	Discussion	<21072.1472321324@sss.pgh.pa.us>
+bab7823a49b	Author	Pavan Deolasee
+bab7823a49b	Reviewed-By	Michael Paquier and Craig Ringer
+bab7823a49b	Discussion	CABOikdPsPByMiG6J01DKq6om2+BNkxHTPkOyqHM2a4oYwGKsqQ@mail.gmail.com
+cf34fdbbe14	Discussion	<CA+TgmobNcELVd3QmLD3tx=w7+CokRQiC4_U0txjz=WHpfdkU=w@mail.gmail.com>
+8e1e3f958fb	Author	Amit Kapila
+9daec77e165	Discussion	<CAB7nPqRu07Ot6iht9i9KRfYLpDaF2ZuUv5y_+72uP23ZAGysRg@mail.gmail.com>
+052cc223d5c	Discussion	<CAB7nPqRu07Ot6iht9i9KRfYLpDaF2ZuUv5y_+72uP23ZAGysRg@mail.gmail.com>
+0e0f43d6fdc	Discussion	<00F0B2CEF6D0CEF8A90119D4@eje.credativ.lan>
+14cca1bf8e3	Discussion	<dbb82a4a-2c15-ba27-dd0a-009d2aa72b77@iki.fi>
+679226337ac	Discussion	<FEA7F89C-ECDF-4799-B789-2F8DDCBA467F@yesql.se>
+65a588b4c3b	Discussion	<4640.1472664476@sss.pgh.pa.us>
+d062245b5bd	Discussion	<CAB7nPqSOyAsHC6jL24J1B+oK3p=yyNoFU0Vs_B6fd2kdd5g5WQ@mail.gmail.com>
+6f7c0ea32f8	Discussion	<CAB7nPqSOyAsHC6jL24J1B+oK3p=yyNoFU0Vs_B6fd2kdd5g5WQ@mail.gmail.com>
+6c03d981a6b	Discussion	<24843.1472563085@sss.pgh.pa.us>
+9cca11c915e	Reviewed-by	Andrey Borodin
+9cca11c915e	Discussion	<c0545351-a467-5b76-6d46-4840d1ea8aa4@iki.fi>
+ec136d19b21	Discussion	<69938195-9c76-8523-0af8-eb718ea5b36e@iki.fi>
+39b691f2511	Report	<20160902031551.15674.67337@wrigleys.postgresql.org>
+39b691f2511	Discussion	<6189.1472820913@sss.pgh.pa.us>
+60893786d51	Discussion	<20160826072658.15676.7628@wrigleys.postgresql.org>
+60893786d51	Possible-Report	<2DA7350F7296B2A142272901@eje.land.credativ.lan>
+600dc4c0da3	Report	<87oa45qfwq.fsf@credativ.de>
+6591f4226c8	Discussion	<CADkLM=dbC4R8sbbuFXQVBFWoJGQkTEW8RWnC0PbW9nZsovZpJQ@mail.gmail.com>
+b6182081be4	Discussion	<20160404190345.54d84ee8@fujitsu>
+15bc038f9bc	Discussion	<4075.1459088427@sss.pgh.pa.us>
+f80049f76a3	Author	Jim Nasby
+c54159d44ce	Discussion	<15563.1471913698@sss.pgh.pa.us>
+67e1e2aaff1	Author	Amit Langote
+f032722f86a	Discussion	<CAM3SWZRVkuUB68DbAkgw=532gW0f+fofKueAMsY7hVYi68MuYQ@mail.gmail.com>
+975768f8eae	Discussion	<575D7955.6060209@postgrespro.ru>
+49eb0fd0972	Reviewed-by	Pavel Stehule <pavel.stehule@gmail.com>
+4f405c8ef47	Discussion	<CAMsr+YEqtD97qPEzQDqrCt5QiqPbWP_X4hmvy2pQzWC0GWiyPA@mail.gmail.com>
+0ab9c56d0fe	Discussion	<CAO=2mx6uvgPaPDf-rHqG8=1MZnGyVDMQeh8zS4euRyyg4D35OQ@mail.gmail.com>
+c9cf432ef32	Backpatch-through	9.6
+e97e9c57bd2	Report	<20160908081953.1402.75347@wrigleys.postgresql.org>
+df5d9bb8d50	Discussion	<99581032-71de-6466-c325-069861f1947d@2ndquadrant.com>
+769fd9d8e06	Discussion	<20160908220748.oqh37ukwqqncbl3n@alap3.anarazel.de>
+769fd9d8e06	Backpatch	all supported releases
+417fefaf089	Discussion	<20140331101001.GE13135@alap3.anarazel.de>
+417fefaf089	Reviewed-By	Peter Geoghegan
+45e191e3aa6	Discussion	<20140331101001.GE13135@alap3.anarazel.de>
+45e191e3aa6	Reviewed-By	Peter Geoghegan, Tom Lane (in an older version)
+f66472428a5	Discussion	29052.1471015383@sss.pgh.pa.us
+967a7b0fc9c	Discussion	<87wpxfygg9.fsf@credativ.de>
+e0013deb598	Reviewed-by	Pavel Stehule <pavel.stehule@gmail.com>
+984d0a14e8d	Discussion	<3814.1473366762@sss.pgh.pa.us>
+5c609a742f2	Raudsepp	some SELECT FOR UPDATE/SHARE queries may fail to return
+5c609a742f2	Discussion	https://www.postgresql.org/message-id/CABRT9RC81YUf1=jsmWopcKJEro=VoeG2ou6sPwyOUTx_qteRsg@mail.gmail.com https://www.postgresql.org/message-id/48d3eade-98d3-8b9a-477e-1a8dc32a724d@joh.to
+b1328d78f88	Discussion	<CAJEAwVGQjGGOj6mMSgMwGvtFd5Kwe6VFAxY=uEPZWMDjzbn4VQ@mail.gmail.com>
+1a4be103a52	Discussion	<552.1473445163@sss.pgh.pa.us>
+24992c6db9f	Discussion	<552.1473445163@sss.pgh.pa.us>
+24598337c8d	Discussion	<CAM3SWZRhBhiknTF_=NjDSnNZ11hx=U_SEYwbc5vd=x7M4mMiCw@mail.gmail.com>
+28e5e5648cc	Discussion	<CAB7nPqR0+gpu3mRQvFjf-V-bMxmiSJ6NpTg9_WzVDL+a31cV2g@mail.gmail.com>
+40b449ae84d	Discussion	<20160905005919.jz2m2yh3und2dsuy@alap3.anarazel.de>
+c3c0d7bd701	Discussion	32558.1454471895@sss.pgh.pa.us
+9083353b15c	Reviewed-by	Masahiko Sawada <sawada.mshk@gmail.com>
+bfe16d1a5de	Reviewed-By	Tom Lane
+bfe16d1a5de	Discussion	<20160827214829.zo2dfb5jaikii5nw@alap3.anarazel.de>
+0dba54f1666	Discussion	<27626.1473729905@sss.pgh.pa.us>
+a4c35ea1c2f	Discussion	<24639.1473782855@sss.pgh.pa.us>
+55c3391d1e6	Discussion	<EFD8AC94-4C1F-40C1-A5EA-304080089C1B@gmail.com>
+6415ba502bd	Discussion	5934.1472642782@sss.pgh.pa.us
+656df624c0d	Reviewed-by	Fabien COELHO <coelho@cri.ensmp.fr>
+593d4e47db7	Discussion	<20160627151604.GD1051@msg.df7cb.de>
+5472ed3e9bc	Discussion	<90634e20-097a-e4fd-67d5-fb2c42f0dd71@2ndquadrant.com>
+5c6df67e0c9	Discussion	<2442.1473957669@sss.pgh.pa.us>
+d8c61c97653	Discussion	<CAFjFpRdiht8e1HTVirbubr4YzaON5iZTzFJjq909y4sU8M_6eA@mail.gmail.com>
+3fcc98c990e	Discussion	<CAJrrPGfnRXvmCzxq6Dy=stAWebfNHxiL+Y_z7uqksZUCkW_waQ@mail.gmail.com>
+6cc54f38a9f	Discussion	<85e377b2-d459-396e-59b1-115548bbc059@iki.fi>
+40c3fe4980e	Discussion	<alpine.DEB.2.20.1608231622170.7102@lancre>
+419113dfdc4	Discussion	<CAA4eK1JyNdMeF-dgrpHozDecpDfsRZUtpCi+1AbtuEkfG3YooQ@mail.gmail.com>
+4f6494cfd26	From	gabrielle <gorthx@gmail.com>
+46b55e7f853	From	Michael Banck <michael.banck@credativ.de>
+65c65563842	Discussion	<alpine.DEB.2.20.1607131015370.7486@sto>
+2a7f4f76434	Discussion	<alpine.DEB.2.20.1607131015370.7486@sto>
+c91b34bab19	From	Michael Paquier <michael.paquier@gmail.com>
+e767db22420	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+eb5089a05ba	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+c1dc51d4844	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+ebdf5bf7d1c	From	Michael Paquier <michael.paquier@gmail.com>
+e7010ce4794	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+96dd77d3494	Discussion	<32468.1474548308@sss.pgh.pa.us>
+8023b5827fb	Discussion	<CABOikdOOawDda4hwLOT6zdA6MFfPLu3Z2YBZkX0JdayNS6JOeQ@mail.gmail.com>
+1ff0042165c	Author	Tomonari Katsumata
+3c2d5d6600d	Discussion	<CABcP5fjEjgOsh097cWnQrsK9yCswo4DZxp-V47DKCH-MxY9Gig@mail.gmail.com>
+49a91b88e6c	Discussion	<20789.1474390434@sss.pgh.pa.us>
+8e6b4ee21f4	Discussion	<20811.1474390987@sss.pgh.pa.us>
+959ea7fa761	Discussion	<20160923090814.GB1238@e733>
+12f6eadffd0	Report	<34854939-02d7-f591-5677-ce2994104599@dunslane.net>
+5a7bae06996	Report	<20160923081530.1517.75670@wrigleys.postgresql.org>
+c3a0818460a	Discussion	<CAMsr+YFXv+2qne6xJW7z_25mYBtktRX5rpkrgrb+DRgQ_FxgHQ@mail.gmail.com>
+12788ae49e1	Discussion	<alpine.DEB.2.20.1607090850120.3412@sto>
+a4afb2b5c0b	Report	<20160922173517.8214.88959@wrigleys.postgresql.org>
+fdc9186f7ed	Discussion	<14436.1470940379@sss.pgh.pa.us>
+f31a931fade	Discussion	<15085.1472494782@sss.pgh.pa.us>
+b7b8cc0cfcf	Discussion	<1188.1464544443@sss.pgh.pa.us>
+fb03d08a89e	Discussion	<17340.1464465717@sss.pgh.pa.us>
+0109ab27609	Discussion	<1188.1464544443@sss.pgh.pa.us>
+72daabc7a3e	Discussion	<CAP3PPDiucxYCNev52=YPVkrQAPVF1C5PFWnrQPT7iMzO1fiKFQ@mail.gmail.com>
+babe05bc2b7	Discussion	<CAB7nPqSMXU35g=W9X74HVeQp0uvgJxvYOuA4A-A3M+0wfEBv-w@mail.gmail.com>
+d3cd36a133d	Discussion	<1873520224.1784572.1465833145330.JavaMail.yahoo@mail.yahoo.com>
+d3cd36a133d	See-Also	<57786490.9010201@wars-nicht.de>
+83bed06be4e	Discussion	<b2a39359-3282-b402-f4a3-057aae500ee7@postgrespro.ru>
+6ad8ac60262	From	David Steele <david@pgmasters.net>
+6ad8ac60262	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+6e654546fb6	Discusssion	<f9d6cab2-73a7-7a84-55a8-07dcb8516ae5@postgrespro.ru>
+bf5bb2e85b6	From	Michael Paquier <michael.paquier@gmail.com>
+bc34223bc1e	From	Michael Paquier <michael.paquier@gmail.com>
+6ed2d8584cc	From	Michael Paquier <michael.paquier@gmail.com>
+728a3e73e96	From	Michael Paquier <michael.paquier@gmail.com>
+8e91e12bc3a	Discussion	<CADkLM=dGDGmaEiZ=UDepzumWg-CVn7r8MHPjr2NArj8S3TsROQ@mail.gmail.com>
+f1a469c9f1c	Reviewed-by	Heikki Linnakangas <hlinnaka@iki.fi>
+f1a469c9f1c	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+1c0cf52b39c	Reviewed-by	Heikki Linnakangas <hlinnaka@iki.fi>
+1c0cf52b39c	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+a5da81359db	Reviewed-by	Heikki Linnakangas <hlinnaka@iki.fi>
+a5da81359db	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+0665023b443	Reviewed-by	Heikki Linnakangas <hlinnaka@iki.fi>
+0665023b443	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+330b48b94b5	Reviewed-by	Thomas Munro <thomas.munro@enterprisedb.com>
+5afcd2aa740	Discussion	<nsjrbh$8li$1@blaine.gmane.org>
+f002ed2b8e4	Discussion	<nsjrbh$8li$1@blaine.gmane.org>
+7107d58ec5a	Discussion	<1925924.izSMJEZO3x@unused-4-107.brq.redhat.com>
+ea046f08d1b	Discussion	<1925924.izSMJEZO3x@unused-4-107.brq.redhat.com>
+9a109452da1	Report	<29043.1475288648@sss.pgh.pa.us>
+3b90e38c5d5	Discussion	<4157.1475178360@sss.pgh.pa.us>
+e8bdee2770f	Report	<f7ac29f3-515c-2a44-21c5-ec925053265f@dunslane.net>
+e94568ecc10	Discussion	<CAM3SWZTpaORV=yQGVCG8Q4axcZ3MvF-05xe39ZvORdU9JcD6hQ@mail.gmail.com>
+83c24920021	Discussion	<f7ac29f3-515c-2a44-21c5-ec925053265f@dunslane.net>
+814b9e9b8ed	Patch-By	Adam Brightwell
+814b9e9b8ed	Reviewed-By	Michael Paquier
+6bc811c992a	Report	<CAG-jOyA=iNFhN+yB4vfvqh688B7Tr5SArbYcFUAjZi=0Exp-Lg@mail.gmail.com>
+d51924be886	Discussion	<2652.1475512158@sss.pgh.pa.us>
+61633f79048	Fixes	#14319
+61633f79048	Reported-By	Huan Ruan
+61633f79048	Discussion	<20160909012610.20024.58169@wrigleys.postgresql.org>
+61633f79048	Backport	9,4-, where logical decoding was added
+46ddbbb1177	Discussion	<5300.1475592228@sss.pgh.pa.us>
+eda04886c1e	Discussion	<2652.1475512158@sss.pgh.pa.us>
+bfe2e847811	Discussion	<2652.1475512158@sss.pgh.pa.us>
+b56fb691b00	Discussion	<7303da46-daf7-9c68-3cc1-9f83235cf37e@2ndquadrant.com>
+d7eb76b908a	Discussion	<20161005143938.GA12247@nighthawk.caipicrew.dd-dns.de>
+8bb14cdd33d	Discussion	<20160920101051.1355.79453@wrigleys.postgresql.org>
+0d4d7d61850	Discussion	<20161007103414.GD12247@nighthawk.caipicrew.dd-dns.de>
+4806f26f9e4	Discussion	<0a3e7a0e-37bd-8427-29bd-958135862f0a@lab.ntt.co.jp>
+d668b03378c	Discussion	<20160908204529.flg6nivjuwp5vaoy@alap3.anarazel.de>
+0aec7f9aec8	Discussion	<20160907.155050.233844095.horiguchi.kyotaro@lab.ntt.co.jp>
+b0779abb3ad	Reported-By	Tom Lane
+b0779abb3ad	Discussion	<14947.1475690465@sss.pgh.pa.us>
+b0779abb3ad	Backpatch	9.5-, where the atomic operations API was introduced.
+8811f5d3a4a	Report	<CA+TgmoaHJKU5kcWZcYduATYVT7Mnx+8jUnycaYYL7OtCwCigug@mail.gmail.com>
+e55a946a81c	Report	<CADbMkNPT-Jz5PRSQ4RbUASYAjocV_KHUWapR%2Bg8fNvhUAyRpxA%40mail.gmail.com>
+e55a946a81c	Discussion	<22108.1475874586@sss.pgh.pa.us>
+ac4a9d92fcb	Report	<87int2qkat.fsf@gmail.com>
+ecb0d20a9d2	Discussion	<8536.1475704230@sss.pgh.pa.us>
+886f6c5ccdb	Report	<CAD-Qf1eLUtBOTPXyFQGW-4eEsop31tVVdZPu4kL9pbQ6tJPO8g@mail.gmail.com>
+0137caf273f	Discussion	<20160727004333.r3e2k2y6fvk2ntup@alap3.anarazel.de>
+e34318725ca	Discussion	<871sznz69m.fsf@metapensiero.it>
+2b860f52ed1	Discussion	<17177.1476136994@sss.pgh.pa.us>
+2f1eaf87e86	Discussion	<2661.1475849167@sss.pgh.pa.us>
+b75f467b6ee	Discussion	<0f607c4b-df23-353e-bf56-c0389d28495f@iki.fi>
+64f3524e2c8	Discussion	<2661.1475849167@sss.pgh.pa.us>
+8518583cdb1	Discussion	<A737B7A37273E048B164557ADEF4A58B539300BD@ntex2010a.host.magwien.gv.at>
+5c80642aa8d	Discussion	<d9bb74f8-b194-7307-9ebd-90645d377e45@lab.ntt.co.jp>
+9c4cc9e2c75	Report	<20161012065349.1412.47858@wrigleys.postgresql.org>
+cb775768e3e	Discussion	<31056.1476303954@sss.pgh.pa.us>
+3cca13cbfcc	Discussion	<b28ee774-7009-313d-dd55-5bdd81242c41@lab.ntt.co.jp>
+81e82a2bd48	Discussion	<EB57BF68-C06D-4737-BDDC-4BA778F4E62B@postgrespro.ru>
+32fdf42cf54	Discussion	<87d1j2zqtz.fsf@credativ.de>
+aa3ca5e3dd6	Discussion	<20160727004333.r3e2k2y6fvk2ntup@alap3.anarazel.de>
+b30d3ea824c	Reviewed-By	Tomas Vondra
+b30d3ea824c	Discussion	<20160727004333.r3e2k2y6fvk2ntup@alap3.anarazel.de>
+75ae538bc31	Reviewed-By	Tomas Vondra
+75ae538bc31	Discussion	<20160727004333.r3e2k2y6fvk2ntup@alap3.anarazel.de>
+5dfc198146b	Reviewed-By	Tomas Vondra
+5dfc198146b	Discussion	<20160727004333.r3e2k2y6fvk2ntup@alap3.anarazel.de>
+9e083fd4683	Discussion	<CAB7nPqRy3krN8quR9XujMVVHYtXJ0_60nqgVc6oUk8ygyVkZsA@mail.gmail.com>
+d8589946ddd	Report	<20160929035538.20224.39628@wrigleys.postgresql.org>
+d8589946ddd	Backpatch-through	9.6
+5ff4a67f63f	Discussion	<561274F1.1030000@iki.fi>
+6f13a682c86	Report	<20161018152550.1413.6439@wrigleys.postgresql.org>
+90d3da11c94	Author	Erik Rijkers
+90d3da11c94	Discussion	<274e4c8ac545d6622735f97c1f6c354b@xs4all.nl>
+917dc7d2393	ERROR	could not read block 28991 in file "base/16390/572026": read only 0
+917dc7d2393	Discussion	<CABOikdNr5vKucqyZH9s1Mh0XebLs_jRhKv6eJfNnD2wxTn=_9A@mail.gmail.com>
+0be22457d73	From	Vik Fearing <vik@2ndquadrant.fr>
+e5a9bcb529c	From	Michael Paquier <michael.paquier@gmail.com>
+9ffe4a8b4cb	Reviewed-by	Robert Haas <robertmhaas@gmail.com>
+9ffe4a8b4cb	Reviewed-by	Peter Geoghegan <pg@heroku.com>
+f82ec32ac30	Discussion	CAB7nPqTeC-8+zux8_-4ZD46V7YPwooeFxgndfsq5Rg8ibLVm1A@mail.gmail.com
+709e461befa	Discussion	<E0BF6A45-68E8-45E6-918F-741FB332C6BB@winand.at>
+6292c233918	Report	<19391.1477244876@sss.pgh.pa.us>
+a6c0a5b6e8a	Report	<CAO3NbwOycQjt2Oqy2VW-eLTq2M5uGMyHnGm=RNga4mjqcYD7gQ@mail.gmail.com>
+a6c0a5b6e8a	Related-Discussion	<57EE93C8.8080504@postgrespro.ru>
+8f1fb7d621b	Report	<57EE93C8.8080504@postgrespro.ru>
+8f1fb7d621b	Related-Discussion	<CAO3NbwOycQjt2Oqy2VW-eLTq2M5uGMyHnGm=RNga4mjqcYD7gQ@mail.gmail.com>
+94aceed3177	Discussion	<CAH38_tmbqwaUyKs9yagyRra=SMaT45FPBxk1pmTYcM0TyXGG7Q@mail.gmail.com>
+510e1b8ecf2	Discussion	<CAH38_tmbqwaUyKs9yagyRra=SMaT45FPBxk1pmTYcM0TyXGG7Q@mail.gmail.com>
+a522fc3d806	Report	<CAJ3Xv+jzJ8iNNUcp4RKW8b6Qp1xVAxHwSXVpjBNygjKxcVuE9w@mail.gmail.com>
+9a00f03e479	Discussion	<6315.1477677885@sss.pgh.pa.us>
+5ec81aceec8	Discussion	<8760oasf2y.fsf@credativ.de>
+da8f3ebf30b	Discussion	<83shraampf.fsf@is-it.eu>
+770671062f1	Report	<20161028200412.15987.96482@wrigleys.postgresql.org>
+a0f357e570c	Reviewed-by	Kuntal Ghosh <kuntalghosh.2007@gmail.com>
+1f87181e12b	Report	<CANFyU94_p6mqRQc2i26PFp5QAOQGB++AjGX=FO8LDpXw0GSTjw@mail.gmail.com>
+1f87181e12b	Discussion	http://mm.icann.org/pipermail/tz/2016-November/024431.html
+632fbe772cf	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+a39255d7663	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+59fa9d2d9da	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+69d590fffbd	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+20540710e83	Patch	<A737B7A37273E048B164557ADEF4A58B53962ED8@ntex2010a.host.magwien.gv.at>
+c8ead2a3974	Patch	<A737B7A37273E048B164557ADEF4A58B53962ED8@ntex2010a.host.magwien.gv.at>
+34ca0905706	Discussion	<CAEepm=0WQBSvuYcMOUj4Ga4NXpu2J=ejZcE=e=eiTjTX-6_gDw@mail.gmail.com>
+1b00dd0ea0f	Patch	<f2134651-14b3-efeb-f274-c69f3c084031@BlueTreble.com>
+fc8b81a291b	Report	<20161106010947.1387.66380@wrigleys.postgresql.org>
+26abb50c490	Patch	<f2134651-14b3-efeb-f274-c69f3c084031@BlueTreble.com>
+77517ba59f8	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+33cb96ba1a8	Discussion	<11843.1478358206@sss.pgh.pa.us>
+e3e66d8a981	Discussion	<26681.1477940227@sss.pgh.pa.us>
+6d30fb1f75a	Discussion	<b2de8258-c4c0-1cb8-7b97-e8538e5c975c@BlueTreble.com>
+9257f078725	Discussion	<9633.1478552022@sss.pgh.pa.us>
+1833f1a1c3b	Discussion	<20808.1478481403@sss.pgh.pa.us>
+0b1b5033ac1	Discussion	<5019.1478790246@sss.pgh.pa.us>
+e1b449bea90	Report	<CABVd52UAdGXpg_rCk46egpNKYdXOzCjuJ1zG26E2xBe_8bj+Fg@mail.gmail.com>
+279c439c7fb	Patch	<CAJrrPGcSQkrNkO+4PhLm4B8UQQQmU9YVUuqmtgM=pmzMfxWaWQ@mail.gmail.com>
+530f8065243	Discussion	<19749.1478711862@sss.pgh.pa.us>
+24aef33804b	Discussion	<CAEZATCXZ8tb2DV6f=bkhsMV6u_gRcZ0CZBw2J-qU84RxSukZog@mail.gmail.com>
+1c147557762	Report	<20161111135422.8761.36733@wrigleys.postgresql.org>
+9be244dbe87	Author	Amit Kapila, slightly editorialized by me
+9be244dbe87	Reviewed-By	Ashutosh Sharma, Andres Freund
+9be244dbe87	Discussion	<CAA4eK1JOjkdXYtHxh=2aDK4VgDtN-LNGKY_YqX0N=YEvuzQVWg@mail.gmail.com>
+d5d8a0b7e54	Discussion	<CAF4Au4w6rrH_j1bvVhzpOsRiHCog7sGJ3LSX0tY8ZdwhHT88LQ@mail.gmail.com>
+27d2c123287	Reviewed-by	Anastasia Lubennikova <a.lubennikova@postgrespro.ru>
+27d2c123287	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+a7e5457db86	Reviewed-by	Anastasia Lubennikova <a.lubennikova@postgrespro.ru>
+a7e5457db86	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+9ca7b0bf016	From	Craig Ringer <craig@2ndquadrant.com>
+9ca7b0bf016	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+ffa8c3d8521	Discussion	<22432.1478968242@sss.pgh.pa.us>
+ffaa44cb559	Discussion	<16447.1478818294@sss.pgh.pa.us>
+0a7481930c7	Discussion	<0de37763-5843-b2cc-855e-5d0e5df25807@agliodbs.com>
+ac888986fc6	Discussion	<19092.1479325184@sss.pgh.pa.us>
+d8c05aff56b	Discussion	<19092.1479325184@sss.pgh.pa.us>
+67dc4ccbb2e	Reviewed-by	Andreas Karlsson <andreas@proxel.se>
+13671b4b22a	Discussion	<871sy78wno.fsf@credativ.de>
+0832f2db68c	Discussion	<CAFjFpRek+cLCnTo24youuGtsq4zRphEB8EUUPjDxZjnL4n4HYQ@mail.gmail.com>
+c5f365f3ab2	Discussion	<4308.1479595330@sss.pgh.pa.us>
+f24cf960d7a	Discussion	<8737im6pmh.fsf@credativ.de>
+a734fd5d1c3	Discussion	CAB7nPqSbYT6dRwsXVgiKmBdL_ARemfDZMPA+RPeC_ge0GK70hA@mail.gmail.com
+4324ade9a68	Discussion	<878tse6yvf.fsf@credativ.de>
+a4930e7ca2a	Discussion	<CAB7nPqRMbGqa_mesopcn4MPyTs34eqtVEK7ELYxvvV=oqS00YA@mail.gmail.com>
+e2a0ee69006	Discussion	<CAFj8pRA8nJZcozgxN=RMSqMmKuHVOkcGAAKPKdFeiMWGDSUDLA@mail.gmail.com>
+906bfcad7ba	Discussion	<8542.1479742008@sss.pgh.pa.us>
+e1320266edd	Discussion	<16288.1479610770@sss.pgh.pa.us>
+bd673e8e864	Discussion	<1479294998857-5930602.post@n3.nabble.com>
+4aaddf2f009	Author	Craig Ringer
+4aaddf2f009	Discussion	https://www.postgresql.org/message-id/CAMsr+YFM5Q=+ry3mKvWEqRTxrB0iU3qUSRnS28nz6FJYtBwhJg@mail.gmail.com
+4e026b32d40	Report	<20161124114911.6530.31200@wrigleys.postgresql.org>
+ab77a5a4561	Discussion	<874m2w4k5d.fsf@ex.ansel.ydns.eu>
+dbdfd114f34	Discussion	<30ebc6e3-8358-09cf-44a8-578252938424@2ndquadrant.com>
+182db070403	Report	<20161125151448.6529.33039@wrigleys.postgresql.org>
+182db070403	Discussion	<13224.1480177514@sss.pgh.pa.us>
+dafa0848da1	Discussion	https://postgr.es/m/21299.1480272347@sss.pgh.pa.us
+eb681416886	Author	Amit Langote
+eb681416886	Discussion	https://postgr.es/m/e46c0569-0449-afa0-e2fe-f3776e4b3fd5@lab.ntt.co.jp
+489a51af12d	Discussion	https://postgr.es/m/alpine.DEB.2.20.1611291349400.19314@lancre
+b57c8333b55	Discussion	https://postgr.es/m/20161119173316.GA13284@tamriel.snowman.net
+4fafa579b0a	Author	Guillaume Lelarge
+4fafa579b0a	Reviewed-by	Amul Sul
+4fafa579b0a	Discussion	https://postgr.es/m/VisenaEmail.48.49926ea6f91dceb6.15355a48249@tc7-visena
+721f7bd3cbc	Discussion	http://postgr.es/m/CAD__OuhqPRGpcsfwPHz_PDqAGkoqS1UvnUnOnAB-LBWBW=wu4A@mail.gmail.com
+11da83a0e70	Discussion	https://postgr.es/m/CA+renyUEE29=X01JXdz8_TQvo6n9=2XoEBBRnQ8rkLyr+kjPxQ@mail.gmail.com
+11da83a0e70	Discussion	https://postgr.es/m/55F6EE82.8080209@sigaev.ru
+ade49c605f1	Discussion	https://postgr.es/m/7076.1480446837@sss.pgh.pa.us
+ca5f8850209	Report	https://postgr.es/m/20161128182113.6527.58926@wrigleys.postgresql.org
+ca5f8850209	Discussion	https://postgr.es/m/31089.1480384713@sss.pgh.pa.us
+41e2b84ce1b	Report	https://postgr.es/m/D0E8A029-D1AC-42E8-979A-5DE4A77E4413@rcmail.com
+2c09c93ce1b	Discussion	https://postgr.es/m/08e7892a-d55c-eefe-76e6-7910bc8dd1f3@iki.fi
+6c303223be3	Discussion	https://postgr.es/m/08e7892a-d55c-eefe-76e6-7910bc8dd1f3@iki.fi
+1de9cc0dcca	Discussion	https://postgr.es/m/08e7892a-d55c-eefe-76e6-7910bc8dd1f3@iki.fi
+2f0c7ff48b6	From	Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>
+81c52728f82	From	Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>
+81c52728f82	Reviewed-by	amul sul <sulamul@gmail.com>
+81c52728f82	Discussion	http://www.postgresql.org/message-id/flat/0A3221C70F24FB45833433255569204D1F5EE995@G01JPEXMBYT05/
+213c0f2d788	Discussion	https://postgr.es/m/20161130011710.6539.53657@wrigleys.postgresql.org
+6d46f4783ef	Discussion	http://postgr.es/m/CAA4eK1LfzcZYxLoXS874Ad0+S-ZM60U9bwcyiUZx9mHZ-KCWhw@mail.gmail.com
+8ed3f11bb04	Author	Andres Freund
+8ed3f11bb04	Reviewed-By	Heikki Linnakangas
+8ed3f11bb04	Discussion	https://postgr.es/m/20161103110721.h5i5t5saxfk5eeik@alap3.anarazel.de
+fc4b3dea295	Author	Andres Freund
+fc4b3dea295	Reviewed-By	Heikki Linnakangas
+fc4b3dea295	Discussion	https://postgr.es/m/20161103110721.h5i5t5saxfk5eeik@alap3.anarazel.de
+0aff9293bf7	Reviewed-by	Alvaro Herrera <alvherre@2ndquadrant.com>
+0aff9293bf7	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+e696dccec1c	Reviewed-by	Alvaro Herrera <alvherre@2ndquadrant.com>
+e696dccec1c	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+b999c247a5d	Reviewed-by	Alvaro Herrera <alvherre@2ndquadrant.com>
+b999c247a5d	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+597a87ccc9a	From	Petr Jelinek <petr@2ndquadrant.com>
+78c8c814390	From	Petr Jelinek <petr@2ndquadrant.com>
+fa2fa995528	Authors	Daniel Vérité, Álvaro Herrera
+fa2fa995528	Reviewed by	Tomas Vondra
+fa2fa995528	Discussion	https://postgr.es/m/20160229183023.GA286012@alvherre.pgsql
+5714931b075	Author	Petr Jelínek
+fbc1c12a94a	Discussion	20131205144434.GG12398@alap2.anarazel.de
+fbc1c12a94a	Discussion	CAEepm=1z5WLuNoJ80PaCvz6EtG9dN0j-KuHcHtU6QEfcPP5-qA@mail.gmail.com
+13e14a78ea1	Discussion	CA+TgmobkeWptGwiNa+SGFWsTLzTzD-CeLz0KcE-y6LFgoUus4A@mail.gmail.com
+13e14a78ea1	Discussion	CAEepm=1z5WLuNoJ80PaCvz6EtG9dN0j-KuHcHtU6QEfcPP5-qA@mail.gmail.com
+13df76a537c	Discussion	CA+TgmobkeWptGwiNa+SGFWsTLzTzD-CeLz0KcE-y6LFgoUus4A@mail.gmail.com
+13df76a537c	Discussion	CAEepm=1z5WLuNoJ80PaCvz6EtG9dN0j-KuHcHtU6QEfcPP5-qA@mail.gmail.com
+b3427dade14	Discussion	https://postgr.es/m/e51f4311-f483-4dd0-1ccc-abec3c405110@BlueTreble.com
+38507232088	Report	https://postgr.es/m/20161204163237.GA8030@telsasoft.com
+5dc851afde8	Reported-By	Andres Freund
+5dc851afde8	Reviewed-By	Tom Lane
+5dc851afde8	Discussion	<20160509194645.7lewnpw647zegx2m@alap3.anarazel.de>
+fe0a0b5993d	Discussion	https://www.postgresql.org/message-id/CAB7nPqRy3krN8quR9XujMVVHYtXJ0_60nqgVc6oUk8ygyVkZsA@mail.gmail.com
+fe0a0b5993d	Discussion	https://www.postgresql.org/message-id/CAB7nPqRWkNYRRPJA7-cF+LfroYV10pvjdz6GNvxk-Eee9FypKA@mail.gmail.com
+daac8e30eb7	Reported-by	Darko Prelec
+093129c9d9f	Reviewed By	Jeevan Chalke, Dean Rasheed
+093129c9d9f	Discussion	https://postgr.es/m/20160901063404.GY4028@tamriel.snowman.net
+dfe530a0922	Author	Michael Paquier, slightly modified by me
+dfe530a0922	Discussion	<CAB7nPqT7APWrvPFZrcjKEHoq4=g3z2ErxtTdojSf+sDALzuemA@mail.gmail.com>
+d97b14ddab2	Discussion	https://www.postgresql.org/message-id/20161129152102.GR13284%40tamriel.snowman.net
+18f8f784cbb	Discussion	https://postgr.es/m/CAFfgvXWLOE2novHzYjmQK8-J6TmHz42G8f3X0SORM44+stUGmw@mail.gmail.com
+0b78106cd46	cases	report the common typmod if there is one, but otherwise return -1
+0b78106cd46	Report	https://postgr.es/m/20161205143037.4377.60754@wrigleys.postgresql.org
+0b78106cd46	Discussion	https://postgr.es/m/27429.1480968538@sss.pgh.pa.us
+a73491e5fee	Discussion	https://postgr.es/m/CAE+byMupUURYiZ6bKYgMZb9pgV1CYAijJGqWj-90W=nS7uEOeA@mail.gmail.com
+9cda81f0056	Discussion	https://postgr.es/m/CA+Fz15kR1OXZv43mDrJb3XY+1MuQYWhx5kx3ea6BRKQp6ezGkg@mail.gmail.com
+0eaaaf00e29	Discussion	https://postgr.es/m/8737i01dew.fsf@credativ.de
+92fb649837e	Discussion	https://postgr.es/m/d845c1af-e18d-6651-178f-9f08cdf37e10@aegee.org
+ad365b2f91d	Discussion	https://www.postgresql.org/message-id/be25aa16-2f06-b7d1-8810-c69489a0e70b@dunslane.net
+9bbbf029dde	Discussion	https://www.postgresql.org/message-id/20161201014826.ic72tfkahmevpwz7@alap3.anarazel.de
+e7f051b8f9a	Discussion	https://www.postgresql.org/message-id/3029e460-d47c-710e-507e-d8ba759d7cbb@iki.fi
+a924c327e27	From	Petr Jelinek <petr.jelinek@2ndquadrant.com>
+be7b2848c6d	Discussion	https://postgr.es/m/4029.1481413370@sss.pgh.pa.us
+23f722ba8e1	Discussion	https://postgr.es/m/62935e6f-4f1b-c433-e0fa-7f936a38b3e5@2ndquadrant.com
+3856cf9607f	Discussion	http://postgr.es/m/CAM3SWZQWZZ_N=DmmL7tKy_OUjGH_5mN=N=A6h7kHyyDvEhg2DA@mail.gmail.com
+1f542a2eacc	exception	a CTE could be present as a member of an appendrel, if we
+1f542a2eacc	Report	https://postgr.es/m/CAKkG4_=gjY5QiHtqSZyWMwDuTd_CftKoTaCqxjJ7uUz1-Gw=qw@mail.gmail.com
+55caaaeba87	Discussion	https://postgr.es/m/20161213152548.14897.81245@wrigleys.postgresql.org
+fdf71389dd5	From	Petr Jelinek <petr.jelinek@2ndquadrant.com>
+4f5182e18d3	Report	https://www.postgresql.org/message-id/20161216105001.13334.42819%40wrigleys.postgresql.org
+25216c98938	Discussion	http://postgr.es/m/CAA4eK1Kf6tOY0oVz_SEdngiNFkeXrA3xUSDPPORQvsWVPdKqnA@mail.gmail.com
+3761fe3c20b	Discussion	http://postgr.es/m/CA+TgmoYsFn6NUW1x0AZtupJGUAs1UDY4dJtCN47_Q6D0sP80PA@mail.gmail.com
+93eb619cd35	Discussion	<CAHGQGwHWB3izc6cXuFLh5kOcAbFXaRhhgwd-X5PeN9TEjxqXwg@mail.gmail.com>
+b645a05fc61	From	Vladimir Rusinov <vrusinov@google.com>
+7fa93eec4e0	Discussion	https://postgr.es/m/16149.1481835103@sss.pgh.pa.us
+10238fad038	Discussion	https://postgr.es/m/CABUevEy_-e0YvL4ayoX8bH_Ja9w%2BBHoP6jUgdxZuG2nEj3uAfQ%40mail.gmail.com
+3901fd70cc7	Author	Masahiko Sawada
+3901fd70cc7	Reviewed-By	Michael Paquier, Amit Kapila and me
+3901fd70cc7	Discussion	<CAD21AoAACi9NeC_ecm+Vahm+MMA6nYh=Kqs3KB3np+MBOS_gZg@mail.gmail.com>
+2604438472c	Discussion	https://postgr.es/m/28215.1481999808@sss.pgh.pa.us
+2604438472c	Discussion	https://postgr.es/m/26706.1482087250@sss.pgh.pa.us
+7cd0fd655d6	Discussion	http://postgr.es/m/22dd313b-d7fd-22b5-0787-654845c8f849%402ndquadrant.com
+7cd0fd655d6	Discussion	http://postgr.es/m/20161215090916.GB20659%40fetter.org
+db80acfc9d5	Discussion	https://www.postgresql.org/message-id/ac5b0b69-744c-9114-6218-8300ac920e61@iki.fi
+1753b1b0270	Reviewed-by	Andreas Karlsson <andreas@proxel.se>
+58b1362642d	Report	https://postgr.es/m/CAEZATCUp%3Dz%3Ds4SzZjr14bfct_bdJNwMPi-gFi3Xc5k1ntbsAgQ%40mail.gmail.com
+19990918d3f	Discussion	https://www.postgresql.org/message-id/flat/20160504183952.GE10850%40tamriel.snowman.net
+2259bf672cb	Discussion	https://www.postgresql.org/message-id/flat/20160504183952.GE10850%40tamriel.snowman.net
+2d1018ca56f	Pointed out by	Amit Langote
+2d1018ca56f	Discussion	https://www.postgresql.org/message-id/14c535b4-13ef-0590-1b98-76af355a0763%40lab.ntt.co.jp
+89fcea1ace4	Discussion	https://postgr.es/m/28215.1481999808@sss.pgh.pa.us
+89fcea1ace4	Discussion	https://postgr.es/m/26706.1482087250@sss.pgh.pa.us
+a8ae12322ae	Discussion	https://postgr.es/m/19113.1482337898@sss.pgh.pa.us
+ea0aa9698cf	Discussion	https://postgr.es/m/19872.1482338965%40sss.pgh.pa.us
+b86515da1a7	Report	https://postgr.es/m/CAHeEsBf42AWTnk=1qJvFv+mYgRFm07Knsfuc86Ono8nRjf3tvQ@mail.gmail.com
+b86515da1a7	Report	https://postgr.es/m/CAKYdkBrUaZX+F6KpmzoHqMtiUqCtAW_w6Dgvr6F0WTiopuGxow@mail.gmail.com
+01ec25631fe	Discussion	https://www.postgresql.org/message-id/34678beb-938e-646e-db9f-a7def5c44ada%40iki.fi
+c4448683893	Author	Corey Huinker
+c4448683893	Reviewed-By	Joe Conway
+c4448683893	Discussion	https://postgr.es/m/CADkLM%3DfWyXVEyYcqbcRnxcHutkP45UHU9WD7XpdZaMfe7S%3DRwA%40mail.gmail.com
+2f802d95b49	Author	Joe Conway
+2f802d95b49	Reviewed-By	Tom Lane
+2f802d95b49	Discussion	https://postgr.es/m/02fa2d90-2efd-00bc-fefc-c23c00eb671e%40joeconway.com
+6ef2eba3f57	Author	Michael Paquier, editorialized by Andres Freund
+6ef2eba3f57	Reviewed-By	Andres Freund, David Steele, Amit Kapila, Kyotaro HORIGUCHI
+6ef2eba3f57	Bug	#13685
+6ef2eba3f57	Discussion	https://www.postgresql.org/message-id/20151016203031.3019.72930@wrigleys.postgresql.org https://www.postgresql.org/message-id/CAB7nPqQcPqxEM3S735Bd2RzApNqSNJVietAC=6kfkYv_45dKwA@mail.gmail.com
+6ef2eba3f57	Backpatch	-
+cd1b215692d	Discussion	https://postgr.es/m/15225.1482431619@sss.pgh.pa.us
+1ead0208b21	does	the parent tables can add an OID column, but they can't subtract one.
+1ead0208b21	Report	https://postgr.es/m/20161222145304.25620.47445@wrigleys.postgresql.org
+12bd7dd317e	Author	Artur Zakirov, a few additional comments by me
+12bd7dd317e	Discussion	https://www.postgresql.org/message-id/57a71eba-f2c7-e7fd-6fc0-2126ec0b39bd%40postgrespro.ru
+0a85c102254	Author	Joe Conway
+0a85c102254	Reviewed-By	Dean Rasheed and Robert Haas
+0a85c102254	Discussion	https://postgr.es/m/5744FA24.3030008%40joeconway.com
+e13486eba05	Discussion	http://postgr.es/m/CA+TgmoYe+EG7LdYX6pkcNxr4ygkP4+A=jm9o-CPXyOvRiCNwaQ@mail.gmail.com
+3c9d398484f	Discussion	https://postgr.es/m/20161223102056.25614.1166@wrigleys.postgresql.org
+fe591f8bf68	Discussion	http://postgr.es/m/CA+TgmoYe+EG7LdYX6pkcNxr4ygkP4+A=jm9o-CPXyOvRiCNwaQ@mail.gmail.com
+f3fd531a51d	Discussion	https://www.postgresql.org/message-id/1614593c-e356-5b27-6dba-66320a9bc68b@dalibo.com
+86d216c7754	Discussion	https://www.postgresql.org/message-id/2020970042.4589542.1482482101585.JavaMail.zimbra%40dbi-services.com
+a3aef88e6a9	Report	https://postgr.es/m/20161225021519.10139.45460@wrigleys.postgresql.org
+54386f35782	Report	https://postgr.es/m/7d0809ee-6f25-c9d6-8e74-5b2967830d49@enterprisedb.com
+54386f35782	Discussion	https://postgr.es/m/17691.1482523168@sss.pgh.pa.us
+3ea56fffd66	Author	Michael Paquier
+f0774abde86	Discussion	https://postgr.es/m/20161227172307.10135.7747@wrigleys.postgresql.org
+2e254130d1d	Reviewed-by	Alvaro Herrera <alvherre@2ndquadrant.com>
+80a7298b9eb	Discussion	https://postgr.es/m/29670.1482942811@sss.pgh.pa.us

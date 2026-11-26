@@ -1,0 +1,37 @@
+hash	tag	value
+d5db3abfb61	files	avoid creating stats hashtable entries for tables that aren't being
+8a1468af4e5	efficiently	we can now use indexes on the set members in inner-indexscan
+336a6491aaa	relations	fix the executor so that we can have an Append plan on the
+38c4fe87ac8	TODO	changes in documentation
+0ebf1cc8346	NB	SQL2003 requires that DISTINCT not be specified for any of these
+0ebf1cc8346	restriction	if the user asks for stddev(DISTINCT x), presumably they
+a323ede2802	non-NULL	palloc() ereports on OOM, so we can safely assume it returns a
+53ee9f52ce2	ERROR	direct correlated subquery unsupported as initplan
+8876e37d07b	TODO	improve XLOG replay
+d18e334c654	condition	when there are multiple possible index paths involving
+c61a2f58418	routines	win1251_to_iso, win866_to_iso, euc_tw_to_big5, euc_tw_to_mic,
+777f72cd372	TBD	apply similar changes to plpgsql, plpython and pltcl.
+8a30cc21274	Note	this patch changes pg_proc.h, but I did not force initdb because
+1f7ef548ec2	TODO	add support of subsplit to contrib modules
+e79aed7cba7	transformInsertStmt	the target table is already in p_rtable at that point.
+6dc920de59b	Author	Victor Wagner <vitus@cryptocom.ru>
+893632be4e1	LOG	statement: execute <unnamed>: SELECT * FROM test1 WHERE t = $1
+893632be4e1	DETAIL	parameters: $1 = 'joe''s place'
+893632be4e1	LOG	statement: execute <unnamed>: SELECT * FROM test1 WHERE i = $1::int4
+893632be4e1	DETAIL	parameters: $1 = '2'
+893632be4e1	LOG	duration: 2.431 ms  parse <unnamed>: SELECT * FROM test1 WHERE t = $1
+893632be4e1	LOG	duration: 2.335 ms  bind <unnamed> to <unnamed>: SELECT * FROM test1 WHERE t = $1
+893632be4e1	DETAIL	parameters: $1 = 'joe''s place'
+893632be4e1	LOG	duration: 0.394 ms  execute <unnamed>: SELECT * FROM test1 WHERE t = $1
+893632be4e1	DETAIL	parameters: $1 = 'joe''s place'
+893632be4e1	LOG	duration: 1.251 ms  parse <unnamed>: SELECT * FROM test1 WHERE i = $1::int4
+893632be4e1	LOG	duration: 0.566 ms  bind <unnamed> to <unnamed>: SELECT * FROM test1 WHERE i = $1::int4
+893632be4e1	DETAIL	parameters: $1 = '2'
+893632be4e1	LOG	duration: 0.173 ms  execute <unnamed>: SELECT * FROM test1 WHERE i = $1::int4
+893632be4e1	DETAIL	parameters: $1 = '2'
+33d3ad46578	table	avoid invoking LockBufferForCleanup without need, put out the
+772c5ba31f3	Note	as fixed in HEAD, this changes a constant in the pg_stats view,
+8964b41c7b8	established	referencing an undefined parameter should result in an
+d19798e584c	accurately	we have to distinguish the effects of the join's own ON
+50a073916c6	NMAKE	fatal error U1077: 'link.exe' : xxxxx '0x460'
+0cb91ccba93	messages	describe the pg_control timestamp as "last known up at" rather than

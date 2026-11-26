@@ -1,0 +1,111 @@
+hash	tag	value
+c629d3b9d65	From	Bryan Henderson <bryanh@giraffe-data.com>
+0aa928764a2	From	Tom I Helbekkmo <tih@Hamartun.Priv.NO>
+405ced26ba2	From	Tom I Helbekkmo <tih@Hamartun.Priv.NO>
+80159ee2bc1	From	Tom I Helbekkmo <tih@Hamartun.Priv.NO>
+baef78d96b7	Patch by	wieck@sapserv.debis.de (Jan Wieck)
+c487962dd7d	Fixed pointed out by	jwieck@debis.com (Jan Wieck)
+49459d85a9a	From	James Hughes <jamesh@interpath.com>
+af32f4d5d39	From	James Hughes <jamesh@interpath.com>
+151a1238d27	From	James Hughes <jamesh@interpath.com>
+47ad8d1cf5e	From	James Hughes <jamesh@interpath.com>
+b611fefa0fa	From	<Dr. Andrew C.R. Martin> martin@biochem.ucl.ac.uk
+7aeda9d6675	From	Stan Brown <stanb@awod.com>
+1af818b8bfc	From	Darren King <darrenk@insightdist.com>
+fe3737f6f9c	From	"Thomas A. Szybist" <szybist@boxhill.com>
+ea514d2e6aa	Reported by	Shiby Thomas <sthomas@cise.ufl.edu>
+feb5a2cfd67	From	Darren King <darrenk@insightdist.com>
+3f52d1705a9	Note	close_sl() is clearly broken  but will repair later (calculating point on lseg rather than point on line).
+d85a5420f71	From	Andrew Martin <martin@biochemistry.ucl.ac.uk>
+c10908e0d26	From	Jan Wieck <jwieck@debis.com>
+a377ad58ea5	From	Tom I Helbekkmo <tih@Hamartun.Priv.NO>
+dde2b66f44f	From	Tom I Helbekkmo <tih@Hamartun.Priv.NO>
+d1891c6fb33	From	Ryan Kirkpatrick <rkirkpat@nag.cs.colorado.edu>
+067cb82d6ad	From	"Pedro J. Lobo" <pjlobo@euitt.upm.es>
+25ad1439e10	From	Michael Meskes <meskes@topsystem.de>
+203f6d93da2	From	Andrew Martin <martin@biochemistry.ucl.ac.uk>
+74e015916ea	From	Michael Meskes <meskes@topsystem.de>
+cdfac31335e	From	Keith Parks <emkxp01@mtcc.demon.co.uk>
+34dddd51fd3	Subject	[PATCHES] one small fix for ecpg
+373b85329d3	From	AA van Raalte <alvin@camberlo.demon.co.uk>
+a35a681f974	From	CNT systemen BV <cntsys@cistron.nl>
+751ebd20a04	From	Darren King <darrenk@insightdist.com>
+88aa07c4e31	From	Frank Ridderbusch <ridderbusch.pad@sni.de>
+e4798027471	From	Frank Ridderbusch <ridderbusch.pad@sni.de>
+18e1f0331b5	From	Frank Ridderbusch <ridderbusch.pad@sni.de>
+712e77e3dfb	From	Frank Ridderbusch <ridderbusch.pad@sni.de>
+80e12829cf7	From	Michael Meskes <meskes@topsystem.de>
+f0da7129f51	Suggested by	Frank Ridderbusch <ridderbusch.pad@sni.de>
+f139617b553	Subject	[PATCHES] ecpg: correct whenever statement
+c37be81cdff	From	t-ishii@sra.co.jp
+4a7447e0327	Suggested by	Tom I Helbekkmo <tih@Hamartun.Priv.NO>
+6a9627e7922	From	t-ishii@sra.co.jp
+76e6d260110	Solution	--------- Add this to the libpq and libpq++ Makefiles
+85fe4cc17dd	From	Terry Mackintosh <terry@terrym.com>
+8d53465ed5f	From	Vince Vielhaber <vev@michvhf.com>
+8dd692c8e38	From	Andreas Klemm <andreas@klemm.gtn.com>
+07e3fb08bea	From	Ryan Kirkpatrick <rkirkpat@nag.cs.colorado.edu>
+5e202d8586b	From	Zeugswetter Andreas SARZ <Andreas.Zeugswetter@telecom.at>
+c73e1869482	From	David Gould <dg@illustra.com>
+f9322c66d3c	From	David Gould <dg@illustra.com>
+d1c5021c67f	From	"Aldrin L." <aldrin@americasnet.com>
+d1c5021c67f	Subject	[INTERFACES] mSQL Compatibility Library (fwd)
+ef567413d2f	From	Michael Meskes <meskes@topsystem.de>
+a45341979fa	From	Michael Meskes <meskes@topsystem.de>
+9f3d63936b0	From	David Hartwig <daveh@insightdist.com>
+eaa1df28bfd	From	Tom Lane <tgl@sss.pgh.pa.us>
+e3a4ceac922	From	Brook Milligan <brook@trillium.NMSU.Edu>
+c31a80faf0e	From	Michael Meskes <meskes@topsystem.de>
+2a74511bf4a	From	Michael Meskes <meskes@topsystem.de>
+9142e54e735	From	Peter T Mount <patches@maidast.demon.co.uk>
+85f91d0e8e2	From	Peter T Mount <patches@maidast.demon.co.uk>
+5fdefbc7ef5	From	t-ishii@sra.co.jp
+5fdefbc7ef5	ERROR	CopyReadAttribute - end of record marker corrupted
+db921be3199	From	"Dr. Michael Meskes" <meskes@online-club.de>
+b27af0d94aa	From	"Dr. Michael Meskes" <meskes@online-club.de>
+a0659e3e2c7	From	Tom Lane <tgl@sss.pgh.pa.us>
+ce812671b15	From	Tom Lane <tgl@sss.pgh.pa.us>
+bd029bcb4a1	From	Tom Lane <tgl@sss.pgh.pa.us>
+3a3c1b85a30	From	Tom Lane <tgl@sss.pgh.pa.us>
+bf00bbb0c49	From	t-ishii@sra.co.jp
+5979d738417	From	t-ishii@sra.co.jp
+186aeb1d671	From	Dr. Michael Meskes <meskes@online-club.de>
+a1627a1d64d	From	David Hartwig <daybee@bellatlantic.net>
+a1627a1d64d	Example	SELECT  name FROM foo GROUP BY lower(name);
+3fa676a74cd	From	Garrett Wollman <wollman@khavrinen.lcs.mit.edu>
+93120330713	Date	Sun, 16 Aug 1998 14:56:48 -0400
+93120330713	From	Tom Lane <tgl@sss.pgh.pa.us>
+91162057ae3	From	Tom Lane <tgl@sss.pgh.pa.us>To: pgsql-patches@postgreSQL.org
+338c54cbc10	From	Jan Wieck <jwieck@debis.com>
+31de2c9461d	From	Tom Lane <tgl@sss.pgh.pa.us>
+32cfc4aa00f	From	Michael Meskes <meskes@online-club.de>
+35478b8028a	From	Michael Meskes <meskes@online-club.de>
+875a3f66048	From	Michael Meskes <meskes@online-club.de>
+dd70e439dfc	From	Jacek Lasecki <jacek@sound.eti.pg.gda.pl>
+1a5fb654639	From	Massimo Dal Zotto <dz@cs.unitn.it>
+1acf0d85fef	From	Massimo Dal Zotto <dz@cs.unitn.it>
+7dbcf31be29	From	Massimo Dal Zotto <dz@cs.unitn.it>
+ab00a220ab8	From	Massimo Dal Zotto <dz@cs.unitn.it>
+88b17d9c56b	From	Massimo Dal Zotto <dz@cs.unitn.it>
+8e9d69d6ac7	From	Massimo Dal Zotto <dz@cs.unitn.it>
+53d7d473020	From	Massimo Dal Zotto <dz@cs.unitn.it>
+7414d619507	From	Massimo Dal Zotto <dz@cs.unitn.it>
+f62d1253eff	From	Massimo Dal Zotto <dz@cs.unitn.it>
+602ac52d3ee	From	Magnus Hagander <mha@edu.sollentuna.se>
+b686927f4b9	From	Massimo Dal Zotto <dz@cs.unitn.it>
+b9b00d5fe4c	From	Michael Meskes <meskes@online-club.de>
+3067ac8e773	From	Massimo Dal Zotto <dz@cs.unitn.it>
+eec4c7366f0	From	Massimo Dal Zotto <dz@cs.unitn.it>
+91178b8b2ee	From	Tom Lane <tgl@sss.pgh.pa.us>
+6c4982851a7	From	Massimo Dal Zotto <dz@cs.unitn.it>
+370d6cdb64d	From	David Hartwig <daybee@bellatlantic.net>
+bf395e895b1	From	Michael Meskes <meskes@usa.net>
+06b8c8a8b89	From	Michael Meskes <meskes@usa.net>
+44e01bf9921	From	Jan Wieck <jwieck@debis.com>
+4fff1dada7b	From	Peter Gucwa <pg@softcomputer.com>
+15d61bb4396	From	SHIOZAKI Takehiko <takehi-s@ascii.co.jp>
+46fb81636c8	Requested by	Peter T Mount peter@retep.org.uk
+935a2e694e5	From	Taral <taral@cyberjunkie.com>
+91a62480f71	From	Taral <taral@cyberjunkie.com>
+597205c353f	From	Keith Parks <emkxp01@mtcc.demon.co.uk>
+e237194b728	From	Michael Meskes <Michael.Meskes@usa.net>

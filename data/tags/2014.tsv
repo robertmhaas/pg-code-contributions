@@ -1,0 +1,137 @@
+hash	tag	value
+423e1211a86	ERROR	MultiXactId 11415437 does no longer exist -- apparent wraparound
+158b7fa6a34	over-hasty	rather than allowing this case, we ought to reject it for now.
+61bee9f756c	Author	Zoltán Böszörményi
+ad6bf0291a9	Reported-by	Mike Blackwell <mike.blackwell@rrd.com>
+b152c6cd0de	Authors	Pavel Stehule and Dean Rasheed.  Some tweaks by Álvaro Herrera
+6aa2bdf6a01	Note	this does not give a free pass to opclass-provided consistent
+66c04c981df	From	Andres Freund <andres@anarazel.de>
+d3c4c471553	From	Fabrízio de Royes Mello <fabriziomello@gmail.com>
+fea164a72a7	Security	CVE-2014-0060
+537cbd35c89	Security	CVE-2014-0061
+5f173040e32	Security	CVE-2014-0062
+4318daecc95	Security	CVE-2014-0063
+31400a67332	Security	CVE-2014-0064
+01824385aea	Security	CVE-2014-0065 for buffer overruns, CVE-2014-0066 for crypt()
+6ef325429ca	Security	CVE-2014-0067
+7b1fab3fd2e	Security	CVE-2014-0060 through CVE-2014-0067
+fb05f3ce83d	Author	Steeve Lennmark <steevel@handeldsbanken.se>
+fb05f3ce83d	Reviewed-by	Peter Eisentraut <peter_e@gmx.net>
+32001ab0b7b	Author	Marko Kreen <markokr@gmail.com>
+fccebe421d0	Note	the back branches were using SnapshotNow instead of an MVCC snapshot,
+ef5856fd9b7	Author	Antonin Houska
+192d8e04bd3	Author	Fabien COELHO <coelho@cri.ensmp.fr>
+9067310cc5d	Author	Pavel Stěhule
+9067310cc5d	Reviewed-by	Jeevan Chalke, Álvaro Herrera, Josh Kupershmidt
+84df54b22e8	Author	Pavel Stěhule, editorialized somewhat by Álvaro Herrera
+84df54b22e8	Reviewed-by	Tomáš Vondra, Marko Tiikkaja
+e2a0fc5363e	Author	Kyotaro HORIGUCHI
+e2a0fc5363e	Reviewed-by	Jaime Casanova
+2b4f2ab33de	Author	Tomáš Vondra
+efada2b8e92	ERROR	failed to delete rightmost child 41 of block 3 in index "foo_pkey"
+bd1154edec5	Author	Alex Hunsaker
+f88d4cfc9d4	LOG	process 11367 still waiting for ShareLock on transaction 717 after 1000.108 ms
+f88d4cfc9d4	DETAIL	Process holding the lock: 11366. Wait queue: 11367.
+f88d4cfc9d4	CONTEXT	while updating tuple (0,2) in relation "foo"
+f88d4cfc9d4	STATEMENT	UPDATE foo SET value = 3;
+f88d4cfc9d4	Author	Christian Kruse, some tweaks by Álvaro Herrera
+f88d4cfc9d4	Reviewed-by	Amit Kapila, Andres Freund, Tom Lane, Robert Haas
+d9134d0a355	Authors	Oleg Bartunov,  Teodor Sigaev, Peter Geoghegan and Andrew Dunstan.
+d9134d0a355	Review	Andres Freund
+31c6e54ec9a	Security	CVE-2014-0067
+9d229f399e8	aggregates	count(), sum(), avg(), stddev() and variance() for
+7d0f493f196	Reviewed-by	Pavel Stěhule <pavel.stehule@gmail.com>
+7d0f493f196	Reviewed-by	Erik Rijkers <er@xs4all.nl>
+9fa93530c87	Reported-By	Steve Singer
+621a99a666b	WARNING	concurrent delete in progress within table "..."
+621a99a666b	Reported-By	Sandro Santilli
+be76a6d39e2	Security	CVE-2014-0067
+03a25cec8de	Note	the faulty line is already printed via an errcontext hook,
+f162fb75b32	From	Josh Kupershmidt <schmiddy@gmail.com>
+6bdf4b9c7dd	ERROR	unexpected classid 3600
+6bdf4b9c7dd	ERROR	unexpected classid 3602
+9b35ddce93a	correctly	the node was printed as "<>" which is read as a string
+ddc41fd2f47	Note	a few of these items actually don't apply to 9.3, but only to older
+c2581794f37	unnecessary	we only need to know whether the transaction is still in
+f41872d0c12	Author	Fabrízio de Royes Mello
+f41872d0c12	Reviewed by	Christoph Berg, Andres Freund, Thom Brown
+5569d75d6a8	Author	David Rowley
+8e484bc4abc	Author	Fabien COELHO <coelho@cri.ensmp.fr>
+1c9701cfe58	Authors	Craig Ringer and Thomas Munro, tweaked by Álvaro
+4b4b680c3d6	Discussion	20140321182231.GA17111@alap3.anarazel.de
+d6fa44fce7c	Discussion	20140629142511.GA26930@awork2.anarazel.de
+51bb79569f9	Author	Sawada Masahiko, heavily editorialized by me.
+51bb79569f9	Reviewed-By	Jeevan Chalke, Alvaro Herrera
+07968dbfaad	Discussion	20140630222854.GW26930@awork2.anarazel.de
+57b1085df55	Reviewed-by	Ali Akbar <the.apaan@gmail.com>
+07c8651dd91	Author	Pavel Stehule, editorialized by many
+07c8651dd91	Reviewed-By	Andres Freund, Petr Jelinek, Fujii Masao, MauMau, Abhijit Menon-Sen and Erik Rijkers.
+07c8651dd91	Discussion	CAFj8pRDVGuC-nXBfe2CK8vpyzd2Dsr9GVpbrATAnZO=2YQ0s2Q@mail.gmail.com, CAFj8pRA54AbTv2RXDTRxiAd8hy8wxmoVLqhJDRCwEnhdd7OUkw@mail.gmail.com
+311da16439e	Author	Michael Paquier and Andres Freund
+311da16439e	Discussion	CAB7nPqS5VeedSCxrK=QouokbawgGKLpyc1Q++RRFCa_sjcSVrg@mail.gmail.com
+fe550b2ac24	Note	the behavior for log_connections is still a bit odd, in that when
+728f152e07f	Author	Abhijit Menon-Sen, slightly editorialized by me
+728f152e07f	Reviewed-By	Álvaro Herrera, Andres Freund, and Heikki Linnakangas
+728f152e07f	Discussion	20140604104716.GA3989@toroid.org
+bdd5726c347	Author	Abhijit Menon-Sen, slightly editorialized by me
+bdd5726c347	Reviewed-By	Andres Freund, Dilip Kumar and Furuya Osamu
+bdd5726c347	Discussion	20140604104716.GA3989@toroid.org
+e5603a2f35b	Discussion	20140919100016.GH4277@alap3.anarazel.de
+0926ef43c16	Discussion	CAHyXU0yC7uPeeVzQROwtnrOP9dxTEUPYjB0og4qUnbipMEV57w@mail.gmail.com
+b64d92f1a56	Author	Andres Freund with contributions from Oskari Saarenmaa
+b64d92f1a56	Reviewed-By	Amit Kapila, Robert Haas, Heikki Linnakangas and Álvaro Herrera
+b64d92f1a56	Discussion	CA+TgmoYBW+ux5-8Ja=Mcyuy8=VXAnVRHp3Kess6Pn3DMXAPAEA@mail.gmail.com, 20131015123303.GH5300@awork2.anarazel.de, 20131028205522.GI20248@awork2.anarazel.de
+a30199b01bd	Author	Erik Rijkers
+445d262852f	Author	Michael Paquier
+ef8863844bb	Discussion	20140930195756.GC27407@msg.df7cb.de
+0ef3c29a4b4	Discussion	CAB7nPqQrqFzjqCjxu4GZzTrD9kpj6HMn9G5aOOMwt1WZ8NfqeA@mail.gmail.com, CAB7nPqQXc_+g95zWnqaa=mVQ4d3BVRs6T41frcEYi2ocUrR3+A@mail.gmail.com
+a39e78b710e	Discussion	20140929193733.GB14400@awork2.anarazel.de
+fdf81c9a6cf	Author	Michael Paquier, with some editing by me.
+0c013e08cfb	Author	Michael Paquier, with some editing by me.
+5a6c168c785	cases	in particular the EquivalenceClass mechanism could try to generate
+c8b6cba84a9	Author	Michael Paquier and Andres Freund
+c8b6cba84a9	Discussion	CAB7nPqQtt79U6FmhwvgqJmNyWcVCbbV-nS72j_jyPEopERg9rg@mail.gmail.com
+d9f38c7a555	Author	Michael Paquier
+d9f38c7a555	Discussion	CABUevEx+zrOHZOQg+dPapNPFRJdsk59b=TSVf30Z71GnFXhQaw@mail.gmail.com
+df630b0dd5e	Author	Thomas Munro
+7bb0e97407c	worker	if you attach to the queue first, and the background worker
+0eea8047bf0	Author	Joachim Wieland, revised by Álvaro Herrera
+5d93ce2d0c6	Reviewed-by	Fabien COELHO <coelho@cri.ensmp.fr>
+6f04368cfc0	Author	Herwin Weststrate <herwin@quarantainenet.nl>
+6f04368cfc0	Reviewed-by	Ali Akbar <the.apaan@gmail.com>
+e64d3c5635c	Author	Michael Paquier <michael@otacoo.com>
+e64d3c5635c	Reviewed-by	Fabrízio de Royes Mello <fabriziomello@gmail.com>
+b01a4f68386	Author	Florian Pflug
+3c2aa0c6f27	Author	Craig Ringer
+4a54b99e9c3	Discussion	20140925133459.GB9633@alap3.anarazel.de
+4a54b99e9c3	Author	Oskari Saarenmaa
+3e81a33d799	Reported-by	Jonathan Rogers <jrogers@socialserve.com>
+7516f525941	Patch reviewed by	Amit Kapila, Heikki Linnakangas, Robert Haas.
+7516f525941	PS	The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° 318633.
+ec5896aed3c	ERROR	"replication slot file ... has unsupported version 1"
+ec5896aed3c	ERROR	"snapbuild state file ... has unsupported version 1 instead of
+79172a58ea3	Author	Michael Paquier
+d3586fc8aa5	Discussion	20140912112246.GA4984@alap3.anarazel.de
+98ec7fd903b	Discussion	20140912112246.GA4984@alap3.anarazel.de
+e4d1e264918	Author	Peter Geoghegan
+85b506bbfc2	Author	Fabrízio de Royes Mello
+0f66d212015	Author	Etsuro Fujita
+0f66d212015	Reviewer	Furuya Osamu
+606c0123d62	Author	Rajeev Rastogi
+606c0123d62	Reviewer	Haribabu Kommi
+8dc626defec	Author	Cédric Villemain <cedric@2ndquadrant.fr>
+73c986adde5	Authors	Álvaro Herrera and Petr Jelínek
+5ede3a31171	Author	Peter Geoghegan
+dcbfc00aba1	Author	Michael Paquier
+7442a889975	Author	Fabrízio de Royes Mello <fabriziomello@gmail.com>
+f6dc6dd5ba5	Security	CVE-2014-0067
+35192f0626c	Author	Jim Nasby, some kibitzing by Heikki Linnankangas.
+37de8de9e33	Discussion	20140210134625.GA15246@awork2.anarazel.de
+0ee98d1cbf1	Reviewed by	Abhijit Menon-Sen, Stephen Frost, Heikki Linnakangas,
+1826987a46d	Author	Adam Brightwell, minor tweaks by Álvaro
+1826987a46d	Reviewed by	Stephen Frost, Andres Freund, Álvaro Herrera
+ab5194e6f61	Reviewed-By	Amit Kapila and Robert Haas
+ab5194e6f61	Author	Andres Freund
+ab5194e6f61	Discussion	20130926225545.GB26663@awork2.anarazel.de
+d72731a7045	Reviewed-By	Robert Haas and Amit Kapila
+d72731a7045	Discussion	20141010160020.GG6670@alap3.anarazel.de, 20141027133218.GA2639@awork2.anarazel.de

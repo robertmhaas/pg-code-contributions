@@ -1,0 +1,12 @@
+hash	tag	value
+fa559a86eec	bug	wrong plan would have been generated for a 'special operator' used
+0bd3606d729	patch	a 3-value enum was mistakenly assigned directly to a 'bool'
+9e218af7edc	valgrind	a buffer passed to strncmp() had to be NUL-terminated. Original
+c3c09be34b6	wit	Add a header record to each WAL segment file so that it can be reliably
+1d567aee070	Logged by	Aarjav Trivedi
+1d567aee070	Description	Spelling error in tsearch2.sql leading to problems
+fd015c5c99e	default	some SGML tags weren't properly terminated.
+525449be272	Recap	When running on a localized windows version, the timezone name
+525449be272	Solution	The registry contains both the name of the timezone in english
+94e467061e7	Note	this code is pretty ugly; it'd perhaps be better to treat comments
+2ff501590b3	where	grep 1996-2004 && the word 'Copyright' ... scanned through the

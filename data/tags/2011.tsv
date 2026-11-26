@@ -1,0 +1,32 @@
+hash	tag	value
+978445bece6	Author	Alex Hunsaker
+7ccb6dc2d3e	Security	CVE-2010-4015
+43054624979	Security	CVE-2010-4015
+87bb2ade2ce	Authors	Alexey Klyukin and Alex Hunsaker.
+472f608e436	Note	updating pg_amproc is sufficient because there will be no pg_depend
+4502c8e1c06	all-foo-recurse	all-bar-recurse
+4502c8e1c06	install-foo-recurse	install-bar-recurse
+7564654adf0	anyway	what we want is to dump a COLLATE clause on attributes whose
+2594cf0e8c0	hooks	they should modify, not appear separately from, guc.c's own message
+dca30da3433	Note	easiest way to find these is to look for double spaces in HTML.index.
+7de38741c04	Author	Alex Hunsaker
+ea8e42f3a08	Note	most of the places touched in this patch will need further work
+e5e2fc842c4	Authors	Brendan Jurd, Alvaro Herrera
+846af54dd5a	Author	Noah Misch
+d71197cd35d	Author	Noah Misch
+a0eae1a2eeb	Author	Kevin Grittner
+d6db0e4e0e3	Author	Noah Misch
+c8dfc892327	Author	Noah Misch
+aaf15e5c1cf	NB	this change will need to be called out as an incompatibility in the
+f18795e7b74	Author	Kevin Grittner
+a2a5ce68266	ERROR	invalid byte sequence for encoding "UTF8": 0xdb24
+a2a5ce68266	ERROR	invalid byte sequence for encoding "UTF8": 0xdb 0x24
+57eb0090926	bug	it's lower-level than the resource manager mechanism and should not be
+c0f03aae046	change	the old code wouldn't necessarily traverse the entire chain,
+e6858e66573	Note	I had to adjust an underspecified query in the window.sql regression
+7ed36056751	Author	Alexander Shulgin, with some tweaks by me
+9d3b5024435	Authors	Greg Smith and Noah Misch
+dd3bab5fd74	ERROR	could not determine which collation to use for upper() function
+4b8b5e53eb6	Closes	#6309
+61d81bd28db	Authors	Nikhil Sontakke, Alex Hunsaker
+7db101c36ef	Author	Erik Rijkers

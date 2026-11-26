@@ -1,0 +1,47 @@
+hash	tag	value
+3b3ffc8d97d	From	Magnus Hagander <mha@sollentuna.net>
+d8b96ade816	From	Magnus Hagander <mha@sollentuna.net>
+298682d9e0b	NB	None (well almost none) of the new methods actually do anything. This
+cdbaec771c5	From	Michael Meskes <Michael.Meskes@usa.net>
+2ee522954d0	From	Peter T Mount <peter@retep.org.uk>
+2ae5d51668a	From	Tatsuo Ishii <t-ishii@sra.co.jp>
+f7c4ec5085b	From	D'Arcy J.M. Cain <darcy@druid.net>
+91fed81c776	From	Michael Meskes <Michael.Meskes@usa.net>
+fc590b6f1a1	From	Michael Meskes <Michael.Meskes@usa.net>
+bf6636baa69	From	Michael Meskes <Michael_Meskes@topmail.de>
+ae4a40dc263	From	Michael Meskes <Michael_Meskes@topmail.de>
+8c3e8a8a0e4	From	Tatsuo Ishii <t-ishii@sra.co.jp>
+fa9db42a6e5	From	Michael Meskes <Michael_Meskes@topmail.de>
+d077c614926	From	Michael Meskes <Michael_Meskes@topmail.de>
+f34240de063	From	Horak Daniel <horak@mmp.plzen-city.cz>
+1c264e68c5e	From	Constantin Teodorescu <teo@flex.ro>
+f45ec44c6b6	NOTE	I couldn't get ngsmls to find the document
+2deef968f4d	ERROR	copyObject: don't know how to copy 704
+6458daa1805	Message-Id	<199905090312.MAA00466@ext16.sra.co.jp>
+9487ad84090	From	D'Arcy J.M. Cain <darcy@druid.net>
+840306af047	From	Massimo Dal Zotto <dz@cs.unitn.it>
+dbaab4a4d42	From	Massimo Dal Zotto <dz@cs.unitn.it>
+93b57eb5338	From	Massimo Dal Zotto <dz@cs.unitn.it>
+48c1887964d	NOTICE	equal: don't know whether nodes of type 107 are equal
+e786508600e	ERROR	Illegal use of aggregates or non-group column in target list
+e786508600e	ERROR	Illegal use of aggregates or non-group column in target list
+44878506d81	CAUTION	THESE CHANGES REQUIRE INITDB.  pg_statistic table has changed.
+4f1766f1ea5	Note	still need docs on NUMERIC and DECIMAL (and let's not talk about regression tests :()
+db436adf761	CAUTION	I have changed the representation of SortClause nodes, therefore
+42af56e1ead	CAUTION	this will break stored rules that contain subplans.  You may
+1f14a9de74b	ERROR	No such function 'time_timespan' with the specified attributes
+2d0eee32c4a	From	"Vadim Mikheev" <vadim@krs.ru>
+2d0eee32c4a	To	"Hiroshi Inoue" <Inoue@tpf.co.jp>
+2d0eee32c4a	References	<000201befa94$42fe04c0$2801007e@cadzone.tpf.co.jp>
+2d0eee32c4a	Subject	Re: elog(ERROR) in vacuum
+2d0eee32c4a	Date	Fri, 10 Sep 1999 10:27:10 +0900
+2d0eee32c4a	Organization	OJSC Rostelecom (Krasnoyarsk)
+2d0eee32c4a	Message-ID	<37D85E6E.5AFA126D@krs.ru>
+3f5a1643879	Sidenote	IIRC, the variable should be left alone if the value is NULL.
+7d7fb02148f	two	one fixes uminus and other literal length. They are to be
+1547ee017c8	TODO	Generic builtin trigger procedures Automatic execution of appropriate CREATE CONSTRAINT... at CREATE TABLE Support of new trigger type in pg_dump Swapping of huge # of events to disk
+3eb1c822775	CAUTION	addition of a field to RangeTblEntry nodes breaks stored rules;
+0e1bfe92c75	ERROR	ORDER BY columns must appear in SELECT DISTINCT target list
+78bc83fedf7	Note	This now requires snprintf(), which, if necessary, is taken from
+18c30002863	ERROR	aggregate(DISTINCT ...) is not implemented yet
+350cb386af0	parentheses	SELECT 2 + null;                 fails SELECT 2 + (null);               OK

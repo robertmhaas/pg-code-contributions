@@ -1,0 +1,24 @@
+hash	tag	value
+2b59274c092	expressions	FormIndexDatum requires the estate's scantuple to already point
+991bfe11d28	coherent	the most prominent part is now a "Log-Shipping Standby Servers"
+1f474d299d0	Security	CVE-2010-1169
+9ead05b7c3d	Security	CVE-2010-1170
+20db9591b24	Security	CVE-2010-1169, CVE-2010-1170
+2a73ee59dbd	Security	CVE-2010-1169
+98e4005efb1	Closes	#5489
+d494e685c58	documentation	we don't attempt to reverse-lookup host from hostaddr
+e11cfa87be2	Note	I (tgl) objected to removing this check in 9.0 on the grounds that it
+7badf1b25d0	Author	Alex Hunsaker
+95cacd1345c	locales	array_in could drop characters that were meant to be part of the
+f121c408e25	Note	as usual, bug fixes that were also applied in back branches are not
+bf429cebd05	Branch	REL8_3_STABLE Release: REL8_3_2 [92c3a8004] 2008-03-29 00:15:37 +0000
+bf429cebd05	Branch	master Release: REL8_4_BR [6fc9d4272] 2008-03-29 00:15:28 +0000
+50595b5fce2	Note	this change results in a functionality loss when libperl has been
+50595b5fce2	Security	CVE-2010-3433
+0c9b166db53	Author	Quan Zongliang
+07f1264dda0	Note	catversion bumped because, although the contents of stored rules
+33ae03f4003	Author	Josh Kupershmidt
+73bc5218df0	Author	Marti Raudsepp <marti@juffo.org>
+d7304244e26	ERROR	division by zero
+d1f5a92e18d	queue	we have to reset lastHeap if this was the last heap item in the
+55573990cac	Author	Kevin Grittner

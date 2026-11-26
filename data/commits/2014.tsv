@@ -1,0 +1,1745 @@
+hash	committer	committed_at	insertions	subject
+7c957ec83ee	Michael Meskes	2014-01-01 12:39:31 +0100	5	Do not use an empty hostname.
+4b351841fa0	Robert Haas	2014-01-01 20:17:00 -0500	9	Rename walLogHints to wal_log_hints for easier grepping.
+4cf81b737d5	Tom Lane	2014-01-02 14:20:28 -0500	3	Fix contrib/pg_upgrade to clean all the cruft made during "make check".
+3cff1879f8d	Robert Haas	2014-01-02 15:15:51 -0500	22	Aggressively freeze tables when CLUSTER or VACUUM FULL rewrites them.
+722acf51a0d	Alvaro Herrera	2014-01-02 18:16:54 -0300	104	Handle wraparound during truncation in multixact/members
+a50d9762549	Alvaro Herrera	2014-01-02 18:17:07 -0300	17	Wrap multixact/members correctly during extension
+638cf09e76d	Alvaro Herrera	2014-01-02 18:17:29 -0300	6	Handle 5-char filenames in SlruScanDirectory
+a7ef273e1ce	Tom Lane	2014-01-02 21:45:51 -0500	16	Fix calculation of maximum statistics-message size.
+a3b4aeecfe9	Tom Lane	2014-01-02 21:54:20 -0500	1	Ooops, should use double not single quotes in StaticAssertStmt().
+1a3e82a7f94	Alvaro Herrera	2014-01-03 13:22:03 -0300	9	Restore some comments lost during 15732b34e8c8
+99299756669	Tom Lane	2014-01-04 13:48:50 -0500	1	Fix typo in comment.
+5858cf8ab2c	Tom Lane	2014-01-04 14:01:51 -0500	9	Fix header comment for bitncmp().
+92459e7a7f8	Tom Lane	2014-01-04 16:05:16 -0500	38	Fix translatability markings in psql, and add defenses against future bugs.
+8b49a6044d0	Tom Lane	2014-01-05 12:28:39 -0500	208	Cache catalog lookup data across groups in ordered-set aggregates.
+10a82cda677	Heikki Linnakangas	2014-01-06 12:30:19 +0200	1	Remove bogus -K option from pg_dump.
+edc43458d79	Peter Eisentraut	2014-01-06 21:30:26 -0500	50	Add more use of psprintf()
+b168c5ef273	Magnus Hagander	2014-01-07 17:11:32 +0100	52	Avoid including tablespaces inside PGDATA twice in base backups
+9544cc0d657	Magnus Hagander	2014-01-07 17:50:56 +0100	16	Move permissions check from do_pg_start_backup to pg_start_backup
+f68220df92c	Heikki Linnakangas	2014-01-07 21:49:15 +0200	1	Silence compiler warning on MSVC.
+0c051c90082	Tom Lane	2014-01-07 15:25:27 -0500	95	Fix LATERAL references to target table of UPDATE/DELETE.
+7e04792a1cb	Bruce Momjian	2014-01-07 16:05:30 -0500	1292	Update copyright for 2014
+ca607b155e8	Peter Eisentraut	2014-01-08 07:01:16 -0500	2	pg_upgrade: Fix fatal error handling
+d59ff6c1101	Heikki Linnakangas	2014-01-08 15:03:09 +0200	18	Fix bug in determining when recovery has reached consistency.
+e6336b8b577	Tom Lane	2014-01-08 13:58:37 -0500	38	Save a few cycles in advance_transition_function().
+847e46abc92	Tom Lane	2014-01-08 14:33:52 -0500	9	Avoid extra AggCheckCallContext() checks in ordered-set aggregates.
+815d71deed5	Heikki Linnakangas	2014-01-08 22:26:39 +0200	0	If multiple recovery_targets are specified, use the latest one.
+3739e5ab93a	Heikki Linnakangas	2014-01-08 23:28:52 +0200	6	Fix pause_at_recovery_target + recovery_target_inclusive combination.
+daa7527afc2	Robert Haas	2014-01-08 18:58:00 -0500	70	Reduce the number of semaphores used under --disable-spinlocks.
+080b7db72eb	Tom Lane	2014-01-08 20:18:58 -0500	57	Fix "cannot accept a set" error when only some arms of a CASE return a set.
+220b34331f7	Tom Lane	2014-01-08 20:58:22 -0500	4	We don't need to include pg_sema.h in s_lock.h anymore.
+10a3b165a32	Peter Eisentraut	2014-01-09 06:44:24 -0500	3	pgcrypto: Make header files stand alone
+c945af80cfd	Heikki Linnakangas	2014-01-09 14:00:39 +0200	185	Refactor checking whether we've reached the recovery target.
+d685e242496	Michael Meskes	2014-01-09 16:20:19 +0100	19	Fix descriptor output in ECPG.
+192b4aacad4	Michael Meskes	2014-01-09 16:20:19 +0100	147	Changed regression test to ecpg test suite for alignment problem just with last commit.
+faab7a957d3	Tom Lane	2014-01-09 12:59:55 -0500	15	Remove unnecessary local variables to work around an icc optimization bug.
+423e1211a86	Alvaro Herrera	2014-01-10 18:03:18 -0300	9	Accept pg_upgraded tuples during multixact freezing
+111022eac64	Bruce Momjian	2014-01-10 18:03:28 -0500	26	Move username lookup functions from /port to /common
+850ade3e32e	Bruce Momjian	2014-01-10 20:56:47 -0500	1	Adjust pg_upgrade for move of username lookup functions to /common
+11829ff8b2c	Andrew Dunstan	2014-01-10 22:25:04 -0500	0	Remove DESCR entries for json operator functions.
+28233ffaa43	Tom Lane	2014-01-11 00:16:08 -0500	52	Add another regression test cross-checking operator and function comments.
+fd2ace80281	Bruce Momjian	2014-01-11 13:41:08 -0500	15	docs:  remove undocumented assign syntax in plpgsql examples
+6286526207d	Tom Lane	2014-01-11 13:42:42 -0500	15	Fix compute_scalar_stats() for case that all values exceed WIDTH_THRESHOLD.
+d84c584ece6	Bruce Momjian	2014-01-11 14:00:47 -0500	15	Revert fd2ace802811c333b0b4e1a28b138fd4774745f3
+910bac59530	Tom Lane	2014-01-11 16:36:07 -0500	36	Fix possible crashes due to using elog/ereport too early in startup.
+158b7fa6a34	Tom Lane	2014-01-11 19:03:12 -0500	72	Disallow LATERAL references to the target table of an UPDATE/DELETE.
+bb953ad164a	Bruce Momjian	2014-01-12 22:25:36 -0500	1	Fix pg_dumpall on pre-8.1 servers
+976a7d11560	Michael Meskes	2014-01-13 10:41:53 +0100	6	Always use the same way to addres a descriptor in ecpg's regression tests.
+04038148b65	Heikki Linnakangas	2014-01-13 15:16:26 +0200	3	Add OVERLAPS to index in the docs.
+866a1f0923b	Heikki Linnakangas	2014-01-13 15:43:29 +0200	1	Fix calculation of ISMN check digit.
+c3ccc9ee584	Tom Lane	2014-01-13 13:07:10 -0500	35	Fix possible buffer overrun in contrib/pg_trgm.
+2bb1f14b89d	Robert Haas	2014-01-13 14:42:16 -0500	43	Make bitmap heap scans show exact/lossy block info in EXPLAIN ANALYZE.
+05ff5062da5	Robert Haas	2014-01-13 14:54:00 -0500	9	Code improvements for ALTER SYSTEM .. SET.
+6ddd5137b26	Robert Haas	2014-01-14 12:18:58 -0500	304	Simple table of contents for a shared memory segment.
+ec9037df263	Robert Haas	2014-01-14 12:23:22 -0500	1016	Single-reader, single-writer, lightweight shared message queue.
+4db3744f1f4	Robert Haas	2014-01-14 12:24:12 -0500	932	Test code for shared memory message queue facility.
+246a9a8d0c4	Robert Haas	2014-01-14 14:34:57 -0500	1	Fix typo in comment.
+b682709451b	Robert Haas	2014-01-14 14:48:57 -0500	2	Mention that VACUUM FREEZE also effectively zeroes the table freeze age.
+16cad3e8674	Robert Haas	2014-01-14 15:58:15 -0500	73	Documentation for test_shm_mq.
+061b079f898	Tom Lane	2014-01-14 17:35:21 -0500	98	Fix multiple bugs in index page locking during hot-standby WAL replay.
+5df99f6481b	Tom Lane	2014-01-14 19:27:57 -0500	41	Improve FILES section of psql reference page.
+be361ef2a0b	Robert Haas	2014-01-15 08:31:04 -0500	1	Fix compiler warning: Size isn't 64 bits on 32 bit platforms.
+d89746c7c53	Robert Haas	2014-01-15 10:24:28 -0500	2	Fix compiler warning.
+b5763cedde2	Robert Haas	2014-01-15 10:51:06 -0500	4	test_shm_mq: Fix checks for negative queue size.
+d02c0ddb152	Robert Haas	2014-01-15 11:00:50 -0500	1	Fix missing parentheses resulting in wrong order of dereference.
+ed46758381f	Robert Haas	2014-01-15 12:41:20 -0500	86	Logging running transactions every 15 seconds.
+b1365ff7a81	Robert Haas	2014-01-15 12:44:22 -0500	1	test_shm_mq: Try again to fix compiler warning.
+a687ec7d5bf	Peter Eisentraut	2014-01-15 21:14:28 -0500	0	Fix whitespace
+8ba288da5dc	Heikki Linnakangas	2014-01-16 12:00:19 +0200	2	Suppress Coverity complaints in readfuncs.c.
+3291301385e	Alvaro Herrera	2014-01-16 16:36:41 -0300	246	Split ECPGdo() in constituent parts
+515d2c596c1	Tom Lane	2014-01-16 15:29:33 -0500	27	Add display of oprcode (the underlying function's name) to psql's \\do+.
+61bee9f756c	Alvaro Herrera	2014-01-16 18:06:50 -0300	621	Split ecpg_execute() in constituent parts
+a472ae1e4e2	Heikki Linnakangas	2014-01-16 23:15:41 +0200	3	Fix Hot Standby feedback sending when streaming busily.
+7e1955b861a	Bruce Momjian	2014-01-16 16:40:58 -0500	17	docs:  update PL/pgSQL docs about the use of := and =
+93c4bbc9998	Bruce Momjian	2014-01-16 19:28:50 -0500	1	doc: fix := description typo.
+d8a0b96c50b	Bruce Momjian	2014-01-16 19:38:22 -0500	2	doc:  rename "Equals" to "Equal"
+277279981fb	Heikki Linnakangas	2014-01-17 10:14:01 +0200	3	Prevent integer overflow with --progress >= 2148
+9c14dd22e14	Magnus Hagander	2014-01-17 12:41:32 +0100	9	Define WIN32 when _WIN32 is set
+4cba1f6bbf7	Magnus Hagander	2014-01-17 13:32:31 +0100	18	Show SSL encryption information when logging connections
+b64d956d583	Andrew Dunstan	2014-01-17 11:49:44 -0500	1	Prevent double macro definition of WIN32.
+708c529c7fd	Andrew Dunstan	2014-01-17 12:48:23 -0500	1	Export set_latch_on_sigusr1 symbol for Windows.
+e6170126fc2	Tom Lane	2014-01-17 16:52:06 -0500	67	Add gen_random_uuid() to contrib/pgcrypto.
+af9e3d65235	Tom Lane	2014-01-17 20:58:31 -0500	9	Minor code beautification in contrib/sslinfo.
+ad6bf0291a9	Peter Eisentraut	2014-01-17 23:08:22 -0500	1	Fix client-only installation
+7d7eee8bb70	Andrew Dunstan	2014-01-18 15:29:45 -0500	3	Export a few more symbols required for test_shm_mq module.
+0d79c0a8cc2	Tom Lane	2014-01-18 16:04:32 -0500	100	Make various variables const (read-only).
+6f25c62d788	Stephen Frost	2014-01-18 18:41:52 -0500	7	Allow SET TABLESPACE to database default
+76e91b38ba6	Stephen Frost	2014-01-18 18:56:40 -0500	340	Add ALTER TABLESPACE ... MOVE command
+115f414124e	Tom Lane	2014-01-18 19:24:33 -0500	20	Fix VACUUM's reporting of dead-tuple counts to the stats collector.
+5254958e924	Stephen Frost	2014-01-18 20:59:31 -0500	60	Add CREATE TABLESPACE ... WITH ... Options
+4b8f2859ccc	Magnus Hagander	2014-01-19 13:27:22 +0100	2	Adjust the SSL connection notification message
+98de86e4221	Magnus Hagander	2014-01-19 17:05:01 +0100	91	Remove support for native krb5 authentication
+74a72ec2086	Magnus Hagander	2014-01-19 17:07:15 +0100	7	Rename msvc build option krb5 to gss
+4d1e2aeb1a1	Simon Riggs	2014-01-20 17:22:38 +0000	130	Speed up COPY into tables with DEFAULT nextval()
+5363c7f2bc5	Fujii Masao	2014-01-21 02:24:17 +0900	1	Fix typo in comment.
+9a8f5729b46	Tom Lane	2014-01-20 13:45:51 -0500	105	Fix to_timestamp/to_date's handling of consecutive spaces in format string.
+fe0c690dfdc	Tom Lane	2014-01-20 15:03:51 -0500	0	Remove pg_stat_statements--1.1.sql.
+d2458e3b20f	Alvaro Herrera	2014-01-20 17:13:47 -0300	38	Expose a routine to print triggers during EXPLAIN ANALYZE
+a5bca4ef034	Robert Haas	2014-01-21 09:41:40 -0500	12	Plug more memory leaks when reloading config file.
+5709b8acc67	Robert Haas	2014-01-21 10:02:37 -0500	1	Avoid a possible relcache leak in get_object_address_attribute.
+033b2343fae	Robert Haas	2014-01-21 11:42:37 -0500	0	Fix inadvertent semantics change in last patch to plug memory leaks.
+01f7808b3ea	Robert Haas	2014-01-21 12:38:53 -0500	93	Add a cardinality function for arrays.
+69c7a9838c8	Tom Lane	2014-01-21 16:34:28 -0500	26	Tweak parse location assignment for CURRENT_DATE and related constructs.
+6c36f383df7	Stephen Frost	2014-01-21 22:49:22 -0500	26	Allow type_func_name_keywords in even more places
+243ee266339	Andrew Dunstan	2014-01-22 08:46:51 -0500	10	Reindent json.c and jsonfuncs.c.
+36a35c550ac	Heikki Linnakangas	2014-01-22 19:20:58 +0200	2259	Compress GIN posting lists, for smaller index size.
+6668ad1d700	Heikki Linnakangas	2014-01-22 19:55:36 +0200	2	Fix declaration of GinVacuumState.
+90afc7d8056	Bruce Momjian	2014-01-22 22:26:45 -0500	14	Add date_trunc('', interval) documentation mention
+77035fa8a92	Fujii Masao	2014-01-23 22:58:58 +0900	10	Fix bugs in PQhost().
+d5bc6ce6ac2	Andrew Dunstan	2014-01-23 12:18:15 -0500	2	Allow case insensitive build version argument for MSVC.
+9f80f4835a5	Fujii Masao	2014-01-24 02:32:39 +0900	29	Add libpq function PQhostaddr().
+b152c6cd0de	Alvaro Herrera	2014-01-23 14:40:29 -0300	454	Make DROP IF EXISTS more consistently not fail
+0fdb2f7d7c0	Heikki Linnakangas	2014-01-23 22:15:31 +0200	3	Silence compiler warning.
+ec8f692c3cd	Heikki Linnakangas	2014-01-23 22:58:12 +0200	2	Fix alignment of GIN in-line posting lists stored in entry tuples.
+ac4ef637ad2	Tom Lane	2014-01-23 17:18:33 -0500	221	Allow use of "z" flag in our printf calls, and use it where appropriate.
+3ee74df2e48	Fujii Masao	2014-01-24 11:12:48 +0900	1	Remove duplicate index entry DATE_TRUNC in document.
+fbe19ee3b87	Stephen Frost	2014-01-23 23:52:40 -0500	114	ALTER TABLESPACE ... MOVE ... OWNED BY
+398cf255ad5	Heikki Linnakangas	2014-01-24 10:48:45 +0200	14	In GIN recompression code, use mmemove rather than memcpy, for vacuum.
+a8f374849fe	Heikki Linnakangas	2014-01-24 11:10:09 +0200	1	Fix off-by-one in newly-introdcued GIN assertion.
+d150ff57812	Heikki Linnakangas	2014-01-24 19:10:10 +0200	5	Reset unused fields in GIN data leaf page footer.
+6794a9f9a19	Stephen Frost	2014-01-24 15:10:08 -0500	9	Avoid minor leak in parallel pg_dump
+3a5313265d5	Noah Misch	2014-01-24 19:23:56 -0500	2	psql: Mention SSL protocol version in \\conninfo.
+820f08cabdc	Noah Misch	2014-01-24 19:29:06 -0500	8	libpq: Support TLS versions beyond TLSv1.
+71c6a8e375b	Heikki Linnakangas	2014-01-25 17:34:04 +0200	86	Add recovery_target='immediate' option.
+e2989fcab61	Bruce Momjian	2014-01-25 14:33:27 -0500	4	docs: mention CREATE TABLE LIKE linkage using INCLUDING DEFAULTS
+a16c2edcc7d	Heikki Linnakangas	2014-01-25 23:33:03 +0200	4	Copy-editing docs for recovery_target='immediate', and "ie."
+89774b58b0e	Bruce Momjian	2014-01-25 16:43:36 -0500	1	Adjust C comment in slot_attisnull() regarding nulls.
+00ba97365d3	Stephen Frost	2014-01-26 09:40:34 -0500	1	Use E, not e, for escaping in example docs
+cec8394b5cc	Andrew Dunstan	2014-01-26 09:49:10 -0500	140	Enable building with Visual Studion 2013.
+cae10ca27e5	Magnus Hagander	2014-01-26 18:42:08 +0100	5	Include tablespace options in verbose output of \\db
+f2795f8b539	Magnus Hagander	2014-01-26 21:16:02 +0100	5	Move the options column of \\db+ before the description
+790eaa699e4	Stephen Frost	2014-01-26 16:26:18 -0500	8	Check dup2() results in syslogger
+a7e5f7bf689	Andrew Dunstan	2014-01-26 17:03:13 -0500	54	Provide for client-only installs with MSVC.
+152d24f5ddb	Stephen Frost	2014-01-26 17:58:48 -0500	3	Fix minor leak in pg_dump
+7c619be6232	Fujii Masao	2014-01-27 12:23:20 +0900	15	Fix typos in comments for ALTER SYSTEM.
+dd515d40828	Fujii Masao	2014-01-27 12:39:11 +0900	2	Change the suffix of auto conf temporary file from "temp" to "tmp".
+28508969619	Tom Lane	2014-01-27 00:05:56 -0500	77	Code review for auto-tuned effective_cache_size.
+f62eba204f3	Heikki Linnakangas	2014-01-27 09:33:18 +0200	1	Fix typo in README
+ea9df812d85	Robert Haas	2014-01-27 11:07:44 -0500	505	Relax the requirement that all lwlocks be stored in a single array.
+f0d6f20278b	Tom Lane	2014-01-27 15:37:54 -0500	922	Keep pg_stat_statements' query texts in a file, not in shared memory.
+64e43c59b81	Tom Lane	2014-01-27 21:04:09 -0500	39	Log a detail message for auth failures due to missing or expired password.
+aef61bf433a	Stephen Frost	2014-01-28 08:40:41 -0500	7	Revert dup2() checking in syslogger.c
+051b3341c1e	Bruce Momjian	2014-01-28 11:29:39 -0500	0	Remove orphaned prototype
+c871e8f53bd	Bruce Momjian	2014-01-28 12:28:14 -0500	1	Revert C comment change in slot_attisnull()
+98d62c28fd7	Tom Lane	2014-01-28 12:34:29 -0500	2	Update comment.
+9132b189bf5	Fujii Masao	2014-01-29 02:58:22 +0900	327	Add pg_stat_archiver statistics view.
+105639900bf	Andrew Dunstan	2014-01-28 17:48:21 -0500	1176	New json functions.
+7043ac7100c	Andrew Dunstan	2014-01-28 18:10:00 -0500	8	Add new make targets check-tests and installcheck-tests.
+c2099751cd8	Andrew Dunstan	2014-01-28 18:28:16 -0500	6	Minor docs fixes for new json functions.
+b7643b19f0f	Robert Haas	2014-01-28 23:35:50 -0500	1	Fix compiler warning in EXEC_BACKEND builds.
+1a3458b6d8d	Heikki Linnakangas	2014-01-29 14:08:30 +0200	180	Allow using huge TLB pages on Linux (MAP_HUGETLB)
+991659dcd76	Heikki Linnakangas	2014-01-29 16:16:19 +0200	1	Fix docs build.
+2013e5eef7e	Andrew Dunstan	2014-01-29 09:51:02 -0500	4	Remedy two small omissions in the new json functions docs.
+e20c70cb0fa	Heikki Linnakangas	2014-01-29 17:53:39 +0200	211	Allow skipping some items in a multi-key GIN search.
+25b1dafab63	Heikki Linnakangas	2014-01-29 18:26:40 +0200	39	Further optimize multi-key GIN searches.
+db90bcf8df4	Bruce Momjian	2014-01-29 12:22:22 -0500	28	Add more C comments to entab.c.
+e93f7253a79	Bruce Momjian	2014-01-29 12:48:07 -0500	23	Add C functions to centralize entab processing
+8440897b38b	Bruce Momjian	2014-01-29 13:31:11 -0500	1	Fix pointer processing in new entab.c function
+626a120656a	Heikki Linnakangas	2014-01-29 21:24:38 +0200	82	Further optimize GIN multi-key searches.
+699b1f40da3	Heikki Linnakangas	2014-01-29 21:33:56 +0200	7	Fix thinko in huge_tlb_pages patch.
+5264d915417	Andrew Dunstan	2014-01-29 15:39:01 -0500	140	Add json_array_elements_text function.
+9347baa5bbc	Robert Haas	2014-01-29 16:09:15 -0500	62	Include planning time in EXPLAIN ANALYZE output.
+5e52e9d6d46	Andrew Dunstan	2014-01-29 16:38:31 -0500	1	Forgot to bump catalog version for json_array_elements_text.
+120c5cc761e	Andrew Dunstan	2014-01-29 18:54:14 -0500	2	Silence compiler warnings about possibly unset variables.
+571addd729a	Tom Lane	2014-01-29 20:04:43 -0500	41	Fix unsafe references to errno within error messaging logic.
+146604ec43b	Bruce Momjian	2014-01-30 09:41:43 -0500	97	Add checks for interval overflow/underflow
+b1cbd2b573e	Bruce Momjian	2014-01-30 12:14:24 -0500	21	docs:  add mention of index swapping
+7aba24e9715	Bruce Momjian	2014-01-30 12:21:48 -0500	1	docs:  mention SGML refentry also pulls text from the link
+c29a6dd5486	Bruce Momjian	2014-01-30 12:26:18 -0500	3	docs:  improve xref description for xreflabel and refentry links
+043f6ff05d0	Tom Lane	2014-01-30 14:51:16 -0500	59	Fix bogus handling of "postponed" lateral quals.
+760c770ff66	Robert Haas	2014-01-30 15:47:56 -0500	23	Add convenience functions pg_sleep_for and pg_sleep_until.
+41e364ec67e	Tom Lane	2014-01-30 18:10:24 -0500	2	Fix potential coredump on bad locale value in pg_upgrade.
+58274728fb8	Tom Lane	2014-01-30 19:07:06 -0500	66	Be forgiving of variant spellings of locale names in pg_upgrade.
+db98b313296	Bruce Momjian	2014-01-30 22:40:05 -0500	1	pgindent:  preserve blank lines around #else/#endif
+cd3e0071b8c	Tom Lane	2014-01-31 02:03:52 -0500	8	Allow unrecognized encoding names in locales, as long as they're the same.
+e9afdf2f4bd	Andrew Dunstan	2014-01-31 09:31:58 -0500	3	Fix documented return type of json_array_elements_text.
+5ff47acf8f2	Bruce Momjian	2014-01-31 11:05:21 -0500	33	entab:  add new options
+a87ae38be84	Fujii Masao	2014-02-01 01:45:48 +0900	26	Add tab completion for ALTER TABLESPACE MOVE in psql.
+cad1e022b26	Bruce Momjian	2014-01-31 13:35:50 -0500	9	pgindent:  add --list-of-typedefs option
+290d2cb500e	Bruce Momjian	2014-01-31 14:46:00 -0500	2	pgindent:  add Perl comment
+fc4ffba9685	Bruce Momjian	2014-01-31 16:04:18 -0500	26	system catalogs:  reorder pg_amproc entries into proper sections
+8824b38909b	Bruce Momjian	2014-01-31 16:37:25 -0500	24	docs:  specify FOR UPDATE/SHARE incompatibilities
+384fbd1a5d4	Bruce Momjian	2014-01-31 17:08:27 -0500	2	doc: authentication wording improvements
+e93ca1618b9	Tom Lane	2014-01-31 17:28:02 -0500	62	Add some examples to the postgres_fdw documentation.
+3fd3e34914a	Bruce Momjian	2014-01-31 17:44:18 -0500	2	docs:  mention tgconstrindid supports exclusion constraints
+326e1d73c47	Tom Lane	2014-01-31 17:51:18 -0500	15	Disallow use of SSL v3 protocol in the server as well as in libpq.
+85317e88cca	Bruce Momjian	2014-01-31 19:05:00 -0500	4	doc: mention data page checksums in WAL section
+6afe200ceea	Bruce Momjian	2014-01-31 20:19:53 -0500	8	chkpass:  check for NULL return value from crypt()
+637fab6e575	Bruce Momjian	2014-01-31 21:28:15 -0500	4	doc: mention statistics reset during crash recovery
+d1981719adb	Robert Haas	2014-01-31 21:31:08 -0500	33	Clear MyProc and MyProcSignalState before they become invalid.
+5168c76964f	Bruce Momjian	2014-01-31 22:29:01 -0500	6	pg_restore:  make help output plural for multi-enabled options
+5bdef38b891	Bruce Momjian	2014-01-31 22:40:08 -0500	5	docs:  mention 'g' is not in the regex embedded options table
+858ec11858a	Robert Haas	2014-01-31 22:45:36 -0500	2348	Introduce replication slots.
+d0ee93797d9	Bruce Momjian	2014-02-01 10:49:17 -0500	6	arrays:  tighten checks for multi-dimensional input
+d587298b80e	Andrew Dunstan	2014-02-01 15:11:13 -0500	9	Copy the libpq DLL to the bin directory on Mingw and Cygwin.
+7e1531a4504	Andrew Dunstan	2014-02-01 16:08:33 -0500	14	Don't use deprecated dllwrap on Cygwin.
+214c7a4f0b1	Tom Lane	2014-02-01 16:21:23 -0500	22	Fix some more bugs in signal handlers and process shutdown logic.
+c8158a2eed8	Andrew Dunstan	2014-02-01 16:30:26 -0500	1	fix whitespace
+082c0dfa140	Tom Lane	2014-02-01 18:27:34 -0500	12	Fix some wide-character bugs in the text-search parser.
+9abed7d1cb1	Andrew Dunstan	2014-02-01 19:52:39 -0500	3	Fix makefile syntax.
+63be3b78f6e	Fujii Masao	2014-02-02 10:28:18 +0900	10	Fix typos in docs and comments.
+0753bdb3522	Fujii Masao	2014-02-03 00:41:50 +0900	6	Add primary_slotname to recovery.conf.sample.
+46825d4978b	Tom Lane	2014-02-02 12:51:14 -0500	19	Clean up some sloppy coding in repl_gram.y.
+c087e8cf347	Fujii Masao	2014-02-03 03:40:36 +0900	6	Add <indexterm> for functions pg_sleep_for and pg_sleep_until.
+47aaebaac95	Tom Lane	2014-02-02 18:59:34 -0500	2	Switch in psql_scan() must cover all lexer states (except backslash cases).
+3e8554a54a9	Fujii Masao	2014-02-03 23:19:49 +0900	36	Make pg_basebackup skip temporary statistics files.
+d3ee45152b1	Andrew Dunstan	2014-02-03 10:40:12 -0500	4	In json code, clean up temp memory contexts after processing.
+65a193ebbb5	Robert Haas	2014-02-03 10:49:01 -0500	18	Document a few more regression test hazards.
+80353f35285	Robert Haas	2014-02-03 14:33:43 -0500	3	Adjust pg_sleep_for/pg_sleep_until to use clock_timestamp.
+0def2573c5f	Tom Lane	2014-02-03 14:47:17 -0500	83	Fix *-qualification of named parameters in SQL-language functions.
+0c2338abbb1	Tom Lane	2014-02-03 19:47:57 -0500	13	Fix lexing of U& sequences just before EOF.
+c1fe08eb2f7	Robert Haas	2014-02-03 20:12:05 -0500	4	Rephrase text to avoid links in regress.sgml
+489e6ac5a1a	Fujii Masao	2014-02-04 10:59:39 +0900	2	Fix comparison of an array of characters with zero to compare with '\\0' instead.
+00d4f2af8bd	Tom Lane	2014-02-03 21:30:20 -0500	53	Improve connection-failure error handling in contrib/postgres_fdw.
+4e182361804	Peter Eisentraut	2014-02-04 20:08:39 -0500	1	PL/Perl: Fix compiler warning
+14aa601f50e	Robert Haas	2014-02-05 13:41:25 -0500	4	Minor improvements to replication slot documentation.
+ac8bc3b6e4a	Tom Lane	2014-02-05 13:43:46 -0500	14	Remove unnecessary relcache flushes after changing btree metapages.
+f65233755ca	Peter Eisentraut	2014-02-05 23:12:51 -0500	0	Fix whitespace
+f31005e340c	Peter Eisentraut	2014-02-05 23:49:25 -0500	0	doc: Disable indentation of XHTML output
+ddfc9cb054a	Tom Lane	2014-02-06 11:28:13 -0500	3	Assert(IsTransactionState()) in RelationIdGetRelation().
+45e1b6c4c49	Andrew Dunstan	2014-02-06 12:11:49 -0500	15	Alphabeticize list in OBJS definition in utils/adt Makefile.
+8de3e410faa	Tom Lane	2014-02-06 19:38:06 -0500	68	In RelationClearRelation, postpone cache reload if !IsTransactionState().
+e001030c271	Heikki Linnakangas	2014-02-07 10:28:06 +0200	2	Fix thinko in comment.
+dbc649fd773	Heikki Linnakangas	2014-02-07 15:22:48 +0200	441	Speed up "rare & frequent" type GIN queries.
+6aa2bdf6a01	Heikki Linnakangas	2014-02-07 18:53:31 +0200	29	Initialize the entryRes array between each call to triConsistent.
+66c04c981df	Peter Eisentraut	2014-02-08 21:21:46 -0500	8	Mark some more variables as static or include the appropriate header
+cfa1b4a711d	Stephen Frost	2014-02-08 21:25:47 -0500	31	Minor pg_dump improvements
+01025d80a16	Magnus Hagander	2014-02-09 12:05:14 +0100	1	Avoid printing uninitialized filename variable in verbose mode
+8198a321c9e	Magnus Hagander	2014-02-09 12:51:42 +0100	24	Limit pg_basebackup progress output to 1/second
+5e8e794e3be	Stephen Frost	2014-02-09 13:29:36 -0500	2	Focus on ftello result < 0 instead of errno
+dfb1e9bdc0d	Stephen Frost	2014-02-09 18:28:14 -0500	4	Further pg_dump / ftello improvements
+6c2744f1d3a	Heikki Linnakangas	2014-02-10 09:57:59 +0200	6	Use memmove() instead of memcpy() for copying overlapping regions.
+d699ba41349	Heikki Linnakangas	2014-02-10 15:18:18 +0200	5	Fix WakeupWaiters() to not wake up an exclusive locker unnecessarily.
+2895415205d	Tom Lane	2014-02-10 20:48:04 -0500	36	Don't generate plain-text HISTORY and src/test/regress/README anymore.
+d3c4c471553	Peter Eisentraut	2014-02-10 21:47:19 -0500	19	scripts: Remove newlines from end of generated SQL
+cba6ffaef39	Tom Lane	2014-02-11 12:10:52 -0500	15	Cygwin build fixes.
+846e91e0223	Tom Lane	2014-02-11 12:56:20 -0500	25	Get rid of use of dlltool in Mingw builds.
+7a98d323df2	Tom Lane	2014-02-11 12:59:48 -0500	1	Flush a stray definition of $(DLLTOOL).
+a5eed4d7706	Tom Lane	2014-02-11 13:39:14 -0500	137	Make gendef.pl emit DATA annotations for global variables.
+b23fd2d8b3c	Tom Lane	2014-02-12 11:22:23 -0500	1	Tweak position of $(DLL_DEFFILE) in shared-library link commands.
+8c9db4a5a4b	Bruce Momjian	2014-02-12 11:25:34 -0500	4	doc: Postgres date-style date-only output is ISO
+30657b796c7	Tom Lane	2014-02-12 11:53:07 -0500	3	Remove --enable-auto-import linker switch in Cygwin build.
+1c9acd5c86a	Tom Lane	2014-02-12 12:03:53 -0500	5	Use --disable-auto-import linker switch in Mingw builds, too.
+63ab2befe0d	Magnus Hagander	2014-02-12 18:45:18 +0100	28	Kill pg_basebackup background process when exiting
+48870dd9f75	Magnus Hagander	2014-02-12 20:04:13 +0100	1	Add missing include, required on some platforms
+6f2aead1ffe	Tom Lane	2014-02-12 14:52:16 -0500	9	In XLogReadBufferExtended, don't assume P_NEW yields consecutive pages.
+f9bb944cd87	Bruce Momjian	2014-02-12 15:38:29 -0500	6	pg_test_fsync: add C comment about direct I/O and write size failure
+2a2e40aaaad	Bruce Momjian	2014-02-12 16:35:24 -0500	65	pg_upgrade: dramatically reduce memory consumption
+2fc80e8e830	Bruce Momjian	2014-02-12 17:29:19 -0500	96	Rename 'gmake' to 'make' in docs and recommended commands
+993c3961a41	Bruce Momjian	2014-02-12 17:32:20 -0500	2	Revert gmake/make release note changes
+fa4440f5162	Tom Lane	2014-02-12 17:50:57 -0500	36	Improve libpq's error recovery for connection loss during COPY.
+dea5a8c402b	Tom Lane	2014-02-12 18:16:17 -0500	3	Improve text of stub HISTORY file.
+4a6f136c467	Tom Lane	2014-02-12 19:09:18 -0500	192	Improve cross-references between minor version release notes.
+bcec58cf1eb	Bruce Momjian	2014-02-12 22:07:03 -0500	4	pg_upgrade: document use of file system and COW snapshots
+3f735ae831d	Bruce Momjian	2014-02-13 05:06:22 -0500	4	pg_upgrade:  mention the need for tablespace snapshots in docs
+44c21633020	Tom Lane	2014-02-13 14:24:42 -0500	8	Fix length checking for Unicode identifiers containing escapes (U&"...").
+474cb24df7f	Bruce Momjian	2014-02-13 15:38:48 -0500	1	pgcrypto: clarify 'md5' (hash) table entry
+de4b6558be4	Bruce Momjian	2014-02-13 17:07:05 -0500	3	docs: improve CREATE FUNCTION docs about language case and quoting
+801c2dc72cb	Alvaro Herrera	2014-02-13 19:36:31 -0300	377	Separate multixact freezing parameters from xid's
+b8f00a46bc4	Tom Lane	2014-02-13 18:45:58 -0500	35	Clean up error cases in psql's COPY TO STDOUT/FROM STDIN code.
+9c57d11fca3	Bruce Momjian	2014-02-13 21:46:03 -0500	12	Add C comment about problems with CHAR() space trimming
+0f2ca0075c4	Peter Eisentraut	2014-02-13 21:50:43 -0500	1	Fix typo
+4d894b41cd1	Heikki Linnakangas	2014-02-14 15:15:09 +0200	10	Change the order that pg_xlog and WAL archive are polled for WAL segments.
+a7983e989d9	Tom Lane	2014-02-14 11:31:35 -0500	9	Cosmetic improvements in plpython's make rule for libpython import library.
+02b61dd08f9	Tom Lane	2014-02-14 11:51:02 -0500	24	In mingw builds, make our own import library for libperl.
+1ea081bbd73	Tom Lane	2014-02-14 12:54:39 -0500	17	Suggest shell here-documents instead of psql -c for multiple commands.
+dcbf39774ff	Tom Lane	2014-02-14 13:13:06 -0500	25	In mingw builds, make our own import library for libtcl, too.
+2128c52f5c4	Tom Lane	2014-02-14 16:50:22 -0500	138	Update regression testing instructions.
+638b153f2a2	Tom Lane	2014-02-14 17:10:53 -0500	15	Fix fat-fingered makefile changes for pltcl.
+e04641f4b4d	Tom Lane	2014-02-14 21:59:13 -0500	28	Update time zone data files to tzdata release 2013i.
+1c5143a0b58	Tom Lane	2014-02-14 23:20:08 -0500	1	Ooops, forgot to remove solar87 and friends from src/timezone/Makefile.
+a0d8947acb8	Bruce Momjian	2014-02-15 00:09:40 -0500	1	psql:  Add C comment about gset_prefix being freed later
+32be1c8e900	Bruce Momjian	2014-02-15 11:50:56 -0500	4	Remove use of sscanf in pg_upgrade, and add C comment to pg_dump
+60ff2fdd997	Tom Lane	2014-02-15 14:31:30 -0500	57	Centralize getopt-related declarations in a new header file pg_getopt.h.
+f0ee42d59b7	Tom Lane	2014-02-15 17:09:50 -0500	3	Fix unportable coding in DetermineSleepTime().
+643f75ca9b5	Tom Lane	2014-02-15 17:15:05 -0500	2	Fix unportable coding in BackgroundWorkerStateChange().
+cefd3e507d7	Tom Lane	2014-02-16 00:40:37 -0500	1253	First-draft release notes for 9.3.3.
+56caaf195e9	Tom Lane	2014-02-16 11:24:38 -0500	1	On Windows, expect to find Tcl DLL in bin directory not lib directory.
+8fd994e40cb	Tom Lane	2014-02-16 12:03:54 -0500	30	Improve release notes per comments from Andres Freund.
+a5cf60682e4	Tom Lane	2014-02-16 12:37:07 -0500	3	PGDLLIMPORT'ify DateStyle and IntervalStyle.
+734ff84b086	Tom Lane	2014-02-16 14:54:28 -0500	93	Further wordsmithing on 9.3.3 release notes.
+8d6e2d4abf7	Tom Lane	2014-02-16 15:14:04 -0500	3	Revert to using --enable-auto-import in Cygwin builds.
+a1c802712c3	Tom Lane	2014-02-16 20:01:18 -0500	2	Fix unportable coding in tarCreateHeader().
+fa1f0d78592	Tom Lane	2014-02-16 20:12:43 -0500	4	PGDLLIMPORT-ify MainLWLockArray, ProcDiePending, proc_exit_inprogress.
+0983315b1d3	Tom Lane	2014-02-16 22:08:28 -0500	1564	Release notes for 9.3.3, 9.2.7, 9.1.12, 9.0.16, 8.4.20.
+fea164a72a7	Noah Misch	2014-02-17 09:33:31 -0500	120	Shore up ADMIN OPTION restrictions.
+537cbd35c89	Noah Misch	2014-02-17 09:33:31 -0500	109	Prevent privilege escalation in explicit calls to PL validators.
+540b4e5bc85	Noah Misch	2014-02-17 09:33:31 -0500	12	Document security implications of check_function_bodies.
+5f173040e32	Robert Haas	2014-02-17 09:33:31 -0500	232	Avoid repeated name lookups during table and index DDL.
+4318daecc95	Noah Misch	2014-02-17 09:33:31 -0500	111	Fix handling of wide datetime input/output.
+31400a67332	Noah Misch	2014-02-17 09:33:31 -0500	177	Predict integer overflow to avoid buffer overruns.
+01824385aea	Tom Lane	2014-02-17 11:20:21 -0500	46	Prevent potential overruns of fixed-size buffers.
+6ef325429ca	Tom Lane	2014-02-17 11:24:32 -0500	22	Document risks of "make check" in the regression testing instructions.
+e7f409756da	Tom Lane	2014-02-17 12:20:57 -0500	17	Improve documentation about multixact IDs.
+876f78d5756	Robert Haas	2014-02-17 14:03:41 -0500	7	Fix capitalization in README.
+7b1fab3fd2e	Tom Lane	2014-02-17 14:26:28 -0500	775	Last-minute updates for release notes.
+057152b37c8	Heikki Linnakangas	2014-02-18 09:48:18 +0200	1	Fix comment; checkpointer, not bgwriter, performs checkpoints since 9.2.
+7f3e17b4827	Magnus Hagander	2014-02-18 14:45:58 +0100	2	Disable RandomizedBaseAddress on MSVC builds
+a222f7fda6a	Tom Lane	2014-02-18 12:44:20 -0500	13	Remove broken code that tried to handle OVERLAPS with a single argument.
+7d03a83f4d0	Robert Haas	2014-02-19 08:35:23 -0500	391	Add a pg_lsn data type, to represent an LSN.
+844a28a9dd1	Robert Haas	2014-02-19 09:34:15 -0500	33	pg_lsn macro naming and type behavior revisions.
+694e3d139a9	Robert Haas	2014-02-19 10:06:59 -0500	32	Further code review for pg_lsn data type.
+6f289c2b7d0	Robert Haas	2014-02-19 11:37:43 -0500	45	Switch various builtin functions to use pg_lsn instead of text.
+7b3cf9ba9d3	Robert Haas	2014-02-19 11:57:31 -0500	5	Document pg_replslot in storage.sgml.
+52acfd27f11	Tom Lane	2014-02-19 18:50:48 -0500	7	Fix some missing .gitignore and "make clean" items in ecpg.
+4f5f485d10c	Tom Lane	2014-02-19 19:34:50 -0500	13	Avoid using dllwrap to build pgevent in Mingw builds.
+ae5266f2591	Tom Lane	2014-02-19 21:08:50 -0500	0	Remove inappropriate EXPORTS line.
+8f09ca436db	Heikki Linnakangas	2014-02-20 10:58:30 +0200	1	Improve comment on setting data_checksum GUC.
+8c059dffd83	Peter Eisentraut	2014-02-20 21:41:24 -0500	7	doc: Clarify documentation page header customization code
+0c5783ff301	Heikki Linnakangas	2014-02-21 15:47:22 +0200	41	Avoid integer overflow in hstore_to_json().
+77585bce030	Tom Lane	2014-02-21 17:10:46 -0500	26	Do ScalarArrayOp estimation correctly when array is a stable expression.
+fb05f3ce83d	Peter Eisentraut	2014-02-22 13:38:06 -0500	204	pg_basebackup: Add support for relocating tablespaces
+2c65856b7b4	Peter Eisentraut	2014-02-22 20:42:39 -0500	4	configure.in: Use dnl in place of # where appropriate
+49c817eab78	Tom Lane	2014-02-23 15:22:50 -0500	114	Plug some more holes in encoding conversion.
+769065c1b24	Tom Lane	2014-02-23 16:59:05 -0500	48	Prefer pg_any_to_server/pg_server_to_any over pg_do_encoding_conversion.
+bb4eefe7bf5	Peter Eisentraut	2014-02-23 21:31:08 -0500	1009	doc: Improve DocBook XML validity
+bb818b53d47	Robert Haas	2014-02-24 09:32:21 -0500	4	Remove a couple of comments from the pg_lsn regression test.
+6615e77439a	Robert Haas	2014-02-24 10:38:45 -0500	11	Use pg_lsn data type in pg_stat_replication, too.
+8457d0beca7	Bruce Momjian	2014-02-24 12:09:23 -0500	7	docs: document behavior of CHAR() comparisons with chars < space
+423f69ab64a	Bruce Momjian	2014-02-24 12:24:00 -0500	1	Allow single-point polygons to be converted to circles
+3f05bedaf23	Bruce Momjian	2014-02-24 12:26:04 -0500	2	Fix markup for CHAR() doc patch
+d613861b952	Bruce Momjian	2014-02-24 12:32:41 -0500	9	pg_dump:  fix subtle memory leak in func and arg signature processing
+4bad548d981	Bruce Momjian	2014-02-24 12:44:55 -0500	26	psql:  add separate \\d display for disabled system triggers
+6f14a6f703a	Bruce Momjian	2014-02-24 12:56:37 -0500	27	docs:  remove unnecessary references to old PG versions
+848ae330a49	Bruce Momjian	2014-02-24 13:04:51 -0500	6	Increase work_mem and maintenance_work_mem defaults by 4x
+32001ab0b7b	Peter Eisentraut	2014-02-24 20:30:28 -0500	64	Update and clarify ssl_ciphers default
+278c94209b9	Robert Haas	2014-02-25 11:23:45 -0500	12	pg_basebackup: Skip only the *contents* of pg_replslot.
+dd1a3bccca2	Robert Haas	2014-02-25 12:34:04 -0500	149	Show xid and xmin in pg_stat_activity and pg_stat_replication.
+cf6aa68bbd7	Robert Haas	2014-02-25 13:40:12 -0500	8	Update a few comments to mention materialized views.
+fccebe421d0	Tom Lane	2014-02-25 16:04:06 -0500	21	Use SnapshotDirty rather than an active snapshot to probe index endpoints.
+486ea0b19e0	Jeff Davis	2014-02-26 07:47:41 -0800	17	Fix crash in json_to_record().
+00976f202ce	Heikki Linnakangas	2014-02-26 18:49:04 +0200	2	btbuild no longer calls _bt_doinsert(), update comment.
+6bfa88acd3d	Alvaro Herrera	2014-02-27 11:13:39 -0300	10	Fix WAL replay of locking an updated tuple
+4333eee82d3	Alvaro Herrera	2014-02-27 11:41:43 -0300	2	doc: bgw_main takes a Datum argument, not void *.
+1161d895d82	Tom Lane	2014-02-27 14:58:47 -0500	3	Remove dependency on database encoding in citext regression test.
+ef5856fd9b7	Alvaro Herrera	2014-02-27 18:55:57 -0300	301	Allow BASE_BACKUP to be throttled
+192d8e04bd3	Peter Eisentraut	2014-02-27 21:52:21 -0500	1	pgbench: Fix help message
+d8a42b150fa	Heikki Linnakangas	2014-02-28 13:33:41 +0200	2	Remove bogus while-loop.
+9662143f0c3	Tom Lane	2014-03-01 15:20:56 -0500	57	Allow regex operations to be terminated early by query cancel requests.
+b1aebbb6a86	Stephen Frost	2014-03-01 22:14:14 -0500	279	Various Coverity-spotted fixes
+5592ebac554	Stephen Frost	2014-03-03 03:18:51 -0500	16	Another round of Coverity fixes
+ae95f5f74af	Robert Haas	2014-03-03 07:03:41 -0500	1	Define LSNOID in pg_type.h.
+45ffeb7e005	Robert Haas	2014-03-03 07:15:04 -0500	33	pageinspect: Use new pg_lsn datatype.
+d83ee62231d	Robert Haas	2014-03-03 07:16:54 -0500	15	Corrections to replication slots code and documentation.
+a8e9b86b5e0	Robert Haas	2014-03-03 07:22:20 -0500	1	Bump catversion.
+34c6d9611d2	Robert Haas	2014-03-03 07:24:52 -0500	1	Use a longer buffer in libpqrcv_startstreaming.
+9067310cc5d	Alvaro Herrera	2014-03-03 15:02:18 -0300	145	pg_dump et al: Add --if-exists option
+f8ce16d0d26	Heikki Linnakangas	2014-03-03 20:52:48 +0200	92	Rename huge_tlb_pages to huge_pages, and improve docs.
+de94b47c0a9	Peter Eisentraut	2014-03-03 14:05:33 -0500	0	Fix whitespace
+b89e151054a	Robert Haas	2014-03-03 16:32:18 -0500	12993	Introduce logical decoding.
+7558cc95d31	Heikki Linnakangas	2014-03-04 15:36:05 +0200	1	Error out on send failure in walsender loop.
+7e8db2dc420	Robert Haas	2014-03-04 11:07:54 -0500	3	Minor corrections to logical decoding patch.
+af2543e884d	Robert Haas	2014-03-04 11:08:18 -0500	36	Allow VACUUM FULL/CLUSTER to bump freeze horizons even for pg_class.
+84df54b22e8	Alvaro Herrera	2014-03-04 15:09:43 -0300	590	Constructors for interval, timestamp, timestamptz
+e2a0fc5363e	Alvaro Herrera	2014-03-04 15:31:18 -0300	32	auto_explain: Add logging of trigger execution
+3b5e03dca2a	Andrew Dunstan	2014-03-04 17:31:59 -0500	303	Provide a FORCE NULL option to COPY in CSV mode.
+6f37c080576	Peter Eisentraut	2014-03-04 21:53:25 -0500	0	Fix whitespace
+eb933162cdc	Stephen Frost	2014-03-05 01:30:03 -0500	6	Fix issues with pg_ctl
+af246c37c05	Heikki Linnakangas	2014-03-05 13:51:19 +0200	7	Fix lastReplayedEndRecPtr calculation when starting from shutdown checkpoint.
+956685f82b6	Heikki Linnakangas	2014-03-05 14:48:14 +0200	2	Do wal_level and hot standby checks when doing crash-then-archive recovery.
+dd917bb793b	Stephen Frost	2014-03-05 08:50:12 -0500	2	Allocate fresh memory for post_opts/exec_path
+65b96714118	Bruce Momjian	2014-03-05 10:43:45 -0500	6	pg_upgrade:  improve C comment about what old/new oids match
+2b4f2ab33de	Alvaro Herrera	2014-03-05 13:03:29 -0300	1	Remove the correct pgstat file on DROP DATABASE
+114b26c06fb	Tom Lane	2014-03-05 11:57:53 -0500	0	Remove unused field "evttype".
+97e899e1b85	Robert Haas	2014-03-05 12:55:43 -0500	1	Fix test_decoding regression test outputs.
+406a1a9ef0b	Robert Haas	2014-03-05 13:00:22 -0500	5	Fix some typos introduced by the logical decoding patch.
+8cf0ad1ea38	Tom Lane	2014-03-05 16:00:33 -0500	2	Add comment that ec_relids excludes "child" EquivalenceClass members.
+f1ba94bcd97	Tom Lane	2014-03-05 16:42:18 -0500	20	Fix portability issues in recently added make_timestamp/make_interval code.
+b44fc39fcec	Bruce Momjian	2014-03-05 18:15:49 -0500	8	pg_dump:  make argument combination error exit code consistent
+e2224faf17a	Bruce Momjian	2014-03-05 20:45:27 -0500	14	docs:  to_timestamp and to_date do minimal range checking
+0024a3a3b6c	Bruce Momjian	2014-03-05 20:52:34 -0500	1	C comment update: relfilenode is only unique with a tablespace
+bf4052faa1c	Tom Lane	2014-03-06 11:37:02 -0500	37	Don't reject ROW_MARK_REFERENCE rowmarks for materialized views.
+94ae6ba74df	Heikki Linnakangas	2014-03-06 21:38:51 +0200	28	Send keepalives from walsender even when busy sending WAL.
+a0c2fa9b5cf	Heikki Linnakangas	2014-03-06 21:40:10 +0200	1	isdigit() needs an unsigned char argument.
+7c318749451	Tom Lane	2014-03-06 19:31:05 -0500	57	Avoid getting more than AccessShareLock when deparsing a query.
+2b8483d69d1	Heikki Linnakangas	2014-03-07 10:35:37 +0200	1	Fix name of syslog_ident GUC in docs.
+ad7b48ea08d	Heikki Linnakangas	2014-03-07 13:14:33 +0200	4	Avoid memcpy() with same source and destination address.
+55566c9a740	Heikki Linnakangas	2014-03-07 13:28:52 +0200	42	Fix dangling smgr_owner pointer when a fake relcache entry is freed.
+91d9de97518	Bruce Momjian	2014-03-07 11:42:18 -0500	1	fix ReplicationSlotsCountDBSlots for dropping unrelated databases
+4ea2e2d4744	Bruce Momjian	2014-03-07 13:45:38 -0500	7	release notes:  add item missed in 9.2.5 release
+83204e100c7	Tom Lane	2014-03-07 16:36:40 -0500	250	Fix contrib/postgres_fdw to handle multiple join conditions properly.
+ea177a3ba7a	Tom Lane	2014-03-07 17:03:26 -0500	181	Remove unportable use of anonymous unions from reorderbuffer.h.
+b0cb40f93a8	Bruce Momjian	2014-03-07 20:56:16 -0500	8	docs:  improve TABLE command by showing supported clauses
+ea43af38dc9	Bruce Momjian	2014-03-07 22:02:38 -0500	9	doc: improve server's keepalive description
+8879fa09ee7	Bruce Momjian	2014-03-07 22:46:38 -0500	2	pg_upgrade: document delete problems with tablespaces inside the cluster directory
+3624acd342d	Bruce Momjian	2014-03-08 11:26:47 -0500	7	docs:  small adjustements to recent SELECT and pg_upgrade improvements
+11d205e2bd6	Bruce Momjian	2014-03-08 12:15:25 -0500	39	pg_ctl:  improve handling of invalid data directory
+5024044a204	Bruce Momjian	2014-03-08 12:20:30 -0500	6	C comments: improve description of relfilenode uniqueness
+19026aadd82	Bruce Momjian	2014-03-08 17:08:01 -0500	0	doc: remove extra whitespace in SGML markup
+77049443a17	Simon Riggs	2014-03-09 09:05:16 +0000	1	Correct copy/pasto in comment for REPLICA IDENTITY
+cb9a0c79874	Robert Haas	2014-03-10 10:17:19 -0400	33	Teach on_exit_reset() to discard pending cleanups for dsm.
+5a991ef8692	Robert Haas	2014-03-10 13:50:28 -0400	911	Allow logical decoding via the walsender interface.
+8722017bbcb	Robert Haas	2014-03-10 14:04:47 -0400	75	Allow dynamic shared memory segments to be kept until shutdown.
+e85a5ffba8a	Tom Lane	2014-03-10 15:47:40 -0400	25	Fix tracking of psql script line numbers during \\copy from another place.
+fecfc2b913c	Heikki Linnakangas	2014-03-12 10:04:57 +0200	5	In WAL replay, restore GIN metapage unconditionally to avoid torn page.
+c5608ea26a1	Heikki Linnakangas	2014-03-12 17:51:30 +0200	455	Allow opclasses to provide tri-valued GIN consistent functions.
+890194f14d6	Robert Haas	2014-03-12 14:03:09 -0400	7	Comment fixes related to logical decoding.
+336a578b8c8	Robert Haas	2014-03-12 14:07:41 -0400	6	Fix incorrect assertion about historical snapshots.
+a0b4c355c2f	Robert Haas	2014-03-12 14:11:06 -0400	1	test_decoding: Documentation fix.
+588fb507154	Fujii Masao	2014-03-13 03:26:47 +0900	122	Show PIDs of lock holders and waiters in log_lock_waits log message.
+17d787a3b16	Heikki Linnakangas	2014-03-12 20:52:22 +0200	16	Items on GIN data pages are no longer always 6 bytes; update gincostestimate.
+a3115f0d9ec	Heikki Linnakangas	2014-03-12 23:28:36 +0200	285	Only WAL-log the modified portion in an UPDATE, if possible.
+886c0be3f65	Bruce Momjian	2014-03-13 01:34:42 -0400	1	C comments:  remove odd blank lines after #ifdef WIN32 lines
+242c2737fbe	Bruce Momjian	2014-03-13 01:42:24 -0400	5	C comments:  remove odd blank lines after #ifdef WIN32 lines
+16ff08b7944	Heikki Linnakangas	2014-03-13 15:01:45 +0200	2	Fix a couple of typos in docs.
+7bae0284eeb	Tom Lane	2014-03-13 12:02:54 -0400	24	Avoid transaction-commit race condition while receiving a NOTIFY message.
+f70a78bc1f5	Tom Lane	2014-03-13 13:49:03 -0400	82	Allow psql to print COPY command status in more cases.
+6c461cb92f2	Tom Lane	2014-03-13 20:59:42 -0400	25	Prevent interrupts while reporting non-ERROR elog messages.
+efada2b8e92	Heikki Linnakangas	2014-03-14 16:07:19 +0200	739	Fix race condition in B-tree page deletion.
+aba7f56779f	Tom Lane	2014-03-15 13:36:07 -0400	78	Update time zone data files to tzdata release 2014a.
+e3c9f23250f	Tom Lane	2014-03-15 15:58:59 -0400	435	First-draft release notes for 9.3.4.
+0294023a6b1	Magnus Hagander	2014-03-16 15:22:45 +0100	9	Cleanups from the remove-native-krb5 patch
+f4051e363c1	Tom Lane	2014-03-16 21:43:40 -0400	1	Fix advertised dispsize for libpq's sslmode connection parameter.
+e2b959478c9	Peter Eisentraut	2014-03-16 21:47:35 -0400	0	Fix whitespace
+2861e8e9cb7	Peter Eisentraut	2014-03-16 21:47:35 -0400	1	Make punctuation consistent
+0268d21e5d3	Tom Lane	2014-03-16 21:55:27 -0400	2	Fix unportable shell-script syntax in pg_upgrade's test.sh.
+bd1154edec5	Alvaro Herrera	2014-03-16 23:22:21 -0300	18	plperl: Fix memory leak in hek2cstr
+02703ff2277	Magnus Hagander	2014-03-17 09:09:21 +0100	1	Fix small typo in comment
+5c6d9fc4b2b	Fujii Masao	2014-03-17 20:37:50 +0900	11	Fix bug in clean shutdown of walsender that pg_receiving is connecting to.
+2bccced1100	Fujii Masao	2014-03-17 20:47:28 +0900	18	Fix typos in comments.
+d663d4399e7	Heikki Linnakangas	2014-03-17 17:29:04 +0200	21	Fix thinko: have trueTriConsistentFn return GIN_TRUE.
+d70cf811f7d	Tom Lane	2014-03-17 12:36:11 -0400	9	During index build, check and elog (not just Assert) for broken HOT chain.
+551fb5ac742	Tom Lane	2014-03-17 15:28:22 -0400	703	Release notes for 9.3.4, 9.2.8, 9.1.13, 9.0.17, 8.4.21.
+79a4d24f31e	Robert Haas	2014-03-18 07:58:53 -0400	34	Make it easy to detach completely from shared memory.
+e726e59dc48	Fujii Masao	2014-03-18 21:15:45 +0900	2	Fix help message and document in pg_receivexlog.
+19f2d6cdae2	Tom Lane	2014-03-18 10:38:25 -0400	1	Fix pg_dumpall option parsing: -i doesn't take an argument.
+3bd261ca18c	Robert Haas	2014-03-18 11:23:13 -0400	149	Improve shm_mq portability around MAXIMUM_ALIGNOF and sizeof(Size).
+f7271c44278	Tom Lane	2014-03-18 11:36:53 -0400	12	Fix relcache reference leak in refresh_by_match_merge().
+250f8a7bbe8	Robert Haas	2014-03-18 11:53:28 -0400	6	Rewrite comment for shm_mq_receive_bytes.
+8bdd12bbf09	Robert Haas	2014-03-18 12:25:14 -0400	1132	Add pg_recvlogical, a tool to receive data logical decoding data.
+49c0864d7ef	Robert Haas	2014-03-18 13:20:01 -0400	1085	Documentation for logical decoding.
+c676ac0f3fc	Robert Haas	2014-03-18 13:30:19 -0400	6	test_shm_mq: Use Size rather than uint64.
+b6ec7c92ac7	Tom Lane	2014-03-18 14:26:44 -0400	12	Fix some remaining int64 vestiges in contrib/test_shm_mq.
+40dae7ec537	Heikki Linnakangas	2014-03-18 20:50:44 +0200	551	Make the handling of interrupted B-tree page splits more robust.
+a3b30d4cfe5	Robert Haas	2014-03-18 14:54:35 -0400	1	Fix uninitialized variable.
+3ee4fcfc634	Robert Haas	2014-03-18 14:57:49 -0400	14	Logical decoding documentation corrections.
+1d3b258cbe4	Heikki Linnakangas	2014-03-18 21:05:18 +0200	5	Fix misc typos in comments.
+59a5ab3f426	Heikki Linnakangas	2014-03-18 22:10:35 +0200	28	Remove rm_safe_restartpoint machinery.
+033dc1c92cf	Heikki Linnakangas	2014-03-18 22:23:00 +0200	1	Fix compilation of pg_xlogdump, now that rm_safe_restartpoint is no more.
+fb1d92a9fa0	Fujii Masao	2014-03-19 22:13:05 +0900	10	Some minor improvements to logical decoding document.
+ea8c7e9054a	Tom Lane	2014-03-19 11:09:24 -0400	1	Fix memory leak during regular expression execution.
+f88d4cfc9d4	Alvaro Herrera	2014-03-19 15:10:36 -0300	189	Setup error context callback for transaction lock waits
+d1bdab2fa39	Robert Haas	2014-03-20 08:48:22 -0400	25	test_shm_mq: Improve regression tests.
+a4c8f14364c	Bruce Momjian	2014-03-20 11:48:31 -0400	12	libpq:  pass a memory allocation failure error up to PQconndefaults()
+af930e606a3	Tom Lane	2014-03-20 12:58:30 -0400	12	Again fix initialization of auto-tuned effective_cache_size.
+68a2e52bbaf	Heikki Linnakangas	2014-03-21 15:10:48 +0100	497	Replace the XLogInsert slots with regular LWLocks.
+6f03927fce0	Bruce Momjian	2014-03-21 13:45:11 -0400	122	Properly check for readdir/closedir() failures
+1494931d737	Bruce Momjian	2014-03-21 13:47:37 -0400	0	Remove MinGW readdir/errno bug workaround fixed on 2003-10-10
+dea6ed2c980	Heikki Linnakangas	2014-03-21 23:26:34 +0100	16	Fix build with LWLOCK_STATS or dtrace.
+4c0e97c2d58	Heikki Linnakangas	2014-03-21 23:41:37 +0100	4	Fix thinkos in GinLogicValue enum.
+c31305de5f5	Noah Misch	2014-03-23 02:13:43 -0400	4	Address ccvalid/ccnoinherit in TupleDesc support functions.
+6115480c543	Noah Misch	2014-03-23 02:15:52 -0400	11	Improve comments about AfterTriggerBeginQuery() query level usage.
+7cbe57c34de	Noah Misch	2014-03-23 02:16:34 -0400	1084	Offer triggers on foreign tables.
+b2b2491b060	Noah Misch	2014-03-23 03:48:17 -0400	7	Don't test xmin/xmax columns of a postgres_fdw foreign table.
+d9134d0a355	Andrew Dunstan	2014-03-23 16:40:19 -0400	11646	Introduce jsonb, a structured format for storing json.
+ca07cd59b24	Andrew Dunstan	2014-03-23 18:25:16 -0400	1	Fix mis-spelling in jsonb docs.
+ab22b149c60	Andrew Dunstan	2014-03-23 20:18:06 -0400	13	Do jsonb regression test input in the conventional way.
+3ed249b7413	Heikki Linnakangas	2014-03-24 08:42:13 +0200	3	Fix "the the" typos.
+2f3afc09793	Heikki Linnakangas	2014-03-24 11:02:23 +0200	11	Remove dead code and add comments.
+cf5d38f4b9b	Fujii Masao	2014-03-24 19:30:32 +0900	3	Fix START_REPLICATION syntax in document.
+bb42e21be27	Heikki Linnakangas	2014-03-24 18:44:40 +0200	30	Change ginMergeItemPointers to return a palloc'd array.
+1420f3a9827	Bruce Momjian	2014-03-24 14:37:16 -0400	30	Fix ts_rank_cd() to ignore stripped lexemes
+0b5c0f3bc78	Bruce Momjian	2014-03-24 15:46:59 -0400	3	docs:  Add short "cover density" description
+5db55c6bbca	Bruce Momjian	2014-03-24 15:59:38 -0400	5	Remove wchar.c Asserts that were stricter than the main code
+6c5ced1526b	Bruce Momjian	2014-03-24 22:04:44 -0400	13	doc:  list unlogged tables as a non-durable option
+36f7c3a1e01	Magnus Hagander	2014-03-25 11:16:57 +0100	2	Fix typos in pg_basebackup documentation
+49638868f81	Fujii Masao	2014-03-26 02:12:39 +0900	3	Don't forget to flush XLOG_PARAMETER_CHANGE record.
+fbc3def8620	Andrew Dunstan	2014-03-25 21:20:54 -0400	15	Tidy up the populate/to_record{set} code for json a bit.
+86cf41ed27f	Heikki Linnakangas	2014-03-26 10:15:35 +0200	2	Fix 'recheck' flag in tsquery's GIN tri-consistent function.
+ce9bb92f8fb	Heikki Linnakangas	2014-03-26 13:48:20 +0200	39	Add -f/--follow option to pg_xlogdump.
+28475f8e58b	Heikki Linnakangas	2014-03-26 15:25:39 +0200	1	Use pg_usleep() instead of plain sleep(), to fix Windows build
+f9c6d72cbf4	Andrew Dunstan	2014-03-26 10:18:24 -0400	99	Cleanup around json_to_record/json_to_recordset
+ba08155bd5e	Bruce Momjian	2014-03-26 10:22:39 -0400	1	pg_upgrade: use pg_usleep();  remove Windows workaround
+b69c4e65bea	Bruce Momjian	2014-03-26 11:13:17 -0400	35	psql:  update "replica identity" display for \\d+
+c2a6724823c	Heikki Linnakangas	2014-03-26 18:17:53 +0200	16	Pass more than the first XLogRecData entry to rm_desc, with WAL_DEBUG.
+2d5e0f07de0	Tom Lane	2014-03-26 16:41:32 -0400	3	Fix refcounting bug in PLy_modify_tuple().
+7e4d1600a62	Andrew Dunstan	2014-03-26 18:20:56 -0400	2	Fix uninitialized variables in json's populate_record_worker().
+f3cfc23195e	Tom Lane	2014-03-26 22:43:36 -0400	6	Document that Python 2.3 requires cdecimal module for full functionality.
+e709ced1536	Heikki Linnakangas	2014-03-27 08:53:44 +0200	3	Silence compiler warnings in new jsonb code.
+5906e10a2ae	Bruce Momjian	2014-03-27 10:47:48 -0400	4	contrib/test_decoding:  adjust expected output
+e5a452b3a46	Tom Lane	2014-03-27 17:15:45 -0400	4	Improve documentation note about Python 2.3 and cdecimal.
+b777be0d48a	Tom Lane	2014-03-28 10:30:37 -0400	10	Un-break peer authentication.
+a87c729153e	Tom Lane	2014-03-28 11:50:01 -0400	101	Fix EquivalenceClass processing for nested append relations.
+e1827012ed4	Bruce Momjian	2014-03-28 12:50:15 -0400	7	Adjust getpwuid() fix commit to display errno string on failure
+9613a1d98e5	Tom Lane	2014-03-28 16:58:29 -0400	15	Improve regression test for pg_filenode_relation().
+7ed908be41f	Noah Misch	2014-03-29 00:31:44 -0400	3	Force consistent row order in contrib/test_decoding regression test.
+fbd32b0cab8	Noah Misch	2014-03-29 00:52:31 -0400	5	Document platform-specificity of unix_socket_permissions.
+31c6e54ec9a	Noah Misch	2014-03-29 00:52:56 -0400	48	Secure Unix-domain sockets of "make check" temporary clusters.
+8f5578d0f96	Noah Misch	2014-03-29 03:12:00 -0400	26	Revert "Secure Unix-domain sockets of "make check" temporary clusters."
+62215de2925	Tom Lane	2014-03-29 17:34:00 -0400	67	Fix dumping of a materialized view that depends on a table's primary key.
+9d66116444b	Bruce Momjian	2014-03-29 19:00:11 -0400	7	psql:  display "Replica Identity" only for FULL and NOTHING
+7317d8d961f	Andrew Dunstan	2014-03-30 18:30:59 -0400	5	Use separate output dirs for test_decoding's two runs.
+0cfa34c25a7	Heikki Linnakangas	2014-03-31 10:26:38 +0300	42	Rename GinLogicValue to GinTernaryValue.
+14d02f0bb35	Heikki Linnakangas	2014-03-31 15:23:50 +0300	648	Rewrite the way GIN posting lists are packed on a page, to reduce WAL volume.
+3f0e4be453f	Robert Haas	2014-03-31 13:03:18 -0400	1	Fix thinko in logical decoding code.
+066254cea11	Robert Haas	2014-03-31 13:06:26 -0400	1	Count buffers dirtied due to hints in pgBufferUsage.shared_blks_dirtied.
+0f95b723eb2	Robert Haas	2014-03-31 14:18:35 -0400	2	test_decoding: Update .gitignore
+4bc15a8bfbc	Robert Haas	2014-03-31 14:32:12 -0400	1	Mark FastPathStrongRelationLocks volatile.
+554bb3beba2	Heikki Linnakangas	2014-04-01 09:27:37 +0300	1	Fix typo in comment.
+f7534296b48	Heikki Linnakangas	2014-04-01 16:23:16 +0300	2	Move SizeOfHeapNewCid next to xl_heap_new_cid struct.
+954523cdfe2	Heikki Linnakangas	2014-04-01 19:19:47 +0300	8	Fix bug in the new B-tree incomplete-split code.
+cfe992e7eb2	Heikki Linnakangas	2014-04-01 21:16:10 +0300	2	Remove dead check for backup block, replace with Assert.
+6eff0accfe6	Tom Lane	2014-04-01 15:20:38 -0400	19	Doc: improve discussion of reverse+forward host name lookup in pg_hba.conf.
+8bbbcb91bae	Heikki Linnakangas	2014-04-01 22:49:47 +0300	4	Fix bug in the new GIN incomplete-split code.
+682c5bbec5d	Tom Lane	2014-04-01 21:30:34 -0400	6	Fix bugs in manipulation of PgBackendStatus.st_clienthostname.
+f33a71a7865	Tom Lane	2014-04-02 14:30:08 -0400	202	De-anonymize the union in JsonbValue.
+fc752505a99	Tom Lane	2014-04-02 17:11:24 -0400	84	Fix assorted issues in client host name lookup.
+04e298b826d	Heikki Linnakangas	2014-04-03 15:43:50 +0300	38	Avoid palloc in critical section in GiST WAL-logging.
+879808e5197	Tom Lane	2014-04-03 12:38:00 -0400	8	Avoid promising that "ADD COLUMN ... DEFAULT NULL" is free.
+42c6236f379	Tom Lane	2014-04-03 14:18:25 -0400	18	Fix documentation about joining pg_locks to other views.
+741364bf5ca	Tom Lane	2014-04-03 16:57:45 -0400	22	Code review for commit d26888bc4d1e539a82f21382b0000fe5bbf889d9.
+c7b35395993	Tom Lane	2014-04-03 22:02:24 -0400	45	Fix non-equivalence of VARIADIC and non-VARIADIC function call formats.
+877b088785b	Heikki Linnakangas	2014-04-04 13:35:44 +0300	49	Avoid allocations in critical sections.
+4a170ee9e0e	Heikki Linnakangas	2014-04-04 14:28:54 +0300	24	Add an Assertion that you don't palloc within a critical section.
+d9e7873bbbd	Heikki Linnakangas	2014-04-04 17:31:22 +0300	36	In checkpoint, move the check for in-progress xacts out of critical section.
+b1236f4b7ba	Heikki Linnakangas	2014-04-04 18:20:22 +0300	15	Move multixid allocation out of critical section.
+59202fae043	Robert Haas	2014-04-04 11:29:50 -0400	13	Fix some compiler warnings that clang emits with -pedantic.
+8120c7452a5	Tom Lane	2014-04-04 11:44:04 -0400	12	Fix bogus time printout in walreceiver's debug log messages.
+9aca5125068	Tom Lane	2014-04-04 18:42:13 -0400	124	Make sure -D is an absolute path when starting server on Windows.
+2209c0f8618	Tom Lane	2014-04-04 19:07:37 -0400	3	Preserve errno across free().
+b203c57bb77	Tom Lane	2014-04-04 22:03:35 -0400	27	Allow "-C variable" and "--describe-config" even to root users.
+abe075dfffe	Tom Lane	2014-04-04 23:09:35 -0400	20	Fix tablespace creation WAL replay to work on Windows.
+44c5d387eaf	Tom Lane	2014-04-05 02:20:25 -0400	1	ecpg/ecpglib must build the src/port files it uses with -DFRONTEND.
+6862ca6970d	Tom Lane	2014-04-05 12:41:25 -0400	20	Fix processing of PGC_BACKEND GUC parameters on Windows.
+ffbba6ee124	Heikki Linnakangas	2014-04-05 22:15:58 +0300	48	Fix another palloc in critical section.
+5d8117e1f38	Tom Lane	2014-04-05 18:16:08 -0400	30	Block signals earlier during postmaster startup.
+80a5cf643ad	Tom Lane	2014-04-05 20:48:47 -0400	76	Improve contrib/pg_trgm's heuristics for regexp index searches.
+e5550d5fec6	Simon Riggs	2014-04-06 11:13:43 -0400	395	Reduce lock levels of some ALTER TABLE cmds
+f14a6bbedb7	Simon Riggs	2014-04-06 11:44:24 -0400	2968	Isolation test files for ALTER TABLE patch
+7d8f1de1bc0	Simon Riggs	2014-04-06 12:21:51 -0400	413	Extra warnings and errors for PL/pgSQL
+594bac42728	Heikki Linnakangas	2014-04-07 14:37:30 +0300	10	Fix WAL replay bug in the new GIN incomplete-split code.
+b8a721149b1	Robert Haas	2014-04-07 10:40:47 -0400	0	Remove ipc_test.
+315772e4ecf	Robert Haas	2014-04-07 10:59:42 -0400	2	Assert that strong-lock count is >0 everywhere it's decremented.
+f235db03ff2	Robert Haas	2014-04-07 11:45:27 -0400	1	Remove 'make clean' support for ipc_test.
+38a2b95c342	Heikki Linnakangas	2014-04-07 19:49:03 +0300	13	Zero padding byte at end of GIN posting list.
+7ca32e255ba	Heikki Linnakangas	2014-04-08 14:51:40 +0300	0	Fix hot standby bug with GiST scans.
+0886fc6a5c7	Robert Haas	2014-04-08 10:27:56 -0400	457	Add new to_reg* functions for error-free OID lookups.
+11a65eed163	Robert Haas	2014-04-08 11:39:55 -0400	70	Get rid of the dynamic shared memory state file.
+02f65617eab	Robert Haas	2014-04-08 11:47:29 -0400	1	doc: Fix typo.
+f23a5630ebc	Tom Lane	2014-04-08 15:46:43 -0400	1839	Add an in-core GiST index opclass for inet/cidr types.
+0c4ea7a3092	Robert Haas	2014-04-08 16:22:50 -0400	1	Fix silly oversight in patch to remove dsm state file.
+f9179685371	Michael Meskes	2014-04-09 11:23:38 +0200	555	Several fixes to array handling in ecpg.
+b0827320610	Robert Haas	2014-04-09 11:46:49 -0400	1	Add missing include.
+5b075ae893a	Heikki Linnakangas	2014-04-09 23:16:35 +0300	8	Fix misc typos in comments.
+85c6bba2ce3	Bruce Momjian	2014-04-09 17:45:31 -0400	1	docs:  add link to pg_start_backup() from pg_basebackup --checkpoint
+150a9df5288	Heikki Linnakangas	2014-04-10 00:53:55 +0300	6	Fix a few more misc typos in comments.
+787064cd007	Heikki Linnakangas	2014-04-10 13:11:49 +0300	1	Fix typo in comment.
+8fcccadfea4	Bruce Momjian	2014-04-10 09:57:04 -0400	1	C comment:  track_activity_query_size doesn't support memory units
+ef29a884575	Michael Meskes	2014-04-10 20:40:05 +0200	3	The new pointer_to_struct test needs a special command line parameter to ecpg. Hopefully this will fix the buildfarm failures on Windows.
+614167c6d7e	Heikki Linnakangas	2014-04-10 23:42:04 +0300	32	Fix bugs in GIN "fast scan" with partial match.
+3c41b812c55	Bruce Momjian	2014-04-10 17:16:28 -0400	6	docs: psql '--' comments are not passed to the server
+a9d9acbf219	Tom Lane	2014-04-12 12:03:30 -0400	2201	Create infrastructure for moving-aggregate optimization.
+9d229f399e8	Tom Lane	2014-04-12 20:33:09 -0400	1129	Provide moving-aggregate support for a bunch of numerical aggregates.
+842faa714c0	Stephen Frost	2014-04-12 21:04:58 -0400	1369	Make security barrier views automatically updatable
+d95425c8b9d	Tom Lane	2014-04-13 00:01:46 -0400	137	Provide moving-aggregate support for boolean aggregates.
+b3e6593716e	Stephen Frost	2014-04-13 00:41:33 -0400	68	Add ANALYZE into regression tests
+5f508b6dea1	Stephen Frost	2014-04-13 01:02:44 -0400	124	Make a dedicated AlterTblSpcStmt production
+46a60abfe9f	Tom Lane	2014-04-13 11:00:11 -0400	8	Suppress compiler warning in new contrib/pg_trgm code.
+e0c91a7ff01	Tom Lane	2014-04-13 13:59:17 -0400	128	Improve some O(N^2) behavior in window function evaluation.
+1bd3842163f	Heikki Linnakangas	2014-04-14 14:51:28 +0300	2	GIN entry pages follow the standard page layout - tell XLogInsert.
+e3e6e3af560	Heikki Linnakangas	2014-04-14 15:27:32 +0300	6	Remove dead checks for invalid left page in ginDeletePage.
+7b979524afb	Robert Haas	2014-04-14 08:44:21 -0400	85	Tab completion for event triggers.
+0c953540d28	Robert Haas	2014-04-14 10:44:59 -0400	5	Update list of relation types on which ALTER TABLE RENAME/OWNER work.
+f0aa6c06d4e	Robert Haas	2014-04-14 10:52:07 -0400	1	Correct description of constraint_name in ALTER TABLE documentation.
+4dfb065b3ab	Tom Lane	2014-04-14 11:18:47 -0400	13	Fix bogus handling of bad strategy number in GIST consistent() functions.
+c050b2aae3b	Robert Haas	2014-04-14 12:48:25 -0400	1	doc: Update yet another place that didn't get the memo about matviews.
+69671ab5484	Robert Haas	2014-04-14 13:01:53 -0400	15	doc: Suggesting clearing pg_replslot from a hot filesystem backup.
+f1dadd34fa9	Heikki Linnakangas	2014-04-14 21:13:19 +0300	78	Set pd_lower on internal GIN posting tree pages.
+7b5a9d61a82	Peter Eisentraut	2014-04-14 15:36:54 -0400	0	Fix whitespace
+7d0f493f196	Peter Eisentraut	2014-04-14 21:33:46 -0400	745	Add TAP tests for client programs
+e3fd9327384	Peter Eisentraut	2014-04-14 21:49:57 -0400	1	Add @configure_input@ marker to Makefile.global.in
+0d3b2b80aa6	Peter Eisentraut	2014-04-14 21:52:03 -0400	1	Have lcov call the right gcov
+c92c3d50d7f	Peter Eisentraut	2014-04-15 00:44:25 -0400	94	vacuumdb: Add option --analyze-in-stages
+4168c00a5d9	Bruce Momjian	2014-04-15 13:28:54 -0400	20	psql: conditionally display oids and replication identity
+ab76d8e9d67	Bruce Momjian	2014-04-15 14:45:10 -0400	0	contrib/test_decoding:  fix regression test for psql oid display changes
+848b9f05ab2	Heikki Linnakangas	2014-04-16 10:26:36 +0300	2	Use correctly-sized buffer when zero-filling a WAL file.
+41809346518	Bruce Momjian	2014-04-16 10:45:48 -0400	42	check socket creation errors against PGINVALID_SOCKET
+ed4a26260c6	Bruce Momjian	2014-04-16 11:24:38 -0400	1	doc: fix json_extract_path_text() typo by adding jsonb
+1a81daab8be	Robert Haas	2014-04-16 12:04:44 -0400	11	Try to fix spurious DSM failures on Windows.
+dfc0219f649	Robert Haas	2014-04-16 12:21:43 -0400	199	Add to_regprocedure() and to_regoperator().
+585bca39364	Magnus Hagander	2014-04-16 18:58:10 +0200	39	Fix timeout in LDAP lookup of libpq connection parameters
+cad4fe6455b	Tom Lane	2014-04-16 13:21:20 -0400	4	Use AF_UNSPEC not PF_UNSPEC in getaddrinfo calls.
+95cb917297e	Bruce Momjian	2014-04-16 13:27:07 -0400	0	pg_upgrade:  remove redundant include files
+ef158312e96	Andrew Dunstan	2014-04-16 13:35:46 -0400	8	Attempt to get plpython regression tests working again for MSVC builds.
+cbb5e23bfa9	Tom Lane	2014-04-16 14:28:59 -0400	97	Update oidjoins regression test for 9.4.
+9c533465008	Bruce Momjian	2014-04-16 15:06:49 -0400	5	docs:  make max_wal_senders higher to handle disconnects
+5b68d81697b	Tom Lane	2014-04-16 17:21:57 -0400	76	Fix contrib/postgres_fdw's remote-estimate representation of array Params.
+83ab8e32f24	Alvaro Herrera	2014-04-16 18:25:44 -0300	17	Fix object identities for text search objects
+8c349ba5c04	Bruce Momjian	2014-04-16 18:13:45 -0400	4	psql:  update --help output for unaligned mode params
+be5f7fff470	Bruce Momjian	2014-04-16 19:15:16 -0400	50	doc:  move min_recovery_apply_delay into the right section
+5d305d86bd9	Bruce Momjian	2014-04-16 19:46:51 -0400	16	libpq:  use pgsocket for socket values, for portability
+e183d11262f	Bruce Momjian	2014-04-16 19:53:42 -0400	1	docs: properly document psql auto encoding mode
+5f86cbd714c	Tom Lane	2014-04-16 20:48:59 -0400	48	Rename EXPLAIN ANALYZE's "total runtime" output to "execution time".
+2a8e1ac598c	Heikki Linnakangas	2014-04-17 17:47:50 +0300	11	Set the all-visible flag on heap page before writing WAL record, not after.
+52e757420fa	Bruce Momjian	2014-04-17 10:52:48 -0400	8	docs: adjustments for streaming standbys that disconnect frequently
+c1275cf7417	Bruce Momjian	2014-04-17 11:42:21 -0400	32	pg_upgrade:  throw an error for non-existent tablespace directories
+83defef8c79	Bruce Momjian	2014-04-17 11:55:57 -0400	6	report stat() error in trigger file check
+9fe55259fd6	Bruce Momjian	2014-04-17 12:37:53 -0400	82	pgcrypto:  fix memset() calls that might be optimized away
+01563158235	Tom Lane	2014-04-17 16:12:24 -0400	9	Fix unused-variable warning on Windows.
+e7128e8dbb3	Peter Eisentraut	2014-04-18 00:03:19 -0400	5	Create function prototype as part of PG_FUNCTION_INFO_V1 macro
+66b1084e2cc	Magnus Hagander	2014-04-18 12:49:54 +0200	2	Fix typo
+13ecb822e8d	Bruce Momjian	2014-04-19 08:41:51 -0400	7	libpq:  have PQconnectdbParams() and PQpingParams accept "" as default
+4353d1809f6	Bruce Momjian	2014-04-19 10:52:49 -0400	27	docs:  tablespaces cannot be accessed independently
+0e8beed515b	Bruce Momjian	2014-04-19 14:59:47 -0400	2	doc: mention archive_command and recovery_command are exec'ed locally
+012025f9ae2	Bruce Momjian	2014-04-19 15:26:49 -0400	6	doc: CREATE DATABASE doesn't copy template database-level config params
+fab6170cabb	Robert Haas	2014-04-20 16:30:55 +0200	1	Fix typo.
+602b27ab8e4	Robert Haas	2014-04-20 16:32:57 +0200	1	Fix another typo.
+78a3c9b6a5f	Tom Lane	2014-04-21 13:28:07 -0400	3	pg_stat_statements forgot to let previous occupant of hook get control too.
+8d34f686285	Heikki Linnakangas	2014-04-22 10:40:23 +0300	16	Avoid transient bogus page contents when creating a sequence.
+7d98054f0dd	Heikki Linnakangas	2014-04-22 13:02:52 +0300	2	Fix rm_desc routine of b-tree page delete records.
+7e30c186da8	Heikki Linnakangas	2014-04-22 13:03:37 +0300	67	Retain original physical order of tuples in redo of b-tree splits.
+77fe2b6d795	Heikki Linnakangas	2014-04-22 15:34:54 +0300	1	Fix bug in new B-tree page deletion code.
+80ce90b9c40	Peter Eisentraut	2014-04-22 15:22:10 -0400	6	doc: Improve "replication slot" index entries
+45e67a2ad7f	Heikki Linnakangas	2014-04-22 22:39:50 +0300	6	Fix Gin README.
+4a5d55ec2b7	Heikki Linnakangas	2014-04-22 22:40:44 +0300	1	Fix bug in the new B-tree incomplete-split code.
+7ec73783d88	Bruce Momjian	2014-04-22 16:06:37 -0400	24	copy:  update docs for FORCE_NULL and FORCE_NOT_NULL combination
+2985e16031b	Bruce Momjian	2014-04-22 17:23:58 -0400	3	regression test:  fix hot standby tests by using repeatable read
+c27bf777cf4	Bruce Momjian	2014-04-22 17:54:42 -0400	4	doc:  improve CREATE RULE event list
+4d0d607a454	Bruce Momjian	2014-04-22 18:05:44 -0400	2	release memory used while flushing logical mappings
+72590b3a69b	Bruce Momjian	2014-04-22 18:10:14 -0400	4	docs:  clearify use of pg_database.datistemplate
+19fa6161dd6	Bruce Momjian	2014-04-22 18:13:10 -0400	2	build:  add EXTRA_REGRESS_OPTS to all pg_regress invocations
+26cd1d7d951	Bruce Momjian	2014-04-22 18:19:07 -0400	10	docs:  add results for JSON operator examples
+8506a607a3b	Bruce Momjian	2014-04-22 18:38:14 -0400	3	doc:  mention CREATE MATERIALIZED VIEW AS can be EXPLAINed
+9970443640b	Bruce Momjian	2014-04-22 19:16:54 -0400	2	doc:  improve wording of COPY commit 7ec73783d88a743799b0c262f1235f772497fb1d
+2362c2bd234	Bruce Momjian	2014-04-22 20:33:12 -0400	1	doc:  adjust 9970443640b4569cf72b3c8e84abe80bdf533c7f for "null string"
+cee850c403c	Bruce Momjian	2014-04-22 22:21:54 -0400	1	revert 4d0d607a454ee832574afd52a3c515099cc85eb3
+c6a4ace5bf8	Tom Lane	2014-04-22 22:33:35 -0400	5	Fix broken logic in logical_heap_rewrite_flush_mappings().
+d26b042ce57	Tom Lane	2014-04-22 23:22:12 -0400	2	Fix documentation of FmgrInfo.fn_nargs.
+4fafc4ecd9e	Heikki Linnakangas	2014-04-23 10:19:54 +0300	33	Cleanup of new b-tree page deletion code.
+8fbfbf14727	Heikki Linnakangas	2014-04-23 12:56:41 +0300	2	Fix typos in comment.
+4a781f1e6cf	Heikki Linnakangas	2014-04-23 13:00:08 +0300	6	Fix typo, trance -> tranche, in docs.
+a4ad9afec2c	Heikki Linnakangas	2014-04-23 14:41:51 +0300	5	Update obsolete comments.
+c18cc0034e1	Peter Eisentraut	2014-04-23 13:30:36 -0400	2	ecpg: Add additional files to .gitignore
+125ba2945aa	Peter Eisentraut	2014-04-23 16:14:14 -0400	1	doc: Fix DocBook table column count declaration
+f0fedfe82c8	Tom Lane	2014-04-23 19:17:41 -0400	492	Allow polymorphic aggregates to have non-polymorphic state data types.
+a0f9358149b	Tom Lane	2014-04-23 21:21:05 -0400	24	Fix incorrect pg_proc.proallargtypes entries for two built-in functions.
+b2c9b161b8a	Magnus Hagander	2014-04-24 09:31:29 +0200	5	Properly build pg_recvlogical in the msvc build system
+d19bd29f07a	Tom Lane	2014-04-24 13:29:48 -0400	2	Reset pg_stat_activity.xact_start during PREPARE TRANSACTION.
+1a917ae8610	Alvaro Herrera	2014-04-24 15:41:55 -0300	51	Fix race when updating a tuple concurrently locked by another process
+49137ec9d46	Tom Lane	2014-04-25 15:40:35 -0400	6	Clean up temp installations after client program tests.
+4bfc5f1396b	Tom Lane	2014-04-25 15:59:57 -0400	5	Fix off-by-one bug in LWLockRegisterTranche().
+39b0c7681e4	Tom Lane	2014-04-26 12:22:09 -0400	1	Record the proper typmod for an index expression column.
+528c454b2ad	Tom Lane	2014-04-26 14:14:28 -0400	32	Don't #include utils/palloc.h in common/fe_memutils.h.
+5035701e07e	Tom Lane	2014-04-26 15:11:10 -0400	7	Improve generation algorithm for database system identifier.
+a9baeb361d6	Tom Lane	2014-04-27 21:24:19 -0400	7	Can't completely get rid of #ifndef FRONTEND in palloc.h :-(
+728c06f17f6	Robert Haas	2014-04-28 10:10:51 -0400	2	Minor fixes for ALTER TABLE documentation.
+d2722443d99	Heikki Linnakangas	2014-04-28 17:31:01 +0300	6	Fix two bugs in WAL-logging of GIN pending-list pages.
+6513633b941	Greg Stark	2014-04-28 18:41:36 +0100	1219	Add support for wrapping to psql's "extended" mode. This makes it very feasible to display tables that have both many columns and some large data in some columns (such as pg_stats).
+dbe31616c9b	Greg Stark	2014-04-29 12:43:03 +0100	1	Remove unnecessary cast causing a warning
+95811032d78	Tom Lane	2014-04-29 13:12:46 -0400	85	Improve planner to drop constant-NULL inputs of AND/OR where it's legal.
+322173eb0a6	Peter Eisentraut	2014-04-29 21:35:07 -0400	0	Fix whitespace
+d0765d50f42	Peter Eisentraut	2014-04-29 22:16:16 -0400	4	PL/Python: Adjust the regression tests for Python 3.4
+503de546215	Heikki Linnakangas	2014-04-30 10:35:52 +0300	17	Add missing SYSTEMQUOTEs
+5358bfdc98a	Tom Lane	2014-04-30 11:15:15 -0400	2	Fix uninitialized-variable warnings induced by recent commit.
+d166eed3024	Tom Lane	2014-04-30 12:01:19 -0400	49	Fix indentation of JOIN clauses in rule/view dumps.
+0601cb54dac	Tom Lane	2014-04-30 12:48:12 -0400	26	Limit overall indentation in rule/view dumps.
+41de93c53aa	Tom Lane	2014-04-30 13:26:26 -0400	73	Reduce indentation/parenthesization of set operations in rule/view dumps.
+0bff398761b	Tom Lane	2014-04-30 13:46:13 -0400	13	Check for interrupts and stack overflow during rule/view dumps.
+2d00190495b	Tom Lane	2014-04-30 17:30:50 -0400	173	Rationalize common/relpath.[hc].
+5ec45bb7fa0	Robert Haas	2014-04-30 17:38:18 -0400	2	Consistently allow reading of messages from a detached shm_mq.
+203b0d132fe	Tom Lane	2014-04-30 18:16:53 -0400	15	Improve error messages in reorderbuffer.c.
+65fb5ff1300	Robert Haas	2014-04-30 22:55:16 -0400	10	Documentation corrections for pg_replication_slots.
+3f8c8e3c61c	Tom Lane	2014-05-01 15:19:06 -0400	245	Fix failure to detoast fields in composite elements of structured types.
+4c8aa8b5aea	Tom Lane	2014-05-01 16:16:36 -0400	19	Fix "quiet inline" configure test for newer clang compilers.
+91e16b98061	Tom Lane	2014-05-01 20:22:37 -0400	90	Fix yet another corner case in dumping rules/views with USING clauses.
+0717748c904	Peter Eisentraut	2014-05-01 22:08:22 -0400	1	doc: Update pg_basebackup version compatibility claim for 9.4
+21223c24c2c	Bruce Momjian	2014-05-03 23:16:24 -0400	2	Initial version of Postgres 9.4 release notes
+d69ffd6f035	Bruce Momjian	2014-05-04 07:12:48 -0400	1898	Add missing 9.4 release file.
+a692ee5870f	Heikki Linnakangas	2014-05-05 16:07:40 +0300	196	Replace SYSTEMQUOTEs with Windows-specific wrapper functions.
+1460b199e6e	Heikki Linnakangas	2014-05-05 16:15:25 +0300	2	Assert that pre/post-fix updated tuples are on the same page during replay.
+c8345768396	Heikki Linnakangas	2014-05-05 16:17:16 +0300	1	Use Size instead of uint32 to store result of sizeof()
+329de9fa983	Heikki Linnakangas	2014-05-05 16:20:12 +0300	5	Don't leak memory after connection aborts in pg_recvlogical.
+377790fbd70	Heikki Linnakangas	2014-05-05 16:22:15 +0300	1	Pass sensible value to memset() when randomizing reorderbuffer's tuple slab.
+c70cc9afb3c	Robert Haas	2014-05-05 10:04:02 -0400	3	doc: In FDW handler docs, mark up scan_clauses with <literal>.
+5b8de6d4676	Bruce Momjian	2014-05-05 10:06:26 -0400	75	Update 9.4 release notes with feedback from the hackers list
+f8db074049b	Bruce Momjian	2014-05-05 10:30:45 -0400	1	Update "huge pages" description in the 9.4 release notes
+e03485ae8a2	Tom Lane	2014-05-05 11:26:41 -0400	13	Fix case of pg_dump -Fc to an unseekable file (such as a pipe).
+b2f7bd72c4d	Bruce Momjian	2014-05-05 12:38:09 -0400	205	Add SGML markup tags to 9.4 release notes
+3727afafeef	Tom Lane	2014-05-05 13:37:54 -0400	2	Fix pg_type.typlen for newly-revived line type.
+0f928a85ecd	Tom Lane	2014-05-05 14:43:39 -0400	4	Fix possible cache invalidation failure in ReceiveSharedInvalidMessages.
+a64560d994f	Bruce Momjian	2014-05-05 16:26:33 -0400	740	Add doc links to 9.4 release notes, and add major features list
+49c683bafda	Bruce Momjian	2014-05-05 19:16:34 -0400	2	Improve JSONB 9.4 release text
+60832ea39d6	Bruce Momjian	2014-05-05 19:58:58 -0400	15	In 9.4 release notes, add detail to pg_stat_statements items
+a1c287a3836	Bruce Momjian	2014-05-05 20:03:12 -0400	41	Move pg_stat_statements into its on 9.4 release note section
+9252b8eec27	Tom Lane	2014-05-05 20:24:38 -0400	6	Run autoconf in wake of commit a692ee5870f0f442565b4c4bff367094599e9bdf.
+768fb003265	Bruce Momjian	2014-05-05 20:24:54 -0400	2	Update 9.4 release notes for queryid control
+14ea89366fe	Bruce Momjian	2014-05-05 20:27:16 -0400	232	Properly detect read and write errors in pg_dump/dumpall, and pg_restore
+8d6a07fa01c	Michael Meskes	2014-05-06 13:09:51 +0200	31	Fix handling of array of char pointers in ecpglib.
+3a8e9e977fa	Heikki Linnakangas	2014-05-06 15:17:41 +0300	1	Fix use of free in walsender error handling after a sysid mismatch.
+08317edc2d4	Simon Riggs	2014-05-06 13:44:15 +0100	1	pg_basebackup streaming: adjust version check msg
+47faae93168	Bruce Momjian	2014-05-06 08:52:30 -0400	2	More rewording of pg_stat_statements for 9.4 release notes
+284c464b9f7	Bruce Momjian	2014-05-06 09:08:14 -0400	128	Update typedef list in preparation for pgindent run
+2e54d88af13	Simon Riggs	2014-05-06 14:44:18 +0100	5	Correct comment in Hot Standby nbtree handling
+55d5ff825fa	Bruce Momjian	2014-05-06 10:01:20 -0400	4	Fix detection of short tar files, broken by commit 14ea89366fe321609afc5838ff9fe2ded1cd707d
+fb85cd43204	Bruce Momjian	2014-05-06 10:57:15 -0400	1	Adjust pgindent to remove tabs after periods in C comments.
+0a783200579	Bruce Momjian	2014-05-06 12:12:18 -0400	1692	pgindent run for 9.4
+4335c958154	Bruce Momjian	2014-05-06 12:20:51 -0400	3	Fix improperly passed file descriptors
+e0124230ba2	Robert Haas	2014-05-06 13:40:34 -0400	5	Fix logic bug in dsm_attach().
+7c7b1f4ae5e	Bruce Momjian	2014-05-06 15:33:38 -0400	2	Improve pgindent test instructions
+250f259a444	Simon Riggs	2014-05-06 22:50:06 +0100	13	pg_basebackup streaming: adjust version check msg
+9516668e48a	Bruce Momjian	2014-05-06 20:09:31 -0400	0	Remove pgindent ecpg exclusion pattern
+84288a86ac7	Bruce Momjian	2014-05-06 20:39:28 -0400	4	With ecpg exclusion removed, re-run pgindent for 9.4
+3a9d430af51	Peter Eisentraut	2014-05-06 21:28:58 -0400	768	doc: Fix DocBook XML validity
+35c0cd3b05b	Jeff Davis	2014-05-06 19:27:43 -0700	25	Improve comment for tricky aspect of index-only scans.
+2c22afaa4e2	Tom Lane	2014-05-06 22:49:40 -0400	23	hash_any returns Datum, not uint32 (and definitely not "int").
+348aa75a678	Jeff Davis	2014-05-06 19:53:59 -0700	10	Fix interval test, which was broken for floating-point timestamps.
+1891b415f0c	Tom Lane	2014-05-06 23:52:30 -0400	1	Fix some more confusion between uint32 and Datum.
+e2ce9aa27bf	Robert Haas	2014-05-07 13:19:02 -0400	3	Never crash-and-restart for bgworkers without shared memory access.
+04e5025be8b	Tom Lane	2014-05-07 14:25:11 -0400	47	Fix failure to set ActiveSnapshot while rewinding a cursor.
+4d155d8b08f	Robert Haas	2014-05-07 14:56:49 -0400	37	Detach shared memory from bgworkers without shmem access.
+364ddc3e5cb	Heikki Linnakangas	2014-05-07 23:16:19 +0300	530	Clean up jsonb code.
+970d1f76d16	Robert Haas	2014-05-07 16:19:35 -0400	33	Restart bgworkers immediately after a crash-and-restart cycle.
+eee6cf1f337	Robert Haas	2014-05-07 16:30:23 -0400	8	When a bgworker exits, always call ReleasePostmasterChildSlot.
+7572b773597	Heikki Linnakangas	2014-05-08 00:06:28 +0300	0	Fix build after removing JsonbValue.estSize field.
+be7558162ac	Robert Haas	2014-05-07 17:44:42 -0400	23	When a background worker exists with code 0, unregister it.
+2f557167b19	Tom Lane	2014-05-07 21:39:13 -0400	32	Avoid buffer bloat in libpq when server is consistently faster than client.
+02c9a938057	Heikki Linnakangas	2014-05-08 10:59:09 +0300	2	Include files copied from libpqport in .gitignore
+4f7bb4b2a36	Heikki Linnakangas	2014-05-08 14:50:22 +0300	10	Protect against torn pages when deleting GIN list pages.
+0c15a524c53	Tom Lane	2014-05-08 12:33:29 -0400	7	Allow for platforms that have optreset but not <getopt.h>.
+1e81f8462ac	Tom Lane	2014-05-08 12:42:56 -0400	2	Fix comment.
+08c8e8962f5	Noah Misch	2014-05-08 19:29:02 -0400	6	Un-break ecpg test suite under --disable-integer-datetimes.
+a16d421ca4f	Tom Lane	2014-05-08 20:49:38 -0400	8	Revert "Auto-tune effective_cache size to be 4x shared buffers"
+b910d7ea358	Tom Lane	2014-05-08 21:11:47 -0400	13	Increase the default value of effective_cache_size to 4GB.
+fb1974cc6b5	Tom Lane	2014-05-08 21:45:02 -0400	5	Document permissions needed for pg_database_size and pg_tablespace_size.
+14d309cc55d	Tom Lane	2014-05-08 22:34:51 -0400	31	Fix missing dependencies in ecpg's test Makefiles.
+d3c72e23df6	Heikki Linnakangas	2014-05-09 12:46:21 +0300	10	Avoid some pnstrdup()s when constructing jsonb
+ff7bbb0176a	Heikki Linnakangas	2014-05-09 13:09:59 +0300	187	Minor cleanup of jsonb_util.c
+46dddf7673c	Tom Lane	2014-05-09 08:41:26 -0400	293	Improve key representation for GIN jsonb_ops, and fix existence-search bug.
+d9daff0e0cb	Heikki Linnakangas	2014-05-09 15:55:56 +0300	139	More jsonb cleanup.
+bdf9dd4db78	Tom Lane	2014-05-09 09:25:58 -0400	2	Fix typcategory labeling of jsonb.
+62e57ff040e	Tom Lane	2014-05-09 09:44:11 -0400	1	Teach add_json() that jsonb is of TYPCATEGORY_JSON.
+b2dada8f5f9	Robert Haas	2014-05-09 10:36:12 -0400	0	Remove overeager assertion in logical_heap_begin_rewrite.
+f1d8dd3647f	Robert Haas	2014-05-09 10:44:04 -0400	10	Code review for logical decoding patch.
+0ca6bda8e75	Tom Lane	2014-05-09 12:55:31 -0400	181	Get rid of bogus dependency on typcategory in to_json() and friends.
+0b92a77c17e	Tom Lane	2014-05-09 16:33:25 -0400	255	Improve user-facing JSON documentation.
+3d8c2b496fc	Tom Lane	2014-05-09 18:24:17 -0400	35	Fix broken allocation logic in recently-rewritten jsonb_util.c.
+17e4082b631	Tom Lane	2014-05-09 20:25:42 -0400	1	Fix bogus documentation of json_object_agg().
+7fa5bc43aaa	Tom Lane	2014-05-10 10:33:34 -0400	107	Update config.guess and config.sub
+eaba54c20c5	Tom Lane	2014-05-10 10:48:01 -0400	2	Accept tcl 8.6 in configure's probe for tclsh.
+866e6e1d04d	Heikki Linnakangas	2014-05-10 23:28:26 +0300	3	Fix bug in lossy-page handling in GIN
+f825c7c850d	Tom Lane	2014-05-10 18:57:02 -0400	303	More work on the JSON/JSONB user documentation.
+0d0b2bf175a	Tom Lane	2014-05-10 19:46:19 -0400	27	Rename min_recovery_apply_delay to recovery_min_apply_delay.
+ea78ce1d457	Bruce Momjian	2014-05-10 22:03:24 -0400	1	docs:  Mark 9.4 release notes as current as of today
+e136271a947	Peter Eisentraut	2014-05-10 22:16:59 -0400	12830	Translation updates
+12e611d43e6	Tom Lane	2014-05-11 12:06:04 -0400	78	Rename jsonb_hash_ops to jsonb_path_ops.
+195e81aff5d	Tom Lane	2014-05-11 15:13:30 -0400	20	Find postgresql.auto.conf in PGDATA even when postgresql.conf is elsewhere.
+e6df2e1be63	Tom Lane	2014-05-11 17:16:48 -0400	14	Stamp 9.4beta1.
+c890b488063	Heikki Linnakangas	2014-05-12 11:01:26 +0300	2	Free PQresult on error in pg_receivexlog.
+a3632771bb6	Fujii Masao	2014-05-13 01:41:54 +0900	1	Fix typo in test_shm_mq document.
+73011f35eca	Tom Lane	2014-05-12 14:24:18 -0400	3	Ignore config.pl and buildenv.pl in src/tools/msvc.
+66b737cd9a7	Tom Lane	2014-05-12 20:21:16 -0400	8	Be more wary in choice of timezone names to test make_timestamptz with.
+6de9a6c015d	Bruce Momjian	2014-05-12 21:31:13 -0400	11	doc: 9.4 release note adjustments
+9af8bd51a10	Bruce Momjian	2014-05-12 21:37:49 -0400	9	docs:  use structfield instead of structname in 9.4 release notes
+5a90ac29c44	Noah Misch	2014-05-12 23:03:49 -0400	12	Add Valgrind suppression for reorderbuffer padding bytes.
+540ac7cea91	Heikki Linnakangas	2014-05-13 15:15:13 +0300	8	Initialize padding bytes in btree_gist varbit support.
+f35aef415aa	Heikki Linnakangas	2014-05-13 19:18:28 +0300	2	Fix harmless access to uninitialized memory.
+062f5351892	Bruce Momjian	2014-05-13 15:13:02 -0400	94	docs:  9.4 release notes adjustments
+e513087f640	Bruce Momjian	2014-05-14 10:07:24 -0400	13	doc:  auto-updatable view adjustments for 9.4 release notes
+eb6144bb447	Bruce Momjian	2014-05-14 11:02:03 -0400	15	docs:  mention windows quoting change in 9.4 release notes
+31a263237fa	Tom Lane	2014-05-14 11:51:10 -0400	38	Make initdb throw error for bad locale values.
+eefd90c4a95	Bruce Momjian	2014-05-14 12:21:16 -0400	0	doc: fix typo in 9.4 release note comments
+ac53295d667	Bruce Momjian	2014-05-14 14:13:19 -0400	1	doc:  fix 9.4 release notes typo
+b23b0f5588d	Tom Lane	2014-05-14 14:56:08 -0400	98	Code review for recent changes in relcache.c.
+bb797b64044	Bruce Momjian	2014-05-14 16:26:13 -0400	97	pg_upgrade:  error out on 'line' data type usage
+4456763c78d	Tom Lane	2014-05-14 20:23:32 -0400	1	Fix version check for pg_upgrade line type crosscheck.
+2e6602dfc25	Bruce Momjian	2014-05-14 21:13:59 -0400	1	pg_update:  slight major version adjustment
+2dc4f011fd6	Tom Lane	2014-05-14 21:14:25 -0400	9	In initdb, ensure stdout/stderr buffering behavior is what we expect.
+c424c049189	Peter Eisentraut	2014-05-14 22:19:18 -0400	5	pg_ctl: Write error messages to stderr
+4773c70aa4c	Peter Eisentraut	2014-05-14 22:26:49 -0400	21	doc: Clarify what files pg_basebackup omits from data directory
+a82a17475d8	Heikki Linnakangas	2014-05-15 12:18:49 +0300	12	Silence warnings about redefining popen on Mingw-w64.
+ff810b49288	Heikki Linnakangas	2014-05-15 14:49:11 +0300	25	Misc message style and doc fixes.
+bb38fb0d43c	Heikki Linnakangas	2014-05-15 16:37:50 +0300	140	Fix race condition in preparing a transaction for two-phase commit.
+8f9b9590d79	Heikki Linnakangas	2014-05-15 18:29:20 +0300	53	Handle duplicate XIDs in txid_snapshot.
+00c26b6a60e	Heikki Linnakangas	2014-05-15 19:47:48 +0300	20	Fix a couple of bugs in pg_recvlogical output to stdout.
+2f8e68bd7ea	Peter Eisentraut	2014-05-15 13:23:31 -0400	0	Fix whitespace
+f62d417825d	Tom Lane	2014-05-15 15:57:54 -0400	18	Fix unportable setvbuf() usage in initdb.
+07a4a93a0e3	Heikki Linnakangas	2014-05-16 10:10:38 +0300	6	Initialize tsId and dbId fields in WAL record of COMMIT PREPARED.
+e7873b74d9c	Heikki Linnakangas	2014-05-16 10:10:45 +0300	17	Open output file before sleeping in pg_recvlogical.
+03e2b1017c0	Heikki Linnakangas	2014-05-16 10:53:10 +0300	1	Fix thinko in logical decoding of commit-prepared records.
+afd0fcbc5d4	Heikki Linnakangas	2014-05-16 11:34:46 +0300	7	Fix test_decoding test case's check that slot has been dropped.
+d900e192a3e	Heikki Linnakangas	2014-05-16 11:34:50 +0300	133	Add test case for logical decoding of prepared transactions.
+82bbb60c30d	Tom Lane	2014-05-16 15:11:51 -0400	21	Fix valgrind warning for btree_gist indexes on macaddr.
+39586bc1e97	Tom Lane	2014-05-16 15:18:09 -0400	2	Fix a second cause of undersized pallocs for btree_gist indexes on macaddr.
+af215d8190e	Tom Lane	2014-05-16 15:29:02 -0400	10	Suppress some more valgrind whining about btree_gist.
+7894ac5004d	Tom Lane	2014-05-16 16:51:28 -0400	18	Make sure chr(int) can't create invalid UTF8 sequences.
+a3655dd4a5c	Heikki Linnakangas	2014-05-17 13:55:03 +0300	15	Update README, we don't do post-recovery cleanup actions anymore.
+6c42b2b10af	Tom Lane	2014-05-17 15:53:21 -0400	17	Fix unaligned accesses in DecodeUpdate().
+c1907f0cc49	Tom Lane	2014-05-17 17:57:53 -0400	5	Fix a bunch of functions that were declared static then defined not-static.
+44cd47c1d49	Tom Lane	2014-05-17 18:29:46 -0400	8	Make fallback implementation of pg_memory_barrier() work.
+078b2ed291c	Tom Lane	2014-05-18 16:51:46 -0400	45	Fix two ancient memory-leak bugs in relcache.c.
+0c19aaba22c	Tom Lane	2014-05-18 18:17:55 -0400	10	Ooops, I broke initdb with that last patch.
+4d30d4b9d72	Bruce Momjian	2014-05-18 23:59:23 -0400	33	doc:  improve 9.4 release notes
+e41cc470bb5	Tom Lane	2014-05-19 00:06:49 -0400	37	Fix non-C89-compatible coding in pgbench.
+b05d1e3c0b2	Bruce Momjian	2014-05-19 00:35:14 -0400	13	doc:  9.4 release note adjustements
+009ca5e7821	Bruce Momjian	2014-05-19 00:47:45 -0400	2	doc:  adjust JSONB 9.4 release note item
+eb56812144b	Fujii Masao	2014-05-19 17:03:30 +0900	1	Fix incorrect column name in pg_stat_replication document.
+c91a9b5a285	Heikki Linnakangas	2014-05-19 13:28:04 +0300	10	Fix backup-block numbering in redo of b-tree split.
+4e92f780123	Heikki Linnakangas	2014-05-19 14:15:21 +0300	3	Message style fixes to pg_recvlogical
+f097d70b722	Fujii Masao	2014-05-19 20:41:41 +0900	1	Fix typo in JSON function document.
+a0841ecd251	Tom Lane	2014-05-19 16:38:49 -0400	1	Update obsolete comment.
+e416830a296	Tom Lane	2014-05-20 12:20:47 -0400	14	Prevent auto_explain from changing the output of a user's EXPLAIN.
+6a61308fba6	Bruce Momjian	2014-05-20 14:10:39 -0400	1	doc:  9.4 release notes update for pg_bench line limit item
+e12d7320ca4	Peter Eisentraut	2014-05-21 08:00:39 -0400	0	Fix spurious tab character
+2e1b5d3f014	Bruce Momjian	2014-05-21 15:49:44 -0400	8	doc:  add ALTER TABLE lock level item as major 9.4 item
+51f41e8c0a0	Heikki Linnakangas	2014-05-21 23:19:01 -0400	3	Fix typos in comments.
+19a683f69f4	Fujii Masao	2014-05-22 12:43:50 +0900	2	Fix typos in comments.
+06db9cce22e	Fujii Masao	2014-05-22 16:31:55 +0900	1	Fix typo in comment.
+11ad3b35c25	Robert Haas	2014-05-22 10:41:48 -0400	0	Remove unnecessary cleanup code.
+57b7e83b0d5	Heikki Linnakangas	2014-05-23 08:16:21 -0400	4	Fix misc typos in comments.
+37828e87aec	Bruce Momjian	2014-05-23 15:05:31 -0400	2	doc:  link/caps fixes for 9.4 release notes
+0564bbe7a16	Andres Freund	2014-05-24 17:34:22 +0200	27	Silence a couple of spurious valgrind warnings in inval.c.
+9fa93530c87	Andres Freund	2014-05-25 17:54:53 +0200	9	Don't allocate memory inside an Assert() iff in a critical section.
+9a65fb35071	Tom Lane	2014-05-25 16:33:29 -0400	6	Allow total number of transactions in pgbench to exceed INT_MAX.
+8da31837803	Heikki Linnakangas	2014-05-25 18:18:09 -0400	61	Fix error when trying to delete page with half-dead left sibling.
+0a5faaa9071	Peter Eisentraut	2014-05-25 23:21:41 -0400	4	Small typo and formatting fixes in postgresql.conf.sample
+bf2e70ba6c0	Andres Freund	2014-05-26 07:25:48 +0200	25	Fix pg_recvlogical to accept the documented -I instead only --startpos.
+9d7ded0f427	Tom Lane	2014-05-26 22:23:29 -0400	10	Avoid unportable usage of sscanf(UINT64_FORMAT).
+616afee14d7	Robert Haas	2014-05-26 22:56:28 -0400	1	worker_spi: Initialize bgw_notify_pid in all cases.
+b8cc8f94730	Tom Lane	2014-05-27 19:42:08 -0400	922	Support BSD and e2fsprogs UUID libraries alongside OSSP UUID library.
+49cf2cd815d	Bruce Momjian	2014-05-27 21:30:49 -0400	20	doc:  improve ssl_ecdh_curve descriptions
+4bcb3946249	Tom Lane	2014-05-27 22:01:13 -0400	2	Propagate system identifier generation improvement into pg_resetxlog.
+8600031147c	Tom Lane	2014-05-27 22:31:21 -0400	7	Fix obsolete config-module-exclusion logic in vcregress.pl.
+ec3357a3bc3	Tom Lane	2014-05-28 00:26:46 -0400	1	pg_lsn should not be marked typispreferred.
+c6763156589	Bruce Momjian	2014-05-28 06:27:04 -0400	6	doc:  improve markup of ssl_ecdh_curve commit
+8232d6df4c9	Magnus Hagander	2014-05-28 12:43:29 +0200	14	Ensure cleanup in case of early errors in streaming base backups
+2103218dd4a	Tom Lane	2014-05-28 11:50:41 -0400	4	Fix stack clobber in new uuid-ossp code.
+c0f27628d2f	Tom Lane	2014-05-28 14:21:17 -0400	88	Improve regression tests for uuid-ossp.
+45b7abe59e9	Tom Lane	2014-05-28 15:41:53 -0400	8	Fix bogus %name-prefix option syntax in all our Bison files.
+b3e5cfd5f97	Heikki Linnakangas	2014-05-28 22:47:04 +0300	38	Jsonb comparison bug fixes.
+d1d50bff247	Heikki Linnakangas	2014-05-28 23:48:02 +0300	43	Minor refactoring of jsonb_util.c
+21d48d66c8b	Andres Freund	2014-05-29 00:32:09 +0200	26	Don't pay heed to wal_sender_timeout while creating a decoding slot.
+71ed8b3ca76	Tom Lane	2014-05-28 19:21:01 -0400	8	Revert "Fix bogus %name-prefix option syntax in all our Bison files."
+25dd07e0f6b	Tom Lane	2014-05-28 23:15:51 -0400	56	Fix uuid-ossp regression tests based on buildfarm feedback.
+c941aed96b4	Tom Lane	2014-05-29 13:51:02 -0400	42	When using the OSSP UUID library, cache its uuid_t state object.
+42be7d6923e	Robert Haas	2014-05-29 23:33:49 -0400	9	In release notes, mention the need to initialize bgw_notify_pid.
+512f3b03e3c	Heikki Linnakangas	2014-05-30 10:32:52 +0300	2	Fix typos in MSVC solution file.
+20561acf93d	Tom Lane	2014-05-30 18:19:06 -0400	8	On OS X, link libpython normally, ignoring the "framework" framework.
+a57509821c3	Andres Freund	2014-05-31 15:58:04 +0200	39	Improvements to the replication protocol documentation.
+1a4174a498a	Andrew Dunstan	2014-06-01 19:04:02 -0400	62	Improve the efficiency of certain jsonb get operations.
+19c9da1d965	Bruce Momjian	2014-06-02 16:18:45 -0400	1	doc:  fix JSON function prototype variable label
+5eebb8d954a	Andres Freund	2014-06-03 12:19:18 +0200	15	Use unaligned output in another regression test query to reduce diff noise.
+44445b28d26	Andres Freund	2014-06-03 14:02:54 +0200	10	Set the process latch when processing recovery conflict interrupts.
+2dfa15de551	Tom Lane	2014-06-03 12:01:54 -0400	19	Make plpython_unicode regression test work in more database encodings.
+f30015b6d79	Andrew Dunstan	2014-06-03 13:56:53 -0400	116	Output timestamps in ISO 8601 format when rendering JSON.
+0ad1a816320	Andrew Dunstan	2014-06-03 16:11:31 -0400	74	Do not escape a unicode sequence when escaping JSON text.
+ab14a73a6ca	Andrew Dunstan	2014-06-03 18:26:47 -0400	54	Use EncodeDateTime instead of to_char to render JSON timestamps.
+55fb759ab3e	Peter Eisentraut	2014-06-03 22:36:35 -0400	16	Silence Bison deprecation warnings
+654e8e44474	Fujii Masao	2014-06-04 12:09:45 +0900	9	Save pg_stat_statements statistics file into $PGDATA/pg_stat directory at shutdown.
+c8c9c1f5a3f	Fujii Masao	2014-06-05 01:43:17 +0900	7	Add description of pg_stat directory into doc.
+621a99a666b	Andres Freund	2014-06-04 21:36:19 +0200	18	Fix longstanding bug in HeapTupleSatisfiesVacuum().
+eeca4cd35e2	Tom Lane	2014-06-04 18:16:17 -0400	1	Bump PG_CONTROL_VERSION for previous 9.4 changes.
+4c8ab1b91d2	Tom Lane	2014-06-04 20:45:56 -0400	196	Add btree and hash opclasses for pg_lsn.
+d4d48a5edd9	Tom Lane	2014-06-04 21:31:41 -0400	8	Tweak new regression test case for better portability.
+8776faa81cb	Heikki Linnakangas	2014-06-05 12:55:35 +0300	105	Adjust SP-GiST WAL record formats to reduce alignment padding.
+e0cb4aa89dd	Andres Freund	2014-06-05 13:54:25 +0200	268	Move regression test listing of builtin leakproof functions to opr_sanity.sql.
+f0c108560bc	Andres Freund	2014-06-05 16:29:20 +0200	49	Consistently spell a replication slot's name as slot_name.
+5f93c37805e	Tom Lane	2014-06-05 11:31:06 -0400	58	Add defenses against running with a wrong selection of LOBLKSIZE.
+fe7337f2dc3	Andres Freund	2014-06-05 18:27:11 +0200	10	Fix off-by-one in decoding causing one-record events to be skipped.
+b0b263baab3	Alvaro Herrera	2014-06-09 15:17:23 -0400	32	Wrap multixact/members correctly during extension, take 2
+c170655cc81	Tom Lane	2014-06-09 16:31:11 -0400	89	Fix infinite loop when splitting inner tuples in SPGiST text indexes.
+ab76208e3df	Tom Lane	2014-06-09 21:37:18 -0400	129	Forward-port regression test for bug #10587 into 9.3 and HEAD.
+a24c104b9a6	Tom Lane	2014-06-10 21:36:13 -0400	23	Stamp HEAD as 9.5devel.
+3bd82dd39eb	Tom Lane	2014-06-10 21:40:21 -0400	6	Stamp shared-library minor version numbers for 9.5.
+fd90b5d574f	Tom Lane	2014-06-10 22:48:16 -0400	7	Fix ancient encoding error in hungarian.stop.
+a26ae56f517	Fujii Masao	2014-06-11 20:54:06 +0900	2	Fix typos in comments.
+d098b236f30	Noah Misch	2014-06-11 19:50:29 -0400	5	Fix typos in comments.
+bd31794df7d	Noah Misch	2014-06-11 19:50:41 -0400	8	Consistently define BUILDING_DLL during builds of src/port for Windows.
+4d92b158555	Noah Misch	2014-06-11 19:50:57 -0400	2	Have configuration templates augment, not replace, LDFLAGS.
+e04a9ccd2cc	Andres Freund	2014-06-12 13:33:27 +0200	22	Consistency improvements for slot and decoding code.
+55d5b3c0827	Tom Lane	2014-06-12 13:12:53 -0400	134	Remove unnecessary output expressions from unflattened subqueries.
+7937910781a	Alvaro Herrera	2014-06-12 14:01:01 -0400	2	Fix typos
+154146d208d	Tom Lane	2014-06-12 15:39:09 -0400	12	Rename lo_create(oid, bytea) to lo_from_bytea().
+2dd352d4b01	Tom Lane	2014-06-12 15:54:13 -0400	64	Add regression test to prevent future breakage of legacy query in libpq.
+d2783bee304	Tom Lane	2014-06-12 16:51:02 -0400	124	Remove inadvertent copyright violation in largeobject regression test.
+9d4444a6fc0	Tom Lane	2014-06-12 17:11:53 -0400	9	Preserve exposed type of subquery outputs when substituting NULLs.
+70ad7ed4e88	Tom Lane	2014-06-12 17:51:47 -0400	66	Adjust largeobject regression test to leave a couple of LOs behind.
+6554656ea20	Tom Lane	2014-06-12 18:59:06 -0400	47	Improve tuplestore's error messages for I/O failures.
+c81e63d85f0	Tom Lane	2014-06-12 20:14:32 -0400	16	Fix pg_restore's processing of old-style BLOB COMMENTS data.
+3f8c23c4d31	Tom Lane	2014-06-13 00:02:56 -0400	355	Improve predtest.c's ability to reason about operator expressions.
+81300ea4443	Noah Misch	2014-06-13 19:57:18 -0400	6	emacs.samples: Reliably override ".dir-locals.el".
+a7205d81573	Noah Misch	2014-06-13 19:57:41 -0400	16	Adjust 9.4 release notes.
+f3fdd257a43	Noah Misch	2014-06-13 19:57:59 -0400	17	Harden pg_filenode_relation test against concurrent DROP TABLE.
+0ef0b6784c7	Heikki Linnakangas	2014-06-14 10:46:48 +0300	82	Change the signature of rm_desc so that it's passed a XLogRecord.
+9e6b1bf2581	Noah Misch	2014-06-14 09:41:13 -0400	317	Add mkdtemp() to libpgport.
+be76a6d39e2	Noah Misch	2014-06-14 09:41:13 -0400	143	Secure Unix-domain sockets of "make check" temporary clusters.
+ac608fe7584	Bruce Momjian	2014-06-16 15:24:38 -0400	19	Use type pgsocket for Windows pipe emulation socket calls
+2146f13408c	Tom Lane	2014-06-16 15:55:30 -0400	141	Avoid recursion when processing simple lists of AND'ed or OR'ed clauses.
+b29e7151434	Heikki Linnakangas	2014-06-17 08:52:41 +0300	1	Revert accidental change of WAL_DEBUG default.
+4cd3b1cbbd7	Bruce Momjian	2014-06-17 11:29:19 -0400	2	9.4 release notes: improve valgrind mention
+230ba02d855	Noah Misch	2014-06-18 09:21:50 -0400	1	Fix the MSVC build process for uuid-ossp.
+8f889b1083f	Tom Lane	2014-06-18 13:22:34 -0400	802	Implement UPDATE tab SET (col1,col2,...) = (SELECT ...), ...
+d2a986b74af	Andrew Dunstan	2014-06-18 15:18:22 -0400	8	Document that jsonb has all the standard comparison operators.
+66802246e22	Tom Lane	2014-06-18 15:44:35 -0400	0	Fix weird spacing in error message.
+960661980be	Andrew Dunstan	2014-06-18 19:28:20 -0400	8	Remove unnecessary check for jbvBinary in convertJsonbValue.
+df8b7bc9fff	Tom Lane	2014-06-18 20:12:51 -0400	44	Improve our mechanism for controlling the Linux out-of-memory killer.
+9ba78fb0b9e	Fujii Masao	2014-06-19 20:31:20 +0900	22	Don't allow data_directory to be set in postgresql.auto.conf by ALTER SYSTEM.
+bfaa8c665fc	Kevin Grittner	2014-06-19 08:40:37 -0500	1	Fix calculation of PREDICATELOCK_MANAGER_LWLOCK_OFFSET.
+f28d9b10f73	Tom Lane	2014-06-19 12:33:56 -0400	15	Document SQL functions' behavior of parsing the whole function at once.
+c82725edfa1	Noah Misch	2014-06-19 21:41:26 -0400	75	Let installcheck-world pass against a server requiring a password.
+686f362bee1	Noah Misch	2014-06-19 21:47:08 -0400	5	Fix contrib/pg_upgrade/test.sh for $PWD containing spaces.
+45b0f357235	Tom Lane	2014-06-19 22:14:26 -0400	31	Avoid leaking memory while evaluating arguments for a table function.
+3bdcf6a5a75	Andres Freund	2014-06-20 11:09:17 +0200	74	Don't allow to disable backend assertions via the debug_assertions GUC.
+ecac0e2b9e8	Andres Freund	2014-06-20 11:09:17 +0200	17	Do all-visible handling in lazy_vacuum_page() outside its critical section.
+1dde5782e34	Joe Conway	2014-06-20 12:24:59 -0700	13	Clean up data conversion short-lived memory context.
+8b38a538c0a	Tom Lane	2014-06-20 18:21:05 -0400	18	Add Asserts to verify that catalog cache keys are unique and not null.
+734bea8a69d	Kevin Grittner	2014-06-21 09:17:04 -0500	1	Fix documentation template for CREATE TRIGGER.
+a52f2a0b9cf	Bruce Momjian	2014-06-21 10:57:23 -0400	15	9.4 release notes:  adjust some entry wording
+884dede37a0	Bruce Momjian	2014-06-21 15:33:23 -0400	10	doc:  adjust JSONB GIN index description
+85ba0748ed5	Heikki Linnakangas	2014-06-23 12:22:36 +0300	1	Fix bug in WAL_DEBUG.
+394e05996fb	Fujii Masao	2014-06-24 03:25:01 +0900	1	Add missing closing parenthesis into max_replication_slots doc.
+f8ad8bd4730	Fujii Masao	2014-06-24 03:51:51 +0900	1	Fix typo in replication slot function doc.
+631e7f6b4e0	Heikki Linnakangas	2014-06-23 23:56:20 +0300	113	Improve tab-completion of DROP and ALTER ENABLE/DISABLE on triggers and rules.
+c922353b1c7	Robert Haas	2014-06-23 21:45:21 -0400	5	Check for interrupts during tuple-insertion loops.
+a87a7dc8b64	Heikki Linnakangas	2014-06-24 13:27:18 +0300	1	Don't allow foreign tables with OIDs.
+0f7482733a9	Bruce Momjian	2014-06-24 16:11:06 -0400	27	pg_upgrade:  remove pg_multixact files left by initdb
+57d8c1270e1	Tom Lane	2014-06-24 21:22:40 -0700	55	Fix handling of nested JSON objects in json_populate_recordset and friends.
+8d2d7ad5aba	Tom Lane	2014-06-25 11:22:18 -0700	70	Cosmetic improvements in jsonfuncs.c.
+798e2357905	Tom Lane	2014-06-25 15:25:22 -0700	135	Rationalize error messages within jsonfuncs.c.
+de42ed401a9	Fujii Masao	2014-06-26 14:27:27 +0900	2	Remove obsolete example of CSV log file name from log_filename document.
+344eed91e9d	Tom Lane	2014-06-26 10:41:48 -0700	38	Forward-patch regression test for "could not find pathkey item to sort".
+f71136eeeb5	Tom Lane	2014-06-26 16:22:15 -0700	15	Get rid of bogus separate pg_proc entries for json_extract_path operators.
+1147035203a	Tom Lane	2014-06-27 11:08:48 -0700	148	Disallow pushing volatile qual expressions down into DISTINCT subqueries.
+b2770576486	Alvaro Herrera	2014-06-27 14:43:39 -0400	7	Fix broken Assert() introduced by 8e9a16ab8f7f0e58
+b7e51d9c06e	Alvaro Herrera	2014-06-27 14:43:46 -0400	6	Don't allow relminmxid to go backwards during VACUUM FULL
+f741300c901	Alvaro Herrera	2014-06-27 14:43:53 -0400	112	Have multixact be truncated by checkpoint, not vacuum
+d222585a9f7	Tom Lane	2014-06-27 23:08:08 -0700	128	Allow pushdown of WHERE quals into subqueries with window functions.
+a6d488cb538	Andres Freund	2014-06-28 21:46:15 +0200	4	Remove Alpha and Tru64 support.
+51adcaa0df8	Andres Freund	2014-06-29 14:15:09 +0200	85	Add cluster_name GUC which is included in process titles if set.
+a749a23d7af	Tom Lane	2014-06-29 13:50:58 -0400	135	Remove use_json_as_text options from json_to_record/json_populate_record.
+1c6821be31f	Heikki Linnakangas	2014-06-30 10:26:00 +0300	146	Fix and enhance the assertion of no palloc's in a critical section.
+1cbc9480106	Andres Freund	2014-06-30 10:49:39 +0200	3	Check interrupts during logical decoding more frequently.
+6647f59fd25	Andres Freund	2014-06-30 10:49:39 +0200	2	Fix typos in the cluster_name commit.
+9d0826c595e	Noah Misch	2014-06-30 16:59:19 -0400	5	Don't prematurely free the BufferAccessStrategy in pgstat_heap().
+55863274d98	Bruce Momjian	2014-06-30 19:56:23 -0400	9	pg_upgrade:  update C comments about pg_dumpall
+97c40ce6146	Tom Lane	2014-06-30 20:51:30 -0400	54	Allow empty replacement strings in contrib/unaccent.
+1b2488731cc	Tom Lane	2014-06-30 21:46:29 -0400	67	Allow multi-character source strings in contrib/unaccent.
+03a25cec8de	Tom Lane	2014-06-30 22:03:37 -0400	8	Issue a WARNING about invalid rule file format in contrib/unaccent.
+9f03ca91519	Robert Haas	2014-07-01 10:34:42 -0400	44	Avoid copying index tuples when building an index.
+5a421a47eb1	Tom Lane	2014-07-01 11:23:21 -0400	24	Fix inadequately-sized output buffer in contrib/unaccent.
+f23425fa950	Tom Lane	2014-07-01 17:23:16 -0400	19	Improve handling of OOM score adjustment in sample Linux start script.
+2e8ce9ae46d	Tom Lane	2014-07-01 17:51:53 -0400	15	Remove some useless code in the configure script.
+15c82efd699	Tom Lane	2014-07-01 19:02:21 -0400	76	Refactor CREATE/ALTER DATABASE syntax so options need not be keywords.
+fbb1d7d73f8	Tom Lane	2014-07-01 20:10:38 -0400	135	Allow CREATE/ALTER DATABASE to manipulate datistemplate and datallowconn.
+d97e98e8337	Fujii Masao	2014-07-02 12:42:20 +0900	17	Prevent psql from issuing BEGIN before ALTER SYSTEM when AUTOCOMMIT is off.
+7980ab30ecf	Tom Lane	2014-07-02 12:31:24 -0400	28	Add some errdetail to checkRuleResultList().
+89cf2d52030	Bruce Momjian	2014-07-02 13:11:05 -0400	3	pg_upgrade:  no need to remove "members" files for pre-9.3 upgrades
+a36a8fa3766	Andres Freund	2014-07-02 21:07:47 +0200	27	Rename logical decoding's pg_llog directory to pg_logical.
+a61daa14d56	Bruce Momjian	2014-07-02 15:29:38 -0400	162	pg_upgrade:  preserve database and relation minmxid values
+ac46de56eab	Kevin Grittner	2014-07-02 15:20:30 -0500	5	Smooth reporting of commit/rollback statistics.
+0490db62871	Peter Eisentraut	2014-07-02 21:47:07 -0400	3	Support vpath builds in TAP tests
+f545d233ebc	Peter Eisentraut	2014-07-02 21:47:14 -0400	16	Use a separate temporary directory for the Unix-domain socket
+8b6010b8350	Tom Lane	2014-07-03 16:10:50 -0400	69	Improve support for composite types in PL/Python.
+6f5034eda05	Tom Lane	2014-07-03 18:25:33 -0400	32	Redesign API presented by nodeAgg.c for ordered-set and similar aggregates.
+ecd65797447	Tom Lane	2014-07-03 18:47:09 -0400	15	Don't cache per-group context across the whole query in orderedsetaggs.c.
+644d85351e6	Fujii Masao	2014-07-04 11:24:59 +0900	4	Split out the description of page-level lock as new subsection in document.
+74cbe966fe2	Fujii Masao	2014-07-04 12:00:48 +0900	129	Refactor pg_receivexlog main loop code, for readability.
+4ccac92d08f	Fujii Masao	2014-07-04 19:48:38 +0900	3	Fix double-free bug of WAL streaming buffer in pg_receivexlog.
+e254ff21d12	Kevin Grittner	2014-07-05 10:59:08 -0500	0	Remove dead typeStruct variable from plpy_spi.c.
+333b7db8b39	Noah Misch	2014-07-06 00:29:51 -0400	6	Consistently pass an "unsigned char" to ctype.h functions.
+1b86c81d2d2	Andres Freund	2014-07-06 15:58:01 +0200	53	Fix decoding of MULTI_INSERTs when rows other than the last are toasted.
+4893ccd0245	Robert Haas	2014-07-06 14:56:36 -0400	6	Remove swpb-based spinlock implementation for ARMv5 and earlier.
+4cbd1283283	Fujii Masao	2014-07-07 19:39:42 +0900	3	Fix typos in comments.
+3088cc37044	Bruce Momjian	2014-07-07 13:24:08 -0400	49	pg_upgrade: allow upgrades for new-only TOAST tables
+7700597b34f	Tom Lane	2014-07-07 19:02:45 -0400	4	In pg_dump, show server and pg_dump versions with or without --verbose.
+6048896e4c9	Fujii Masao	2014-07-08 10:21:16 +0900	1	Fix typo in comment.
+53166fe248c	Peter Eisentraut	2014-07-08 11:39:36 -0400	17	doc: Fix spacing in verbatim environments
+9e2f2d7a053	Tom Lane	2014-07-08 14:03:56 -0400	55	Don't assume a subquery's output is unique if there's a SRF in its tlist.
+889313c76b2	Peter Eisentraut	2014-07-08 14:14:55 -0400	7	doc: Link text to table by id
+56abcf6b829	Peter Eisentraut	2014-07-08 14:55:09 -0400	9	Update key words table for 9.4
+8522f214005	Peter Eisentraut	2014-07-08 23:29:25 -0400	0	Fix whitespace
+f73474382cb	Robert Haas	2014-07-09 11:04:45 -0400	4	Improve error messages for bytea decoding failures.
+b043985b7aa	Robert Haas	2014-07-09 11:34:47 -0400	1	Fix error hint style.
+5b214c5dd1d	Fujii Masao	2014-07-10 14:27:54 +0900	27	Add new ECHO mode 'errors' that displays only failed commands in psql.
+6a605cd6bd9	Bruce Momjian	2014-07-10 14:02:08 -0400	3	Adjust blank lines around PG_MODULE_MAGIC defines, for consistency
+59efda3e50c	Tom Lane	2014-07-10 15:01:43 -0400	1239	Implement IMPORT FOREIGN SCHEMA.
+80ddd04b4d6	Peter Eisentraut	2014-07-11 15:12:11 -0400	0	Fix whitespace
+d6858148356	Tom Lane	2014-07-11 19:12:35 -0400	47	Fix bug with whole-row references to append subplans.
+deee42ab015	Magnus Hagander	2014-07-12 14:17:43 +0200	2	Add autocompletion of locale keywords for CREATE DATABASE
+626bfad6cc5	Andres Freund	2014-07-12 14:28:19 +0200	419	Fix decoding of consecutive MULTI_INSERTs emitted by one heap_multi_insert().
+bd409519bd1	Andres Freund	2014-07-12 15:44:39 +0200	7	Minimal psql tab completion support for SET search_path.
+8d9a0e85bd6	Magnus Hagander	2014-07-12 19:36:28 +0200	4	Support --with-extra-version equivalent functionality in MSVC build
+ab774859456	Fujii Masao	2014-07-14 19:28:26 +0900	0	Remove incorrect comment from postgres_fdw.c.
+d4635b16fe3	Fujii Masao	2014-07-14 20:40:14 +0900	3	Prevent bitmap heap scans from showing unnecessary block info in EXPLAIN ANALYZE.
+52be3aae5bf	Noah Misch	2014-07-14 14:07:12 -0400	4	Fix warnings added in 8d9a0e85bd6ab4fe5268a1d759a787f72ff9333e.
+91f03ba5cf8	Noah Misch	2014-07-14 14:07:21 -0400	16	MSVC: Recognize PGFILEDESC in contrib and conversion_procs modules.
+35d19a9a37c	Noah Misch	2014-07-14 14:07:27 -0400	11	MSVC: Process Makefile line continuations more like "make" does.
+c4a448eb55f	Noah Misch	2014-07-14 14:07:41 -0400	4	MSVC: Apply icons to all binaries having them in a MinGW build.
+c0e8fb6148c	Noah Misch	2014-07-14 14:07:45 -0400	0	contrib/test_decoding/Makefile sets MODULES, so omit OBJS.
+0ffc201a513	Noah Misch	2014-07-14 14:07:52 -0400	147	Add file version information to most installed Windows binaries.
+346d7be184a	Alvaro Herrera	2014-07-14 17:24:40 -0400	75	Move view reloptions into their own varlena struct
+ee80f043bc9	Alvaro Herrera	2014-07-14 18:04:52 -0400	5	psql: Show tablespace size in \\db+
+f162fb75b32	Peter Eisentraut	2014-07-14 20:37:00 -0400	2	doc: small fixes for REINDEX reference page
+a16bac36eca	Magnus Hagander	2014-07-15 14:18:39 +0200	11	Remove dependency on wsock32.lib in favor of ws2_32
+d38228fe402	Peter Eisentraut	2014-07-15 08:31:50 -0400	12	Add missing serial commas
+d90ad5d8abe	Peter Eisentraut	2014-07-15 08:45:27 -0400	1	Small spelling fix
+c93bf8c6ccf	Magnus Hagander	2014-07-15 15:12:05 +0200	9	Include SSL compression status in psql banner and connection logging
+f9ddcf75430	Peter Eisentraut	2014-07-15 10:10:42 -0400	6	Add missing source files to nls.mk
+c9e1ad7faf7	Magnus Hagander	2014-07-15 18:07:03 +0200	22	Detect presence of SSL_get_current_compression
+6bdf4b9c7dd	Alvaro Herrera	2014-07-15 13:24:07 -0400	4	Fix REASSIGN OWNED for text search objects
+da6ac4a6683	Alvaro Herrera	2014-07-15 13:59:53 -0400	3	Add missing doc changes for ee80f043bc9b
+0f43a55331c	Andrew Dunstan	2014-07-15 14:24:47 -0400	5	json_build_object and json_build_array are stable, not immutable.
+e806da6bdbe	Peter Eisentraut	2014-07-15 15:08:16 -0400	2	pg_basebackup: Add more information about --max-rate option to help output
+e0da6ec618a	Peter Eisentraut	2014-07-15 15:08:16 -0400	0	pg_upgrade: Fix spacing in help output
+9a218c02b8f	Peter Eisentraut	2014-07-15 15:08:16 -0400	23	doc: Put new options in right order on reference pages
+5571caf42d6	Magnus Hagander	2014-07-15 22:02:46 +0200	12	Move check for SSL_get_current_compression to run on mingw
+f15821eefd7	Tom Lane	2014-07-15 21:12:43 -0400	400	Allow join removal in some cases involving a left join to a subquery.
+1264ef31a39	Heikki Linnakangas	2014-07-16 09:19:06 +0300	181	Fix bugs in SP-GiST search with range type's -|- (adjacent) operator.
+aa688725615	Peter Eisentraut	2014-07-16 22:48:11 -0400	72	doc: Spell checking
+c0e4520b166	Magnus Hagander	2014-07-17 12:42:08 +0200	39	Add option to pg_ctl to choose event source for logging
+6cd471a6d46	Magnus Hagander	2014-07-17 13:19:32 +0200	1	Revert broken change to pgevent.c
+1567e659a87	Tom Lane	2014-07-18 13:00:27 -0400	24	Fix two low-probability memory leaks in regular expression parsing.
+85f95739ec0	Noah Misch	2014-07-18 16:05:17 -0400	6	Limit pg_upgrade authentication advice to always-secure techniques.
+9b35ddce93a	Tom Lane	2014-07-19 14:28:52 -0400	102	Partial fix for dropped columns in functions returning composite.
+b1864fabf93	Tom Lane	2014-07-19 15:00:50 -0400	220	Update time zone data files to tzdata release 2014e.
+4cbe3abb316	Tom Lane	2014-07-19 22:20:29 -0400	1	Fix xreflabel for hot_standby_feedback.
+ddc41fd2f47	Tom Lane	2014-07-20 18:17:25 -0400	1137	First-draft release notes for 9.3.5.
+2ee4efc4081	Peter Eisentraut	2014-07-20 21:39:37 -0400	3	Replace "internationalize" with "localize" where appropriate
+0e819c5e982	Peter Eisentraut	2014-07-21 00:42:50 -0400	1	Update SQL features list
+cac0d5193bd	Peter Eisentraut	2014-07-21 01:08:04 -0400	20172	Translation updates
+4c3c911d26b	Magnus Hagander	2014-07-21 12:24:00 +0200	3	Properly use DEFAULT_EVENT_SOURCE in pgevent.c
+78db307bb23	Tom Lane	2014-07-21 11:41:53 -0400	99	Defend against bad relfrozenxid/relminmxid/datfrozenxid/datminmxid values.
+87f830e0ce0	Tom Lane	2014-07-21 12:58:41 -0400	15	Adjust cutoff points in newly-added sanity tests.
+212825f8139	Tom Lane	2014-07-21 14:59:17 -0400	1550	Release notes for 9.3.5, 9.2.9, 9.1.14, 9.0.18, 8.4.22.
+6412f3e2d09	Tom Lane	2014-07-21 22:41:20 -0400	10	Reject out-of-range numeric timezone specifications.
+8195e9e9c12	Peter Eisentraut	2014-07-22 00:12:10 -0400	1	gitattributes: Ignore time zone data files for whitespace checks
+24e786f056c	Peter Eisentraut	2014-07-22 00:45:06 -0400	6	Unset some local environment variables in TAP tests
+d7cdf6ee36a	Noah Misch	2014-07-22 11:01:03 -0400	216	Diagnose incompatible OpenLDAP versions during build and test.
+4ebe3519e1c	Andrew Dunstan	2014-07-22 11:27:31 -0400	13	Allow empty string object keys in json_object().
+27cef0a5611	Tom Lane	2014-07-22 11:46:29 -0400	7	Check block number against the correct fork in get_raw_page().
+27048980f50	Tom Lane	2014-07-22 13:30:01 -0400	3	Re-enable error for "SELECT ... OFFSET -1".
+31f9bbf0592	Noah Misch	2014-07-23 00:35:07 -0400	7	MSVC: Substitute $(top_builddir) in REGRESS_OPTS.
+0ea1f2a3a8d	Noah Misch	2014-07-23 00:35:13 -0400	19	Report success when Windows kill() emulation signals an exiting process.
+4fd9e6ffdd9	Tom Lane	2014-07-23 15:20:31 -0400	34	Rearrange documentation paragraph describing pg_relation_size().
+455044d55a8	Peter Eisentraut	2014-07-23 22:06:56 -0400	9	Fix TAP installcheck tests when current directory name contains spaces
+78493b71680	Fujii Masao	2014-07-24 15:25:26 +0900	1	Fix bug where pg_receivexlog goes into busy loop if -s option is set to 0.
+967a4e7f310	Robert Haas	2014-07-24 08:06:54 -0400	6	docs: Improve documentation of \\pset without arguments.
+32d78894c2a	Robert Haas	2014-07-24 08:19:19 -0400	1	Avoid access to already-released lock in LockRefindAndRelease.
+93a028f5692	Andres Freund	2014-07-24 14:44:45 +0200	18	Properly remove ephemeral replication slots after a crash restart.
+250c26ba9cf	Robert Haas	2014-07-24 09:12:38 -0400	5	Fix checkpointer crash in EXEC_BACKEND builds.
+1144ea3421e	Robert Haas	2014-07-24 09:23:22 -0400	7	Prevent shm_mq_send from reading uninitialized memory.
+e565ff7553e	Noah Misch	2014-07-25 18:51:35 -0400	28	Move PGAC_LDAP_SAFE to config/programs.m4.
+de35a977100	Noah Misch	2014-07-25 18:51:48 -0400	33	Handle WAIT_IO_COMPLETION return from WaitForMultipleObjectsEx().
+c8e2e0e7129	Tom Lane	2014-07-25 19:48:42 -0400	45	Fix a performance problem in pg_dump's dump order selection logic.
+b0d3636c177	Peter Eisentraut	2014-07-26 23:19:02 -0400	44	doc: Fix up ALTER TABLESPACE reference page
+248fc1f1071	Tom Lane	2014-07-28 16:30:14 -0400	1	Fix obsolete statement in smgr/README.
+61e48efba57	Fujii Masao	2014-07-29 12:07:54 +0900	1	Reword the sentence for pg_logical_slot_peek_changes function.
+e74e0906fad	Heikki Linnakangas	2014-07-29 11:59:22 +0300	53	Treat 2PC commit/abort the same as regular xacts in recovery.
+60d931827b0	Heikki Linnakangas	2014-07-29 17:19:43 +0300	1	Oops, fix recoveryStopsBefore functions for regular commits.
+c2581794f37	Alvaro Herrera	2014-07-29 15:40:55 -0400	22	Simplify multixact freezing a bit
+05315498012	Alvaro Herrera	2014-07-29 15:41:06 -0400	61	Avoid uselessly looking up old LOCK_ONLY multixacts
+d826d8ecce8	Bruce Momjian	2014-07-29 22:09:03 -0400	1	pg_upgrade:  improve C comment wording
+232f1475dce	Peter Eisentraut	2014-07-29 23:47:16 -0400	14	doc: Clean up some recently added PL/pgSQL documentation
+e280c630a87	Robert Haas	2014-07-30 11:34:06 -0400	3	Fix mishandling of background worker PGPROCs in EXEC_BACKEND builds.
+ed802e7dc36	Robert Haas	2014-07-30 13:22:08 -0400	227	pgbench: Allow \\setrandom to generate Gaussian/exponential distributions.
+f51ead09df1	Tom Lane	2014-07-30 14:41:35 -0400	9	Avoid wholesale autovacuuming when autovacuum is nominally off.
+54685338e37	Heikki Linnakangas	2014-07-31 16:48:55 +0300	138	Move log_newpage and log_newpage_buffer to xlog.c.
+822ff44c822	Heikki Linnakangas	2014-08-01 21:13:17 +0300	1	Fix typo in user manual
+694fd33e231	Fujii Masao	2014-08-02 14:57:21 +0900	1	Fix bug in pg_receivexlog --verbose.
+b819dd7cb55	Fujii Masao	2014-08-02 15:18:09 +0900	5	Add missing PQclear() calls into pg_receivexlog.
+cd74a151b5a	Heikki Linnakangas	2014-08-04 18:06:34 +0300	4	Windows doesn't have M_PI; define it ourselves when needed.
+b4bd6f6b054	Bruce Momjian	2014-08-04 11:46:05 -0400	8	pg_upgrade:  remove reference to autovacuum_multixact_freeze_max_age
+ee646df59ae	Bruce Momjian	2014-08-04 11:56:16 -0400	25	pg_upgrade:  assume user is install user
+0ef99bdce3a	Robert Haas	2014-08-05 12:28:57 -0400	14	Improve some JSON error messages.
+49d1e03d64f	Kevin Grittner	2014-08-05 14:17:21 -0500	1	Fix typo in C comment.
+e3da0d4d1a4	Fujii Masao	2014-08-06 14:49:43 +0900	32	Change ParseConfigFp() so that it doesn't process unused entry of each parameter.
+6805e02c66e	Fujii Masao	2014-08-06 20:58:13 +0900	219	Refactor pg_receivexlog main loop code, for readability, take 2.
+873de34b710	Robert Haas	2014-08-06 11:30:32 -0400	2	Fix alternate regression test output file.
+1d41739e5a0	Robert Haas	2014-08-06 16:06:06 -0400	35	Don't require sort support functions to provide a comparator.
+73cfa37afe3	Robert Haas	2014-08-06 16:11:43 -0400	1	Add PG_RETURN_UINT16 macro.
+ec903d20e3b	Heikki Linnakangas	2014-08-07 12:40:13 +0300	4	Improve comment.
+4c6780fd17a	Bruce Momjian	2014-08-07 14:56:13 -0400	119	pg_upgrade: prevent oid conflicts with new-cluster TOAST tables
+1add956ac70	Tom Lane	2014-08-07 20:46:41 -0400	1	Fix typo in docs.
+3dad73e71f0	Fujii Masao	2014-08-08 16:50:54 +0900	169	Add -F option to pg_receivexlog, for specifying fsync interval.
+f25e0bf5e0a	Peter Eisentraut	2014-08-09 00:07:00 -0400	13	Small message fixes
+9da86753735	Tom Lane	2014-08-09 13:46:34 -0400	29	Reject duplicate column names in foreign key referenced-columns lists.
+495cadda5ed	Tom Lane	2014-08-09 16:35:29 -0400	14	Further cleanup of JSON-specific error messages.
+92f57c9ae95	Tom Lane	2014-08-09 17:31:13 -0400	71	Clean up handling of unknown-type inputs in json_build_object and friends.
+6aa61580e08	Tom Lane	2014-08-10 16:13:13 -0400	89	Clarify type resolution behavior for domain types.
+680513ab79c	Heikki Linnakangas	2014-08-11 11:54:19 +0300	2703	Break out OpenSSL-specific code to separate files.
+7d835ff4db1	Fujii Masao	2014-08-11 22:52:16 +0900	6	Fix documentation oversights about pageinspect and initialization fork.
+e15c4ab5fb0	Fujii Masao	2014-08-12 11:57:39 +0900	127	Add tab-completion for \\unset and valid setting values of psql variables.
+3e3f65973a3	Fujii Masao	2014-08-12 16:50:09 +0900	80	Change first call of ProcessConfigFile so as to process only data_directory.
+51222a17662	Tatsuo Ishii	2014-08-12 17:27:08 +0900	41	Enhance pgbench's option checking.
+41d5f8ad734	Andres Freund	2014-08-12 11:04:50 +0200	4	Be less aggressive in asking for feedback of logical walsender clients.
+d6ded369a77	Fujii Masao	2014-08-12 18:01:01 +0900	1	Fix typo in \\setrandom document.
+596385be06e	Andres Freund	2014-08-12 13:06:34 +0200	3	pg_recvlogical message and code improvements.
+52bffe3499d	Fujii Masao	2014-08-13 10:42:16 +0900	3	Expose -S option in pg_receivexlog.
+ab8c84db2f7	Tom Lane	2014-08-13 11:27:28 -0400	13	Prevent memory leaks in RelationGetIndexList, RelationGetIndexAttrBitmap.
+a844c29966d	Tom Lane	2014-08-13 11:35:51 -0400	6	Prevent memory leaks in parseRelOptions().
+faa14acc9b9	Peter Eisentraut	2014-08-13 22:10:25 -0400	0	doc: Remove obsolete set element DSSSL customizations
+1d678bf7bc6	Peter Eisentraut	2014-08-13 22:40:48 -0400	5	Add some noreturn attributes based on compiler recommendations
+5333c72c951	Peter Eisentraut	2014-08-13 23:15:26 -0400	0	Fix whitespace
+a4287a689d1	Fujii Masao	2014-08-14 13:57:52 +0900	1	Fix help message in pg_ctl.
+b34e37bfefb	Robert Haas	2014-08-14 12:09:52 -0400	215	Add sortsupport routines for text.
+751b7041050	Robert Haas	2014-08-14 15:19:43 -0400	1	docs: Add missing period.
+5ff5bfb5f0d	Tom Lane	2014-08-14 16:06:16 -0400	6	Update SysV parameter configuration documentation for FreeBSD.
+d34b48a021b	Peter Eisentraut	2014-08-14 21:47:11 -0400	2	doc: Fix DocBook XML validity
+f669b61476b	Peter Eisentraut	2014-08-15 00:01:14 -0400	11	Set shared library path for in-tree TAP tests
+c07693f0c7c	Heikki Linnakangas	2014-08-15 09:41:28 +0300	4	Remove remnants of a JENTRY_ISFIRST flag bit.
+ef153ecc55a	Heikki Linnakangas	2014-08-15 10:01:31 +0300	1	Doc fix: New York State's capital is Albany.
+e4c3c99ac3d	Bruce Momjian	2014-08-15 12:04:03 -0400	20	pg_upgrade:  error if run from top of new PGDATA on Windows
+ea9b8abd6f4	Bruce Momjian	2014-08-15 12:28:18 -0400	1	pg_upgrade:  fix define adjusted during testing
+9ee9ca545bd	Peter Eisentraut	2014-08-15 14:52:06 -0400	0	Fix whitespace
+e3f9c168383	Tom Lane	2014-08-16 12:53:54 -0400	6	Fix bogus commutator/negator links for JSONB containment operators.
+a068b5b65f8	Tom Lane	2014-08-16 13:22:52 -0400	90	Add opr_sanity queries to inspect commutator/negator links more closely.
+737cdc2d141	Tom Lane	2014-08-16 13:48:39 -0400	3	Fix bogus return macros in range_overright_internal().
+1330e2922c7	Peter Eisentraut	2014-08-17 09:10:28 -0400	4	doc: Work around stylesheet bug for man build
+259904ecd42	Tom Lane	2014-08-17 15:59:03 -0400	17	Improve DISCARD documentation.
+f66faadc442	Tom Lane	2014-08-17 22:26:44 -0400	626	Make an editorial pass over the 9.4 release notes.
+3e9f70f1287	Fujii Masao	2014-08-18 11:19:38 +0900	19	Add missing index terms for replication commands in the document.
+e56ec50c162	Tom Lane	2014-08-17 22:57:46 -0400	45	Use ISO 8601 format for dates converted to JSON, too.
+2b475c5946b	Tom Lane	2014-08-18 01:17:49 -0400	1	Fix obsolete mention of non-int64 support in CREATE SEQUENCE documentation.
+48d50840d53	Heikki Linnakangas	2014-08-18 13:12:40 +0300	571	Reorganize functions in be-secure-openssl.c
+458ef6bad15	Greg Stark	2014-08-18 12:20:32 +0100	1596	Fix further concerns about psql wrapping in expanded mode having collateral damage on other formats, by Sergey Muraviov.
+663675885ec	Greg Stark	2014-08-18 23:12:59 +0100	0	Adjust Release Notes to reflect holding off wrapped expanded mode until 9.5 (thanks Michael Paquier)
+10718612fb2	Noah Misch	2014-08-18 22:58:25 -0400	58	Document new trigger-related forms of ALTER FOREIGN TABLE.
+7fc5f1a3550	Noah Misch	2014-08-18 22:58:57 -0400	7	Make pg_service.conf sample LDIF more portable.
+fb2aece8ae4	Noah Misch	2014-08-18 22:59:31 -0400	8	Replace a few strncmp() calls with strlcpy().
+ee9569e4df1	Noah Misch	2014-08-18 22:59:53 -0400	66	Finish adding file version information to installed Windows binaries.
+8605bc75219	Noah Misch	2014-08-18 23:00:38 -0400	1	Install libpq DLL with $(INSTALL_SHLIB).
+083d29c65b7	Fujii Masao	2014-08-19 17:26:07 +0900	8	Fix bug in checking of IDENTIFY_SYSTEM result.
+c4762886539	Fujii Masao	2014-08-19 18:30:38 +0900	8	Revert "Fix bug in checking of IDENTIFY_SYSTEM result."
+02587dcddc2	Heikki Linnakangas	2014-08-20 12:06:08 +0300	0	Use comma+space as the separator in the default search_path.
+7567d94910c	Bruce Momjian	2014-08-20 13:04:45 -0400	6	pg_upgrade:  adjust logging to use QUERY_ALLOC lengths
+9bac66020db	Tom Lane	2014-08-20 16:48:53 -0400	703	Fix core dump in jsonb #> operator, and add regression test cases.
+fa069822f5a	Tom Lane	2014-08-20 19:05:05 -0400	292	More regression test cases for json/jsonb extraction operators.
+ce486056ecd	Heikki Linnakangas	2014-08-21 09:56:44 +0300	49	Add #define INT64_MODIFIER for the printf length modifier for 64-bit ints.
+f57791985ac	Andres Freund	2014-08-22 00:28:37 +0200	58	Add pinning_backends column to the pg_buffercache extension.
+3c4cf080879	Stephen Frost	2014-08-21 19:06:17 -0400	305	Rework 'MOVE ALL' to 'ALTER .. ALL IN TABLESPACE'
+3feda1bcbb6	Peter Eisentraut	2014-08-21 21:37:41 -0400	0	Fix whitespace
+8d938eb0797	Heikki Linnakangas	2014-08-22 10:27:21 +0300	20	Change the way pg_basebackup's tablespace mapping is implemented.
+2af93640ad1	Heikki Linnakangas	2014-08-22 13:45:38 +0300	3	Fix comment in pg_basebackup.
+ebf20f65d93	Andres Freund	2014-08-22 17:49:47 +0200	1	Fix newly introduced misspelling of existence in pg_buffercache.
+41dd50e84df	Tom Lane	2014-08-22 13:17:58 -0400	1042	Fix corner-case behaviors in JSON/JSONB field extraction operators.
+01d15a2677c	Alvaro Herrera	2014-08-22 14:03:11 -0400	1	Fix outdated comment
+f41872d0c12	Alvaro Herrera	2014-08-22 14:27:00 -0400	472	Implement ALTER TABLE .. SET LOGGED / UNLOGGED
+256bfb2c9ab	Peter Eisentraut	2014-08-23 00:25:28 -0400	9	doc: Improve pg_restore help output
+73eba19aebe	Tom Lane	2014-08-24 11:56:52 -0400	8	Fix another ancient memory-leak bug in relcache.c.
+3cd934f6356	Heikki Linnakangas	2014-08-25 19:13:24 +0300	4	Don't track DEALLOCATE in pg_stat_statements.
+d153b801611	Andres Freund	2014-08-25 18:30:37 +0200	39	Fix typos in some error messages thrown by extension scripts when fed to psql.
+9ee16b49f0a	Heikki Linnakangas	2014-08-25 20:14:43 +0300	223	Add regression tests for SELECT FOR UPDATE/SHARE NOWAIT.
+7636c0c821f	Alvaro Herrera	2014-08-25 13:50:19 -0400	21	Editorial review of SET UNLOGGED
+ac41769fd9d	Alvaro Herrera	2014-08-25 15:32:06 -0400	8	Oops, forgot to "git add" one last change
+d6d6020f1cf	Alvaro Herrera	2014-08-25 15:32:15 -0400	1	More psprintf goodness
+301fcf33eb7	Alvaro Herrera	2014-08-25 15:32:18 -0400	21	Have CREATE TABLE AS and REFRESH return an OID
+832a12f65e9	Alvaro Herrera	2014-08-25 15:32:26 -0400	1	DefineType: return base type OID, not its array
+6f822952eea	Alvaro Herrera	2014-08-25 15:32:30 -0400	3	Use newly added InvalidCommandId instead of 0
+3adba736620	Alvaro Herrera	2014-08-25 15:33:17 -0400	4	Revert XactLockTableWait context setup in conditional multixact wait
+bf1c866597a	Bruce Momjian	2014-08-25 15:34:55 -0400	44	upgrade docs:  highlight pg_upgrade, warn about globals preservation
+ebe30ad59bb	Bruce Momjian	2014-08-25 16:30:26 -0400	36	pg_ctl, pg_upgrade:  allow multiple -o/-O options, append them
+73d78e11a0f	Bruce Momjian	2014-08-25 17:06:40 -0400	34	Throw error for ALTER TABLE RESET of an invalid option
+b0488e5c4fb	Bruce Momjian	2014-08-25 17:24:33 -0400	2	pg_upgrade:  add SET log_min_error_statement = warning
+2209b3923a7	Bruce Momjian	2014-08-25 20:05:07 -0400	11	pg_upgrade:  remove support for 8.3 old clusters
+6cb74a67e26	Bruce Momjian	2014-08-25 20:07:37 -0400	1	revert "Throw error for ALTER TABLE RESET of an invalid option"
+e8c81b1b8e5	Bruce Momjian	2014-08-25 20:11:48 -0400	2	pg_upgrade docs:  update docs for 8.3 support removal
+5d16332e969	Bruce Momjian	2014-08-25 21:22:08 -0400	33	pg_upgrade:  use CTE query rather than temp table
+73fe87503f2	Bruce Momjian	2014-08-25 21:28:19 -0400	10	rename macro isTempOrToastNamespace to isTempOrTempToastNamespace
+a7ae1dcf493	Bruce Momjian	2014-08-25 22:19:05 -0400	69	pg_upgrade:  prevent automatic oid assignment
+2bde29739d1	Heikki Linnakangas	2014-08-26 11:50:48 +0300	29	Show schema names in pg_dump verbose output.
+ddc2504dbcf	Andres Freund	2014-08-26 12:27:26 +0200	64	Don't hardcode contrib_regression dbname in postgres_fdw and dblink tests.
+57ca1d4f017	Andres Freund	2014-08-26 12:28:08 +0200	14	Specify the port in dblink and postgres_fdw tests.
+0076f264b6f	Heikki Linnakangas	2014-08-26 16:18:17 +0300	49	Implement IF NOT EXISTS for CREATE SEQUENCE.
+5569d75d6a8	Andres Freund	2014-08-26 15:25:18 +0200	1	Mark IsBinaryUpgrade as PGDLLIMPORT to fix windows builds after a7ae1dc.
+a9d0f1cff3f	Kevin Grittner	2014-08-26 09:56:26 -0500	70	Fix superuser concurrent refresh of matview owned by another.
+9522ec3e707	Robert Haas	2014-08-26 15:58:50 -0400	1	Fix typo in b34e37bfefbed1bf9396dde18f308d8b96fd176c.
+2d759341d97	Peter Eisentraut	2014-08-26 17:26:45 -0400	0	Fix whitespace
+8e484bc4abc	Peter Eisentraut	2014-08-26 22:43:37 -0400	3	doc: Document valid checkpoint_timeout range
+e414ba93add	Stephen Frost	2014-08-26 23:08:41 -0400	4	Fix Var handling for security barrier views
+9a2d94892f6	Fujii Masao	2014-08-27 19:31:48 +0900	32	Add header comments to receivelog.h and streamutil.h.
+1c9701cfe58	Alvaro Herrera	2014-08-27 19:15:18 -0400	183	Fix FOR UPDATE NOWAIT on updated tuple chains
+8167a3883a3	Jeff Davis	2014-08-27 21:07:36 -0700	54	Allow multibyte characters as escape in SIMILAR TO and SUBSTRING.
+e23014f3d40	Fujii Masao	2014-08-28 15:55:50 +0900	44	Allow units to be specified in relation option setting value.
+11a020eb6e4	Andres Freund	2014-08-28 13:59:29 +0200	43	Allow escaping of option values for options passed at connection start.
+9df492664a7	Fujii Masao	2014-08-29 05:10:47 +0900	19	Revert "Allow units to be specified in relation option setting value."
+7f7eec89b66	Tom Lane	2014-08-28 18:21:05 -0400	20	Fix citext upgrade script for disallowance of oidvector element assignment.
+ec544a65c90	Noah Misch	2014-08-28 20:36:27 -0400	6	Always use our getaddrinfo.c on Windows.
+6c40f8316ed	Tom Lane	2014-08-28 22:37:58 -0400	59	Add min and max aggregates for inet/cidr data types.
+14b7c8f2d06	Peter Eisentraut	2014-08-29 00:26:17 -0400	1	doc: Revert ALTER TABLESPACE summary line
+65c9dc231a2	Peter Eisentraut	2014-08-29 00:26:17 -0400	11	Assorted message improvements
+88231ec5784	Heikki Linnakangas	2014-08-29 14:22:25 +0300	4	Fix bug in compressed GIN data leaf page splitting code.
+01363beae52	Bruce Momjian	2014-08-29 09:06:05 -0400	3	pg_is_xlog_replay_paused():  remove super-user-only restriction
+c6eaa880eea	Bruce Momjian	2014-08-29 19:01:04 -0400	5	Update C comment for pg_attribute.attislocal
+4b4b680c3d6	Andres Freund	2014-08-30 14:03:21 +0200	391	Make backend local tracking of buffer pins memory efficient.
+d5d7d077654	Bruce Momjian	2014-08-30 10:25:11 -0400	7	Again update C comments for pg_attribute.attislocal
+05258761bf1	Kevin Grittner	2014-08-30 10:52:36 -0500	23	doc: Various typo/grammar fixes
+8fff977e29c	Andres Freund	2014-08-31 23:53:12 +0200	2	Declare two variables in snapbuild.c as static.
+5c1faa7ba72	Andres Freund	2014-09-01 00:03:53 +0200	2	Protect definition of SpinlockSemaArray, just like its declaration.
+9c4b55db1dc	Andres Freund	2014-09-01 00:16:55 +0200	3	Declare lwlock.c's LWLockAcquireCommon() as a static inline.
+5a64cb740dc	Andres Freund	2014-09-01 12:01:29 +0200	2	Fix s/pluggins/plugins/ typo in two comments.
+9a0a12f6832	Andres Freund	2014-09-01 15:59:44 +0200	16	Add valgrind suppression for padding bytes in twophase records.
+d6fa44fce7c	Andres Freund	2014-09-01 15:59:44 +0200	130	Add skip-empty-xacts option to test_decoding for use in the regression tests.
+01b6976c13a	Tom Lane	2014-09-01 18:37:45 -0400	1	Fix unportable use of isspace().
+bd3b7a9eef6	Fujii Masao	2014-09-02 16:06:58 +0900	77	Support ALTER SYSTEM RESET command.
+51bb79569f9	Andres Freund	2014-09-02 13:06:11 +0200	47	Add psql PROMPT variable showing which line of a statement is being edited.
+26f8b99b248	Heikki Linnakangas	2014-09-02 14:26:06 +0300	1	Silence warning on new versions of clang.
+f8f4227976a	Heikki Linnakangas	2014-09-02 15:10:28 +0300	588	Refactor per-page logic common to all redo routines to a new function.
+c1008f0037e	Heikki Linnakangas	2014-09-02 15:56:50 +0300	68	Check number of parameters in RAISE statement at compile time.
+4011f8c98bd	Bruce Momjian	2014-09-03 11:54:31 -0400	9	Issue clearer notice when inherited merged columns are moved
+4b224011751	Bruce Momjian	2014-09-03 14:32:57 -0400	2	Document use of partial indexes for partial unique constraints
+4b91ade41fc	Bruce Momjian	2014-09-03 17:22:20 -0400	3	Update URL reference material in /contrib/isn docs
+f6f654ff12c	Fujii Masao	2014-09-04 12:31:48 +0900	108	Allow \\watch to display query execution time if \\timing is enabled.
+d8d4965dc29	Robert Haas	2014-09-04 12:17:10 -0400	2	Update comment to reflect commit 1d41739e5a04b0e93304d24d864b6bfa3efc45f2.
+a73c9dbab01	Fujii Masao	2014-09-05 02:17:57 +0900	3	Fix segmentation fault that an empty prepared statement could cause.
+8b896abe8eb	Peter Eisentraut	2014-09-04 14:11:23 -0400	0	doc: Remove dead link
+d85e7fac415	Fujii Masao	2014-09-05 11:40:08 +0900	7	Add tab-completion for reloptions like user_catalog_table.
+303f4d1012a	Peter Eisentraut	2014-09-05 01:25:27 -0400	22	Assorted message fixes and improvements
+a9c22d1480a	Bruce Momjian	2014-09-05 09:52:31 -0400	97	Rename C variables in formatting.c, for clarity
+1f4d1074c5d	Bruce Momjian	2014-09-05 18:59:41 -0400	8	Clarify documentation about "peer" rows in window functions
+a74a4aa23bb	Bruce Momjian	2014-09-05 19:19:41 -0400	19	pg_upgrade:  preserve the timestamp epoch
+ad5d46a4494	Bruce Momjian	2014-09-05 19:22:31 -0400	8	Report timezone offset in pg_dump/pg_dumpall
+d42f67c52af	Bruce Momjian	2014-09-06 11:10:52 -0400	2	Properly document that -r is only honored from the command-line.
+465b52e74ca	Bruce Momjian	2014-09-06 12:43:11 -0400	3	docs:  Improve pg_isready details about username/dbname
+b2de2a1172d	Stephen Frost	2014-09-07 08:04:35 -0400	39	Tab completion for ALTER .. ALL IN TABLESPACE
+0640c1bfc09	Tom Lane	2014-09-07 22:40:41 -0400	3	Documentation fix: sum(float4) returns float4, not float8.
+750c5ee6ce4	Tom Lane	2014-09-08 16:09:45 -0400	141	Fix psql \\s to work with recent libedit, and add pager support.
+07968dbfaad	Andres Freund	2014-09-09 00:47:32 +0200	50	Fix spinlock implementation for some !solaris sparc platforms.
+50881036b17	Andres Freund	2014-09-09 13:57:38 +0200	1	Fix typo in solaris spinlock fix.
+f0051c1a142	Stephen Frost	2014-09-09 10:58:48 -0400	4	Move ALTER ... ALL IN to ProcessUtilitySlow
+57b1085df55	Peter Eisentraut	2014-09-09 11:34:52 -0400	52	Allow empty content in xml type
+220bb39dee8	Peter Eisentraut	2014-09-09 13:56:29 -0400	13	doc: Reflect renaming of Mac OS X to OS X
+e80252d4242	Tom Lane	2014-09-09 15:34:14 -0400	458	Add width_bucket(anyelement, anyarray).
+0709b7ee72e	Robert Haas	2014-09-09 17:48:50 -0400	79	Change the spinlock primitives to function as compiler barriers.
+07c8651dd91	Andres Freund	2014-09-10 00:08:56 +0200	223	Add new psql help topics, accessible to both --help and \\?.
+1b4cc493d2b	Tom Lane	2014-09-09 18:35:31 -0400	41	Preserve AND/OR flatness while extracting restriction OR clauses.
+b4c28d1b92c	Andres Freund	2014-09-10 02:44:39 +0200	1	Fix typo in 07c8651dd91d5 causing WIN32_ONLY_COMPILER builds to fail.
+311da16439e	Andres Freund	2014-09-10 17:21:50 +0200	12	Add support for optional_argument to our own getopt_long() implementation.
+45f6240a8fa	Heikki Linnakangas	2014-09-10 21:24:52 +0300	145	Pack tuples in a hash join batch densely, to save memory.
+5b26278822c	Robert Haas	2014-09-10 14:40:21 -0400	1	Fix thinko in 0709b7ee72e4bc71ad07b7120acd117265ab51d0.
+84aa8ba128a	Bruce Momjian	2014-09-10 16:54:47 -0400	12	Issue a warning during the creation of hash indexes
+36ad1a87a36	Bruce Momjian	2014-09-10 17:13:04 -0400	26	Implement mxid_age() to compute multi-xid age
+e1598a15f4f	Bruce Momjian	2014-09-10 19:23:36 -0400	28	pg_upgrade:  check for large object size compatibility
+acc8e41681b	Bruce Momjian	2014-09-10 20:22:10 -0400	5	pg_upgrade: compare control version, not catalog version
+4c4654afeb5	Bruce Momjian	2014-09-10 20:50:15 -0400	224	doc:  improve configuration management section
+8632ba6de4f	Peter Eisentraut	2014-09-10 20:52:34 -0400	2	Support older versions of "prove"
+75717ce8f0c	Peter Eisentraut	2014-09-10 20:52:35 -0400	8	Handle old versions of Test::More
+02e3bcc6615	Heikki Linnakangas	2014-09-11 12:57:32 +0300	146	Change the way latency is calculated with pgbench --rate option.
+54a2d5b37b7	Heikki Linnakangas	2014-09-11 13:00:48 +0300	22	Simplify calculation of Poisson distributed delays in pgbench --rate mode.
+0ed41529f6a	Heikki Linnakangas	2014-09-11 13:50:14 +0300	3	Silence compiler warning on Windows.
+01a2bfd172b	Heikki Linnakangas	2014-09-11 15:15:40 +0300	1	Fix Windows build.
+68e66923ff6	Robert Haas	2014-09-11 09:07:32 -0400	1	Add missing volatile qualifier.
+849462a9faf	Bruce Momjian	2014-09-11 13:40:06 -0400	9	improve hash creation warning message
+aae7af3df80	Heikki Linnakangas	2014-09-11 22:43:56 +0300	0	Remove dead InRecovery check.
+c3c75fcd7a0	Bruce Momjian	2014-09-11 18:44:00 -0400	25	pg_upgrade:  adjust C comments
+95d737ff45a	Stephen Frost	2014-09-11 21:23:51 -0400	118	Add 'ignore_nulls' option to row_to_json
+da24813c207	Peter Eisentraut	2014-09-11 21:40:46 -0400	60	Fix vacuumdb --analyze-in-stages --all order
+e3ec07280cc	Tom Lane	2014-09-11 22:34:32 -0400	58	Fix JSON regression tests.
+1d352325b88	Tom Lane	2014-09-11 23:30:51 -0400	54	Fix power_var_int() for large integer exponents.
+774a78ffe47	Heikki Linnakangas	2014-09-12 11:27:56 +0300	17	Fix GIN data page split ratio calculation.
+acd08d764a3	Heikki Linnakangas	2014-09-12 17:17:05 +0300	202	Support Subject Alternative Names in SSL server certificates.
+82962838d4b	Stephen Frost	2014-09-12 11:11:53 -0400	7	Handle border = 3 in expanded mode
+a2dabf0e1dd	Stephen Frost	2014-09-12 12:04:37 -0400	305	Add unicode_{column|header|border}_style to psql
+4ad2a548050	Fujii Masao	2014-09-13 02:55:45 +0900	38	Add GUC to enable logging of replication commands.
+8cce08f1684	Robert Haas	2014-09-12 16:18:09 -0400	41	Change NTUP_PER_BUCKET to 1 to improve hash join lookup speed.
+f68dc5d86b9	Bruce Momjian	2014-09-12 20:35:07 -0400	310	More formatting.c variable renaming, for clarity
+95c38a98956	Bruce Momjian	2014-09-12 20:42:19 -0400	310	Revert f68dc5d86b9f287f80f4417f5a24d876eb13771d
+839acf9461d	Peter Eisentraut	2014-09-13 15:18:49 -0400	8	pg_ctl: Add tests for behavior with nonexistent data directory
+c2a01439c04	Peter Eisentraut	2014-09-13 20:22:21 -0400	53	Run missing documentation tools through "missing"
+fe550b2ac24	Tom Lane	2014-09-13 21:01:57 -0400	56	Invent PGC_SU_BACKEND and mark log_connections/log_disconnections that way.
+2df465e696f	Heikki Linnakangas	2014-09-14 16:48:57 +0300	1	Fix pointer type in size passed to memset.
+58e70cf9fb4	Heikki Linnakangas	2014-09-15 16:16:06 +0300	5	Follow the RFCs more closely in libpq server certificate hostname check.
+77e65bf369e	Heikki Linnakangas	2014-09-16 09:22:33 +0300	6	Fix the return type of GIN triConsistent support functions to "char".
+f7d6759ec2d	Peter Eisentraut	2014-09-17 00:54:12 -0400	1	Fix TAP checks when current directory name contains spaces
+7e3f728353f	Andres Freund	2014-09-18 09:59:10 +0200	4	Fix configure check for %z printf support after INT64_MODIFIER changes.
+728f152e07f	Andres Freund	2014-09-19 16:20:29 +0200	580	Add rmgr callback to name xlog record types for display purposes.
+bdd5726c347	Andres Freund	2014-09-19 16:33:16 +0200	236	Add the capability to display summary statistics to pg_xlogdump.
+afaefa1b31b	Andres Freund	2014-09-19 16:47:27 +0200	3	Avoid 'clobbered by longjmp' warning in psql/copy.c.
+e5603a2f35b	Andres Freund	2014-09-19 17:04:00 +0200	2	Mark x86's memory barrier inline assembly as clobbering the cpu flags.
+491c029dbc4	Stephen Frost	2014-09-19 11:18:35 -0400	7247	Row-Level Security Policies (RLS)
+e246b3d6eac	Robert Haas	2014-09-19 12:39:00 -0400	20	Add a fast pre-check for equality of equal-length strings.
+a92b5f969be	Robert Haas	2014-09-19 13:12:52 -0400	3	doc: Use <literal> and all-caps for READ COMMITTED isolation level.
+898f8a96ef9	Tom Lane	2014-09-19 13:19:27 -0400	45	Fix failure of contrib/auto_explain to print per-node timing information.
+604f7956b94	Andres Freund	2014-09-22 17:49:34 +0200	36	Improve code around the recently added rm_identify rmgr callback.
+0926ef43c16	Andres Freund	2014-09-22 17:54:34 +0200	0	Remove postgres --help blurb about the removed -A option.
+763ba1b0f2a	Robert Haas	2014-09-22 16:05:51 -0400	2	Fix mishandling of CreateEventTrigStmt's eventname field.
+e38da8d6b1b	Robert Haas	2014-09-22 16:32:35 -0400	2	Fix compiler warning.
+df4077cda2e	Robert Haas	2014-09-22 16:42:14 -0400	50	Remove volatile qualifiers from lwlock.c.
+6ba4ecbf477	Andres Freund	2014-09-22 23:35:08 +0200	173	Remove most volatile qualifiers from xlog.c
+6ef8c658af2	Stephen Frost	2014-09-22 20:12:51 -0400	42	Process withCheckOption exprs in setrefs.c
+43bed84c320	Stephen Frost	2014-09-22 20:50:17 -0400	1	Log ALTER SYSTEM statements as DDL
+a5643073730	Stephen Frost	2014-09-22 21:51:25 -0400	5	Add unicode_*_linestyle to \\? variables
+3694b4d7e1a	Tom Lane	2014-09-23 20:26:14 -0400	16	Fix incorrect search for "x?" style matches in creviterdissect().
+b1a52872ae6	Andrew Dunstan	2014-09-24 11:24:42 -0400	2	Fix typos in descriptions of json_object functions.
+3f6f9260e30	Tom Lane	2014-09-24 15:59:34 -0400	17	Fix bogus variable-mangling in security_barrier_replace_vars().
+6550b901fe7	Stephen Frost	2014-09-24 16:32:22 -0400	409	Code review for row security.
+afd1d95f5bf	Stephen Frost	2014-09-24 17:45:11 -0400	6	Copy-editing of row security
+b0d81adea65	Heikki Linnakangas	2014-09-25 13:37:19 +0300	13	Add -D option to specify data directory to pg_controldata and pg_resetxlog.
+ecacbdbcee6	Andrew Dunstan	2014-09-25 08:18:18 -0400	1	Return NULL from json_object_agg if it gets no rows.
+56a312aac88	Andres Freund	2014-09-25 15:22:26 +0200	1	Fix VPATH builds of the replication parser from git for some !gcc compilers.
+1dcfb8da09c	Heikki Linnakangas	2014-09-25 16:36:58 +0300	58	Refactor space allocation for base64 encoding/decoding in pgcrypto.
+5d7962c6797	Robert Haas	2014-09-25 10:43:24 -0400	61	Change locking regimen around buffer replacement.
+9111d46351e	Andrew Dunstan	2014-09-25 15:08:42 -0400	3	Remove ill-conceived ban on zero length json object keys.
+b64d92f1a56	Andres Freund	2014-09-25 23:49:05 +0200	2816	Add a basic atomic ops API abstracting away platform/architecture details.
+88bcdf9da5a	Andres Freund	2014-09-26 02:28:52 +0200	10	Fix atomic ops for x86 gcc compilers that don't understand atomic intrinsics.
+f18cad94491	Andres Freund	2014-09-26 02:44:44 +0200	2	Fix atomic ops inline x86 inline assembly for older 32bit gccs.
+9b6bb9b4715	Andres Freund	2014-09-26 02:55:38 +0200	1	Define META_FREE in a way that doesn't cause -Wempty-body warnings.
+d11339c099f	Peter Eisentraut	2014-09-26 02:43:46 -0400	0	Fix whitespace
+a30199b01bd	Andres Freund	2014-09-26 09:37:20 +0200	8	Fix a couple occurrences of 'the the' in the new atomics API.
+f9f07411a5b	Andres Freund	2014-09-26 15:55:44 +0200	51	Further atomic ops portability improvements and bug fixes.
+07d46a8963e	Robert Haas	2014-09-26 11:21:35 -0400	10	Fix identify_locking_dependencies for schema-only dumps.
+ff27fcfa0af	Stephen Frost	2014-09-26 12:46:26 -0400	127	Fix relcache for policies, and doc updates
+def4c28cf91	Tom Lane	2014-09-29 12:29:21 -0400	350	Change JSONB's on-disk format for improved performance.
+c8a026e4f15	Stephen Frost	2014-09-29 13:32:22 -0400	51	Revert 95d737ff to add 'ignore_nulls'
+08da8947f4b	Stephen Frost	2014-09-29 13:59:32 -0400	0	Also revert e3ec0728, JSON regression tests
+445d262852f	Andres Freund	2014-09-30 01:49:25 +0200	2	doc fix for pg_recvlogical: --create doesn't immediately exit.
+35419aeb835	Bruce Momjian	2014-09-29 20:19:59 -0400	99	pg_upgrade:  have pg_upgrade fail for old 9.4 JSONB format
+fd02931a6c8	Alvaro Herrera	2014-09-30 12:06:37 -0300	26	Fix pg_dump's --if-exists for large objects
+8492d863429	Stephen Frost	2014-09-30 15:55:28 -0400	8	Correct stdin/stdout usage in COPY .. PROGRAM
+ef8863844bb	Andres Freund	2014-10-01 12:17:03 +0200	3	Rename CACHE_LINE_SIZE to PG_CACHE_LINE_SIZE.
+0ef3c29a4b4	Andres Freund	2014-10-01 13:22:17 +0200	24	Improve documentation about binary/textual output mode for output plugins.
+32984d8fc3d	Heikki Linnakangas	2014-10-01 16:03:39 +0300	804	Add functions for dealing with PGP armor header lines to pgcrypto.
+a39e78b710e	Andres Freund	2014-10-01 15:19:40 +0200	15	Block signals while computing the sleep time in postmaster's main loop.
+5fa6c81a43d	Heikki Linnakangas	2014-10-01 16:42:26 +0300	20	Remove num_xloginsert_locks GUC, replace with a #define
+fdf81c9a6cf	Andres Freund	2014-10-01 17:35:07 +0200	10	pg_recvlogical.c code review.
+0c013e08cfb	Andres Freund	2014-10-01 17:35:56 +0200	212	Refactor replication connection code of various pg_basebackup utilities.
+5a6c168c785	Tom Lane	2014-10-01 19:31:12 -0400	717	Fix some more problems with nested append relations.
+84f0ea3f68a	Heikki Linnakangas	2014-10-02 14:01:19 +0300	160	Refactor pgbench log-writing code to a separate function.
+86f809088c2	Heikki Linnakangas	2014-10-02 15:51:31 +0300	1	Fix typo in error message.
+952872698d9	Andres Freund	2014-10-02 16:52:21 +0200	1	Install all headers for the new atomics API.
+3acc10c997f	Robert Haas	2014-10-02 13:58:50 -0400	5	Increase the number of buffer mapping partitions to 128.
+7a08e21f354	Heikki Linnakangas	2014-10-03 10:25:48 +0300	1	Fix documentation for CREATE SEQUENCE IF NOT EXISTS.
+7690ddea0c1	Heikki Linnakangas	2014-10-03 14:49:52 +0300	17	Check for GiST index tuples that don't fit on a page.
+9019264f2e2	Robert Haas	2014-10-03 11:39:38 -0400	1	Still another typo fix for 0709b7ee72e4bc71ad07b7120acd117265ab51d0.
+017b2e9822c	Robert Haas	2014-10-03 11:47:27 -0400	2	Fix typos in comments.
+1021bd6a89b	Alvaro Herrera	2014-10-03 13:01:27 -0300	26	Don't balance vacuum cost delay when per-table settings are in effect
+59685704302	Tom Lane	2014-10-03 14:48:11 -0400	18	Fix bogus logic for zic -P option.
+78d72563ef1	Stephen Frost	2014-10-03 16:31:53 -0400	120	Fix CreatePolicy, pg_dump -v; psql and doc updates
+4f499eee9d4	Tom Lane	2014-10-03 17:46:18 -0400	104	Update time zone abbreviations lists.
+513d06ded1b	Tom Lane	2014-10-04 14:18:19 -0400	3152	Update time zone data files to tzdata release 2014h.
+d0410d66037	Robert Haas	2014-10-04 21:25:41 -0400	3	Eliminate one background-worker-related flag variable.
+f706f2c1a06	Tom Lane	2014-10-05 14:14:04 -0400	81	Update 9.4 release notes for commits through today.
+1ec4a970fe6	Peter Eisentraut	2014-10-05 23:23:50 -0400	28739	Translation updates
+c8b6cba84a9	Andres Freund	2014-10-06 12:11:52 +0200	13	Rename pg_recvlogical's --create/--drop to --create-slot/--drop-slot.
+d9f38c7a555	Andres Freund	2014-10-06 12:51:37 +0200	170	Add support for managing physical replication slots to pg_receivexlog.
+273b29dbe96	Stephen Frost	2014-10-06 11:18:13 -0400	22	Clean up Create/DropReplicationSlot query buffer
+55bfdd1cfd9	Tom Lane	2014-10-06 21:23:20 -0400	2	Fix array overrun in ecpg's version of ParseDateTime().
+c421efd2133	Robert Haas	2014-10-07 00:08:59 -0400	1	Fix typo in elog message.
+df630b0dd5e	Alvaro Herrera	2014-10-07 17:23:34 -0300	885	Implement SKIP LOCKED for row-level locks
+7bb0e97407c	Robert Haas	2014-10-08 14:38:31 -0400	120	Extend shm_mq API with new functions shm_mq_sendv, shm_mq_set_handle.
+7b1c2a0f206	Alvaro Herrera	2014-10-08 18:10:47 -0300	41	Split builtins.h to a new header ruleutils.h
+f19f0ee7160	Fujii Masao	2014-10-10 03:18:01 +0900	2	Fix broken example in PL/pgSQL document.
+33755e8edf1	Heikki Linnakangas	2014-10-10 10:39:32 +0300	86	Change the way encoding and locale checks are done in pg_upgrade.
+733be2a5cd1	Heikki Linnakangas	2014-10-10 13:00:53 +0300	2	Remove unnecessary initialization of local variables.
+4a50de13127	Tom Lane	2014-10-11 14:13:51 -0400	95	Fix bogus optimization in JSONB containment tests.
+25ad5a52847	Tom Lane	2014-10-11 14:29:51 -0400	10	Improve documentation about JSONB array containment behavior.
+4f2e5a8a84f	Bruce Momjian	2014-10-11 17:14:16 -0400	8	regression:  adjust polygon diagrams to not use tabs
+80e6af12727	Bruce Momjian	2014-10-11 17:23:57 -0400	1	docs:  remove mention that attnotnull should be changed
+dc9c612767f	Bruce Momjian	2014-10-11 18:38:41 -0400	6	pg_upgrade:  prefix Unix shell script name output with "./"
+b7a08c80283	Peter Eisentraut	2014-10-12 01:06:35 -0400	10	Message improvements
+a0fb59d8bd7	Peter Eisentraut	2014-10-12 01:54:25 -0400	20	pg_recvlogical: Improve --help output
+772945b4dfb	Noah Misch	2014-10-12 23:27:06 -0400	1	Suppress dead, unportable src/port/crypt.c code.
+27a23f9dfe8	Noah Misch	2014-10-12 23:33:19 -0400	26	pg_ctl: Cast DWORD values to avoid -Wformat warnings.
+494affbd900	Noah Misch	2014-10-12 23:33:37 -0400	1	Fix quoting in the add_to_path Makefile macro.
+30d7ae3c76d	Kevin Grittner	2014-10-13 10:16:36 -0500	141	Increase number of hash join buckets for underestimate.
+98aed6c7217	Heikki Linnakangas	2014-10-13 20:50:24 +0300	208	Add --latency-limit option to pgbench.
+032f3b7e166	Bruce Momjian	2014-10-13 15:39:52 -0400	43	doc: improve USING and NATURAL JOIN descriptions
+d6c8e8d7aca	Bruce Momjian	2014-10-13 16:11:43 -0400	1	Consistently use NULL for invalid GUC unit strings
+7ab96d18f94	Bruce Momjian	2014-10-13 16:44:20 -0400	2	docs: error for adding  _validated_ domains for existing uses
+fe65280fea7	Bruce Momjian	2014-10-13 16:54:38 -0400	1	C comments: adjust execTuples.c for new structure
+ebd33f27ab0	Bruce Momjian	2014-10-13 17:23:36 -0400	7	doc:  mention more changes needed to use huge pages
+8660b40d0c5	Bruce Momjian	2014-10-13 17:36:50 -0400	2	doc:  mention TM is ignored for to_date/to_timestamp()
+7ce09e61480	Peter Eisentraut	2014-10-13 22:22:20 -0400	0	psql: Fix \\? output alignment
+5dc4b50b028	Peter Eisentraut	2014-10-13 22:22:20 -0400	6	doc: Fix copy-and-paste mistakes
+db75e524856	Peter Eisentraut	2014-10-13 22:22:20 -0400	18	doc: Improve ALTER VIEW / SET documentation
+0ff5047d52a	Heikki Linnakangas	2014-10-14 09:45:33 +0300	1	Fix typo in docs.
+e0d97d77bf0	Heikki Linnakangas	2014-10-14 10:06:47 +0300	6	Fix deadlock with LWLockAcquireWithVar and LWLockWaitForVar.
+0eea8047bf0	Alvaro Herrera	2014-10-14 15:00:55 -0300	761	pg_dump: Reduce use of global variables
+076d29a1eed	Alvaro Herrera	2014-10-14 17:33:36 -0300	5	Blind attempt at fixing Win32 pg_dump issues
+90063a7612e	Tom Lane	2014-10-15 18:50:13 -0400	24	Print planning time only in EXPLAIN ANALYZE, not plain EXPLAIN.
+b2cbced9eef	Tom Lane	2014-10-16 15:22:10 -0400	2020	Support timezone abbreviations that sometimes change.
+389573fd19e	Stephen Frost	2014-10-17 08:07:46 -0400	1	Fix pg_dump for UPDATE policies
+7584649a1c5	Tom Lane	2014-10-17 12:19:05 -0400	14	Re-pgindent src/bin/pg_dump/*.
+5c38a1d4ecc	Tom Lane	2014-10-17 12:49:00 -0400	3	Fix core dump in pg_dump --binary-upgrade on zero-column composite type.
+504c717599b	Fujii Masao	2014-10-18 03:06:34 +0900	7	Fix bug in handling of connections that pg_receivexlog creates.
+5ba062ee44c	Tom Lane	2014-10-17 22:33:52 -0400	3	Avoid core dump in _outPathInfo() for Path without a parent RelOptInfo.
+60f8133dc95	Tom Lane	2014-10-17 22:55:20 -0400	4	Declare mkdtemp() only if we're providing it.
+52c1ae22d6a	Peter Eisentraut	2014-10-18 09:26:36 -0400	205	doc: Clean up pg_recvlogical reference page
+97d554871c3	Bruce Momjian	2014-10-18 10:23:42 -0400	4	doc:  restrictions on alter database moving default tablespace
+417f92484da	Bruce Momjian	2014-10-18 10:31:00 -0400	3	interval:  tighten precision specification
+b87671f1b63	Bruce Momjian	2014-10-18 10:36:09 -0400	11	Shorten warning about hash creation
+7feaccc2179	Peter Eisentraut	2014-10-18 21:35:46 -0400	10	Allow setting effective_io_concurrency even on unsupported systems
+6895866510c	Peter Eisentraut	2014-10-18 22:48:15 -0400	161	psql: Improve \\pset without arguments
+49d182e61eb	Peter Eisentraut	2014-10-19 00:45:40 -0400	1	initdb: Fix compiler error in USE_PREFETCH case
+0f565c07431	Robert Haas	2014-10-20 10:23:40 -0400	6	Fix typos.
+bc279c92f0c	Robert Haas	2014-10-20 10:33:16 -0400	3	Fix typos.
+488a7c9ccff	Tom Lane	2014-10-20 10:53:57 -0400	1	Fix file-identification comment in contrib/pgcrypto/pgcrypto--1.2.sql.
+f330a6d1406	Tom Lane	2014-10-20 12:23:42 -0400	87	Fix mishandling of FieldSelect-on-whole-row-Var in nested lateral queries.
+af2b8fd0572	Andrew Dunstan	2014-10-20 15:31:05 -0400	6	Correct volatility markings of a few json functions.
+83dc5908c20	Peter Eisentraut	2014-10-20 15:36:51 -0400	8	pg_test_fsync: Update output format
+7dbb6069382	Andres Freund	2014-10-20 23:43:46 +0200	30	Flush unlogged table's buffers when copying or moving databases.
+11abd6c90f1	Andres Freund	2014-10-21 00:20:08 +0200	6	Renumber CHECKPOINT_* flags.
+5e5b65f359b	Andres Freund	2014-10-21 01:01:56 +0200	4	Don't duplicate log_checkpoint messages for both of restart and checkpoints.
+f048e50037b	Peter Eisentraut	2014-10-21 10:35:58 -0400	8	doc: Update FreeBSD documentation tools information
+f43afbca701	Peter Eisentraut	2014-10-21 10:43:09 -0400	7	doc: Update Red Hat documentation tools information
+5d93ce2d0c6	Peter Eisentraut	2014-10-21 14:46:38 -0400	68	doc: Check DocBook XML validity during the build
+6f04368cfc0	Peter Eisentraut	2014-10-21 16:16:39 -0400	25	Allow input format xxxx-xxxx-xxxx for macaddr type
+31dd7fcd036	Tom Lane	2014-10-21 18:25:58 -0400	8	Update expected/sequence_1.out.
+53566fc0940	Noah Misch	2014-10-21 22:55:43 -0400	9	MinGW: Link with shell32.dll instead of shfolder.dll.
+284590e416b	Noah Misch	2014-10-21 22:55:47 -0400	9	MinGW: Use -static-libgcc when linking a DLL.
+98b37437796	Heikki Linnakangas	2014-10-22 15:44:07 +0300	2	Update comment.
+2ae7811db87	Michael Meskes	2014-10-22 16:46:55 +0200	6	Small code cleanup.
+69fed5b26fa	Tom Lane	2014-10-22 18:41:44 -0400	11	Ensure libpq reports a suitable error message on unexpected socket EOF.
+a5f7d581943	Peter Eisentraut	2014-10-22 21:39:07 -0400	321	Add tests for sequence privileges
+e64d3c5635c	Peter Eisentraut	2014-10-22 21:41:43 -0400	6	Minimize calls of pg_class_aclcheck to minimum necessary
+c7371c4a607	Fujii Masao	2014-10-23 16:21:27 +0900	9	Prevent the already-archived WAL file from being archived again.
+5ac372fc1a7	Robert Haas	2014-10-23 08:18:45 -0400	11	Add a function to get the authenticated user ID.
+efbbbbc8b51	Fujii Masao	2014-10-23 22:33:56 +0900	65	Remove the unused argument of PSQLexec().
+2781b4bea7d	Robert Haas	2014-10-23 12:33:02 -0400	222	Perform less setup work for AFTER triggers at transaction start.
+b34d6f03dbb	Tom Lane	2014-10-23 13:12:00 -0400	41	Improve ispell dictionary's defenses against bad affix files.
+43ac12c6e6e	Tom Lane	2014-10-23 15:59:40 -0400	81	In type_sanity, check I/O functions of built-in types are not volatile.
+b01a4f68386	Alvaro Herrera	2014-10-23 20:51:58 -0300	17	Update README.tuplock
+3c2aa0c6f27	Alvaro Herrera	2014-10-24 07:14:09 -0300	12	psql: complain if pg_dump custom-format is detected
+85bb81de530	Robert Haas	2014-10-24 08:18:28 -0400	3	Fix off-by-one error in 2781b4bea7db357be59f9a5fd73ca1eb12ff5a79.
+22b743b2ca1	Heikki Linnakangas	2014-10-24 19:15:54 +0300	22	Oops, the commit accept pg_controldata -D datadir missed code changes.
+2d53003432f	Heikki Linnakangas	2014-10-24 19:15:57 +0300	24	Complain if too many options are passed to pg_controldata or pg_resetxlog.
+c0c1f6fc970	Heikki Linnakangas	2014-10-24 20:41:21 +0300	1	Forgot #include "pg_getopt.h", now that pg_controldata uses getopt.
+db29620d4d1	Heikki Linnakangas	2014-10-24 21:10:13 +0300	113	Work around Windows locale name with non-ASCII character.
+4a54b99e9c3	Andres Freund	2014-10-25 11:11:39 +0200	27	Add native compiler and memory barriers for solaris studio.
+5c3d830e440	Peter Eisentraut	2014-10-26 09:47:01 -0400	3	Fix TAP tests with Perl 5.8
+17009fb9ebe	Peter Eisentraut	2014-10-26 10:26:36 -0400	8	Fix TAP tests with Perl 5.12
+a4523c5aa53	Tom Lane	2014-10-26 16:12:22 -0400	110	Improve planning of btree index scans using ScalarArrayOpExpr quals.
+9711fa06081	Tom Lane	2014-10-26 19:17:55 -0400	1	Fix undersized result buffer in pset_quoted_string().
+f455fcfdb8c	Tom Lane	2014-10-26 20:59:21 -0400	25	Avoid unportable strftime() behavior in pg_dump/pg_dumpall.
+a4da35a0d2c	Bruce Momjian	2014-10-27 04:45:57 -0400	2	Add variable names to two LWLock C prototypes
+22926e00f70	Heikki Linnakangas	2014-10-27 10:50:41 +0200	87	Fix two bugs in tsquery @> operator.
+7f609a10adb	Robert Haas	2014-10-27 08:53:16 -0400	4	Add missing equals signs to pg_recvlogical documentation.
+c0e190365b9	Noah Misch	2014-10-27 19:59:39 -0400	2	MinGW: Include .dll extension in .def file LIBRARY commands.
+18f158ef697	Heikki Linnakangas	2014-10-28 20:26:20 +0200	0	Remove unnecessary assignment.
+a00d468e658	Tom Lane	2014-10-28 18:36:02 -0400	0	Remove obsolete commentary.
+8f8314b5600	Heikki Linnakangas	2014-10-29 14:34:43 +0200	1	Reset error message at PQreset()
+6cb4afff33b	Robert Haas	2014-10-29 12:35:19 -0400	81	Avoid setup work for invalidation messages at start-of-(sub)xact.
+e0722d9cb57	Tom Lane	2014-10-29 18:12:02 -0400	60	Avoid corrupting tables when ANALYZE inside a transaction is rolled back.
+7912f9b7dc9	Peter Eisentraut	2014-10-29 19:41:19 -0400	21	Remove use of TAP subtests
+6057c212f3e	Robert Haas	2014-10-30 11:35:55 -0400	9	"Pin", rather than "keep", dynamic shared memory mappings and segments.
+fd0f651a867	Tom Lane	2014-10-30 13:04:06 -0400	31	Test IsInTransactionChain, not IsTransactionBlock, in vac_update_relstats.
+f7102b04638	Robert Haas	2014-10-30 14:55:23 -0400	19	Extend dsm API with a new function dsm_unpin_mapping.
+5bd91e3a835	Peter Eisentraut	2014-10-30 22:53:09 -0400	9	doc: Improve CREATE VIEW / WITH documentation
+50709a1d427	Peter Eisentraut	2014-10-30 22:53:11 -0400	129	doc: Wording and formatting improvements in new logical decoding docs
+252e652edea	Peter Eisentraut	2014-10-31 08:11:06 -0400	2	doc: Fix typos
+2bd9e412f92	Robert Haas	2014-10-31 12:02:40 -0400	428	Support frontend-backend protocol communication using a shm_mq.
+3e81a33d799	Peter Eisentraut	2014-11-01 11:31:35 -0400	5	PL/Python: Fix example
+a409b464f91	Peter Eisentraut	2014-11-02 09:17:26 -0500	74	Add configure --enable-tap-tests option
+9522efdae11	Peter Eisentraut	2014-11-02 20:17:32 -0500	1	Fix generation of INSTALL file by removing link
+84631952175	Noah Misch	2014-11-02 21:43:20 -0500	8	Fix win32setlocale.c const-related warnings.
+67a41204948	Noah Misch	2014-11-02 21:43:25 -0500	1	Make ECPG test programs depend on "ecpg$(X)", not "ecpg".
+00c07e497f3	Noah Misch	2014-11-02 21:43:30 -0500	2	Re-remove dependency on the DLL of pythonxx.def file.
+c40212baf6c	Noah Misch	2014-11-02 21:43:33 -0500	3	Clarify .def file comments.
+1ed8e771ade	Noah Misch	2014-11-02 21:43:39 -0500	3	Remove dead-since-introduction pgcrypto code.
+f443de873e5	Tom Lane	2014-11-03 11:11:34 -0500	6	Docs: fix incorrect spelling of contrib/pgcrypto option.
+585e0b9b277	Robert Haas	2014-11-03 12:24:42 -0500	1	pqmq.h needs to include something that defines StringInfo.
+404bc51cde9	Heikki Linnakangas	2014-11-04 11:33:08 +0200	0	Remove support for 64-bit CRC.
+5028f22f6eb	Heikki Linnakangas	2014-11-04 11:39:48 +0200	279	Switch to CRC-32C in WAL and other places.
+33f80f84804	Tom Lane	2014-11-04 13:24:06 -0500	17	Drop no-longer-needed buffers during ALTER DATABASE SET TABLESPACE.
+e809fa2c80e	Peter Eisentraut	2014-11-04 16:10:58 -0500	8	doc: Move misplaced paragraph
+66c029c8426	Tom Lane	2014-11-05 11:34:11 -0500	15	Fix volatility markings of some contrib I/O functions.
+465d7e1882b	Tom Lane	2014-11-05 11:44:06 -0500	66	Make CREATE TYPE print warnings if a datatype's I/O functions are volatile.
+c30be9787bd	Robert Haas	2014-11-05 17:12:23 -0500	3	Fix thinko in commit 2bd9e412f92bc6a68f3e8bcb18e04955cc35001d.
+525a489915c	Tom Lane	2014-11-05 19:35:23 -0500	2	Remove the last vestige of server-side autocommit.
+171c377a0ab	Bruce Momjian	2014-11-06 02:33:05 -0500	5	C comment:  mention why the Gregorian calendar is used pre-1582
+08309aaf74e	Fujii Masao	2014-11-06 18:48:33 +0900	85	Implement IF NOT EXIST for CREATE INDEX.
+d2b8a2c7ec1	Fujii Masao	2014-11-06 20:04:11 +0900	1	Fix typo in comment.
+2076db2aea7	Heikki Linnakangas	2014-11-06 13:55:36 +0200	1121	Move the backup-block logic from XLogInsert to a new file, xloginsert.c.
+5332b8cec54	Fujii Masao	2014-11-06 21:24:40 +0900	4	Prevent the unnecessary creation of .ready file for the timeline history file.
+4875931938b	Tom Lane	2014-11-06 11:41:06 -0500	19	Fix normalization of numeric values in JSONB GIN indexes.
+d6e37b35cda	Tom Lane	2014-11-06 20:52:40 -0500	17	Cope with more than 64K phrases in a thesaurus dictionary.
+2effb72e682	Heikki Linnakangas	2014-11-07 15:13:02 +0200	0	Remove obsolete cases from GiST update redo code.
+1961b1c131e	Heikki Linnakangas	2014-11-07 21:17:46 +0200	2	Fix generation of SP-GiST vacuum WAL records.
+7516f525941	Alvaro Herrera	2014-11-07 16:38:14 -0300	6807	BRIN: Block Range Indexes
+0e892e04efd	Alvaro Herrera	2014-11-07 17:08:16 -0300	1	Fix serial schedule
+99e8f08fab6	Robert Haas	2014-11-07 15:41:52 -0500	1	Update pg_xlogdump's .gitignore for brindesc.c.
+5ea86e6e65d	Robert Haas	2014-11-07 15:50:55 -0500	203	Use the sortsupport infrastructure in more cases.
+7250d8535b1	Heikki Linnakangas	2014-11-07 23:09:31 +0200	1	Fix building with WAL_DEBUG.
+0b03e5951bf	Robert Haas	2014-11-07 17:34:36 -0500	638	Introduce custom path and scan providers.
+552faefd68f	Peter Eisentraut	2014-11-07 20:15:22 -0500	8	doc: Update pg_receivexlog note
+926f5cea472	Peter Eisentraut	2014-11-07 20:47:38 -0500	11	pg_basebackup: Adjust tests for long file name issues
+b89ee54e20e	Alvaro Herrera	2014-11-08 00:31:03 -0300	28	Fix some coding issues in BRIN
+67067f9ae35	Bruce Momjian	2014-11-09 20:50:15 -0500	3	C comment:  mention 1500-02-29 as an invalid date
+095d40123ce	Robert Haas	2014-11-10 08:15:17 -0500	2	Tab complete second argument to \\c with role names.
+96a73fcdace	Kevin Grittner	2014-11-10 09:42:46 -0600	1	Fix compiler warning for non-assert builds.
+1e0b4365c22	Alvaro Herrera	2014-11-10 15:56:08 -0300	13	Further code and wording tweaks in BRIN
+bf7ca158759	Tom Lane	2014-11-10 15:21:09 -0500	340	Ensure that RowExprs and whole-row Vars produce the expected column names.
+c8df9477f8c	Robert Haas	2014-11-10 15:22:46 -0500	1	Fix potential NULL-pointer dereference.
+a590f266e44	Alvaro Herrera	2014-11-10 18:13:49 -0300	8	BRIN: fix bug in xlog backup block counting
+baf7b3a5033	Heikki Linnakangas	2014-11-11 01:06:06 +0200	3	Fix compilation failure on MIPS.
+ae667f778d9	Heikki Linnakangas	2014-11-11 10:25:22 +0200	6	Really fix compilation failure on MIPS.
+a1b395b6a26	Fujii Masao	2014-11-11 21:08:21 +0900	125	Add GUC and storage parameter to set the maximum size of GIN pending list.
+1871c892021	Fujii Masao	2014-11-11 21:44:46 +0900	212	Add generate_series(numeric, numeric).
+2edfc021c64	Tom Lane	2014-11-11 17:00:11 -0500	54	Fix dependency searching for case where column is visited before table.
+f2ad2bdd0ab	Tom Lane	2014-11-11 17:22:15 -0500	13	Loop when necessary in contrib/pgcrypto's pktreader_pull().
+f1abd78be7c	Robert Haas	2014-11-11 18:41:29 -0500	0	Remove incorrect comment.
+8339f33d68e	Peter Eisentraut	2014-11-11 20:02:30 -0500	22	Message improvements
+28245b8424e	Noah Misch	2014-11-12 07:33:17 -0500	9	Use just one database connection in the "tablespace" test.
+bd4ae0f396b	Andres Freund	2014-11-12 18:52:49 +0100	3	Add interrupt checks to contrib/pg_prewarm.
+ec5896aed3c	Andres Freund	2014-11-12 18:52:49 +0100	116	Fix several weaknesses in slot and logical replication on-disk serialization.
+677708032c4	Tom Lane	2014-11-12 15:59:01 -0500	15	Explicitly support the case that a plancache's raw_parse_tree is NULL.
+c291503b1c8	Fujii Masao	2014-11-13 12:14:48 +0900	23	Rename pending_list_cleanup_size to gin_pending_list_limit.
+34402ae351e	Heikki Linnakangas	2014-11-13 17:54:20 +0200	3	Fix XLogReadBufferForRedoExtended to get cleanup lock when asked to do so.
+1d69ae419d0	Peter Eisentraut	2014-11-13 11:57:50 -0500	5	doc: Add index entry for "hypothetical-set aggregate"
+c0828b78e93	Robert Haas	2014-11-13 12:33:26 -0500	118	Move the guts of our Levenshtein implementation into core.
+35fed516263	Alvaro Herrera	2014-11-13 14:45:55 -0300	148	Tweak row-level locking documentation
+81c45081960	Heikki Linnakangas	2014-11-13 20:02:37 +0200	74	Fix race condition between hot standby and restoring a full-page image.
+5a2c184058c	Andres Freund	2014-11-13 20:34:30 +0100	13	Fix xmin/xmax horizon computation during logical decoding initialization.
+89fd41b390a	Andres Freund	2014-11-13 20:34:31 +0100	151	Fix and improve cache invalidation logic for logical decoding.
+be09ceb2188	Tom Lane	2014-11-13 18:19:26 -0500	5	Fix pg_dumpall to restore its ability to dump from ancient servers.
+473f162ce1f	Andres Freund	2014-11-14 00:59:40 +0100	1	Adapt valgrind.supp to the XLogInsert() split.
+a15d387c22b	Peter Eisentraut	2014-11-13 20:44:34 -0500	2	Improve logical decoding log messages
+6c878edc1df	Andres Freund	2014-11-14 16:59:33 +0100	13	Add valgrind suppression for pg_atomic_init_u64.
+0c5af0a537a	Andres Freund	2014-11-14 17:04:44 +0100	2	Move BufferGetBlockNumber() out of heap_page_is_all_visible()'s inner loop.
+51f9ea25dc4	Alvaro Herrera	2014-11-14 15:14:01 -0300	1	Allow interrupting GetMultiXactIdMembers
+86cf9a56506	Alvaro Herrera	2014-11-14 16:31:48 -0300	24	Reduce disk footprint of brin regression test
+155c0f24b7d	Stephen Frost	2014-11-14 15:16:01 -0500	1	Revert change to ALTER TABLESPACE summary.
+79172a58ea3	Alvaro Herrera	2014-11-14 17:36:10 -0300	17	Document BRIN's pages_per_range in CREATE INDEX
+80eacaa3cdc	Stephen Frost	2014-11-14 17:05:17 -0500	29	Clean up includes from RLS patch
+0ce627d465f	Tom Lane	2014-11-14 17:19:56 -0500	48	Document evaluation-order considerations for aggregate functions.
+d3586fc8aa5	Andres Freund	2014-11-15 01:19:26 +0100	10	Ensure unlogged tables are reset even if crash recovery errors out.
+98ec7fd903b	Andres Freund	2014-11-15 01:19:31 +0100	47	Sync unlogged relations to disk after they have been reset.
+522c85a6a27	Andres Freund	2014-11-15 01:19:40 +0100	61	Fix initdb --sync-only to also sync tablespaces.
+f9ef578d050	Alvaro Herrera	2014-11-14 21:48:53 -0300	3	postgres_fdw.h: don't pull in rel.h when relcache.h is enough
+e4d1e264918	Alvaro Herrera	2014-11-15 01:19:39 -0300	0	Remove unused InhPaths
+85b506bbfc2	Alvaro Herrera	2014-11-15 01:19:49 -0300	53	Get rid of SET LOGGED indexes persistence kludge
+0f66d212015	Simon Riggs	2014-11-15 22:49:54 +0000	4	Emit msg re skipping ANALYZE for absent inh tree
+386c9b73839	Magnus Hagander	2014-11-16 13:49:03 +0100	231	Restructure doc sections about statistics views
+d883b916a94	Magnus Hagander	2014-11-16 15:48:47 +0100	11	Mention the TZ environment variable for initdb
+7466a1b75f0	Peter Eisentraut	2014-11-16 21:32:51 -0500	13139	Translation updates
+0f9692b40d1	Alvaro Herrera	2014-11-17 11:23:35 -0300	17	Fix relpersistence setting in reindex_index
+c73669c0e01	Heikki Linnakangas	2014-11-17 18:45:46 +0200	6	Fix WAL-logging of B-tree "unlink halfdead page" operation.
+bc241488b0f	Tom Lane	2014-11-17 12:09:12 -0500	365	Update time zone data files to tzdata release 2014j.
+c4f99d20294	Fujii Masao	2014-11-18 02:32:48 +0900	54	Add --synchronous option to pg_receivexlog, for more reliable WAL writing.
+832054044f6	Tom Lane	2014-11-17 14:47:10 -0500	64	Update 9.4 release notes for commits through today.
+be1cc8f46f5	Simon Riggs	2014-11-17 22:15:07 +0000	49	Add pg_dump --snapshot option
+dedae6c2114	Heikki Linnakangas	2014-11-18 09:55:05 +0200	0	Remove obsolete debugging option, RTDEBUG.
+606c0123d62	Simon Riggs	2014-11-18 10:24:55 +0000	35	Reduce btree scan overhead for < and > strategies
+8b13e5c6c0e	Tom Lane	2014-11-18 13:28:06 -0500	4	Fix some bogus direct uses of realloc().
+7aa8d9e56c1	Tom Lane	2014-11-18 15:51:45 -0500	14	Update comments in find_typedef.
+8d7af8fbe73	Tom Lane	2014-11-18 21:36:39 -0500	175	Don't require bleeding-edge timezone data in timestamptz regression test.
+f66c20b3175	Fujii Masao	2014-11-19 14:11:12 +0900	19	Fix pg_receivexlog --slot so that it doesn't prevent the server shutdown.
+d5f4df7264e	Fujii Masao	2014-11-19 19:10:04 +0900	1	Fix bug in the test of file descriptor of current WAL file in pg_receivexlog.
+a0165553619	Robert Haas	2014-11-19 12:06:24 -0500	0	Avoid file descriptor leak in pg_test_fsync.
+88fc7192639	Heikki Linnakangas	2014-11-19 19:47:43 +0200	247	Add test cases for indexam operations not currently covered.
+8372304e359	Tom Lane	2014-11-19 16:00:24 -0500	98	Improve documentation's description of JOIN clauses.
+8dc626defec	Peter Eisentraut	2014-11-19 22:21:54 -0500	2	Fix suggested layout for PGXS makefile
+2c03216d831	Heikki Linnakangas	2014-11-20 18:46:41 +0200	3902	Revamp the WAL record format.
+f464042161f	Heikki Linnakangas	2014-11-20 19:17:19 +0200	1	Silence compiler warning about variable being used uninitialized.
+f9e0255c6fb	Tom Lane	2014-11-20 12:32:34 -0500	8	Add missing case for CustomScan.
+c5111ea9ca0	Tom Lane	2014-11-20 13:16:14 -0500	7	Remove no-longer-needed phony typedefs in genbki.h.
+03e574af5f5	Tom Lane	2014-11-20 14:49:02 -0500	1	Fix another oversight in CustomScan patch.
+081a6048cff	Tom Lane	2014-11-20 15:56:39 -0500	3	Fix another oversight in CustomScan patch.
+a34fa8ee7cc	Tom Lane	2014-11-20 18:36:07 -0500	131	Initial code review for CustomScan patch.
+adbfab119b3	Tom Lane	2014-11-20 20:20:54 -0500	13	Remove dead code supporting mark/restore in SeqScan, TidScan, ValuesScan.
+3a82bc6f8ab	Heikki Linnakangas	2014-11-21 11:58:07 +0200	451	Add pageinspect functions for inspecting GIN indexes.
+8f5dcb56cb1	Heikki Linnakangas	2014-11-21 12:15:27 +0200	4	Fix bogus comments in XLogRecordAssemble
+b10a97b819a	Heikki Linnakangas	2014-11-21 15:07:29 +0200	13	Add a comment to regress.c explaining what it contains.
+622983ea696	Heikki Linnakangas	2014-11-21 15:13:15 +0200	1	No need to call XLogEnsureRecordSpace when the relation is unlogged.
+e4d28175a13	Andrew Dunstan	2014-11-21 12:14:05 -0500	11	Make psql's \\sf and \\ef honor ECHO_HIDDEN.
+4077fb4d1d3	Andrew Dunstan	2014-11-21 12:37:09 -0500	2	Fix an error in psql that overcounted output lines.
+c2ea2285e97	Tom Lane	2014-11-21 14:05:46 -0500	27	Simplify API for initially hooking custom-path providers into the planner.
+447770404cc	Tom Lane	2014-11-21 18:21:46 -0500	101	Rearrange CustomScan API.
+eca2b9ba3e1	Andrew Dunstan	2014-11-22 09:39:01 -0500	34	Rework echo_hidden for \\sf and \\ef from commit e4d2817.
+9c58101117d	Tom Lane	2014-11-22 16:01:05 -0500	116	Fix mishandling of system columns in FDW queries.
+b62f94c6038	Tom Lane	2014-11-22 19:12:38 -0500	96	Allow simplification of EXISTS() subqueries containing LIMIT.
+b779168ffe3	Noah Misch	2014-11-23 09:34:03 -0500	61	Detect PG_PRINTF_ATTRIBUTE automatically.
+02d5ab6a86a	Andrew Dunstan	2014-11-23 13:47:08 -0500	6	Fix memory leaks introduced by commit eca2b9b
+e2dc3f57726	Tom Lane	2014-11-23 15:31:36 -0500	5	Get rid of redundant production in plpgsql grammar.
+0bd624d63b0	Heikki Linnakangas	2014-11-24 11:09:08 +0200	19	Distinguish XLOG_FPI records generated for hint-bit updates.
+49b86fb1c97	Heikki Linnakangas	2014-11-24 13:43:33 +0200	19	Add a few paragraphs to B-tree README explaining L&Y algorithm.
+f5d9698a840	Robert Haas	2014-11-24 16:37:56 -0500	446	Add infrastructure to save and restore GUC values.
+e453cc27414	Heikki Linnakangas	2014-11-25 09:46:11 +0200	8	Make Port->ssl_in_use available, even when built with !USE_SSL
+30bf4689a96	Heikki Linnakangas	2014-11-25 14:10:16 +0200	110	Check return value of strdup() in libpq connection option parsing.
+81d815dc3ed	Stephen Frost	2014-11-25 10:04:49 -0500	23	Suppress DROP CASCADE notices in regression tests
+add1b052e2b	Heikki Linnakangas	2014-11-25 17:39:44 +0200	16	Allow "dbname" from connection string to be overridden in PQconnectDBParams
+b3fc6727ce5	Heikki Linnakangas	2014-11-25 18:26:05 +0200	19	Allow using connection URI in primary_conninfo.
+25976710dfd	Stephen Frost	2014-11-25 12:12:19 -0500	1	Add int64 -> int8 mapping to genbki
+bac27394a1c	Tom Lane	2014-11-25 12:21:28 -0500	770	Support arrays as input to array_agg() and ARRAY(SELECT ...).
+bb1b8f694ad	Tom Lane	2014-11-25 15:02:09 -0500	135	De-reserve most statement-introducing keywords in plpgsql.
+aedccb1f6fe	Simon Riggs	2014-11-25 20:13:30 +0000	157	action_at_recovery_target recovery config option
+d934a052348	Tom Lane	2014-11-25 15:17:16 -0500	3	Fix uninitialized-variable warning.
+b7a715800a4	Simon Riggs	2014-11-25 20:51:13 +0000	0	Remove extraneous SGML tag
+a6c84c770ef	Robert Haas	2014-11-25 20:07:07 -0500	1	Attempt to suppress uninitialized variable warning.
+e6f0a48a609	Peter Eisentraut	2014-11-25 22:21:23 -0500	1	doc: Fix markup
+1812ee5767a	Heikki Linnakangas	2014-11-26 11:05:54 +0200	0	Remove dead function prototype
+143b39c1855	Stephen Frost	2014-11-27 01:15:57 -0500	613	Rename pg_rowsecurity -> pg_policy and other fixes
+c168ba31122	Tom Lane	2014-11-27 11:13:29 -0500	9	Free libxml2/libxslt resources in a safer order.
+e656f5d2475	Fujii Masao	2014-11-28 02:12:45 +0900	5	Mark response messages for translation in pg_isready.
+a5eb85eb626	Fujii Masao	2014-11-28 02:42:43 +0900	0	Make \\watch respect the user's \\pset null setting.
+afeacd27483	Heikki Linnakangas	2014-11-28 09:31:53 +0200	15	Fix assertion failure at end of PITR.
+202cbdf7821	Fujii Masao	2014-11-28 21:29:45 +0900	5	Add tab-completion for ALTER TABLE ALTER CONSTRAINT in psql.
+e384ed6cdec	Tom Lane	2014-11-28 12:19:14 -0500	126	Improve typcache: cache negative lookup results, add invalidation logic.
+96d66bcfc60	Tom Lane	2014-11-28 12:37:27 -0500	36	Improve performance of OverrideSearchPathMatchesCurrent().
+f4e031c662a	Tom Lane	2014-11-28 13:37:25 -0500	114	Add bms_next_member(), and use it where appropriate.
+d25367ec4f8	Tom Lane	2014-11-28 14:16:24 -0500	52	Add bms_get_singleton_member(), and use it where appropriate.
+ae04bf50277	Alvaro Herrera	2014-11-28 18:06:18 -0300	1	Update transaction README for persistent multixacts
+816e10d8003	Alvaro Herrera	2014-11-28 18:09:19 -0300	275	Fix BRIN operator family definitions
+2cda889984a	Noah Misch	2014-11-29 12:31:21 -0500	1	Revert "Add libpq function PQhostaddr()."
+64f86fb11e2	Noah Misch	2014-11-29 12:31:43 -0500	22	Reimplement 9f80f4835a55a1cbffcda5d23a617917f3286c14 with PQconninfo().
+5b12987b2e8	Noah Misch	2014-11-29 15:53:05 -0500	0	Remove PQhostaddr() from 9.4 release notes.
+22dfd116a12	Alvaro Herrera	2014-11-29 23:55:00 -0300	212	Move test modules from contrib to src/test/modules
+1adbb347ec6	Tom Lane	2014-11-30 12:20:44 -0500	3	Fix minor bugs in commit 30bf4689a96cd283af33edcdd6b7210df3f20cd8 et al.
+866737c9237	Tom Lane	2014-11-30 19:43:43 -0500	1	Add a #define for the inet overlaps operator.
+6d6cade05bc	Magnus Hagander	2014-12-01 12:12:07 +0100	0	Fix missing space in documentation
+4e86f1b16da	Heikki Linnakangas	2014-12-01 17:45:04 +0200	12	Put SSL_pending() call behind the new internal SSL API.
+e09996ff8de	Andrew Dunstan	2014-12-01 11:28:45 -0500	40	Fix hstore_to_json_loose's detection of valid JSON number values.
+df761e3cf79	Alvaro Herrera	2014-12-01 16:12:43 -0300	268	Move security_label test
+0927bf8060e	Tom Lane	2014-12-01 15:25:02 -0500	15	Guard against bad "dscale" values in numeric_recv().
+33256243772	Alvaro Herrera	2014-12-02 11:14:56 -0300	7	dummy_seclabel: add sql/, expected/, and .gitignores
+b52cb4690e0	Alvaro Herrera	2014-12-02 12:20:50 -0300	8	pageinspect/BRIN: minor tweaks
+1511521a36f	Tom Lane	2014-12-02 14:07:54 -0500	20	Minor cleanup of function declarations for BRIN.
+75ef435218f	Tom Lane	2014-12-02 15:02:37 -0500	31	Fix JSON aggregates to work properly when final function is re-executed.
+0fd38e13706	Andres Freund	2014-12-02 23:47:08 +0100	16	Don't skip SQL backends in logical decoding for visibility computation.
+475aedd1ef0	Tom Lane	2014-12-02 18:23:27 -0500	60	Improve error messages for malformed array input strings.
+da34731bd3c	Alvaro Herrera	2014-12-02 23:43:53 -0300	35	Install kludges to fix check-world for src/test/modules
+bc2f43eaa4c	Peter Eisentraut	2014-12-02 23:45:03 -0500	0	Fix whitespace
+6597ec9be6a	Alvaro Herrera	2014-12-03 11:52:15 -0300	3	Fix typos
+73c986adde5	Alvaro Herrera	2014-12-03 11:53:02 -0300	1458	Keep track of transaction commit timestamps
+182362b669f	Alvaro Herrera	2014-12-03 16:23:38 -0300	2	doc: Fix markup
+e86507d7708	Peter Eisentraut	2014-12-03 19:54:01 -0500	8	Move PG_AUTOCONF_FILENAME definition
+1e95bbc870c	Peter Eisentraut	2014-12-04 07:58:12 -0500	3	Fix SHLIB_PREREQS use in contrib, allowing PGXS builds
+eb1c3f47864	Peter Eisentraut	2014-12-04 08:07:41 -0500	7	Remove USE_VPATH make variable from PGXS
+e4b5a070b4d	Peter Eisentraut	2014-12-04 08:07:59 -0500	18	Revert haphazard pgxs makefile changes
+b58233c71b9	Peter Eisentraut	2014-12-04 17:02:02 -0500	3	Fix PGXS vpath build when PostgreSQL is built with vpath
+5ede3a31171	Andres Freund	2014-12-04 23:55:19 +0100	1	Document that pg_stat_*_tables.n_tup_upd includes n_tup_hot_upd.
+9a946298338	Robert Haas	2014-12-04 19:49:43 -0500	3	Don't dump core if pq_comm_reset() is called before pq_init().
+ebc2b681b8f	Heikki Linnakangas	2014-12-05 11:40:27 +0200	18	Fix pg_xlogdump's calculation of full-page image data.
+c846e67c46d	Heikki Linnakangas	2014-12-05 12:00:48 +0200	6	Print wal_log_hints in the rm_desc routing of a parameter-change record.
+326b6f009f9	Heikki Linnakangas	2014-12-05 12:11:43 +0200	4	Print new track_commit_timestamp in rm_desc of a parameter-change record.
+b27b6e75af5	Heikki Linnakangas	2014-12-05 12:17:56 +0200	0	Remove erroneous EXTRA_CLEAN line from Makefile.
+c0f279c469c	Heikki Linnakangas	2014-12-05 13:54:21 +0200	2	Don't include file type bits in tar archive's mode field.
+198cbe0a0c4	Heikki Linnakangas	2014-12-05 14:30:31 +0200	4	Give a proper error message if initdb password file is empty.
+b8e33a85d4e	Simon Riggs	2014-12-07 21:55:29 +0900	22	Tweaks for recovery_target_action
+618c9430a82	Simon Riggs	2014-12-08 00:55:28 +0900	553	Event Trigger for table_rewrite
+c2707547193	Simon Riggs	2014-12-08 08:44:37 +0900	0	Remove duplicate code in heap_prune_chain()
+da71632fcfc	Simon Riggs	2014-12-08 09:28:24 +0900	7	Correct recovery_target_action docs
+611d46ea67c	Peter Eisentraut	2014-12-08 02:18:29 -0500	1	doc: Fix DocBook table column count declaration
+519b0757a37	Simon Riggs	2014-12-08 23:32:03 +0900	12	Use GetSystemTimeAsFileTime directly in win32
+8001fe67a3d	Simon Riggs	2014-12-08 23:36:06 +0900	59	Windows: use GetSystemTimePreciseAsFileTime if available
+fe263d115a7	Simon Riggs	2014-12-09 00:28:00 +0900	248	REINDEX SCHEMA
+1135aabab5d	Simon Riggs	2014-12-09 01:51:02 +0900	1	Execute 18 tests for src/bin/scripts/t/090..
+ae4e6887a4e	Simon Riggs	2014-12-09 18:05:36 +0900	1	Silence REINDEX
+dcbfc00aba1	Alvaro Herrera	2014-12-09 09:54:14 -0300	1	pg_xlogdump/.gitignore: add committsdesc.c
+e39250c644e	Heikki Linnakangas	2014-12-09 17:37:20 +0200	1284	Add a regression test suite for SSL support.
+24688f4e5a7	Tom Lane	2014-12-10 19:06:27 -0500	1	Fix minor thinko in convertToJsonb().
+7442a889975	Peter Eisentraut	2014-12-10 20:55:30 -0500	1	Fix typo
+10eb7dfa9b7	Heikki Linnakangas	2014-12-11 10:19:50 +0200	1	Use correct macro for reltablespace.
+06d5803ffa1	Tom Lane	2014-12-11 15:41:15 -0500	11	Fix assorted confusion between Oid and int32.
+58af84f4bba	Tom Lane	2014-12-11 17:37:17 -0500	7	Fix completely broken REINDEX SCHEMA testcase.
+0845264642d	Tom Lane	2014-12-11 17:45:35 -0500	6	Make rowsecurity test clean up after itself, too.
+2646d2d4a9d	Simon Riggs	2014-12-11 22:54:05 +0000	95	Further changes to REINDEX SCHEMA
+2db576ba8c4	Tom Lane	2014-12-11 19:37:36 -0500	61	Fix corner case where SELECT FOR UPDATE could return a row twice.
+462bd95705a	Tom Lane	2014-12-11 21:02:25 -0500	12	Fix planning of SELECT FOR UPDATE on child table with partial index.
+ce37eff06df	Peter Eisentraut	2014-12-11 21:32:30 -0500	2	SSL tests: Silence pg_ctl output
+2f8607860b4	Peter Eisentraut	2014-12-11 21:33:58 -0500	0	SSL tests: Remove trailing blank lines
+7afc2336cd9	Peter Eisentraut	2014-12-11 21:48:01 -0500	1	doc: Move website-stylesheet setting to a more appropriate location
+b1332e98c44	Heikki Linnakangas	2014-12-12 14:26:42 +0200	79	Put the logic to decide which synchronous standby is active into a function.
+237a8824430	Andrew Dunstan	2014-12-12 09:00:43 -0500	467	Add json_strip_nulls and jsonb_strip_nulls functions.
+8ec8760fc87	Tom Lane	2014-12-12 12:41:49 -0500	45	Revert misguided change to postgres_fdw FOR UPDATE/SHARE code.
+7e354ab9fe9	Andrew Dunstan	2014-12-12 15:31:14 -0500	2001	Add several generator functions for jsonb that exist for json.
+1c5c70df457	Tom Lane	2014-12-12 15:49:09 -0500	15	Avoid instability in output of new REINDEX SCHEMA test.
+50f2c0687fa	Heikki Linnakangas	2014-12-13 18:22:07 +0200	0	Remove duplicate #define
+b0f479113ab	Tom Lane	2014-12-13 11:49:41 -0500	25	Repair corner-case bug in array version of percentile_cont().
+e311cd6ded0	Tom Lane	2014-12-13 13:46:44 -0500	48	Improve recovery target settings documentation.
+e39b6f953e8	Andrew Dunstan	2014-12-13 13:56:09 -0500	90	Add CINE option for CREATE TABLE AS and CREATE MATERIALIZED VIEW
+c50423c0fea	Peter Eisentraut	2014-12-13 14:16:16 -0500	1	doc: Fix markup
+0923b01e3e6	Tom Lane	2014-12-14 14:58:03 -0500	143	Update 9.4 release notes.
+af06aa822db	Tom Lane	2014-12-14 18:09:51 -0500	193	Improve documentation around parameter-setting and ALTER SYSTEM.
+6457ff93fec	Peter Eisentraut	2014-12-14 20:02:04 -0500	3	doc: Add link to how to specify time zone names to initdb man page
+ee3bec5e22f	Peter Eisentraut	2014-12-15 00:25:35 -0500	20710	Translation updates
+4520ba67691	Heikki Linnakangas	2014-12-15 17:06:21 +0200	82	Add point <-> polygon distance operator.
+9418820efb3	Tom Lane	2014-12-15 14:04:27 -0500	1	Fix point <-> polygon code for zero-distance case.
+4576b9cc46b	Alvaro Herrera	2014-12-15 16:49:41 -0300	1	add missing newline
+733a264ddc1	Peter Eisentraut	2014-12-15 16:19:59 -0500	807	Translation updates
+0916eba1315	Noah Misch	2014-12-15 20:56:09 -0500	6	Fix commit_ts test suite for systems with coarse timestamp granularity.
+da9f6a78ef8	Heikki Linnakangas	2014-12-16 15:41:58 +0200	4	Fix incorrect comment about XLogRecordBlockHeader.data_length field.
+4d65e16a6ff	Heikki Linnakangas	2014-12-16 16:37:46 +0200	6	Misc comment typo fixes.
+c8315930e6a	Andrew Dunstan	2014-12-16 10:32:06 -0500	11	Fix some jsonb issues found by Coverity in recent commits.
+d38e8d30cec	Tom Lane	2014-12-16 13:31:42 -0500	1	Fix file descriptor leak after failure of a \\setshell command in pgbench.
+de8e46f5f57	Tom Lane	2014-12-16 14:53:55 -0500	4	Suppress bogus statistics when pgbench failed to complete any transactions.
+66709133c7e	Tom Lane	2014-12-16 15:35:33 -0500	15	Fix off-by-one loop count in MapArrayTypeName, and get rid of static array.
+cb7b5c5c6f8	Magnus Hagander	2014-12-17 09:59:21 +0100	1	Remove redundant sentence
+6964ad95d78	Magnus Hagander	2014-12-17 11:14:34 +0100	4	Add missing documentation for some vcregress modes
+cef0ae498cc	Magnus Hagander	2014-12-17 11:55:22 +0100	4	Update .gitignore for pg_upgrade
+c977b8cffc7	Tom Lane	2014-12-17 13:14:53 -0500	3	Fix poorly worded error message.
+c3404942351	Tom Lane	2014-12-17 13:22:07 -0500	2	Fix another poorly worded error message.
+ce01548d4fd	Heikki Linnakangas	2014-12-17 21:55:26 +0200	2	Clarify the regexp used to detect source files in MSVC builds.
+fc2ac1fb41c	Tom Lane	2014-12-17 17:00:53 -0500	428	Allow CHECK constraints to be placed on foreign tables.
+f6dc6dd5ba5	Noah Misch	2014-12-17 22:48:40 -0500	211	Lock down regression testing temporary clusters on Windows.
+40c598fa15b	Noah Misch	2014-12-18 01:24:57 -0500	3	Fix previous commit for TAP test suites in VPATH builds.
+c303e9e7e5d	Andres Freund	2014-12-18 08:47:27 +0100	12	Fix (re-)starting from a basebackup taken off a standby after a failure.
+26674c923d0	Fujii Masao	2014-12-18 17:33:38 +0900	0	Remove odd blank line in comment.
+43b56171b1f	Noah Misch	2014-12-18 03:55:17 -0500	2	Recognize Makefile line continuations in fetchRegressOpts().
+72950dc1d02	Andres Freund	2014-12-18 10:45:57 +0100	1	Adjust valgrind suppression to the changes in 2c03216d8311.
+ccf292cd2ec	Fujii Masao	2014-12-18 19:56:42 +0900	5	Update .gitignore for config.cache.
+19e065c0492	Fujii Masao	2014-12-18 21:13:52 +0900	50	Ensure variables live across calls in generate_series(numeric, numeric).
+38628db8d8c	Fujii Masao	2014-12-18 23:07:51 +0900	71	Add memory barriers for PgBackendStatus.st_changecount protocol.
+ba94518aad2	Heikki Linnakangas	2014-12-18 20:23:03 +0200	53	Change how first WAL segment on new timeline after promotion is created.
+4a14f13a0ab	Tom Lane	2014-12-18 13:36:36 -0500	127	Improve hash_create's API for selecting simple-binary-key hash functions.
+35192f0626c	Alvaro Herrera	2014-12-18 17:18:33 -0300	65	Have VACUUM log number of skipped pages due to pins
+cd6e66572b7	Alvaro Herrera	2014-12-18 17:59:00 -0300	4	Use %u to print out BlockNumber variables
+5b516835897	Tom Lane	2014-12-18 16:39:20 -0500	36	Improve documentation about CASE and constant subexpressions.
+9959abb0122	Andres Freund	2014-12-19 14:27:45 +0100	4	Define Assert() et al to ((void)0) to avoid pedantic warnings.
+37de8de9e33	Andres Freund	2014-12-19 14:29:52 +0100	14	Prevent potentially hazardous compiler/cpu reordering during lwlock release.
+5c805d0a813	Heikki Linnakangas	2014-12-19 17:04:20 +0200	2	Fix timestamp in end-of-recovery WAL records.
+0ee98d1cbf1	Alvaro Herrera	2014-12-19 15:00:45 -0300	114	pg_event_trigger_dropped_objects: add behavior flags
+cfb64fde7bb	Bruce Momjian	2014-12-19 20:56:03 -0500	1	doc:  Adjust wording of ALTER TABLESPACE restriction
+2ef6c66a2b1	Heikki Linnakangas	2014-12-21 21:51:59 +0200	8	Fix file descriptor leak at end of recovery.
+699300a146c	Tom Lane	2014-12-21 15:30:57 -0500	14	Docs: clarify treatment of variadic functions with zero variadic arguments.
+e7032610f76	Heikki Linnakangas	2014-12-22 12:05:57 +0200	405	Use a pairing heap for the priority queue in kNN-GiST searches.
+7f0dccaed64	Heikki Linnakangas	2014-12-22 17:11:53 +0200	172	Turn much of the btree_gin macros into real functions.
+955557ddccb	Heikki Linnakangas	2014-12-22 17:52:08 +0200	8	Move rbtree.c from src/backend/utils/misc to src/backend/lib.
+b2d145bff02	Andrew Dunstan	2014-12-22 14:12:06 -0500	6	Fix documentation of argument type of json_agg and jsonb_agg
+2a3f2743f20	Andrew Dunstan	2014-12-22 18:30:46 -0500	4	Further tidy up on json aggregate documentation
+584e35d17c0	Peter Eisentraut	2014-12-22 23:05:46 -0500	15	Change local_preload_libraries to PGC_USERSET
+7eca575d1c2	Alvaro Herrera	2014-12-23 09:06:44 -0300	141	get_object_address: separate domain constraints from table constraints
+1826987a46d	Alvaro Herrera	2014-12-23 10:22:09 -0300	794	Use a bitmask to represent role attributes
+d7ee82e50f6	Alvaro Herrera	2014-12-23 15:31:29 -0300	1059	Add SQL-callable pg_get_object_address
+a609d96778c	Alvaro Herrera	2014-12-23 15:35:49 -0300	368	Revert "Use a bitmask to represent role attributes"
+3e227535595	Tom Lane	2014-12-23 16:55:51 -0500	0	Remove failing collation case from object_address regression test.
+cd5ebe1edd6	Andres Freund	2014-12-24 12:30:08 +0100	1	Suppress MSVC warning in typeStringToTypeName function.
+3b6ca123b56	Fujii Masao	2014-12-24 21:40:47 +0900	0	Remove unused fields from ReindexStmt.
+83bcc70459c	Bruce Momjian	2014-12-24 09:21:09 -0500	2	pgbench:  remove odd trailing period in init progress output
+3f37b6c3166	Andrew Dunstan	2014-12-24 10:31:36 -0500	1	Fix installcheck case for tap tests
+5b89473d870	Tom Lane	2014-12-24 16:35:23 -0500	13	Add CST (China Standard Time) to our lists of timezone abbreviations.
+60838df9223	Fujii Masao	2014-12-25 20:46:14 +0900	29	Move pg_lzcompress.c to src/common.
+4a5593197b0	Fujii Masao	2014-12-25 22:47:53 +0900	0	Remove duplicate include of slot.h.
+570bd2b3fd2	Andres Freund	2014-12-25 17:24:30 +0100	23	Add capability to suppress CONTEXT: messages to elog machinery.
+7882c3b0b95	Andres Freund	2014-12-25 17:24:30 +0100	52	Convert the PGPROC->lwWaitLink list into a dlist instead of open coding it.
+ab5194e6f61	Andres Freund	2014-12-25 17:24:30 +0100	631	Improve LWLock scalability.
+d72731a7045	Andres Freund	2014-12-25 18:26:25 +0100	159	Lockless StrategyGetBuffer clock sweep hot path.
+966115c305c	Tom Lane	2014-12-25 13:22:55 -0500	17	Temporarily revert "Move pg_lzcompress.c to src/common."
+740a4ec7f4a	Andres Freund	2014-12-25 19:48:46 +0100	1	Blindly fix a dtrace probe in lwlock.c for a removed local variable.
+8d9cb0bc483	Noah Misch	2014-12-25 13:52:03 -0500	30	Have config_sspi_auth() permit IPv6 localhost connections.
+0e5680f4737	Alvaro Herrera	2014-12-26 13:52:27 -0300	166	Grab heavyweight tuple lock only before sleeping
+289121a452e	Alvaro Herrera	2014-12-26 14:18:09 -0300	3	Remove event trigger from object_address test
+6630420fc91	Alvaro Herrera	2014-12-26 14:31:37 -0300	8	Restrict name list len for domain constraints
+9a11df14498	Tom Lane	2014-12-28 12:03:32 -0500	0	Remove duplicate assignment in new pg_get_object_address() function.
+ae17897ce84	Tom Lane	2014-12-29 14:20:54 -0500	23	Assorted minor fixes for psql metacommand docs.
+3b5a89c4820	Tatsuo Ishii	2014-12-30 20:33:01 +0900	2	Fix resource leak pointed out by Coverity.
+930fd684555	Heikki Linnakangas	2014-12-30 14:53:11 +0200	10	Revert the GinMaxItemSize calculation so that we fit 3 tuples per page.
+3f88672a4e4	Alvaro Herrera	2014-12-30 13:57:23 -0300	106	Use TypeName to represent type names in certain commands
+5b447ad3a98	Alvaro Herrera	2014-12-30 15:04:21 -0300	7	Fix object_address expected output
+a676201490c	Alvaro Herrera	2014-12-30 15:41:50 -0300	485	Add pg_identify_object_as_address
+72dd233d3ef	Alvaro Herrera	2014-12-30 17:41:46 -0300	60	pg_event_trigger_dropped_objects: Add name/args output columns
+c168c885776	Robert Haas	2014-12-31 11:06:43 -0500	3	Don't tab-complete COMMENT ON ... IS with IS.
+ba66c9d0681	Alvaro Herrera	2014-12-31 13:19:40 -0300	5	Add missing pstrdup calls
+28551797a46	Tom Lane	2014-12-31 12:18:50 -0500	124	Improve consistency of parsing of psql's magic variables.
+a486841eb11	Tom Lane	2014-12-31 14:44:43 -0500	4	Print more information about getObjectIdentityParts() failures.
+2f03ae69875	Tom Lane	2014-12-31 16:42:42 -0500	47	Docs: improve descriptions of ISO week-numbering date features.
+7161b082bd9	Tom Lane	2014-12-31 17:04:27 -0500	6	Don't run rowsecurity in parallel with other regression tests.

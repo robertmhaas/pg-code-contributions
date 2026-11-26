@@ -1,0 +1,877 @@
+hash	committer	committed_at	insertions	subject
+d31084e9d11	Marc G. Fournier	1996-07-09 06:22:35 +0000	242656	Postgres95 1.01 Distribution - Virgin Sources
+25bb71835f1	Marc G. Fournier	1996-07-09 06:35:38 +0000	5	Fix: Can't drop tables with names longer than 16 characters.
+950b6ab0227	Marc G. Fournier	1996-07-09 06:39:19 +0000	8	Fixes: Using LIKE or ~ operator on text type files which are null valued        causes segmentation fault.
+e72ca17f77c	Marc G. Fournier	1996-07-12 04:53:59 +0000	136	fixes for several potential null pointer dereferences
+d602a35d37f	Marc G. Fournier	1996-07-12 05:39:39 +0000	202	Brought in extensions to pg_dump
+3a2a3689b84	Marc G. Fournier	1996-07-13 07:37:33 +0000	7	Moved two defines required for FreeBSD into Makefile.global
+76145bd74b0	Marc G. Fournier	1996-07-15 19:10:32 +0000	6	Makefile.global changes to show option -DOPENLINK_PATCHES
+d838e30f130	Marc G. Fournier	1996-07-15 19:11:23 +0000	11	Submitted by Openlink, requires -DOPENLINK_PATCHES in Makefile.global
+faf21935d12	Marc G. Fournier	1996-07-15 19:22:17 +0000	63	fsync patch from openlink
+350cb69aed9	Marc G. Fournier	1996-07-15 19:22:58 +0000	10	fsync patch from openlink
+d7a1ce7af7a	Marc G. Fournier	1996-07-15 19:32:33 +0000	3	adds: case insensitive regexp for varchar From: azcb0@sde.uts.amdahl.com
+169a5b76708	Marc G. Fournier	1996-07-16 06:37:28 +0000	6	applied fixes for psql \t- \\p produces traditional results \t- \\r added
+e5eb8594464	Marc G. Fournier	1996-07-16 06:53:41 +0000	2	fix: During a BSD/OS(BSDI) 2.1 compile, I got errors about undefined      S_LOCK_'s during the postgres link phase.
+bf2abf0dae2	Marc G. Fournier	1996-07-16 06:58:12 +0000	4	fix: clean up formatting of \\d tablename in psql
+55aab6a4345	Marc G. Fournier	1996-07-16 07:13:58 +0000	138	fix: BSDi 2.1 requires a port seperate from BSDi 2.0{.1}
+bc0bd47c6a8	Marc G. Fournier	1996-07-18 04:59:42 +0000	6	Fixes: In the solaris port the file descriptors are hard coded to 20 (from the        include file sys/param.h
+72f76d38eb2	Marc G. Fournier	1996-07-18 05:48:57 +0000	782	libpq and psql.c have been modified to do various things they didn't do before (plus some optimisations/bug fixes et al).  I've included a small demo transcript below. Note that all of of the display functionality/intelligence you see here, can be had merely by calling the new LIBPQ PQprint() routine with the appropriate arguments/options, including the HTML3 output guff.
+1d4a115a378	Marc G. Fournier	1996-07-19 05:12:40 +0000	2	Fixes:
+54857ad1a77	Marc G. Fournier	1996-07-19 05:21:28 +0000	3	Fixes:
+2771129c827	Marc G. Fournier	1996-07-19 05:32:42 +0000	6	Fixes: \tminor Makefile changes to force setting of SRCDIR and ordering of \tinclude files
+89ad6338973	Marc G. Fournier	1996-07-19 05:54:17 +0000	1	Fixes compile errors with irix5 port
+64bfa0487b3	Marc G. Fournier	1996-07-19 06:08:21 +0000	28	fixes for textcat(), but headers were missing from archive :(
+9bffaade96f	Marc G. Fournier	1996-07-19 06:13:58 +0000	9	Fixes:
+6562fa851e5	Marc G. Fournier	1996-07-19 06:27:59 +0000	4	Fixes:
+de82ece8bdd	Marc G. Fournier	1996-07-19 06:36:38 +0000	40	Fix PAGER bug in createuser/etc scripts
+2ab6d1f125b	Marc G. Fournier	1996-07-19 06:47:51 +0000	2	Removed -I${HEADERFILE} from bin/Makefile.global
+df1a06ed37e	Marc G. Fournier	1996-07-19 06:53:40 +0000	2	- added -ltermcap to LIBS in bin/psql/Makefile
+3704b99522d	Marc G. Fournier	1996-07-19 07:00:56 +0000	13	- libpq calls "fe_getauthname()" two times in "fe-connect.c", but   doesn't free the buffer allocated by this function.
+a7cfd655322	Marc G. Fournier	1996-07-19 07:14:14 +0000	8	Fixes:
+83adddfcc35	Marc G. Fournier	1996-07-19 07:19:56 +0000	28	- improve date/time parsing routines
+20288400f3a	Marc G. Fournier	1996-07-19 07:24:11 +0000	34	Fixes:
+c777e8131ed	Marc G. Fournier	1996-07-20 07:33:36 +0000	4	fixed a bug with not commenting out FSYNC= in initdb.sh
+5feb9dc9dfc	Marc G. Fournier	1996-07-20 07:40:03 +0000	8	- extend conditional for use of -ltermcap in bsdi/bsdi_2_1 compiles
+baeb3aadc5c	Marc G. Fournier	1996-07-20 07:52:36 +0000	2	- fix installation not installing man pages
+94215d51c82	Marc G. Fournier	1996-07-20 07:59:41 +0000	66	Fixes:
+544e8029103	Marc G. Fournier	1996-07-20 08:19:13 +0000	14	Fixes:
+ffae4ebde91	Marc G. Fournier	1996-07-20 08:36:33 +0000	245	Brought in NEOSOFT's port to i386_solaris
+df43edcf450	Marc G. Fournier	1996-07-20 08:44:45 +0000	2	Fix for:
+435d32cd255	Marc G. Fournier	1996-07-22 04:51:05 +0000	2	quick fix to src/bin/Makefile.global so that compiling doesn't look for a libpq that is already installed...
+753631ac17c	Marc G. Fournier	1996-07-22 05:13:32 +0000	1	- added LD_ADD+=-ltermcap to postgres.mk.bsdi_2_1
+02bbd95a415	Marc G. Fournier	1996-07-22 05:59:53 +0000	3	Backed out the changes to monitor.c that seem to be affecting the ability for createuser to actually create one...
+672f6ece231	Marc G. Fournier	1996-07-22 08:37:00 +0000	79	Brought in David Bennett's (dave@bensoft.com) changes to pg_dump
+18a7989e1a9	Marc G. Fournier	1996-07-22 21:58:28 +0000	86	- merging in Dr. George's tree with ours         - src/backend/access                 - no changes         - src/backend/utils                 - mostly cosmetic changes                 - ESCAPE_PATCH Added         - src/Makefile.global changes merged
+5108a5b3202	Marc G. Fournier	1996-07-22 23:00:26 +0000	105	More merges from Dr. George's tree...         - src/backend/tcop/*                 - cosmetic changes to OPENLINK patches         - src/backend/storage/*                 - more changes, mostly cosmetic         - src/backend/ports/*                 - merge in patches for aix and i386_solaris
+e11744e164c	Marc G. Fournier	1996-07-22 23:30:57 +0000	20	More of Dr. George's changes...         - src/backend/catalog/*                 - no changes         - src/backend/executor/*                 - change how nodeHash.c handles running out of memory         - src/backend/optimizer/*                 - mostly cosmetic changes
+7344d698987	Marc G. Fournier	1996-07-23 02:23:54 +0000	146	Finished merging in src/backend from Dr. George's source tree
+d1724d65b75	Marc G. Fournier	1996-07-23 02:26:41 +0000	11	reversed julian's patch back in again...othere things cause monitor to not compile now...
+be5bfd54f21	Marc G. Fournier	1996-07-23 03:03:43 +0000	350	Put in a new FAQ
+772ae267e36	Marc G. Fournier	1996-07-23 03:05:23 +0000	2	spelling error...and correction
+668aa24fc49	Marc G. Fournier	1996-07-23 03:13:58 +0000	1615	More merge's from Dr. George's sourec tree
+245686d43a0	Marc G. Fournier	1996-07-23 03:19:34 +0000	29	modifications to regressoin tests
+94e5642b878	Marc G. Fournier	1996-07-23 03:24:47 +0000	6	More Merge's from Dr' sourec tree
+2206b5819d2	Marc G. Fournier	1996-07-23 03:35:14 +0000	172	Alot of "changes" from Dr. George's source tree...
+83c9ec765e1	Marc G. Fournier	1996-07-23 03:38:44 +0000	29	Last changes to src from Dr. George *wipes brow*
+00fe588fb0a	Marc G. Fournier	1996-07-23 05:24:35 +0000	2	comment out inclue of Makefile.custom, as i tbreaks compiling the bin directory
+b619cb09d96	Marc G. Fournier	1996-07-23 05:44:10 +0000	12	iBrought in a fix for backend crashes
+18367ced1be	Marc G. Fournier	1996-07-23 05:51:29 +0000	65	Ack, missed two files from the merge...looks like a .11 is goin gto have to go out after all :(
+0ede7ca8197	Marc G. Fournier	1996-07-25 00:19:42 +0000	2	Added an empty Makefile.custom file...
+0864a2ddaed	Marc G. Fournier	1996-07-25 00:22:19 +0000	1	Fix compiler not finding libpgtcl.h header file
+2f19e289409	Marc G. Fournier	1996-07-25 00:26:21 +0000	2	there are no includes files in backend, there should be, so why look there?
+7920dce9f92	Marc G. Fournier	1996-07-25 00:30:02 +0000	2	comment out USE_TCL...having USE_TCL=true seems to imply that you have to have TCL to use postgres95, which you don't
+98ae3fadd10	Marc G. Fournier	1996-07-25 01:11:15 +0000	2	Ack, -I$(srcdir)/backend *is* required...
+23c7ff0b3c3	Julian Assange	1996-07-25 06:21:11 +0000	1	PQprint() routines. The older code is still there for historical compatibility. There isn't much difference here against my previous PQprint() code, except that you can add optional arguments to the <table args> in html.
+76bc8cb97fc	Julian Assange	1996-07-25 06:46:35 +0000	466	Large re-write/enhancement. In pg-101 Jolly only included a smaller part of my (proff) patch. This is the rest of it, with a few, mainly aesthetic changes. I've removed a lot of redundency from the original code, added support for the new PQprint() routines in libpq, expanded tables, and a few generally nifty ways of massaging data in and out of the backend. Still needs some good stress testing.
+69ee15d6635	Marc G. Fournier	1996-07-25 06:54:26 +0000	2	Removed monitor from compile/install (will eventually be removed completely)
+ff50e5ab475	Marc G. Fournier	1996-07-25 06:55:49 +0000	20	Switched from using monitor to using psql
+65b4b392467	Marc G. Fournier	1996-07-25 07:26:37 +0000	5	Dr George suggested removing Makefile.custom altogether, to reduce any confusion...so its gone...
+10369ad7b25	Marc G. Fournier	1996-07-25 07:27:08 +0000	3	removed tas.s refernce
+fd35587d4cb	Marc G. Fournier	1996-07-25 07:28:12 +0000	5	moved the FLEX stuf from Makefile.global to here
+31cae34d078	Marc G. Fournier	1996-07-25 19:45:31 +0000	3	multiple define of 'union semun' removed
+14cd0ca3bd2	Marc G. Fournier	1996-07-25 19:48:24 +0000	37	modified i386_solaris port
+9e0a8d4b266	Marc G. Fournier	1996-07-25 19:56:59 +0000	6384	improvements to regression testing
+aac483943d4	Marc G. Fournier	1996-07-25 20:01:51 +0000	5	fixed usuage of -ltermcap for psql
+5315d37c207	Marc G. Fournier	1996-07-25 20:36:46 +0000	12	Fix applied for NESTLOOP bug
+8a372d202f9	Marc G. Fournier	1996-07-25 20:45:05 +0000	218	Add in port to DG/UX
+ba4b7f50217	Marc G. Fournier	1996-07-26 19:58:04 +0000	10	regression Makefile, rev 2
+e4b2558fa32	Marc G. Fournier	1996-07-26 20:03:21 +0000	2	Minor bug fix
+f45dfa6174e	Marc G. Fournier	1996-07-26 20:15:40 +0000	1	should always take mail headers out of Makefile files befor ecommitting :)
+95b6f6ea33e	Marc G. Fournier	1996-07-26 20:39:04 +0000	4	Missed a small patch fro mBruce for BSDi
+b141c5a9735	Marc G. Fournier	1996-07-27 02:04:12 +0000	2	Fix where 'make clean' wipes out everything if no obj directory exists...
+32a3858addd	Marc G. Fournier	1996-07-27 02:06:10 +0000	5	corrects the output for a 'SELECT DISTINCT ON ...' at line 2900
+1a675fe5b2a	Marc G. Fournier	1996-07-27 02:19:18 +0000	8	Fixed these script sonce and for all?
+c13ef1afed3	Marc G. Fournier	1996-07-27 02:27:55 +0000	8	My patch to fe-connect.c introduced a new bug which is triggered only, if Kerberos is being used (attempt to free static memory). The error was caused by a confusing doublespeak of fe_getauthname(): Returns a pointer to static memory, if you authenticate via Kerberos, a pointer to dynamic memory otherwise.
+22113f81fdb	Marc G. Fournier	1996-07-27 02:29:51 +0000	19	This is a patch to pg_dump which fixes varchar and char printing in the case where the attribute length is variable (stored as -1).  Previously, you'd get output that looked like:
+6e077b0ae5e	Marc G. Fournier	1996-07-27 02:40:45 +0000	5	Further modifications for fixing createuser bug...
+edb519b14c4	Marc G. Fournier	1996-07-27 02:55:23 +0000	67	and now, the long awaited PAGER patches from Bruce...
+64b130a8e73	Marc G. Fournier	1996-07-27 04:38:22 +0000	10	Various fixes required for psql
+ed3240d093e	Julian Assange	1996-07-28 06:48:42 +0000	2	bugfix: if NOREADLINE was not defined and input was not from a tty, then         the getopt() was not executed.
+b834d27bc96	Marc G. Fournier	1996-07-28 06:54:15 +0000	9	small port fixes for sparc_solaris
+4b3cb03104e	Marc G. Fournier	1996-07-28 06:56:28 +0000	2	fixes: It appears several routines use lcons to store integers rather than \tpointers.
+0e887c541e6	Marc G. Fournier	1996-07-28 06:59:43 +0000	8	reversed bruces patch to getopt() loop about optarg
+7450ea6dfb7	Marc G. Fournier	1996-07-28 07:08:15 +0000	4	cosmetic changes: char* x changed to char *x
+20f3236650c	Marc G. Fournier	1996-07-29 06:54:01 +0000	7	Modifications for bsdi from Kurt(sp?)
+48cde8d83b9	Marc G. Fournier	1996-07-29 20:49:02 +0000	1	fix a redeclaration error
+496b937dca4	Marc G. Fournier	1996-07-29 20:51:41 +0000	11	Change ordering of "user modified variables" so that they are at the top of th efile instead of scattered throughout
+c4ea55d2c94	Marc G. Fournier	1996-07-29 20:52:24 +0000	2	clean up /tmp behind itself
+be19feb14a0	Marc G. Fournier	1996-07-29 20:58:42 +0000	2	The decode function in psql.c doesn't return anything, so its declaration is incorrect.
+519496b63e1	Marc G. Fournier	1996-07-30 07:41:38 +0000	2	More cleandups from: "Kurt J. Lidl" <lidl@va.pubnix.com>
+e5e12f64057	Marc G. Fournier	1996-07-30 07:47:58 +0000	23	More cleanups by "Kurt J. Lidl" <lidl@va.pubnix.com>
+74cdf928687	Marc G. Fournier	1996-07-30 07:56:04 +0000	86	Fixes:
+e0d48c317cd	Marc G. Fournier	1996-07-31 02:06:00 +0000	5	Fixes:  Floating point exception in psql
+1af2cc0d581	Marc G. Fournier	1996-07-31 02:07:25 +0000	2	Style didn't appeal to some...:)
+4477b6f6c26	Marc G. Fournier	1996-07-31 02:11:23 +0000	52	Fixes:
+a05ed5bc11c	Marc G. Fournier	1996-07-31 02:19:23 +0000	10	Fixes:
+3881cbd2f6e	Marc G. Fournier	1996-07-31 02:20:59 +0000	3	Added <sys/termios.h> for i386_solaris port
+c6cf21825ae	Marc G. Fournier	1996-07-31 02:28:22 +0000	0	already exists in the contrib directory
+5eb17f53b61	Marc G. Fournier	1996-07-31 02:30:10 +0000	0	Moved src/extend to contrib
+dbf2a8c9840	Marc G. Fournier	1996-07-31 06:05:46 +0000	1	Everyone seems to suggestion this is something that should be there...
+c114bf330dc	Marc G. Fournier	1996-07-31 06:09:46 +0000	5	A "lost in the archives" patch from Chris Dunlop <chris@atlas.onthe.net.au>
+c317bdc9fd0	Marc G. Fournier	1996-07-31 17:19:49 +0000	7	Re-arrange KRBVERS postition
+7d2000e3a75	Marc G. Fournier	1996-07-31 17:35:13 +0000	2	Fix for <machine.h> bug
+4e82924eac3	Marc G. Fournier	1996-07-31 18:40:12 +0000	30	Row count patch from Bruce
+9c0f89c4a40	Marc G. Fournier	1996-07-31 18:43:58 +0000	1	More patches for BSDi from Bruce
+7bdd8dcac39	Marc G. Fournier	1996-07-31 18:48:16 +0000	15	This prevent gcc from complaining about casting a short to a char * and fixes another complaint.
+db174707bae	Marc G. Fournier	1996-07-31 18:52:38 +0000	7	Standardize locations of TCL related files
+cb34902cbde	Marc G. Fournier	1996-07-31 18:59:00 +0000	4	Move port includes from bin/pg_dump/Makefile to Makefile.global
+ce48b4d5bd7	Marc G. Fournier	1996-08-01 04:51:49 +0000	3936	A newer expected.input file for the regression tests
+a82aa45a4d7	Marc G. Fournier	1996-08-01 04:53:22 +0000	126	An actual README file for the regression tests
+4d837e370c1	Marc G. Fournier	1996-08-01 05:04:29 +0000	2	Change the TEMPDIR to be obj instead of /tmp
+164ef6ff2b4	Marc G. Fournier	1996-08-01 05:11:33 +0000	8	Fixes:
+4fff70a8198	Marc G. Fournier	1996-08-01 19:46:46 +0000	11	Fixes:
+642668c31d5	Marc G. Fournier	1996-08-02 01:18:05 +0000	881	Update to expected.input from Dr. George
+7d1402d0716	Marc G. Fournier	1996-08-02 01:24:00 +0000	0	Okay...*last* commit, now to create a release...
+423a7159893	Marc G. Fournier	1996-08-04 21:03:23 +0000	4	Quick patch for compiling under BSD/OS 2.0 from Bruce
+54f69a954cd	Marc G. Fournier	1996-08-04 22:00:13 +0000	2	Fix a bug in pg_class
+132e9159eb6	Marc G. Fournier	1996-08-05 00:25:07 +0000	3	Fixes:
+7ef04b25cc5	Julian Assange	1996-08-06 00:40:12 +0000	7	added patch from kurt that fixes memory leak (didn't free line buffer for slash commands)
+fd3b829959e	Marc G. Fournier	1996-08-06 16:05:56 +0000	1	Had a space in CFLAGS+= -I ..
+c4e53a14110	Marc G. Fournier	1996-08-06 16:16:50 +0000	90	Fixes for:
+ab22b34891b	Marc G. Fournier	1996-08-06 16:27:59 +0000	11	Fixes:
+6c684b18474	Marc G. Fournier	1996-08-06 16:38:03 +0000	40	Fixes:
+bb0bdfd1019	Marc G. Fournier	1996-08-06 16:43:41 +0000	20	Fixes:
+ab57e09e1ca	Marc G. Fournier	1996-08-06 16:51:35 +0000	10	Fixes:
+dfca092633d	Julian Assange	1996-08-06 20:23:14 +0000	2	applied kurt's patch to fix unlikely, but potential, string underflow problem in psql
+ae4725295a0	Marc G. Fournier	1996-08-09 19:06:59 +0000	2	Fix an Inccorect Error Message...
+4db7f15b2ae	Marc G. Fournier	1996-08-10 00:22:48 +0000	57	Updates to libpq to fix breakage in previous patch...
+1508feb2836	Marc G. Fournier	1996-08-10 05:02:53 +0000	2	Another small patch fix...
+5bd4485c8e4	Marc G. Fournier	1996-08-13 01:27:21 +0000	2	More code cleanups
+9b7eb28ea5e	Marc G. Fournier	1996-08-13 01:28:29 +0000	6	Fixes:
+59f29714aa8	Marc G. Fournier	1996-08-13 01:29:34 +0000	7	Fixes:
+9da9c0915a5	Marc G. Fournier	1996-08-13 01:32:26 +0000	4	Fixes:
+78d56d0bcb8	Marc G. Fournier	1996-08-13 01:33:27 +0000	5	Small cleanup of the irix5 port
+9305fc748c2	Marc G. Fournier	1996-08-13 01:34:29 +0000	36	Fixes:
+a721c91adeb	Marc G. Fournier	1996-08-13 01:36:50 +0000	2	More code cleanups
+ca5db6cab11	Marc G. Fournier	1996-08-13 07:48:33 +0000	27	I have attached a minor update for the Postgres make files.  This update does 2 things:
+80d0c4ffd35	Marc G. Fournier	1996-08-14 04:51:34 +0000	12	The following patch makes postmaster -D work.  -D specifies a different PGDATA directory.  The code that looks for the pg_hba file doesn't use it, though, so the postmaster uses the wrong pg_hba file.  Also, when the postmaster looks in one directory and the user thinks it is looking in another directory, the error messages don't give enough information to solve the problem.  I extended the error message for this.
+6b9ecd83484	Marc G. Fournier	1996-08-14 04:54:45 +0000	6	Here's a small makefile patch that corrects the following bug:  The makefiles don't indicate that the libpq.a library is a dependency of all the /bin programs.  So if the library changes, the /bin programs don't get remade.
+011ee13131f	Marc G. Fournier	1996-08-14 04:56:55 +0000	35	| |We're all too familiar with psql's "no response from backend" message. |Users can't tell what this means, and psql continues prompting for |commands after it even though the backend is dead and no commands can |succeed.  It eventually dies on a signal when the dead socket fills |up.  I extended the message to offer a better explanation and made |psql exit when it finds the backend is dead. | |I also added a short message and newline when the user does a ctl-D so |it doesn't mess up the terminal display. | |
+988a9adfbd2	Marc G. Fournier	1996-08-14 05:01:53 +0000	20	This is a fix to be included in 1.02.1.  It adds a tip for people getting semaphore or shared memory errors.
+15a645014a6	Marc G. Fournier	1996-08-14 05:03:47 +0000	2	I grabbed the latest version of the source code via sup this morning, and found out that one of the patches is a show stopper for compiling under a strict ansi package.
+e7a110b418f	Marc G. Fournier	1996-08-14 05:33:11 +0000	32	This patch can be installed as part of 1.02.1 so people can properly pg_dump and load to 2.0.  I haven't gotten any feedback on whether people want it, so I am submitting it for others to decide.  I would recommend an install in 1.02.1.
+476ef109133	Marc G. Fournier	1996-08-14 05:44:25 +0000	7	This patch can be installed as part of 1.02.1 so people can properly pg_dump and load to 2.0.  I haven't gotten any feedback on whether people want it, so I am submitting it for others to decide.  I would recommend an install in 1.02.1.
+bde34552a27	Marc G. Fournier	1996-08-14 16:44:51 +0000	3	| |Here is a fix for the psql alignment problem.  It turns out that libpq |was trying to determine if the column contained only numeric values so |it could right justify it.  The 'e' values were taked as exponient |values and all columns were considered numeric. | |The patch excludes 'e' and 'E' as being valid first-column numeric |values. |
+4844adc888d	Marc G. Fournier	1996-08-15 07:30:22 +0000	4	Fixes;
+d6fa4d95cda	Marc G. Fournier	1996-08-15 07:39:24 +0000	29	Fixes:
+a4402ecc8c1	Marc G. Fournier	1996-08-15 07:42:52 +0000	106	Fixes a bug in 'create index'
+1960a3b9657	Marc G. Fournier	1996-08-17 06:41:10 +0000	2	changed missed err() change to err_out()
+9848d3655d4	Marc G. Fournier	1996-08-18 22:14:33 +0000	20187	Support Docs & Contrib
+f796387b602	Marc G. Fournier	1996-08-19 01:52:36 +0000	11	|From: Dan McGuirk <mcguirk@indirect.com> | |This patch fixes a backend crash that happens sometimes when you try to |join on a field that contains NULL in some rows.  Postgres tries to |compute a hash value of the field you're joining on, but when the field |is NULL, the pointer it thinks is pointing to the data is really just |pointing to random memory.  This forces the hash value of NULL to be 0. | |It seems that nothing matches NULL on joins, even other NULL's (with or |without this patch).  Is that what's supposed to happen? |
+3c47cdeb5a5	Marc G. Fournier	1996-08-19 01:53:39 +0000	8	From: Dan McGuirk <mcguirk@indirect.com>
+77e01653bc5	Marc G. Fournier	1996-08-19 13:25:40 +0000	23	Fixes:
+60b1123f5ec	Marc G. Fournier	1996-08-19 13:32:14 +0000	8	Fixes:
+c3673c0345a	Marc G. Fournier	1996-08-19 13:37:50 +0000	7	More run-time checking errors:
+0e9f4ceae07	Marc G. Fournier	1996-08-19 13:38:42 +0000	2	Here's a minor fix that fixes a casting problem:
+926a066d407	Marc G. Fournier	1996-08-19 13:52:54 +0000	81	Added a SVR4 port
+c801ca09829	Marc G. Fournier	1996-08-19 13:58:23 +0000	250	Finish adding in svr4 port to v2.0
+1bdbf4092ae	Marc G. Fournier	1996-08-20 05:04:13 +0000	11	Bring in changes to READLINE/HISTORY defines
+99dc4e3b433	Julian Assange	1996-08-21 00:22:41 +0000	2	command line flag for expanded display '-x' had logic reversed
+41d0b147646	Marc G. Fournier	1996-08-21 03:59:59 +0000	5	Quick fix for compiling psql...
+4455ba2c882	Marc G. Fournier	1996-08-21 04:03:32 +0000	3	Erk, missed adding the required ilbrary itself
+2a23229cb33	Marc G. Fournier	1996-08-21 04:06:01 +0000	5	BSD$$_derived needs -ltermcap for psql
+93ad36fdc2b	Marc G. Fournier	1996-08-21 04:08:17 +0000	2	USE_TCL should default to false, ntot true...
+5e773a4f70d	Marc G. Fournier	1996-08-21 04:25:49 +0000	94	Here's a patch for Versions 1 and 2 that fixes the following bug:
+e2c9fd8e870	Marc G. Fournier	1996-08-21 04:32:09 +0000	5	|May I suggest to add access to the oid of an inserted |record, by a small patch to libpq++? At least until the |feature that will allow dumped oid's to be re-loaded into |a database becomes available, I need access to the oids |of newly created records... To this end, I have written a |three-line wrapper for the PQoidStatus function in libpq and |named this wrapper OidStatus() (I'd appreciate suggestions for |a name that would better fit into the general naming scheme). | |Regards, | |Ernst |
+2adb6d703bd	Marc G. Fournier	1996-08-24 20:38:56 +0000	2	Here's the fix for the problem that Evan Champion reported today.
+208a30f23db	Marc G. Fournier	1996-08-24 20:49:41 +0000	240	The patch does several things:
+61eaefe9a63	Marc G. Fournier	1996-08-24 20:56:16 +0000	63	This patch for Versions 1 and 2 corrects the following bug:
+c449668d3e1	Marc G. Fournier	1996-08-26 05:46:39 +0000	3	Fix prototype for dumpClasses
+fe87dbb1403	Marc G. Fournier	1996-08-26 06:04:49 +0000	2	Roll in patch that fixes problem with sed 3.0
+a2740a455f5	Marc G. Fournier	1996-08-26 06:32:06 +0000	274	There, now we support GiST...now what? :)
+2fd6061e1c8	Marc G. Fournier	1996-08-26 19:59:15 +0000	2	Quick fix of the PG-GiST import pointed out by Dan
+e78fe652f48	Marc G. Fournier	1996-08-26 20:02:12 +0000	3366	Oops, thanks to Dan McGuirk for pointing out that I missed part of the commit :(
+491b9b89c42	Marc G. Fournier	1996-08-26 20:38:52 +0000	38	The patch that is applied at the end of the email makes sure that these conditions are always met. The patch can be applied to any version of Postgres95 from 1.02 to 1.05. After applying the patch, queries using indices on bpchar and varchar fields should (hopefully ;-) ) always return the same tuple set regardless to the fact whether indices are used or not.
+bfc308d196b	Marc G. Fournier	1996-08-26 23:04:07 +0000	182	Damn, we really need to clean up this "include file" dilemna... include files *everywhere* ;(
+51b3f2d3715	Marc G. Fournier	1996-08-27 06:10:50 +0000	5	Create support for a "common" include directory for the source tree, instead of having include files all over the place...
+1da12ffb120	Marc G. Fournier	1996-08-27 06:14:29 +0000	10	Its a start...
+672aec6ce36	Marc G. Fournier	1996-08-27 06:52:34 +0000	2	Reduce -DPORTNAME_$(PORTNAME) down to just -D$(PORTNAME)
+c028568217c	Marc G. Fournier	1996-08-27 06:55:28 +0000	23	first pass...move some of the "Port" dependencies to src/include/config.h
+849292a1881	Marc G. Fournier	1996-08-27 06:56:08 +0000	23	first attempt at centralizing config information for ports
+e733befeed1	Marc G. Fournier	1996-08-27 07:30:55 +0000	30	One file at a time, one directory after the other...this is going to be one helluva chore to clean up...
+321b8c80fd1	Marc G. Fournier	1996-08-27 07:32:33 +0000	19	At this rate, maybe next year sometime I'll get this done...
+43eeb646881	Marc G. Fournier	1996-08-27 07:41:17 +0000	1	Removed -DESCAPE_PATCH ... moved to include/config.h
+e1f31a2bb67	Marc G. Fournier	1996-08-27 07:42:29 +0000	11	added #include "config.h" for ESCAPE_PATCH define
+9247b29228c	Marc G. Fournier	1996-08-27 21:49:14 +0000	0	The use of include files is a mess...alot of redundancy, it seems...
+5a8820efcd9	Marc G. Fournier	1996-08-27 21:50:29 +0000	2418	Moved from backend/access to include/access
+eadf5dc754f	Marc G. Fournier	1996-08-27 22:00:21 +0000	2	#include "postgres.h" exists in most .c files in system, so adding #include "config.h" here will (should?) ensure that any platform dependencies defined in config.h should be reflected in all .c files...
+3a606407c79	Marc G. Fournier	1996-08-27 22:06:30 +0000	3	We have a machine.h for each platform just because of BLCKSZ, and every platform with a machine.h has the same BLCKSZ?
+54223de0008	Marc G. Fournier	1996-08-27 22:07:59 +0000	1	Oops, win32 does have one more thing in its machine.h...move that define to config.h
+a88b72ea39f	Marc G. Fournier	1996-08-27 22:09:10 +0000	4	#ifndef the include file like the rest, so that it doesn't get pulled in twice...
+3c0f8ed4ae8	Marc G. Fournier	1996-08-27 22:15:17 +0000	4	Remove all traces of machine.h and redundant calls to c.h where postgres.h already pulled in (postgres.h includes c.h)
+61966462919	Marc G. Fournier	1996-08-27 22:20:28 +0000	5	Remove include of machine.h
+b8a0bb68c95	Marc G. Fournier	1996-08-27 22:21:34 +0000	1	Should finish cleaning out the machine.h includes
+ad5a3141a2d	Marc G. Fournier	1996-08-28 01:23:59 +0000	1	c.h is included in postgres.h already
+5c0d6ccdbfe	Marc G. Fournier	1996-08-28 01:50:01 +0000	1	Redundant -I pointer to port/<portname>
+ca405ae4bf5	Marc G. Fournier	1996-08-28 01:55:44 +0000	9	Moved the include files to src/include/regex
+10540974649	Marc G. Fournier	1996-08-28 01:59:28 +0000	13489	More cleanups of the include files
+f634c14c9e7	Marc G. Fournier	1996-08-28 02:13:10 +0000	3	Path to pg_proc.h to create fmgrtab.c change to include/catalog
+907c884fe8b	Marc G. Fournier	1996-08-28 02:18:00 +0000	2	Went back one directory too far for the -I include
+870be9fa8e5	Marc G. Fournier	1996-08-28 07:27:54 +0000	97	Clean up th ecompile process by centralizing the include files
+4978d3f4bbb	Marc G. Fournier	1996-08-28 22:50:24 +0000	7	modifications required to reflect centralized include files
+28fad34c7bb	Marc G. Fournier	1996-08-28 23:02:43 +0000	7	modifications required to reflect centralized include files
+1ba34d91fca	Marc G. Fournier	1996-09-10 06:23:46 +0000	2	Cleaned up a spurious '-' ...
+f2f53aee0f2	Marc G. Fournier	1996-09-10 06:41:38 +0000	15	Fixes:
+796f78998e9	Marc G. Fournier	1996-09-10 06:48:52 +0000	58	Fixes:
+c5dd292007c	Marc G. Fournier	1996-09-10 06:51:28 +0000	2	Add use of INDEXSCAN_PATCH to config.h instead of putting it in Makefile.global
+475493130de	Marc G. Fournier	1996-09-16 05:33:20 +0000	30	|Subject: Postgres patch: Assert attribute type match | |Here's a patch for Version 2 only.  It just adds an Assert to catch some |inconsistencies in the catalog classes. | |-- |Bryan Henderson                                    Phone 408-227-6803 |San Jose, California |
+906651f6636	Marc G. Fournier	1996-09-16 05:36:38 +0000	53	There is a bug in the function executor. The backend crashes while trying to execute an sql function containing an utility command (create, notify, ...). The bug is part in the planner, which returns a number of plans different than the number of commands if there are utility commands in the query, and in part in the function executor which assumes that all commands are normal query commands and causes a SIGSEGV trying to execute commands without plan.
+df6ca83a5b5	Marc G. Fournier	1996-09-16 05:39:04 +0000	12	Enable FUNC_UTIL_PATCH by default
+e3b41d40fae	Marc G. Fournier	1996-09-16 05:40:31 +0000	3	More code cleanups from "Kurt J. Lidl" <lidl@va.pubnix.com>
+bbebcb125e4	Marc G. Fournier	1996-09-16 05:50:46 +0000	24	Fixes:
+33dccad831a	Marc G. Fournier	1996-09-16 05:52:51 +0000	15	enable PQ_NOTIFY_PATCH in config.h
+24f00122686	Marc G. Fournier	1996-09-16 05:54:53 +0000	198	I have made some corrections to my previous patches for retrieving array attributes as tcl arrays.  The previous code had problems with some chars used as delimiter by Tcl.  The new code should be more robust.
+f589ca68001	Marc G. Fournier	1996-09-16 06:06:17 +0000	130	The following diffs remove the various definitions of dupstr() and replace all the calls with strdup.
+40aade2c06d	Marc G. Fournier	1996-09-16 06:11:44 +0000	3	At Andrew's suggestion, upgrade the Version numbers to reflect the current state of development...namely, we are on 2.0
+95251f458c9	Marc G. Fournier	1996-09-16 06:32:25 +0000	12	Various standardizations and fixes submitted by D'Arcy Cain
+0318f227ac5	Marc G. Fournier	1996-09-16 06:34:40 +0000	4	Add missing includes to silence compile
+aceac3a9273	Marc G. Fournier	1996-09-19 19:50:48 +0000	82	Fix for pg_log bug
+ea8adfc435a	Marc G. Fournier	1996-09-19 19:57:18 +0000	13	Added querylimit patch...
+efebd7b7aae	Marc G. Fournier	1996-09-19 19:58:27 +0000	8	Cleanup patch of pg_version
+3023dc6af0a	Marc G. Fournier	1996-09-19 20:00:37 +0000	35	A few changes to cleanup the code.
+b19b90d7068	Marc G. Fournier	1996-09-19 20:01:40 +0000	2	Just a small change to flesh out the func_ptr typedef declaration.
+8594ade7b01	Marc G. Fournier	1996-09-19 20:02:53 +0000	2	Another small change.  Added the void keyword to an empty arg list.
+3c237e7347f	Marc G. Fournier	1996-09-19 20:05:59 +0000	6	I have two small patches which correct some very obscure bug in the parser of the array constants and in one of the loadable modules I posted some time ago.
+2545844a10c	Marc G. Fournier	1996-09-19 20:07:15 +0000	7	This shows the new use of defaults.
+ab76bbf8fd4	Marc G. Fournier	1996-09-19 20:08:09 +0000	2	nonulls is not supported in gram.y, so why advertise it.
+9fb31dcb544	Marc G. Fournier	1996-09-19 20:09:02 +0000	37	Here is a /doc patch for the oid preservation code.
+ee9b8016c70	Marc G. Fournier	1996-09-19 20:16:55 +0000	0	Clean out the old...
+715c6b6d254	Marc G. Fournier	1996-09-19 20:19:05 +0000	667	Newer version of Bruce's pginterface library...
+5995953a02e	Marc G. Fournier	1996-09-19 20:22:23 +0000	34	Documentation on the fsync() patch from OpenLink
+985acb8ea05	Marc G. Fournier	1996-09-20 05:29:31 +0000	766	Add the regex include files to the repository...
+1a003fbcc2a	Marc G. Fournier	1996-09-20 08:34:39 +0000	20	Various patches from Bryan that *should* clean up the compile problems ppl are seeing with v2.0
+04b55fc4a4d	Marc G. Fournier	1996-09-21 06:24:41 +0000	15	Patches to make POSTPORT changes in scripts
+83298ee312a	Marc G. Fournier	1996-09-21 06:27:11 +0000	1	Nothing patched...just testing something with CVS...
+ee420c049f0	Marc G. Fournier	1996-09-21 06:29:09 +0000	3	|This fixes the bug introduced yesterday that causes "not found" errors |with gram.c and parser.h. | |-- |Bryan Henderson                                    Phone 408-227-6803 |San Jose, California |
+7efc8ef1a18	Marc G. Fournier	1996-09-21 06:31:13 +0000	8	|For starters, here's a small patch that removes a compiler warning in that |regex stuff on Linux. | |-- |Bryan Henderson                                    Phone 408-227-6803 |San Jose, California |
+5774d080a74	Marc G. Fournier	1996-09-21 19:12:11 +0000	2	Turned off EUROPEAN_DATES as default...
+e7c3adcd94d	Marc G. Fournier	1996-09-22 01:30:52 +0000	2	*** src/backend/storage/file/fd.c.orig  Thu Sep 12 17:17:21 1996 --- src/backend/storage/file/fd.c       Thu Sep 12 17:23:38 1996 *************** *** 262,268 ****       Delete(file);
+ff4d0d435e3	Marc G. Fournier	1996-09-23 08:24:13 +0000	301	Here's a patch that I discussed recently on pg95-dev that changes the way one creates a database system.  Parts that were in "make install" are not either in "make all" or initdb.  Nothing goes in the PGDATA directory besides user data.  Creating multiple database systems is easier.
+1b10c7a3260	Marc G. Fournier	1996-09-23 08:27:04 +0000	179	Finish commiting Bryan's patches...
+fb7f8e76551	Marc G. Fournier	1996-09-23 08:29:52 +0000	3	diff -ru ../../../orig/postgres95/src/backend/libpq/be-fsstubs.c ./libpq/be-fsstubs.c - --- ../../../orig/postgres95/src/backend/libpq/be-fsstubs.c     Tue Jul  9 08:21:30 1996 +++ ./libpq/be-fsstubs.c        Tue Sep 17 15:30:09 1996 @@ -241,7 +241,7 @@       */      fd = open(VARDATA(filename), O_RDONLY, 0666);      if (fd < 0)  {   /* error */ - -       elog(WARN, "lo_import: can't open unix file\\"%s\\"\\n", filename); +       elog(WARN, "lo_import: can't open unix file \\"%s\\"\\n", VARDATA(filename));      }
+d00f621d7b0	Marc G. Fournier	1996-09-23 08:31:01 +0000	2	diff -ru ../../../orig/postgres95/src/backend/utils/adt/varlena.c ./utils/adt/varlena.c - --- ../../../orig/postgres95/src/backend/utils/adt/varlena.c    Mon Jul 22 23:56:04 1996 +++ ./utils/adt/varlena.c       Tue Sep 17 15:12:55 1996 @@ -166,7 +166,7 @@
+3bf2b361f01	Marc G. Fournier	1996-09-23 08:36:39 +0000	2	Date: Sun, 22 Sep 1996 13:47:39 -0400 (EDT) From: Bruce Momjian <maillist@candle.pha.pa.us> To: Postgres95-development <pg95-dev@ki.net> Subject: [PG95-DEV] 2.0 patch for fastgetattr
+32620c222e1	Marc G. Fournier	1996-09-23 08:37:41 +0000	2	From: Bruce Momjian <maillist@candle.pha.pa.us> To: Postgres95-development <pg95-dev@ki.net> Subject: [PG95-DEV] Makefile.global patch
+9c6135fb155	Marc G. Fournier	1996-09-23 08:38:45 +0000	2	From: Bruce Momjian <maillist@candle.pha.pa.us> To: Postgres95-development <pg95-dev@ki.net> Subject: [PG95-DEV] postgres.h patch
+ba628ef13d6	Marc G. Fournier	1996-09-23 08:39:53 +0000	4	From: Bruce Momjian <maillist@candle.pha.pa.us> To: Bryan Henderson <bryanh@giraffe.netgate.net> Cc: Postgres95-development <pg95-dev@ki.net> Subject: Re: [PG95-DEV] DELETE statement
+0da293f868d	Marc G. Fournier	1996-09-23 08:43:40 +0000	4	Fix for using Makefile.custom
+afcbce5c22d	Marc G. Fournier	1996-09-23 18:14:08 +0000	3	CFLAGS +- -I... got messed by one of Bryan's patches
+87799e38f17	Marc G. Fournier	1996-09-23 18:15:41 +0000	2	Prototype setMaxOid()
+4ca1e1300c7	Marc G. Fournier	1996-09-23 18:17:42 +0000	4	Change the comments pertaining to Makefile.custom
+b12fb0e6b59	Marc G. Fournier	1996-09-24 01:57:01 +0000	4	Patch for:
+0d83b86720d	Bruce Momjian	1996-09-25 19:24:58 +0000	2	Changed gawk to awk.
+fd067981be0	Bruce Momjian	1996-09-25 19:37:31 +0000	4	Fix location of include files to match postgres.h includes.
+dac40587223	Bruce Momjian	1996-09-26 00:48:48 +0000	39	Updated version.
+a38b0f6cb9d	Bruce Momjian	1996-09-26 01:13:14 +0000	1	upgrade.
+deaaecdf2e8	Bruce Momjian	1996-09-26 03:17:44 +0000	2	Prevents possible packet loss from SIGCHLD.
+f8a84c947a9	Bruce Momjian	1996-09-26 04:22:49 +0000	2	This should cause 'make clean' to clean up bki files.  Looks like a typo.
+a3e68d902e3	Bruce Momjian	1996-09-26 14:07:07 +0000	4	Updated version.
+2baf2150e9c	Bruce Momjian	1996-09-26 15:40:45 +0000	8	Fixed YACC depenencies and 'make clean' now cleans totally.
+adc98c0b356	Bruce Momjian	1996-09-26 15:43:35 +0000	3	Fix cluster finfo problem Kurt reported.
+8f7756d7968	Bruce Momjian	1996-09-26 16:29:05 +0000	4	palloc() finfo memory.  From Kurt.
+33b7d74c6ff	Bruce Momjian	1996-09-26 16:49:09 +0000	9	Add fsync option to Postgres manual page.
+6de47e1175b	Bruce Momjian	1996-09-26 18:34:49 +0000	1	Change README to 2.0.
+fe3dd242764	Bruce Momjian	1996-09-28 00:57:41 +0000	1	Changed default port name.
+e788e8aa039	Bruce Momjian	1996-09-29 19:11:20 +0000	0	This file was superceeded by README.fsync.
+22ef6d06fc6	Marc G. Fournier	1996-10-02 20:40:17 +0000	2	Moved whether to define union semun from include/storage/ipc.h to a define in include/config.h
+0fadfc00add	Marc G. Fournier	1996-10-02 20:42:20 +0000	20	Added NEED_UNION_SEMUN to config.h
+67e87363485	Marc G. Fournier	1996-10-02 21:38:35 +0000	3	change stdout to fout
+a14bf40b886	Bruce Momjian	1996-10-03 00:23:42 +0000	15	Added new single-letter options to initdb.sh. Removed long-option names that used ${#} shell feature which was a compatability problem.
+00ec211aa83	Bruce Momjian	1996-10-03 00:25:53 +0000	26	Manual changes for initdb.sh change.
+dbc268ca15e	Bruce Momjian	1996-10-03 01:14:37 +0000	6	Fixed file to properly do SEMUN for BSDI. Grouped some PORTNAME's for SEMUN.
+267ef0a6424	Bruce Momjian	1996-10-03 04:19:29 +0000	25	Allow vacuum to run for only one table.  Fixes allocation bug.
+fedb734df9e	Bruce Momjian	1996-10-03 04:20:11 +0000	1	Fixes extra space in printing.
+75e2cbcec36	Bruce Momjian	1996-10-03 04:20:41 +0000	2	New vacuum option.
+92210d4915e	Bruce Momjian	1996-10-03 04:21:31 +0000	2	New vacuum optoin.
+4bec96f16f4	Bruce Momjian	1996-10-03 15:46:31 +0000	20	Brought psql help up to date with syntax and manual.
+2e9010cd8ae	Bruce Momjian	1996-10-03 15:50:10 +0000	12	Renamed createdb.l  to create_database.l. Changed portal to cursor.
+97c904610dc	Bruce Momjian	1996-10-03 17:15:56 +0000	497	New FAQ.
+f5316239b88	Bruce Momjian	1996-10-03 17:27:01 +0000	11	Moved them.
+25ffb8965fa	Bruce Momjian	1996-10-03 17:27:48 +0000	0	MOved them.
+487e91484da	Bruce Momjian	1996-10-03 20:09:48 +0000	2	Added chown to Makefile to set files to Postgres user. Does not display and generates no error messages on failure.
+aefb294e13d	Bruce Momjian	1996-10-03 20:11:41 +0000	20	Added restriction to tables vacuum'able. Added NOTICE messages for bad table names.
+c61d606a150	Marc G. Fournier	1996-10-03 22:41:42 +0000	1	Added dlfcn.h to dl.c in BSD44_derived port
+57fd9a5c4e7	Bruce Momjian	1996-10-03 23:34:36 +0000	7	Removed -S from example and added nohup to log file.
+15537c9d45f	Bruce Momjian	1996-10-04 14:50:18 +0000	5	Added purge(l) mention in manual page.
+9e9206e0df2	Bruce Momjian	1996-10-04 15:15:24 +0000	91	new TODO.
+22749a1d726	Bruce Momjian	1996-10-04 15:23:00 +0000	50	Moved files.
+27bccb9db3c	Marc G. Fournier	1996-10-04 20:07:10 +0000	35	This patch fixes problems in initdb, including that it doesn't run with some versions of sh, and a bug in the master make file that causes it to issue the message "postgres has been built" at the wrong time.
+312b4dabfee	Marc G. Fournier	1996-10-04 20:08:29 +0000	5	This patch corrects some errors in sample commands in the INSTALL file.
+f8009e17860	Marc G. Fournier	1996-10-04 20:17:11 +0000	34	The remainder of D'Arcy's changes, most notibly the usage of SIGNAL_ARGS
+ff25e44d030	Marc G. Fournier	1996-10-04 20:20:57 +0000	11	Moved the define of SIGNAL_ARGS that D'Arcy just created to config.h so that hopefully this sort of thing can eventually be determined using configure?
+002be14c45f	Marc G. Fournier	1996-10-04 20:29:35 +0000	1	And bring in change from 1.0.7 tree to here...
+4feb696be73	Marc G. Fournier	1996-10-04 20:32:07 +0000	5	Here the fix for the first assertion failure I had which killed my postmaster 1.07. It's really simple, the loop dealing with all sockets can't handle more than one ready socket :-) A simple logic error dealing with lists. OR IS THERE ANY REASON FOR SETTING curr TO 0?
+2d456c473dd	Bruce Momjian	1996-10-05 03:23:49 +0000	5	Improved creation of mkid files.
+a974522f5fb	Bruce Momjian	1996-10-05 03:24:47 +0000	37	Added single-letter options and case statement.
+f29e02017ac	Bruce Momjian	1996-10-05 20:29:57 +0000	1	Replace double // with /.  THis confuses mkid.
+a433f22c241	Bruce Momjian	1996-10-05 20:30:31 +0000	2	Fix args to match prototype.
+47279960a0d	Bruce Momjian	1996-10-05 20:31:38 +0000	2	Fix assert to allow zero.  OK'ed by Bryan.
+efac791640e	Bruce Momjian	1996-10-05 20:33:10 +0000	8	Change shell-style comments to C-style.
+8999ce097f2	Bruce Momjian	1996-10-05 20:33:45 +0000	2	Add comment about possible zero value.
+50e708ef887	Marc G. Fournier	1996-10-05 20:39:05 +0000	9	Stylistic cleanups...
+3a0bace14f7	Bruce Momjian	1996-10-05 21:16:34 +0000	0	Renamed file.
+e8e78f4c7ba	Bruce Momjian	1996-10-05 21:34:33 +0000	2	Fix typo in help text.
+3a56b218320	Bruce Momjian	1996-10-07 02:32:39 +0000	2	Update help for alter table. remove EXTEND function.
+f6792efcc7c	Bruce Momjian	1996-10-07 02:33:25 +0000	7	Remove sytax errors from file.
+9d9eadea82b	Bruce Momjian	1996-10-07 02:34:54 +0000	9	add FROM to update page, clean up spelling error in select.
+257b4d090c9	Bruce Momjian	1996-10-07 02:50:19 +0000	7	Change new assert so it generates assert message rather than SIGSEG.
+de466eb8f45	Marc G. Fournier	1996-10-07 03:30:40 +0000	62	Mostly adding "const" keyword and making some functions static.
+3dc0c8e4e5f	Marc G. Fournier	1996-10-07 07:18:34 +0000	2	Fixed a missed change from Carsten Heyl <heyl@nads.de>
+a409f40ea8d	Bruce Momjian	1996-10-07 19:53:15 +0000	4	Modified Assert to be more selective.
+ea733aa997f	Marc G. Fournier	1996-10-07 21:17:01 +0000	3	Fix a couple of small things from D'Arcy's last patch
+4e8f5c337cc	Marc G. Fournier	1996-10-07 21:19:09 +0000	122	Well I haven't received any feedback pro or con re my suggested new Tcl function so I am going to assume that it is such a good idea that no one sees any point in discussing it.  :-)  I have made two changes - I have merged this into pgtclCmds.c and I have taken out any code for updating tuples after the loop body runs.  See comments for discussion of this.
+6470d5b1c13	Marc G. Fournier	1996-10-07 23:53:47 +0000	3	Fix handling of no '../doc' directory in compile procedure...
+87bb8daab82	Marc G. Fournier	1996-10-07 23:57:01 +0000	14	Move the NAMEDATALEN/OIDNAMELEN defines to include/config.h
+d6dfbecb07b	Marc G. Fournier	1996-10-08 00:09:05 +0000	34	Moved the following definitions to include/config.h from Makefile.global:
+5fb8eaa5929	Bruce Momjian	1996-10-08 03:53:10 +0000	0	Add execute permission.
+dcef39f03b2	Bruce Momjian	1996-10-08 04:04:38 +0000	0	Add execute permits.
+dd09982f3ed	Bruce Momjian	1996-10-08 04:09:50 +0000	10	Add execute permission.
+c306d06cf9d	Bruce Momjian	1996-10-08 22:23:19 +0000	1	Change sh-style comments to C comments.
+9b1e61b7e94	Bruce Momjian	1996-10-09 00:15:44 +0000	19	Changed psql \\h command to print commands in three columns. No more scrolling off the screen.
+ca5f6dba0ff	Bruce Momjian	1996-10-10 00:18:52 +0000	1	Comment cleanup.
+329b38eebb4	Bryan Henderson	1996-10-10 08:20:11 +0000	69	Add PGUSER environment variable for client to specify Postgres username.
+97906ac6978	Marc G. Fournier	1996-10-11 02:38:16 +0000	17	Reinstituted NAMEDATALEN OIDNAMELEN in Makefile.global so that initdb works again...
+2663dfd94e4	Marc G. Fournier	1996-10-11 03:22:59 +0000	311	I have written some patches to the postgres lock manager which allow the use of long term cooperative locks managed by the user applications.
+b7559f94cd0	Marc G. Fournier	1996-10-11 03:25:00 +0000	2	This change should have no practical effect but it is the more correct way to do this.  Theoretically you could have a NULL pointer that isn't represented internally as all 0 bits.  This guarantees that it convert correctly.
+81cda65f747	Marc G. Fournier	1996-10-11 03:56:41 +0000	25	Add a MIPS/NetBSD port...
+6d70d550e6b	Bryan Henderson	1996-10-11 09:12:18 +0000	33	Prepare for new host-based authentication
+09bb369d230	Bryan Henderson	1996-10-11 09:47:14 +0000	111	Separate general purpose functions from portal functions so they may be used in test drivers.
+57026d60091	Bryan Henderson	1996-10-12 07:44:39 +0000	4	New host-based authentication -- install pg_hba.conf instead of pg_hba
+4b5c9777828	Bryan Henderson	1996-10-12 07:47:12 +0000	967	New host-based authentication with ident
+785234d6ca7	Bryan Henderson	1996-10-12 07:48:49 +0000	112	New host-based authentication -- send error message when authentication fails
+369848857ec	Bryan Henderson	1996-10-12 07:49:56 +0000	3	New host-based authentication -- set up pg_hba.conf instead of pg_hba
+bef3c89a1ce	Bryan Henderson	1996-10-13 04:01:05 +0000	4	Fix prototypes so postmaster.c will compile.
+abb1b3e770f	Bruce Momjian	1996-10-13 04:26:39 +0000	17	I checked the alter table code, and started suspecting the relation cache.  I found if I manually added a line to flush the whole relation cache, the assert error disappeared.  Looking through the code, I found that the relation cache is flushed at the end of each query if the reference count is zero for the relation.  However, printf's showed that the rd_relcnt(reference count) for the accessed query was not returning to zero after each query.
+86be8677a91	Bruce Momjian	1996-10-13 04:50:27 +0000	17	Added consistent include file handling for MAXHOSTNAMELEN.
+44bf483446d	Bruce Momjian	1996-10-13 13:46:20 +0000	1	Removed duplicate MAXNAMELEN define I accidentally added.
+d31909be6ce	Bruce Momjian	1996-10-13 17:13:58 +0000	2	Fix structure member name from previous patch.
+e6cacf9211f	Bruce Momjian	1996-10-13 18:37:19 +0000	3	Added include needed for recent addition.
+baf9a6e24c5	Bruce Momjian	1996-10-13 18:38:04 +0000	2	Added include needed for recent addition. I hope everyone has sys/socket.h.
+54612f51413	Bruce Momjian	1996-10-13 18:38:51 +0000	2	D'Arcy change.
+81f2f81960a	Bruce Momjian	1996-10-13 18:39:41 +0000	3	Removed const warning.
+1a865b83382	Bruce Momjian	1996-10-14 00:33:47 +0000	2	Change display of char(5) to (bp)char 5 so psql \\d can distinguish between char and char(1).
+83cb7298876	Bruce Momjian	1996-10-14 03:53:53 +0000	3	More closing of relations left open by parser.
+682ccb81a0a	Bruce Momjian	1996-10-14 12:12:14 +0000	558	New FAQ's.
+ec610a76962	Bryan Henderson	1996-10-15 07:16:41 +0000	2	Remove 4th element of sigaction structure so it works on more platforms.
+6cbaa93b827	Bryan Henderson	1996-10-16 09:41:13 +0000	8	Change treatment of sigaction structure again to include even more platforms. Thanks D'Arcy.
+c39857925b7	Marc G. Fournier	1996-10-17 23:55:27 +0000	19	Add a HAVE_TZSET define to clean up defines in backend/utils/adt/nabstime.c
+a839456c417	Marc G. Fournier	1996-10-17 23:59:45 +0000	7	Move "port specific" #ifdefs out of here and into config.h \t- created a HAVE_TZSET define for this purpose
+d16bc9ce372	Marc G. Fournier	1996-10-18 00:33:41 +0000	29	Centralize more of the defines from backend/port under config.h
+1b6322a9c04	Marc G. Fournier	1996-10-18 04:45:54 +0000	55	Moved more -D's out of the port specific Makefiles straight into the config.h file
+2d8ffead247	Marc G. Fournier	1996-10-18 04:49:09 +0000	8	Moved all the CFLAG -D's from the makefiles to config.h towards better centralized configurations/porting...
+6c8465f69ba	Marc G. Fournier	1996-10-18 04:54:47 +0000	1	#define cleanup: moved #define IPORTAL_DEBUG to config.h
+6e420677dd2	Marc G. Fournier	1996-10-18 05:21:09 +0000	0	Moved '#define *DEBUG' defines to config.h, and document where first found.
+2ecb7e5e2c8	Marc G. Fournier	1996-10-18 05:21:27 +0000	2	Moved '#define *DEBUG' defines to config.h, and document where first found.
+6c3dff4245f	Marc G. Fournier	1996-10-18 05:22:24 +0000	46	Document #ifdef's from backend/access subdirs so that we know what features(?) are available
+927e5887a0e	Marc G. Fournier	1996-10-18 05:47:12 +0000	10	Added a #define NEED_SIG_JMP to config.h
+1c00e68fadc	Marc G. Fournier	1996-10-18 05:50:04 +0000	1	Moved definition of MAXPATHLEN to config.h
+94e825145d5	Marc G. Fournier	1996-10-18 05:59:17 +0000	7	Document more #ifdef's into config.h
+46606ab0774	Marc G. Fournier	1996-10-18 05:59:52 +0000	19	Document some more #ifdef's
+57de92c648e	Vadim B. Mikheev	1996-10-18 07:39:07 +0000	8	Move definition of PageIsNew from hio.c to here
+327d900b513	Vadim B. Mikheev	1996-10-18 07:43:43 +0000	1	Move #define PageIsNew (true if page is not initialize) to bufpage.h
+bc500674269	Vadim B. Mikheev	1996-10-18 08:13:36 +0000	240	1. Reap deleted/unused tuples on page-base 2. Reap unused tuples too 3. Reap empty pages 4. Check if a page is initialized, initialize it if not    and reap it 5. Binary search in list of reapped pages/tids to check    is the heap' tid pointed by a index' tuple on this list    (it's mu-u-uch faster)
+c8fc4c96074	Vadim B. Mikheev	1996-10-18 08:15:58 +0000	10	Reap deleted/unused tuples on page-base
+1c5fa955cdf	Marc G. Fournier	1996-10-18 17:58:33 +0000	22	Add prototype for heap_getattr() to quiet compiler
+9caf84bc00e	Marc G. Fournier	1996-10-18 18:28:33 +0000	2	#include "postgres.h" is a standard include for all .c files, auto-including config.h, c.h *and* elog.h...added elog.h
+9834913cd00	Marc G. Fournier	1996-10-18 19:01:16 +0000	23	All #include's removed from *.h files, so cleaning up the .c #includes...
+69b42eb1a3b	Marc G. Fournier	1996-10-19 03:12:50 +0000	26	another one with #include file  clean'd up
+5dedad99a11	Marc G. Fournier	1996-10-19 03:28:20 +0000	13	One at a time...another one is complete...
+d7dd05db558	Marc G. Fournier	1996-10-19 03:39:04 +0000	16	Another cleaned up
+d9ebe7711f8	Marc G. Fournier	1996-10-19 03:58:34 +0000	4	clean out include files of including other includes files except those absolutely required
+c2c618fadaf	Marc G. Fournier	1996-10-19 04:01:41 +0000	1	anothre one reduced to its component parts
+f3671cc9101	Marc G. Fournier	1996-10-19 04:02:39 +0000	1	another another one
+9b6b82b91d7	Marc G. Fournier	1996-10-19 04:03:29 +0000	2	and another one..
+6fd191c899a	Marc G. Fournier	1996-10-19 04:05:44 +0000	1	another one cleaned up
+f697bf3b858	Marc G. Fournier	1996-10-19 04:06:48 +0000	2	and another
+d0bfb6b78d8	Marc G. Fournier	1996-10-19 04:08:58 +0000	2	slow work...
+7260183685f	Marc G. Fournier	1996-10-19 04:09:32 +0000	1	...same
+7bb98fd6180	Marc G. Fournier	1996-10-19 04:16:04 +0000	3	step by step...file by file...
+c6979925ea6	Marc G. Fournier	1996-10-19 04:24:57 +0000	3	its coming...
+1d5c3ec010e	Marc G. Fournier	1996-10-19 04:25:53 +0000	2	another...
+42dd813494e	Marc G. Fournier	1996-10-19 04:31:45 +0000	2	Hopefully that cleans up the cruft from rel.h
+4c9309a8d5c	Marc G. Fournier	1996-10-19 04:36:08 +0000	1	another small one
+6592bbaf087	Marc G. Fournier	1996-10-19 04:46:28 +0000	1	wish there was an easier way to clean this up...
+23f444f64de	Marc G. Fournier	1996-10-19 04:48:30 +0000	1	A few more yet...
+f4ba64a0ac0	Marc G. Fournier	1996-10-19 04:49:29 +0000	2	Almost have access/common cleaned up...
+e77f64af624	Marc G. Fournier	1996-10-19 04:51:44 +0000	14	There...that pretty much cleans up redundant/unused #includes in access/common...how many more directories to go? :)
+0eac5b0ed5f	Marc G. Fournier	1996-10-19 06:27:33 +0000	34	Welp, another subdirectory cleaned out of redundant/unused #include files
+2a23c4e7244	Marc G. Fournier	1996-10-19 06:33:55 +0000	8	Not quite the cleanest way to do it, but add an option to Makefile.global that allows one to compile libpq++
+5eee45ea058	Marc G. Fournier	1996-10-19 06:36:52 +0000	3	Add HAVE_Cplusplus= true to BSD44_derived Makefile.inc, as I know that FreeBSD/NetBSD both ship with gcc 2.7.x
+3cb7ff8db26	Marc G. Fournier	1996-10-20 06:34:30 +0000	21	Okay...another directory cleaned out and compilable
+2b5a8bc38b3	Marc G. Fournier	1996-10-20 06:35:27 +0000	15	More include files cleaned up
+dd007d4c398	Marc G. Fournier	1996-10-20 06:56:04 +0000	16	Another directory cleaned out
+5a0b450c781	Marc G. Fournier	1996-10-20 08:32:11 +0000	583	First pass at fixing my own mistakes
+e1220b7c213	Marc G. Fournier	1996-10-20 09:27:24 +0000	216	More #include cleanups
+13cd836d627	Marc G. Fournier	1996-10-20 10:53:18 +0000	258	#include file cleanup
+7b58bb00886	Marc G. Fournier	1996-10-20 20:34:06 +0000	16	Clean up comments (-Wall -Werror)
+925ea01ed6f	Marc G. Fournier	1996-10-20 20:40:17 +0000	1	Add #define HAVE_MEMMOVE for systems that do have it.
+331bb53b0fe	Marc G. Fournier	1996-10-20 20:57:06 +0000	1	change '#if defined(PORTNAME_sparc)' to '#if !defined(HAVE_MEMMOVE)'
+2217b1ccd8f	Marc G. Fournier	1996-10-20 20:58:14 +0000	3	Make default HAVE_MEMMOVE defined, undef inside of definitions for sparc
+597a1de9033	Marc G. Fournier	1996-10-20 21:51:45 +0000	1	remove an #ifdef/#else/#endif that doesn't actually have anything inside of it
+d458a1c747d	Marc G. Fournier	1996-10-20 22:04:49 +0000	75	Other then:
+8325d9fc3b5	Marc G. Fournier	1996-10-21 05:05:42 +0000	8	Define prototypes from giststrat.c required in gistscan.c
+95874fa0343	Marc G. Fournier	1996-10-21 05:11:00 +0000	42	-Wall cleanup of gist subdirectory: \t- cleaned out unused variables \t- added missing prototype headers
+04522279890	Marc G. Fournier	1996-10-21 05:14:02 +0000	32	-Wall Cleanup of gist subdirectory
+ede7e6b0451	Marc G. Fournier	1996-10-21 05:45:21 +0000	83	-Wall'd
+b446f38510d	Marc G. Fournier	1996-10-21 05:59:49 +0000	49	-Wall'd
+1363ca1d52a	Bryan Henderson	1996-10-21 06:56:57 +0000	11	Force user to set PORTNAME.  Remove NAMEDATALEN from CFLAGS (don't need it there because it's in config.h, which is cleaner).
+c9f8bad182e	Marc G. Fournier	1996-10-21 07:15:18 +0000	158	-Wall'd
+f47ffc9a4e0	Marc G. Fournier	1996-10-21 07:18:08 +0000	2	Make line 159:bp = NULL, to quiet compiler
+8385d557d1d	Marc G. Fournier	1996-10-21 07:38:20 +0000	33	-Wall'd ... I missed a subdir under access :(
+aa907f7d0c0	Marc G. Fournier	1996-10-21 08:31:23 +0000	145	-Wall'd
+9a7fda57eef	Marc G. Fournier	1996-10-21 09:37:26 +0000	203	-Wall'd
+82b83f6f71a	Marc G. Fournier	1996-10-21 11:49:41 +0000	133	Cosmetic changes to ordering of #include files
+2db54b8e4fe	Bryan Henderson	1996-10-23 07:14:43 +0000	15	Update "planner" directory to "optimizer" in include paths in this dead code.
+29a0fb84fca	Marc G. Fournier	1996-10-23 07:33:04 +0000	26	|I have moved things around so that things happen in the following order: | |  1. Set default variables |  2. Include Makefile.custom to override defaults |  3. Set CFLAGS, etc. with variables | |This fixes the problem of Makefile.custom changes not taking effect.
+f36b2560a4d	Marc G. Fournier	1996-10-23 07:42:13 +0000	249	Major code cleanups from D'arcy (-Wall -Werror)
+7f76072d81f	Marc G. Fournier	1996-10-24 06:25:34 +0000	1	Bruce...does this fix it once and for all? *grin*
+c471d2bdebc	Marc G. Fournier	1996-10-24 06:30:40 +0000	2	Take out the PERFECT_MMGR #ifdefs:
+e152661200c	Marc G. Fournier	1996-10-24 06:32:01 +0000	2	Fixes:
+20b4c46e263	Marc G. Fournier	1996-10-24 07:55:54 +0000	28	Fixes: Errors when PQexec() in backend creates temp               relations and transaction is aborted
+f6f8ca49708	Marc G. Fournier	1996-10-24 07:59:46 +0000	32	Fixes: Growing backend when using nested function calls
+3010f46d2a4	Bryan Henderson	1996-10-25 06:00:49 +0000	3	E Use EUROPEAN_DATES from config.h instead of -D option
+ec86e4b95b2	Bryan Henderson	1996-10-25 06:02:52 +0000	8	Use EUROPEAN_DATES instead of EUROPEAN_STYLE
+e18d49d82a2	Bryan Henderson	1996-10-25 09:22:30 +0000	3	Add CFLAGS+=-DPOSTPORT=... so we can take it out of the global CFLAGS.
+716d506a819	Marc G. Fournier	1996-10-25 09:55:36 +0000	45	Make sure the btree patch gets into 2.0 as well...
+87b48ff0322	Marc G. Fournier	1996-10-26 04:15:05 +0000	19	D'Arcy's cleanups
+1e39d14ff33	Bryan Henderson	1996-10-26 05:03:24 +0000	2	Correct #if statement so it compiles on Solaris.  Thanks Keith Parks.
+b0d6f0aa639	Bryan Henderson	1996-10-27 09:55:05 +0000	3269	Simplify make files, add full dependencies.
+b13ffd34b38	Bryan Henderson	1996-10-28 09:00:54 +0000	170	Add our own copy of inet_aton() for sparc_solaris, which doesn't have it in the standard C library.
+aa1eac7979f	Bryan Henderson	1996-10-28 09:03:50 +0000	12	Make a local isblank() function, since not all standard C libraries have it. For sparc_solaris, add inet_aton prototype, since it isn't in the header files included for the standard C library functions.
+63481f0b926	Bryan Henderson	1996-10-28 09:05:29 +0000	9	Use strncpy() and local buffers instead of snprintf(), since not everyone has snprintf().
+9826413f293	Marc G. Fournier	1996-10-28 22:11:47 +0000	520	Add in Andrew's FAQs
+060f1d6a738	Marc G. Fournier	1996-10-28 22:12:42 +0000	3	Slight changes to INSTALL to point ppl at the Linux/IRIX specific FAQs
+71c1d59d1ab	Bryan Henderson	1996-10-29 21:51:13 +0000	9	Remove another snprintf() for Solaris.
+aa71f918c3c	Bryan Henderson	1996-10-29 21:53:48 +0000	3	Fix sigaction again to try for portability.
+1dfe4eaeb1c	Bryan Henderson	1996-10-30 00:36:59 +0000	1	Fix small syntax error.
+f59a46a8c81	Bruce Momjian	1996-10-30 02:02:41 +0000	393	Parser Overhaul
+6ada9dfdce5	Marc G. Fournier	1996-10-30 06:01:55 +0000	35	Fix up INSTALL file
+69c7f25bed1	Marc G. Fournier	1996-10-30 06:08:10 +0000	43	Fixes:
+5879b80da77	Marc G. Fournier	1996-10-30 06:13:36 +0000	15	Commit a newer fact for 1.09 from Andrew
+582982e6136	Marc G. Fournier	1996-10-30 06:14:07 +0000	26	commit a newer IRIX FAQ from Andrew
+552620c8b24	Marc G. Fournier	1996-10-30 06:18:42 +0000	367	Changes to libpgtcl submitted by: wieck@sapserv.debis.de (Jan Wieck)
+da7f60c9d38	Marc G. Fournier	1996-10-30 06:19:53 +0000	4	Fixes: Incorrect syntax for copy command
+f1c95ed41e3	Marc G. Fournier	1996-10-30 21:18:22 +0000	3	Fix memset() call, variables being passed in wrong order.
+08554e4abb6	Bruce Momjian	1996-10-31 05:53:10 +0000	3	Removed false and changed to a commented true.
+4cf9d03ec79	Bruce Momjian	1996-10-31 05:54:27 +0000	4	Added prototypes missing from parser patch. Added needed include file.
+34945055a8b	Bruce Momjian	1996-10-31 05:55:24 +0000	4	Changed make to gmake. Added needed include file.
+3eb6cc491d7	Bruce Momjian	1996-10-31 05:56:27 +0000	17	changed define(port) to define(PORTNAME_port) Added needed include file.
+7a93da98af8	Bruce Momjian	1996-10-31 05:57:23 +0000	15	Missing from parser patch. Added needed include file.
+3d7fe6c97c1	Bruce Momjian	1996-10-31 05:58:01 +0000	34	Added needed include file.
+d91cc297bb6	Bruce Momjian	1996-10-31 05:58:32 +0000	2	Changed include path.
+7ee319d80ee	Bruce Momjian	1996-10-31 05:59:13 +0000	0	Removed duplicate files.
+f5501d9c37b	Bruce Momjian	1996-10-31 06:13:25 +0000	73	Installed new FAQ's after I deleted them accidentally while removing duplicate names.
+5cbff9a0201	Marc G. Fournier	1996-10-31 06:55:15 +0000	17	USE of PORTNAME_* should be discouraged wherever possible.  The code *should* be intelligent enough that:
+5565d32e10b	Marc G. Fournier	1996-10-31 07:04:50 +0000	2	There is no -I../.. include files...
+0a761375e98	Marc G. Fournier	1996-10-31 07:09:33 +0000	0	Move these files to ${SRCDIR}/include
+83311355d78	Marc G. Fournier	1996-10-31 07:10:14 +0000	1179	Add these files to ${SRCDIR}/include
+c59b3afbf12	Marc G. Fournier	1996-10-31 07:22:07 +0000	1	Well, normally there wouldn't be anything in -I../.., and in a minute, there won't be...
+081fd70d92e	Marc G. Fournier	1996-10-31 07:25:15 +0000	4	Even compile generated .h files should be in ${SRCDIR}/include...
+14352a3ef66	Marc G. Fournier	1996-10-31 07:37:57 +0000	3	.h files shouldn't include .h files, .c files should contain .h files...
+ba4ad2c71a2	Marc G. Fournier	1996-10-31 07:48:38 +0000	8	Added misc include files
+ea04818002b	Marc G. Fournier	1996-10-31 08:09:47 +0000	24	Add a couple of missing includes
+367ade186ff	Marc G. Fournier	1996-10-31 08:24:47 +0000	53	Remove -I../.. and -I../../include from Makefile
+f578f8fb682	Marc G. Fournier	1996-10-31 08:28:53 +0000	12	Cleaned out -I../.. -I../../include from Makefile
+ab2444032a3	Marc G. Fournier	1996-10-31 08:32:23 +0000	11	Same clean up of Makefile, and addition of include files
+b13f5c25e24	Marc G. Fournier	1996-10-31 08:52:54 +0000	41	More of the same...clean Makefile, add include files
+3341750769e	Bryan Henderson	1996-10-31 09:08:10 +0000	193	Require superuser privilege to create C function.
+99412aef232	Marc G. Fournier	1996-10-31 09:51:30 +0000	87	remove: \t#include "postgres.h" \t#include "c.h"
+3df33180a18	Marc G. Fournier	1996-10-31 10:12:26 +0000	64	add #include "postgres.h", as required by all .c files
+bdd07411b48	Marc G. Fournier	1996-10-31 10:17:09 +0000	13	remove use of PORTNAME_*
+4df1a414789	Marc G. Fournier	1996-10-31 10:20:09 +0000	27	more removals of PORTNAME_*
+df6a9e633c6	Marc G. Fournier	1996-10-31 10:23:28 +0000	39	more removal of PORTNAME_*
+ffaff3dcd40	Marc G. Fournier	1996-10-31 10:26:33 +0000	17	Clean out makefile
+ae1d931e885	Marc G. Fournier	1996-10-31 10:37:53 +0000	24	clean up makefile
+eb501f1cd39	Marc G. Fournier	1996-10-31 10:42:56 +0000	7	More Makefile cleanups
+76294e1d385	Marc G. Fournier	1996-10-31 10:59:42 +0000	49	Cleanup Makefiles
+b17c49e95de	Marc G. Fournier	1996-10-31 11:09:44 +0000	5	Add #include "postgres.h"
+3ce9ccff7c7	Bruce Momjian	1996-10-31 17:27:58 +0000	2	Fix for gmake clean.
+69dfa71bc3d	Bruce Momjian	1996-10-31 18:27:54 +0000	3	Fix prototype.
+727c8407548	Bruce Momjian	1996-10-31 18:33:09 +0000	2	typo fix on include file.
+3a4c2888a1c	Bruce Momjian	1996-11-01 01:47:23 +0000	37	Removal of bsdi_2_1 port.
+c3b9c520bed	Bruce Momjian	1996-11-01 02:21:15 +0000	2	FIx for bsdi.
+fba75d0fdcb	Bruce Momjian	1996-11-01 02:32:16 +0000	10	Decoupled ASSERT and DEBUG options.
+dd10d0de23b	Bruce Momjian	1996-11-01 03:36:16 +0000	14	More chanes for bsdi_2_1 removal
+ea94d639d0c	Marc G. Fournier	1996-11-01 09:12:18 +0000	7	Okay, so I was going backwards on my include cleanup...
+6d4c760eb58	Marc G. Fournier	1996-11-01 09:19:11 +0000	2	Include file cleanup:
+f44acab12c7	Marc G. Fournier	1996-11-01 09:22:37 +0000	3	Include dependencies based on tupdesc.h, as:
+3516eda61c6	Marc G. Fournier	1996-11-01 09:31:17 +0000	22	Okay, following Bryan's (and others) suggestions...cleaning up the include files properly...yet, slowly...
+a95674269f2	Marc G. Fournier	1996-11-01 09:41:41 +0000	36	More intelligent #include cleanups, as pointed out by Bryan...
+c9b05e55ac4	Bruce Momjian	1996-11-01 21:04:48 +0000	3	Comment changes.
+d27c28fdc0c	Bryan Henderson	1996-11-02 02:01:48 +0000	146	Allow only superuser to do backend copy.
+fa608ad2a66	Bryan Henderson	1996-11-02 02:03:13 +0000	10	Fix bug in checking permissions on table being COPY'd.
+675740a8f31	Bryan Henderson	1996-11-02 02:03:50 +0000	15	Add misc subdirectory.
+763adb5235d	Bryan Henderson	1996-11-02 02:06:47 +0000	80	Convenience routine for checking superuser status.
+c5c8983ef7c	Bryan Henderson	1996-11-02 09:49:57 +0000	11	Add complete setting of AROPT
+31e8156fad2	Bryan Henderson	1996-11-02 09:53:15 +0000	29	Continuation of make file simplification; handle libpq.a dependancy.
+b216c1eac65	Bryan Henderson	1996-11-02 09:54:44 +0000	86	Continuation of make file simplification; deal with header file shuffle.
+daa93cf5c51	Marc G. Fournier	1996-11-03 04:48:27 +0000	6	Clean up Makefile, make sure that postmaster.c compiles
+c4edfb46679	Marc G. Fournier	1996-11-03 04:51:51 +0000	6	Clean up Makefile, add #postgres.h as required
+66637f4a2f8	Marc G. Fournier	1996-11-03 04:57:03 +0000	19	Clean up Makefile
+6fac4602ae2	Marc G. Fournier	1996-11-03 05:08:01 +0000	52	Clean up Makefile(s)
+3cf53c1d8ae	Marc G. Fournier	1996-11-03 06:54:10 +0000	8	Change default install directories to /usr/local/pgsql
+c9002ecb21a	Marc G. Fournier	1996-11-03 06:54:38 +0000	73	Produce a clean compile of backend...
+dd5b78f1c1b	Marc G. Fournier	1996-11-03 06:56:52 +0000	1	Remove 'unused variable `open_errno''
+aed384f12df	Marc G. Fournier	1996-11-03 07:00:57 +0000	3	Quiet a compiler warning (see line 729+, retvalue)
+4bdf308bdf7	Marc G. Fournier	1996-11-03 07:14:32 +0000	16	shared build fails, but the rest compiles...formatting error in the cc -shared, I believe...
+0c960e7fc04	Marc G. Fournier	1996-11-03 08:17:38 +0000	32	More include file cleanups
+a505db6f330	Bryan Henderson	1996-11-03 09:03:30 +0000	10	Create TAGS file for emacs.  Like MAKE_CTAGS for vi.
+a7a0b3ba304	Bryan Henderson	1996-11-03 09:05:30 +0000	27	Keep the generated .h files in the local directory, like other object files, rather than in src/include with normal header files.  Necessary to make dependancies work out so they don't keep getting rebuilt for no reason.
+66a518735f7	Marc G. Fournier	1996-11-03 09:07:03 +0000	8	Finish cleaning up -I lines
+8ac872b26d4	Bryan Henderson	1996-11-03 09:24:04 +0000	3	Fix bogus format in two error messages.
+5a58dabbbcd	Bryan Henderson	1996-11-03 09:28:31 +0000	4	Include Makefile.global so fmgrtab.c compiles properly.  Thanks Keith Parks.
+dd71c369333	Marc G. Fournier	1996-11-03 10:57:24 +0000	16	That pretty much totally cleans up the includes files here.
+71cd646a34d	Marc G. Fournier	1996-11-03 12:11:19 +0000	9	More include file cleanups
+ff36ebc9225	Marc G. Fournier	1996-11-03 12:13:35 +0000	44	More cleans of the inter-dependencies in the #include files
+302b809793a	Marc G. Fournier	1996-11-03 12:35:27 +0000	78	Changes required so that access/* compiles cleanly...
+ca112038ab2	Marc G. Fournier	1996-11-03 22:58:26 +0000	33	More include file cleanups
+4029fb52c69	Marc G. Fournier	1996-11-03 23:27:08 +0000	31	first pass at cleaning up include files
+d2aa40517af	Marc G. Fournier	1996-11-03 23:46:28 +0000	1	Cleaned up include headers
+d46d53387f4	Marc G. Fournier	1996-11-03 23:49:07 +0000	5	Not sure if this is the right place, but add a prototype for Bryan's superuser() function
+510ebf75a18	Marc G. Fournier	1996-11-03 23:57:43 +0000	30	Another first pass at cleaning up the #includes
+7e42f4814d4	Bruce Momjian	1996-11-04 04:00:56 +0000	78	Removed PORTNAME_.  Use OS version only.
+e43dfad2896	Bruce Momjian	1996-11-04 04:05:16 +0000	2	Remove ESCAPE_PATCH define
+8edbc3bde4c	Bruce Momjian	1996-11-04 04:19:55 +0000	2	Remove ARRAY_PATCH define
+0108fddf13e	Bruce Momjian	1996-11-04 04:35:48 +0000	4	Remove NULL_PATCH define
+18bbad7696c	Bruce Momjian	1996-11-04 04:53:51 +0000	6	Remove OPENLINK define
+f95322d9ef4	Bruce Momjian	1996-11-04 05:01:47 +0000	2	Remove optimization-specific stuff from OS sections.  Use CDEBUG.
+de3286ce3a0	Bruce Momjian	1996-11-04 05:02:44 +0000	0	Remove AMERICAN STYLE.  Not used.
+5061c23ac20	Bruce Momjian	1996-11-04 05:15:07 +0000	20	Rename CDEBUG to COPT
+089dfb61f01	Bryan Henderson	1996-11-04 06:32:59 +0000	12	Add ability to deal with the fmgr.h dependency.
+796aca39162	Marc G. Fournier	1996-11-04 06:35:36 +0000	2	include utils/palloc.h as a default include, as its used more often then not
+d93d3c843af	Marc G. Fournier	1996-11-04 07:18:46 +0000	24	-Wall based cleanup of include files, based from acl.h, and everything that it depends on
+5a5f9420e5f	Marc G. Fournier	1996-11-04 07:46:06 +0000	25	Another series started from utils/builtins.h
+82400d4c508	Marc G. Fournier	1996-11-04 07:59:39 +0000	9	Next, based on utils/catcache.h
+63482946c72	Marc G. Fournier	1996-11-04 08:14:05 +0000	3	More cleanups (this one will most likely break under Win32, if anyone is working on it)
+434201d8d72	Marc G. Fournier	1996-11-04 08:53:07 +0000	24	another pass through.
+7870c5a0d32	Bryan Henderson	1996-11-04 09:17:55 +0000	498	Add frontend \\copy command.
+0b3cb80e03a	Marc G. Fournier	1996-11-04 11:51:27 +0000	40	finally, this directory is (should be!) totally clean
+dc037969ada	Marc G. Fournier	1996-11-04 12:07:05 +0000	10	Another one completely cleaned up
+0e2822072c4	Marc G. Fournier	1996-11-04 12:11:44 +0000	8	Make sure all the cleaned up includes are commited
+d2746c65b56	Marc G. Fournier	1996-11-04 12:12:52 +0000	13	Make sure all the cleaned includes are commited
+8a1e0e8eb8c	Marc G. Fournier	1996-11-05 05:17:28 +0000	11	Bring in minor changes from Andrew
+48a7170a715	Marc G. Fournier	1996-11-05 05:25:44 +0000	4	Added missing #includes pointed out by Keith Parks
+fd569a23085	Marc G. Fournier	1996-11-05 05:26:32 +0000	3	Clean up a few of the #include files
+abf578ac6c2	Marc G. Fournier	1996-11-05 05:28:20 +0000	2	Fix c.h for sparc_solaris
+d2125805d1d	Marc G. Fournier	1996-11-05 06:11:08 +0000	51	Another directory totally cleaned out
+7585d251850	Marc G. Fournier	1996-11-05 07:07:22 +0000	3	Another one cleaned out
+8202bce9ba7	Marc G. Fournier	1996-11-05 07:15:58 +0000	2	And another..
+54c2aa99bd1	Marc G. Fournier	1996-11-05 07:18:05 +0000	4	And another...
+bc711a3f546	Marc G. Fournier	1996-11-05 07:20:09 +0000	3	Another one bits the dust...
+9ec5e78613d	Marc G. Fournier	1996-11-05 07:22:50 +0000	2	And another one
+51716fdd8d4	Marc G. Fournier	1996-11-05 07:24:03 +0000	2	Another
+6c8482c970e	Marc G. Fournier	1996-11-05 07:38:17 +0000	2	Make sure all changes commited
+efef619b834	Marc G. Fournier	1996-11-05 07:41:13 +0000	1	And double check changes
+1c3a7767ca9	Marc G. Fournier	1996-11-05 07:42:46 +0000	52	Re-add -I../.. for fmgr.h
+d1e9a761317	Marc G. Fournier	1996-11-05 08:18:44 +0000	34	Another run through.
+0cf60fb7182	Marc G. Fournier	1996-11-05 08:19:01 +0000	39	More cleaned out #include files
+4312192e6b7	Marc G. Fournier	1996-11-05 09:40:25 +0000	51	another directory cleaned of extraneous #includes
+466f5fd7290	Marc G. Fournier	1996-11-05 09:53:03 +0000	27	More cleanups
+4fa90e38d5e	Marc G. Fournier	1996-11-05 10:02:06 +0000	29	More cleanups
+500ce42f370	Marc G. Fournier	1996-11-05 10:35:38 +0000	72	Almost done access...
+6608278ea40	Marc G. Fournier	1996-11-05 10:37:16 +0000	33	these ones have their dependencies cleaned up
+050d1482955	Marc G. Fournier	1996-11-05 10:54:20 +0000	62	One more to go
+03eb5a50e7a	Marc G. Fournier	1996-11-05 11:12:33 +0000	37	There, that cleans *that* out
+225a2247923	Marc G. Fournier	1996-11-05 11:17:47 +0000	3	Missed a file...
+dc0e2569026	Marc G. Fournier	1996-11-05 11:23:43 +0000	3	clean this one
+90113e2847b	Marc G. Fournier	1996-11-05 11:29:45 +0000	2	another one quickly done up
+e4725ee76a3	Marc G. Fournier	1996-11-05 11:57:55 +0000	27	Makes it compile...still needs work
+ce4c0ce1dec	Marc G. Fournier	1996-11-06 06:52:23 +0000	211	Some compile failure fixes from Keith Parks <emkxp01@mtcc.demon.co.uk>
+8544daf645a	Marc G. Fournier	1996-11-06 07:05:18 +0000	3	Another one bites the dust
+9e3d4c43a73	Marc G. Fournier	1996-11-06 07:31:26 +0000	384	Another directory cleaned up
+87b07a3974e	Marc G. Fournier	1996-11-06 07:44:18 +0000	6	Further include file cleanups
+6508241acb9	Marc G. Fournier	1996-11-06 07:50:12 +0000	3	another include cleaned out
+08905a74068	Marc G. Fournier	1996-11-06 08:02:40 +0000	4	Another one bite sthe dust
+98f72c28dc6	Marc G. Fournier	1996-11-06 08:05:02 +0000	1	Oops, two includes unrequired
+33a8df7edd9	Marc G. Fournier	1996-11-06 08:07:45 +0000	5	Another one cleaned up
+7385619f14e	Marc G. Fournier	1996-11-06 08:21:43 +0000	243	Clean it up so that it compiles
+e2329091571	Marc G. Fournier	1996-11-06 08:27:16 +0000	37	Slowly getting faster to make sure it compiles...still needs cleaning up, but one thing at a time :)
+a472a29bb42	Marc G. Fournier	1996-11-06 08:48:33 +0000	107	I'm getting there, slowly :)
+e0b772cc006	Marc G. Fournier	1996-11-06 08:52:04 +0000	3	another gone
+83d93d437b7	Marc G. Fournier	1996-11-06 08:54:17 +0000	7	Just a couple of small mods
+8b6b4d063a9	Marc G. Fournier	1996-11-06 09:17:31 +0000	3	another one bites the dust
+92ec7b58123	Marc G. Fournier	1996-11-06 09:19:16 +0000	2	And another
+7d5e7955961	Marc G. Fournier	1996-11-06 09:21:42 +0000	3	Getting there, one by one...
+3f07f6bab2e	Marc G. Fournier	1996-11-06 09:24:57 +0000	2	Another
+be9197320a5	Marc G. Fournier	1996-11-06 09:27:29 +0000	3	One by one, file by file
+58a0150f64b	Marc G. Fournier	1996-11-06 09:29:26 +0000	22	More files cleaned out
+9f5eac1f97e	Marc G. Fournier	1996-11-06 09:56:47 +0000	1	...same...
+b49d41884f0	Marc G. Fournier	1996-11-06 10:15:25 +0000	4	Add prototype for: int DebugFileOpen()
+b6e640f829d	Marc G. Fournier	1996-11-06 10:22:13 +0000	4	Make sure that #include <postgres.h> is included in fmgrtab.c
+1d0dd471fa1	Marc G. Fournier	1996-11-06 10:31:02 +0000	17	Okay...this pretty much cleans out the include files.
+0020e8790da	Marc G. Fournier	1996-11-06 10:32:10 +0000	109	Another directory that compiles with no errors, and few warnings
+388c0d81dab	Bruce Momjian	1996-11-06 22:32:18 +0000	2	Change instructions for 1.*.
+8de4434eb7e	Bruce Momjian	1996-11-06 22:34:18 +0000	4	Update initdb instructions for a 1.* database.
+33b433b1afb	Bryan Henderson	1996-11-07 05:10:17 +0000	0	Try to fix mode.
+00b1fb07f0d	Bryan Henderson	1996-11-07 05:15:31 +0000	10	Try to fix mode.
+b8003d098b4	Bruce Momjian	1996-11-07 15:24:27 +0000	2	Cleanup initdb for 1.*.
+b38d565fc3e	Marc G. Fournier	1996-11-08 00:46:14 +0000	46	D'Arcy's recent cleanups
+7d8b794a9a8	Marc G. Fournier	1996-11-08 00:56:17 +0000	4	Add some missing includes
+2768f391a4d	Marc G. Fournier	1996-11-08 00:58:07 +0000	6	There is a problem in the Makefile of libpgtcl on linux (and maybe also on other platforms).  If I do the standard make + make install the shared library is not linked with the the libpq library and when I try to load it in the standard Tcl or Tk shell I get a lot of unresolved symbols.  The bug doesn't affect pgtclsh because it is linked also with libpq. The problem exists only when using the dynamic load feature of Tcl7.5.
+ad6ca0c3af7	Marc G. Fournier	1996-11-08 00:59:10 +0000	4	Another patch to quiet the compiler from D'Arcy
+026387013e6	Marc G. Fournier	1996-11-08 01:08:37 +0000	3	Secondly, small problem when trying to create a MAX/MIN aggregate in 1.09.
+d79bb2fd0ee	Marc G. Fournier	1996-11-08 01:10:15 +0000	20	quick doc cleanup for libpgtcl from D'Arcy
+4b2b8592a04	Bruce Momjian	1996-11-08 06:02:30 +0000	339	Compile and warning cleanup
+7886d7351e2	Bryan Henderson	1996-11-08 06:24:58 +0000	6	Fix perbyte_cpu thing
+cecf081abaa	Marc G. Fournier	1996-11-08 06:43:28 +0000	4	Change includes from "" to <>
+8006c6f52f6	Marc G. Fournier	1996-11-08 07:47:52 +0000	2	Somehow PORTNAME keeps getting changed to BSD44_derived :(
+c9c0e111b8d	Bruce Momjian	1996-11-08 20:46:33 +0000	59	More compile cleanups
+78078236ea7	Bruce Momjian	1996-11-08 21:40:11 +0000	2	Fix typo in file name found during install.
+757b829ea8e	Marc G. Fournier	1996-11-09 01:48:32 +0000	3	A few more sparc_solaris cleanups from keith parks
+1d0e3083951	Bruce Momjian	1996-11-09 05:48:28 +0000	19	Added new include file.
+a0990e18849	Bruce Momjian	1996-11-09 06:24:51 +0000	94	Makefile cleanup after reorganization
+7ee9464bc1c	Marc G. Fournier	1996-11-09 10:29:50 +0000	46	various docs changes requested by Bryan
+4aa1734f364	Marc G. Fournier	1996-11-09 10:39:54 +0000	520	Added in PQconnectdb() function
+d7806dc5ee6	Bryan Henderson	1996-11-10 00:38:38 +0000	3	Make it find inet_aton.h so backend compiles on Solaris.
+5d9e25c5ffd	Bryan Henderson	1996-11-10 00:50:54 +0000	2	Add USE_POSIX_TIME, HAVE_TZSET for Linux so backend compiles.
+0e5ab3655c6	Bryan Henderson	1996-11-10 01:20:44 +0000	1	Remove #include <regex.h> so it compiles on systems with GNU regex library.
+4e70c059799	Bryan Henderson	1996-11-10 01:35:39 +0000	2	Add #include <unistd.h> to quiet warning about missing getopt() declaration.
+9f1b6bf7dbe	Bryan Henderson	1996-11-10 01:37:48 +0000	2	Add #include <unistd.h> to quiet compiler warning about missing getopt() declaratoin.
+2e21b7e4bce	Bryan Henderson	1996-11-10 01:46:14 +0000	2	Add #include <ctype.h> to quiet compiler about missing declaration of isspace().
+bf5cbbf7895	Bryan Henderson	1996-11-10 02:27:15 +0000	24	Quiet compiler warnings.
+aaeef4d17db	Bruce Momjian	1996-11-10 03:06:38 +0000	551	All external function definitions now have prototypes that are checked.
+08029facb3e	Bryan Henderson	1996-11-10 03:13:59 +0000	40	Recognize dependencies more reliably.
+77f8dff6174	Bruce Momjian	1996-11-10 03:30:46 +0000	1	prototype cleanup
+60915ed2c26	Bryan Henderson	1996-11-10 04:09:51 +0000	2	Change gmake to $(MAKE) so backend compiles on system with no "gmake".
+1a5b4b9ffe0	Bruce Momjian	1996-11-10 17:35:58 +0000	2	Removed -Wmissing-declaration.
+8d9be647dc2	Bruce Momjian	1996-11-11 03:12:00 +0000	6	Moved -Werror to COPT.
+13d44b4aac5	Bruce Momjian	1996-11-11 04:54:54 +0000	11	Warning removal cleanup
+42a344683a3	Bruce Momjian	1996-11-11 05:55:33 +0000	28	Remove warnings when readline is not used.
+9fc64aefe14	Marc G. Fournier	1996-11-11 11:29:15 +0000	2	change include c.h to postgres.h
+6913c8b4a49	Marc G. Fournier	1996-11-11 11:49:40 +0000	4	Add an abort() call to ExceptionalCondition so that is Assert is called, it dumps core...
+2bdded3540a	Marc G. Fournier	1996-11-11 12:14:45 +0000	25	Various cleanups from D'Arcy
+41b8c2c849c	Marc G. Fournier	1996-11-11 12:16:57 +0000	237	As proposed,
+58413fd9fcc	Marc G. Fournier	1996-11-11 12:19:05 +0000	17	----- |After sending my previous changes I found one more thing in Makefile.global. |Any tests should be done after including Makefile.custom or else there |won't be anything, particularly the port name, to base the tests on. | -----
+a7511908e17	Bryan Henderson	1996-11-11 13:24:43 +0000	38	Add DASH_N, BACKSLASH_C variables, moved from postgres.shell.mk.
+6f708e42d1f	Bryan Henderson	1996-11-11 13:41:36 +0000	188	Makefile simplification: the "bin" chapter
+bf80f41ec1b	Bryan Henderson	1996-11-11 13:51:57 +0000	183	Add utils directory for cross-subsystem tools to keep make files from having to be sleazy and reach into other subsystems' directories.  First entry in this directory is the PG_VERSION file interface, which must be used by the backend and also the pg_version program (which is used by initdb).
+a157098f7c9	Bruce Momjian	1996-11-11 14:02:10 +0000	1	Fixed double pfree on opaque.
+b0961b3974a	Bryan Henderson	1996-11-11 14:24:38 +0000	24	Goes with the recently added src/utils/version.c, will replace some stuff in miscadmin.h.
+b99e3b0cccc	Marc G. Fournier	1996-11-11 14:44:04 +0000	2	Add missing include errno.h
+64f80c76d8e	Marc G. Fournier	1996-11-11 14:55:49 +0000	7	fix 'conflicting types' errors
+39b4a0505f0	Marc G. Fournier	1996-11-11 16:30:07 +0000	3	Add a blank install target so that 'make install' works
+c7ce63e04c9	Marc G. Fournier	1996-11-11 16:33:12 +0000	3	Add include file postgres.h
+4f1e59f72b4	Bryan Henderson	1996-11-12 02:54:30 +0000	4	Fix bug where it tries to do a cleardbdir when you make install.
+f45b50cfe0a	Bryan Henderson	1996-11-12 06:10:10 +0000	2	Add install dependency.
+bbe89089c8d	Bryan Henderson	1996-11-12 06:11:52 +0000	4	Add dependency for install.
+17befd6c692	Bryan Henderson	1996-11-12 06:47:10 +0000	155	Use new utils/version.c instead of backend/utils/init/magic.c.
+b5499249e51	Bryan Henderson	1996-11-12 11:09:13 +0000	12	Quiet compiler warnings.
+c8708c5f9b9	Marc G. Fournier	1996-11-12 11:16:44 +0000	2	Fix for finding the include files
+594525aec1a	Bryan Henderson	1996-11-12 11:41:27 +0000	19	Put shared libraries in main directory, not obj/
+d7dd9295b7b	Bryan Henderson	1996-11-12 11:43:32 +0000	251	End of the make file simplifications.
+b2697939754	Bryan Henderson	1996-11-13 06:36:38 +0000	18	Forgot in yesterday's make file blitz.
+fdc1cf2434c	Bryan Henderson	1996-11-13 08:36:31 +0000	13	Make shared library builds work for BSD44_derived.
+b20766ccc4a	Bryan Henderson	1996-11-13 10:36:36 +0000	21	Eliminate MKDIR, srcdir, objdir.  Centralize setting of LIBPQDIR.
+0cec8fe26c4	Bryan Henderson	1996-11-13 11:43:04 +0000	2	Fix syntax error introduced in last update.
+07a65b22554	Marc G. Fournier	1996-11-13 20:56:15 +0000	866	Commit of a *MAJOR* patch from Dan McGuirk <djm@indirect.com>
+25b4ca42840	Bruce Momjian	1996-11-14 00:26:23 +0000	2	Added percentage to CASSERT comment.
+200d4a4ec3d	Bryan Henderson	1996-11-14 06:06:39 +0000	7	Include stdlib.h to gives its NULL, etc. definitions precedence over ours.
+b4d689070e5	Bryan Henderson	1996-11-14 07:19:26 +0000	44	Use -W options only if compiler is gcc.
+902d2b8bac8	Bryan Henderson	1996-11-14 07:33:34 +0000	27	Use -Wno-error option only if compiler is gcc.
+6b135c93917	Bryan Henderson	1996-11-14 08:23:31 +0000	2	Use port-protos.h instead of trying to declare random() and srandom() explicitly.
+65a10b1be64	Bryan Henderson	1996-11-14 09:24:39 +0000	3	Missed this part when I eliminated $(srcdir); src/bin stuff won't compile.
+389fe48cbb5	Marc G. Fournier	1996-11-14 10:15:16 +0000	0	Removed man pages...moved to src/man
+7ac541daf1b	Marc G. Fournier	1996-11-14 10:18:14 +0000	8609	moved man pages here, as requested by Bryan
+f64b8403871	Bryan Henderson	1996-11-14 10:25:54 +0000	302	Remove most compile-time options, add a few runtime options to make up for it. In particular, no more compiled-in default for PGDATA or LIBDIR.  Commands that need them need either invocation options or environment variables. PGPORT default is hardcoded as 5432, but overrideable with options or environment variables.
+0365c51e300	Bruce Momjian	1996-11-14 16:08:05 +0000	314	Overhaul MainLoop input processing for quotes, comments, backslashes.
+fdcf5ff79cc	Bruce Momjian	1996-11-14 16:09:28 +0000	13	Remove comments psql was putting in output, typo's. psql now returns error from queries and errors files, so ignore return code.
+fb3b9d76611	Marc G. Fournier	1996-11-14 20:06:39 +0000	2	Fix a comment that wasn't commente'd out
+d84057db71f	Marc G. Fournier	1996-11-14 20:08:58 +0000	4	Couple of Ultrix4 related patches submited by: \tErik Bertelsen <erik@sockdev.uni-c.dk>
+2081153e698	Marc G. Fournier	1996-11-14 20:27:06 +0000	10	Fix a comment...was going to fix the <sys/types.h> problem, but Randy is submitting a more comprehensive patch :)
+eedc75bfe1f	Marc G. Fournier	1996-11-14 20:49:09 +0000	16	Bring in Randy's NOROOT patch
+8abc490181a	Marc G. Fournier	1996-11-14 21:39:14 +0000	112	Features added:
+54c9905d6e5	Marc G. Fournier	1996-11-15 09:54:28 +0000	1	Mulitple inclusion of sys/socket.h
+a180738ddd6	Bruce Momjian	1996-11-15 17:55:31 +0000	45	Changed " to '.  Removed bug section from psql.  added reminder for log call in built-in.  fixed backslases in source for libpq.
+f8e02c192a7	Bruce Momjian	1996-11-15 18:36:31 +0000	2	Unallocate opaque.
+b847d297853	Bruce Momjian	1996-11-15 18:37:10 +0000	6	Remove PERFECT_MEM Unallocate opaque.
+3f53311088f	Bruce Momjian	1996-11-15 18:37:37 +0000	4	Fix quote/doublequote handling.
+36aaf2505d2	Bruce Momjian	1996-11-15 18:38:20 +0000	5	Correct permissions on lo_export(). Open up permissions.
+7085aba53c9	Bruce Momjian	1996-11-15 18:38:55 +0000	3	Remove quote removal. Moved to parser.
+b3ce105b319	Bruce Momjian	1996-11-16 04:59:10 +0000	6	Add prototype for new datetime functions.
+4024d430698	Bruce Momjian	1996-11-16 05:18:58 +0000	2	Added include file needed by memset().
+5dd3c5620c9	Bruce Momjian	1996-11-16 05:45:56 +0000	5	Added documentation on new unique index capability.
+7bf3bae1a48	Bryan Henderson	1996-11-16 08:09:16 +0000	6	Add #include <sys/types.h> so it works with Ultrix's in.h
+aef6163388d	Bryan Henderson	1996-11-16 09:03:44 +0000	2	Remove old GetPGData reference that causes warning.
+620f0146218	Bryan Henderson	1996-11-17 03:55:07 +0000	7	Fix syntax errors so it runs without error messages.
+4b130b22098	Bruce Momjian	1996-11-17 04:23:10 +0000	4	Fix for Alter TABLE add column varchar().  Was causing zero length.
+003b76f9acf	Bruce Momjian	1996-11-17 04:26:59 +0000	1	Fix for error when viewing group access privs.
+cc7f032289b	Bruce Momjian	1996-11-17 04:27:34 +0000	3	Fix for return code of psql in manual.
+ca1a20eba46	Bruce Momjian	1996-11-17 04:56:16 +0000	14	Fix for -da option of pg_dump.
+75f58aef7cc	Bruce Momjian	1996-11-17 05:26:57 +0000	67	New backend directory description file.
+b715c3ad960	Bruce Momjian	1996-11-17 19:26:44 +0000	2	Change SLSUFF from .so to .o as default.
+99a4dc0598e	Bruce Momjian	1996-11-17 19:27:38 +0000	9	Copy needed include files into standard directory.
+ce7a3b3a829	Bruce Momjian	1996-11-17 19:40:15 +0000	5	Enable manual pages to be installed.
+529189f4074	Bruce Momjian	1996-11-17 20:30:32 +0000	2	Renamed file.  Restored SLSUFF to .so.
+e780f0fef34	Bryan Henderson	1996-11-18 01:43:55 +0000	8	Ignore compiler warnings, because we can't escape "abstract declarator used as declaration".
+435d4f4a79e	Bryan Henderson	1996-11-18 01:44:28 +0000	10	Quiet compiler warnings, ignore the ones we can't.
+bd57c3afe5e	Bryan Henderson	1996-11-18 01:45:44 +0000	41	Quiet compiler warnings about missing prototypes in Linux's bitops.h.
+87f5fda6b94	Bryan Henderson	1996-11-18 02:23:41 +0000	41	Make port-specific link libraries defined for linking backend more global so you can also link pgtclsh.
+b55d49f5fe4	Bryan Henderson	1996-11-18 02:25:09 +0000	24	Add comments about the diversity of signal functionality.  Came from Makefile.global.
+e2a8163c405	Bryan Henderson	1996-11-18 02:26:57 +0000	16	Remove linux define of __USE_POSIX, which doesn't appear to do anything.
+4a820de1f27	Bryan Henderson	1996-11-18 02:27:27 +0000	18	Include some macros that used to be -D options in Makefile.global.
+317f375bb2e	Bruce Momjian	1996-11-18 06:07:56 +0000	39	Rename SLSUFF to DLSUFFIX
+c6453ea75f1	Bruce Momjian	1996-11-18 16:32:53 +0000	3	Added DLSUFFIX to bsdi.
+be421b9b9a9	Bryan Henderson	1996-11-19 02:43:46 +0000	3	Build man/ instead of ../doc.  Man pages have moved there.
+b8eb6400de6	Bryan Henderson	1996-11-19 02:52:21 +0000	0	Eliminate mk/ directory.  The tyranny of the included make file templates is ended!
+13312a007dd	Bryan Henderson	1996-11-19 02:55:37 +0000	0	The routines in magic.c have moved to the more accessible version.c.
+81f5c669e9e	Bryan Henderson	1996-11-19 02:57:10 +0000	0	This file has not been part of the regression test for many releases.
+2abbf392bd9	Bruce Momjian	1996-11-19 05:06:39 +0000	1	Removed old Assert's used during development.
+9529238d786	Bruce Momjian	1996-11-19 22:23:13 +0000	7	Make install change for man files
+bdb25dbad65	Bruce Momjian	1996-11-20 01:54:13 +0000	4	Fix for man Makefile.  Added 'all'.
+9d45f22e384	Bruce Momjian	1996-11-20 22:32:55 +0000	6	Here is the patch for pg_dump not handling NULL values in 'insert' mode properly.  This will apply correctly to 1.09 & 2.0 sources. From David H. Bennett
+6399c74f174	Bruce Momjian	1996-11-20 22:34:36 +0000	9	Fix \\g filename.  Free allocated memory and don't use memory that has been freed.
+8299e755776	Bruce Momjian	1996-11-20 22:35:19 +0000	14	    following is a little fix for libpq.
+c4d6bda2c56	Bruce Momjian	1996-11-20 22:53:10 +0000	3	There is a bug in aclinsert3 in the code which update the acl arrays. When an acl item is added or updated the new entry is deleted if it has no permissions and the acl array is shrinked. This is is done by decrementing the number of items without updating the corresponding array size. The array with the incorrect size is later read by pg_aclcheck and the entry count is used to allocate a new array while the array size is used to copy the old one. This causes a memory corruption and a backend crash. This happens only to normal user as the administrator bypasses acl checks. Massimo Dal Zotto
+cd743f83883	Bruce Momjian	1996-11-20 22:53:49 +0000	4	Otherwise "gmake install" fails.
+58802bf39a0	Bruce Momjian	1996-11-20 22:58:22 +0000	2	Can't add a keyword without making it a keyword.  :-) D'Arcy J.M. Cain                           |  Democracy is three wolves
+05b3b8613db	Vadim B. Mikheev	1996-11-21 06:02:56 +0000	7	Fix memory overhelding while forming index' result: memory allocation for ItemPointerData of heap' tuple is useless because of FormRetrieveIndexResult makes neccessary palloc.
+5d7e44fc8e8	Vadim B. Mikheev	1996-11-21 06:06:52 +0000	3	Fix memory overhelding while forming index' result:
+8c2f099ab5d	Vadim B. Mikheev	1996-11-21 06:13:43 +0000	11	Fix memory overhelding while forming index' result: memory allocation for ItemPointerData of heap' tuple is useless because of FormRetrieveIndexResult makes neccessary palloc.
+e67cc8a346d	Bryan Henderson	1996-11-22 04:32:41 +0000	2	Fix bug: -D options implies -d option.
+86ab9a51186	Bryan Henderson	1996-11-22 04:33:34 +0000	16	Fix bug: No -D option to postgres
+4da9c597af4	Bryan Henderson	1996-11-22 04:39:53 +0000	2	Include stdio.h to fix Craig Anderson's compile problem.
+25fe3c70989	Bryan Henderson	1996-11-22 04:43:48 +0000	2	Include ctype.h to fix Kurt Lidl's compile problem.
+eda3771290b	Bruce Momjian	1996-11-22 06:45:14 +0000	7	Fix for \\g strdup error.
+45f1d32bf1a	Bryan Henderson	1996-11-23 09:42:51 +0000	2	Eliminate pesky "postconfig not found" message.
+5c410fa0b9a	Bryan Henderson	1996-11-23 09:51:57 +0000	33	First pass at getting shared libraries on AIX properly built.
+7e499bd1120	Bryan Henderson	1996-11-24 03:55:19 +0000	2	Add dep: rule.
+d3f9d6ad4f1	Bryan Henderson	1996-11-24 04:07:17 +0000	6	Move include of signal.h inside pqsignal.h so it's always where it's needed.
+092c7a6be58	Bryan Henderson	1996-11-24 04:44:24 +0000	15	Typecasts, etc. to make compile work on AIX.  Thanks Darren King..
+9602150a04f	Bryan Henderson	1996-11-24 05:46:12 +0000	2	Fix syntax error: missing argument to elog().  Thanks Darren King.
+02db1f58cbd	Bryan Henderson	1996-11-24 05:58:57 +0000	6	Fix access through null pointer info->rule_action.  Thanks Darren King.
+6c2925b8848	Bruce Momjian	1996-11-25 03:03:48 +0000	1	Prevent empty queries from crashing server.
+1d84088f50f	Bryan Henderson	1996-11-25 05:51:50 +0000	4	Go back to $(postconfig...) from $(exec postconfig...) so it works on non-bash.
+46c4e6f6262	Bryan Henderson	1996-11-25 06:33:51 +0000	2	Include fcntl.h, which is not automatically included by sys/file.h on all systems.
+f93f780269a	Bryan Henderson	1996-11-26 01:14:38 +0000	7	-Werror fixes from D'Arcy.
+bf14017220d	Bryan Henderson	1996-11-26 01:17:56 +0000	2	Put in #include <fcntl.h> for those systems that don't have it included by something else.
+02c0eb65490	Bryan Henderson	1996-11-26 02:45:05 +0000	35	Properly structure  ProcedureNameIndexScan so it doesn't generate "may be used before being set" warnings.
+46d58fba330	Bryan Henderson	1996-11-26 03:20:35 +0000	65	Make it compile on Ultrix.  Thanks Erik Bertelson.
+c118543186d	Bryan Henderson	1996-11-26 06:33:18 +0000	2	Fix double-colon syntax error on fe-lobj.o.
+93f722536f1	Bryan Henderson	1996-11-26 07:39:11 +0000	50	Whoops, redo Ultrix patch so the other ports still compile.
+8cfe27dff00	Bryan Henderson	1996-11-26 08:12:39 +0000	6	OK, I think I've got the postconfig thing right now.
+89c7e18b3f8	Bryan Henderson	1996-11-27 01:46:52 +0000	24	Forgot in yesterday's Ultrix compile work.
+1db76d708cc	Vadim B. Mikheev	1996-11-27 07:10:59 +0000	7	TransactionIdIsInProgress moved to shmem.c
+713b65e19c1	Vadim B. Mikheev	1996-11-27 07:14:51 +0000	23	Setting MyProc->xid to current transaction' id in StartTransaction and to InvalidTransactionId in CommitTransaction & AbortTransaction (it's for new TransactionIdIsInProgress func).
+47312ec1345	Vadim B. Mikheev	1996-11-27 07:17:48 +0000	4	Setting MyProc->xid to InvalidTransactionId while creating PROC structure (it's for new TransactionIdIsInProgress func).
+3643248ae2d	Vadim B. Mikheev	1996-11-27 07:20:07 +0000	41	TransactionIdIsInProgress is here now and gives quality answer by scanning PROC structures of all running backend.
+a2a33e1344e	Vadim B. Mikheev	1996-11-27 07:24:02 +0000	31	New mdtruncate() func for single segment relations (< 2Gb).
+33854972280	Vadim B. Mikheev	1996-11-27 07:25:52 +0000	29	New smgrtruncate smgr' interface func.
+f0c5a6c6147	Vadim B. Mikheev	1996-11-27 07:27:20 +0000	914	Shrinking and other things.
+b41aa3903c7	Vadim B. Mikheev	1996-11-27 07:32:10 +0000	3	TransactionIdIsInProgress moved to shmem.c
+948720ee940	Vadim B. Mikheev	1996-11-27 07:33:42 +0000	3	New mdtruncate() & smgrtruncate() funcs.
+a38365e0ebc	Vadim B. Mikheev	1996-11-27 07:35:06 +0000	11	New structures for new vacuum.
+9c0afeabb78	Bryan Henderson	1996-11-27 08:16:44 +0000	112	More stuff to make it compile on various ports.
+79b1a0ff352	Bruce Momjian	1996-11-27 13:47:05 +0000	3	Allow all empty queries to return EMPTY.
+134c35c7610	Bruce Momjian	1996-11-27 13:48:23 +0000	0	no change
+c9ec45062a3	Bruce Momjian	1996-11-27 13:48:58 +0000	0	Remove unused define's.
+6450bef6ecb	Bruce Momjian	1996-11-27 13:49:46 +0000	7	Convert ' to " in dates.  Update example code to show empty query as "".
+0667fd9491a	Vadim B. Mikheev	1996-11-27 15:15:54 +0000	7	TransactionIdIsInProgress is commented out
+f0e7004d29e	Bryan Henderson	1996-11-28 03:32:18 +0000	7	Make strdup work for Ultrix.  Thanks Erik Bertelsen
+c7cba5780f4	Vadim B. Mikheev	1996-11-28 04:37:38 +0000	11	Fix for "might be used uninitialized" warnings.
+ba876c150a8	Bruce Momjian	1996-11-28 05:46:08 +0000	7	Changed saved_relname size to save memory.
+316e81cf223	Bruce Momjian	1996-11-29 04:49:46 +0000	1	Fix for BSDI compile.
+7b4426eaea2	Bryan Henderson	1996-11-29 06:24:14 +0000	4	Throw some double quotes on the pile!
+03659a262e0	Vadim B. Mikheev	1996-11-29 10:27:59 +0000	59	Added: dynamic re-moving page from list of pages usable for shrinking if its free-space < min_tuple_len.
+a962c6128f7	Vadim B. Mikheev	1996-11-29 10:29:45 +0000	3	vrl_min_tlen added to VRelListData.
+a3d773a6932	Bruce Momjian	1996-11-29 15:56:18 +0000	23	Allow select oid,* from table.  Allow * anywhere in target list.
+2d7aacb0523	Bruce Momjian	1996-11-30 03:38:09 +0000	52	Added BETWEEN and IN to grammar.  Map != to <>.
+440279e8033	Bruce Momjian	1996-11-30 03:41:20 +0000	8	Add indicator for in quote or in query to prompt.
+d3e0860d259	Bruce Momjian	1996-11-30 04:56:18 +0000	41	Aded mention that != maps to <>.
+87352726b2f	Bruce Momjian	1996-11-30 17:47:07 +0000	2	Change end-of-line comma to semicolon.
+f0a9e64afd1	Bruce Momjian	1996-11-30 17:49:02 +0000	44	As someone asked for this feature - patch for 1.09 follows. Now You can do queries like
+63df35e2494	Bruce Momjian	1996-11-30 18:07:02 +0000	92	This patch changes quite a few instances of references of Oid's as ints and longs.  Touches on quite a few function args as well.  Most other files look ok as far as Oids go...still checking though...
+1eae8e12288	Bruce Momjian	1996-12-01 19:48:39 +0000	2	Fix compiler warning about unitialized variables.
+7980b8a5cc8	Bruce Momjian	1996-12-01 20:28:39 +0000	6	Fix for inclusion of new prompt output.
+5f9bdb76411	Bruce Momjian	1996-12-02 06:31:20 +0000	72	Reduce regression diff size with timezone changes and cleanup.
+58193362bdf	Bruce Momjian	1996-12-02 14:17:59 +0000	1	Reduce regression diffs
+514d69bdbf6	Bryan Henderson	1996-12-03 00:11:07 +0000	0	Remove #if defined(bsdi) define SIGJMP_BUF, per Kurt Lidl.
+f2af0196453	Bruce Momjian	1996-12-03 05:06:35 +0000	21	Make COUNT,SUM case insensitive.
+e5fbe3017c8	Vadim B. Mikheev	1996-12-03 05:50:11 +0000	2	pname=NULL -> pname="" (stringinfo.c:appendStringInfo doesn't like NULL).
+071797f5394	Bruce Momjian	1996-12-03 17:01:35 +0000	11	Change tests to lowercase for esthetics.
+9005a38bdb0	Bryan Henderson	1996-12-04 03:06:33 +0000	96	Change portname "sparc" to "sunos4" and change some portname dependencies to feature dependencies.  Thanks Kurt J. Lidl.
+64397b758fb	Bruce Momjian	1996-12-04 14:23:16 +0000	3	Remove duplicate patch for COUNT fix.
+c3e10a4cafc	Vadim B. Mikheev	1996-12-06 09:41:45 +0000	91	1. _bt_compare fixed to work properly with new code in _bt_insertonpg    (old _bt_compare always returned >= 0 while comparing with P_HIKEY    on root page - it breaks root page when _bt_insertonpg tries insert    new minimal key into root page). 2. Fixed bug concerns "empty" pages: non-rightmost pages with only P_HIKEY    present on it. Such pages appear after vacuum.
+4e064c05605	Vadim B. Mikheev	1996-12-06 09:45:30 +0000	50	_bt_updateitem is returned in code, but works only if sizes of keys are equal.
+c90c058bf01	Bruce Momjian	1996-12-07 04:36:38 +0000	4	Fix from Jan agreed with by Massimo.
+7f8b8b9e421	Bruce Momjian	1996-12-07 04:37:06 +0000	3	Fix for SELECT NULL.
+c0941ab7f02	Bruce Momjian	1996-12-07 04:38:11 +0000	4	Remove Dan's fix of SELECT NULL to fix INSERT NULL.
+2e20099e328	Bruce Momjian	1996-12-07 04:38:40 +0000	2	Reduce printing from deub level 2 ande layout change.
+8cedf57eb15	Bruce Momjian	1996-12-07 04:39:38 +0000	21	Reduce printing from debug level 2 ande layout change.
+6cfb12e0cf6	Bryan Henderson	1996-12-09 01:16:51 +0000	5	Add CUSTOM_CC variable for Makefile.custom.  Thanks Kurt Lidl.
+b36e3042e76	Bryan Henderson	1996-12-09 01:22:17 +0000	13	Add comments describing interface to heap_getattr().
+79729c0e5ef	Bryan Henderson	1996-12-09 01:23:51 +0000	11	Add comments defining "typelem" column of pg_type.
+33edbdb59b7	Bryan Henderson	1996-12-09 01:24:53 +0000	3	Remove include of libpq-fe.h.  This file has nothing to do with libpq.
+9e60c1711d3	Bryan Henderson	1996-12-09 01:55:51 +0000	0	Monitor has been obsoleted by psql.
+0861594cb38	Marc G. Fournier	1996-12-10 03:03:36 +0000	1	No change...just a test to make sure I didn't screw anything up
+41b3674754c	Bryan Henderson	1996-12-10 03:40:23 +0000	18	Add empty "dep:" target.
+7492fb165fa	Bryan Henderson	1996-12-10 07:03:43 +0000	45	Fix bug: libpq clients (which include libpq-fe.h) won't compile. Plus: sigjmp_buf/jmp_buf is backwards, so backend doesn't compile.
+2697c27923e	Bryan Henderson	1996-12-10 07:04:22 +0000	2	sigjmp_buf/jmp_buf is backwards, so backend doesn't compile.
+7f36a2a7180	Bryan Henderson	1996-12-10 07:05:12 +0000	16	Fix bug: libpq clients (which include libpq-fe.h) won't compile.
+9b41da6ce48	Bruce Momjian	1996-12-11 00:28:15 +0000	385	Rename postgres95 to PostgreSQL.  Add comment for SELECT NULL
+7439ba64b10	Bryan Henderson	1996-12-11 03:18:12 +0000	24	Use "Oid" type where applicable and %ud instead of %d.  Thanks Darren King.
+7af262d2a77	Bruce Momjian	1996-12-11 22:55:53 +0000	7	Require seimcolons between statements.
+1b929d17491	Bruce Momjian	1996-12-11 22:58:16 +0000	11	Postgres95 to PostgreSQL.
+ea8b5196ffe	Bruce Momjian	1996-12-13 02:39:00 +0000	7	Small regression and doc patch
+255363f8592	Bryan Henderson	1996-12-13 09:25:08 +0000	293	Clean up.  Get rid of tabs and overly long lines.
+b555822fed0	Vadim B. Mikheev	1996-12-14 04:58:20 +0000	5	Unuseful tupDesc = CreateTupleDesc(attr_count, attr); in CopyFrom is eliminated (now I can copy 2000000-table from file without memmory exhausting).
+02ba3cf871f	Vadim B. Mikheev	1996-12-14 05:20:39 +0000	4	Avoiding cc1: warnings being treated as errors transsup.c: In function `TransBlockGetLastTransactionIdStatus': transsup.c:122: warning: unsigned value >= 0 is always 1 gmake[3]: *** [transsup.o] Error 1 ...
+25eb9e2a667	Vadim B. Mikheev	1996-12-14 05:55:27 +0000	5	Avoiding cc1: warnings being treated as errors exc.c: In function 'ExcRaise': exc.c:186: warning: passing arg 1 of 'Longjmp' from incompatible pointer type gmake[3]: *** [exc.o] Error 1
+14ad4352942	Vadim B. Mikheev	1996-12-14 06:08:14 +0000	2	const register ... --> register const ...
+4556a50cf84	Vadim B. Mikheev	1996-12-14 07:56:05 +0000	2	Avoiding: cc1: warnings being treated as errors datum.c: In function `DatumGetSize': datum.c:57: warning: unsigned value >= 0 is always 1 gmake[3]: *** [datum.o] Error 1
+cbb131570e1	Vadim B. Mikheev	1996-12-14 08:20:18 +0000	2	           if (settings->opt.fieldSep);                                       ^ - deleted                 free(settings->opt.fieldSep);
+290d3b51985	Vadim B. Mikheev	1996-12-14 08:26:34 +0000	2	Fix over fix: JMP_BUF gone away and we have SIGJMP_BUF now. Excuse me.
+9fc7250d3a6	Bryan Henderson	1996-12-15 09:05:53 +0000	34	Make compile on AIX, Alpha OSF.  Thanks Darren King, Igor Notanzon.
+fa9c0fff36a	Bryan Henderson	1996-12-15 09:21:37 +0000	62	Remove __P macro usage so it compiles without cdefs.h.
+ec105b60263	Bryan Henderson	1996-12-16 03:34:52 +0000	2	Put sys/types.h before sys/timeb.h so Ultrix compiles.
+db7a90f1d9c	Bruce Momjian	1996-12-17 01:53:43 +0000	99	Make GROUP BY work with aliases, ORDER BY with column numbers
+f0bcb1762d2	Marc G. Fournier	1996-12-19 04:54:56 +0000	17	#ifdef ASYNC_DEBUG various sections of async.c
+dc97a7b90e3	Marc G. Fournier	1996-12-19 04:56:35 +0000	51	Add various comments to explain #define's and add a few extra #define's
+07c8d9f0f33	Marc G. Fournier	1996-12-19 04:58:24 +0000	76	COPY_PATCH...
+194ed4efe5c	Marc G. Fournier	1996-12-19 05:01:17 +0000	8	More patches/documentation from: Massimo Dal Zotto <dz@cs.unitn.it>
+56e8243d223	Marc G. Fournier	1996-12-19 05:02:51 +0000	171	Add two new comments to pglibtcl...
+64e45b0ebc5	Bryan Henderson	1996-12-19 08:03:46 +0000	7	Make sure user is running GNU make.
+231e1e70d85	Bruce Momjian	1996-12-20 20:31:31 +0000	3	Rename parameter.
+4371756f162	Bruce Momjian	1996-12-20 20:33:12 +0000	28	Improve handling of semicolons ending statements.
+a952d672964	Bruce Momjian	1996-12-20 20:33:46 +0000	0	Remove NOTIFY_PATCH.
+4540a8bd5c8	Bruce Momjian	1996-12-20 20:34:38 +0000	10	Fix multiple "C" from backend.
+d6c06feb180	Bryan Henderson	1996-12-23 08:39:27 +0000	1	Add cast to quiet compiler warning.
+d9e10180ee6	Bryan Henderson	1996-12-23 08:50:27 +0000	10	Add some quotes so it works on more shells.
+ab90c18d126	Bryan Henderson	1996-12-23 10:16:54 +0000	2	Fix Solaris stuff so it compiles.  Thanks Keith Parks.
+9b559046474	Bryan Henderson	1996-12-24 09:03:16 +0000	16	Clarify error message about trying to PQgetvalue() nonexistent row.
+0fde972e252	Bruce Momjian	1996-12-26 17:39:58 +0000	4	Added mention of CUSTOM_COPT to file.
+df0eee9963d	Bruce Momjian	1996-12-26 17:44:46 +0000	3	Removal of CppConcat from indexam.c.
+c5aaba2c34f	Bruce Momjian	1996-12-26 17:46:07 +0000	3	In src/backend/catalog/pg_operator.c in OperatorDef, there are three SearchSysCacheTuple(PRONAME,...) calls that use three different macros to convert the typeId array of Oids.
+28a08fd4acc	Bruce Momjian	1996-12-26 17:47:42 +0000	33	I have this annoying habit (among others) of putting %ud in a printf format strings instead of just %u.
+06815136933	Bruce Momjian	1996-12-26 17:49:05 +0000	5	In file: .../src/backend/postmaster/postmaster.c I found 3 leaks and probably a bug. To find code added/modifyied, search "Fixed".
+d419e11cb62	Bruce Momjian	1996-12-26 17:49:56 +0000	2	Change %ud to %u
+89b28071704	Bruce Momjian	1996-12-26 17:50:26 +0000	3	Added include files needed for getpid prototype.
+b1765f46376	Bruce Momjian	1996-12-26 17:52:46 +0000	1	Note the => changes to == after a connect and stays that way on subsequent database changes.
+0cb22cb7eff	Bruce Momjian	1996-12-26 17:53:24 +0000	1	Removal of unused CppConcat defines.
+9643e8ba372	Bruce Momjian	1996-12-26 17:53:40 +0000	2	Added needed prototype.
+7f00f11c017	Bryan Henderson	1996-12-26 20:56:40 +0000	2	Fix syntax of \\copy in \\? display.
+e8f43854acf	Bruce Momjian	1996-12-26 22:08:34 +0000	67	pq/signal() portability patch.  Also psql copy prompt fix.
+8c721185271	Bruce Momjian	1996-12-26 22:15:15 +0000	971	Documentatoin update
+af30fe7852f	Bryan Henderson	1996-12-26 23:27:16 +0000	13	Remove use of "bool", which user program may not have defined.
+645b5877881	Bryan Henderson	1996-12-26 23:28:27 +0000	3	Remove use of "bool", which user program may not have defined.  This .h file gets included by libpq-fe.h, and thus is part of the API.
+4a5135c34e1	Vadim B. Mikheev	1996-12-27 13:13:58 +0000	2	There was JMP_BUF defined in config.h. And SIGJMP_BUF later. And now - JMP_BUF again. Is it enough, folks ?
+634b38aa864	Bryan Henderson	1996-12-27 22:57:51 +0000	11	Add asserts to check for file descriptor ring corruption.
+15526ff0ac7	Bryan Henderson	1996-12-27 23:12:57 +0000	277	Add messages to assist in problem diagnosis.  Eliminate lines > 80 characters.
+d4dbfdb4c0c	Bruce Momjian	1996-12-28 01:57:13 +0000	20	Patch for copy from stdin.
+a2b7f629766	Bruce Momjian	1996-12-28 02:01:58 +0000	177	Updated changes for 6.0.
+cb6cb7745d4	Bruce Momjian	1996-12-28 02:13:05 +0000	31	Here's the final set of patches to 6.0 (sup'd on 27/12/96) that allow a full gmake of the code without interruption.
+221d7296aa3	Bruce Momjian	1996-12-28 02:22:12 +0000	8	Here is a bug fix and some spelling changes for the complex number tutorial code. I have also written a complete complex number package based on this tutorial; I will submit this as a contribution soon. Is there a particular format for contributed tar files? I have a C source file, two SQL files, and a Makefile.
+fd12c8f85ea	Bruce Momjian	1996-12-28 22:44:14 +0000	2	Fixed Assert check where ! should be !=.
+bbc0d477732	Bruce Momjian	1996-12-28 22:44:58 +0000	3	Fixed error where = should be ==.
+8cc2eb66ec6	Bruce Momjian	1996-12-28 22:46:40 +0000	3	Fixed errors in create statement.
+e981bcb0c3a	Bruce Momjian	1996-12-28 23:07:54 +0000	6	Fix expected regression output.
+4415e481ef3	Bruce Momjian	1996-12-29 00:53:20 +0000	16	Improved EXPLAIN option handling.
+2d291ab0938	Bruce Momjian	1996-12-29 00:53:59 +0000	2	Changed EXPLAIN option names.
+b0030c6c425	Bruce Momjian	1996-12-29 00:58:32 +0000	14	New EXPLAIN manual page.
+bf6fdeebb5a	Bruce Momjian	1996-12-29 03:55:36 +0000	2	typo fix
+765dd2a4c03	Bruce Momjian	1996-12-29 19:31:16 +0000	23	explain change
+7ab0ceb824c	Bryan Henderson	1996-12-30 23:05:16 +0000	12	Check that PQendcopy succeeded.  Issue error message if not.
+9b94bcea216	Bryan Henderson	1996-12-30 23:19:48 +0000	19	Put $(CURSES_LIB) in Makefile.global to replace similar thing in psql/Makefile.
+ae753b86b58	Vadim B. Mikheev	1996-12-31 06:47:30 +0000	19	ReleaseTmpRelBuffers () releases buffers in  LOCAL buffer pool now (if rd_islocal is true).
+7266928e77c	Vadim B. Mikheev	1996-12-31 06:58:27 +0000	3	Fixed realloc for increasing tempRels list.
+e2da92f1c35	Bryan Henderson	1996-12-31 07:26:27 +0000	74	Rename Makefile to GNUmakefile to catch people using other makes.
+8fb0ac8898d	Bryan Henderson	1996-12-31 07:29:17 +0000	158	Make error messages more explicit, PQtrace() output more readable.

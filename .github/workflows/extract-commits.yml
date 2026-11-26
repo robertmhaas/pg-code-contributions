@@ -1,0 +1,50 @@
+name: Extract commits
+
+on:
+  schedule:
+    - cron: '23 8 * * *'
+  workflow_dispatch:
+    inputs:
+      all:
+        description: Rewrite every year, not just changed ones
+        type: boolean
+        default: false
+  # A change to the extractor rewrites everything.
+  push:
+    branches: [main]
+    paths: [extract-commits.py]
+
+concurrency:
+  group: extract-commits
+
+permissions:
+  contents: write
+
+jobs:
+  extract-commits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Clone PostgreSQL
+        run: >-
+          git clone --quiet --single-branch --branch master --no-tags
+          https://github.com/postgres/postgres.git ../postgres
+
+      - name: Extract
+        run: >-
+          python3 extract-commits.py --repo ../postgres
+          ${{ (github.event_name == 'push' || inputs.all) && '--all' || '' }}
+
+      # Pushes made with GITHUB_TOKEN don't trigger workflows, so this
+      # can't loop.
+      - name: Commit and push
+        run: |
+          git add -A data
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'Commit Extractor'
+          git config user.email 'contributions@rhaas.dev'
+          git commit -q -m "Update data through $(git -C ../postgres log -1 --format=%h)"
+          git pull -q --rebase
+          git push -q

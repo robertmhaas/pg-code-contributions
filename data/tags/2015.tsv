@@ -1,0 +1,416 @@
+hash	tag	value
+2c0a4858965	Discussion	20141205002854.GE21964@awork2.anarazel.de
+31912d01d8d	Discussion	22459.1418656530@sss.pgh.pa.us
+3fabed07053	Discussion	22459.1418656530@sss.pgh.pa.us
+79af9a1d266	Author	Ali Akbar <the.apaan@gmail.com>
+17eaae98977	Discussion	20150104005324.GC9626@awork2.anarazel.de
+db4ec2ffce3	Discussion	op.xpsjdkil0sbe7t@vld-kuci
+de6429a8fdd	Discussion	27746.1420930690@sss.pgh.pa.us
+4bad60e3fd9	Discussion	20140927191243.GD5423@alap3.anarazel.de
+4bad60e3fd9	Reviewed-By	Heikki Linnakangas, Noah Misch
+14e8803f101	Discussion	20150112154026.GB2092@awork2.anarazel.de
+2be82dcf17a	Discussion	20150113182344.GF12272@alap3.anarazel.de
+59f71a0d0b5	Discussion	20140927191243.GD5423@alap3.anarazel.de
+6cfd5086e14	Discussion	20150114225919.GY5245@awork2.anarazel.de
+f5ae3ba4828	Discussion	54479A85.8060309@sigaev.ru
+f5ae3ba4828	Author	Teodor Sigaev
+f5ae3ba4828	Reviewed-By	David Rowley
+ff44fba46c0	Discussion	20150115020335.GZ5245@awork2.anarazel.de
+cb4a3b0410d	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+2d115e47c86	Discussion	15028.1418772313@sss.pgh.pa.us
+813ffc0ef9f	Author	Sawada Masahiko
+972bf7d6f13	Author	Emre Hasegeli
+a1792320473	Author	Dilip Kumar.  Some reworking by Álvaro Herrera
+a1792320473	Reviewed by	Jeff Janes, Amit Kapila, Magnus Hagander, Andres Freund
+ed127002d8c	Discussion	20140202151319.GD32123@awork2.anarazel.de
+17792bfc5b6	Discussion	20150127142713.GD29457@awork2.anarazel.de
+77e9125e847	Note	a significant fraction of these items don't apply to 9.4.1, only to
+f8948616c94	Source-Git-URL	git://git.postgresql.org/git/pgtranslation/messages.git
+f8948616c94	Source-Git-Hash	19c72ea8d856d7b1d4f5d759a766c8206bf9ce53
+0150ab567bc	Security	CVE-2015-0241
+9241c84cbcb	Security	CVE-2015-0241
+29725b3db67	Security	CVE-2015-0242
+1dc75515868	Security	CVE-2015-0243
+8b59672d8d2	Security	CVE-2015-0243
+2b3a8b20c2d	Security	CVE-2015-0244
+2488eff889f	Security	CVE-2015-0241 through CVE-2015-0244
+387da18874a	Author	Andres Freund
+387da18874a	Reviewed-By	Heikki Linnakangas
+4f85fde8eb8	Author	Andres Freund
+4f85fde8eb8	Reviewed-By	Heikki Linnakangas
+4fe384bd858	Discussion	20140927191243.GD5423@alap3.anarazel.de
+6647248e370	Reviewed-By	Heikki Linnakangas
+6753333f55e	Reviewed-By	Heikki Linnakangas
+d06995710bc	Reviewed-By	Heikki Linnakangas
+2505ce0be0b	Reviewed-By	Heikki Linnakangas
+57fe246890a	anyway	if the tuple was updated (again) in the same transaction, its ctid
+8785e6e378f	Author	Tatsuo Ishii
+d42358efb16	Author	Alexander Shulgin
+d42358efb16	Discussion	1007.1207238291@sss.pgh.pa.us
+d42358efb16	Discussion	548F7D38.2000401@BlueTreble.com
+d42358efb16	Reviewed-by	Álvaro Herrera, Jim Nasby
+eb68379c382	Discussion	20150215170014.GE15326@awork2.anarazel.de
+82a532b34d7	Discussion	20150215170014.GE15326@awork2.anarazel.de
+bc208a5a2f9	Discussion	11553.1423805224@sss.pgh.pa.us
+296f3a60538	Reviewed-By	Michael Paquier, Andres Freund, Stephen Frost
+23a78352c0a	Reviewed-by	Robert Hass <robertmhaas@gmail.com>
+fd6a3f3ad40	Discussion	20150223165359.GF30784@awork2.anarazel.de, 369698E947874884A77849D8FE3680C2@maumau, 5CF4ABBA67674088B3941894E22A0D25@maumau
+a2e35b53c39	Discussion	20150218213255.GC6717@tamriel.snowman.net
+a2e35b53c39	Reviewed-By	Stephen Frost, Andres Freund
+bb8582abf3c	Author	Adam Brightwell <adam.brightwell@crunchydatasolutions.com>
+31eae6028ec	Authors	Kyotaro Horiguchi.  Heavily reworked by Álvaro Herrera.
+31eae6028ec	Reviewed by	Rushabh Lathia, Adam Brightwell, Marti Raudsepp.
+4f3924d9cd4	Author	Petr Jelínek
+bb7b35caf78	Author	Dagfinn Ilmari Mannsåker
+66ece312f99	Author	Michael Paquier
+bbfd7edae5a	Discussion	54B58BA3.8040302@ohmu.fi
+bbfd7edae5a	Author	Oskari Saarenmaa, with some minor changes by me.
+1ce7a57ca6e	Author	Marko Kreen <markokr@gmail.com>
+51c11a7025e	Discussion	5484FC53.2060903@2ndquadrant.com
+51c11a7025e	Author	Petr Jelinek
+a0f5954af19	Discussion	54F4EFB8.40202@agliodbs.com, CA+TgmoZEAgX5oMGJOHVj8L7XOkAe05Gnf45rP40m-K3FhZRVKg@mail.gmail.com
+a0f5954af19	Author	Josh Berkus, after a discussion involving lots of people.
+4f1b890b137	Discussion	20150220152150.GD4149@awork2.anarazel.de, 235610.92468.qm%40web29004.mail.ird.yahoo.com
+4f1b890b137	Reviewed-By	Heikki Linnakangas, Simon Riggs
+a61fd5334eb	Reviewed by	Stephen Frost
+0d831389749	Author	Michael Paquier. Some tweaks by Álvaro
+0d831389749	Reviewed by	Robert Haas, Stephen Frost, Álvaro Herrera
+b8d226b4f96	Author	Ryan Kelly
+b8d226b4f96	Reviewed by	Jeevan Chalke, Tom Lane
+f9dead5624c	Author	Michael Paquier
+f9dead5624c	Reviewed by	Asif Naeem
+13dbc7a824b	Author	Pavel Stěhule
+13dbc7a824b	Reviewed by	Jim Nasby
+8122e1437e3	Discussion	544BB5F1.50709@proxel.se
+8122e1437e3	Author	Andreas Karlsson, with significant editorializing by me
+8122e1437e3	Reviewed-By	Peter Geoghegan, Oskari Saarenmaa
+959277a4f57	Discussion	544BB5F1.50709@proxel.se
+959277a4f57	Author	Andreas Karlsson
+959277a4f57	Reviewed-By	Peter Geoghegan, Petr Jelinek, Andres Freund, Oskari Saarenmaa, David Rowley
+a1105c3dd44	Discussion	CAB7nPqT6BO1cCn+sAyDByBxA4EKZNAiPi2mFJ=ANeZmnmewRyg@mail.gmail.com
+87cec51d3ad	Discussion	20150323141819.GH26995@alap3.anarazel.de
+83ff1618bc9	Author	Andrew Gierth
+83ff1618bc9	Discussion	87619tc5wc.fsf@news-spur.riddles.org.uk
+97690ea6e86	Author	Pavel Stěhule
+fcef1617295	Author	David Fetter, Andrew Dunstan.  Some editorialization by me
+fcef1617295	Reviewers	Andrew Gierth, Erik Rijkers, Pavel Stěhule, Stephen Frost,
+e146ca68206	Author	David Fetter, Andrew Dunstan.  Some editorialization by me
+e146ca68206	Reviewers	Andrew Gierth, Erik Rijkers, Pavel Stěhule, Stephen Frost,
+62e2a8dc2c7	Discussion	20150331141423.GK4878@alap3.anarazel.de
+a75fb9b335d	Author	Michael Paquier
+4ff695b17d3	Author	Michael Paquier
+4ff695b17d3	Reviewed by	A team led by Naoya Anzai (also including Akira Kurosawa,
+73206812cd9	Author	Michael Paquier
+73206812cd9	Discussion	https://www.postgresql.org/message-id/CAB7nPqQ-5NAkHQHh_NOm7FPep37NCiLKwPoJ2Yxb8TDoGgbYYA@mail.gmail.com
+06d36fa40c5	Author	Jeevan Chalke
+06d36fa40c5	Discussion	CAM2+6=VPoow5PqgqiTjPX4QNeokb7op8aD_8Zg3QnHZMvvU0GQ@mail.gmail.com
+8a0d34e4e45	Author	Jan Urbański <wulczer@wulczer.org>
+83aca89f7c3	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+81134af3ec0	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+30982be4e50	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+9fa8b0ee90c	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+90898af30bb	Author	Michael Paquier
+90898af30bb	Reviewed by	Andrew Dunstan
+22d005323f9	Author	Michael Paquier
+22d005323f9	Reviewed by	Andrew Dunstan
+4cb7d671fdd	Author	Michael Paquier
+4cb7d671fdd	Reviewed by	Andrew Dunstan
+00882d9e5ce	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+528c2e44ab0	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+d811c037cea	Author	Craig Ringer, revised by me Discussion:
+b0a738f428c	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+cef939c3470	Discussion	CAMsr+YFKgZca5_7_ouaMWxA5PneJC9LNViPzpDHusaPhU9pA7g@mail.gmail.com
+4ccc5bd28e7	Authors	Etsuro Fujita and Dean Rasheed (independently)
+0bf22e0c8b1	Author	Dean Rasheed, though I added the new hooks and test module.
+50a16e30ebd	Author	Michael Paquier
+e89bd02f58a	Author	Dean Rasheed, with some kabitzing and comment changes by me.
+9fe1d9ac682	Author	Abhijit Menon-Sen
+9fe1d9ac682	Discussion	20150417091811.GA14008@toroid.org
+6aab1f45aca	Author	Dmitriy Olshevskiy
+6aab1f45aca	Discussion	553D00A6.4090205@bk.ru
+2e3ca04e2ee	Author	Dmitriy Olshevskiy
+2e3ca04e2ee	Discussion	34789.1430067832@sss.pgh.pa.us
+dcbf5948e12	Author	Dean Rasheed, with a bit of rework to make things clearer,
+dfbaed45975	ERROR	could not fsync file "pg_replslot/$name/state": Bad file descriptor
+dfbaed45975	Reported-By	Patrice Drolet
+dfbaed45975	Bug	#13143:
+dfbaed45975	Discussion	20150424101006.2556.60897@wrigleys.postgresql.org
+b69bf30b9bf	removal	if the average multixact size is above a certain threshold (see
+b69bf30b9bf	Authors	Álvaro Herrera, Thomas Munro
+b69bf30b9bf	Reviews	Thomas Munro, Amit Kapila, Robert Haas, Kevin Grittner
+5aa2350426c	Author	Andres Freund, with contributions from Petr Jelinek and Craig Ringer
+5aa2350426c	Reviewed-By	Heikki Linnakangas, Petr Jelinek, Robert Haas, Steve Singer
+5aa2350426c	Discussion	20150216002155.GI15326@awork2.anarazel.de, 20140923182422.GA15776@alap3.anarazel.de, 20131114172632.GE7522@alap2.anarazel.de
+9d396af4635	Author	Kyotaro HORIGUCHI
+c90b85e4d9e	Note	this code is still broken on machines that don't follow C99
+ad8d6d064cb	Author	Erik Rijkers <er@xs4all.nl>
+3b6db1f445e	Author	Emre Hasegeli
+3b6db1f445e	Reviewed by	Andreas Karlsson
+db5f98ab4fa	Author	Emre Hasegeli, tweaked by Álvaro
+db5f98ab4fa	Review	Andreas Karlsson
+2c8f4836db0	Author	Peter Geoghegan
+2c8f4836db0	Reviewed-By	Andres Freund
+168d5805e4c	Author	Peter Geoghegan, with significant contributions from Heikki Linnakangas and Andres Freund. Testing infrastructure by Jeff Janes.
+168d5805e4c	Reviewed-By	Heikki Linnakangas, Andres Freund, Robert Haas, Simon Riggs, Dean Rasheed, Stephen Frost and many others.
+195fbd40123	Author	Amit Langote
+bab64ef9e8b	Discussion	9096.1431102730@sss.pgh.pa.us
+a97e0c3354a	Author	Sawada Masahiko, various improvements by me.
+a97e0c3354a	Reviewers	David Steele
+f0a4b20bb9f	Author	Sawada Masahiko
+b488c580aef	Authors	Álvaro Herrera, with some help from Andres Freund, Ian Barwick,
+b488c580aef	Discussion	https://www.postgresql.org/message-id/m2txrsdzxa.fsf@2ndQuadrant.fr https://www.postgresql.org/message-id/20131108153322.GU5809@eldon.alvh.no-ip.org https://www.postgresql.org/message-id/20150215044814.GL3391@alvh.no-ip.org
+d02f16470f1	Author	David Rowley <dgrowleyml@gmail.com>
+007c932e5aa	Author	Michael Paquier
+5850b20f58a	Author	Abhijit Menon-Sen
+5850b20f58a	Reviewed-By	Andres Freund, Amit Kapila and Tomas Vondra
+5850b20f58a	Discussion	20140402214144.GA28681@kea.toroid.org
+ac52bb0442f	Authors	Ian Barwick, Abhijit Menon-Sen, David Steele
+ac52bb0442f	Reviews by	Robert Haas, Tatsuo Ishii, Sawada Masahiko, Fujii Masao,
+ecd222e770d	Discussion	CAD21AoA0pK3YcOZAFzMae+2fcc3oGp5zoRggDyMNg5zoaWDhdQ@mail.gmail.com
+b0b7be61337	Author	Emre Hasegeli.  Cosmetic changes by me
+b0b7be61337	Review	Andreas Karlsson
+f3d31185321	Author	Andrew Gierth and Atri Sharma, with contributions from Andres Freund
+f3d31185321	Reviewed-By	Andres Freund, Noah Misch, Tom Lane, Svenne Krap, Tomas Vondra, Erik Rijkers, Marti Raudsepp, Pavel Stehule
+f3d31185321	Discussion	CAOeZVidmVRe2jU6aMk_5qkxnB7dfmPROzM7Ur8JPW5j8Y5X-Lw@mail.gmail.com
+b0ce385032d	Security	CVE-2015-3165
+16304a01343	Security	CVE-2015-3166
+fd97bd411d1	Security	CVE-2015-3166
+85270ac7a24	Security	CVE-2015-3167
+19d47ed2da1	Security	CVE-2015-3165 through CVE-2015-3167
+e4942f7a56e	Author	Peter Geoghegan and Andres Freund
+b82a7be603f	Note	for lack of a suitable testing environment, I've not really exercised
+9bc77c45199	Author	Peter Geoghegan
+0c071936e94	Security	CVE-2015-3166
+5cb8519ceb6	Security	CVE-2015-3166
+631d7490074	Author	Peter Geoghegan
+631d7490074	Discussion	20150520215816.GI5885@postgresql.org
+284bef29773	Author	Peter Geoghegan, Andres Freund
+284bef29773	Discussion	CAM3SWZQmXxZhQC32QVEOTYfNXJBJ_Q2SDENL7BV14Cq-zL0FLg@mail.gmail.com
+90231cd5188	Discussion	20150610110253.GF3832@alap3.anarazel.de
+667912aee64	Discussion	20150608163707.GD20772@alap3.anarazel.de
+ad89a5d115b	Author	Michael Paquier
+1b468a131bd	Found-By	Robert Haas
+1b468a131bd	Discussion	55626265.3060800@dunslane.net
+40282224686	Spotted-by	Jeff Janes
+d47a1136e44	Bug	#13470
+d47a1136e44	Reported-By	Krzysztof Kotlarski
+d47a1136e44	Discussion	20150626100333.3874.90852@wrigleys.postgresql.org
+c5e5d444de8	Source-Git-URL	git://git.postgresql.org/git/pgtranslation/messages.git
+c5e5d444de8	Source-Git-Hash	fb7e72f46cfafa1b5bfe4564d9686d63a1e6383f
+07cb8b02ab4	Discussion	20150629101108.GB17640@alap3.anarazel.de
+ab93f90cd3a	Author	Oskari Saarenmaa
+8217370864c	Discussion	55760844.7090703@iki.fi
+8650d161ae4	Discussion	http://www.postgresql.org/message-id/CAHGQGwGxMKnVHGgTfiig2Bt_2djec0in3-DLJmtg7+nEiidFdQ@mail.gmail.com
+5c0de384d2c	Reported-By	Olivier Gosseaume, Marko Tiikkaja
+5c0de384d2c	Discussion	559AF98B.3050901@joh.to
+b2f6f749c7a	Bug	#13484
+b2f6f749c7a	Reported-By	Olivier Gosseaume
+b2f6f749c7a	Discussion	20150703090217.1190.63940@wrigleys.postgresql.org
+275f05c990c	Author	Julien Rouhaud
+275f05c990c	Discussion	116262CF971C844FB6E793F8809B51C6E99D48@BPXM02GP.gisp.nec.co.jp
+ff27db5dd2f	Discussion	20150619144755.GG29350@alap3.anarazel.de
+3ed26e5f87a	Author	Peter Geoghegan
+f8d67ca8d4c	Author	Michael Paquier and Álvaro Herrera
+f8d67ca8d4c	Discussion	https://www.postgresql.org/message-id/CAFrbyQwyLDYXfBOhPfoBGqnvuZO_Y90YgqFM11T2jvnxjLFmqw@mail.gmail.com
+1a511800800	Author	Pavel Stěhule
+c1ca3a19df3	Author	Peter Geoghegan, slightly edited by me
+c1ca3a19df3	Discussion	CAM3SWZS8RPvA=KFxADZWw3wAHnnbxMxDzkEC6fNaFc7zSm411w@mail.gmail.com
+c1ca3a19df3	Backpatch	9.5, where the feature was introduced
+144666f65b5	Author	Jeevan Chalke
+144666f65b5	Reviewed-By	Andrew Gierth
+144666f65b5	Discussion	CAM2+6=W=9=hQOipH0HAPbkun3Z3TFWij_EiHue0_6UX=oR=1kw@mail.gmail.com
+144666f65b5	Backpatch	9.5, where grouping sets were introduced
+e6d8cb77c02	Author	Jeevan Chalke
+e6d8cb77c02	Reviewed-By	Andrew Gierth
+e6d8cb77c02	Discussion	CAM2+6=WG9omG5rFOMAYBweJxmpTaapvVp5pCeMrE6BfpCwr4Og@mail.gmail.com
+e6d8cb77c02	Backpatch	9.5, where grouping sets were introduced
+61444bfb809	Author	Andrew Gierth
+61444bfb809	Discussion	874mkt3l59.fsf@news-spur.riddles.org.uk
+61444bfb809	Backpatch	9.5, where grouping sets were introduced. This isn't exactly a bugfix, but it seems better to keep the branches in sync at this point.
+faab14ecb8c	Author	Andrew Gierth, with tests from Jeevan Chalke
+faab14ecb8c	Reported-By	Jeevan Chalke
+faab14ecb8c	Discussion	CAM2+6=V5YvuxB+EyN4iH=GbD-XTA435TCNvnDFSD--YvXs+pww@mail.gmail.com
+faab14ecb8c	Backpatch	9.5, where grouping sets were introduced
+159cff58cf3	Author	Peter Geoghegan
+159cff58cf3	Discussion	CAM3SWZR4uug=WvmGk7UgsqHn2MkEzy9YU-+8jKGO4JPhesyeWg@mail.gmail.com
+159cff58cf3	Backpatch	9.5, where ON CONFLICT was introduced
+426746b9309	Author	Andres Freund
+426746b9309	Discussion	20150624144148.GQ4797@alap3.anarazel.de
+426746b9309	Backpatch	9.5 and master, 9.0-9.4 get a different patch
+36dc30aa7e0	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+90102bb5388	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+0dc848b0314	Reviewed-by	Michael Paquier <michael.paquier@gmail.com>
+3bc9356ddd5	Noticed-By	Robert Haas
+3bc9356ddd5	Backpatch	9.5, where the function was added
+c81276241b6	Discussion	http://www.postgresql.org/message-id/20646.1437919632@sss.pgh.pa.us
+7039760114d	Reported-By	Jeff Janes
+7039760114d	Analyzed-By	Heikki Linnakangas
+7039760114d	Reviewed-By	Heikki Linnakangas
+7039760114d	Discussion	5592DB35.2060401@iki.fi
+7039760114d	Backpatch	9.5, where the lwlock scalability went in
+a4b09af3e93	Noticed-By	Heikki Linnakangas
+a4b09af3e93	Backpatch	9.5, no reason to let the branches diverge at this point
+073082bbb1a	Noticed-By	Amit Kapila
+073082bbb1a	Backpatch	9.5
+a855118be3f	Reported-By	Marko Tiikkaja
+a855118be3f	Author	Marko Tiikkaja
+a855118be3f	Backpatch	9.5, where logical decoding was introduced
+de6fd1c898f	Discussion	20150701161447.GB30708@awork2.anarazel.de
+2834855cb9f	Discussion	https://www.postgresql.org/message-id/20150731175700.GX2441@postgresql.org
+3a145757a0c	Backpatch	9.5, where replication origins were introduced.
+18e8613564b	Discussion	CAA4eK1JqUBVeWWKwUmBPryFaje4190ug0y-OAUHWQ6tD83V4xg@mail.gmail.com
+18e8613564b	Backpatch	9.5, where replication origins were introduced.
+4eda0a64705	Discussion	20150806070902.GE12214@awork2.anarazel.de
+c2509944b1a	Reported-By	Jesper Pedersen
+c2509944b1a	Discussion	55C4E190.3050104@redhat.com
+5a33650f24f	Discussion	20150807132000.GC13310@awork2.anarazel.de
+70fd0e14e80	Author	Michael Paquier
+70fd0e14e80	Discussion	CAB7nPqQ9qEtuDiKY3OpNzHcz5iUA+DUX9FcN9K8GUkCZvG7+Ew@mail.gmail.com
+70fd0e14e80	Backpatch	9.5, where the option was introduced
+5c4b25acceb	Backpatch	9.4-master, bug was introduced in 9.4
+3f811c2d6f5	Author	Marko Tiikkaja, editorialized by me
+3f811c2d6f5	Discussion	559D110B.1020109@joh.to
+3b425b7c02c	Author	Gurjeet Singh
+3b425b7c02c	Discussion	CABwTF4Wh_dBCzTU=49pFXR6coR4NW1ynb+vBqT+Po=7fuq5iCw@mail.gmail.com
+3b425b7c02c	Backpatch	9.4
+093d0c83c1d	Author	Gurjeet Singh
+093d0c83c1d	Discussion	CABwTF4Wh_dBCzTU=49pFXR6coR4NW1ynb+vBqT+Po=7fuq5iCw@mail.gmail.com
+6fcd88511f8	Author	Gurjeet Singh
+6fcd88511f8	Reviewed-By	Andres Freund
+6fcd88511f8	Discussion	CABwTF4Wh_dBCzTU=49pFXR6coR4NW1ynb+vBqT+Po=7fuq5iCw@mail.gmail.com
+d25fbf9f3ec	Author	Qingqing Zhou
+d25fbf9f3ec	Reported-By	Qingqing Zhou
+d25fbf9f3ec	Discussion	CAJjS0u2ai9ooUisKtkV8cuVUtEkMTsbK8c7juNAjv8K11zeCQg@mail.gmail.com
+d25fbf9f3ec	Backpatch	9.5 where the private ref count infrastructure was introduced
+7685963eeb1	Spotted-By	Coverity
+7685963eeb1	Reported-By	Michael Paquier
+7685963eeb1	Discussion	CAB7nPqQ3o10SY6NVdU4pjq85GQTN5tbbkq2gnNUh2fBNU3rKyQ@mail.gmail.com
+7685963eeb1	Backpatch	9.5, like ff27db5d
+a4b059fddec	Reported-By	Gurjeet Singh
+ccc4c074994	Discussion	https://www.postgresql.org/message-id/20150723204810.GY5596@postgresql.org
+a8015fe7f54	Discussion	20150812084351.GD8470@awork2.anarazel.de
+a8015fe7f54	Backpatch	9.4 where replica identity was introduced.
+6c772c7453e	Discussion	20150812084351.GD8470@awork2.anarazel.de
+6c772c7453e	Backpatch	9.0-master
+1d4bd775684	Discussion	20150812084351.GD8470@awork2.anarazel.de
+1d4bd775684	Backpatch	9.5
+f9dec81a549	Discussion	20150812084351.GD8470@awork2.anarazel.de
+f9dec81a549	Backpatch	9.5, where ON CONFLICT was merged
+6cf72879e94	Discussion	20150814092039.GH4955@awork2.anarazel.de
+6cf72879e94	Backpatch	9.5, where the use of crc intrinsics was integrated.
+47ebbdcee7b	Reported-By	Michael Paquier
+47ebbdcee7b	Discussion	CAB7nPqSco+RFw9C-VgbCpyurQB3OocS-fuTOa_gFnUy1EE-pyQ@mail.gmail.com
+09b3d27256d	Note	the previous coding and comment here predate commit 59c016aa9f490b53.
+e68be16b0d0	Author	Michael Paquier
+c0f0d8097be	Discussion	20150827131352.GF2435@awork2.anarazel.de
+258ee1b635e	ERROR	unexpected dtype 33 while parsing timestamptz "doy"
+258ee1b635e	ERROR	unexpected dtype 32 while parsing timestamptz "dow"
+c314ead5be0	Author	Michael Paquier
+c314ead5be0	Discussion	CAB7nPqT0Wc1W5mdYGeJ_wbutbwNN+3qgrFR64avXaQCiJMGaYA@mail.gmail.com
+d94c36a45ab	Author	Michael Paquier, while reviewing another sslinfo patch
+49124613f13	Author	Дмитрий Воронин (Dmitry Voronin)
+49124613f13	Reviewed by	Michael Paquier, Heikki Linnakangas, Álvaro Herrera
+1aba62ec635	Author	Julien Rouhaud
+1aba62ec635	Reviewed by	Andres Freund
+3ae16798f0f	Author	Pavel Stehule
+3ae16798f0f	Reviewed-By	Andres Freund
+3ae16798f0f	Discussion	5594FE7A.5050205@iki.fi
+96f6a0cb41e	Discussion	20150528100705.4686.91426@wrigleys.postgresql.org
+d9cb34abb40	Discussion	20150827145219.GI2435@awork2.anarazel.de
+98d5b084d23	Reported-By	Alexander Korotkov
+98d5b084d23	Discussion	CAPpHfdsPmWqz9FB0AnxJrwp1=KLF0n=-iB+QvR0Q8GSmpFVdUQ@mail.gmail.com
+98d5b084d23	Backpatch	9.5, where the bug was introduced.
+eef34e52369	Reported-By	Buildfarm member axolotl
+eef34e52369	Backpatch	9.4, where logical decoding was introduced
+020235a5754	Reviewed-By	Robert Haas
+020235a5754	Discussion	CA+TgmoYmQPHcrc3GSs7vwvrbTkbcGD9Gik=OztbDGGrovkkEzQ@mail.gmail.com
+020235a5754	Backpatch	back to 9.0 (in parts)
+4f627f89736	Discussion	20150621192409.GA4797@alap3.anarazel.de
+4f627f89736	Reviewed-By	Robert Haas, Alvaro Herrera, Thomas Munro
+4f627f89736	Backpatch	9.5 for now
+aa29c1ccd9f	Discussion	20150621192409.GA4797@alap3.anarazel.de
+aa29c1ccd9f	Backpatch	9.5
+617db3a2d8a	Reported-By	Peter Geoghegan
+617db3a2d8a	Author	Andres Freund
+617db3a2d8a	Backpatch	9.5, where ON CONFLICT was introduced
+6b61955135e	Author	Petr Jelínek
+6b61955135e	Discussion	http://www.postgresql.org/message-id/CAHGQGwHereDzzzmfxEBYcVQu3oZv6vZcgu1TPeERWbDc+gQ06g@mail.gmail.com
+6b61955135e	Discussion	http://www.postgresql.org/message-id/CAHGQGwFuzfO4JscM9LCAmCDCxp_MfLvN4QdB+xWsS-FijbjTYQ@mail.gmail.com
+f12e814b88d	Discussion	http://www.postgresql.org/message-id/ca44c6c7f9314868bdc521aea4f77cbf@MP-MSGSS-MBX004.msg.nttdata.co.jp
+ad227837924	Reported-By	Peter Geoghegan, Geoff Winkless
+ad227837924	Author	Andres Freund, Amit Langote, Peter Geoghegan
+ad227837924	Discussion	CAEzk6fdzJ3xYQZGbcuYM2rBd2BuDkUksmK=mY9UYYDugg_GgZg@mail.gmail.com, CAM3SWZS+CauzbiCEcg-GdE6K6ycHE_Bz6Ksszy8AoixcMHOmsA@mail.gmail.com
+ad227837924	Backpatch	9.5, where ON CONFLICT was introduced
+920218cbc0a	Reported-By	Rushabh Lathia
+920218cbc0a	Author	Rushabh Lathia
+920218cbc0a	Discussion	AGPqQf2x50qcwbYOBKzb4x75sO_V3g81ZsA8+Ji9iN5t_khFhQ@mail.gmail.com
+920218cbc0a	Backpatch	9.4-, where replication slots were added
+b67aaf21e8e	Author	Petr Jelinek, editorialized by Michael Paquier, Andres Freund
+b67aaf21e8e	Reviewed-By	Michael Paquier, Andres Freund, Jeff Janes
+b67aaf21e8e	Discussion	557E0520.3040800@2ndquadrant.com
+86b1e6784b1	Author	Petr Jelinek
+2596d705bdc	Discussion	26377.1443105453@sss.pgh.pa.us
+2596d705bdc	Backpatch	back to 9.0 (in parts), like the prior patch
+1d812c8b059	Security	CVE-2015-5288
+08fa47c4850	Security	CVE-2015-5289
+10cfd6f8544	Discussion	26377.1443105453@sss.pgh.pa.us
+10cfd6f8544	Backpatch	9.0- (in parts)
+272ede71a66	Security	CVE-2015-5288, CVE-2015-5289
+9e36c91b468	Security	CVE-2015-5289
+817588bc2bd	Author	Amit Langote
+5fc4c26db51	machinery	if a ForeignScan appears on the inner side of a paramaterized
+6a7153661d6	API	they no longer delete any state or arc that the caller might possibly
+0cd836a4e81	Discussion	http://www.postgresql.org/message-id/BE2FD71DEA35A2287EA5F018@eje.credativ.lan
+531d21b75ff	Author	Petr Jelínek, with some further tweaks by Álvaro Herrera.
+531d21b75ff	Discussion	http://www.postgresql.org/message-id/5622BF9D.2010409@2ndquadrant.com
+c15898c1d5d	Author	Emre Hasegeli
+c15898c1d5d	Revised by	Ian Barwick
+c15898c1d5d	Discussion	http://www.postgresql.org/message-id/CAE2gYzyB39Q9up_-TO6FKhH44pcAM1x6n_Cuj15qKoLoFihUVg@mail.gmail.com http://www.postgresql.org/message-id/562DA711.3020305@2ndquadrant.com
+f3a764b0dac	Reported-By	Craig Ringer
+f3a764b0dac	Author	Craig Ringer
+f3a764b0dac	Discussion	CAMsr+YFhBJLp=qfSz3-J+0P1zLkE8zNXM2otycn20QRMx380gw@mail.gmail.com
+f3a764b0dac	Backpatch	9.5, where replication origins where introduced
+c31f1dc5599	Author	Peter Geoghegan and Andres Freund
+c31f1dc5599	Discussion	CAM3SWZScpWzQ-7EJC77vwqzZ1GO8GNmURQ1QqDQ3wRn7AbW1Cg@mail.gmail.com, CAHGQGwFUCWwSU7dtc2aRdRk73ztyr_jY5cPOyts+K8xKJ92X4Q@mail.gmail.com
+c31f1dc5599	Backpatch	9.5, where UPSERT was introduced
+83dec5a712a	Discussion	http://www.postgresql.org/message-id/20151027193919.931.54948@wrigleys.postgresql.org
+edf68b2ed51	Author	Peter Geoghegan and Andres Freund
+edf68b2ed51	Discussion	CAM3SWZScpWzQ-7EJC77vwqzZ1GO8GNmURQ1QqDQ3wRn7AbW1Cg@mail.gmail.com
+edf68b2ed51	Backpatch	9.5, where ON CONFLICT was introduced
+d3c8ac114f1	Discussion	CAM3SWZT8paz=usgMVHm0XOETkQvzjRtAUthATnmaHQQY0obnGw@mail.gmail.com
+d3c8ac114f1	Backpatch	9.5, where ON CONFLICT was introduced
+92e38182d7c	Author	Marko Tiikkaja
+92e38182d7c	Review	Michael Paquier
+e50cda78404	Author	Alexander Korotkov
+e50cda78404	Review	Michael Paquier
+1caef31d9e5	Authors	Michael Paquier, Álvaro Herrera
+1caef31d9e5	Review	Noah Misch
+820ddb2c2f1	Authors	Álvaro Herrera, Petr Jelínek.
+9821492ee41	Author	Michael Paquier
+e3f4cfc7aa3	Reported-By	Thom Brown
+e3f4cfc7aa3	Author	Andres Freund and Michael Paquier
+e3f4cfc7aa3	Discussion	20150326175024.GJ451@alap3.anarazel.de
+e3f4cfc7aa3	Backpatch	9.1-
+84ac126ee72	Reported-By	Stanislav Grozev
+84ac126ee72	Author	Andres Freund and Peter Geoghegan
+84ac126ee72	Discussion	CAA78GVqy1+LisN-8DygekD_Ldfy=BJLarSpjGhytOsgkpMavfQ@mail.gmail.com
+84ac126ee72	Backpatch	9.5, where ON CONFLICT was introduced
+f54d0629ec8	ERROR	58P01: could not open file "pg_tblspc/...": No such file or directory
+f54d0629ec8	Reported-By	Michael Paquier
+f54d0629ec8	Author	Michael Paquier and Andres Freund
+f54d0629ec8	Discussion	20151210163230.GA11331@alap3.anarazel.de
+f54d0629ec8	Backpatch	9.1, where unlogged relations were introduced
+2a3544960ea	Backpatch	9.1+, like the previous commit
+cca705a5d93	Reported-By	Noah Misch, although this is not his preferred fix
+cca705a5d93	Discussion	20151210140450.GA22278@alap3.anarazel.de
+cca705a5d93	Backpatch	9.5, where the bug was introduced as part of 4f627f
+33bd250f6c4	Author	Stas Kelvich
+9246af67998	Author	YUriy Zhuravlev
+130d94a7b86	Reported-By	Michael Paquier
+130d94a7b86	Author	Michael Paquier and Andres Freund
+130d94a7b86	Discussion	CAB7nPqSHDdSwsJqX0d2XzjqOHr==HdWiubCi4L=Zs7YFTUne8w@mail.gmail.com
+130d94a7b86	Backpatch	9.4, like the commit introducing the bug
+25bfa7efd03	Author	Fornaroli Christophe with comments by me.
+743229a67e2	Author	Andreas Karlsson
+743229a67e2	Reviewer	Jeff Janes
+151c4ffe41a	Reported by	Alain Laporte (#13836)

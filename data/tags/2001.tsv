@@ -1,0 +1,28 @@
+hash	tag	value
+b1cc64648a6	Index	TODO
+39f987c568f	Index	TODO
+e586026d10d	date	2000/12/04 01:20:38;  author: tgl;  state: Exp;  lines:
+aa88e59ade2	benefit	pg_class.reltype is correctly linked to the pg_type entry now.
+13cc7eb3e2e	optimization	we shouldn't return the single candidate until after we verify
+13cc7eb3e2e	selftest	it creates an operator @< on int4, and then tries to use it to
+13cc7eb3e2e	ERROR	Unable to identify an operator '@<' for types 'bpchar' and 'bpchar' You will have to retype this query using an explicit cast
+d19eeb1b1f8	BTW	I havn't got the tools to translate it to BIG5 encoding, is there
+f6f8c332b1b	Subject	[HACKERS] pgaccess Japanese input capability patch
+f6f8c332b1b	From	Tatsuo Ishii <t-ishii@sra.co.jp>
+f6f8c332b1b	To	teo@flex.ro
+f6f8c332b1b	Cc	pgsql-hackers@postgresql.org, pgsql-interfaces@postgresql.org
+f6f8c332b1b	Date	Sat, 24 Feb 2001 21:41:14 +0900
+d0e1091cfd2	ERROR	MemoryContextAlloc: invalid request size)
+d66a4049832	non-unique	stay as they were
+d66a4049832	Check	"$1" (a > 5)
+32762facf65	Indicies	palm_buy_date_idx palm_user_date_idx
+32762facf65	Constraint	"$1" ((sex = 'M'::bpchar) OR (sex = 'F'::bpchar))
+f31dc0ada73	Note	I didn't force an initdb, figuring that one today was enough.
+227767112c3	Subject	Re: [PATCHES] encoding names
+227767112c3	From	Karel Zak <zakkr@zf.jcu.cz>
+227767112c3	To	Peter Eisentraut <peter_e@gmx.net>
+227767112c3	Cc	pgsql-patches <pgsql-patches@postgresql.org>
+227767112c3	Date	Fri, 31 Aug 2001 17:24:38 +0200
+5251e7b3d07	ERROR	CREATE TABLE/AS SELECT has mismatched column count
+4bc8c8dd953	and are replaced by	ResultSet.getLastOID() Statement.getLastOID() Serialize.storeObject() Connection.storeObject()
+990eb8552e6	ERROR	fmgr_info: function 270997776: cache lookup failed

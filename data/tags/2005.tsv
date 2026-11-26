@@ -1,0 +1,21 @@
+hash	tag	value
+ee467c3530f	database	aggregates should be dumped in the same pass as operators,
+e3ebe2521ea	nochar	/* nothing */ ; /* semicolon required because a goto has to be attached to a statement */
+406a942820d	Found by	Coverity
+406a942820d	Fixed by	Sean Chittenden
+bf3dbb5881e	access	define new index access method functions 'amgetmulti' that can
+31404374957	methods	they all invoke UpdateStats() since they have computed the
+1b000116fb7	FATAL	pre-existing shared memory block (key 5432001, ID 90898435) is
+1b000116fb7	HINT	If you're sure there are no old server processes still running,
+77c168a836e	Note	although there is a catalog change here, I did not force initdb
+b4132fd0acd	Indexes	"e_pkey" PRIMARY KEY, btree (i, j), tablespace "haha" "ei" btree (i) "ej" btree (j), tablespace "haha" "ek" btree (k)
+b4132fd0acd	Tablespace	"haha"
+555f5139e08	pgtypeslib	(1) we need to check the return value of sub_abs() (2) we
+0182951bc86	cases	we can't just consider whether the subquery's output is unique on its
+c52795d18a6	Add	- tsquery plainto_tsquery(text) Function makes tsquery from plain text. - &&, ||, !! operation for tsquery for combining tsquery from it's parts:  'foo & bar' || 'asd' => 'foo & bar | asd'
+656beff5903	equal	if strcoll claims two strings are equal, check it with strcmp, and
+656beff5903	NOTE	affected databases may need to REINDEX indexes on text columns to be
+804f6b8fc93	Subject	[HACKERS] bugs with certain Asian multibyte charsets
+804f6b8fc93	From	Tatsuo Ishii <ishii@sraoss.co.jp>
+804f6b8fc93	To	pgsql-hackers@postgresql.org
+804f6b8fc93	Date	Sat, 24 Dec 2005 18:25:33 +0900 (JST)

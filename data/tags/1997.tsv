@@ -1,0 +1,147 @@
+hash	tag	value
+b5164666a39	Submitted by	wieck@sapserv.debis.de
+3bfbe9a7fd0	Submitted by	"Martin J. Laubach" <mjl@wwx.vip.at>
+ea7a26c84ba	Submitted by	"Martin J. Laubach" <mjl@wwx.vip.at>
+0865f587ea9	Submitted by	"Martin J. Laubach" <mjl@wwx.vip.at>
+0865f587ea9	NOTE	The following patch I was uncertain of, but applied it...will end up testing the compile on my machine later tonight anyway, but if anyone knows why this *shouldn't* have been done, please change it. (CC -> LD)
+8251ce7d106	Submitted by	"Martin J. Laubach" <mjl@wwx.vip.at>
+5f5958cb984	Pointed out by	Ovidiu Predescu <ovidiu@bx.logicnet.ro>
+151d484ca5e	Submitted by	Ovidiu Predescu <ovidiu@bx.logicnet.ro>
+73b6ffbf764	Submitted by	Keith Parks <emkxp01@mtcc.demon.co.uk>
+d02015d1cc5	By	tgl@mythos.jpl.nasa.gov
+e2e6b2d730b	From	darcy@druid.net (D'Arcy J.M. Cain)
+40f4a330b7d	From	Andrew Martin <martin@biochemistry.ucl.ac.uk>
+f02bd933501	POinted out by	Martin S. Utesch <utesch@aut.tu-freiberg.de>
+37a8bdba439	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+fdaf47f9f44	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+a246e87d126	From	Keith Parks
+4aff83181a1	Submitted by	Keith Parks
+5c117403e07	Pointed out by	Darren King
+2c9dbc57e59	Submitted by	Tatsuo Ishii
+f3ceb0a1449	Pointed out by	Erik Bertelsen
+ba82bb3eacd	Pointed out by	Dave Morrison  (mirrison@mail.phy.ornl.gov)
+809ae06ab2f	Patch by	Alvaro Martinez Echevarria <alvaro@lander.es>
+d62267c7070	Submitted by	Erik Bertelsen <erik@sockdev.uni-c.dk>
+29138eeb3ca	From	"Martin S. Utesch" <utesch@aut.tu-freiberg.de>
+2407a0473a1	Pointed out by	afc@teri.superlink.net
+069b71d721a	Pointed out by	Mark Hollomon <mhh@nortel.ca>
+83978e1ea72	From	Edmund Mergl <E.Mergl@bawue.de>
+51844146e50	Subject	[HACKERS] abort failed transaction patch
+c00c511b7bb	Subject	[HACKERS] backend Makefile patch
+e4949f9fe55	Subject	[HACKERS] better access control error messages
+127826978a2	Subject	[HACKERS] equal column and table name patch
+b66569e41fd	Subject	[HACKERS] linux/alpha patches
+5dde558ce60	Subject	[HACKERS] linux/alpha patches
+3a7c93e7f32	Subject	[HACKERS] password authentication
+071484c5d84	Subject	[HACKERS] timestamp type
+71fd8d4a4ba	From	"Martin S. Utesch" <utesch@aut.tu-freiberg.de>
+064466ad550	Subject	[HACKERS] lock debug trace
+ea58f28ee8c	Subject	[HACKERS] Patch for io routines
+7cd394dc431	Subject	[HACKERS] Patches for 970316 compilation
+4b4ac7c1598	By	From: Edmund Mergl <mergl@nadia.s.bawue.de>
+812a6c2b546	From	"Martin J. Laubach" <mjl@wwx.vip.at>
+3bc07104ae0	By	Dan McGuirk <mcguirk@indirect.com>
+678cd5c6b6e	Subject	[HACKERS] auth.c for kerberos.
+bf872f0aff4	Subject	[HACKERS] libpq/pqcomm stuff and Solaris byte order
+69c2c66196b	From	Keith Parks <emkxp01@mtcc.demon.co.uk>
+3589f71ebb2	Subject	[HACKERS] backend/utils/adt/nabstime.c
+ef56e51cd32	From	"Martin J. Laubach" <mjl@wwx.vip.at>
+dfe04753629	Subject	[HACKERS] More patches for date/time
+ea2fa32eff1	From	"D'Arcy J.M. Cain" <darcy@druid.net>
+6304e2c273b	From	"Michael P. Snyder" <msnyder@hawkeye.huntersmoon.com>
+070381482f1	Subject	[HACKERS] backend/utils/adt/timestamp.c
+70a0237bed5	From	"D'Arcy J.M. Cain" <darcy@druid.net>
+159f8c63ad3	Reply-To	hackers@hub.org, Dan McGuirk <mcguirk@indirect.com>
+159f8c63ad3	To	hackers@hub.org
+159f8c63ad3	Subject	[HACKERS] tmin writeback optimization
+28454c216b1	Subject	Re: [HACKERS] abstime "now" broken
+632a707fd16	Subject	[HACKERS] Small date patches (resubmitted)
+632a707fd16	NOTE	the second patch to dt.c is what I believe D'Arcy submitted as well, that I claimed was taken out...sorry D'Arcy, my fault :(
+80b618520e1	Pointed out by	igor@cs.cs.miami.edu
+5b1311acfbd	Subject	[HACKERS] locale patches !
+17b5bd33e41	Subject	[HACKERS] Small patch to pgtclCmds.c
+a51df14a692	Subject	[HACKERS] Patch: SET var TO 'val'
+920c58df71f	Subject	[HACKERS] libpq variable set patch
+2ab34dfe1a7	Subject	[HACKERS] More date time functions
+9d5c0af5862	Subject	[HACKERS] Aggregate function patches
+4bc578eb838	Subject	[HACKERS] timestamp.c changes
+82a27f230af	Pointed out by	System Administrator <sysadmin@sba.miami.edu>
+3ded1cc5305	Subject	[HACKERS] Fix for European dates
+1c688d1bbe9	Subject	Re: [HACKERS] GEQO and views (rules)
+e6dfee305ce	Submitted by	adrian@waltham.harvard.net
+6da05a7b830	Provided by	adrian@waltham.harvard.net
+fcf7d45b369	Pointed out by	afc@teri.superlink.net
+df2374f0245	Pointed out by	Edmund Mergl <E.Mergl@bawue.de>
+02fa41951b7	Submitted by	adrian@waltham.harvard.net
+d8a300d8671	Pointed out by	Olaf Mittelstaedt <MSTAEDT@va-sigi.va.fh-ulm.de>
+88d740462f0	Subject	[HACKERS] Money integration patches
+a1f229b19e9	Subject	[HACKERS] Patch: set date to euro/us postgres/iso/sql
+8834795ebf6	Subject	[PATCHES] 970417:  two more patches for large objects
+cbaa98835c5	Subject	[PATCHES] 970417:  some large object patches
+49153540daf	Subject	[HACKERS] Another patch to configure.in
+fd8e90a848c	Requested by	Darren King <aixssd!darrenk@abs.net>
+85a95b9b0de	From	Wayde Nie <niew@phoenix.cis.mcmaster.ca>
+7c82b2e9c3e	Subject	[PATCHES] date/time timezone patches (mail bounced?)
+2de10b0b017	Subject	[PATCHES] Patch for configure.in to not ask for CASSERT
+2de10b0b017	Default	disabled
+5514c1fa239	Pointed out by	"Martin J. Laubach" <mjl@emsi.priv.at>
+cf398593fdc	Subject	[PORTS] Configure for DEC-Alpha
+4b5319129cf	Subject	Re: [PATCHES] SET DateStyle patches
+b8e376ceb9a	Subject	[PATCHES] Patches for compiling 6.1 on Digital Unix 3.2c
+f522a32ceba	Pointed out by	adrian@waltham.harvard.net
+cac554607f2	Pointed out by	Christopher Hicks <chicks@chicks.net>
+65973e3f353	Subject	[PATCHES] to make regress.sh shell friendly to echo.
+d938b755dc3	Subject	[HACKERS] Inputting money
+f4279c46e77	From	Lee Roth <roth@tpusa.com>
+c3b51e0d676	Fix	keys ordering stuff moved to _bt_first().
+505a4709e21	Subject	[PATCHES] oracle_compat functions core dumping on NULL-fields
+a5d7eb90a82	Subject	[PATCHES] Three small patches.
+9f2d7146202	Subject	[PATCHES] port patch: ultrix4
+82172021343	Subject	[PATCHES] libpq SET var TO patch
+217e50d73c8	Subject	[PATCHES] New INSTALL file.
+6ef382c6218	Subject	[PATCHES] Patches for boolean, timespan and reltime regression tests.
+498d2d1edc8	Subject	[PATCHES] libpq patch
+b12241b2aa9	Subject	[PATCHES] Documentation update
+45165538c5b	Subject	[PORTS] minor fix for DGUX port
+e56f1d60a57	Subject	[PATCHES] Patch for INSTALL
+9860926148a	Subject	[PATCHES] AIX 6.2 make patch.
+3e871388b5f	Subject	[PATCHES] Re: [PORTS] AIX 6.1 fixes...
+24ed6d604d3	Subject	[PATCHES] AIX make patch resubmitted.
+5e7c0a0b9ac	Subject	[PATCHES] DROP AGGREGATE patch/fix.
+4800abc7c16	To	pgsql-patches@postgreSQL.org
+4800abc7c16	Subject	[PATCHES] DROP AGGREGATE gram.y typo...
+ca746f512dc	Reported by	"A. Duursma" <it@portsite.nl>
+cf883677516	Subject	[PATCHES] pqcomprim.c patch
+8ab1271f09f	Subject	[PATCHES] INSTALL changes
+9a5529f4d18	Subject	[PATCHES] memory leak patches in libpq and psql
+3903296b2ab	Subject	[PATCHES] destroydb patch
+b3db8ee0b20	Subject	[PATCHES] aix.h needs POSIX...
+187e0f24056	Subject	[PATCHES] Support for NetBSD/sparc
+ff038a5b970	Subject	[PATCHES] psql - \\dt,\\di commands.
+f9f98e3aff7	Subject	[PATCHES] pg_dump memory leak patch
+8445ccd57a2	Subject	[PATCHES] Another destroydb patch
+e234687c4cd	Subject	[PATCHES] INSTALL patch
+541f18558dc	Subject	[PATCHES] patch for a memory leak
+f50b103ce1b	Subject	[HACKERS] backend/optimizer/geqo/geqo_erx.c
+c0178f27a25	Subject	[HACKERS] src.original/./backend/lib/fstack.c
+15da18508f1	Subject	[PATCHES] Added support for NetBSD/pc532.
+11c7d75560e	Subject	[PATCHES] Patches to allow generic NetBSD support
+8d1f52ef246	Subject	[PATCHES] More psql and libpq patches
+0f94738c335	Subject	[PATCHES] backend/lib/fstack.c
+e318022e1ab	Subject	[PATCHES] backend/storage/ipc/shmem.c
+e721e58c03d	Subject	[PATCHES] psql and large objects fix
+0105b79f4fa	Subject	[PATCHES] destroydb.1 patch
+34fa6c6b709	Subject	[PATCHES] Patch for INSTAL file.
+65c4a526fec	Subject	[PATCHES] DG/UX 5.4R11 patches
+735bf0b7f2f	Subject	[PATCHES] sequences display in psql
+4ea38446803	Subject	Re: [PORTS] Re: [PATCHES] DG/UX 5.4R11 patches
+90d0cf00008	Subject	[PORTS] Patches for Irix 6.4
+5c2649b616b	Subject	[PORTS] Makefile.aix patch.
+fb269b46752	Reviewed by	Peter T Mount <patches@maidast.demon.co.uk>
+3dfcef7c5fd	Pointed out by	Pieter Huyser <pieter@inetsys.alt.za>
+0f367cf8c8c	Add	Stratus computer (a fault tolerant Unix box running an Intel I960
+9bcf350cc71	From	Bryan Henderson <bryanh@giraffe.netgate.net>
+9257cb65b2f	From	Herb Richter <hgr@buynet.com>
+84fc5c4aed7	From	Matthew C Aycock <maycock@scuba.pcpipeline.com>
+8a0967a3b16	From	Ryan Kirkpatrick <rkirkpat@nag.cs.colorado.edu>
+42a3c46b4e3	From	Ryan Kirkpatrick <rkirkpat@nag.cs.colorado.edu>

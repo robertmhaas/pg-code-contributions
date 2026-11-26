@@ -1,0 +1,65 @@
+hash	tag	value
+279628a0a7c	Author	Tomas Vondra, some tweaks by me
+279628a0a7c	Reviewed by	Robert Haas, Shigeru Hanada, Andres Freund, Álvaro Herrera
+8c17144c755	Author	Andres Freund
+765cbfdc926	Author	KaiGai Kohei, changes by me
+765cbfdc926	Reviewed by	Robert Haas, Álvaro Herrera, Dimitri Fontaine
+e1d25de35a2	Author	Andres Freund
+101d6ae7556	ERROR	division by zero
+ab0f7b6089f	Security	CVE-2013-0255
+187492b6c2e	Author	Tomas Vondra.  Some rework by Álvaro
+639ed4e84b7	Author	Andres Freund, with many reworks by Álvaro
+ce9ab889814	Security	CVE-2013-1901
+17fe2793ea7	Security	CVE-2013-1899
+89b661bab99	Security	CVE-2013-1899, CVE-2013-1901
+2ffa66f4975	Note	this is an incompatible change in the streaming protocol. You might
+a7b965382cf	Note	it turns out that the appendrel form of the missed-permissions-checks
+91715e82932	pointer	the idea was to preserve the cached values across gistrescan(),
+7e2b1c03ce2	does	it could cause problems in a parallel make.
+7dfd5cd21c0	Based-on-patch-by	Jeff Janes <jeff.janes@gmail.com>
+148326b9940	Author	Albe Laurenz
+148326b9940	Reviewed by	Abhijit Menon-Sen
+0fe21ad8aab	From	Dimitri Fontaine <dimitri@2ndQuadrant.fr>
+0d1795680d5	From	Dimitri Fontaine <dimitri@2ndQuadrant.fr>
+361b94c4b98	Comment	This code erroneously assumes '\\.' on a line alone inside a
+7919398bac8	From	Szymon Guz <mabewlun@gmail.com>
+7919398bac8	From	Ronan Dunklau <rdunklau@gmail.com>
+7919398bac8	Reviewed-by	Steve Singer <steve@ssinger.info>
+f02b14f7879	From	Ian Lawrence Barwick <barwick@gmail.com>
+070518ddab2	Reviewed-by	Dimitri Fontaine <dimitri@2ndQuadrant.fr>
+c62736cc37f	Author	Andrew Gierth, David Fetter
+c62736cc37f	Reviewers	Dean Rasheed, Jeevan Chalke, Stephen Frost
+5e3e8e4daae	Reviewed-by	Dimitri Fontaine <dimitri@2ndQuadrant.fr>
+5e3e8e4daae	Reviewed-by	Noah Misch <noah@leadboat.com>
+9099e4afe0e	Reviewed-by	Dean Rasheed <dean.a.rasheed@gmail.com>
+9099e4afe0e	Reviewed-by	Ryan Kelly <rpkelly22@gmail.com>
+bf2617981ce	Author	MauMau
+261c7d4b653	Reviewed-by	rui hua <365507506hua@gmail.com>
+261c7d4b653	Reviewed-by	Álvaro Herrera <alvherre@2ndquadrant.com>
+261c7d4b653	Reviewed-by	Jeevan Chalke <jeevan.chalke@enterprisedb.com>
+264aa14a2f6	Reviewed-by	Marko Tiikkaja <marko@joh.to>
+3dc543b3d84	From	Andrew Dunstan <andrew@dunslane.net>
+5b6d08cd299	Reviewed-by	Álvaro Herrera <alvherre@2ndquadrant.com>
+5b6d08cd299	Reviewed-by	Asif Naeem <anaeem.it@gmail.com>
+595a6a03500	From	Asif Naeem <anaeem.it@gmail.com>
+c2316dcda1c	Based-on-patch-by	David Rowley <dgrowleyml@gmail.com>
+a5963efa8f2	Reviewed-by	Álvaro Herrera <alvherre@2ndquadrant.com>
+aa04b323c36	From	David Rowley <dgrowleyml@gmail.com>
+98f58a30c1b	twice	Once because latestObservedXid wasn't updated anymore in that
+a5036ca998a	From	Dimitri Fontaine <dimitri@2ndQuadrant.fr>
+85ed91ee7da	Reviewed-by	Ali Dar <ali.munir.dar@gmail.com>
+85ed91ee7da	Reviewed-by	Amit Khandekar <amit.khandekar@enterprisedb.com>
+85ed91ee7da	Reviewed-by	Rodolfo Campero <rodolfo.campero@anachronics.com>
+a607b6903e9	From	Andreas Karlsson <andreas@proxel.se>
+2393c7d1023	ERROR	could not access status of transaction 3883960912
+2393c7d1023	DETAIL	Could not open file "pg_clog/0E78": No such file or directory.
+fef88b3fdaa	Reviewed-by	Peter Geoghegan <pg@heroku.com>
+95e3d50539a	Reviewed-by	Peter Geoghegan <pg@heroku.com>
+ef3267523d1	From	Marko Kreen <markokr@gmail.com>
+ef3267523d1	Reviewed-by	Adrian Klaver <adrian.klaver@gmail.com>
+3164721462d	From	Marko Kreen <markokr@gmail.com>
+3164721462d	Reviewed-by	Adrian Klaver <adrian.klaver@gmail.com>
+e5dc4cc24d2	From	Dimitri Fontaine <dimitri@2ndQuadrant.fr>
+46328916eef	From	Oskari Saarenmaa <os@ohmu.fi>
+c03ad5602f5	a7b965382cf0cb30aeacb112572718045e6d4be7	if an inherited UPDATE/DELETE
+71812a98cb8	From	Etsuro Fujita <fujita.etsuro@lab.ntt.co.jp>

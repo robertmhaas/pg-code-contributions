@@ -1,0 +1,24 @@
+hash	tag	value
+9d007987207	Note	I didn't change the build rules for bootstrap, ecpg, or plpgsql
+d21de3b1211	ERROR	Only one target list entry may return a set result
+e2a618fe25f	Subject	[HACKERS] client_encoding directive is ignored in postgresql.conf
+e2a618fe25f	From	Tatsuo Ishii <t-ishii@sra.co.jp>
+e2a618fe25f	Date	Wed, 29 Jan 2003 22:24:04 +0900 (JST)
+c75d65485d1	Indexes	"test_pkey" PRIMARY KEY btree (a)
+c75d65485d1	Rules	myrule AS ON INSERT TO test DO INSTEAD NOTHING
+c75d65485d1	Triggers	"asdf asdf" AFTER INSERT OR DELETE ON test FOR EACH STATEMENT EXECUTE
+35a0995992e	Subject	Re: [HACKERS] [BUGS] Bug #943: Server-Encoding from EUC_TW to UTF-8 doesn't
+35a0995992e	From	Tatsuo Ishii <t-ishii@sra.co.jp>
+35a0995992e	To	michael.enke@wincor-nixdorf.com, pgsql-bugs@postgresql.org
+35a0995992e	Cc	pgsql-hackers@postgresql.org
+35a0995992e	Date	Sat, 12 Apr 2003 10:51:45 +0900 (JST)
+a4e775a2633	ERROR	XLogFlush: request 2C000000/8468EC8 is not satisfied --- flushed only
+a4e775a2633	CONTEXT	writing block 0 of relation 428946/566240
+51d16423ae2	ERROR	DefineIndex: access method "hash" does not support UNIQUE
+51d16423ae2	ERROR	DefineIndex: access method "gist" does not support UNIQUE
+a5e9e51fb05	ERROR	parser: parse error at end of input
+f03d2284c09	ERROR	could not create unique index
+f03d2284c09	DETAIL	Table contains duplicated values.
+e4044ba2d74	ERROR	no relation entry for relid 3
+649c1a11e6e	maxim	Representation *is* the essence of programming.
+be6c38b9033	fields	now they are valid whenever the clause is a binary opclause,

@@ -1,0 +1,170 @@
+hash	tag	value
+e72ca17f77c	submitted by	Paul "Shag" Walmsley <ccshag@cclabs.missouri.edu>
+d602a35d37f	Submitted by	david bennett <dave@bensoft.com> marc g. fournier <scrappy@ki.net>
+350cb69aed9	NOTE	FSYNC needs to be set at top of initdb.sh to enable use of fsync patches...disabled by default
+d7a1ce7af7a	From	azcb0@sde.uts.amdahl.com
+169a5b76708	submitted by	Bruce Momjian (root@candle.pha.pa.us)
+e5eb8594464	submitted by	Bruce Momjian (root@candle.pha.pa.us)
+bf2abf0dae2	submitted by	Bruce Momjian (root@candle.pha.pa.us)
+55aab6a4345	submitted by	Bruce Momjian (root@candle.pha.pa.us)
+bc0bd47c6a8	Submitted by	michael.siebenborn@ae3.Hypo.DE (Michael Siebenborn (6929))
+72f76d38eb2	submitted by	Julian Assange <proff@suburbia.net>
+1d4a115a378	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+54857ad1a77	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+2771129c827	Submitted by	Bruce Momjian (root@candle.pha.pa.us)
+89ad6338973	Submitted by	Thomas van Reimersdahl <reimersd@dali.techinfo.rwth-aachen.de>
+9bffaade96f	Submitted by	Chris Dunlop, <chris@onthe.net.au>
+6562fa851e5	submitted by	Chris Dunlop    chris@onthe.net.au
+de82ece8bdd	submitted by	Bruce Momjian (root@candle.pha.pa.us)
+a7cfd655322	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+20288400f3a	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+ffae4ebde91	Submitted by	Randy Kunkee <kunkee@Starbase.NeoSoft.COM>
+435d32cd255	submitted by	Bruce Momjian (root@candle.pha.pa.us)
+b619cb09d96	Submitted by	"Vadim B. Mikheev" <vadim@sable.krasnoyarsk.su>
+ff50e5ab475	Submitted by	Rick Weldon <rick@wisetech.com>
+31cae34d078	submitted by	dr. george
+14cd0ca3bd2	submitted by	dr. george
+9e0a8d4b266	submitted by	dr. george
+aac483943d4	submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+5315d37c207	submitted by	vadim@sable.krasnoyarsk.su (Vadim B. Mikheev)
+8a372d202f9	Submitted by	"Brian E. Gallew" <geek+@cmu.edu>
+ba4b7f50217	Submitted by	Dr. George
+b141c5a9735	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+32a3858addd	submitted by	Dr_George_D_Detlefsen <drgeorge@ilt.com>
+1a675fe5b2a	Submitted by	Rick Weldon <rick@wisetech.com>
+c13ef1afed3	Submitted by	Erich Stamberger <eberger@gewi.kfunigraz.ac.at>
+22113f81fdb	Submitted by	Adam Sussman <myddryn@vidya.com>
+6e077b0ae5e	Submitted by	Rick Weldon <rick@wisetech.com>
+edb519b14c4	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+64b130a8e73	Submitted by	Bruce
+b834d27bc96	submitted by	jason
+4b3cb03104e	submitted by	bruce
+0e887c541e6	submitted by	bruce
+7450ea6dfb7	submitted by	bruce
+c4ea55d2c94	submitted by	bruce
+74cdf928687	submitted by	"Vadim B. Mikheev" <root@ais.sable.krasnoyarsk.su>
+e0d48c317cd	Submitted by	Dan McGuirk <mcguirk@indirect.com>
+1af2cc0d581	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+4477b6f6c26	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+a05ed5bc11c	Submitted by	ernst.molitor@uni-bonn.de
+3881cbd2f6e	Submitted by	Dr_George_D_Detlefsen <drgeorge@ilt.com>
+dbf2a8c9840	Submitted by	Dr. George
+c317bdc9fd0	Suggested by	Daniel Kalchev <daniel@digsys.bg>
+7d2000e3a75	Submitted by	Bruce
+db174707bae	Submitted by	Dr_George_D_Detlefsen <drgeorge@madmax.ilt.com>
+ce48b4d5bd7	Submitted by	Dr. Geoge
+a82aa45a4d7	Submitted by	Dr. George
+4d837e370c1	Suggested by	Michael Babcock <michael@kanji.com>
+164ef6ff2b4	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+4fff70a8198	Submitted by	Dr_George_D_Detlefsen <drgeorge@madmax.ilt.com>
+54f69a954cd	submitted by	"Peter Daum" <gator@cs.tu-berlin.de>
+132e9159eb6	Submitted by	"Alistair G. Crooks" <azcb0@juts.ccc.amdahl.com>
+fd3b829959e	Submitted by	Andrew Martin <martin@biochemistry.ucl.ac.uk>
+c4e53a14110	Submitted by	"D'Arcy J.M. Cain" <darcy@druid.druid.com>
+ab22b34891b	Submitted by	David Smith <dasmith@perseus.tufts.edu>
+6c684b18474	Submitted by	Dan McGuirk <mcguirk@indirect.com>
+bb0bdfd1019	Submitted by	Jason Wright <jason@oozoo.vnet.net>
+ab57e09e1ca	Submitted by	Wayde Nie <niew@phoenix.cis.mcmaster.ca>
+ae4725295a0	Submitted by	Dan McGuirk <mcguirk@indirect.com>
+4db7f15b2ae	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+1508feb2836	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+5bd4485c8e4	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+9b7eb28ea5e	Submitted by	"Kurt J. Lidl" <lidl@va.pubnix.com>
+59f29714aa8	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+9da9c0915a5	Submitted by	"Kurt J. Lidl" <lidl@va.pubnix.com>
+78d56d0bcb8	Submitted by	Andrew Martin <martin@biochemistry.ucl.ac.uk>
+9305fc748c2	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+a721c91adeb	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+ca5db6cab11	Submitted by	Bryan Henderson <bryanh@giraffe.netgate.net>
+80d0c4ffd35	Submitted by	Bryan Henderson <bryanh@giraffe.netgate.net>
+6b9ecd83484	Submitted by	Bryan Henderson <bryanh@giraffe.netgate.net>
+011ee13131f	Submitted by	Bryan Henderson <bryanh@giraffe.netgate.net>
+988a9adfbd2	Submitted by	bryanh@giraffe.netgate.net (Bryan Henderson)
+e7a110b418f	Submitted by	Bruce
+476ef109133	Submitted by	Bruce
+bde34552a27	Submitted by	Bruce...
+4844adc888d	Submitted by	Dirk Koeser <koeser@informatik.uni-rostock.de>
+d6fa4d95cda	Submitted by	Dirk Koeser <koeser@informatik.uni-rostock.de>
+a4402ecc8c1	Submitted by	Dan McGuirk <mcguirk@indirect.com>
+77e01653bc5	From	bryanh@giraffe.netgate.net (Bryan Henderson)
+60b1123f5ec	From	"Kurt J. Lidl" <lidl@va.pubnix.com>
+926a066d407	Submitted by	Frank Ridderbusch <ridderbusch.pad@sni.de>
+208a30f23db	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+fe87dbb1403	submitted by	Dan McGuirk
+491b9b89c42	Submitted by	Gerhard Reithofer <tbr_laa@AON.AT>
+321b8c80fd1	Goals	reduce the difficulty of porting from platform to platform, release to release, but moving as much as possible into config.h
+1ba34d91fca	Pointed out by	ernst.molitor@uni-bonn.de
+f2f53aee0f2	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+796f78998e9	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+906651f6636	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+bbebcb125e4	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+24f00122686	By	Massimo Dal Zotto <dz@cs.unitn.it>
+f589ca68001	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+95251f458c9	NOTE	Makefile.custom is commented out, since it isn't there by default. If you read the section telling you about it to know to create it, you can uncomment it while you are there ...
+0318f227ac5	Submitted by	D'Arcy Cain
+aceac3a9273	Submitted by	"Vadim B. Mikheev" <vadim@sable.krasnoyarsk.su>
+ea8adfc435a	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+efebd7b7aae	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+3023dc6af0a	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+b19b90d7068	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+8594ade7b01	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+3c237e7347f	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+2545844a10c	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+ab76bbf8fd4	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+9fb31dcb544	Submitted by	Bruce Momjian <maillist@candle.pha.pa.us>
+5995953a02e	Submitted by	Cees de Groot <C.deGroot@inter.nl.net>
+04b55fc4a4d	Originally submitted by	ernst.molitor@uni-bonn.de
+04b55fc4a4d	resubmitted by	D'Arcy Cain
+e7c3adcd94d	Submitted by	Randy Terbush <randy@zyzzyva.com>
+ff4d0d435e3	Submitted by	Bryan Henderson <bryanh@giraffe.netgate.net>
+fb7f8e76551	Submited by	skimo@breughel.ufsia.ac.be (Sven Verdoolaege)
+d00f621d7b0	Submitted by	skimo@breughel.ufsia.ac.be (Sven Verdoolaege)
+3bf2b361f01	From	Bruce Momjian <maillist@candle.pha.pa.us>
+3bf2b361f01	To	Postgres95-development <pg95-dev@ki.net>
+3bf2b361f01	Subject	[PG95-DEV] 2.0 patch for fastgetattr
+32620c222e1	To	Postgres95-development <pg95-dev@ki.net>
+32620c222e1	Subject	[PG95-DEV] Makefile.global patch
+9c6135fb155	To	Postgres95-development <pg95-dev@ki.net>
+9c6135fb155	Subject	[PG95-DEV] postgres.h patch
+ba628ef13d6	To	Bryan Henderson <bryanh@giraffe.netgate.net>
+ba628ef13d6	Cc	Postgres95-development <pg95-dev@ki.net>
+ba628ef13d6	Subject	Re: [PG95-DEV] DELETE statement
+0da293f868d	Cleaner Method Submitted by	Bryan Henderson <bryanh@giraffe.netgate.net>
+afcbce5c22d	Fix Submitted by	Bryan himself :)
+87799e38f17	Submitted by	Bruce
+4ca1e1300c7	Submitted by	darcy@druid.druid.com (D'Arcy J.M. Cain)
+b12fb0e6b59	Submitted by	D'Arcy
+67e87363485	Submitted by	Carsten Heyl <heyl@nads.de>
+27bccb9db3c	Submitted by	bryanh@giraffe.netgate.net (Bryan Henderson)
+312b4dabfee	Submitted by	bryanh@giraffe.netgate.net (Bryan Henderson)
+4feb696be73	Submitted by	Carsten Heyl <Heyl@nads.de>
+de466eb8f45	Submitted by	D'Arcy Cain
+ea733aa997f	Submitted by	D'Arcy Cain
+4e8f5c337cc	Submitted by	D'Arcy Cain
+2663dfd94e4	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+b7559f94cd0	Submitted by	darcy@druid.com (D'Arcy J.M. Cain)
+f47ffc9a4e0	Suggested by	Randy Terbush <randy@zyzzyva.com>
+29a0fb84fca	Submitted by	D'Arcy Cain
+20b4c46e263	Submitted by	wieck@sapserv.debis.de (Jan Wieck)
+f6f8ca49708	Submitted by	wieck@sapserv.debis.de (Jan Wieck)
+716d506a819	Still submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+69c7f25bed1	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+da7f60c9d38	By	Erich Stamberger <eberger@gewi.kfunigraz.ac.at>
+f1c95ed41e3	Pointed out by	wieck@sapserv.debis.de
+7d8b794a9a8	From	Randy Terbush <randy@zyzzyva.com>
+2768f391a4d	From	Massimo Dal Zotto <dz@cs.unitn.it>
+026387013e6	From	Darren King <aixssd!ceodev!darrenk@abs.net>
+4aa1734f364	Submitted by	wieck@sapserv.debis.de (Jan Wieck)
+41b8c2c849c	From	wieck@sapserv.debis.de (Jan Wieck)
+fb3b9d76611	Pointed out by	Erik Bertelsen <erik@sockdev.uni-c.dk>
+8abc490181a	By	Tom Tromey <tromey@creche.cygnus.com>
+54c9905d6e5	Pointed out by	Erik Bertelsen <erik@sockdev.uni-c.dk>
+7492fb165fa	Plus	sigjmp_buf/jmp_buf is backwards, so backend doesn't compile.
+02ba3cf871f	cc1	warnings being treated as errors
+25eb9e2a667	cc1	warnings being treated as errors
+4556a50cf84	cc1	warnings being treated as errors
+f0bcb1762d2	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+dc97a7b90e3	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+07c8d9f0f33	Submitted by	Massimo Dal Zotto <dz@cs.unitn.it>
+56e8243d223	From	Massimo Dal Zotto <dz@cs.unitn.it>
+4a5135c34e1	cc1	warnings being treated as errors

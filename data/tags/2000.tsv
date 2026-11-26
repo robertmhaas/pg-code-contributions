@@ -1,0 +1,57 @@
+hash	tag	value
+62cbd53bcd7	Note	don't put any of these back till you've grokked the new code for
+0d9a0ed6d1f	Version	6.5.3-11
+0d9a0ed6d1f	Severity	important
+66fe0fc87e0	ERROR	Unable to locate type oid 2139062143 in catalog
+e8be8ffaf0d	subplan	do it if subplan has subplans itself, and always do it if the
+5c462baebcd	ERROR	Function 'timestamp()' does not exist
+5c462baebcd	ERROR	Function 'timestamp()' does not exist
+1c5b902018b	ERROR	ExecInitIndexScan: both left and right ops are rel-vars
+996659f2556	ERROR	Unable to locate type name 'foo' in catalog
+44f64dd3eac	ecpg	Remove one warning in sloppy flex output.
+8b1b34f6c08	NOTE	this implementation of tcl_avg() fails with 'divide by zero'
+dd8ad641184	NOTE	initdb forced due to change in toaster chunk-size.
+c3e2a951b49	NOTE	I didn't force initdb, but you must do one to see the effects
+a222f3afe97	CVs	----------------------------------------------------------------------
+62e29fe2e74	NOTE	initdb forced due to change in stored expression trees for rules.
+b503cbe3194	NOTE	initdb forced due to catalog updates.
+3498ea83082	NOTICE	CREATE TABLE/UNIQUE will create implicit index 't_id_key' for table 't' =# begin; query: drop table t;
+3498ea83082	NOTICE	Caution: DROP TABLE cannot be rolled back, so don't abort now
+3498ea83082	NOTICE	Caution: DROP INDEX cannot be rolled back, so don't abort now =# rollback; =# drop table t;
+3498ea83082	NOTICE	mdopen: couldn't open t: No such file or directory
+3498ea83082	NOTICE	RelationIdBuildRelation: smgropen(t): No such file or directory
+3498ea83082	NOTICE	mdopen: couldn't open t: No such file or directory
+3498ea83082	NOTICE	mdopen: couldn't open t: No such file or directory
+3498ea83082	NOTICE	mdopen: couldn't open t_id_key: No such file or directory
+3498ea83082	NOTICE	RelationIdBuildRelation: smgropen(t_id_key): No such file or directory
+3498ea83082	NOTICE	mdopen: couldn't open t: No such file or directory
+3498ea83082	NOTICE	RelationIdBuildRelation: smgropen(t): No such file or directory
+3498ea83082	NOTICE	mdopen: couldn't open t: No such file or directory
+3498ea83082	ERROR	cannot open relation t
+0ba0e321726	NAMEDATALEN	that'll error out after the viewname truncation.) In no
+879639b5bef	Problem	The getDatabaseProductVersion() method was returning "6.5.2"
+879639b5bef	Resolution	Changed it to return "7.0.2"
+879639b5bef	Problem	A call to getTables() with an unsupported table type (in the
+879639b5bef	Resolution	Unsupported table types are now ignored without error
+879639b5bef	Problem	In a getTables() call, tables and views were both returned by
+879639b5bef	Resolution	Changed the "TABLE" type to return only physical tables and
+879639b5bef	Problem	The getIdentifierQuoteString() method was returning null
+879639b5bef	Resolution	This method now returns a double-quote
+136a4aebb65	CV	----------------------------------------------------------------------
+1acf6f9c8e1	TODO	testings! and documentations...
+188065cb5c8	Subject	Bug in unicode conversion ...
+188065cb5c8	From	Jan Varga <varga@utcru.sk>
+188065cb5c8	To	t-ishii@sra.co.jp
+188065cb5c8	Date	Sat, 18 Nov 2000 17:41:20 +0100 (CET)
+d5470aba5c8	BTW	new document looks very good!
+8b4c54ef3e2	Index	TODO
+47e229760a4	Index	TODO
+19402303920	Index	TODO
+e2331b7ff74	Index	TODO
+3699791fa88	Index	TODO
+12691d92dc7	Index	TODO
+4df6dc48018	Index	TODO
+7f72b31ba07	Index	TODO
+84f26edfff9	Index	TODO
+fad813774a0	Index	TODO
+97799fc4757	Index	TODO

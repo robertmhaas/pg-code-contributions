@@ -1,0 +1,35 @@
+hash	tag	value
+26af72b46b8	Author	Richard Evans <richard.evans@blueallegro.net>
+2b01cbe3404	locales	br_FR, cs_CZ, cy_GB, es_EC, es_US, hsb_DE, ig_NG, ik_CA, sk_SK.
+f73bed308a8	TABLE	if the command is executed by someone other than the table owner (eg,
+fd75329e81b	recovery	if background writer or pgstat process dies during recovery (or
+c697337c766	Author	Euler Taveira de Oliveira <euler@timbira.com>
+f3e122fcdf6	Note	this change doesn't break 8.4beta installations, since their
+9b7304bc25f	Author	Itagaki Takahiro <itagaki.takahiro@oss.ntt.co.jp>
+e2b42aef53d	Author	Damien Clochard <damien@dalibo.info>
+f39df967e93	Author	Guillaume Smet <guillaume.smet@gmail.com>
+bf6570abef3	Author	Khee Chin <kheechin@gmail.com>
+5106bdc4504	CONTEXT	field.  This also obsoletes the few places that tried to do the
+5dedce67705	Author	Robert Haas <robertmhaas@gmail.com>
+5e22994127b	Author	Andreas Wenk <a.wenk@netzmeister-st-pauli.de>
+187e5d89812	Security	no CVE assigned yet, extends CVE-2007-6600
+602a9ef5a7c	Security	unprivileged users could crash backend.  CVE not assigned yet
+e3f027115a5	Author	Alexey Klyukin <alexk@commandprompt.com>
+20f7f019f9a	Note	This causes msgmerge of gettext 0.17 to segfault.  You will need
+c2bb0378cfc	Author	Marko Kreen <markokr@gmail.com>
+d691cb91415	consequences	pg_shdepend might record the wrong owner for the function,
+54d60bbd075	settings	avoid calling superuser() in contexts where it's not defined,
+b865d275825	Author	Itagaki Takahiro <itagaki.takahiro@oss.ntt.co.jp>
+b2734a0d792	Note	the schema of pg_trigger has not actually changed; we've just started
+314288fc040	Author	Martin Pihlak
+e7ec0222660	PANIC	cannot abort transaction NNNN, it was already committed
+2ea179f3610	Author	Zoltan Boszormenyi
+e9984c47e94	Author	Zoltan Boszormenyi
+201a45c4fa2	Author	Guillaume Lelarge <guillaume@lelarge.info>
+6e3117c3c91	Author	Euler Taveira de Oliveira <euler@timbira.com>
+f6a79c5901f	Author	Erik Rijkers <er@xs4all.nl>
+1a95f12702b	Note	because this changes the order in which joinrel lists are built,
+abf23ee86d8	Security	CVE-2009-4034
+62aba76568e	Security	CVE-2009-4136
+a37b001b804	Author	Zdenek Kotala <Zdenek.Kotala@Sun.COM>
+cfc5008a51f	NOTICE	CREATE TABLE / EXCLUDE will create implicit index "foo_f1_lower_exclusion" for table "foo"

@@ -1,0 +1,27 @@
+hash	tag	value
+6959cb59573	Note	for existing 8.2 installations a simple version update won't fix this;
+f8eb75b6737	Security	CVE-2007-0555
+5413eef8dcd	Security	CVE-2007-0556
+bd01a4e3b7f	Security	CVE-2007-0555, CVE-2007-0556
+5b706ba481c	Note	the coding here is pretty inefficient, but given that no one has noticed
+3c5985b4730	immediately	ExecHashGetHashValue failed to restore the caller's memory
+b3005276eb4	Note	while TOAST_TUPLE_THRESHOLD can now be changed without initdb, some
+d13e903beae	variants	RESET SESSION, RESET TEMP, RESET PLANS, CLOSE ALL, and
+aa27977fe21	Security	CVE-2007-2138
+23c8b0ccc6e	Security	CVE-2007-2138
+402bd494ce9	values	don't throw away perfectly good hash bits, and increase the shift
+ade493e02d2	function	it's possible for two Numerics to be equal according to
+bc8036fc666	uniform	a type directly created by the user has these dependencies, while a
+dbb769352d8	TODO	probably someday the inet type should support scoped IPv6 addresses,
+1c7fe33fdb4	version	sometimes shmctl() will fail with EIDRM when EINVAL is correct.
+c556b29a119	Credit	My colleague Sailesh Krishnamurthy at Truviso for isolating
+862861ee774	ERROR	"pg_timezone_names" is already a view
+862861ee774	ERROR	permission denied: "pg_class" is a system catalog
+58536626301	CVS	----------------------------------------------------------------------
+58536626301	CVS	Enter Log.  Lines beginning with `CVS:' are removed automatically
+58536626301	CVS	Committing in .
+58536626301	CVS	Modified Files:
+58536626301	CVS	commands/vacuumlazy.c
+58536626301	CVS	----------------------------------------------------------------------
+9fd88436470	mergejoinscansel	it was not quite up to speed for the task of estimating
+2e4cb7082ca	Note	"\\N" is by default the null print string, so N would also cause a
