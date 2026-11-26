@@ -1,0 +1,57 @@
+# Tag fixes for 2026 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# Repeated key: "Author: Author:".
+1887d822f14	replace	Author	Jelte Fennema-Nio <postgres@jeltef.nl>
+
+# "Analyzed-by: Alexander Lakhin <exclusion@gmail.com>", one tag per person.
+138592d1b06	delete	Analyzed-by	Alexander Lakhin <exclusion@gmail.com>
+138592d1b06	append	Diagnosed-by	Alexander Lakhin <exclusion@gmail.com>
+
+# "Analyzed-by: Tom Lane <tgl@sss.pgh.pa.us>", one tag per person.
+89210037a0a	delete	Analyzed-by	Tom Lane <tgl@sss.pgh.pa.us>
+89210037a0a	append	Diagnosed-by	Tom Lane <tgl@sss.pgh.pa.us>
+
+# "Analyzed-by: Alexander Lakhin <exclusion@gmail.com>", one tag per person.
+283c5fb22b4	delete	Analyzed-by	Alexander Lakhin <exclusion@gmail.com>
+283c5fb22b4	append	Diagnosed-by	Alexander Lakhin <exclusion@gmail.com>
+
+# "Analyzed-by: Evan Montgomery-Recht <montge@mianetworks.net>", one tag per person.
+34a30786293	delete	Analyzed-by	Evan Montgomery-Recht <montge@mianetworks.net>
+34a30786293	append	Diagnosed-by	Evan Montgomery-Recht <montge@mianetworks.net>
+
+# "Analyzed-by: Tender Wang <tndrwang@gmail.com>", one tag per person.
+4321dcad475	delete	Analyzed-by	Tender Wang <tndrwang@gmail.com>
+4321dcad475	append	Diagnosed-by	Tender Wang <tndrwang@gmail.com>
+
+# "Analyzed-by: Tender Wang <tndrwang@gmail.com>", one tag per person.
+# "Analyzed-by: Ayush Tiwari <ayushtiwari.slg01@gmail.com>", one tag per person.
+b1901e2895e	delete	Analyzed-by	Tender Wang <tndrwang@gmail.com>
+b1901e2895e	append	Diagnosed-by	Tender Wang <tndrwang@gmail.com>
+b1901e2895e	delete	Analyzed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+b1901e2895e	append	Diagnosed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+
+# "Co-author: Jim Jones <jim.jones@uni-muenster.de>", one tag per person.
+1863452a4bf	delete	Co-author	Jim Jones <jim.jones@uni-muenster.de>
+1863452a4bf	append	Co-authored-by	Jim Jones <jim.jones@uni-muenster.de>
+
+# Space in the key: "Backpatch through:".
+10911fde088	append	Backpatch-through	17
+
+# "Analyzed-by: Thom Brown <thom@linux.com> (using claude)", one tag per person.
+8767a10cb8c	delete	Analyzed-by	Thom Brown <thom@linux.com> (using claude)
+8767a10cb8c	append	Diagnosed-by	Thom Brown <thom@linux.com> (using claude)
+
+# "Analyzed-by: Jeff Davis <pgsql@j-davis.com>", one tag per person.
+a3fed7608f7	delete	Analyzed-by	Jeff Davis <pgsql@j-davis.com>
+a3fed7608f7	append	Diagnosed-by	Jeff Davis <pgsql@j-davis.com>
+
+# "Fix-suggested-by: Andrew Dunstan <andrew@dunslane.net>", one tag per person.
+30d4a6daac8	delete	Fix-suggested-by	Andrew Dunstan <andrew@dunslane.net>
+30d4a6daac8	append	Suggested-by	Andrew Dunstan <andrew@dunslane.net> (fix)
+
+# "Analyzed-by: Luc Vlaming Hummel <luc.vlaming@servicenow.com>", one tag per person.
+67c10344ddb	delete	Analyzed-by	Luc Vlaming Hummel <luc.vlaming@servicenow.com>
+67c10344ddb	append	Diagnosed-by	Luc Vlaming Hummel <luc.vlaming@servicenow.com>

@@ -1,0 +1,45 @@
+# Tag fixes for 2013 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# Was "Author: Tomas Vondra, some tweaks by me".
+# "Reviewed by: Robert Haas, Shigeru Hanada, Andres Freund, Álvaro Herrera", one tag per person.
+279628a0a7c	replace	Author	Tomas Vondra
+279628a0a7c	append	Co-authored-by	Alvaro Herrera (tweaks)
+279628a0a7c	delete	Reviewed by	Robert Haas, Shigeru Hanada, Andres Freund, Álvaro Herrera
+279628a0a7c	append	Reviewed-by	Robert Haas
+279628a0a7c	append	Reviewed-by	Shigeru Hanada
+279628a0a7c	append	Reviewed-by	Andres Freund
+279628a0a7c	append	Reviewed-by	Álvaro Herrera
+
+# Was "Author: KaiGai Kohei, changes by me".
+# "Reviewed by: Robert Haas, Álvaro Herrera, Dimitri Fontaine", one tag per person.
+765cbfdc926	replace	Author	KaiGai Kohei
+765cbfdc926	append	Co-authored-by	Alvaro Herrera (changes)
+765cbfdc926	delete	Reviewed by	Robert Haas, Álvaro Herrera, Dimitri Fontaine
+765cbfdc926	append	Reviewed-by	Robert Haas
+765cbfdc926	append	Reviewed-by	Álvaro Herrera
+765cbfdc926	append	Reviewed-by	Dimitri Fontaine
+
+# Was "Author: Tomas Vondra.  Some rework by Álvaro".
+187492b6c2e	replace	Author	Tomas Vondra
+187492b6c2e	append	Co-authored-by	Álvaro (rework)
+
+# Was "Author: Andres Freund, with many reworks by Álvaro".
+639ed4e84b7	replace	Author	Andres Freund
+639ed4e84b7	append	Co-authored-by	Álvaro (reworks)
+
+# "Based-on-patch-by: Jeff Janes <jeff.janes@gmail.com>", one tag per person.
+7dfd5cd21c0	delete	Based-on-patch-by	Jeff Janes <jeff.janes@gmail.com>
+7dfd5cd21c0	append	Co-authored-by	Jeff Janes <jeff.janes@gmail.com> (earlier patch)
+
+# "Reviewers: Dean Rasheed, Jeevan Chalke, Stephen Frost", one tag per person.
+c62736cc37f	delete	Reviewers	Dean Rasheed, Jeevan Chalke, Stephen Frost
+c62736cc37f	append	Reviewed-by	Dean Rasheed
+c62736cc37f	append	Reviewed-by	Jeevan Chalke
+c62736cc37f	append	Reviewed-by	Stephen Frost
+
+# "Based-on-patch-by: David Rowley <dgrowleyml@gmail.com>", one tag per person.
+c2316dcda1c	delete	Based-on-patch-by	David Rowley <dgrowleyml@gmail.com>
+c2316dcda1c	append	Co-authored-by	David Rowley <dgrowleyml@gmail.com> (earlier patch)

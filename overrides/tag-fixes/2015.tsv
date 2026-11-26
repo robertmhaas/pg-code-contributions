@@ -1,0 +1,322 @@
+# Tag fixes for 2015 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# "Reviewed-By: Heikki Linnakangas, Noah Misch", one tag per person.
+4bad60e3fd9	delete	Reviewed-By	Heikki Linnakangas, Noah Misch
+4bad60e3fd9	append	Reviewed-by	Heikki Linnakangas
+4bad60e3fd9	append	Reviewed-by	Noah Misch
+
+# Was "Author: Dilip Kumar.  Some reworking by Álvaro Herrera".
+# "Reviewed by: Jeff Janes, Amit Kapila, Magnus Hagander, Andres Freund", one tag per person.
+a1792320473	replace	Author	Dilip Kumar
+a1792320473	append	Co-authored-by	Álvaro Herrera (reworking)
+a1792320473	delete	Reviewed by	Jeff Janes, Amit Kapila, Magnus Hagander, Andres Freund
+a1792320473	append	Reviewed-by	Jeff Janes
+a1792320473	append	Reviewed-by	Amit Kapila
+a1792320473	append	Reviewed-by	Magnus Hagander
+a1792320473	append	Reviewed-by	Andres Freund
+
+# "Reviewed-By: Michael Paquier, Andres Freund, Stephen Frost", one tag per person.
+296f3a60538	delete	Reviewed-By	Michael Paquier, Andres Freund, Stephen Frost
+296f3a60538	append	Reviewed-by	Michael Paquier
+296f3a60538	append	Reviewed-by	Andres Freund
+296f3a60538	append	Reviewed-by	Stephen Frost
+
+# "Reviewed-By: Stephen Frost, Andres Freund", one tag per person.
+a2e35b53c39	delete	Reviewed-By	Stephen Frost, Andres Freund
+a2e35b53c39	append	Reviewed-by	Stephen Frost
+a2e35b53c39	append	Reviewed-by	Andres Freund
+
+# "Authors: Kyotaro Horiguchi.  Heavily reworked by Álvaro Herrera.", one tag per person.
+# "Reviewed by: Rushabh Lathia, Adam Brightwell, Marti Raudsepp.", one tag per person.
+31eae6028ec	delete	Authors	Kyotaro Horiguchi.  Heavily reworked by Álvaro Herrera.
+31eae6028ec	insert	Author	Kyotaro Horiguchi
+31eae6028ec	append	Co-authored-by	Álvaro Herrera (heavily reworked)
+31eae6028ec	delete	Reviewed by	Rushabh Lathia, Adam Brightwell, Marti Raudsepp.
+31eae6028ec	append	Reviewed-by	Rushabh Lathia
+31eae6028ec	append	Reviewed-by	Adam Brightwell
+31eae6028ec	append	Reviewed-by	Marti Raudsepp
+
+# Was "Author: Oskari Saarenmaa, with some minor changes by me.".
+bbfd7edae5a	replace	Author	Oskari Saarenmaa
+bbfd7edae5a	append	Co-authored-by	Andres Freund (minor changes)
+
+# Was "Author: Josh Berkus, after a discussion involving lots of people.".
+a0f5954af19	replace	Author	Josh Berkus
+
+# "Reviewed-By: Heikki Linnakangas, Simon Riggs", one tag per person.
+4f1b890b137	delete	Reviewed-By	Heikki Linnakangas, Simon Riggs
+4f1b890b137	append	Reviewed-by	Heikki Linnakangas
+4f1b890b137	append	Reviewed-by	Simon Riggs
+
+# Was "Author: Michael Paquier. Some tweaks by Álvaro".
+# "Reviewed by: Robert Haas, Stephen Frost, Álvaro Herrera", one tag per person.
+0d831389749	replace	Author	Michael Paquier
+0d831389749	append	Co-authored-by	Álvaro (tweaks)
+0d831389749	delete	Reviewed by	Robert Haas, Stephen Frost, Álvaro Herrera
+0d831389749	append	Reviewed-by	Robert Haas
+0d831389749	append	Reviewed-by	Stephen Frost
+0d831389749	append	Reviewed-by	Álvaro Herrera
+
+# "Reviewed by: Jeevan Chalke, Tom Lane", one tag per person.
+b8d226b4f96	delete	Reviewed by	Jeevan Chalke, Tom Lane
+b8d226b4f96	append	Reviewed-by	Jeevan Chalke
+b8d226b4f96	append	Reviewed-by	Tom Lane
+
+# Was "Author: Andreas Karlsson, with significant editorializing by me".
+# "Reviewed-By: Peter Geoghegan, Oskari Saarenmaa", one tag per person.
+8122e1437e3	replace	Author	Andreas Karlsson
+8122e1437e3	append	Co-authored-by	Andres Freund (significant editorializing)
+8122e1437e3	delete	Reviewed-By	Peter Geoghegan, Oskari Saarenmaa
+8122e1437e3	append	Reviewed-by	Peter Geoghegan
+8122e1437e3	append	Reviewed-by	Oskari Saarenmaa
+
+# "Reviewed-By: Peter Geoghegan, Petr Jelinek, Andres Freund, Oskari Saarenmaa, David Rowley", one tag per person.
+959277a4f57	delete	Reviewed-By	Peter Geoghegan, Petr Jelinek, Andres Freund, Oskari Saarenmaa, David Rowley
+959277a4f57	append	Reviewed-by	Peter Geoghegan
+959277a4f57	append	Reviewed-by	Petr Jelinek
+959277a4f57	append	Reviewed-by	Andres Freund
+959277a4f57	append	Reviewed-by	Oskari Saarenmaa
+959277a4f57	append	Reviewed-by	David Rowley
+
+# Was "Author: David Fetter, Andrew Dunstan.  Some editorialization by me".
+# "Reviewers: Andrew Gierth, Erik Rijkers, Pavel Stěhule, Stephen Frost,", one tag per person.
+fcef1617295	replace	Author	David Fetter
+fcef1617295	replace	Author	Andrew Dunstan
+fcef1617295	append	Co-authored-by	Alvaro Herrera (editorialization)
+fcef1617295	delete	Reviewers	Andrew Gierth, Erik Rijkers, Pavel Stěhule, Stephen Frost,
+fcef1617295	append	Reviewed-by	Andrew Gierth
+fcef1617295	append	Reviewed-by	Erik Rijkers
+fcef1617295	append	Reviewed-by	Pavel Stěhule
+fcef1617295	append	Reviewed-by	Stephen Frost
+fcef1617295	append	Reviewed-by	Robert Haas
+fcef1617295	append	Reviewed-by	Andrew Dunstan
+
+# Was "Author: David Fetter, Andrew Dunstan.  Some editorialization by me".
+# "Reviewers: Andrew Gierth, Erik Rijkers, Pavel Stěhule, Stephen Frost,", one tag per person.
+e146ca68206	replace	Author	David Fetter
+e146ca68206	replace	Author	Andrew Dunstan
+e146ca68206	append	Co-authored-by	Alvaro Herrera (editorialization)
+e146ca68206	delete	Reviewers	Andrew Gierth, Erik Rijkers, Pavel Stěhule, Stephen Frost,
+e146ca68206	append	Reviewed-by	Andrew Gierth
+e146ca68206	append	Reviewed-by	Erik Rijkers
+e146ca68206	append	Reviewed-by	Pavel Stěhule
+e146ca68206	append	Reviewed-by	Stephen Frost
+e146ca68206	append	Reviewed-by	Robert Haas
+e146ca68206	append	Reviewed-by	Andrew Dunstan
+
+# "Reviewed by: A team led by Naoya Anzai (also including Akira Kurosawa,", one tag per person.
+4ff695b17d3	delete	Reviewed by	A team led by Naoya Anzai (also including Akira Kurosawa,
+4ff695b17d3	append	Reviewed-by	Naoya Anzai (also including Akira Kurosawa, Taiki Kondo, Huong Dangminh)
+4ff695b17d3	append	Reviewed-by	Fujii Masao
+
+# Was "Author: Craig Ringer, revised by me Discussion:", with the Discussion message-id on the next line.
+d811c037cea	replace	Author	Craig Ringer
+d811c037cea	append	Co-authored-by	Andres Freund (revised)
+d811c037cea	append	Discussion	CAMsr+YFKgZca5_7_ouaMWxA5PneJC9LNViPzpDHusaPhU9pA7g@mail.gmail.com
+
+# "Authors: Etsuro Fujita and Dean Rasheed (independently)", one tag per person.
+4ccc5bd28e7	delete	Authors	Etsuro Fujita and Dean Rasheed (independently)
+4ccc5bd28e7	insert	Author	Etsuro Fujita
+4ccc5bd28e7	insert	Author	Dean Rasheed (independently)
+
+# Was "Author: Dean Rasheed, though I added the new hooks and test module.".
+0bf22e0c8b1	replace	Author	Dean Rasheed
+0bf22e0c8b1	append	Co-authored-by	Stephen Frost (new hooks and test module)
+
+# Was "Author: Dean Rasheed, with some kabitzing and comment changes by me.".
+e89bd02f58a	replace	Author	Dean Rasheed
+e89bd02f58a	append	Co-authored-by	Stephen Frost (kabitzing and comment changes)
+
+# Was "Author: Dean Rasheed, with a bit of rework to make things clearer,", continued "along with comment and documentation updates from me.".
+dcbf5948e12	replace	Author	Dean Rasheed
+dcbf5948e12	append	Co-authored-by	Stephen Frost (rework, comment and documentation updates)
+
+# "Authors: Álvaro Herrera, Thomas Munro", one tag per person.
+b69bf30b9bf	delete	Authors	Álvaro Herrera, Thomas Munro
+b69bf30b9bf	insert	Author	Álvaro Herrera
+b69bf30b9bf	insert	Author	Thomas Munro
+
+# Was "Author: Andres Freund, with contributions from Petr Jelinek and Craig Ringer".
+# "Reviewed-By: Heikki Linnakangas, Petr Jelinek, Robert Haas, Steve Singer", one tag per person.
+5aa2350426c	replace	Author	Andres Freund
+5aa2350426c	append	Co-authored-by	Petr Jelinek
+5aa2350426c	append	Co-authored-by	Craig Ringer
+5aa2350426c	delete	Reviewed-By	Heikki Linnakangas, Petr Jelinek, Robert Haas, Steve Singer
+5aa2350426c	append	Reviewed-by	Heikki Linnakangas
+5aa2350426c	append	Reviewed-by	Petr Jelinek
+5aa2350426c	append	Reviewed-by	Robert Haas
+5aa2350426c	append	Reviewed-by	Steve Singer
+
+# Was "Author: Emre Hasegeli, tweaked by Álvaro".
+# "Review: Andreas Karlsson", one tag per person.
+db5f98ab4fa	replace	Author	Emre Hasegeli
+db5f98ab4fa	append	Co-authored-by	Álvaro (tweaked)
+db5f98ab4fa	delete	Review	Andreas Karlsson
+db5f98ab4fa	append	Reviewed-by	Andreas Karlsson
+
+# Was "Author: Peter Geoghegan, with significant contributions from Heikki Linnakangas and Andres Freund. Testing infrastructure by Jeff Janes.".
+# "Reviewed-By: Heikki Linnakangas, Andres Freund, Robert Haas, Simon Riggs, Dean Rasheed, Stephen Frost and many others.", one tag per person.
+168d5805e4c	replace	Author	Peter Geoghegan
+168d5805e4c	append	Co-authored-by	Heikki Linnakangas (significant contributions)
+168d5805e4c	append	Co-authored-by	Andres Freund (significant contributions)
+168d5805e4c	append	Co-authored-by	Jeff Janes (testing infrastructure)
+168d5805e4c	delete	Reviewed-By	Heikki Linnakangas, Andres Freund, Robert Haas, Simon Riggs, Dean Rasheed, Stephen Frost and many others.
+168d5805e4c	append	Reviewed-by	Heikki Linnakangas
+168d5805e4c	append	Reviewed-by	Andres Freund
+168d5805e4c	append	Reviewed-by	Robert Haas
+168d5805e4c	append	Reviewed-by	Simon Riggs
+168d5805e4c	append	Reviewed-by	Dean Rasheed
+168d5805e4c	append	Reviewed-by	Stephen Frost
+
+# Was "Author: Sawada Masahiko, various improvements by me.".
+# "Reviewers: David Steele", one tag per person.
+a97e0c3354a	replace	Author	Sawada Masahiko
+a97e0c3354a	append	Co-authored-by	Stephen Frost (improvements)
+a97e0c3354a	delete	Reviewers	David Steele
+a97e0c3354a	append	Reviewed-by	David Steele
+
+# "Authors: Álvaro Herrera, with some help from Andres Freund, Ian Barwick,", one tag per person.
+b488c580aef	delete	Authors	Álvaro Herrera, with some help from Andres Freund, Ian Barwick,
+b488c580aef	insert	Author	Álvaro Herrera
+b488c580aef	append	Co-authored-by	Andres Freund
+b488c580aef	append	Co-authored-by	Ian Barwick
+b488c580aef	append	Co-authored-by	Abhijit Menon-Sen
+b488c580aef	append	Reviewed-by	Andres Freund
+b488c580aef	append	Reviewed-by	Robert Haas
+b488c580aef	append	Reviewed-by	Amit Kapila
+b488c580aef	append	Reviewed-by	Michael Paquier
+b488c580aef	append	Reviewed-by	Craig Ringer
+b488c580aef	append	Reviewed-by	David Steele
+b488c580aef	append	Suggested-by	Dimitri Fontaine (original work)
+b488c580aef	append	Suggested-by	Chris Browne
+b488c580aef	append	Suggested-by	Stephen Frost
+b488c580aef	append	Suggested-by	Petr Jelínek
+b488c580aef	append	Suggested-by	Tom Lane
+b488c580aef	append	Suggested-by	Jim Nasby
+b488c580aef	append	Suggested-by	Steven Singer
+b488c580aef	append	Suggested-by	Pavel Stěhule
+
+# "Reviewed-By: Andres Freund, Amit Kapila and Tomas Vondra", one tag per person.
+5850b20f58a	delete	Reviewed-By	Andres Freund, Amit Kapila and Tomas Vondra
+5850b20f58a	append	Reviewed-by	Andres Freund
+5850b20f58a	append	Reviewed-by	Amit Kapila
+5850b20f58a	append	Reviewed-by	Tomas Vondra
+
+# "Authors: Ian Barwick, Abhijit Menon-Sen, David Steele", one tag per person.
+ac52bb0442f	delete	Authors	Ian Barwick, Abhijit Menon-Sen, David Steele
+ac52bb0442f	insert	Author	Ian Barwick
+ac52bb0442f	insert	Author	Abhijit Menon-Sen
+ac52bb0442f	insert	Author	David Steele
+
+# Was "Author: Emre Hasegeli.  Cosmetic changes by me".
+# "Review: Andreas Karlsson", one tag per person.
+b0b7be61337	replace	Author	Emre Hasegeli
+b0b7be61337	append	Co-authored-by	Alvaro Herrera (cosmetic changes)
+b0b7be61337	delete	Review	Andreas Karlsson
+b0b7be61337	append	Reviewed-by	Andreas Karlsson
+
+# Was "Author: Andrew Gierth and Atri Sharma, with contributions from Andres Freund".
+# "Reviewed-By: Andres Freund, Noah Misch, Tom Lane, Svenne Krap, Tomas Vondra, Erik Rijkers, Marti Raudsepp, Pavel Stehule", one tag per person.
+f3d31185321	replace	Author	Andrew Gierth
+f3d31185321	replace	Author	Atri Sharma
+f3d31185321	append	Co-authored-by	Andres Freund
+f3d31185321	delete	Reviewed-By	Andres Freund, Noah Misch, Tom Lane, Svenne Krap, Tomas Vondra, Erik Rijkers, Marti Raudsepp, Pavel Stehule
+f3d31185321	append	Reviewed-by	Andres Freund
+f3d31185321	append	Reviewed-by	Noah Misch
+f3d31185321	append	Reviewed-by	Tom Lane
+f3d31185321	append	Reviewed-by	Svenne Krap
+f3d31185321	append	Reviewed-by	Tomas Vondra
+f3d31185321	append	Reviewed-by	Erik Rijkers
+f3d31185321	append	Reviewed-by	Marti Raudsepp
+f3d31185321	append	Reviewed-by	Pavel Stehule
+
+# "Reported-By: Olivier Gosseaume, Marko Tiikkaja", one tag per person.
+5c0de384d2c	delete	Reported-By	Olivier Gosseaume, Marko Tiikkaja
+5c0de384d2c	append	Reported-by	Olivier Gosseaume
+5c0de384d2c	append	Reported-by	Marko Tiikkaja
+
+# Was "Author: Peter Geoghegan, slightly edited by me".
+c1ca3a19df3	replace	Author	Peter Geoghegan
+c1ca3a19df3	append	Co-authored-by	Andres Freund (slightly edited)
+
+# Was "Author: Andrew Gierth, with tests from Jeevan Chalke".
+faab14ecb8c	replace	Author	Andrew Gierth
+faab14ecb8c	append	Co-authored-by	Jeevan Chalke (tests)
+
+# "Analyzed-By: Heikki Linnakangas", one tag per person.
+7039760114d	delete	Analyzed-By	Heikki Linnakangas
+7039760114d	append	Diagnosed-by	Heikki Linnakangas
+
+# Was "Author: Marko Tiikkaja, editorialized by me".
+3f811c2d6f5	replace	Author	Marko Tiikkaja
+3f811c2d6f5	append	Co-authored-by	Andres Freund (editorialized)
+
+# Was "Author: Michael Paquier, while reviewing another sslinfo patch".
+d94c36a45ab	replace	Author	Michael Paquier
+
+# "Reviewed by: Michael Paquier, Heikki Linnakangas, Álvaro Herrera", one tag per person.
+49124613f13	delete	Reviewed by	Michael Paquier, Heikki Linnakangas, Álvaro Herrera
+49124613f13	append	Reviewed-by	Michael Paquier
+49124613f13	append	Reviewed-by	Heikki Linnakangas
+49124613f13	append	Reviewed-by	Álvaro Herrera
+
+# "Reviewed-By: Robert Haas, Alvaro Herrera, Thomas Munro", one tag per person.
+4f627f89736	delete	Reviewed-By	Robert Haas, Alvaro Herrera, Thomas Munro
+4f627f89736	append	Reviewed-by	Robert Haas
+4f627f89736	append	Reviewed-by	Alvaro Herrera
+4f627f89736	append	Reviewed-by	Thomas Munro
+
+# "Reported-By: Peter Geoghegan, Geoff Winkless", one tag per person.
+ad227837924	delete	Reported-By	Peter Geoghegan, Geoff Winkless
+ad227837924	append	Reported-by	Peter Geoghegan
+ad227837924	append	Reported-by	Geoff Winkless
+
+# Was "Author: Petr Jelinek, editorialized by Michael Paquier, Andres Freund".
+# "Reviewed-By: Michael Paquier, Andres Freund, Jeff Janes", one tag per person.
+b67aaf21e8e	replace	Author	Petr Jelinek
+b67aaf21e8e	append	Co-authored-by	Michael Paquier (editorialized)
+b67aaf21e8e	append	Co-authored-by	Andres Freund (editorialized)
+b67aaf21e8e	delete	Reviewed-By	Michael Paquier, Andres Freund, Jeff Janes
+b67aaf21e8e	append	Reviewed-by	Michael Paquier
+b67aaf21e8e	append	Reviewed-by	Andres Freund
+b67aaf21e8e	append	Reviewed-by	Jeff Janes
+
+# Was "Author: Petr Jelínek, with some further tweaks by Álvaro Herrera.".
+531d21b75ff	replace	Author	Petr Jelínek
+531d21b75ff	append	Co-authored-by	Álvaro Herrera (further tweaks)
+
+# "Review: Michael Paquier", one tag per person.
+92e38182d7c	delete	Review	Michael Paquier
+92e38182d7c	append	Reviewed-by	Michael Paquier
+
+# "Review: Michael Paquier", one tag per person.
+e50cda78404	delete	Review	Michael Paquier
+e50cda78404	append	Reviewed-by	Michael Paquier
+
+# "Authors: Michael Paquier, Álvaro Herrera", one tag per person.
+# "Review: Noah Misch", one tag per person.
+1caef31d9e5	delete	Authors	Michael Paquier, Álvaro Herrera
+1caef31d9e5	insert	Author	Michael Paquier
+1caef31d9e5	insert	Author	Álvaro Herrera
+1caef31d9e5	delete	Review	Noah Misch
+1caef31d9e5	append	Reviewed-by	Noah Misch
+
+# "Authors: Álvaro Herrera, Petr Jelínek.", one tag per person.
+820ddb2c2f1	delete	Authors	Álvaro Herrera, Petr Jelínek.
+820ddb2c2f1	insert	Author	Álvaro Herrera
+820ddb2c2f1	insert	Author	Petr Jelínek
+
+# "Reported-By: Noah Misch, although this is not his preferred fix", one tag per person.
+cca705a5d93	delete	Reported-By	Noah Misch, although this is not his preferred fix
+cca705a5d93	append	Reported-by	Noah Misch
+
+# Was "Author: Fornaroli Christophe with comments by me.".
+25bfa7efd03	replace	Author	Fornaroli Christophe
+25bfa7efd03	append	Co-authored-by	Teodor Sigaev (comments)
+
+# "Reviewer: Jeff Janes", one tag per person.
+743229a67e2	delete	Reviewer	Jeff Janes
+743229a67e2	append	Reviewed-by	Jeff Janes

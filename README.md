@@ -7,11 +7,16 @@ files.
 
 - Everything under `data/` is written by scripts. Don't edit it by hand;
   fix the script and regenerate.
+- `overrides/` holds hand-written corrections. Lines starting with `#` are
+  comments, used to explain the rows that follow.
 - Files use PostgreSQL's COPY text format: tab separated, backslash
-  escapes, UTF-8, with a header row. Each one loads with
-  `\copy table from 'file' with (header)`.
+  escapes, UTF-8, with a header row. Row order is meaningful, so the files
+  aren't meant to be loaded into a database as they are.
 - Values are recorded as found, not cleaned up. Normalizing names and
   deciding what counts belong downstream.
+- `commitdata.py` reads `data/` and applies `overrides/`, giving other
+  scripts the corrected data in memory. `check-commits.py` loads it and
+  reports anything that looks wrong.
 
 ## Commit metadata
 
@@ -42,15 +47,7 @@ commit has as many rows as it has tags:
 | `value` | the rest of the line as typed, e.g. `Jane Doe <jd@example.com>` |
 
 Rows are in `master` order, oldest first, and tags are in the order they
-appear in the message. To load them:
-
-```sql
-create table commits (hash text primary key, committer text,
-                      committed_at timestamptz, insertions int, subject text);
-create table tags (hash text references commits, tag text, value text);
-\copy commits from 'data/commits/2025.tsv' with (header)
-\copy tags from 'data/tags/2025.tsv' with (header)
-```
+appear in the message.
 
 ### Rules
 
@@ -94,6 +91,64 @@ captured. Lines that happen to look like tags are captured, for example
 `ERROR: ...` pasted from psql or `Note: ...` in a paragraph. Use the tag
 name to pick the ones you want.
 
+### Tag fixes
+
+Some commit messages are malformed, e.g. `Author:Jane Doe` with no space,
+or `Author: Author: Jane Doe`, and older ones give credit only in prose
+("Patch by Jane Doe, reviewed by John Roe"). Rather than bend the
+extraction rules to fit, `data/tags/` keeps what was parsed, and
+`overrides/tag-fixes/YYYY.tsv` records the corrections, one file per year
+like `data/`. Rows are in commit order, each commit's rows preceded by a
+comment saying why:
+
+| column  | meaning                                          |
+|---------|--------------------------------------------------|
+| `hash`  | the commit, as in `data/commits/`                |
+| `verb`  | `insert`, `append`, `delete` or `replace`        |
+| `tag`   | the tag, matched exactly as typed                |
+| `value` | the value to add or delete                       |
+
+Each tag of a commit is fixed separately:
+
+- `insert` and `append` add a value before the tag's existing values or
+  after them, in file order. If the commit has no values for that tag,
+  they go before or after all of its tags.
+- `delete` removes every value that matches exactly.
+- `replace` discards all the tag's existing values and puts the replace
+  rows, in file order, where the first one was. It must be the only verb
+  used for that commit and tag.
+
+So for a tag with values `a b c`, `insert d`, `insert e`, `append f`,
+`delete b` gives `d e a c f`.
+
+Where the prose allows, fixes put tags in a canonical form: one person per
+tag, with a parenthetical gloss saying what they did. "Bob Jones, with a
+test case from Fred Smith" becomes `Author: Bob Jones` and
+`Co-authored-by: Fred Smith (test case)`, and "me" becomes the committer.
+
+`commitdata.py` applies fixes even when they're stale or contradictory,
+so tools keep working. `check-commits.py` reports the problems:
+
+- an unknown commit or verb,
+- a fix in the wrong year's file, or out of commit order,
+- a `delete` that matches nothing,
+- an `insert` or `append` of a value that's already there (most likely
+  the extraction now reads that line itself),
+- `replace` mixed with other verbs.
+
+### Using the data
+
+```python
+import commitdata
+data = commitdata.load()
+commit = data.commits['a8eeb22f171']
+commit.raw_tags   # [(tag, value)] as extracted
+commit.tags       # with tag fixes applied
+```
+
+`commit.year` is the year of the file the commit came from. Run
+`python3 check-commits.py` after changing anything under `overrides/`.
+
 ### Updating
 
 The `Extract commits` Action runs daily at 08:23 UTC. It also runs when
@@ -106,7 +161,8 @@ practice is the current year. The previous year can change too, around New
 Year. A run triggered by a change to `extract-commits.py`, or a manual run with
 "all" ticked, rewrites every year.
 
-To run it locally:
+To run it locally, against an up-to-date clone (a stale one rewrites the
+current year without the commits it's missing):
 
 ```sh
 python3 extract-commits.py --repo ~/pgsql --ref origin/master          # changed years

@@ -1,0 +1,1951 @@
+# Tag fixes for 2018 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# "Thomas Munro, per gripe by me."
+6fcde240630	insert	Author	Thomas Munro
+6fcde240630	append	Reported-by	Tom Lane
+
+# "Thomas Munro, reviewed by Vik Fearing, some additional hacking by me."
+47c6772eb72	insert	Author	Thomas Munro
+47c6772eb72	append	Reviewed-by	Vik Fearing
+47c6772eb72	append	Co-authored-by	Tom Lane (hacking)
+
+# "Thomas Munro."
+934c7986f4a	insert	Author	Thomas Munro
+
+# "Amit Kapila, with cosmetic adjustments by me."
+c7593956177	insert	Author	Amit Kapila
+c7593956177	append	Co-authored-by	Robert Haas (cosmetic adjustments)
+
+# "Maksim Milyutin, reviewed by Andrey Borodin."
+39cfe86195f	insert	Author	Maksim Milyutin
+39cfe86195f	append	Reviewed-by	Andrey Borodin
+
+# "Amit Khandekar, reviewed by Amit Langote, David Rowley, and me."
+cc6337d2fed	insert	Author	Amit Khandekar
+cc6337d2fed	append	Reviewed-by	Amit Langote
+cc6337d2fed	append	Reviewed-by	David Rowley
+cc6337d2fed	append	Reviewed-by	Robert Haas
+
+# "Amit Khandekar, reviewed by Amit Langote, David Rowley, and me. Some comment changes by me."
+ef6087ee5fa	insert	Author	Amit Khandekar
+ef6087ee5fa	append	Reviewed-by	Amit Langote
+ef6087ee5fa	append	Reviewed-by	David Rowley
+ef6087ee5fa	append	Reviewed-by	Robert Haas
+ef6087ee5fa	append	Co-authored-by	Robert Haas (comment changes)
+
+# "Amit Khandekar, reviewed by Amit Langote, David Rowley, and me."
+19c47e7c820	insert	Author	Amit Khandekar
+19c47e7c820	append	Reviewed-by	Amit Langote
+19c47e7c820	append	Reviewed-by	David Rowley
+19c47e7c820	append	Reviewed-by	Robert Haas
+
+# Was "Author: Fabien Coelho with minor editorization by me".
+# "Reviewed-By: Pavel Stehule, Jeevan Ladhe, me", one tag per person.
+bc7fa0c15c5	replace	Author	Fabien Coelho
+bc7fa0c15c5	append	Co-authored-by	Teodor Sigaev (minor editorization)
+bc7fa0c15c5	delete	Reviewed-By	Pavel Stehule, Jeevan Ladhe, me
+bc7fa0c15c5	append	Reviewed-by	Pavel Stehule
+bc7fa0c15c5	append	Reviewed-by	Jeevan Ladhe
+bc7fa0c15c5	append	Reviewed-by	Teodor Sigaev
+
+# "Nathan Bossart, reviewed by Michael Paquier and Masahiko Sawada."
+921059bd66c	insert	Author	Nathan Bossart
+921059bd66c	append	Reviewed-by	Michael Paquier
+921059bd66c	append	Reviewed-by	Masahiko Sawada
+
+# "Nikita Glukhov and Andrew Dunstan, reviewed by Pavel Stehule."
+11b623dd0a2	insert	Author	Nikita Glukhov
+11b623dd0a2	insert	Author	Andrew Dunstan
+11b623dd0a2	append	Reviewed-by	Pavel Stehule
+
+# "Authors: Jacob Champion, Asim Praveen, Ashwin Agrawal"
+# "Authors: Jacob Champion, Asim Praveen, Ashwin Agrawal", one tag per person.
+272c2ab9fd0	insert	Author	Jacob Champion
+272c2ab9fd0	delete	Authors	Jacob Champion, Asim Praveen, Ashwin Agrawal
+272c2ab9fd0	append	Author	Asim Praveen
+272c2ab9fd0	append	Author	Ashwin Agrawal
+
+# "Report by Rajkumar Raghuwanshi. Fix by Amit Khandekar. Brown paper bag bug by me."
+2fd58096f02	insert	Author	Amit Khandekar
+2fd58096f02	append	Reported-by	Rajkumar Raghuwanshi
+2fd58096f02	append	Co-authored-by	Robert Haas (brown paper bag bug)
+
+# "Yugo Nagata and Tom Lane."
+3c1e9fd2326	insert	Author	Yugo Nagata
+3c1e9fd2326	insert	Author	Tom Lane
+
+# "Reviewed by: Tomas Vondra, Andrey Borodin", one tag per person.
+563a053bdd4	delete	Reviewed by	Tomas Vondra, Andrey Borodin
+563a053bdd4	append	Reviewed-by	Tomas Vondra
+563a053bdd4	append	Reviewed-by	Andrey Borodin
+
+# "Reviewed by: Tomas Vondra, Andrey Borodin", one tag per person.
+f50c80dbb17	delete	Reviewed by	Tomas Vondra, Andrey Borodin
+f50c80dbb17	append	Reviewed-by	Tomas Vondra
+f50c80dbb17	append	Reviewed-by	Andrey Borodin
+
+# "Tatsuro Yamada."
+9ff4f758ee4	insert	Author	Tatsuro Yamada
+
+# "Tatsuro Yamada, reviewed by Thomas Munro."
+4d41b2e0926	insert	Author	Tatsuro Yamada
+4d41b2e0926	append	Reviewed-by	Thomas Munro
+
+# Was "Author: John Naylor, some changes by Álvaro Herrera".
+49c784ece76	replace	Author	John Naylor
+49c784ece76	append	Co-authored-by	Álvaro Herrera (changes)
+
+# "Patch by Ashutosh Sharma <ashu.coek88@gmail.com>."
+ca4587f3f94	insert	Author	Ashutosh Sharma <ashu.coek88@gmail.com>
+
+# "Heikki Linnakangas, with small mods and better test cases by me. additional review by Andrew Gierth."
+90947674fc9	insert	Author	Heikki Linnakangas
+90947674fc9	append	Co-authored-by	Tom Lane (small mods and better test cases)
+90947674fc9	append	Reviewed-by	Andrew Gierth
+
+# "Jeevan Chalke, reviewed by Ashutosh Bapat. Per bug #14890 from Sean Johnston."
+e9f2703ab7b	insert	Author	Jeevan Chalke
+e9f2703ab7b	append	Reviewed-by	Ashutosh Bapat
+e9f2703ab7b	append	Reported-by	Sean Johnston (bug #14890)
+
+# "Patch by: "Rader, David" <davidr@openscg.com>."
+# "Patch by: "Rader, David" <davidr@openscg.com>", one tag per person.
+649aeb123f7	insert	Author	Rader, David
+649aeb123f7	insert	Author	"Rader, David" <davidr@openscg.com>
+649aeb123f7	delete	Patch by	"Rader, David" <davidr@openscg.com>
+
+# "Patch from Nikita Glukhov."
+cc4feded0a3	insert	Author	Nikita Glukhov
+
+# "Etsuro Fujita, reviewed by Amit Langote."
+dca48d145e0	insert	Author	Etsuro Fujita
+dca48d145e0	append	Reviewed-by	Amit Langote
+
+# "Marina Polyakova, Victor Wagner, Tom Lane."
+2082b3745a7	insert	Author	Marina Polyakova
+2082b3745a7	insert	Author	Victor Wagner
+2082b3745a7	insert	Author	Tom Lane
+
+# "Amit Khandekar, reviewed and tested by Amit Langote, David Rowley, Rajkumar Raghuwanshi, Dilip Kumar, Amul Sul, Thomas Munro, Álvaro Herrera, Amit Kapila, and me. A few final revisions by me."
+2f178441044	insert	Author	Amit Khandekar
+2f178441044	append	Reviewed-by	Amit Langote
+2f178441044	append	Reviewed-by	David Rowley
+2f178441044	append	Reviewed-by	Rajkumar Raghuwanshi
+2f178441044	append	Reviewed-by	Dilip Kumar
+2f178441044	append	Reviewed-by	Amul Sul
+2f178441044	append	Reviewed-by	Thomas Munro
+2f178441044	append	Reviewed-by	Álvaro Herrera
+2f178441044	append	Reviewed-by	Amit Kapila
+2f178441044	append	Reviewed-by	Robert Haas
+2f178441044	append	Tested-by	Amit Langote
+2f178441044	append	Tested-by	David Rowley
+2f178441044	append	Tested-by	Rajkumar Raghuwanshi
+2f178441044	append	Tested-by	Dilip Kumar
+2f178441044	append	Tested-by	Amul Sul
+2f178441044	append	Tested-by	Thomas Munro
+2f178441044	append	Tested-by	Álvaro Herrera
+2f178441044	append	Tested-by	Amit Kapila
+2f178441044	append	Tested-by	Robert Haas
+2f178441044	append	Co-authored-by	Robert Haas (final revisions)
+
+# "Reviewed by: Magnus Hagander, Amit Kapila."
+# "Authors: Takayuki Tsunakawa and Thomas Munro", one tag per person.
+# "Reviewed by: Magnus Hagander, Amit Kapila", one tag per person.
+1cc4f536ef8	insert	Author	Takayuki Tsunakawa
+1cc4f536ef8	append	Reviewed-by	Magnus Hagander
+1cc4f536ef8	append	Reviewed-by	Amit Kapila
+1cc4f536ef8	delete	Authors	Takayuki Tsunakawa and Thomas Munro
+1cc4f536ef8	append	Author	Thomas Munro
+1cc4f536ef8	delete	Reviewed by	Magnus Hagander, Amit Kapila
+
+# "Haribabu Kommi, reviewed at various times by Andreas Karlsson, Vaishnavi Prabakaran, and Robert Haas. further hacking by me."
+b3f8401205a	insert	Author	Haribabu Kommi
+b3f8401205a	append	Reviewed-by	Andreas Karlsson
+b3f8401205a	append	Reviewed-by	Vaishnavi Prabakaran
+b3f8401205a	append	Reviewed-by	Robert Haas
+b3f8401205a	append	Co-authored-by	Tom Lane (further hacking)
+
+# "Thomas Munro and Michail Nikolaev, small tweaks by me."
+434e6e14844	insert	Author	Thomas Munro
+434e6e14844	insert	Author	Michail Nikolaev
+434e6e14844	append	Co-authored-by	Tom Lane (small tweaks)
+
+# "Report by buildfarm member skink and Tom Lane. Analysis by me. Patch by Amit Khandekar."
+945f71db845	insert	Author	Amit Khandekar
+945f71db845	append	Reported-by	Tom Lane
+945f71db845	append	Diagnosed-by	Robert Haas
+
+# "Reviewed-By: Justin Pryzby, Peter Eisentraut", one tag per person.
+2a5ecb56d22	delete	Reviewed-By	Justin Pryzby, Peter Eisentraut
+2a5ecb56d22	append	Reviewed-by	Justin Pryzby
+2a5ecb56d22	append	Reviewed-by	Peter Eisentraut
+
+# "Robins Tharakan, reviewed by Fabrízio Mello."
+1368e92e16a	insert	Author	Robins Tharakan
+1368e92e16a	append	Reviewed-by	Fabrízio Mello
+
+# "Report and patch by Masahiko Sawada."
+b0313f9cc8f	insert	Author	Masahiko Sawada
+b0313f9cc8f	append	Reported-by	Masahiko Sawada
+
+# "Michael Paquier, per an observation by Daniel Gustafsson. some small cosmetic adjustments to nearby code by me."
+4971d2a3220	insert	Author	Michael Paquier
+4971d2a3220	append	Reported-by	Daniel Gustafsson
+4971d2a3220	append	Co-authored-by	Tom Lane (small cosmetic adjustments to nearby code)
+
+# "Jeevan Chalke. The larger patch series of which this patch is a part was reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, Ashutosh Bapat, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, and me. Some cosmetic changes by me."
+9fd8b7d6325	insert	Author	Jeevan Chalke
+9fd8b7d6325	append	Reviewed-by	Antonin Houska
+9fd8b7d6325	append	Reviewed-by	Rajkumar Raghuwanshi
+9fd8b7d6325	append	Reviewed-by	Ashutosh Bapat
+9fd8b7d6325	append	Reviewed-by	David Rowley
+9fd8b7d6325	append	Reviewed-by	Dilip Kumar
+9fd8b7d6325	append	Reviewed-by	Konstantin Knizhnik
+9fd8b7d6325	append	Reviewed-by	Pascal Legrand
+9fd8b7d6325	append	Reviewed-by	Robert Haas
+9fd8b7d6325	append	Tested-by	Antonin Houska
+9fd8b7d6325	append	Tested-by	Rajkumar Raghuwanshi
+9fd8b7d6325	append	Tested-by	Ashutosh Bapat
+9fd8b7d6325	append	Tested-by	David Rowley
+9fd8b7d6325	append	Tested-by	Dilip Kumar
+9fd8b7d6325	append	Tested-by	Konstantin Knizhnik
+9fd8b7d6325	append	Tested-by	Pascal Legrand
+9fd8b7d6325	append	Tested-by	Robert Haas
+9fd8b7d6325	append	Co-authored-by	Robert Haas (cosmetic changes)
+
+# "Daniel Gustafsson, reviewed by Michael Paquier, small changes by me."
+fb8697b31aa	insert	Author	Daniel Gustafsson
+fb8697b31aa	append	Reviewed-by	Michael Paquier
+fb8697b31aa	append	Co-authored-by	Tom Lane (small changes)
+
+# Was "Author: Tomas Vondra and Andres Freund, with additional input by Thomas Munro, Tom Lane Todd A. Cook".
+# "Reported-By: Todd A. Cook, Tomas Vondra, Thomas Munro", one tag per person.
+ab9f2c429d8	replace	Author	Tomas Vondra
+ab9f2c429d8	replace	Author	Andres Freund
+ab9f2c429d8	append	Suggested-by	Thomas Munro
+ab9f2c429d8	append	Suggested-by	Tom Lane
+ab9f2c429d8	append	Suggested-by	Todd A. Cook
+ab9f2c429d8	delete	Reported-By	Todd A. Cook, Tomas Vondra, Thomas Munro
+ab9f2c429d8	append	Reported-by	Todd A. Cook
+ab9f2c429d8	append	Reported-by	Tomas Vondra
+ab9f2c429d8	append	Reported-by	Thomas Munro
+
+# "Report and patch by Etsuro Fujita. I added a comment along lines previously suggested by Tom Lane."
+99f6a17dd62	insert	Author	Etsuro Fujita
+99f6a17dd62	append	Reported-by	Etsuro Fujita
+99f6a17dd62	append	Suggested-by	Tom Lane
+
+# "Kyotaro Horiguchi, reviewed by me."
+0ff5bd7b473	insert	Author	Kyotaro Horiguchi
+0ff5bd7b473	append	Reviewed-by	Robert Haas
+
+# "Amit Langote, reviewed by Etsuro Fujita."
+3ccdc6f9a58	insert	Author	Amit Langote
+3ccdc6f9a58	append	Reviewed-by	Etsuro Fujita
+
+# "Thomas Munro, reviewed by Michael Paquier and extended a bit by me."
+d40d97d6c74	insert	Author	Thomas Munro
+d40d97d6c74	append	Reviewed-by	Michael Paquier
+d40d97d6c74	append	Co-authored-by	Robert Haas (extended a bit)
+
+# "Alexander Lakhin, reviewed by Michael Paquier."
+22757960bb3	insert	Author	Alexander Lakhin
+22757960bb3	append	Reviewed-by	Michael Paquier
+
+# Was "Author: original author Robert Haas, modified by me".
+df9f599bc6f	replace	Author	Robert Haas
+df9f599bc6f	append	Co-authored-by	Bruce Momjian (modified)
+
+# "Report and suggested fix by Lixian Zou."
+ad25a6b1f25	append	Reported-by	Lixian Zou
+ad25a6b1f25	append	Suggested-by	Lixian Zou
+
+# "Initial patch by Lætitia Avrot, with further improvements by Amit Langote and Thomas Munro."
+a2a22057617	insert	Author	Lætitia Avrot
+a2a22057617	append	Co-authored-by	Amit Langote (further improvements)
+a2a22057617	append	Co-authored-by	Thomas Munro (further improvements)
+
+# "Amit Kapila, revised by me. Additional review by Peter Geoghegan."
+9222c0d9ed9	insert	Author	Amit Kapila
+9222c0d9ed9	append	Co-authored-by	Robert Haas (revised)
+9222c0d9ed9	append	Reviewed-by	Peter Geoghegan
+
+# "Amit Langote, per a suggestion from me."
+9aef173163a	insert	Author	Amit Langote
+9aef173163a	append	Suggested-by	Robert Haas
+
+# "Peter Geoghegan with some help from Rushabh Lathia. While Heikki Linnakangas is not an author of this patch, he wrote other patches without which this feature would not have been possible ... Reviewed by Claudio Freire, Heikki Linnakangas, Thomas Munro, Tels, Amit Kapila, me."
+9da0cc35284	insert	Author	Peter Geoghegan
+9da0cc35284	append	Co-authored-by	Rushabh Lathia
+9da0cc35284	append	Reviewed-by	Claudio Freire
+9da0cc35284	append	Reviewed-by	Heikki Linnakangas
+9da0cc35284	append	Reviewed-by	Thomas Munro
+9da0cc35284	append	Reviewed-by	Tels
+9da0cc35284	append	Reviewed-by	Amit Kapila
+9da0cc35284	append	Reviewed-by	Robert Haas
+
+# "Thomas Munro."
+05d0f13f070	insert	Author	Thomas Munro
+
+# "Bug discovered independently by Álvaro Herrera and David Rowley. This patch is by Álvaro but owes something to David's proposed fix."
+3492a0af0bd	insert	Author	Álvaro Herrera
+3492a0af0bd	insert	Author	Álvaro
+3492a0af0bd	append	Reported-by	Álvaro Herrera
+3492a0af0bd	append	Reported-by	David Rowley
+
+# "Ashutosh Bapat, with some wordsmithing by me."
+f069c91a579	insert	Author	Ashutosh Bapat
+f069c91a579	append	Co-authored-by	Robert Haas (wordsmithing)
+
+# "Peter Geoghegan, based on a suggestion from Tom Lane and me. Some comment revisions by me."
+9fafa413ac6	insert	Author	Peter Geoghegan
+9fafa413ac6	append	Suggested-by	Tom Lane
+9fafa413ac6	append	Suggested-by	Robert Haas
+9fafa413ac6	append	Co-authored-by	Robert Haas (comment revisions)
+
+# "Etsuro Fujita."
+23209457314	insert	Author	Etsuro Fujita
+
+# "Oliver Ford, reviewed and whacked around some by me."
+0a459cec96d	insert	Author	Oliver Ford
+0a459cec96d	append	Reviewed-by	Tom Lane
+
+# "Dagfinn Ilmari Mannsåker."
+4815dfa10f4	insert	Author	Dagfinn Ilmari Mannsåker
+
+# "Thomas Munro."
+b98a7cd58f6	insert	Author	Thomas Munro
+
+# "Etsuro Fujita, reviewed by Ashutosh Bapat, Rushabh Lathia, and me. Some formatting corrections by me."
+1bc0100d270	insert	Author	Etsuro Fujita
+1bc0100d270	append	Reviewed-by	Ashutosh Bapat
+1bc0100d270	append	Reviewed-by	Rushabh Lathia
+1bc0100d270	append	Reviewed-by	Robert Haas
+1bc0100d270	append	Co-authored-by	Robert Haas (formatting corrections)
+
+# "Report by Rajkumar Raghuwanshi. Patch by Amit Khandekar and me. Review by Kyotaro Horiguchi."
+88fdc700601	insert	Author	Amit Khandekar
+88fdc700601	insert	Author	Robert Haas
+88fdc700601	append	Reported-by	Rajkumar Raghuwanshi
+88fdc700601	append	Reviewed-by	Kyotaro Horiguchi
+
+# "Amit Langote, revieed by Amit Khandekar, Etsuro Fujita, and me."
+e44dd84325c	insert	Author	Amit Langote
+e44dd84325c	append	Co-authored-by	Amit Khandekar (revieed)
+e44dd84325c	append	Co-authored-by	Etsuro Fujita (revieed)
+e44dd84325c	append	Co-authored-by	Robert Haas (revieed)
+
+# "Atsushi Torikoshi."
+b78d0160da1	insert	Author	Atsushi Torikoshi
+
+# "Etsuro Fujita."
+958e20e42d6	insert	Author	Etsuro Fujita
+
+# "Reported by Peter Eisentraut. Analysis and fix by Thomas Munro, tweaked by me."
+be42015fcc7	insert	Author	Thomas Munro
+be42015fcc7	append	Reported-by	Peter Eisentraut
+be42015fcc7	append	Diagnosed-by	Thomas Munro
+be42015fcc7	append	Co-authored-by	Robert Haas (tweaked)
+
+# "Metin Doslu."
+935dee9ad5a	insert	Author	Metin Doslu
+
+# "Kyotaro Horiguchi, who also reported the issue. Reviewed by Michael Paquier and Peter Geoghegan."
+88ef48c1cce	insert	Author	Kyotaro Horiguchi
+88ef48c1cce	append	Reviewed-by	Michael Paquier
+88ef48c1cce	append	Reviewed-by	Peter Geoghegan
+
+# "Jaime Casanova, tweaked a bit by me."
+9a725f7b5cb	insert	Author	Jaime Casanova
+9a725f7b5cb	append	Co-authored-by	Tom Lane (tweaked a bit)
+
+# Was "Author: Michael Paquier, some revisions by me".
+a26116c6cbf	replace	Author	Michael Paquier
+a26116c6cbf	append	Co-authored-by	Alvaro Herrera (revisions)
+
+# "David Rowley."
+524d64ea8e3	insert	Author	David Rowley
+
+# "Jeevan Chalke, per a suggestion from David Rowley. Reviewed by Ashutosh Bapat. Some changes by me. The larger patch series of which this patch is a part was also reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, Rafia Sabih, and me."
+7d8ac9814bc	insert	Author	Jeevan Chalke
+7d8ac9814bc	append	Suggested-by	David Rowley
+7d8ac9814bc	append	Reviewed-by	Ashutosh Bapat
+7d8ac9814bc	append	Co-authored-by	Robert Haas (changes)
+7d8ac9814bc	append	Reviewed-by	Antonin Houska
+7d8ac9814bc	append	Reviewed-by	Rajkumar Raghuwanshi
+7d8ac9814bc	append	Reviewed-by	David Rowley
+7d8ac9814bc	append	Reviewed-by	Dilip Kumar
+7d8ac9814bc	append	Reviewed-by	Konstantin Knizhnik
+7d8ac9814bc	append	Reviewed-by	Pascal Legrand
+7d8ac9814bc	append	Reviewed-by	Rafia Sabih
+7d8ac9814bc	append	Reviewed-by	Robert Haas
+7d8ac9814bc	append	Tested-by	Antonin Houska
+7d8ac9814bc	append	Tested-by	Rajkumar Raghuwanshi
+7d8ac9814bc	append	Tested-by	David Rowley
+7d8ac9814bc	append	Tested-by	Dilip Kumar
+7d8ac9814bc	append	Tested-by	Konstantin Knizhnik
+7d8ac9814bc	append	Tested-by	Pascal Legrand
+7d8ac9814bc	append	Tested-by	Rafia Sabih
+7d8ac9814bc	append	Tested-by	Robert Haas
+
+# "Peter Geoghegan, per buildfarm member skink and Andres Freund."
+de6428afe13	insert	Author	Peter Geoghegan
+de6428afe13	append	Reported-by	Andres Freund
+
+# "Ashutosh Bapat, with cosmetic changes by me."
+84cb51b4e24	insert	Author	Ashutosh Bapat
+84cb51b4e24	append	Co-authored-by	Robert Haas (cosmetic changes)
+
+# "Etsuro Fujita."
+810e7e264ab	insert	Author	Etsuro Fujita
+
+# "Amit Langote, reviewed by Etsuro Fujita, with a few changes by me."
+edd44738bc8	insert	Author	Amit Langote
+edd44738bc8	append	Reviewed-by	Etsuro Fujita
+edd44738bc8	append	Co-authored-by	Robert Haas (changes)
+
+# "Thomas Munro."
+a6a80134e3b	insert	Author	Thomas Munro
+
+# "Ashutosh Bapat, reviewed by Amit Langote, with a comment tweak by me."
+b0229235564	insert	Author	Ashutosh Bapat
+b0229235564	append	Reviewed-by	Amit Langote
+b0229235564	append	Co-authored-by	Robert Haas (comment tweak)
+
+# "Amit Langote. The larger patch series of which this patch is a part has been reviewed and tested by Ashutosh Bapat, David Rowley, Dilip Kumar, Jesper Pedersen, Rajkumar Raghuwanshi, Beena Emerson, Kyotaro Horiguchi, Álvaro Herrera, and me, but especially and in great detail by David Rowley."
+f724022d0ae	insert	Author	Amit Langote
+f724022d0ae	append	Reviewed-by	Ashutosh Bapat
+f724022d0ae	append	Reviewed-by	David Rowley
+f724022d0ae	append	Reviewed-by	Dilip Kumar
+f724022d0ae	append	Reviewed-by	Jesper Pedersen
+f724022d0ae	append	Reviewed-by	Rajkumar Raghuwanshi
+f724022d0ae	append	Reviewed-by	Beena Emerson
+f724022d0ae	append	Reviewed-by	Kyotaro Horiguchi
+f724022d0ae	append	Reviewed-by	Álvaro Herrera
+f724022d0ae	append	Reviewed-by	Robert Haas
+f724022d0ae	append	Tested-by	Ashutosh Bapat
+f724022d0ae	append	Tested-by	David Rowley
+f724022d0ae	append	Tested-by	Dilip Kumar
+f724022d0ae	append	Tested-by	Jesper Pedersen
+f724022d0ae	append	Tested-by	Rajkumar Raghuwanshi
+f724022d0ae	append	Tested-by	Beena Emerson
+f724022d0ae	append	Tested-by	Kyotaro Horiguchi
+f724022d0ae	append	Tested-by	Álvaro Herrera
+f724022d0ae	append	Tested-by	Robert Haas
+f724022d0ae	append	Co-authored-by	David Rowley (especially and in great detail)
+
+# "Jeevan Chalke."
+5e6a63c0d10	insert	Author	Jeevan Chalke
+
+# "Michael Paquier."
+6614aaa699b	insert	Author	Michael Paquier
+
+# "Thomas Munro."
+e98a4de7d23	insert	Author	Thomas Munro
+
+# "Etsuro Fujita, reviewed by Amit Langote."
+c161ea138fe	insert	Author	Etsuro Fujita
+c161ea138fe	append	Reviewed-by	Amit Langote
+
+# "Etsuro Fujita."
+4fa396464e5	insert	Author	Etsuro Fujita
+
+# "Thomas Munro."
+73797b7884e	insert	Author	Thomas Munro
+
+# "Daniel Gustafsson."
+38a1144a91d	insert	Author	Daniel Gustafsson
+
+# "Report and initial patch by Rainer Orth, reviewed and adjusted a bit by Michael Paquier."
+43e94908663	insert	Author	Rainer Orth
+43e94908663	append	Reported-by	Rainer Orth
+43e94908663	append	Reviewed-by	Michael Paquier
+
+# "Dagfinn Ilmari Mannsåker."
+d3b851e9a3c	insert	Author	Dagfinn Ilmari Mannsåker
+
+# "Ildar Musin, Robert Haas, Stephen Frost."
+d79e7e92bf2	insert	Author	Ildar Musin
+d79e7e92bf2	insert	Author	Robert Haas
+d79e7e92bf2	insert	Author	Stephen Frost
+
+# "Noted by Rushabh Lathia, though I revised the patch some more."
+8f72a570485	insert	Author	Rushabh Lathia
+8f72a570485	append	Reported-by	Rushabh Lathia
+
+# "Kyotaro Horiguchi. Per report from David Pereiro Lagares."
+b5febc1d125	insert	Author	Kyotaro Horiguchi
+b5febc1d125	append	Reported-by	David Pereiro Lagares
+
+# "Peter Geoghegan."
+8ecdc2ffe3d	insert	Author	Peter Geoghegan
+
+# Was "Author: Thomas Munro, based on an observation from Amit Kapila".
+17b340abf83	replace	Author	Thomas Munro
+17b340abf83	append	Suggested-by	Amit Kapila (observation)
+
+# "Andrey Borodin, reviewed by Michail Nikolaev."
+81b9b5ce490	insert	Author	Andrey Borodin
+81b9b5ce490	append	Reviewed-by	Michail Nikolaev
+
+# "Etsuro Fujita."
+1733460f020	insert	Author	Etsuro Fujita
+
+# "Fabien Coelho."
+e94f2bc809a	insert	Author	Fabien Coelho
+
+# "Amit Kapila and Tom Lane."
+0b1d1a038ba	insert	Author	Amit Kapila
+0b1d1a038ba	insert	Author	Tom Lane
+
+# "John Naylor."
+a351679c806	insert	Author	John Naylor
+
+# "John Naylor."
+8d90b4d01a6	insert	Author	John Naylor
+
+# "Tomas Vondra, with some adjustments by me."
+58d9acc18d3	insert	Author	Tomas Vondra
+58d9acc18d3	append	Co-authored-by	Tom Lane (adjustments)
+
+# "Thomas Munro."
+42d7074ebb8	insert	Author	Thomas Munro
+
+# "Reviewed-By: Michael Paquier, Masahiko Sawada", one tag per person.
+854dd8cff52	delete	Reviewed-By	Michael Paquier, Masahiko Sawada
+854dd8cff52	append	Reviewed-by	Michael Paquier
+854dd8cff52	append	Reviewed-by	Masahiko Sawada
+
+# Was "Author: Craig Ringer, revised by me".
+# "Reviewed by: Álvaro Herrera, Petr Jelínek, Masahiko Sawada", one tag per person.
+8aa75e1384b	replace	Author	Craig Ringer
+8aa75e1384b	append	Co-authored-by	Alvaro Herrera (revised)
+8aa75e1384b	delete	Reviewed by	Álvaro Herrera, Petr Jelínek, Masahiko Sawada
+8aa75e1384b	append	Reviewed-by	Álvaro Herrera
+8aa75e1384b	append	Reviewed-by	Petr Jelínek
+8aa75e1384b	append	Reviewed-by	Masahiko Sawada
+
+# "Euler Taveira."
+f9f8784c8b3	insert	Author	Euler Taveira
+
+# "Kyotaro Horiguchi."
+6a0b30f0401	insert	Author	Kyotaro Horiguchi
+
+# "Amit Langote."
+c4af6960e3d	insert	Author	Amit Langote
+
+# "David Rowley."
+3beb46ae811	insert	Author	David Rowley
+
+# "Patch by Jeevan Ladhe <jeevan.ladhe@enterprisedb.com>."
+b32fad52e94	insert	Author	Jeevan Ladhe <jeevan.ladhe@enterprisedb.com>
+
+# "Jeff Janes."
+38f7831d703	insert	Author	Jeff Janes
+
+# "David Gould, reviewed by Alexander Kuzmenkov, cosmetic changes by me."
+d04900de7d0	insert	Author	David Gould
+d04900de7d0	append	Reviewed-by	Alexander Kuzmenkov
+d04900de7d0	append	Co-authored-by	Tom Lane (cosmetic changes)
+
+# "Patch by Patrick Krecker <patrick@judicata.com>."
+db2fc801f66	insert	Author	Patrick Krecker <patrick@judicata.com>
+
+# "Patch by David Rader <davidr@openscg.com>."
+3b7ab438044	insert	Author	David Rader <davidr@openscg.com>
+
+# "Jeevan Chalke. The larger patch series of which this patch is a part was also reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, Rafia Sabih, and me."
+648a6c7bd81	insert	Author	Jeevan Chalke
+648a6c7bd81	append	Reviewed-by	Antonin Houska
+648a6c7bd81	append	Reviewed-by	Rajkumar Raghuwanshi
+648a6c7bd81	append	Reviewed-by	David Rowley
+648a6c7bd81	append	Reviewed-by	Dilip Kumar
+648a6c7bd81	append	Reviewed-by	Konstantin Knizhnik
+648a6c7bd81	append	Reviewed-by	Pascal Legrand
+648a6c7bd81	append	Reviewed-by	Rafia Sabih
+648a6c7bd81	append	Reviewed-by	Robert Haas
+648a6c7bd81	append	Tested-by	Antonin Houska
+648a6c7bd81	append	Tested-by	Rajkumar Raghuwanshi
+648a6c7bd81	append	Tested-by	David Rowley
+648a6c7bd81	append	Tested-by	Dilip Kumar
+648a6c7bd81	append	Tested-by	Konstantin Knizhnik
+648a6c7bd81	append	Tested-by	Pascal Legrand
+648a6c7bd81	append	Tested-by	Rafia Sabih
+648a6c7bd81	append	Tested-by	Robert Haas
+
+# "Based loosely on a patch from Ashutosh Bapat and Jeevan Chalke, but I whacked it around pretty heavily. The larger patch series of which this patch is a part was also reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, Rafia Sabih, and me."
+1466bcfa4a8	insert	Author	Ashutosh Bapat
+1466bcfa4a8	insert	Author	Jeevan Chalke
+1466bcfa4a8	append	Reviewed-by	Antonin Houska
+1466bcfa4a8	append	Reviewed-by	Rajkumar Raghuwanshi
+1466bcfa4a8	append	Reviewed-by	David Rowley
+1466bcfa4a8	append	Reviewed-by	Dilip Kumar
+1466bcfa4a8	append	Reviewed-by	Konstantin Knizhnik
+1466bcfa4a8	append	Reviewed-by	Pascal Legrand
+1466bcfa4a8	append	Reviewed-by	Rafia Sabih
+1466bcfa4a8	append	Reviewed-by	Robert Haas
+1466bcfa4a8	append	Tested-by	Antonin Houska
+1466bcfa4a8	append	Tested-by	Rajkumar Raghuwanshi
+1466bcfa4a8	append	Tested-by	David Rowley
+1466bcfa4a8	append	Tested-by	Dilip Kumar
+1466bcfa4a8	append	Tested-by	Konstantin Knizhnik
+1466bcfa4a8	append	Tested-by	Pascal Legrand
+1466bcfa4a8	append	Tested-by	Rafia Sabih
+1466bcfa4a8	append	Tested-by	Robert Haas
+
+# "Michael Paquier."
+84a3611cccf	insert	Author	Michael Paquier
+
+# "Patch by "Shinoda, Noriyoshi" <noriyoshi.shinoda@hpe.com>."
+e400840b1d9	insert	Author	Shinoda, Noriyoshi
+e400840b1d9	insert	Author	"Shinoda, Noriyoshi" <noriyoshi.shinoda@hpe.com>
+
+# "Yugo Nagata and Tom Lane."
+8f5ac440430	insert	Author	Yugo Nagata
+8f5ac440430	insert	Author	Tom Lane
+
+# "Per Tomas Vondra and buildfarm member fulmar."
+2dbee9f19f6	append	Reported-by	Tomas Vondra
+
+# "Thomas Munro."
+6fbd5cce22e	insert	Author	Thomas Munro
+
+# "Anton Dignös, reviewed by Alexander Kuzmenkov."
+467963c3e9c	insert	Author	Anton Dignös
+467963c3e9c	append	Reviewed-by	Alexander Kuzmenkov
+
+# "Review by: David Steele, Liudmila Mantrova", one tag per person.
+aea7c17e86e	delete	Review by	David Steele, Liudmila Mantrova
+aea7c17e86e	append	Reviewed-by	David Steele
+aea7c17e86e	append	Reviewed-by	Liudmila Mantrova
+
+# "Review by: David Steele, Liudmila Mantrova, me", one tag per person.
+be8a7a68662	delete	Review by	David Steele, Liudmila Mantrova, me
+be8a7a68662	append	Reviewed-by	David Steele
+be8a7a68662	append	Reviewed-by	Liudmila Mantrova
+be8a7a68662	append	Reviewed-by	Teodor Sigaev
+
+# Was "Author: Ildar Musin with minor editorization by me".
+# "Reviewed by: Fabien Coelho, me", one tag per person.
+e51a04840a1	replace	Author	Ildar Musin
+e51a04840a1	append	Co-authored-by	Teodor Sigaev (minor editorization)
+e51a04840a1	delete	Reviewed by	Fabien Coelho, me
+e51a04840a1	append	Reviewed-by	Fabien Coelho
+e51a04840a1	append	Reviewed-by	Teodor Sigaev
+
+# Was "Author: Nathan Bossart <bossartn@amazon.com>, tests by me".
+4731d848f23	replace	Author	Nathan Bossart <bossartn@amazon.com>
+4731d848f23	append	Co-authored-by	Peter Eisentraut (tests)
+
+# "Michael Paquier and Tom Lane, reviewed by Kyotaro Horiguchi and Pavel Stehule."
+742869946f4	insert	Author	Michael Paquier
+742869946f4	insert	Author	Tom Lane
+742869946f4	append	Reviewed-by	Kyotaro Horiguchi
+742869946f4	append	Reviewed-by	Pavel Stehule
+
+# Was "Author: Andres Freund, with architectural input from Jeff Davis".
+432bb9e04da	replace	Author	Andres Freund
+432bb9e04da	append	Suggested-by	Jeff Davis (architectural input)
+
+# "Jeff Janes, substantially modified by me. Reviewed by John Naylor and Tomas Vondra."
+b5db1d93d2a	insert	Author	Jeff Janes
+b5db1d93d2a	append	Co-authored-by	Dean Rasheed (substantially modified)
+b5db1d93d2a	append	Reviewed-by	John Naylor
+b5db1d93d2a	append	Reviewed-by	Tomas Vondra
+
+# Was "Author: Fabien COELHO with minor editorization by me".
+# "Review by: Vik Fearing, Fedor Sigaev", one tag per person.
+f67b113ac62	replace	Author	Fabien COELHO
+f67b113ac62	append	Co-authored-by	Teodor Sigaev (minor editorization)
+f67b113ac62	delete	Review by	Vik Fearing, Fedor Sigaev
+f67b113ac62	append	Reviewed-by	Vik Fearing
+f67b113ac62	append	Reviewed-by	Fedor Sigaev
+
+# "Jeevan Chalke, Ashutosh Bapat, Robert Haas. The larger patch series of which this patch is a part was also reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, and Rafia Sabih."
+e2f1eb0ee30	insert	Author	Jeevan Chalke
+e2f1eb0ee30	insert	Author	Ashutosh Bapat
+e2f1eb0ee30	insert	Author	Robert Haas
+e2f1eb0ee30	append	Reviewed-by	Antonin Houska
+e2f1eb0ee30	append	Reviewed-by	Rajkumar Raghuwanshi
+e2f1eb0ee30	append	Reviewed-by	David Rowley
+e2f1eb0ee30	append	Reviewed-by	Dilip Kumar
+e2f1eb0ee30	append	Reviewed-by	Konstantin Knizhnik
+e2f1eb0ee30	append	Reviewed-by	Pascal Legrand
+e2f1eb0ee30	append	Reviewed-by	Rafia Sabih
+e2f1eb0ee30	append	Tested-by	Antonin Houska
+e2f1eb0ee30	append	Tested-by	Rajkumar Raghuwanshi
+e2f1eb0ee30	append	Tested-by	David Rowley
+e2f1eb0ee30	append	Tested-by	Dilip Kumar
+e2f1eb0ee30	append	Tested-by	Konstantin Knizhnik
+e2f1eb0ee30	append	Tested-by	Pascal Legrand
+e2f1eb0ee30	append	Tested-by	Rafia Sabih
+
+# "Tomas Vondra and Tom Lane."
+c35b4728696	insert	Author	Tomas Vondra
+c35b4728696	insert	Author	Tom Lane
+
+# "Peter Geoghegan, per a report by Phil Florent."
+7de4a1bcc56	insert	Author	Peter Geoghegan
+7de4a1bcc56	append	Reported-by	Phil Florent
+
+# "Tomas Vondra."
+649f1792508	insert	Author	Tomas Vondra
+
+# "Thomas Munro."
+f644c3b386a	insert	Author	Thomas Munro
+
+# "Michael Paquier."
+8a8c4f3b325	insert	Author	Michael Paquier
+
+# "Amit Langote."
+2fe6336e2d4	insert	Author	Amit Langote
+
+# Was "Author: Andres Freund, with contributions by Pierre Ducroquet".
+b96d550eb03	replace	Author	Andres Freund
+b96d550eb03	append	Co-authored-by	Pierre Ducroquet
+
+# Was "Author: Andres Freund, with feedback by Peter Eisentraut".
+cc415a56d09	replace	Author	Andres Freund
+cc415a56d09	append	Reviewed-by	Peter Eisentraut
+
+# "Tomas Vondra, reviewed by Haribabu Kommi, some corrections by me."
+7c91a0364fc	insert	Author	Tomas Vondra
+7c91a0364fc	append	Reviewed-by	Haribabu Kommi
+7c91a0364fc	append	Co-authored-by	Tom Lane (corrections)
+
+# "Daniel Gustafsson."
+feb82545187	insert	Author	Daniel Gustafsson
+
+# The trailer block is repeated, so these tags appear twice.
+2a0faed9d70	replace	Author	Andres Freund
+2a0faed9d70	replace	Discussion	https://postgr.es/m/20170901064131.tazjxwus3k2w3ybh@alap3.anarazel.de
+
+# "Review by: Adam Brightwell, Masahiko Sawada", one tag per person.
+8694cc96b52	delete	Review by	Adam Brightwell, Masahiko Sawada
+8694cc96b52	append	Reviewed-by	Adam Brightwell
+8694cc96b52	append	Reviewed-by	Masahiko Sawada
+
+# "based on patch by Bossart, Nathan <bossartn@amazon.com>."
+e22b27f0cb3	insert	Author	Bossart, Nathan
+e22b27f0cb3	append	Co-authored-by	Bossart (patch)
+e22b27f0cb3	append	Co-authored-by	Nathan <bossartn@amazon.com> (patch)
+
+# "Pavan Deolasee. Reviewed by Claudio Freire, Simon Riggs and Peter Geoghegan."
+2b272734353	insert	Author	Pavan Deolasee
+2b272734353	append	Reviewed-by	Claudio Freire
+2b272734353	append	Reviewed-by	Simon Riggs
+2b272734353	append	Reviewed-by	Peter Geoghegan
+
+# Was "Author: Shubham Barai with editorization by me and Alexander Korotkov".
+# "Reviewed by: Alexander Korotkov, Andrey Borodin, me", one tag per person.
+3ad55863e93	replace	Author	Shubham Barai
+3ad55863e93	append	Co-authored-by	Teodor Sigaev (editorization)
+3ad55863e93	append	Co-authored-by	Alexander Korotkov (editorization)
+3ad55863e93	delete	Reviewed by	Alexander Korotkov, Andrey Borodin, me
+3ad55863e93	append	Reviewed-by	Alexander Korotkov
+3ad55863e93	append	Reviewed-by	Andrey Borodin
+3ad55863e93	append	Reviewed-by	Teodor Sigaev
+
+# "David Steel"
+44bd95846a5	insert	Author	David Steele
+
+# "Reviewer: Simon Riggs, with much wordsmithing and some cleanup", one tag per person.
+c203d6cf81b	delete	Reviewer	Simon Riggs, with much wordsmithing and some cleanup
+c203d6cf81b	append	Reviewed-by	Simon Riggs
+
+# "Authors: Nikhil Sontakke, Stas Kelvich"
+# "Authors: Nikhil Sontakke, Stas Kelvich", one tag per person.
+1eb6d6527aa	insert	Author	Nikhil Sontakke
+1eb6d6527aa	delete	Authors	Nikhil Sontakke, Stas Kelvich
+1eb6d6527aa	append	Author	Stas Kelvich
+
+# "Peter Geoghegan, per report from Bernd Helmle. Reviewed by Kyotaro Horiguchi."
+c2d4eb1b1fa	insert	Author	Peter Geoghegan
+c2d4eb1b1fa	append	Reported-by	Bernd Helmle
+c2d4eb1b1fa	append	Reviewed-by	Kyotaro Horiguchi
+
+# Was "Author: Andres Freund, with contributions by Thomas Munro".
+e6c039d13e1	replace	Author	Andres Freund
+e6c039d13e1	append	Co-authored-by	Thomas Munro
+
+# "Arthur Zakirov, confirmed by Thomas Munro."
+669820a3d9c	insert	Author	Artur Zakirov
+669820a3d9c	insert	Author	Arthur Zakirov
+669820a3d9c	append	Tested-by	Thomas Munro
+
+# Was "Author: Anastasia Lubennikova with editorization by Nikita Glukhov and me".
+# "Review by: Aleksander Alekseev, Nikita Glukhov, Darafei Praliaskouski", one tag per person.
+c0cbe00fee6	replace	Author	Anastasia Lubennikova
+c0cbe00fee6	append	Co-authored-by	Nikita Glukhov (editorization)
+c0cbe00fee6	append	Co-authored-by	Teodor Sigaev (editorization)
+c0cbe00fee6	delete	Review by	Aleksander Alekseev, Nikita Glukhov, Darafei Praliaskouski
+c0cbe00fee6	append	Reviewed-by	Aleksander Alekseev
+c0cbe00fee6	append	Reviewed-by	Nikita Glukhov
+c0cbe00fee6	append	Reviewed-by	Darafei Praliaskouski
+
+# "Claudio Freire, reviewed by Masahiko Sawada and Jing Wang, some additional tweaks by me."
+851a26e2663	insert	Author	Claudio Freire
+851a26e2663	append	Reviewed-by	Masahiko Sawada
+851a26e2663	append	Reviewed-by	Jing Wang
+851a26e2663	append	Co-authored-by	Tom Lane (tweaks)
+
+# Was "Author: Michael Paquier, Abhijit Menon-Sen, me".
+20b4323bd10	replace	Author	Michael Paquier
+20b4323bd10	replace	Author	Abhijit Menon-Sen
+20b4323bd10	append	Co-authored-by	Bruce Momjian
+
+# "Amit Kapila and Robert Haas. Earlier versions of this patch were reviewed by Dilip Kumar, Amit Khandekar, Marina Polyakova, and Ashutosh Bapat."
+3f90ec8597c	insert	Author	Amit Kapila
+3f90ec8597c	insert	Author	Robert Haas
+3f90ec8597c	append	Reviewed-by	Dilip Kumar
+3f90ec8597c	append	Reviewed-by	Amit Khandekar
+3f90ec8597c	append	Reviewed-by	Marina Polyakova
+3f90ec8597c	append	Reviewed-by	Ashutosh Bapat
+
+# "Jeevan Chalke."
+c1de1a3a8b9	insert	Author	Jeevan Chalke
+
+# Was "Author: Shubham Barai with some editorization by me and Dmitry Ivanov".
+# "Review by: Alexander Korotkov, Dmitry Ivanov, Fedor Sigaev", one tag per person.
+43d1ed60fdd	replace	Author	Shubham Barai
+43d1ed60fdd	append	Co-authored-by	Teodor Sigaev (editorization)
+43d1ed60fdd	append	Co-authored-by	Dmitry Ivanov (editorization)
+43d1ed60fdd	delete	Review by	Alexander Korotkov, Dmitry Ivanov, Fedor Sigaev
+43d1ed60fdd	append	Reviewed-by	Alexander Korotkov
+43d1ed60fdd	append	Reviewed-by	Dmitry Ivanov
+43d1ed60fdd	append	Reviewed-by	Fedor Sigaev
+
+# "Claudio Freire, reviewed by Masahiko Sawada and Jing Wang, some additional tweaks by me."
+c79f6df75dd	insert	Author	Claudio Freire
+c79f6df75dd	append	Reviewed-by	Masahiko Sawada
+c79f6df75dd	append	Reviewed-by	Jing Wang
+c79f6df75dd	append	Co-authored-by	Tom Lane (tweaks)
+
+# "Thomas Munro, reviewed by Anastasia Lubennikova."
+e5eb4fa8733	insert	Author	Thomas Munro
+e5eb4fa8733	append	Reviewed-by	Anastasia Lubennikova
+
+# "Chapman Flack, reviewed by Daniel Gustafsson."
+4a33bb59dfc	insert	Author	Chapman Flack
+4a33bb59dfc	append	Reviewed-by	Daniel Gustafsson
+
+# "Thomas Munro and Tom Lane."
+11002f8afa5	insert	Author	Thomas Munro
+11002f8afa5	insert	Author	Tom Lane
+
+# "Reviewed-By: Michael Paquier and Andres Freund", one tag per person.
+d87510a524f	delete	Reviewed-By	Michael Paquier and Andres Freund
+d87510a524f	append	Reviewed-by	Michael Paquier
+d87510a524f	append	Reviewed-by	Andres Freund
+
+# "Reviewed-By: Michael Paquier and Andres Freund", one tag per person.
+3e256e55067	delete	Reviewed-By	Michael Paquier and Andres Freund
+3e256e55067	append	Reviewed-by	Michael Paquier
+3e256e55067	append	Reviewed-by	Andres Freund
+
+# "Fabien Coelho, further adjusted by me."
+5635c7aa678	insert	Author	Fabien Coelho
+5635c7aa678	append	Co-authored-by	Tom Lane (further adjusted)
+
+# "Reviewed-By: Andrey Borodin, Michael Paquier, Thomas Munro, Andres Freund", one tag per person.
+51bc271790e	delete	Reviewed-By	Andrey Borodin, Michael Paquier, Thomas Munro, Andres Freund
+51bc271790e	append	Reviewed-by	Andrey Borodin
+51bc271790e	append	Reviewed-by	Michael Paquier
+51bc271790e	append	Reviewed-by	Thomas Munro
+51bc271790e	append	Reviewed-by	Andres Freund
+
+# "Reviewed-By: Pavan Deolasee, Andres Freund", one tag per person.
+7f563c09f89	delete	Reviewed-By	Pavan Deolasee, Andres Freund
+7f563c09f89	append	Reviewed-by	Pavan Deolasee
+7f563c09f89	append	Reviewed-by	Andres Freund
+
+# "Justin Pryzby."
+0b11a674fb1	insert	Author	Justin Pryzby
+
+# "Jeevan Chalke, reviewed by Ashutosh Bapat and by me and with some adjustments by me. The larger patch series of which this patch is a part was also reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, and Rafia Sabih."
+7e0d64c7a57	insert	Author	Jeevan Chalke
+7e0d64c7a57	append	Reviewed-by	Ashutosh Bapat
+7e0d64c7a57	append	Reviewed-by	Robert Haas
+7e0d64c7a57	append	Co-authored-by	Robert Haas (adjustments)
+7e0d64c7a57	append	Reviewed-by	Antonin Houska
+7e0d64c7a57	append	Reviewed-by	Rajkumar Raghuwanshi
+7e0d64c7a57	append	Reviewed-by	David Rowley
+7e0d64c7a57	append	Reviewed-by	Dilip Kumar
+7e0d64c7a57	append	Reviewed-by	Konstantin Knizhnik
+7e0d64c7a57	append	Reviewed-by	Pascal Legrand
+7e0d64c7a57	append	Reviewed-by	Rafia Sabih
+7e0d64c7a57	append	Tested-by	Antonin Houska
+7e0d64c7a57	append	Tested-by	Rajkumar Raghuwanshi
+7e0d64c7a57	append	Tested-by	David Rowley
+7e0d64c7a57	append	Tested-by	Dilip Kumar
+7e0d64c7a57	append	Tested-by	Konstantin Knizhnik
+7e0d64c7a57	append	Tested-by	Pascal Legrand
+7e0d64c7a57	append	Tested-by	Rafia Sabih
+
+# "This version written from scratch in 2017 by Simon Riggs ... Later work from Pavan Deolasee has been both complex and deep, leaving the lead author credit now in his hands. ... Various issues reported via sqlsmith by Andreas Seltenreich. Authors: Pavan Deolasee, Simon Riggs."
+# "Authors: Pavan Deolasee, Simon Riggs", one tag per person.
+# "Reviewers: Peter Geoghegan, Amit Langote, Tomas Vondra, Simon Riggs", one tag per person.
+e6597dc3533	insert	Author	Pavan Deolasee
+e6597dc3533	insert	Author	Simon Riggs
+e6597dc3533	append	Reported-by	Andreas Seltenreich (via sqlsmith)
+e6597dc3533	delete	Authors	Pavan Deolasee, Simon Riggs
+e6597dc3533	delete	Reviewers	Peter Geoghegan, Amit Langote, Tomas Vondra, Simon Riggs
+e6597dc3533	append	Reviewed-by	Peter Geoghegan
+e6597dc3533	append	Reviewed-by	Amit Langote
+e6597dc3533	append	Reviewed-by	Tomas Vondra
+e6597dc3533	append	Reviewed-by	Simon Riggs
+
+# Part of Pavan Deolasee's MERGE patch (see e6597dc3533 and d204ef63776).
+354f13855e6	insert	Author	Pavan Deolasee
+
+# "This version written from scratch in 2017 by Simon Riggs ... Later work from Pavan Deolasee has been both complex and deep, leaving the lead author credit now in his hands. ... Various issues reported via sqlsmith by Andreas Seltenreich. Authors: Pavan Deolasee, Simon Riggs."
+# "Authors: Pavan Deolasee, Simon Riggs", one tag per person.
+# "Reviewer: Peter Geoghegan, Amit Langote, Tomas Vondra, Simon Riggs", one tag per person.
+d204ef63776	insert	Author	Pavan Deolasee
+d204ef63776	insert	Author	Simon Riggs
+d204ef63776	append	Reported-by	Andreas Seltenreich (via sqlsmith)
+d204ef63776	delete	Authors	Pavan Deolasee, Simon Riggs
+d204ef63776	delete	Reviewer	Peter Geoghegan, Amit Langote, Tomas Vondra, Simon Riggs
+d204ef63776	append	Reviewed-by	Peter Geoghegan
+d204ef63776	append	Reviewed-by	Amit Langote
+d204ef63776	append	Reviewed-by	Tomas Vondra
+d204ef63776	append	Reviewed-by	Simon Riggs
+
+# Part of Pavan Deolasee's MERGE patch (see e6597dc3533 and d204ef63776).
+83454e3c2b2	insert	Author	Pavan Deolasee
+
+# "Reviewed-By: Magnus Hagander, David Steele", one tag per person.
+4eb77d50c21	delete	Reviewed-By	Magnus Hagander, David Steele
+4eb77d50c21	append	Reviewed-by	Magnus Hagander
+4eb77d50c21	append	Reviewed-by	David Steele
+
+# Was "Author: Ildus Kurbangaliev with some editorization by me".
+# "Review by: Arthur Zakirov, Alexander Korotkov, and me", one tag per person.
+710d90da1fd	replace	Author	Ildus Kurbangaliev
+710d90da1fd	append	Co-authored-by	Teodor Sigaev (editorization)
+710d90da1fd	delete	Review by	Arthur Zakirov, Alexander Korotkov, and me
+710d90da1fd	append	Reviewed-by	Arthur Zakirov
+710d90da1fd	append	Reviewed-by	Alexander Korotkov
+710d90da1fd	append	Reviewed-by	Teodor Sigaev
+
+# "Original patch by Yuqi Gu, heavily modified by me. Reviewed by Andres Freund, Thomas Munro."
+f044d71e331	insert	Author	Yuqi Gu
+f044d71e331	append	Co-authored-by	Heikki Linnakangas (heavily modified)
+f044d71e331	append	Reviewed-by	Andres Freund
+f044d71e331	append	Reviewed-by	Thomas Munro
+
+# "Review by: Peter Geoghegan, Kyotaro Horiguchi, Alexander Korotkov, Yura Sokolov", one tag per person.
+857f9c36cda	delete	Review by	Peter Geoghegan, Kyotaro Horiguchi, Alexander Korotkov, Yura Sokolov
+857f9c36cda	append	Reviewed-by	Peter Geoghegan
+857f9c36cda	append	Reviewed-by	Kyotaro Horiguchi
+857f9c36cda	append	Reviewed-by	Alexander Korotkov
+857f9c36cda	append	Reviewed-by	Yura Sokolov
+
+# "Thomas Munro, based on a suggestion from Andrew Gierth."
+1fd86906686	insert	Author	Thomas Munro
+1fd86906686	append	Suggested-by	Andrew Gierth
+
+# "Reviewer: Simon Riggs", one tag per person.
+4b2d44031f8	delete	Reviewer	Simon Riggs
+4b2d44031f8	append	Reviewed-by	Simon Riggs
+
+# "Masahiko Sawada."
+51e6562324f	insert	Author	Masahiko Sawada
+
+# "Masahiko Sawada."
+a02d51c0d3c	insert	Author	Masahiko Sawada
+
+# "Kyotaro HORIGUCHI."
+17d8beb4f52	insert	Author	Kyotaro HORIGUCHI
+
+# "Reviewed by: Aleksander Alekseev, Tomas Vondra, Thomas Munro, Aleksandr Parfenov."
+# "Authors: Victor Drobny, Dmitry Ivanov with editorization by me", one tag per person.
+# "Reviewed by: Aleksander Alekseev, Tomas Vondra, Thomas Munro, Aleksandr Parfenov", one tag per person.
+1664ae1978b	insert	Author	Victor Drobny
+1664ae1978b	append	Reviewed-by	Aleksander Alekseev
+1664ae1978b	append	Reviewed-by	Tomas Vondra
+1664ae1978b	append	Reviewed-by	Thomas Munro
+1664ae1978b	append	Reviewed-by	Aleksandr Parfenov
+1664ae1978b	delete	Authors	Victor Drobny, Dmitry Ivanov with editorization by me
+1664ae1978b	append	Author	Dmitry Ivanov
+1664ae1978b	append	Co-authored-by	Teodor Sigaev (editorization)
+1664ae1978b	delete	Reviewed by	Aleksander Alekseev, Tomas Vondra, Thomas Munro, Aleksandr Parfenov
+
+# "Authors: Magnus Hagander and Daniel Gustafsson", one tag per person.
+# "Review: Tomas Vondra, Michael Banck, Heikki Linnakangas, Andrey Borodin", one tag per person.
+1fde38beaa0	delete	Authors	Magnus Hagander and Daniel Gustafsson
+1fde38beaa0	insert	Author	Magnus Hagander
+1fde38beaa0	insert	Author	Daniel Gustafsson
+1fde38beaa0	delete	Review	Tomas Vondra, Michael Banck, Heikki Linnakangas, Andrey Borodin
+1fde38beaa0	append	Reviewed-by	Tomas Vondra
+1fde38beaa0	append	Reviewed-by	Michael Banck
+1fde38beaa0	append	Reviewed-by	Heikki Linnakangas
+1fde38beaa0	append	Reviewed-by	Andrey Borodin
+
+# "Etsuro Fujita. The larger patch series of which this is a part has been reviewed by Amit Langote, David Fetter, Maksim Milyutin, Álvaro Herrera, Stephen Frost, and me."
+870d89608e5	insert	Author	Etsuro Fujita
+870d89608e5	append	Reviewed-by	Amit Langote
+870d89608e5	append	Reviewed-by	David Fetter
+870d89608e5	append	Reviewed-by	Maksim Milyutin
+870d89608e5	append	Reviewed-by	Álvaro Herrera
+870d89608e5	append	Reviewed-by	Stephen Frost
+870d89608e5	append	Reviewed-by	Robert Haas
+
+# "Etsuro Fujita, reviewed by Amit Langote and Ashutosh Bapat."
+cfbecf8100e	insert	Author	Etsuro Fujita
+cfbecf8100e	append	Reviewed-by	Amit Langote
+cfbecf8100e	append	Reviewed-by	Ashutosh Bapat
+
+# "Authors: Amit Langote, David Rowley, Dilip Kumar"
+# "Authors: Amit Langote, David Rowley, Dilip Kumar", one tag per person.
+# "Reviewers: Robert Haas, Kyotaro Horiguchi, Ashutosh Bapat, Jesper Pedersen.", one tag per person.
+9fdb675fc5d	insert	Author	Amit Langote
+9fdb675fc5d	delete	Authors	Amit Langote, David Rowley, Dilip Kumar
+9fdb675fc5d	append	Author	David Rowley
+9fdb675fc5d	append	Author	Dilip Kumar
+9fdb675fc5d	delete	Reviewers	Robert Haas, Kyotaro Horiguchi, Ashutosh Bapat, Jesper Pedersen.
+9fdb675fc5d	append	Reviewed-by	Robert Haas
+9fdb675fc5d	append	Reviewed-by	Kyotaro Horiguchi
+9fdb675fc5d	append	Reviewed-by	Ashutosh Bapat
+9fdb675fc5d	append	Reviewed-by	Jesper Pedersen
+
+# "Etsuro Fujita, based on an earlier patch by Amit Langote. The larger patch series of which this is a part has been reviewed by Amit Langote, David Fetter, Maksim Milyutin, Álvaro Herrera, Stephen Frost, and me. Minor documentation changes to the final version by me."
+3d956d9562a	insert	Author	Etsuro Fujita
+3d956d9562a	append	Co-authored-by	Amit Langote (earlier patch)
+3d956d9562a	append	Reviewed-by	Amit Langote
+3d956d9562a	append	Reviewed-by	David Fetter
+3d956d9562a	append	Reviewed-by	Maksim Milyutin
+3d956d9562a	append	Reviewed-by	Álvaro Herrera
+3d956d9562a	append	Reviewed-by	Stephen Frost
+3d956d9562a	append	Reviewed-by	Robert Haas
+3d956d9562a	append	Co-authored-by	Robert Haas (minor documentation changes to the final version)
+
+# "Reviewed by: Amit Kapila, Alexander Korotkov, Thomas Munro", one tag per person.
+b508a56f2f3	delete	Reviewed by	Amit Kapila, Alexander Korotkov, Thomas Munro
+b508a56f2f3	append	Reviewed-by	Amit Kapila
+b508a56f2f3	append	Reviewed-by	Alexander Korotkov
+b508a56f2f3	append	Reviewed-by	Thomas Munro
+
+# Was "Author: Dmitry Dolgov with some editorization by me".
+1c1791e0006	replace	Author	Dmitry Dolgov
+1c1791e0006	append	Co-authored-by	Teodor Sigaev (editorization)
+
+# Was "Author: Anastasia Lubennikova with contribition by Alexander Korotkov and me".
+# "Reviewed by: Peter Geoghegan, Tomas Vondra, Antonin Houska, Jeff Janes, David Rowley, Alexander Korotkov", one tag per person.
+8224de4f42c	replace	Author	Anastasia Lubennikova
+8224de4f42c	append	Co-authored-by	Alexander Korotkov
+8224de4f42c	append	Co-authored-by	Teodor Sigaev
+8224de4f42c	delete	Reviewed by	Peter Geoghegan, Tomas Vondra, Antonin Houska, Jeff Janes, David Rowley, Alexander Korotkov
+8224de4f42c	append	Reviewed-by	Peter Geoghegan
+8224de4f42c	append	Reviewed-by	Tomas Vondra
+8224de4f42c	append	Reviewed-by	Antonin Houska
+8224de4f42c	append	Reviewed-by	Jeff Janes
+8224de4f42c	append	Reviewed-by	David Rowley
+8224de4f42c	append	Reviewed-by	Alexander Korotkov
+
+# Was "Author: Amul Sul, editorialized by me".
+# "Reviewed-By: Amit Kapila, Pavan Deolasee, Andres Freund, Robert Haas", one tag per person.
+f16241bef7c	replace	Author	Amul Sul
+f16241bef7c	append	Co-authored-by	Andres Freund (editorialized)
+f16241bef7c	delete	Reviewed-By	Amit Kapila, Pavan Deolasee, Andres Freund, Robert Haas
+f16241bef7c	append	Reviewed-by	Amit Kapila
+f16241bef7c	append	Reviewed-by	Pavan Deolasee
+f16241bef7c	append	Reviewed-by	Andres Freund
+f16241bef7c	append	Reviewed-by	Robert Haas
+
+# Was "Author: David Rowley, based on an earlier effort by Beena Emerson".
+# "Reviewers: Amit Langote, Robert Haas, Amul Sul, Rajkumar Raghuwanshi,", one tag per person.
+499be013de6	replace	Author	David Rowley
+499be013de6	append	Co-authored-by	Beena Emerson (earlier effort)
+499be013de6	delete	Reviewers	Amit Langote, Robert Haas, Amul Sul, Rajkumar Raghuwanshi,
+499be013de6	append	Reviewed-by	Amit Langote
+499be013de6	append	Reviewed-by	Robert Haas
+499be013de6	append	Reviewed-by	Amul Sul
+499be013de6	append	Reviewed-by	Rajkumar Raghuwanshi
+499be013de6	append	Reviewed-by	Jesper Pedersen
+
+# "Adam Brightwell <adam.brightwell@crunchydata.com>."
+# "Authors: David Steele <david@pgmasters.net>, Adam Brightwell <adam.brightwell@crunchydata.com>", one tag per person.
+# "Reviewed-By: Michael Paquier, with discussion amongst many others.", one tag per person.
+da9b580d899	insert	Author	David Steele
+da9b580d899	insert	Author	Adam Brightwell
+da9b580d899	delete	Authors	David Steele <david@pgmasters.net>, Adam Brightwell <adam.brightwell@crunchydata.com>
+da9b580d899	delete	Reviewed-By	Michael Paquier, with discussion amongst many others.
+da9b580d899	append	Reviewed-by	Michael Paquier
+
+# "Reviewed-By: Michael Paquier, with discussion amongst many others.", one tag per person.
+c37b3d08ca6	delete	Reviewed-By	Michael Paquier, with discussion amongst many others.
+c37b3d08ca6	append	Reviewed-by	Michael Paquier
+
+# "Jeff Janes."
+34602b0a1df	insert	Author	Jeff Janes
+
+# "Alexander Korotkov per gripe from Tom Lane noticed on valgrind-enabled buildfarm members."
+02f3e558f21	insert	Author	Alexander Korotkov
+02f3e558f21	append	Reported-by	Tom Lane
+
+# "John Naylor, based on ideas from various people. review and minor additional coding by me. previous review by Alvaro Herrera."
+372728b0d49	insert	Author	John Naylor
+372728b0d49	append	Reviewed-by	Tom Lane
+372728b0d49	append	Reviewed-by	Alvaro Herrera
+
+# "Alexander Korotkov, tweaked a bit by me."
+b3b7f7898f1	insert	Author	Alexander Korotkov
+b3b7f7898f1	append	Co-authored-by	Tom Lane (tweaked a bit)
+
+# "Peter Geoghegan."
+1671c01650d	insert	Author	Peter Geoghegan
+
+# "Shinoda, Noriyoshi and Alexander Korotkov."
+03c11796a95	insert	Author	Shinoda, Noriyoshi
+03c11796a95	insert	Author	Alexander Korotkov
+
+# "John Naylor."
+2cdf359fc44	insert	Author	John Naylor
+
+# "John Naylor."
+a65e17bd6fd	insert	Author	John Naylor
+
+# "Julien Rouhaud and Tom Lane."
+# "patch: there's no need to lobotomize this build rule when building", one tag per person.
+1a40485af6e	insert	Author	Julien Rouhaud
+1a40485af6e	insert	Author	Tom Lane
+1a40485af6e	delete	patch	there's no need to lobotomize this build rule when building
+1a40485af6e	append	Author	there's no need
+
+# "Pavan Deolasee and Peter Geoghegan with some very light editing from me."
+074251db674	insert	Author	Pavan Deolasee
+074251db674	insert	Author	Peter Geoghegan
+074251db674	append	Co-authored-by	Andrew Dunstan (very light editing)
+
+# "Pan Bian."
+231bcd0803e	insert	Author	Pan Bian
+
+# "Amit Langote and Alexander Korotkov."
+5c6110c6a96	insert	Author	Amit Langote
+5c6110c6a96	insert	Author	Alexander Korotkov
+
+# Was "Author: Álvaro Herrera.  Tests written by Amit Langote".
+72cf7f310c0	replace	Author	Álvaro Herrera
+72cf7f310c0	append	Co-authored-by	Amit Langote (tests)
+
+# "Pavan Deolasee."
+0408e1ed599	insert	Author	Pavan Deolasee
+
+# "Pavan Deolasee."
+d1e9079295e	insert	Author	Pavan Deolasee
+
+# "Amit Langote and Alexander Korotkov."
+524054598fd	insert	Author	Amit Langote
+524054598fd	insert	Author	Alexander Korotkov
+
+# "Authors: Álvaro Herrera and Amit Langote", one tag per person.
+a4d56f583e7	delete	Authors	Álvaro Herrera and Amit Langote
+a4d56f583e7	insert	Author	Álvaro Herrera
+a4d56f583e7	insert	Author	Amit Langote
+
+# "Arthur Zakirov. Per bug #15150 from Alexander Lakhin."
+65a69dfa08e	insert	Author	Arthur Zakirov
+65a69dfa08e	append	Reported-by	Alexander Lakhin (bug #15150)
+
+# "Arthur Zakirov."
+8bf358c18ec	insert	Author	Arthur Zakirov
+
+# "Authors: Amit Langote and Álvaro Herrera"
+# "Authors: Amit Langote and Álvaro Herrera", one tag per person.
+da6f3e45ddb	insert	Author	Amit Langote
+da6f3e45ddb	delete	Authors	Amit Langote and Álvaro Herrera
+da6f3e45ddb	append	Author	Álvaro Herrera
+
+# "Review: Michael Paquier", one tag per person.
+44e2df461fa	delete	Review	Michael Paquier
+44e2df461fa	append	Reviewed-by	Michael Paquier
+
+# "Review: Daniel Gustafsson", one tag per person.
+645387927f8	delete	Review	Daniel Gustafsson
+645387927f8	append	Reviewed-by	Daniel Gustafsson
+
+# Was "Author: Amit Langote, per comments by me (Álvaro)".
+158b7bc6d77	replace	Author	Amit Langote
+158b7bc6d77	append	Reviewed-by	Alvaro Herrera
+
+# Was "Author: David Rowley, with cosmetic changes by me.".
+b7e2cbc5b49	replace	Author	David Rowley
+b7e2cbc5b49	append	Co-authored-by	Alvaro Herrera (cosmetic changes)
+
+# "John Naylor, slightly modified by me."
+e90d4ddc639	insert	Author	John Naylor
+e90d4ddc639	append	Co-authored-by	Tom Lane (slightly modified)
+
+# "John Naylor."
+9ffcccdb958	insert	Author	John Naylor
+
+# Was "Author: Peter Geoghegan with some editorization by me".
+# "Reviewed by: Alexander Korotkov, Teodor Sigaev", one tag per person.
+075aade4361	replace	Author	Peter Geoghegan
+075aade4361	append	Co-authored-by	Teodor Sigaev (editorization)
+075aade4361	delete	Reviewed by	Alexander Korotkov, Teodor Sigaev
+075aade4361	append	Reviewed-by	Alexander Korotkov
+075aade4361	append	Reviewed-by	Teodor Sigaev
+
+# "Alexander Korotkov."
+3d927961ae1	insert	Author	Alexander Korotkov
+
+# "John Naylor, some additional cleanup by me."
+68c23cba341	insert	Author	John Naylor
+68c23cba341	append	Co-authored-by	Tom Lane (cleanup)
+
+# "Reviewer: Peter Geoghegan", one tag per person.
+6db4b49986b	delete	Reviewer	Peter Geoghegan
+6db4b49986b	append	Reviewed-by	Peter Geoghegan
+
+# "David Rowly"
+a5ab8928d7d	insert	Author	David Rowley
+
+# "Amit Langote."
+4df58f7ed7f	insert	Author	Amit Langote
+
+# "Review: Amit Langote, Ashutosh Bapat, Justin Pryzby, David G. Johnston", one tag per person.
+055fb8d33da	delete	Review	Amit Langote, Ashutosh Bapat, Justin Pryzby, David G. Johnston
+055fb8d33da	append	Reviewed-by	Amit Langote
+055fb8d33da	append	Reviewed-by	Ashutosh Bapat
+055fb8d33da	append	Reviewed-by	Justin Pryzby
+055fb8d33da	append	Reviewed-by	David G. Johnston
+
+# "Reviewer: Teodor Sigaev", one tag per person.
+4eaf7eaccb2	delete	Reviewer	Teodor Sigaev
+4eaf7eaccb2	append	Reviewed-by	Teodor Sigaev
+
+# "Peter Geoghegan."
+f35f30f74b6	insert	Author	Peter Geoghegan
+
+# "Report by Andreas Seltenreich. Patch by Jeevan Chalke. Review by Amit Kapila and by me."
+dc1057fcd87	insert	Author	Jeevan Chalke
+dc1057fcd87	append	Reported-by	Andreas Seltenreich
+dc1057fcd87	append	Reviewed-by	Amit Kapila
+dc1057fcd87	append	Reviewed-by	Robert Haas
+
+# "John Naylor. with cosmetic adjustments by me."
+1eb3a09e93d	insert	Author	John Naylor
+1eb3a09e93d	append	Co-authored-by	Tom Lane (cosmetic adjustments)
+
+# "Stas Kelvich, adjusted a bit by me."
+5602265f770	insert	Author	Stas Kelvich
+5602265f770	append	Co-authored-by	Tom Lane (adjusted a bit)
+
+# "John Naylor and Tom Lane."
+dd4cc9d7069	insert	Author	John Naylor
+dd4cc9d7069	insert	Author	Tom Lane
+
+# "John Naylor and Tom Lane."
+a0854f10722	insert	Author	John Naylor
+a0854f10722	insert	Author	Tom Lane
+
+# "Zhuo Ql."
+4094031dd33	insert	Author	Zhuo Ql
+
+# "John Naylor, some additional comment-hacking by me."
+45c6d75f8cd	insert	Author	John Naylor
+45c6d75f8cd	append	Co-authored-by	Tom Lane (comment-hacking)
+
+# "Spotted by Hari Babu. trivial patch is by Ashutosh Bapat."
+cfffe83ba82	insert	Author	Ashutosh Bapat
+cfffe83ba82	append	Reported-by	Hari Babu
+
+# "David Rowley, Amit Langote."
+5a6ab0a1b15	insert	Author	David Rowley
+5a6ab0a1b15	insert	Author	Amit Langote
+
+# "Original report, analysis, and patch by Etsuro Fujita. Heavily refactored by me. Then worked over some more by Amit Langote."
+37a3058bc7c	insert	Author	Etsuro Fujita
+37a3058bc7c	append	Co-authored-by	Robert Haas (heavily refactored)
+37a3058bc7c	append	Co-authored-by	Amit Langote (then worked over some more)
+
+# "Thomas Munro."
+# "Reviewed-By: Michael Paquier and Tom Lane", one tag per person.
+b2328bf62b6	insert	Author	Thomas Munro
+b2328bf62b6	delete	Reviewed-By	Michael Paquier and Tom Lane
+b2328bf62b6	append	Reviewed-by	Michael Paquier
+b2328bf62b6	append	Reviewed-by	Tom Lane
+
+# "Thomas Munro."
+6fe25c1358a	insert	Author	Thomas Munro
+
+# "Thomas Munro."
+fe4ecd08d81	insert	Author	Thomas Munro
+
+# "Amit Langote."
+bcded2609ad	insert	Author	Amit Langote
+
+# "Amit Langote, minor additional hacking by me."
+447dbf7aa79	insert	Author	Amit Langote
+447dbf7aa79	append	Co-authored-by	Tom Lane (minor additional hacking)
+
+# "Thomas Munro."
+0996e4be047	insert	Author	Thomas Munro
+
+# "Thomas Munro."
+1c72ec6f498	insert	Author	Thomas Munro
+
+# "Etsuro Fujita."
+a365f52d583	insert	Author	Etsuro Fujita
+
+# "Thomas Munro, based on complaints from Andrew Gierth and Tom Lane."
+a7a7387575b	insert	Author	Thomas Munro
+a7a7387575b	append	Reported-by	Andrew Gierth
+a7a7387575b	append	Reported-by	Tom Lane
+
+# "Stas Kelvich."
+8f9be261f43	insert	Author	Stas Kelvich
+
+# Was "Author: Heikki Linnakangas with some editorization by me".
+# "Review: Andrey Borodin, Alexander Korotkov", one tag per person.
+0bef1c0678d	replace	Author	Heikki Linnakangas
+0bef1c0678d	append	Co-authored-by	Teodor Sigaev (editorization)
+0bef1c0678d	delete	Review	Andrey Borodin, Alexander Korotkov
+0bef1c0678d	append	Reviewed-by	Andrey Borodin
+0bef1c0678d	append	Reviewed-by	Alexander Korotkov
+
+# "Dan Wood diagnosed a long-standing problem ... Authors: Dan Wood, Pavan Deolasee, Álvaro Herrera."
+# "Authors: Dan Wood, Pavan Deolasee, Álvaro Herrera", one tag per person.
+d2599ecfcc7	insert	Author	Dan Wood
+d2599ecfcc7	insert	Author	Pavan Deolasee
+d2599ecfcc7	insert	Author	Álvaro Herrera
+d2599ecfcc7	append	Diagnosed-by	Dan Wood
+d2599ecfcc7	delete	Authors	Dan Wood, Pavan Deolasee, Álvaro Herrera
+
+# "Reported by Jonathon Nelson. Analysis and patch by Kyotaro HORIGUCHI, with some extra comments by me."
+06687198018	insert	Author	Kyotaro HORIGUCHI
+06687198018	append	Reported-by	Jonathon Nelson
+06687198018	append	Diagnosed-by	Kyotaro HORIGUCHI
+06687198018	append	Co-authored-by	Heikki Linnakangas (extra comments)
+
+# "Takayuki Tsunakawa."
+f955d7ee166	insert	Author	Takayuki Tsunakawa
+
+# "Thomas Munro."
+513ff52e816	insert	Author	Thomas Munro
+
+# "Michael Paquier."
+fbb99e5883d	insert	Author	Michael Paquier
+
+# "Reviewer: Tom Lane", one tag per person.
+cb5d9429598	delete	Reviewer	Tom Lane
+cb5d9429598	append	Reviewed-by	Tom Lane
+
+# "Authors: Justin Pryzby, Alexander Korotkov, Liudmila Mantrova"
+# "Authors: Justin Pryzby, Alexander Korotkov, Liudmila Mantrova", one tag per person.
+# "Reviewed by: all authors and Robert Haas", one tag per person.
+8e12f4a250d	insert	Author	Justin Pryzby
+8e12f4a250d	delete	Authors	Justin Pryzby, Alexander Korotkov, Liudmila Mantrova
+8e12f4a250d	append	Author	Alexander Korotkov
+8e12f4a250d	append	Author	Liudmila Mantrova
+8e12f4a250d	delete	Reviewed by	all authors and Robert Haas
+8e12f4a250d	append	Reviewed-by	Robert Haas
+
+# "Liudmila Mantrova."
+60e2d9ab143	insert	Author	Liudmila Mantrova
+
+# "Alexey Bashtanov. message fix by me."
+05ca21b878a	insert	Author	Alexey Bashtanov
+05ca21b878a	insert	Author	Tom Lane
+
+# "David Rowley, reviewed by Amit Langote, and revised a bit by me."
+09b12d52db1	insert	Author	David Rowley
+09b12d52db1	append	Reviewed-by	Amit Langote
+09b12d52db1	append	Co-authored-by	Robert Haas (revised a bit)
+
+# "Etsuro Fujita, reviewed by Amit Langote."
+7fc7dac1a71	insert	Author	Etsuro Fujita
+7fc7dac1a71	append	Reviewed-by	Amit Langote
+
+# "Peter Eisentraut and Tom Lane."
+2efc924180f	insert	Author	Peter Eisentraut
+2efc924180f	insert	Author	Tom Lane
+
+# "John Naylor."
+a194106c1b4	insert	Author	John Naylor
+
+# "Dang Minh Huong."
+f586f863892	insert	Author	Dang Minh Huong
+
+# "Dang Minh Huong, tweaked a bit by me."
+dbccdd375b4	insert	Author	Dang Minh Huong
+dbccdd375b4	append	Co-authored-by	Tom Lane (tweaked a bit)
+
+# "John Naylor."
+e7a808f947c	insert	Author	John Naylor
+
+# "Jonathan Katz."
+4aad161c9a6	insert	Author	Jonathan Katz
+
+# "David Rowley."
+ecac23511e0	insert	Author	David Rowley
+
+# "Matthew Stickney. cosmetic changes by me."
+50485b3e201	insert	Author	Matthew Stickney
+50485b3e201	append	Co-authored-by	Tom Lane (cosmetic changes)
+
+# "Kyotaro Horiguchi, per a complaint from me."
+056f52d9c3e	insert	Author	Kyotaro Horiguchi
+056f52d9c3e	append	Reported-by	Tom Lane
+
+# "Kyotaro Horiguchi, tweaked a bit by me."
+7c89eb750d0	insert	Author	Kyotaro Horiguchi
+7c89eb750d0	append	Co-authored-by	Tom Lane (tweaked a bit)
+
+# "Kyotaro Horiguchi, per a complaint from me."
+b86b7bfa3e8	insert	Author	Kyotaro Horiguchi
+b86b7bfa3e8	append	Reported-by	Tom Lane
+
+# "Mike Blackwell."
+3a7cc727c7c	insert	Author	Mike Blackwell
+
+# Was "Author: Peter Eisentraut, Tom Lane, me".
+99164e69529	replace	Author	Peter Eisentraut
+99164e69529	replace	Author	Tom Lane
+99164e69529	append	Co-authored-by	Bruce Momjian
+
+# "David Rowley, whacked around a bit by me. Per gripe from Pavel Stehule."
+73b7f48f78d	insert	Author	David Rowley
+73b7f48f78d	append	Co-authored-by	Tom Lane (whacked around a bit)
+73b7f48f78d	append	Reported-by	Pavel Stehule
+
+# "David Rowley and Tom Lane."
+939449de0e5	insert	Author	David Rowley
+939449de0e5	insert	Author	Tom Lane
+
+# "David Rowley and Tom Lane."
+321f648a312	insert	Author	David Rowley
+321f648a312	insert	Author	Tom Lane
+
+# "David Rowley, per a gripe from me."
+be3d90026a3	insert	Author	David Rowley
+be3d90026a3	append	Reported-by	Tom Lane
+
+# "David Rowley and Tom Lane."
+4e232364033	insert	Author	David Rowley
+4e232364033	insert	Author	Tom Lane
+
+# "David Rowley."
+69025c5a07a	insert	Author	David Rowley
+
+# "David Rowley and Tom Lane."
+e23bae82cf3	insert	Author	David Rowley
+e23bae82cf3	insert	Author	Tom Lane
+
+# "Reviewed-By: Thomas Munro, Tatsuo Ishii", one tag per person.
+1cfdb1cb0e3	delete	Reviewed-By	Thomas Munro, Tatsuo Ishii
+1cfdb1cb0e3	append	Reviewed-by	Thomas Munro
+1cfdb1cb0e3	append	Reviewed-by	Tatsuo Ishii
+
+# "Dagfinn Ilmari Mannsåker, adjusted a bit by me."
+1731e3741cb	insert	Author	Dagfinn Ilmari Mannsåker
+1731e3741cb	append	Co-authored-by	Tom Lane (adjusted a bit)
+
+# "Dagfinn Ilmari Mannsåker, adjusted a bit by me."
+93b6e03ab47	insert	Author	Dagfinn Ilmari Mannsåker
+93b6e03ab47	append	Co-authored-by	Tom Lane (adjusted a bit)
+
+# No space after "Discussion:".
+403318b71f7	append	Discussion	https://postgr.es/m/CAKcux6=tPJ6nJ08r__nU_pmLQiC0xY15Fn0HvG1Cprsjdd9s_Q@mail.gmail.com
+
+# Was "Author: Alexander Korotkov, based on proposal by Darafei Praliaskouski".
+bee6a683a5c	replace	Author	Alexander Korotkov
+bee6a683a5c	append	Suggested-by	Darafei Praliaskouski
+
+# "I editorialized rather heavily on his regression test additions. Reported by Rajkumar Raghuwanshi."
+ec4719cd155	insert	Author	David Rowley
+ec4719cd155	append	Co-authored-by	Tom Lane (editorialized rather heavily on his regression test additions)
+ec4719cd155	append	Reported-by	Rajkumar Raghuwanshi
+
+# Was "Author: Masahiko Sawada with minor editorization by me".
+9a994e37e08	replace	Author	Masahiko Sawada
+9a994e37e08	append	Co-authored-by	Alexander Korotkov (minor editorization)
+
+# "Report by Rajkumar Raghuwanshi. Patch by Jeevan Chalke, reviewed by Ashutosh Bapat. A few changes by me."
+c6f28af5d7a	insert	Author	Jeevan Chalke
+c6f28af5d7a	append	Reported-by	Rajkumar Raghuwanshi
+c6f28af5d7a	append	Reviewed-by	Ashutosh Bapat
+c6f28af5d7a	append	Co-authored-by	Robert Haas (changes)
+
+# "Reported by: Michael Paquier, Kuntal Ghosh", one tag per person.
+d08c3d5197f	delete	Reported by	Michael Paquier, Kuntal Ghosh
+d08c3d5197f	append	Reported-by	Michael Paquier
+d08c3d5197f	append	Reported-by	Kuntal Ghosh
+
+# Was "Author: Amit Kapila, based on suggestion by Andrew Dunstan".
+8121ab88e7d	replace	Author	Amit Kapila
+8121ab88e7d	append	Suggested-by	Andrew Dunstan
+
+# "Takeshi Ideriha."
+8fb68aa2655	insert	Author	Takeshi Ideriha
+
+# "Report and patch by Alexey Kryuchkov, some cosmetic adjustments by me."
+01783ac36de	insert	Author	Alexey Kryuchkov
+01783ac36de	append	Reported-by	Alexey Kryuchkov
+01783ac36de	append	Co-authored-by	Tom Lane (cosmetic adjustments)
+
+# Was "Author: Ashutosh Bapat, with some changes by me.".
+17b715c634d	replace	Author	Ashutosh Bapat
+17b715c634d	append	Co-authored-by	Heikki Linnakangas (changes)
+
+# Was "Author: Amit Khandekar, with minor changes by me".
+40ca70ebcc9	replace	Author	Amit Khandekar
+40ca70ebcc9	append	Co-authored-by	Amit Kapila (minor changes)
+
+# "from Tom Lane via Joe Conway"
+ecd6b4342ad	insert	Author	Tom Lane
+
+# "Jonathan S. Katz."
+11a3aeeb5e1	insert	Author	Jonathan Katz
+11a3aeeb5e1	insert	Author	Jonathan S. Katz
+
+# "David Rowley. Per report from RK Korlapati."
+1007b0a126c	insert	Author	David Rowley
+1007b0a126c	append	Reported-by	RK Korlapati
+
+# "Amit Khandekar and Robert Haas."
+32df1c9afa5	insert	Author	Amit Khandekar
+32df1c9afa5	insert	Author	Robert Haas
+
+# "Yugo Nagata. documentation and test corrections by me."
+701fd0bbc98	insert	Author	Yugo Nagata
+701fd0bbc98	append	Co-authored-by	Tom Lane (documentation and test corrections)
+
+# "Report and fix by Robert Haas."
+b90d97e0814	insert	Author	Robert Haas
+b90d97e0814	append	Reported-by	Robert Haas
+
+# "Victor Wagner."
+986127e3db6	insert	Author	Victor Wagner
+
+# Was "Author: Dmitry Dolgov, with minor changes by me".
+6b4d860311e	replace	Author	Dmitry Dolgov
+6b4d860311e	append	Co-authored-by	Andres Freund (minor changes)
+
+# "Fabien Coelho."
+3214463228f	insert	Author	Fabien Coelho
+
+# "Tested-By: Thomas Munro and Victor Yegorov", one tag per person.
+8ce29bb4f0d	delete	Tested-By	Thomas Munro and Victor Yegorov
+8ce29bb4f0d	append	Tested-by	Thomas Munro
+8ce29bb4f0d	append	Tested-by	Victor Yegorov
+
+# Was "Author: Daniel Gustafsson, me".
+60e3bd1d7f9	replace	Author	Daniel Gustafsson
+60e3bd1d7f9	append	Co-authored-by	Bruce Momjian
+
+# "Tom Dunstan and Andrew Dunstan. Reviewed by Daniel Gustafsson."
+2d36a5e9dab	insert	Author	Tom Dunstan
+2d36a5e9dab	insert	Author	Andrew Dunstan
+2d36a5e9dab	append	Reviewed-by	Daniel Gustafsson
+
+# "David Rowley, with a lot of cosmetic adjustments by me. Per reports from Phil Florent and others."
+1c2cb2744bf	insert	Author	David Rowley
+1c2cb2744bf	append	Co-authored-by	Tom Lane (lot of cosmetic adjustments)
+1c2cb2744bf	append	Reported-by	Phil Florent
+
+# "Dean Rasheed, based on an earlier patch by Amit Langote. comment-kibitzing and back-patching by me."
+b8a1247a34e	insert	Author	Dean Rasheed
+b8a1247a34e	append	Co-authored-by	Amit Langote (earlier patch)
+b8a1247a34e	append	Co-authored-by	Tom Lane (comment-kibitzing and back-patching)
+
+# "Report and fix by Jacob Champion, though I editorialized on his patch to the extent of making NULL sort after non-NULL, for consistency with our usual sorting definitions."
+5b5ed4756c9	insert	Author	Jacob Champion
+5b5ed4756c9	append	Reported-by	Jacob Champion
+
+# "Haribabu Kommi."
+03838b80490	insert	Author	Haribabu Kommi
+
+# "Problem reported by Rushabh Lathia. diagnosis and fix by Amit Langote, modified a bit by me."
+11e22e486d8	insert	Author	Amit Langote
+11e22e486d8	append	Reported-by	Rushabh Lathia
+11e22e486d8	append	Diagnosed-by	Amit Langote
+11e22e486d8	append	Co-authored-by	Tom Lane (modified a bit)
+
+# "Daniel Gustafsson. ecpg change by me."
+1eee8d4994f	insert	Author	Daniel Gustafsson
+1eee8d4994f	append	Co-authored-by	Tom Lane (ecpg change)
+
+# "David Rowley."
+59ef49d26d2	insert	Author	David Rowley
+
+# "Reviewed by: Nathan Bossart, Kyotaro Horiguchi", one tag per person.
+661dd23950f	delete	Reviewed by	Nathan Bossart, Kyotaro Horiguchi
+661dd23950f	append	Reviewed-by	Nathan Bossart
+661dd23950f	append	Reviewed-by	Kyotaro Horiguchi
+
+# "Reviewed by: Nathan Bossart, Kyotaro Horiguchi", one tag per person.
+f841ceb26d7	delete	Reviewed by	Nathan Bossart, Kyotaro Horiguchi
+f841ceb26d7	append	Reviewed-by	Nathan Bossart
+f841ceb26d7	append	Reviewed-by	Kyotaro Horiguchi
+
+# "Reviewed-By: Tom Lane, Amit Kapila", one tag per person.
+4974d7f87e6	delete	Reviewed-By	Tom Lane, Amit Kapila
+4974d7f87e6	append	Reviewed-by	Tom Lane
+4974d7f87e6	append	Reviewed-by	Amit Kapila
+
+# "Thomas Munro. exec.c fixes by me."
+a2a8acd1521	insert	Author	Thomas Munro
+a2a8acd1521	append	Co-authored-by	Tom Lane (exec.c fixes)
+
+# "Christoph Berg."
+02dc7466bae	insert	Author	Christoph Berg
+
+# "Reviewed by: Nathan Bossart, Kyotaro Horiguchi", one tag per person.
+a556549d7e6	delete	Reviewed by	Nathan Bossart, Kyotaro Horiguchi
+a556549d7e6	append	Reviewed-by	Nathan Bossart
+a556549d7e6	append	Reviewed-by	Kyotaro Horiguchi
+
+# Was "Author: Andrey Borodin with small additions by me".
+# "Review: Tom Lane", one tag per person.
+f919c165ebd	replace	Author	Andrey Borodin
+f919c165ebd	append	Co-authored-by	Alexander Korotkov (small additions)
+f919c165ebd	delete	Review	Tom Lane
+f919c165ebd	append	Reviewed-by	Tom Lane
+
+# Was "Author: Alexander Korotkov based on patch from and ideas by Sivasubramanian Ramasubramanian".
+# "Review: Sivasubramanian Ramasubramanian", one tag per person.
+5f08accdad2	replace	Author	Alexander Korotkov
+5f08accdad2	append	Co-authored-by	Sivasubramanian Ramasubramanian (patch and ideas)
+5f08accdad2	delete	Review	Sivasubramanian Ramasubramanian
+5f08accdad2	append	Reviewed-by	Sivasubramanian Ramasubramanian
+
+# "Review: Amul Sul, Robert Haas, Tom Lane, Dmitry Dolgov, David G. Johnston", one tag per person.
+cf984672427	delete	Review	Amul Sul, Robert Haas, Tom Lane, Dmitry Dolgov, David G. Johnston
+cf984672427	append	Reviewed-by	Amul Sul
+cf984672427	append	Reviewed-by	Robert Haas
+cf984672427	append	Reviewed-by	Tom Lane
+cf984672427	append	Reviewed-by	Dmitry Dolgov
+cf984672427	append	Reviewed-by	David G. Johnston
+
+# "Paul Guo, reviewed by Davy Machado and John Naylor, minor adjustments by me."
+fedc97cdfd8	insert	Author	Paul Guo
+fedc97cdfd8	append	Reviewed-by	Davy Machado
+fedc97cdfd8	append	Reviewed-by	John Naylor
+fedc97cdfd8	append	Co-authored-by	Tom Lane (minor adjustments)
+
+# "Lars Kanis, reviewed by Pavel Stehule, some mods by me."
+2970afa6cf1	insert	Author	Lars Kanis
+2970afa6cf1	append	Reviewed-by	Pavel Stehule
+2970afa6cf1	append	Co-authored-by	Tom Lane (mods)
+
+# "Justin Pryzby."
+7046d302460	insert	Author	Justin Pryzby
+
+# Was "Author: Daniel Gustafsson (with some editorialization by me)".
+728202b63cd	replace	Author	Daniel Gustafsson
+728202b63cd	append	Co-authored-by	Andrew Gierth (editorialization)
+
+# Was "Author: Nikita Glukhov, Alexander Korotkov based on GSoC work by Vlad Sterzhanov".
+# "Review: Andrey Borodin, Alexander Korotkov", one tag per person.
+2a6368343ff	replace	Author	Nikita Glukhov
+2a6368343ff	replace	Author	Alexander Korotkov
+2a6368343ff	append	Co-authored-by	Vlad Sterzhanov (GSoC work)
+2a6368343ff	delete	Review	Andrey Borodin, Alexander Korotkov
+2a6368343ff	append	Reviewed-by	Andrey Borodin
+2a6368343ff	append	Reviewed-by	Alexander Korotkov
+
+# "Daniel Gustafsson."
+0d38e4ebb7a	insert	Author	Daniel Gustafsson
+
+# "John Naylor, reviewed and whacked around a bit by Dagfinn Ilmari Mannsåker, and some more by me."
+3dc820c43e4	insert	Author	John Naylor
+3dc820c43e4	append	Reviewed-by	Dagfinn Ilmari Mannsåker
+3dc820c43e4	append	Co-authored-by	Tom Lane (more)
+
+# "Dagfinn Ilmari Mannsåker, reviewed by Arthur Zakirov."
+a7c4dad1a77	insert	Author	Dagfinn Ilmari Mannsåker
+a7c4dad1a77	append	Reviewed-by	Arthur Zakirov
+
+# "Analyzed-By: Andrew Gierth and Andres Freund", one tag per person.
+bd1463e348f	delete	Analyzed-By	Andrew Gierth and Andres Freund
+bd1463e348f	append	Diagnosed-by	Andrew Gierth
+bd1463e348f	append	Diagnosed-by	Andres Freund
+
+# "Justin Pryzby, reviewed at various times by Álvaro Herrera, Arthur Zakirov, and Edmund Horner. some additional fixups by me."
+121213d9d85	insert	Author	Justin Pryzby
+121213d9d85	append	Reviewed-by	Álvaro Herrera
+121213d9d85	append	Reviewed-by	Arthur Zakirov
+121213d9d85	append	Reviewed-by	Edmund Horner
+121213d9d85	append	Co-authored-by	Tom Lane (fixups)
+
+# "Andres Freund and Thomas Munro. some cosmetic cleanup by me."
+4f3b38fe2bd	insert	Author	Andres Freund
+4f3b38fe2bd	insert	Author	Thomas Munro
+4f3b38fe2bd	append	Co-authored-by	Tom Lane (cosmetic cleanup)
+
+# Was "Author: Fabien Coelho, with pg_description from John Naylor, and significant", continued "refactoring and editorialization by me.".
+c62dd80cdf1	replace	Author	Fabien Coelho
+c62dd80cdf1	append	Co-authored-by	John Naylor (pg_description)
+c62dd80cdf1	append	Co-authored-by	Joe Conway (significant refactoring and editorialization)
+
+# "Keiichi Hirobe, minor additional work by me."
+87d9bbca13f	insert	Author	Keiichi Hirobe
+87d9bbca13f	append	Co-authored-by	Tom Lane (minor additional work)
+
+# "Doug Rady, reviewed by Robert Haas and Fabien Coelho, and whacked around a good bit more by me."
+60e612b6029	insert	Author	Doug Rady
+60e612b6029	append	Reviewed-by	Robert Haas
+60e612b6029	append	Reviewed-by	Fabien Coelho
+60e612b6029	append	Co-authored-by	Tom Lane (whacked around a good bit more)
+
+# "Arthur Zakirov, minor mods and doc work by me."
+fd582317e10	insert	Author	Arthur Zakirov
+fd582317e10	append	Co-authored-by	Tom Lane (minor mods and doc work)
+
+# "extracted from a patch by Joe Wildish."
+a49ceda6a04	insert	Author	Joe Wildish
+
+# "James Robinson."
+2b04dfc4724	insert	Author	James Robinson
+
+# "Amit Langote, reviewed by David Rowley and Jesper Pedersen, and whacked around a bit more by me."
+fdba460a26a	insert	Author	Amit Langote
+fdba460a26a	append	Reviewed-by	David Rowley
+fdba460a26a	append	Reviewed-by	Jesper Pedersen
+fdba460a26a	append	Co-authored-by	Tom Lane (whacked around a bit more)
+
+# "Amit Langote and Tom Lane."
+b04aeb0a053	insert	Author	Amit Langote
+b04aeb0a053	insert	Author	Tom Lane
+
+# Was "Author: Amit Khandekar and Amit Langote, editorialized by me".
+# "Reviewed-By: Amit Langote, Amit Khandekar, Andres Freund", one tag per person.
+cc2905e963e	replace	Author	Amit Khandekar
+cc2905e963e	replace	Author	Amit Langote
+cc2905e963e	append	Co-authored-by	Andres Freund (editorialized)
+cc2905e963e	delete	Reviewed-By	Amit Langote, Amit Khandekar, Andres Freund
+cc2905e963e	append	Reviewed-by	Amit Langote
+cc2905e963e	append	Reviewed-by	Amit Khandekar
+cc2905e963e	append	Reviewed-by	Andres Freund
+
+# "Amit Langote, reviewed by David Rowley and Jesper Pedersen, and whacked around a bit more by me."
+6e35939febf	insert	Author	Amit Langote
+6e35939febf	append	Reviewed-by	David Rowley
+6e35939febf	append	Reviewed-by	Jesper Pedersen
+6e35939febf	append	Co-authored-by	Tom Lane (whacked around a bit more)
+
+# Was "Author: Lukas Fittl, with minor changes by me".
+c03c1449c09	replace	Author	Lukas Fittl
+c03c1449c09	append	Co-authored-by	Andres Freund (minor changes)
+
+# "Amit Langote, reviewed by David Rowley and Jesper Pedersen, some mods by me."
+9ddef36278a	insert	Author	Amit Langote
+9ddef36278a	append	Reviewed-by	David Rowley
+9ddef36278a	append	Reviewed-by	Jesper Pedersen
+9ddef36278a	append	Co-authored-by	Tom Lane (mods)
+
+# "Amit Langote and David Rowley."
+d73f4c74dd3	insert	Author	Amit Langote
+d73f4c74dd3	insert	Author	David Rowley
+
+# "Konstantin Knizhnik, whacked around a bit by me."
+07ee62ce9e5	insert	Author	Konstantin Knizhnik
+07ee62ce9e5	append	Co-authored-by	Tom Lane (whacked around a bit)
+
+# "Amit Langote, reviewed by David Rowley and Jesper Pedersen, and whacked around a bit more by me."
+f2343653f5b	insert	Author	Amit Langote
+f2343653f5b	append	Reviewed-by	David Rowley
+f2343653f5b	append	Reviewed-by	Jesper Pedersen
+f2343653f5b	append	Co-authored-by	Tom Lane (whacked around a bit more)
+
+# "Authors: Michaël Paquier, Álvaro Herrera"
+# "Authors: Michaël Paquier, Álvaro Herrera", one tag per person.
+ad08006ba03	insert	Author	Michaël Paquier
+ad08006ba03	delete	Authors	Michaël Paquier, Álvaro Herrera
+ad08006ba03	append	Author	Álvaro Herrera
+
+# "Amit Langote, reviewed by David Rowley and Jesper Pedersen, and whacked around a bit more by me."
+52ed730d511	insert	Author	Amit Langote
+52ed730d511	append	Reviewed-by	David Rowley
+52ed730d511	append	Reviewed-by	Jesper Pedersen
+52ed730d511	append	Co-authored-by	Tom Lane (whacked around a bit more)
+
+# "Peter Eisentraut and Tom Lane."
+82ff0cc91d9	insert	Author	Peter Eisentraut
+82ff0cc91d9	insert	Author	Tom Lane
+
+# Was "Author: Andrew Dunstan and Tom Lane, with parallel query fix by Thomas Munro".
+212fab9926b	replace	Author	Andrew Dunstan
+212fab9926b	replace	Author	Tom Lane
+212fab9926b	append	Co-authored-by	Thomas Munro (parallel query fix)
+
+# "Justin Pryzby, Jonathan S. Katz, and myself."
+00279151432	insert	Author	Justin Pryzby
+00279151432	insert	Author	Jonathan S. Katz
+00279151432	insert	Author	Tom Lane
+
+# "Justin Pryzby, Jonathan S. Katz, and myself."
+d3ef93f0ebc	insert	Author	Justin Pryzby
+d3ef93f0ebc	insert	Author	Jonathan S. Katz
+d3ef93f0ebc	insert	Author	Tom Lane
+
+# "Justin Pryzby and myself."
+8f850f2cad2	insert	Author	Justin Pryzby
+8f850f2cad2	insert	Author	Tom Lane
+
+# Was "Author: Oleg Bartunov with minor editorialization by me".
+98afb839059	replace	Author	Oleg Bartunov
+98afb839059	append	Co-authored-by	Alexander Korotkov (minor editorialization)
+
+# "Jeff Janes and Tom Lane."
+2ddb9149d14	insert	Author	Jeff Janes
+2ddb9149d14	insert	Author	Tom Lane
+
+# "Ashutosh Bapat, with tests by Kyotaro Horiguchi and some editorialization by me. Reviewed by Andres Freund, Pavel Stehule, Kyotaro Horiguchi, Dmitry Dolgov, Tom Lane."
+5613da4cc79	insert	Author	Ashutosh Bapat
+5613da4cc79	append	Co-authored-by	Kyotaro Horiguchi (tests)
+5613da4cc79	append	Co-authored-by	Andrew Gierth (editorialization)
+5613da4cc79	append	Reviewed-by	Andres Freund
+5613da4cc79	append	Reviewed-by	Pavel Stehule
+5613da4cc79	append	Reviewed-by	Kyotaro Horiguchi
+5613da4cc79	append	Reviewed-by	Dmitry Dolgov
+5613da4cc79	append	Reviewed-by	Tom Lane
+
+# "David Rowley, reviewed by Edmund Horner."
+c6e4133fae1	insert	Author	David Rowley
+c6e4133fae1	append	Reviewed-by	Edmund Horner
+
+# "Jonah Harris and Tom Lane."
+3d360e20c9a	insert	Author	Jonah Harris
+3d360e20c9a	insert	Author	Tom Lane
+
+# Was "Author: Andres Freund, with cherrypicked changes from a patch by Thomas Munro".
+# "Reported-By: Andres Freund and Thomas Munro", one tag per person.
+450c7defa6d	replace	Author	Andres Freund
+450c7defa6d	append	Co-authored-by	Thomas Munro (cherrypicked changes from a patch)
+450c7defa6d	delete	Reported-By	Andres Freund and Thomas Munro
+450c7defa6d	append	Reported-by	Andres Freund
+450c7defa6d	append	Reported-by	Thomas Munro
+
+# "Daniel Gustafsson."
+3de491482b6	insert	Author	Daniel Gustafsson
+
+# "Reported-by: David G. Johnston <david.g.johnston@gmail.com>"
+d20dceaf50e	insert	Author	David G. Johnston
+
+# "John Naylor, with a few additional changes by me."
+ec937d0805b	insert	Author	John Naylor
+ec937d0805b	append	Co-authored-by	Tom Lane (changes)
+
+# "John Naylor."
+4766bcd9e29	insert	Author	John Naylor
+
+# "Vik Fearing and Tom Lane."
+600b04d6b5e	insert	Author	Vik Fearing
+600b04d6b5e	insert	Author	Tom Lane
+
+# "Daniel Vérité."
+51eaaafb850	insert	Author	Daniel Vérité
+
+# "Daniel Vérité."
+eaf746a5b85	insert	Author	Daniel Vérité
+
+# "David Rowley, reviewed by Yoshikazu Imai."
+34c9e455d0e	insert	Author	David Rowley
+34c9e455d0e	append	Reviewed-by	Yoshikazu Imai
+
+# Was "Author: Ashutosh Bapat and Andres Freund, with changes by Amit Khandekar".
+763f2edd920	replace	Author	Ashutosh Bapat
+763f2edd920	replace	Author	Andres Freund
+763f2edd920	append	Co-authored-by	Amit Khandekar (changes)
+
+# Was "Author: Ashutosh Bapat and Andres Freund, with changes by Amit Khandekar".
+1a0586de365	replace	Author	Ashutosh Bapat
+1a0586de365	replace	Author	Andres Freund
+1a0586de365	append	Co-authored-by	Amit Khandekar (changes)
+
+# "Testing help from Jesper Pedersen and Kato Sho."
+# "Authors: David Rowley and Amit Langote, heavily revised by Álvaro Herrera", one tag per person.
+3f2393edefa	insert	Author	David Rowley
+3f2393edefa	append	Tested-by	Jesper Pedersen
+3f2393edefa	append	Tested-by	Kato Sho
+3f2393edefa	delete	Authors	David Rowley and Amit Langote, heavily revised by Álvaro Herrera
+3f2393edefa	append	Author	Amit Langote
+3f2393edefa	append	Co-authored-by	Álvaro Herrera (heavily revised)
+
+# Was "Author: Andres Freund and  Ashutosh Bapat, with changes by Amit Khandekar".
+4da597edf1b	replace	Author	Andres Freund
+4da597edf1b	replace	Author	Ashutosh Bapat
+4da597edf1b	append	Co-authored-by	Amit Khandekar (changes)
+
+# Was "Author: Craig Ringer, with some adjustments by Thomas Munro".
+9ccdd7f66e3	replace	Author	Craig Ringer
+9ccdd7f66e3	append	Co-authored-by	Thomas Munro (adjustments)
+
+# Was "Author: Andres Freund, with contributions by John Naylor".
+578b229718e	replace	Author	Andres Freund
+578b229718e	append	Co-authored-by	John Naylor
+
+# "Amul Sul, reviewed by Hironobu Suzuki."
+48c41fa9748	insert	Author	Amul Sul
+48c41fa9748	append	Reviewed-by	Hironobu Suzuki
+
+# "Amul Sul, reviewed by Hironobu Suzuki."
+eb6f29141be	insert	Author	Amul Sul
+eb6f29141be	append	Reviewed-by	Hironobu Suzuki
+
+# "Reviewed-by: Adam Berlin, Álvaro Herrera, Tom Lane, Nikolay Shaplov," continues on the next line.
+03faa4a8ddf	replace	Reviewed-by	Adam Berlin, Álvaro Herrera, Tom Lane, Nikolay Shaplov, Arthur Zakirov
+
+# "Reviewers: too many to list", one tag per person.
+36d442a25a1	delete	Reviewers	too many to list
+36d442a25a1	append	Reviewed-by	too many
+
+# "Daniel Vérité, reviewed by Fabien Coelho and David Fetter, some tweaking by me."
+aa2ba50c2c1	insert	Author	Daniel Vérité
+aa2ba50c2c1	append	Reviewed-by	Fabien Coelho
+aa2ba50c2c1	append	Reviewed-by	David Fetter
+aa2ba50c2c1	append	Co-authored-by	Tom Lane (tweaking)
+
+# "Review: Masahiko Sawada", one tag per person.
+f69c959df0d	delete	Review	Masahiko Sawada
+f69c959df0d	append	Reviewed-by	Masahiko Sawada
+
+# "Per discussion with various folks, including Stephen Frost, David Steele, Andres Freund, Michael Banck and myself."
+a1c91dd1108	append	Suggested-by	Stephen Frost (discussion)
+a1c91dd1108	append	Suggested-by	David Steele (discussion)
+a1c91dd1108	append	Suggested-by	Andres Freund (discussion)
+a1c91dd1108	append	Suggested-by	Michael Banck (discussion)
+
+# "Suggested fix is from Andrew Dunstan."
+7d4524aed3a	append	Suggested-by	Andrew Dunstan
+
+# "Daniel Gustafsson, reviewed by Hironobu Suzuki, some code cleanup by me."
+2d34ad84303	insert	Author	Daniel Gustafsson
+2d34ad84303	append	Reviewed-by	Hironobu Suzuki
+2d34ad84303	append	Co-authored-by	Tom Lane (code cleanup)
+
+# "Reviewed-by: Adam Berlin, Álvaro Herrera, Tom Lane, Nikolay Shaplov," continues on the next line.
+d3c09b9b130	replace	Reviewed-by	Adam Berlin, Álvaro Herrera, Tom Lane, Nikolay Shaplov, Arthur Zakirov
+
+# "Fabien Coelho and Tom Lane, reviewed by Bradley DeJong."
+afc4a78a301	insert	Author	Fabien Coelho
+afc4a78a301	insert	Author	Tom Lane
+afc4a78a301	append	Reviewed-by	Bradley DeJong
+
+# "Jeff Janes."
+eeee62d8052	insert	Author	Jeff Janes
+
+# "John Naylor."
+e28649a67f5	insert	Author	John Naylor
+
+# Was "Author: Alexander Korotkov, based on ideas from Andrey Borodin and Peter Geoghegan".
+fd83c83d094	replace	Author	Alexander Korotkov
+fd83c83d094	append	Suggested-by	Andrey Borodin
+fd83c83d094	append	Suggested-by	Peter Geoghegan
+
+# "David Rowley, tweaked a bit by me."
+c6e394c1a2a	insert	Author	David Rowley
+c6e394c1a2a	append	Co-authored-by	Tom Lane (tweaked a bit)
+
+# "David Rowley."
+216af5eea5c	insert	Author	David Rowley
+
+# "Vik Fearing."
+6f19a8c41f9	insert	Author	Vik Fearing

@@ -1,0 +1,142 @@
+# Tag fixes for 2014 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# "Authors: Pavel Stehule and Dean Rasheed.  Some tweaks by Álvaro Herrera", one tag per person.
+b152c6cd0de	delete	Authors	Pavel Stehule and Dean Rasheed.  Some tweaks by Álvaro Herrera
+b152c6cd0de	insert	Author	Pavel Stehule
+b152c6cd0de	insert	Author	Dean Rasheed
+b152c6cd0de	append	Co-authored-by	Álvaro Herrera (tweaks)
+
+# Was "Author: Pavel Stěhule, editorialized somewhat by Álvaro Herrera".
+84df54b22e8	replace	Author	Pavel Stěhule
+84df54b22e8	append	Co-authored-by	Álvaro Herrera (editorialized somewhat)
+
+# Was "Author: Christian Kruse, some tweaks by Álvaro Herrera".
+f88d4cfc9d4	replace	Author	Christian Kruse
+f88d4cfc9d4	append	Co-authored-by	Álvaro Herrera (tweaks)
+
+# "Authors: Oleg Bartunov,  Teodor Sigaev, Peter Geoghegan and Andrew Dunstan.", one tag per person.
+# "Review: Andres Freund", one tag per person.
+d9134d0a355	delete	Authors	Oleg Bartunov,  Teodor Sigaev, Peter Geoghegan and Andrew Dunstan.
+d9134d0a355	insert	Author	Oleg Bartunov
+d9134d0a355	insert	Author	Teodor Sigaev
+d9134d0a355	insert	Author	Peter Geoghegan
+d9134d0a355	insert	Author	Andrew Dunstan
+d9134d0a355	delete	Review	Andres Freund
+d9134d0a355	append	Reviewed-by	Andres Freund
+
+# "Reviewed by: Christoph Berg, Andres Freund, Thom Brown", one tag per person.
+f41872d0c12	delete	Reviewed by	Christoph Berg, Andres Freund, Thom Brown
+f41872d0c12	append	Reviewed-by	Christoph Berg
+f41872d0c12	append	Reviewed-by	Andres Freund
+f41872d0c12	append	Reviewed-by	Thom Brown
+
+# "Authors: Craig Ringer and Thomas Munro, tweaked by Álvaro", one tag per person.
+1c9701cfe58	delete	Authors	Craig Ringer and Thomas Munro, tweaked by Álvaro
+1c9701cfe58	insert	Author	Craig Ringer
+1c9701cfe58	insert	Author	Thomas Munro
+1c9701cfe58	append	Co-authored-by	Álvaro (tweaked)
+
+# Was "Author: Sawada Masahiko, heavily editorialized by me.".
+# "Reviewed-By: Jeevan Chalke, Alvaro Herrera", one tag per person.
+51bb79569f9	replace	Author	Sawada Masahiko
+51bb79569f9	append	Co-authored-by	Andres Freund (heavily editorialized)
+51bb79569f9	delete	Reviewed-By	Jeevan Chalke, Alvaro Herrera
+51bb79569f9	append	Reviewed-by	Jeevan Chalke
+51bb79569f9	append	Reviewed-by	Alvaro Herrera
+
+# Was "Author: Pavel Stehule, editorialized by many".
+# "Reviewed-By: Andres Freund, Petr Jelinek, Fujii Masao, MauMau, Abhijit Menon-Sen and Erik Rijkers.", one tag per person.
+07c8651dd91	replace	Author	Pavel Stehule
+07c8651dd91	delete	Reviewed-By	Andres Freund, Petr Jelinek, Fujii Masao, MauMau, Abhijit Menon-Sen and Erik Rijkers.
+07c8651dd91	append	Reviewed-by	Andres Freund
+07c8651dd91	append	Reviewed-by	Petr Jelinek
+07c8651dd91	append	Reviewed-by	Fujii Masao
+07c8651dd91	append	Reviewed-by	MauMau
+07c8651dd91	append	Reviewed-by	Abhijit Menon-Sen
+07c8651dd91	append	Reviewed-by	Erik Rijkers
+
+# Was "Author: Abhijit Menon-Sen, slightly editorialized by me".
+# "Reviewed-By: Álvaro Herrera, Andres Freund, and Heikki Linnakangas", one tag per person.
+728f152e07f	replace	Author	Abhijit Menon-Sen
+728f152e07f	append	Co-authored-by	Andres Freund (slightly editorialized)
+728f152e07f	delete	Reviewed-By	Álvaro Herrera, Andres Freund, and Heikki Linnakangas
+728f152e07f	append	Reviewed-by	Álvaro Herrera
+728f152e07f	append	Reviewed-by	Andres Freund
+728f152e07f	append	Reviewed-by	Heikki Linnakangas
+
+# Was "Author: Abhijit Menon-Sen, slightly editorialized by me".
+# "Reviewed-By: Andres Freund, Dilip Kumar and Furuya Osamu", one tag per person.
+bdd5726c347	replace	Author	Abhijit Menon-Sen
+bdd5726c347	append	Co-authored-by	Andres Freund (slightly editorialized)
+bdd5726c347	delete	Reviewed-By	Andres Freund, Dilip Kumar and Furuya Osamu
+bdd5726c347	append	Reviewed-by	Andres Freund
+bdd5726c347	append	Reviewed-by	Dilip Kumar
+bdd5726c347	append	Reviewed-by	Furuya Osamu
+
+# Was "Author: Andres Freund with contributions from Oskari Saarenmaa".
+# "Reviewed-By: Amit Kapila, Robert Haas, Heikki Linnakangas and Álvaro Herrera", one tag per person.
+b64d92f1a56	replace	Author	Andres Freund
+b64d92f1a56	append	Co-authored-by	Oskari Saarenmaa
+b64d92f1a56	delete	Reviewed-By	Amit Kapila, Robert Haas, Heikki Linnakangas and Álvaro Herrera
+b64d92f1a56	append	Reviewed-by	Amit Kapila
+b64d92f1a56	append	Reviewed-by	Robert Haas
+b64d92f1a56	append	Reviewed-by	Heikki Linnakangas
+b64d92f1a56	append	Reviewed-by	Álvaro Herrera
+
+# Was "Author: Michael Paquier, with some editing by me.".
+fdf81c9a6cf	replace	Author	Michael Paquier
+fdf81c9a6cf	append	Co-authored-by	Andres Freund (editing)
+
+# Was "Author: Michael Paquier, with some editing by me.".
+0c013e08cfb	replace	Author	Michael Paquier
+0c013e08cfb	append	Co-authored-by	Andres Freund (editing)
+
+# Was "Author: Joachim Wieland, revised by Álvaro Herrera".
+0eea8047bf0	replace	Author	Joachim Wieland
+0eea8047bf0	append	Co-authored-by	Álvaro Herrera (revised)
+
+# "Reviewer: Furuya Osamu", one tag per person.
+0f66d212015	delete	Reviewer	Furuya Osamu
+0f66d212015	append	Reviewed-by	Furuya Osamu
+
+# "Reviewer: Haribabu Kommi", one tag per person.
+606c0123d62	delete	Reviewer	Haribabu Kommi
+606c0123d62	append	Reviewed-by	Haribabu Kommi
+
+# "Authors: Álvaro Herrera and Petr Jelínek", one tag per person.
+73c986adde5	delete	Authors	Álvaro Herrera and Petr Jelínek
+73c986adde5	insert	Author	Álvaro Herrera
+73c986adde5	insert	Author	Petr Jelínek
+
+# Was "Author: Jim Nasby, some kibitzing by Heikki Linnankangas.".
+35192f0626c	replace	Author	Jim Nasby
+35192f0626c	append	Co-authored-by	Heikki Linnankangas (kibitzing)
+
+# "Reviewed by: Abhijit Menon-Sen, Stephen Frost, Heikki Linnakangas,", one tag per person.
+0ee98d1cbf1	delete	Reviewed by	Abhijit Menon-Sen, Stephen Frost, Heikki Linnakangas,
+0ee98d1cbf1	append	Reviewed-by	Abhijit Menon-Sen
+0ee98d1cbf1	append	Reviewed-by	Stephen Frost
+0ee98d1cbf1	append	Reviewed-by	Heikki Linnakangas
+0ee98d1cbf1	append	Reviewed-by	Robert Haas
+
+# Was "Author: Adam Brightwell, minor tweaks by Álvaro".
+# "Reviewed by: Stephen Frost, Andres Freund, Álvaro Herrera", one tag per person.
+1826987a46d	replace	Author	Adam Brightwell
+1826987a46d	append	Co-authored-by	Álvaro (minor tweaks)
+1826987a46d	delete	Reviewed by	Stephen Frost, Andres Freund, Álvaro Herrera
+1826987a46d	append	Reviewed-by	Stephen Frost
+1826987a46d	append	Reviewed-by	Andres Freund
+1826987a46d	append	Reviewed-by	Álvaro Herrera
+
+# "Reviewed-By: Amit Kapila and Robert Haas", one tag per person.
+ab5194e6f61	delete	Reviewed-By	Amit Kapila and Robert Haas
+ab5194e6f61	append	Reviewed-by	Amit Kapila
+ab5194e6f61	append	Reviewed-by	Robert Haas
+
+# "Reviewed-By: Robert Haas and Amit Kapila", one tag per person.
+d72731a7045	delete	Reviewed-By	Robert Haas and Amit Kapila
+d72731a7045	append	Reviewed-by	Robert Haas
+d72731a7045	append	Reviewed-by	Amit Kapila

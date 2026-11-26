@@ -1,0 +1,28 @@
+# Tag fixes for 2011 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# "Authors: Alexey Klyukin and Alex Hunsaker.", one tag per person.
+87bb2ade2ce	delete	Authors	Alexey Klyukin and Alex Hunsaker.
+87bb2ade2ce	insert	Author	Alexey Klyukin
+87bb2ade2ce	insert	Author	Alex Hunsaker
+
+# "Authors: Brendan Jurd, Alvaro Herrera", one tag per person.
+e5e2fc842c4	delete	Authors	Brendan Jurd, Alvaro Herrera
+e5e2fc842c4	insert	Author	Brendan Jurd
+e5e2fc842c4	insert	Author	Alvaro Herrera
+
+# Was "Author: Alexander Shulgin, with some tweaks by me".
+7ed36056751	replace	Author	Alexander Shulgin
+7ed36056751	append	Co-authored-by	Alvaro Herrera (tweaks)
+
+# "Authors: Greg Smith and Noah Misch", one tag per person.
+9d3b5024435	delete	Authors	Greg Smith and Noah Misch
+9d3b5024435	insert	Author	Greg Smith
+9d3b5024435	insert	Author	Noah Misch
+
+# "Authors: Nikhil Sontakke, Alex Hunsaker", one tag per person.
+61d81bd28db	delete	Authors	Nikhil Sontakke, Alex Hunsaker
+61d81bd28db	insert	Author	Nikhil Sontakke
+61d81bd28db	insert	Author	Alex Hunsaker

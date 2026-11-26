@@ -1,0 +1,52 @@
+# Tag fixes for 2025 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# "Diagnosys-by: Sami Imseih <samimseih@gmail.com>", one tag per person.
+9b21f203dd8	delete	Diagnosys-by	Sami Imseih <samimseih@gmail.com>
+9b21f203dd8	append	Diagnosed-by	Sami Imseih <samimseih@gmail.com>
+
+# "Diagnozed-by: Tender Wang <tndrwang@gmail.com>", one tag per person.
+# "Diagnozed-by: Dean Rasheed <dean.a.rasheed@gmail.com>", one tag per person.
+28317de723b	delete	Diagnozed-by	Tender Wang <tndrwang@gmail.com>
+28317de723b	append	Diagnosed-by	Tender Wang <tndrwang@gmail.com>
+28317de723b	delete	Diagnozed-by	Dean Rasheed <dean.a.rasheed@gmail.com>
+28317de723b	append	Diagnosed-by	Dean Rasheed <dean.a.rasheed@gmail.com>
+
+# "Author:Jelte Fennema-Nio <github-tech@jeltef.nl>."
+# No space after "Author:".
+a8eeb22f171	insert	Author	Jelte Fennema-Nio <github-tech@jeltef.nl>
+
+# "Author: Reviewed-by: Peter Smith"; Peter Smith is the author.
+d1d83827ba4	replace	Author	Peter Smith <smithpb2250@gmail.com>
+
+# Repeated key with no space: "Reviewed-by:Reviewed-by:".
+12eece5fd54	append	Reviewed-by	Amit Kapila <amit.kapila16@gmail.com>
+
+# "Fix-suggested-by: Jacob Champion <jacob.champion@enterprisedb.com>", one tag per person.
+d98cefe1143	delete	Fix-suggested-by	Jacob Champion <jacob.champion@enterprisedb.com>
+d98cefe1143	append	Suggested-by	Jacob Champion <jacob.champion@enterprisedb.com> (fix)
+
+# Repeated key: "Author: Author:".
+36aed19fd99	replace	Author	Corey Huinker <corey.huinker@gmail.com>
+
+# "Diagnozed-by: Fei Changhong <feichanghong@qq.com>", one tag per person.
+8741e48e5dd	delete	Diagnozed-by	Fei Changhong <feichanghong@qq.com>
+8741e48e5dd	append	Diagnosed-by	Fei Changhong <feichanghong@qq.com>
+
+# "Fix-suggested-by: Jacob Champion <jacob.champion@enterprisedb.com>", one tag per person.
+d4baa327a1c	delete	Fix-suggested-by	Jacob Champion <jacob.champion@enterprisedb.com>
+d4baa327a1c	append	Suggested-by	Jacob Champion <jacob.champion@enterprisedb.com> (fix)
+
+# "Author: idea from David Rowley" credits an idea, not authorship.
+5d4dc112c7c	delete	Author	idea from David Rowley
+5d4dc112c7c	append	Suggested-by	David Rowley
+
+# "Analyzed-by: Andres Freund <andres@anarazel.de>", one tag per person.
+dc7c77f825d	delete	Analyzed-by	Andres Freund <andres@anarazel.de>
+dc7c77f825d	append	Diagnosed-by	Andres Freund <andres@anarazel.de>
+
+# "Analyzed-by: Michael Paquier <michael@paquier.xyz>", one tag per person.
+8e0d32a4a1b	delete	Analyzed-by	Michael Paquier <michael@paquier.xyz>
+8e0d32a4a1b	append	Diagnosed-by	Michael Paquier <michael@paquier.xyz>

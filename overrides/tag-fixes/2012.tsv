@@ -1,0 +1,26 @@
+# Tag fixes for 2012 commits: tags that extract-commits.py misreads or
+# misses, and authors credited only in prose.  Rows are in commit order,
+# each preceded by a comment.  See README.md for what each verb does.
+hash	verb	tag	value
+
+# "Reviewer: Josh Kupershmidt", one tag per person.
+b2e431a4db8	delete	Reviewer	Josh Kupershmidt
+b2e431a4db8	append	Reviewed-by	Josh Kupershmidt
+
+# Was "Author: KaiGai Kohei, slightly revised by me".
+f4c4335a4aa	replace	Author	KaiGai Kohei
+f4c4335a4aa	append	Co-authored-by	Alvaro Herrera (slightly revised)
+
+# "Authors: Alvaro Herrera, Dimitri Fontaine", one tag per person.
+04f28bdb847	delete	Authors	Alvaro Herrera, Dimitri Fontaine
+04f28bdb847	insert	Author	Alvaro Herrera
+04f28bdb847	insert	Author	Dimitri Fontaine
+
+# "Reviewed by: KaiGai Kohei, Markus Wanner, Andres Freund,", one tag per person.
+da07a1e8565	delete	Reviewed by	KaiGai Kohei, Markus Wanner, Andres Freund,
+da07a1e8565	append	Reviewed-by	KaiGai Kohei
+da07a1e8565	append	Reviewed-by	Markus Wanner
+da07a1e8565	append	Reviewed-by	Andres Freund
+da07a1e8565	append	Reviewed-by	Heikki Linnakangas
+da07a1e8565	append	Reviewed-by	Simon Riggs
+da07a1e8565	append	Reviewed-by	Amit Kapila
