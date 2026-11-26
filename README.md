@@ -407,7 +407,8 @@ in the tag fixes, not here.
 
 `python3 check-people.py` reports rows that don't parse or whose
 identifier doesn't occur in the data, identifiers pinned to two people,
-and person tag values that identify no one. With `--review` it also lists
+person tag values that identify no one, and anyone named twice in one
+tag of a commit. With `--review` it also lists
 pairs of people whose names are near-matches, like `Masahiko Sawada` and
 `Masahiko Sawasa`, to merge or keep apart.
 

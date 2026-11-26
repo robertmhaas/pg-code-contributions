@@ -128,6 +128,12 @@ f1bebef60ec	append	Co-authored-by	Thomas Munro (revived and documented)
 6401583863e	insert	Author	KaiGai Kohei
 6401583863e	append	Reported-by	KaiGai Kohei
 
+# "Reviewed-by: Kyotaro Horiguchi, Petr Jelínek, Masahiko Sawada, Oleksii" continues on the next, unindented line; one tag per person.
+ea92368cd1d	replace	Reviewed-by	Kyotaro Horiguchi
+ea92368cd1d	replace	Reviewed-by	Petr Jelínek
+ea92368cd1d	replace	Reviewed-by	Masahiko Sawada
+ea92368cd1d	replace	Reviewed-by	Oleksii Kliukin
+
 # "David Rowley. with fragments taken from a patch by Thomas Munro."
 711bab1e4d1	insert	Author	David Rowley
 711bab1e4d1	insert	Author	Thomas Munro
@@ -208,10 +214,11 @@ ab5fcf2b04f	append	Reported-by	Petr Fedorov
 
 # "Authors: Surafel Temesgen and David Rowley. Lightly edited by Álvaro."
 # "Authors: Surafel Temesgen and David Rowley.  Lightly edited by Álvaro.", one tag per person.
+# "Álvaro" is the committer, Álvaro Herrera.
 7e413a0f82c	insert	Author	Surafel Temesgen
 7e413a0f82c	delete	Authors	Surafel Temesgen and David Rowley.  Lightly edited by Álvaro.
 7e413a0f82c	append	Author	David Rowley
-7e413a0f82c	append	Co-authored-by	Álvaro (lightly edited)
+7e413a0f82c	append	Co-authored-by	Álvaro Herrera (lightly edited)
 
 # "Authors: Pavel Stehule, Markus Winand, Chapman Flack"
 # "Authors: Pavel Stehule, Markus Winand, Chapman Flack", one tag per person.
@@ -224,8 +231,9 @@ ab5fcf2b04f	append	Reported-by	Petr Fedorov
 27aaf6eff49	insert	Author	John Naylor
 
 # Was "Author: Pavel Stehule, light editing by Álvaro.".
+# "Álvaro" is the committer, Álvaro Herrera.
 2e616dee9e6	replace	Author	Pavel Stehule
-2e616dee9e6	append	Co-authored-by	Álvaro (light editing)
+2e616dee9e6	append	Co-authored-by	Álvaro Herrera (light editing)
 
 # "Reviewed by: Magnus Hagander, Thomas Munro", one tag per person.
 0516c61b756	delete	Reviewed by	Magnus Hagander, Thomas Munro
@@ -244,13 +252,13 @@ fc84c05acd1	append	Author	David Rowley
 
 # "Patch by: "Kuroda, Hayato" <kuroda.hayato@jp.fujitsu.com>."
 # "Patch by: "Kuroda, Hayato" <kuroda.hayato@jp.fujitsu.com>", one tag per person.
-98bdaab0d91	insert	Author	Kuroda, Hayato
+# The same person was in Author twice.
 98bdaab0d91	insert	Author	"Kuroda, Hayato" <kuroda.hayato@jp.fujitsu.com>
 98bdaab0d91	delete	Patch by	"Kuroda, Hayato" <kuroda.hayato@jp.fujitsu.com>
 
 # "Patch by: "Wu, Fei" <wufei.fnst@cn.fujitsu.com>."
 # "Patch by: "Wu, Fei" <wufei.fnst@cn.fujitsu.com>", one tag per person.
-08cecfaf60c	insert	Author	Wu, Fei
+# The same person was in Author twice.
 08cecfaf60c	insert	Author	"Wu, Fei" <wufei.fnst@cn.fujitsu.com>
 08cecfaf60c	delete	Patch by	"Wu, Fei" <wufei.fnst@cn.fujitsu.com>
 
@@ -469,6 +477,15 @@ a96c41feec6	append	Tested-by	Robert Haas
 959d00e9dbe	append	Reviewed-by	Julien Rouhaud
 959d00e9dbe	append	Reviewed-by	Antonin Houska
 
+# "Reviewed-by: Fabien Coelho, Robert Haas, Kyotaro Horiguchi, Kirk" continues on the next, unindented line; one tag per person.
+249d6499961	replace	Reviewed-by	Fabien Coelho
+249d6499961	replace	Reviewed-by	Robert Haas
+249d6499961	replace	Reviewed-by	Kyotaro Horiguchi
+249d6499961	replace	Reviewed-by	Kirk Jamison
+249d6499961	replace	Reviewed-by	Mikalai Keida
+249d6499961	replace	Reviewed-by	Takayuki Tsunakawa
+249d6499961	replace	Reviewed-by	Andrei Yahorau
+
 # "Hadi Moshayedi, Tom Lane, Andres Freund."
 46e3442c9ec	insert	Author	Hadi Moshayedi
 46e3442c9ec	insert	Author	Tom Lane
@@ -566,6 +583,12 @@ e03ff739695	insert	Author	Tom Lane
 # "Peifeng Qiu."
 34ff542a71f	insert	Author	Peifeng Qiu
 
+# "Reviewed-by: Daniel Gustafsson, Álvaro Herrera, Tom Lane, Michael" continues on the next, unindented line; one tag per person.
+e51bad8fb4c	replace	Reviewed-by	Daniel Gustafsson
+e51bad8fb4c	replace	Reviewed-by	Álvaro Herrera
+e51bad8fb4c	replace	Reviewed-by	Tom Lane
+e51bad8fb4c	replace	Reviewed-by	Michael Paquier
+
 # "Patch by Anastasia Lubennikova, with some changes by me to make it work correctly also when the internal page split also causes the "grandparent" to be split."
 22251686f07	insert	Author	Anastasia Lubennikova
 22251686f07	append	Co-authored-by	Heikki Linnakangas (changes)
@@ -623,6 +646,11 @@ aa087ec64f7	append	Co-authored-by	Tomas Vondra (improvements)
 
 # "Justin Pryzby."
 145b18688c0	insert	Author	Justin Pryzby
+
+# "Reviewed-by: Andrew Dunstan, Juan José Santamaría Flecha, Michael" continues on the next, unindented line; one tag per person.
+2b1394fc2b5	replace	Reviewed-by	Andrew Dunstan
+2b1394fc2b5	replace	Reviewed-by	Juan José Santamaría Flecha
+2b1394fc2b5	replace	Reviewed-by	Michael Paquier
 
 # "David Fetter, reviewed by Fabien Coelho and Rafia Sabih."
 9a2ea618323	insert	Author	David Fetter
@@ -719,11 +747,12 @@ e0f5048851f	append	Reported-by	Ivan Panchenko
 1169fcf129f	append	Co-authored-by	Heikki Linnakangas (test case and some additional changes to the fix)
 
 # "Reviewers: Shawn Wang, Thibaut Madeleine, Yoshikazu Imai, Kyotaro", one tag per person.
+# "Kyotaro" continues on the next line as "Horiguchi".
 4e85642d935	delete	Reviewers	Shawn Wang, Thibaut Madeleine, Yoshikazu Imai, Kyotaro
 4e85642d935	append	Reviewed-by	Shawn Wang
 4e85642d935	append	Reviewed-by	Thibaut Madeleine
 4e85642d935	append	Reviewed-by	Yoshikazu Imai
-4e85642d935	append	Reviewed-by	Kyotaro
+4e85642d935	append	Reviewed-by	Kyotaro Horiguchi
 
 # Was "Author: Amit Langote.  I (Álvaro) again mangled the patch somewhat.".
 815ef2f568c	replace	Author	Amit Langote

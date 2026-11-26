@@ -1551,9 +1551,10 @@ e472ce9624e	append	Reviewed-by	Andres Freund
 e472ce9624e	append	Tested-by	Thomas Munro
 
 # "Amit Kapila, tweaked by me per Amit's analysis."
+# "Amit" is Amit Kapila, named earlier in the sentence.
 12f862099d2	insert	Author	Amit Kapila
 12f862099d2	append	Co-authored-by	Robert Haas (tweaked)
-12f862099d2	append	Diagnosed-by	Amit
+12f862099d2	append	Diagnosed-by	Amit Kapila
 
 # "Michael Paquier."
 0b0baf26211	insert	Author	Michael Paquier
@@ -1872,6 +1873,9 @@ f9d747a4e90	insert	Author	Emre Hasegeli
 # "Alexander Lakhin <a.lakhin@postgrespro.ru>, with some additional tweaking by me."
 e8306745e35	insert	Author	Alexander Lakhin <a.lakhin@postgrespro.ru>
 e8306745e35	append	Co-authored-by	Peter Eisentraut (tweaking)
+
+# The Reported-by link is to a message from Peter Eisentraut.
+5285c5e873d	replace	Reported-by	Peter Eisentraut
 
 # "Oskari Saarenmaa, with some further tweaking by me."
 8299471c37f	insert	Author	Oskari Saarenmaa
@@ -2825,9 +2829,8 @@ e13029a5ce3	append	Co-authored-by	Robert Haas (assorted changes)
 cd510f04137	insert	Author	Amit Langote
 
 # "Patch by Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>."
-4032ef18d06	insert	Author	Tsunakawa, Takayuki
-4032ef18d06	insert	Author	Tsunakawa
-4032ef18d06	insert	Author	Takayuki <tsunakawa.takay@jp.fujitsu.com>
+# "Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>" is one person, not three.
+4032ef18d06	insert	Author	Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>
 
 # "Amit Langote. Most of this reported by Álvaro Herrera."
 3ee80672847	insert	Author	Amit Langote

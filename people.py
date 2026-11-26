@@ -141,11 +141,11 @@ def split_value(value):
     """
     Return [(text, name, address)] for the people in a tag value.  Usually
     there's one, but a value can be a list, as in "Jane Doe and John Roe".
-    Separators inside glosses and addresses don't count, and if the only
+    Separators inside glosses, addresses and quotes don't count, and if the only
     separators are commas and there's an address, as in "Wong, Yi Wen
     <yw@example.com>", it takes two full names to make a list.
     """
-    masked = re.sub(r'\([^()]*\)|<[^<>]*>', lambda m: 'x' * len(m.group()), value)
+    masked = re.sub(r'\([^()]*\)|<[^<>]*>|"[^"]*"', lambda m: 'x' * len(m.group()), value)
     masked = ADDRESS.sub(lambda m: 'x' * len(m.group()), masked)
     parts, separators, pos = [], [], 0
     for m in LIST_SEPARATOR.finditer(masked):

@@ -6,6 +6,16 @@ hash	verb	tag	value
 # Repeated key: "Author: Author:".
 1887d822f14	replace	Author	Jelte Fennema-Nio <postgres@jeltef.nl>
 
+# The same person is in Reviewed-by twice.
+2a525cc97e1	replace	Reviewed-by	Fujii Masao <masao.fujii@oss.nttdata.com>
+2a525cc97e1	replace	Reviewed-by	Jim Jones <jim.jones@uni-muenster.de>
+2a525cc97e1	replace	Reviewed-by	"David G. Johnston" <david.g.johnston@gmail.com>
+2a525cc97e1	replace	Reviewed-by	Yugo NAGATA <nagata@sraoss.co.jp>
+2a525cc97e1	replace	Reviewed-by	Masahiko Sawada <sawada.mshk@gmail.com>
+2a525cc97e1	replace	Reviewed-by	Atsushi Torikoshi <torikoshia@oss.nttdata.com>
+2a525cc97e1	replace	Reviewed-by	Matheus Alcantara <matheusssilv97@gmail.com>
+2a525cc97e1	replace	Reviewed-by	Peter Eisentraut <peter@eisentraut.org>
+
 # "Analyzed-by: Alexander Lakhin <exclusion@gmail.com>", one tag per person.
 138592d1b06	delete	Analyzed-by	Alexander Lakhin <exclusion@gmail.com>
 138592d1b06	append	Diagnosed-by	Alexander Lakhin <exclusion@gmail.com>
@@ -46,6 +56,9 @@ b1901e2895e	append	Diagnosed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
 
 # Space in the key: "Backpatch through:".
 10911fde088	append	Backpatch-through	17
+
+# "Reported-by: Phil" is Phil Gibbins, from the doc comment form.
+85df8c5bc7f	replace	Reported-by	Phil Gibbins
 
 # "Analyzed-by: Thom Brown <thom@linux.com> (using claude)", one tag per person.
 8767a10cb8c	delete	Analyzed-by	Thom Brown <thom@linux.com> (using claude)

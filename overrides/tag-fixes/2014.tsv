@@ -34,10 +34,11 @@ f41872d0c12	append	Reviewed-by	Andres Freund
 f41872d0c12	append	Reviewed-by	Thom Brown
 
 # "Authors: Craig Ringer and Thomas Munro, tweaked by Álvaro", one tag per person.
+# "Álvaro" is the committer, Álvaro Herrera.
 1c9701cfe58	delete	Authors	Craig Ringer and Thomas Munro, tweaked by Álvaro
 1c9701cfe58	insert	Author	Craig Ringer
 1c9701cfe58	insert	Author	Thomas Munro
-1c9701cfe58	append	Co-authored-by	Álvaro (tweaked)
+1c9701cfe58	append	Co-authored-by	Álvaro Herrera (tweaked)
 
 # Was "Author: Sawada Masahiko, heavily editorialized by me.".
 # "Reviewed-By: Jeevan Chalke, Alvaro Herrera", one tag per person.
@@ -124,8 +125,9 @@ fdf81c9a6cf	append	Co-authored-by	Andres Freund (editing)
 
 # Was "Author: Adam Brightwell, minor tweaks by Álvaro".
 # "Reviewed by: Stephen Frost, Andres Freund, Álvaro Herrera", one tag per person.
+# "Álvaro" is the committer, Álvaro Herrera.
 1826987a46d	replace	Author	Adam Brightwell
-1826987a46d	append	Co-authored-by	Álvaro (minor tweaks)
+1826987a46d	append	Co-authored-by	Álvaro Herrera (minor tweaks)
 1826987a46d	delete	Reviewed by	Stephen Frost, Andres Freund, Álvaro Herrera
 1826987a46d	append	Reviewed-by	Stephen Frost
 1826987a46d	append	Reviewed-by	Andres Freund

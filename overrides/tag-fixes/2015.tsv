@@ -53,8 +53,9 @@ a0f5954af19	replace	Author	Josh Berkus
 
 # Was "Author: Michael Paquier. Some tweaks by Álvaro".
 # "Reviewed by: Robert Haas, Stephen Frost, Álvaro Herrera", one tag per person.
+# "Álvaro" is the committer, Álvaro Herrera.
 0d831389749	replace	Author	Michael Paquier
-0d831389749	append	Co-authored-by	Álvaro (tweaks)
+0d831389749	append	Co-authored-by	Álvaro Herrera (tweaks)
 0d831389749	delete	Reviewed by	Robert Haas, Stephen Frost, Álvaro Herrera
 0d831389749	append	Reviewed-by	Robert Haas
 0d831389749	append	Reviewed-by	Stephen Frost
@@ -152,8 +153,9 @@ b69bf30b9bf	insert	Author	Thomas Munro
 
 # Was "Author: Emre Hasegeli, tweaked by Álvaro".
 # "Review: Andreas Karlsson", one tag per person.
+# "Álvaro" is the committer, Álvaro Herrera.
 db5f98ab4fa	replace	Author	Emre Hasegeli
-db5f98ab4fa	append	Co-authored-by	Álvaro (tweaked)
+db5f98ab4fa	append	Co-authored-by	Álvaro Herrera (tweaked)
 db5f98ab4fa	delete	Review	Andreas Karlsson
 db5f98ab4fa	append	Reviewed-by	Andreas Karlsson
 

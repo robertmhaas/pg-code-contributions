@@ -86,6 +86,9 @@ a6cf3df4ebd	insert	Author	Joel Jacobson
 60661bbf2dc	append	Reported-by	David Geier
 60661bbf2dc	append	Co-authored-by	Tom Lane (commentary)
 
+# "Reported-by: Andrus" is Andrus Moor.
+21378e1fefe	replace	Reported-by	Andrus Moor
+
 # "Joel Jacobson, additional editing by me."
 951862eda57	insert	Author	Joel Jacobson
 951862eda57	append	Co-authored-by	Tom Lane (editing)
@@ -171,6 +174,12 @@ ed290896335	insert	Author	Greg Nancarrow
 ed290896335	append	Reported-by	Greg Nancarrow
 ed290896335	append	Co-authored-by	Tom Lane (cosmetic changes)
 
+# "Reviewed-by: Amit Kapila, Euler Taveira, Petr Jelinek, and Alvaro" continues on the next, unindented line; one tag per person.
+cd142e032eb	replace	Reviewed-by	Amit Kapila
+cd142e032eb	replace	Reviewed-by	Euler Taveira
+cd142e032eb	replace	Reviewed-by	Petr Jelinek
+cd142e032eb	replace	Reviewed-by	Alvaro Herrera
+
 # "Kyotaro Horiguchi, per gripe from Shenhao Wang. docs changes mostly by me."
 62535cae972	insert	Author	Kyotaro Horiguchi
 62535cae972	append	Reported-by	Shenhao Wang
@@ -220,11 +229,24 @@ ee28cacf619	append	Reviewed-by	Peter Smith
 0a687c8f103	insert	Author	Vik Fearing
 0a687c8f103	append	Reviewed-by	Dian Fay
 
+# "Reviewed-by: Justin Pryzby, Bharath Rupireddy, Josef Šimánek, Tomas" continues on the next, unindented line; one tag per person.
+8a8f4d8ede2	replace	Reviewed-by	Justin Pryzby
+8a8f4d8ede2	replace	Reviewed-by	Bharath Rupireddy
+8a8f4d8ede2	replace	Reviewed-by	Josef Šimánek
+8a8f4d8ede2	replace	Reviewed-by	Tomas Vondra
+
 # "Justin Pryzby."
 112d411fbeb	insert	Author	Justin Pryzby
 
 # "KaiGai Kohei."
 1265a9c8f87	insert	Author	KaiGai Kohei
+
+# "Reviewed-by: Michael Paquier, Justin Pryzby, Bharath Rupireddy, Josef" continues on the next, unindented line; one tag per person.
+9d2d4570092	replace	Reviewed-by	Michael Paquier
+9d2d4570092	replace	Reviewed-by	Justin Pryzby
+9d2d4570092	replace	Reviewed-by	Bharath Rupireddy
+9d2d4570092	replace	Reviewed-by	Josef Šimánek
+9d2d4570092	replace	Reviewed-by	Tomas Vondra
 
 # "Reviewed-By: Japin Li, Hayato Kuroda, Masahiko Sawada, David Johnston, Fujii Masao", one tag per person.
 ff99918c625	delete	Reviewed-By	Japin Li, Hayato Kuroda, Masahiko Sawada, David Johnston, Fujii Masao
@@ -255,9 +277,10 @@ f52c5d6749a	append	Co-authored-by	Tom Lane (minor tweaks)
 f52c5d6749a	append	Reported-by	Pavel Boev (bug #16913)
 
 # "Laurenz Albe, per gripe from Jacob Champion. based on fix suggestions from Jacob and myself."
+# "Jacob" is Jacob Champion, named earlier in the sentence.
 48d67fd8979	insert	Author	Laurenz Albe
 48d67fd8979	append	Reported-by	Jacob Champion
-48d67fd8979	append	Suggested-by	Jacob
+48d67fd8979	append	Suggested-by	Jacob Champion
 48d67fd8979	append	Suggested-by	Tom Lane
 
 # "Mark Dilger, reviewed by Peter Geoghegan and by me."
@@ -281,6 +304,12 @@ f371a4cdba6	insert	Author	Mark Dilger
 146cb3889c3	insert	Author	Juan José Santamaría Flecha
 146cb3889c3	append	Reported-by	Regina Obe
 146cb3889c3	append	Reported-by	Heath Lord
+
+# "Reviewed-by: Michael Paquier, Justin Pryzby, Bharath Rupireddy, Tomas" continues on the next, unindented line; one tag per person.
+15639d5e8f6	replace	Reviewed-by	Michael Paquier
+15639d5e8f6	replace	Reviewed-by	Justin Pryzby
+15639d5e8f6	replace	Reviewed-by	Bharath Rupireddy
+15639d5e8f6	replace	Reviewed-by	Tomas Vondra
 
 # "Justin Pryzby and Tom Lane."
 1ea396362be	insert	Author	Justin Pryzby
@@ -328,6 +357,15 @@ aa25d1089ac	insert	Author	Tom Lane
 
 # "Dilip Kumar."
 fd1ac9a5489	insert	Author	Dilip Kumar
+
+# "Reported-by: Andrus, Guy Burgess, Yaroslav Pashinsky, Thomas Trenz": "Andrus" is
+# Andrus Moor; one tag per person.  "Extra thanks to Fujii Masao for pointing
+# out what looked like the culprit commit."
+909b449e00f	replace	Reported-by	Andrus Moor
+909b449e00f	replace	Reported-by	Guy Burgess
+909b449e00f	replace	Reported-by	Yaroslav Pashinsky
+909b449e00f	replace	Reported-by	Thomas Trenz
+909b449e00f	append	Diagnosed-by	Fujii Masao
 
 # "Justin Pryzby and Robert Haas."
 24f0e395ac5	insert	Author	Justin Pryzby

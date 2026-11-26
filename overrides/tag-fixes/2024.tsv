@@ -78,6 +78,13 @@ e2d5b3b9b64	append	Reviewed-by	Robert Haas
 # "Alexander Lakhin."
 237d01139b8	insert	Author	Alexander Lakhin
 
+# "Reviewed-by: Jelte Fennema-Nio, Robert Haas, Álvaro Herrera, Denis" continues on the next, unindented line; one tag per person.
+4794c2d3171	replace	Reviewed-by	Jelte Fennema-Nio
+4794c2d3171	replace	Reviewed-by	Robert Haas
+4794c2d3171	replace	Reviewed-by	Álvaro Herrera
+4794c2d3171	replace	Reviewed-by	Denis Laxalde
+4794c2d3171	replace	Reviewed-by	Michael Paquier
+
 # "Matthias van de Meent and Robert Haas."
 7b1dbf0a8d1	insert	Author	Matthias van de Meent
 7b1dbf0a8d1	insert	Author	Robert Haas
@@ -113,12 +120,34 @@ e313a611370	append	Reviewed-by	Robert Haas
 58447e31890	append	Co-authored-by	Tom Lane (editorialized a bit)
 
 # Was "Author: Michael Paquier, with doc suggestions from Ashutosh Bapat.".
+# "Reviewed-by: Ashutosh Bapat, Nathan Bossart, Álvaro Herrera, Dilip" continues on the next, unindented line; one tag per person.
 d86d20f0ba7	replace	Author	Michael Paquier
-d86d20f0ba7	append	Reviewed-by	Ashutosh Bapat (doc suggestions)
+d86d20f0ba7	replace	Reviewed-by	Ashutosh Bapat (doc suggestions)
+d86d20f0ba7	replace	Reviewed-by	Nathan Bossart
+d86d20f0ba7	replace	Reviewed-by	Álvaro Herrera
+d86d20f0ba7	replace	Reviewed-by	Dilip Kumar
+d86d20f0ba7	replace	Reviewed-by	Amul Sul
+d86d20f0ba7	replace	Reviewed-by	Nazir Bilal Yavuz
 
 # Was "Author: Michael Paquier, with comment fixes from Ashutosh Bapat.".
+# "Reviewed-by: Ashutosh Bapat, Nathan Bossart, Álvaro Herrera, Dilip" continues on the next, unindented line; one tag per person.
 49cd2b93d7d	replace	Author	Michael Paquier
 49cd2b93d7d	append	Co-authored-by	Ashutosh Bapat (comment fixes)
+49cd2b93d7d	replace	Reviewed-by	Ashutosh Bapat
+49cd2b93d7d	replace	Reviewed-by	Nathan Bossart
+49cd2b93d7d	replace	Reviewed-by	Álvaro Herrera
+49cd2b93d7d	replace	Reviewed-by	Dilip Kumar
+49cd2b93d7d	replace	Reviewed-by	Amul Sul
+49cd2b93d7d	replace	Reviewed-by	Nazir Bilal Yavuz
+
+# "Kuroda, Hayato" is one person in a list; one tag per person.
+c393308b69d	replace	Reviewed-by	Peter Smith
+c393308b69d	replace	Reviewed-by	Bertrand Drouvot
+c393308b69d	replace	Reviewed-by	Dilip Kumar
+c393308b69d	replace	Reviewed-by	Masahiko Sawada
+c393308b69d	replace	Reviewed-by	Nisha Moond
+c393308b69d	replace	Reviewed-by	Kuroda, Hayato
+c393308b69d	replace	Reviewed-by	Amit Kapila
 
 # "Jeevan Chalke, reviewed by Peter Eisentraut and Andrew Dunstan."
 66ea94e8e60	insert	Author	Jeevan Chalke
@@ -134,6 +163,15 @@ d86d20f0ba7	append	Reviewed-by	Ashutosh Bapat (doc suggestions)
 # "Melanie Plageman and Robert Haas."
 5eafacd2797	insert	Author	Melanie Plageman
 5eafacd2797	insert	Author	Robert Haas
+
+# "Kuroda, Hayato" is one person in a list; one tag per person.
+73292404370	replace	Reviewed-by	Peter Smith
+73292404370	replace	Reviewed-by	Bertrand Drouvot
+73292404370	replace	Reviewed-by	Dilip Kumar
+73292404370	replace	Reviewed-by	Masahiko Sawada
+73292404370	replace	Reviewed-by	Nisha Moond
+73292404370	replace	Reviewed-by	Kuroda, Hayato
+73292404370	replace	Reviewed-by	Amit Kapila
 
 # "Alexander Kuzmenkov."
 e4e63cd9863	insert	Author	Alexander Kuzmenkov
@@ -558,6 +596,12 @@ aa2d6b15d6d	append	Co-authored-by	Robert Haas (revised a bit)
 0e5c823806a	insert	Author	Jelte Fennema-Nio
 0e5c823806a	insert	Author	Tom Lane
 
+# "Reviewed-by: Ashutosh Bapat, Álvaro Herrera, Yugo Nagata, Michael" continues on the next, unindented line; one tag per person.
+c7cd2d6ed08	replace	Reviewed-by	Ashutosh Bapat
+c7cd2d6ed08	replace	Reviewed-by	Álvaro Herrera
+c7cd2d6ed08	replace	Reviewed-by	Yugo Nagata
+c7cd2d6ed08	replace	Reviewed-by	Michael Paquier
+
 # "Nazir Bilal Yavuz."
 c582b75851c	insert	Author	Nazir Bilal Yavuz
 
@@ -699,6 +743,12 @@ b7e3a52a877	insert	Author	Noah Misch
 94131cd53c1	insert	Author	Man Zeng
 94131cd53c1	insert	Author	Tom Lane
 
+# "Reviewed-by: Nathan Bossart, Daniel Gustafsson, Álvaro Herrera, Karina" continues on the next, unindented line; one tag per person.
+91f5a4a000e	replace	Reviewed-by	Nathan Bossart
+91f5a4a000e	replace	Reviewed-by	Daniel Gustafsson
+91f5a4a000e	replace	Reviewed-by	Álvaro Herrera
+91f5a4a000e	replace	Reviewed-by	Karina Litskevich
+
 # "Song Jinzhou, reviewed by Dean Rasheed and David Rowley."
 97173536ed4	insert	Author	Song Jinzhou
 97173536ed4	append	Reviewed-by	Dean Rasheed
@@ -729,6 +779,12 @@ c72ca3ddec1	insert	Author	Ryo Kanbayashi
 # "Sami Imseih, with cosmetic changes by me."
 7a80e381d16	insert	Author	Sami Imseih
 7a80e381d16	append	Co-authored-by	Tom Lane (cosmetic changes)
+
+# "Reviewed-by: Álvaro Herrera, Kyotaro Horiguchi, Michael Paquier, Nazir" continues on the next, unindented line; one tag per person.
+9aea73fc61d	replace	Reviewed-by	Álvaro Herrera
+9aea73fc61d	replace	Reviewed-by	Kyotaro Horiguchi
+9aea73fc61d	replace	Reviewed-by	Michael Paquier
+9aea73fc61d	replace	Reviewed-by	Nazir Bilal Yavuz
 
 # "Kirill Reshke. Reported by Alexander Kukushkin."
 ff90ee61450	insert	Author	Kirill Reshke

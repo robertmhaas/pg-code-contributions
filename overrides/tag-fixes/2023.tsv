@@ -527,8 +527,8 @@ f1889729dd3	append	Reviewed-by	Masahiko Sawada
 8aac9759bb8	insert	Author	Tom Lane
 
 # "David G. Johnston and Tom Lane, per report from Curt Kolovson."
+# The same person was in Author twice, spelled two ways.
 137b131d6fb	insert	Author	David Johnston
-137b131d6fb	insert	Author	David G. Johnston
 137b131d6fb	insert	Author	Tom Lane
 137b131d6fb	append	Reported-by	Curt Kolovson
 
@@ -536,10 +536,22 @@ f1889729dd3	append	Reviewed-by	Masahiko Sawada
 d65ddaca93f	insert	Author	Pavel Luzanov
 d65ddaca93f	append	Reviewed-by	David Johnston
 
+# "Reviewed-by: Andres Freund, Kyotaro Horiguchi, Cary Huang, Michael" continues on the next, unindented line; one tag per person.
+47556a0013f	replace	Reviewed-by	Andres Freund
+47556a0013f	replace	Reviewed-by	Kyotaro Horiguchi
+47556a0013f	replace	Reviewed-by	Cary Huang
+47556a0013f	replace	Reviewed-by	Michael Paquier
+
 # "Report and fix by Richard Guo. cosmetic changes by me."
 3c90dcd0391	insert	Author	Richard Guo
 3c90dcd0391	append	Reported-by	Richard Guo
 3c90dcd0391	append	Co-authored-by	Tom Lane (cosmetic changes)
+
+# "Reviewed-by: Andres Freund, Michael Paquier, Tristan Partin, Bharath" continues on the next, unindented line; one tag per person.
+c9af0546530	replace	Reviewed-by	Andres Freund
+c9af0546530	replace	Reviewed-by	Michael Paquier
+c9af0546530	replace	Reviewed-by	Tristan Partin
+c9af0546530	replace	Reviewed-by	Bharath Rupireddy
 
 # "Alexander Lakhin, reviewed by Aleksander Alekseev."
 7c5c4e1c039	insert	Author	Alexander Lakhin
@@ -567,6 +579,12 @@ af720b4c50a	append	Co-authored-by	Michael Paquier (tweaks)
 9e9931d2bf4	append	Reviewed-by	Nishant Sharma
 9e9931d2bf4	append	Reviewed-by	Suraj Kharage
 9e9931d2bf4	append	Reviewed-by	Richard Guo
+
+# "Reviewed-by: Kyotaro Horiguchi, Masahiro Ikeda, Tom Lane, Michael" continues on the next, unindented line; one tag per person.
+1e68e43d3f0	replace	Reviewed-by	Kyotaro Horiguchi
+1e68e43d3f0	replace	Reviewed-by	Masahiro Ikeda
+1e68e43d3f0	replace	Reviewed-by	Tom Lane
+1e68e43d3f0	replace	Reviewed-by	Michael Paquier
 
 # "Analyzed-by: Will Mortensen, Jacob Speidel", one tag per person.
 2b8e5273e94	delete	Analyzed-by	Will Mortensen, Jacob Speidel
@@ -653,6 +671,13 @@ a70bce43fbc	append	Reviewed-by	Andres Freund
 2406c4e34cc	append	Reviewed-by	Hannu Krosing
 2406c4e34cc	append	Reviewed-by	Andres Freund
 
+# "Reviewed-by: Andres Freund, Amit Kapila, Fujii Masao, Tung Nguyen, Tomas" continues on the next, unindented line; one tag per person.
+173b56f1ef5	replace	Reviewed-by	Andres Freund
+173b56f1ef5	replace	Reviewed-by	Amit Kapila
+173b56f1ef5	replace	Reviewed-by	Fujii Masao
+173b56f1ef5	replace	Reviewed-by	Tung Nguyen
+173b56f1ef5	replace	Reviewed-by	Tomas Vondra
+
 # "Peter Smith."
 8483a54b7da	insert	Author	Peter Smith
 
@@ -660,10 +685,22 @@ a70bce43fbc	append	Reviewed-by	Andres Freund
 2b5154beab7	insert	Author	Tommy Pavlicek
 2b5154beab7	append	Reviewed-by	Tom Lane
 
+# "Author: Ekaterina Kiryanova, Elena Indrupskaya, Oleg Sibiryakov, Maxim" continues on the next, unindented line; one tag per person.
+40ebc41576e	replace	Author	Ekaterina Kiryanova
+40ebc41576e	replace	Author	Elena Indrupskaya
+40ebc41576e	replace	Author	Oleg Sibiryakov
+40ebc41576e	replace	Author	Maxim Yablokov
+
 # "Amit Langote and Tom Lane. Per bug #18147 from Hans Buschmann."
 387f9ed0a08	insert	Author	Amit Langote
 387f9ed0a08	insert	Author	Tom Lane
 387f9ed0a08	append	Reported-by	Hans Buschmann (bug #18147)
+
+# "Author: Ekaterina Kiryanova, Elena Indrupskaya, Oleg Sibiryakov, Maxim" continues on the next, unindented line; one tag per person.
+cccfa08c39e	replace	Author	Ekaterina Kiryanova
+cccfa08c39e	replace	Author	Elena Indrupskaya
+cccfa08c39e	replace	Author	Oleg Sibiryakov
+cccfa08c39e	replace	Author	Maxim Yablokov
 
 # "Joseph Koshakow, reviewed by Ashutosh Bapat and me."
 b2d55447a56	insert	Author	Joseph Koshakow

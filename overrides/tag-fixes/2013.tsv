@@ -23,12 +23,14 @@ hash	verb	tag	value
 765cbfdc926	append	Reviewed-by	Dimitri Fontaine
 
 # Was "Author: Tomas Vondra.  Some rework by Álvaro".
+# "Álvaro" is the committer, Álvaro Herrera.
 187492b6c2e	replace	Author	Tomas Vondra
-187492b6c2e	append	Co-authored-by	Álvaro (rework)
+187492b6c2e	append	Co-authored-by	Álvaro Herrera (rework)
 
 # Was "Author: Andres Freund, with many reworks by Álvaro".
+# "Álvaro" is the committer, Álvaro Herrera.
 639ed4e84b7	replace	Author	Andres Freund
-639ed4e84b7	append	Co-authored-by	Álvaro (reworks)
+639ed4e84b7	append	Co-authored-by	Álvaro Herrera (reworks)
 
 # "Based-on-patch-by: Jeff Janes <jeff.janes@gmail.com>", one tag per person.
 7dfd5cd21c0	delete	Based-on-patch-by	Jeff Janes <jeff.janes@gmail.com>

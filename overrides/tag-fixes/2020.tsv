@@ -128,6 +128,12 @@ f1f10a1ba9e	replace	Reviewed-by	Andres Freund, Kyotaro Horiguchi, Dagfinn Ilmari
 bf6cc19e347	insert	Author	Vik Fearing (discovery, code, testing)
 bf6cc19e347	insert	Author	Andrew Gierth (analysis, testcase)
 
+# "Reviewed-by: Sergei Kornilov, Guillaume Lelarge, Michael Paquier, Tomas" continues on the next, unindented line; one tag per person.
+b025f32e0b5	replace	Reviewed-by	Sergei Kornilov
+b025f32e0b5	replace	Reviewed-by	Guillaume Lelarge
+b025f32e0b5	replace	Reviewed-by	Michael Paquier
+b025f32e0b5	replace	Reviewed-by	Tomas Vondra
+
 # "Emre Hasegeli, with some kibitzing from me and Andres Freund."
 607f8ce74df	insert	Author	Emre Hasegeli
 607f8ce74df	append	Co-authored-by	Tom Lane (kibitzing)
@@ -202,8 +208,9 @@ b9c3de62cbc	insert	Author	Georgios Kokolatos
 8728b2c7035	append	Co-authored-by	Tom Lane (tweaked a bit)
 
 # Was "Author: Paul Jungwirth, minor edits by Álvaro".
+# "Álvaro" is the committer, Álvaro Herrera.
 40b3e2c201a	replace	Author	Paul Jungwirth
-40b3e2c201a	append	Co-authored-by	Álvaro (minor edits)
+40b3e2c201a	append	Co-authored-by	Álvaro Herrera (minor edits)
 
 # "Ildar Musin and Chris Travers. reviewed by Amit Langote and myself."
 cacef172237	insert	Author	Ildar Musin
@@ -258,6 +265,13 @@ cb2fd7eac28	append	Reviewed-by	Tom Lane (earlier designs)
 cb2fd7eac28	append	Reviewed-by	Fujii Masao (earlier designs)
 cb2fd7eac28	append	Reviewed-by	Simon Riggs (earlier designs)
 cb2fd7eac28	append	Reported-by	Martijn van Oosterhout
+
+# "Reviewed-by: Andrey Borodin, Andres Freund, Alvaro Herrera, Alexander" continues on the next, unindented line; one tag per person.
+e09ad07b21a	replace	Reviewed-by	Andrey Borodin
+e09ad07b21a	replace	Reviewed-by	Andres Freund
+e09ad07b21a	replace	Reviewed-by	Alvaro Herrera
+e09ad07b21a	replace	Reviewed-by	Alexander Korotkov
+e09ad07b21a	replace	Reviewed-by	Michael Paquier
 
 # "Andres Freund and Tom Lane."
 e3a87b4991c	insert	Author	Andres Freund
@@ -315,6 +329,13 @@ b0236508d35	append	Co-authored-by	Fujii Masao (revised)
 
 # "Credit goes to Dean Rasheed; I'm just doing the clerical work."
 fe3036527a1	insert	Author	Dean Rasheed
+
+# "Reviewed-by: Andrey Borodin, Andres Freund, Alvaro Herrera, Alexander" continues on the next, unindented line; one tag per person.
+a7e8ece41cf	replace	Reviewed-by	Andrey Borodin
+a7e8ece41cf	replace	Reviewed-by	Andres Freund
+a7e8ece41cf	replace	Reviewed-by	Alvaro Herrera
+a7e8ece41cf	replace	Reviewed-by	Alexander Korotkov
+a7e8ece41cf	replace	Reviewed-by	Michael Paquier
 
 # "Guancheng Luo, revised a bit by me."
 501b0187998	insert	Author	Guancheng Luo
@@ -955,6 +976,10 @@ a45272b25d6	append	Co-authored-by	Tom Lane (line() test)
 # Was "Author: Ian Barwick and me".
 2b4f3130382	replace	Author	Ian Barwick
 2b4f3130382	append	Co-authored-by	Heikki Linnakangas
+
+# The Reviewed-by and Discussion values are swapped.
+a6964bc1bb0	replace	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+a6964bc1bb0	replace	Discussion	https://www.postgresql.org/message-id/flat/3e3ccddb-41bd-ecd8-29fe-195e34d9886f%40enterprisedb.com
 
 # "Dmitry Dolgov, reviewed at various times by Tom Lane, Arthur Zakirov, Peter Eisentraut, Pavel Stehule."
 c7aba7c14ef	insert	Author	Dmitry Dolgov

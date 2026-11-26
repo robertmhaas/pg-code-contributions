@@ -67,6 +67,13 @@ c3879a7b4c8	append	Co-authored-by	Andrew Dunstan (slightly tweaked)
 # "Japin Li."
 89f059bdf52	insert	Author	Japin Li
 
+# "Reviewed-by: Robert Haas, Magnus Hagander, Álvaro Herrera, David" continues on the next, unindented line; one tag per person.
+5c649fe1533	replace	Reviewed-by	Robert Haas
+5c649fe1533	replace	Reviewed-by	Magnus Hagander
+5c649fe1533	replace	Reviewed-by	Álvaro Herrera
+5c649fe1533	replace	Reviewed-by	David G. Johnston
+5c649fe1533	replace	Reviewed-by	Georgios Kokolatos
+
 # "Analyzed-by: Alex Kingsborough", one tag per person.
 237d1f31724	delete	Analyzed-by	Alex Kingsborough
 237d1f31724	append	Diagnosed-by	Alex Kingsborough
@@ -293,7 +300,17 @@ ce95c543763	insert	Author	Andrei Zubkov
 ce95c543763	append	Co-authored-by	Tom Lane (tweaked a bit)
 
 # "Reviewed-by: Peter Eisentraut, Alvaro Herrera, Vignesh C, Ibrar Ahmed," continues on the next line.
-923def9a533	replace	Reviewed-by	Peter Eisentraut, Alvaro Herrera, Vignesh C, Ibrar Ahmed, Amit Kapila, Hou zj, Peter Smith, Wang wei, Tang, Shi yu
+# One tag per person; "Tang" is Haiying Tang (tanghy.fnst@fujitsu.com), who posted in the thread.
+923def9a533	replace	Reviewed-by	Peter Eisentraut
+923def9a533	replace	Reviewed-by	Alvaro Herrera
+923def9a533	replace	Reviewed-by	Vignesh C
+923def9a533	replace	Reviewed-by	Ibrar Ahmed
+923def9a533	replace	Reviewed-by	Amit Kapila
+923def9a533	replace	Reviewed-by	Hou zj
+923def9a533	replace	Reviewed-by	Peter Smith
+923def9a533	replace	Reviewed-by	Wang wei
+923def9a533	replace	Reviewed-by	Haiying Tang
+923def9a533	replace	Reviewed-by	Shi yu
 
 # "Nikita Glukhov."
 f79b803dcc9	insert	Author	Nikita Glukhov
@@ -669,9 +686,23 @@ b2d5b4c6e09	insert	Author	Kyotaro Horiguchi
 09c5acee8ef	append	Reviewed-by	Dilip Kumar
 09c5acee8ef	append	Reviewed-by	Robert Haas
 
+# "Reviewed-by: Nathan Bossart, Daniel Gustafsson, Robert Haas, Kyotaro" continues on the next, unindented line; one tag per person.
+08951a7c93c	replace	Reviewed-by	Nathan Bossart
+08951a7c93c	replace	Reviewed-by	Daniel Gustafsson
+08951a7c93c	replace	Reviewed-by	Robert Haas
+08951a7c93c	replace	Reviewed-by	Kyotaro Horiguchi
+08951a7c93c	replace	Reviewed-by	David G. Johnston
+08951a7c93c	replace	Reviewed-by	Przemysław Sztoch
+
 # "Kyotaro Horiguchi and Tom Lane."
 617d6914122	insert	Author	Kyotaro Horiguchi
 617d6914122	insert	Author	Tom Lane
+
+# "Reviewed-by: Juan José Santamaría Flecha, Tom Lane, Thomas Munro, Justin" continues on the next, unindented line; one tag per person.
+6203583b72b	replace	Reviewed-by	Juan José Santamaría Flecha
+6203583b72b	replace	Reviewed-by	Tom Lane
+6203583b72b	replace	Reviewed-by	Thomas Munro
+6203583b72b	replace	Reviewed-by	Justin Pryzby
 
 # "Kyotaro Horiguchi. Reviewed by Junwang Zhao and Aleksander Alekseev, with one addition by me."
 82785effc01	insert	Author	Kyotaro Horiguchi
@@ -694,6 +725,15 @@ ec1fe23afa9	insert	Author	David G. Johnston
 
 # "Reviewed-by: Ashutosh Bapat, Bernd Helmle, Álvaro Herrera, Cary Huang," continues on the next line.
 2cbc3c17a5c	replace	Reviewed-by	Ashutosh Bapat, Bernd Helmle, Álvaro Herrera, Cary Huang, Michael Paquier
+
+# "Reviewed-by: Mark Dilger, Andres Freund, Álvaro Herrera, Tom Lane, Japin" continues on the next, unindented line; one tag per person.
+171ab95f644	replace	Reviewed-by	Mark Dilger
+171ab95f644	replace	Reviewed-by	Andres Freund
+171ab95f644	replace	Reviewed-by	Álvaro Herrera
+171ab95f644	replace	Reviewed-by	Tom Lane
+171ab95f644	replace	Reviewed-by	Japin Li
+171ab95f644	replace	Reviewed-by	Michael Paquier
+171ab95f644	replace	Reviewed-by	Junwang Zhao
 
 # "Reviewed-By: Peter Smith, Amit Kapila, Dilip Kumar, Shi yu, Ashutosh Bapat, Hayato Kuroda", one tag per person.
 366283961ac	delete	Reviewed-By	Peter Smith, Amit Kapila, Dilip Kumar, Shi yu, Ashutosh Bapat, Hayato Kuroda
@@ -726,12 +766,19 @@ a45388d6e09	append	Co-authored-by	Andrew Dunstan (somewhat modified)
 70988b7b0a0	append	Reviewed-by	Masahiko Sawada
 70988b7b0a0	append	Reviewed-by	Tom Lane
 
+# "Reviewed-by: Andres Freund, Heikki Linnakangas, Michael Paquier, David" continues on the next, unindented line; one tag per person.
+ffd1b6bb6f8	replace	Reviewed-by	Andres Freund
+ffd1b6bb6f8	replace	Reviewed-by	Heikki Linnakangas
+ffd1b6bb6f8	replace	Reviewed-by	Michael Paquier
+ffd1b6bb6f8	replace	Reviewed-by	David Zhang
+
 # "Reviewed-By: Kyotaro Horiguchi, Amit Kapila, Michael Paquier, Peter", one tag per person.
+# "Peter" continues on the next line as "Smith".
 ce3049b0215	delete	Reviewed-By	Kyotaro Horiguchi, Amit Kapila, Michael Paquier, Peter
 ce3049b0215	append	Reviewed-by	Kyotaro Horiguchi
 ce3049b0215	append	Reviewed-by	Amit Kapila
 ce3049b0215	append	Reviewed-by	Michael Paquier
-ce3049b0215	append	Reviewed-by	Peter
+ce3049b0215	append	Reviewed-by	Peter Smith
 
 # "Thomas Munro. I added an explanatory comment."
 a2e97cb2b6f	insert	Author	Thomas Munro
@@ -764,8 +811,8 @@ d8e34fa7a18	append	Reviewed-by	Antonin Houska
 d8e34fa7a18	append	Reviewed-by	Tom Lane
 
 # "DongWook Lee."
+# The same person was in Author twice, spelled two ways.
 be39d889343	insert	Author	Dong Wook Lee
-be39d889343	insert	Author	DongWook Lee
 
 # "Matheus Alcantara, based on earlier work by Pavel Borisov."
 6a1f082abac	insert	Author	Matheus Alcantara
@@ -1071,8 +1118,8 @@ d7e39d72ca1	insert	Author	Nathan Bossart
 6291b2546ce	append	Reviewed-by	Julien Rouhaud
 
 # "Ian Barwick."
+# The same person was in Author twice, spelled two ways.
 422f86a82ed	insert	Author	Ian Lawrence Barwick
-422f86a82ed	insert	Author	Ian Barwick
 
 # "Reviewed-By: Alvaro Herrera, Tom Lane, Amit Kapila", one tag per person.
 5263c6b095c	delete	Reviewed-By	Alvaro Herrera, Tom Lane, Amit Kapila
@@ -1143,6 +1190,18 @@ b0b72c64a0c	insert	Author	Richard Guo
 # "Analyzed-by: Peter Eisentraut", one tag per person.
 d7744d50a53	delete	Analyzed-by	Peter Eisentraut
 d7744d50a53	append	Diagnosed-by	Peter Eisentraut
+
+# "Reviewed-by: Nathan Bossart, Andres Freund, Thomas Munro, Michael" continues on the next, unindented line; one tag per person.
+3bdbdf5d06f	replace	Reviewed-by	Nathan Bossart
+3bdbdf5d06f	replace	Reviewed-by	Andres Freund
+3bdbdf5d06f	replace	Reviewed-by	Thomas Munro
+3bdbdf5d06f	replace	Reviewed-by	Michael Paquier
+
+# "Reviewed-by: Nathan Bossart, Andres Freund, Thomas Munro, Michael" continues on the next, unindented line; one tag per person.
+28cc2976a9c	replace	Reviewed-by	Nathan Bossart
+28cc2976a9c	replace	Reviewed-by	Andres Freund
+28cc2976a9c	replace	Reviewed-by	Thomas Munro
+28cc2976a9c	replace	Reviewed-by	Michael Paquier
 
 # "Richard Guo and Tom Lane, per discussion of bug #17618 from Sindy Senorita."
 042c9091f0f	insert	Author	Richard Guo
@@ -1215,6 +1274,7 @@ f84ff0c6d4e	insert	Author	Tom Lane
 
 # "Nathan Bossart. Reviewed by: Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert Haas, Mark Dilger, Tom Lane, Corey Huinker, David G. Johnston, Michael Paquier."
 # "Reviewed by: Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert", one tag per person.
+# "Robert" continues on the next line as "Haas", who is already here.
 7b378237aa8	insert	Author	Nathan Bossart
 7b378237aa8	append	Reviewed-by	Bharath Rupireddy
 7b378237aa8	append	Reviewed-by	Kyotaro Horiguchi
@@ -1226,7 +1286,6 @@ f84ff0c6d4e	insert	Author	Tom Lane
 7b378237aa8	append	Reviewed-by	David G. Johnston
 7b378237aa8	append	Reviewed-by	Michael Paquier
 7b378237aa8	delete	Reviewed by	Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert
-7b378237aa8	append	Reviewed-by	Robert
 
 # "Nathan Bossart following a suggestion from Kyotaro Horiguchi."
 b7a5ef17cf7	insert	Author	Nathan Bossart
@@ -1238,6 +1297,7 @@ b7a5ef17cf7	append	Suggested-by	Kyotaro Horiguchi
 
 # "Nathan Bossart. Reviewed by: Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert Haas, Mark Dilger, Tom Lane, Corey Huinker, David G. Johnston, Michael Paquier."
 # "Reviewed by: Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert", one tag per person.
+# "Robert" continues on the next line as "Haas", who is already here.
 b5d6382496f	insert	Author	Nathan Bossart
 b5d6382496f	append	Reviewed-by	Bharath Rupireddy
 b5d6382496f	append	Reviewed-by	Kyotaro Horiguchi
@@ -1249,10 +1309,10 @@ b5d6382496f	append	Reviewed-by	Corey Huinker
 b5d6382496f	append	Reviewed-by	David G. Johnston
 b5d6382496f	append	Reviewed-by	Michael Paquier
 b5d6382496f	delete	Reviewed by	Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert
-b5d6382496f	append	Reviewed-by	Robert
 
 # "Nathan Bossart. Reviewed by: Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert Haas, Mark Dilger, Tom Lane, Corey Huinker, David G. Johnston, Michael Paquier."
 # "Reviewed by: Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert", one tag per person.
+# "Robert" continues on the next line as "Haas", who is already here.
 4441fc704d7	insert	Author	Nathan Bossart
 4441fc704d7	append	Reviewed-by	Bharath Rupireddy
 4441fc704d7	append	Reviewed-by	Kyotaro Horiguchi
@@ -1264,7 +1324,6 @@ b5d6382496f	append	Reviewed-by	Robert
 4441fc704d7	append	Reviewed-by	David G. Johnston
 4441fc704d7	append	Reviewed-by	Michael Paquier
 4441fc704d7	delete	Reviewed by	Bharath Rupireddy, Kyotaro Horiguchi, Stephen Frost, Robert
-4441fc704d7	append	Reviewed-by	Robert
 
 # "Simon Riggs and Michail Nikolaev, with help from Tom Lane and Andres Freund."
 8242752f9c1	insert	Author	Simon Riggs
@@ -1274,6 +1333,12 @@ b5d6382496f	append	Reviewed-by	Robert
 
 # "Richard Guo."
 e76913802c5	insert	Author	Richard Guo
+
+# "Reviewed-by: Álvaro Herrera, Kyotaro Horiguchi, Maxim Orlov, Michael" continues on the next, unindented line; one tag per person.
+71cb84ec69a	replace	Reviewed-by	Álvaro Herrera
+71cb84ec69a	replace	Reviewed-by	Kyotaro Horiguchi
+71cb84ec69a	replace	Reviewed-by	Maxim Orlov
+71cb84ec69a	replace	Reviewed-by	Michael Paquier
 
 # "Richard Guo."
 d69d01ba9d8	insert	Author	Richard Guo
@@ -1317,6 +1382,12 @@ c60c9badba9	insert	Author	Tom Lane
 
 # "Ted Yu."
 eb60eb08a95	insert	Author	Ted Yu
+
+# "Reviewed-by: Nathan Bossart, Kyotaro Horiguchi, Maxim Orlov, Michael" continues on the next, unindented line; one tag per person.
+cca18634892	replace	Reviewed-by	Nathan Bossart
+cca18634892	replace	Reviewed-by	Kyotaro Horiguchi
+cca18634892	replace	Reviewed-by	Maxim Orlov
+cca18634892	replace	Reviewed-by	Michael Paquier
 
 # "Justin Pryzby. Reviewed by Tom Lane."
 995a9fb14f6	insert	Author	Justin Pryzby

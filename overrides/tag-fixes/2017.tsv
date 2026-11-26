@@ -562,9 +562,9 @@ b4316928d57	append	Reported-by	Mithun Cy
 4c728f38297	append	Co-authored-by	Robert Haas (slightly revised)
 
 # "reported by Shinoda, Noriyoshi <noriyoshi.shinoda@hpe.com>. partial patch by Kyotaro HORIGUCHI <horiguchi.kyotaro@lab.ntt.co.jp>."
+# "Shinoda, Noriyoshi <noriyoshi.shinoda@hpe.com>" is one person, not two.
 c3368f9173c	insert	Author	Kyotaro HORIGUCHI <horiguchi.kyotaro@lab.ntt.co.jp>
-c3368f9173c	append	Reported-by	Shinoda
-c3368f9173c	append	Reported-by	Noriyoshi <noriyoshi.shinoda@hpe.com>
+c3368f9173c	append	Reported-by	Shinoda, Noriyoshi <noriyoshi.shinoda@hpe.com>
 
 # "Amit Langote, reviewed by David Fetter."
 5dbdb2f7992	insert	Author	Amit Langote
@@ -1124,8 +1124,11 @@ dc02c7bca4d	append	Reported-by	Mithun Cy
 232c5322134	insert	Author	Jon Nelson
 
 # Was "Author: Andrey Borodin with minor editorization by me".
+# "me" in "Reviewed-by: Jeff Davis, me" is the committer; one tag per person.
 218f51584d5	replace	Author	Andrey Borodin
 218f51584d5	append	Co-authored-by	Teodor Sigaev (minor editorization)
+218f51584d5	replace	Reviewed-by	Jeff Davis
+218f51584d5	replace	Reviewed-by	Teodor Sigaev
 
 # "Craig Ringer, reviewed by Simon Riggs and by me."
 ea42cc18c35	insert	Author	Craig Ringer
@@ -1144,8 +1147,9 @@ ea42cc18c35	append	Reviewed-by	Robert Haas
 857ee8e391f	append	Reviewed-by	Robert Haas
 
 # Was "Author: Tomas Vondra.  Some code rework by Álvaro.".
+# "Álvaro" is the committer, Álvaro Herrera.
 7b504eb282c	replace	Author	Tomas Vondra
-7b504eb282c	append	Co-authored-by	Álvaro (code rework)
+7b504eb282c	append	Co-authored-by	Álvaro Herrera (code rework)
 
 # "Rafia Sabih and Robert Haas, reviewed by Dilip Kumar and Amit Kapila."
 61c2e1a95f9	insert	Author	Rafia Sabih
@@ -1206,10 +1210,25 @@ a171f01501e	append	Co-authored-by	Robert Haas (adjusted)
 # "Amit Langote."
 d65561464f4	insert	Author	Amit Langote
 
+# "me" in "Reviewed-by: Andres Freund, Anastasia Lubennikova, Tels, me" is the committer; one tag per person.
+090010f2ec9	replace	Reviewed-by	Andres Freund
+090010f2ec9	replace	Reviewed-by	Anastasia Lubennikova
+090010f2ec9	replace	Reviewed-by	Tels
+090010f2ec9	replace	Reviewed-by	Teodor Sigaev
+
+# "me" in "Reviewed-by: me" is the committer; one tag per person.
+827d6f97794	replace	Reviewed-by	Teodor Sigaev
+
 # "Problem noticed, and code patch, by Tomas Vondra. Additional commentary by Álvaro."
+# "Álvaro" is the committer, Álvaro Herrera.
 1f171a1803c	insert	Author	Tomas Vondra
 1f171a1803c	append	Reported-by	Tomas Vondra
-1f171a1803c	append	Co-authored-by	Álvaro (commentary)
+1f171a1803c	append	Co-authored-by	Álvaro Herrera (commentary)
+
+# "me" in "Reviewed-by: Ashutosh Bapat, Takayuki Tsunakawa, me" is the committer; one tag per person.
+1b02be21f27	replace	Reviewed-by	Ashutosh Bapat
+1b02be21f27	replace	Reviewed-by	Takayuki Tsunakawa
+1b02be21f27	replace	Reviewed-by	Teodor Sigaev
 
 # "Patch by Ashutosh Sharma, reviewed by Amit Kapila, and tested by Jeff Janes."
 c4c51541e22	insert	Author	Ashutosh Sharma
@@ -1409,9 +1428,8 @@ c0a8ae7be39	append	Co-authored-by	Robert Haas (one overlooked comment fixed)
 3820c63da8d	insert	Author	Michael Paquier
 
 # "Patch by Kato, Sho <kato-sho@jp.fujitsu.com>."
-a6940bdcb9e	insert	Author	Kato, Sho
-a6940bdcb9e	insert	Author	Kato
-a6940bdcb9e	insert	Author	Sho <kato-sho@jp.fujitsu.com>
+# "Kato, Sho <kato-sho@jp.fujitsu.com>" is one person, not three.
+a6940bdcb9e	insert	Author	Kato, Sho <kato-sho@jp.fujitsu.com>
 
 # "Amit Langote."
 258cef12540	insert	Author	Amit Langote
@@ -1814,9 +1832,8 @@ c1abe6c786d	append	Reviewed-by	Andres Freund
 c1abe6c786d	append	Reviewed-by	Michael Paquier
 
 # "Changed by: Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>."
-0f33ee0e3b7	insert	Author	Tsunakawa, Takayuki
-0f33ee0e3b7	append	Co-authored-by	Tsunakawa (changed by)
-0f33ee0e3b7	append	Co-authored-by	Takayuki <tsunakawa.takay@jp.fujitsu.com> (changed by)
+# "Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>" is one person, the author.
+0f33ee0e3b7	insert	Author	Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>
 
 # "Amit Langote, per a complaint from me."
 2186b608b3c	insert	Author	Amit Langote
@@ -2676,6 +2693,13 @@ f49842d1ee3	append	Reviewed-by	Robert Haas
 f49842d1ee3	append	Tested-by	Robert Haas
 f49842d1ee3	append	Co-authored-by	Robert Haas (final adjustments)
 
+# "Álvaro" is the committer, Álvaro Herrera; one tag per person.
+a5736bf754c	replace	Diagnosed-by	Peter Geoghegan
+a5736bf754c	replace	Diagnosed-by	Michael Paquier
+a5736bf754c	replace	Diagnosed-by	Daniel Wood
+a5736bf754c	replace	Diagnosed-by	Yi Wen Wong
+a5736bf754c	replace	Diagnosed-by	Álvaro Herrera
+
 # "Ashutosh Bapat. I fixed a typo."
 45866c75507	insert	Author	Ashutosh Bapat
 45866c75507	append	Co-authored-by	Robert Haas (fixed a typo)
@@ -2734,6 +2758,9 @@ cf1238cd976	append	Reviewed-by	Peter Eisentraut
 # "Report by Tomas Vondra. Patch by Dilip Kumar."
 6393613b6a1	insert	Author	Dilip Kumar
 6393613b6a1	append	Reported-by	Tomas Vondra
+
+# "Author: Álvaro": the committer, Álvaro Herrera.
+60a1d96ed7b	replace	Author	Álvaro Herrera
 
 # "Thomas Munro, with minor editing by me. Per report from Hugo Mercier."
 7421f4b89a9	insert	Author	Thomas Munro
@@ -2874,8 +2901,8 @@ bd65e0c6248	insert	Author	jotpe@posteo.de
 9b9cb3c4534	insert	Author	Luke Lonergan
 
 # "Akenteva."
+# "Akenteva" was A. Akenteva a second time.
 9be95ef156e	insert	Author	A. Akenteva
-9be95ef156e	insert	Author	Akenteva
 
 # "Feike Steenbergen."
 6c3a7ba5bb0	insert	Author	Feike Steenbergen
@@ -2956,8 +2983,8 @@ cd8ce3a22c0	append	Reviewed-by	Aleksandr Parfenov
 4e5fe9ad19e	append	Co-authored-by	Robert Haas (slight comment tweak)
 
 # "Akenteva."
+# "Akenteva" was A. Akenteva a second time.
 164d6338785	insert	Author	A. Akenteva
-164d6338785	insert	Author	Akenteva
 
 # "Amit Kapila, reviewed and revised by me. Reviewing and testing from Kuntal Ghosh, Haribabu Kommi, and Tushar Ahuja."
 e89a71fb449	insert	Author	Amit Kapila
@@ -3142,8 +3169,9 @@ cd482f29515	insert	Author	Rushabh Lathia
 87c37e3291c	append	Co-authored-by	Robert Haas (final editing)
 
 # "Jeevan Chalke provided this patch ... Antonin reviewed the patch."
+# "Antonin" is Antonin Houska, named earlier in the message.
 95022278053	insert	Author	Jeevan Chalke
-95022278053	append	Reviewed-by	Antonin
+95022278053	append	Reviewed-by	Antonin Houska
 
 # "Ashutosh Bapat."
 35438e5763c	insert	Author	Ashutosh Bapat
@@ -3321,6 +3349,10 @@ ff963b393ca	delete	Authors	Nikita Glukhov, Alexander Korotkov with minor editori
 ff963b393ca	insert	Author	Nikita Glukhov
 ff963b393ca	insert	Author	Alexander Korotkov
 ff963b393ca	append	Co-authored-by	Teodor Sigaev (minor editorization)
+
+# "me" in "Reviewed-by: Ashutosh Sharma, me" is the committer; one tag per person.
+ad337c76b6f	replace	Reviewed-by	Ashutosh Sharma
+ad337c76b6f	replace	Reviewed-by	Teodor Sigaev
 
 # "Raúl Marín Rodríguez, reviewed by Fabien Coelho and Michael Paquier, with a minor fix by me."
 7a727c180aa	insert	Author	Raúl Marín Rodríguez

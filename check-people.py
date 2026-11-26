@@ -3,8 +3,8 @@
 Load the people layer and report anything that looks wrong.
 
 Reports pins that don't parse or name an identifier that never occurs,
-identifiers pinned to two people, and commit tag values naming people who
-can't be identified.  With --review, also lists pairs of people whose
+identifiers pinned to two people, commit tag values naming people who
+can't be identified, and people named twice in one tag of a commit.  With --review, also lists pairs of people whose
 names are near-matches, such as "Masahiko Sawada" and "Masahiko Sawasa",
 for checking by hand; pin a pair to one person to merge them, or each to
 its own to stop the suggestion.
@@ -42,6 +42,22 @@ def check_tags(data, p):
     for (status, text), hashes in sorted(bad.items(), key=lambda kv: (kv[0][0], -len(kv[1]))):
         more = f' and {len(hashes) - 3} more' if len(hashes) > 3 else ''
         problems.append(f'{status}: {text!r} in {", ".join(hashes[:3])}{more}')
+    return problems
+
+
+def check_duplicates(data, p):
+    """The same person named twice in one tag of a commit."""
+    problems = []
+    for c in data.commits.values():
+        named = collections.defaultdict(list)
+        for tag, value in c.tags:
+            if people.is_person_tag(tag):
+                for text, pid, status in p.resolve_value(value):
+                    if pid:
+                        named[tag.lower(), pid].append(text)
+        for (tag, pid), texts in named.items():
+            if len(texts) > 1:
+                problems.append(f'{c.hash}: {pid} is in {tag} {len(texts)} times: {texts}')
     return problems
 
 
@@ -109,7 +125,7 @@ def main():
         sys.exit(1)
     p = people.load(data=data)
 
-    problems = check_pins(p) + check_tags(data, p)
+    problems = check_pins(p) + check_tags(data, p) + check_duplicates(data, p)
     for problem in problems:
         print(problem, file=sys.stderr)
     if args.review:

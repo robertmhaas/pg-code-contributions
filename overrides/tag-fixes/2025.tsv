@@ -7,6 +7,14 @@ hash	verb	tag	value
 9b21f203dd8	delete	Diagnosys-by	Sami Imseih <samimseih@gmail.com>
 9b21f203dd8	append	Diagnosed-by	Sami Imseih <samimseih@gmail.com>
 
+# "Reviewed-by: Bertrand Drouvot, Nitin Jadhav, Amit Kapila, Michael" continues on the next, unindented line; one tag per person.
+a051e71e28a	replace	Reviewed-by	Bertrand Drouvot
+a051e71e28a	replace	Reviewed-by	Nitin Jadhav
+a051e71e28a	replace	Reviewed-by	Amit Kapila
+a051e71e28a	replace	Reviewed-by	Michael Paquier
+a051e71e28a	replace	Reviewed-by	Melanie Plageman
+a051e71e28a	replace	Reviewed-by	Bharath Rupireddy
+
 # "Diagnozed-by: Tender Wang <tndrwang@gmail.com>", one tag per person.
 # "Diagnozed-by: Dean Rasheed <dean.a.rasheed@gmail.com>", one tag per person.
 28317de723b	delete	Diagnozed-by	Tender Wang <tndrwang@gmail.com>
@@ -27,6 +35,9 @@ d1d83827ba4	replace	Author	Peter Smith <smithpb2250@gmail.com>
 # "Fix-suggested-by: Jacob Champion <jacob.champion@enterprisedb.com>", one tag per person.
 d98cefe1143	delete	Fix-suggested-by	Jacob Champion <jacob.champion@enterprisedb.com>
 d98cefe1143	append	Suggested-by	Jacob Champion <jacob.champion@enterprisedb.com> (fix)
+
+# The same person is in Reported-by twice, the second time as "Reported-By".
+ef03ea01fe4	delete	Reported-By	Shenhao Wang <wangsh.fnst@fujitsu.com>
 
 # Repeated key: "Author: Author:".
 36aed19fd99	replace	Author	Corey Huinker <corey.huinker@gmail.com>

@@ -113,7 +113,7 @@ e9f2703ab7b	append	Reported-by	Sean Johnston (bug #14890)
 
 # "Patch by: "Rader, David" <davidr@openscg.com>."
 # "Patch by: "Rader, David" <davidr@openscg.com>", one tag per person.
-649aeb123f7	insert	Author	Rader, David
+# The same person was in Author twice.
 649aeb123f7	insert	Author	"Rader, David" <davidr@openscg.com>
 649aeb123f7	delete	Patch by	"Rader, David" <davidr@openscg.com>
 
@@ -291,8 +291,8 @@ a2a22057617	append	Co-authored-by	Thomas Munro (further improvements)
 05d0f13f070	insert	Author	Thomas Munro
 
 # "Bug discovered independently by Álvaro Herrera and David Rowley. This patch is by Álvaro but owes something to David's proposed fix."
+# "Álvaro" was Álvaro Herrera a second time.
 3492a0af0bd	insert	Author	Álvaro Herrera
-3492a0af0bd	insert	Author	Álvaro
 3492a0af0bd	append	Reported-by	Álvaro Herrera
 3492a0af0bd	append	Reported-by	David Rowley
 
@@ -368,6 +368,10 @@ a26116c6cbf	append	Co-authored-by	Alvaro Herrera (revisions)
 
 # "David Rowley."
 524d64ea8e3	insert	Author	David Rowley
+
+# "Reported by: tushar": the Discussion message is from tushar <tushar.ahuja@enterprisedb.com>.
+6f1d723b635	delete	Reported by	tushar
+6f1d723b635	append	Reported-by	Tushar Ahuja <tushar.ahuja@enterprisedb.com>
 
 # "Jeevan Chalke, per a suggestion from David Rowley. Reviewed by Ashutosh Bapat. Some changes by me. The larger patch series of which this patch is a part was also reviewed and tested by Antonin Houska, Rajkumar Raghuwanshi, David Rowley, Dilip Kumar, Konstantin Knizhnik, Pascal Legrand, Rafia Sabih, and me."
 7d8ac9814bc	insert	Author	Jeevan Chalke
@@ -600,7 +604,7 @@ db2fc801f66	insert	Author	Patrick Krecker <patrick@judicata.com>
 84a3611cccf	insert	Author	Michael Paquier
 
 # "Patch by "Shinoda, Noriyoshi" <noriyoshi.shinoda@hpe.com>."
-e400840b1d9	insert	Author	Shinoda, Noriyoshi
+# The same person was in Author twice.
 e400840b1d9	insert	Author	"Shinoda, Noriyoshi" <noriyoshi.shinoda@hpe.com>
 
 # "Yugo Nagata and Tom Lane."
@@ -729,9 +733,8 @@ feb82545187	insert	Author	Daniel Gustafsson
 8694cc96b52	append	Reviewed-by	Masahiko Sawada
 
 # "based on patch by Bossart, Nathan <bossartn@amazon.com>."
-e22b27f0cb3	insert	Author	Bossart, Nathan
-e22b27f0cb3	append	Co-authored-by	Bossart (patch)
-e22b27f0cb3	append	Co-authored-by	Nathan <bossartn@amazon.com> (patch)
+# "Bossart, Nathan <bossartn@amazon.com>" is one person, the author.
+e22b27f0cb3	insert	Author	Bossart, Nathan <bossartn@amazon.com>
 
 # "Pavan Deolasee. Reviewed by Claudio Freire, Simon Riggs and Peter Geoghegan."
 2b272734353	insert	Author	Pavan Deolasee
@@ -748,6 +751,10 @@ e22b27f0cb3	append	Co-authored-by	Nathan <bossartn@amazon.com> (patch)
 3ad55863e93	append	Reviewed-by	Alexander Korotkov
 3ad55863e93	append	Reviewed-by	Andrey Borodin
 3ad55863e93	append	Reviewed-by	Teodor Sigaev
+
+# "Reviewed by: me": the committer.
+920a5e500a1	delete	Reviewed by	me
+920a5e500a1	append	Reviewed-by	Teodor Sigaev
 
 # "David Steel"
 44bd95846a5	insert	Author	David Steele
@@ -767,13 +774,18 @@ c2d4eb1b1fa	insert	Author	Peter Geoghegan
 c2d4eb1b1fa	append	Reported-by	Bernd Helmle
 c2d4eb1b1fa	append	Reviewed-by	Kyotaro Horiguchi
 
+# "me" in "Reviewed-by: Anastasia Lubennikova, Stephen Frost and me" is the committer; one tag per person.
+266b6acb312	replace	Reviewed-by	Anastasia Lubennikova
+266b6acb312	replace	Reviewed-by	Stephen Frost
+266b6acb312	replace	Reviewed-by	Fujii Masao
+
 # Was "Author: Andres Freund, with contributions by Thomas Munro".
 e6c039d13e1	replace	Author	Andres Freund
 e6c039d13e1	append	Co-authored-by	Thomas Munro
 
 # "Arthur Zakirov, confirmed by Thomas Munro."
+# The same person was in Author twice, spelled two ways.
 669820a3d9c	insert	Author	Artur Zakirov
-669820a3d9c	insert	Author	Arthur Zakirov
 669820a3d9c	append	Tested-by	Thomas Munro
 
 # Was "Author: Anastasia Lubennikova with editorization by Nikita Glukhov and me".
@@ -835,6 +847,10 @@ e5eb4fa8733	append	Reviewed-by	Anastasia Lubennikova
 # "Thomas Munro and Tom Lane."
 11002f8afa5	insert	Author	Thomas Munro
 11002f8afa5	insert	Author	Tom Lane
+
+# "me" in "Reviewed-by: Michael Paquier and me" is the committer; one tag per person.
+9a895462d94	replace	Reviewed-by	Michael Paquier
+9a895462d94	replace	Reviewed-by	Fujii Masao
 
 # "Reviewed-By: Michael Paquier and Andres Freund", one tag per person.
 d87510a524f	delete	Reviewed-By	Michael Paquier and Andres Freund
@@ -1481,6 +1497,12 @@ d08c3d5197f	append	Reported-by	Kuntal Ghosh
 8121ab88e7d	replace	Author	Amit Kapila
 8121ab88e7d	append	Suggested-by	Andrew Dunstan
 
+# "Author: Michael Paquier, Kyotaro Horiguchi, Pavan Deolasee, Álvaro" continues on the next, unindented line; one tag per person.
+3c64dcb1e35	replace	Author	Michael Paquier
+3c64dcb1e35	replace	Author	Kyotaro Horiguchi
+3c64dcb1e35	replace	Author	Pavan Deolasee
+3c64dcb1e35	replace	Author	Álvaro Herrera
+
 # "Takeshi Ideriha."
 8fb68aa2655	insert	Author	Takeshi Ideriha
 
@@ -1501,8 +1523,8 @@ d08c3d5197f	append	Reported-by	Kuntal Ghosh
 ecd6b4342ad	insert	Author	Tom Lane
 
 # "Jonathan S. Katz."
+# The same person was in Author twice, spelled two ways.
 11a3aeeb5e1	insert	Author	Jonathan Katz
-11a3aeeb5e1	insert	Author	Jonathan S. Katz
 
 # "David Rowley. Per report from RK Korlapati."
 1007b0a126c	insert	Author	David Rowley
@@ -1538,6 +1560,10 @@ b90d97e0814	append	Reported-by	Robert Haas
 # Was "Author: Daniel Gustafsson, me".
 60e3bd1d7f9	replace	Author	Daniel Gustafsson
 60e3bd1d7f9	append	Co-authored-by	Bruce Momjian
+
+# "me" in "Reviewed-by: Kyotaro Horiguchi, me" is the committer; one tag per person.
+a7dc63d904a	replace	Reviewed-by	Kyotaro Horiguchi
+a7dc63d904a	replace	Reviewed-by	Tomas Vondra
 
 # "Tom Dunstan and Andrew Dunstan. Reviewed by Daniel Gustafsson."
 2d36a5e9dab	insert	Author	Tom Dunstan
@@ -1836,6 +1862,12 @@ ec937d0805b	append	Co-authored-by	Tom Lane (changes)
 # "John Naylor."
 4766bcd9e29	insert	Author	John Naylor
 
+# "Reviewed-by: Nathan Bossart, Dmitry Dolgov, Andres Freund, Álvaro" continues on the next, unindented line; one tag per person.
+3be97b97ed3	replace	Reviewed-by	Nathan Bossart
+3be97b97ed3	replace	Reviewed-by	Dmitry Dolgov
+3be97b97ed3	replace	Reviewed-by	Andres Freund
+3be97b97ed3	replace	Reviewed-by	Álvaro Herrera
+
 # "Vik Fearing and Tom Lane."
 600b04d6b5e	insert	Author	Vik Fearing
 600b04d6b5e	insert	Author	Tom Lane
@@ -1931,6 +1963,12 @@ afc4a78a301	append	Reviewed-by	Bradley DeJong
 
 # "Jeff Janes."
 eeee62d8052	insert	Author	Jeff Janes
+
+# "Reviewed-by: Nathan Bossart, Andres Freund, Stephen Frost, Kyotaro" continues on the next, unindented line; one tag per person.
+6d8727f95e7	replace	Reviewed-by	Nathan Bossart
+6d8727f95e7	replace	Reviewed-by	Andres Freund
+6d8727f95e7	replace	Reviewed-by	Stephen Frost
+6d8727f95e7	replace	Reviewed-by	Kyotaro Horiguchi
 
 # "John Naylor."
 e28649a67f5	insert	Author	John Naylor
