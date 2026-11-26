@@ -1,0 +1,10 @@
+hash	kind	details
+9098ab9e327	mechanical	rule=format-subject
+6dfa40d69f1	mechanical	rule=format-subject
+3c9ae7300dc	mechanical	rule=format-subject
+c4fdebd926b	mechanical	rule=generated-files
+c30c1b87863	mechanical	rule=code-motion
+26e6991a2d7	mechanical	residual=52,rule=code-motion
+e5536e77a50	mechanical	residual=197,rule=code-motion
+fd84eb5e643	mechanical	rule=generated-files
+cbe99a97a83	mechanical	rule=generated-files

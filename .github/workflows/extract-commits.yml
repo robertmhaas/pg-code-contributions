@@ -9,10 +9,10 @@ on:
         description: Rewrite every year, not just changed ones
         type: boolean
         default: false
-  # A change to the extractor rewrites everything.
+  # A change to the extractor or classifier rewrites everything.
   push:
     branches: [main]
-    paths: [extract-commits.py]
+    paths: [extract-commits.py, classify-commits.py]
 
 concurrency:
   group: extract-commits
@@ -36,6 +36,9 @@ jobs:
         run: >-
           python3 extract-commits.py --repo ../postgres
           ${{ (github.event_name == 'push' || inputs.all) && '--all' || '' }}
+
+      - name: Classify
+        run: python3 classify-commits.py --repo ../postgres
 
       # Pushes made with GITHUB_TOKEN don't trigger workflows, so this
       # can't loop.

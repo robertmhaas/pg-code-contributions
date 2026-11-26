@@ -1,0 +1,8 @@
+# Corrections to data/line-adjustments/2023.tsv: commits the rules get
+# wrong.  Rows are in commit order, each preceded by a comment.  A row
+# replaces every generated row for its commit; "normal" cancels them.
+# See README.md.
+hash	kind	details
+
+# Imported pg_bsd_indent sources.
+4e831f4cee1	mechanical

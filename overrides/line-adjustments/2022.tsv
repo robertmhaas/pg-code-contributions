@@ -1,0 +1,29 @@
+# Corrections to data/line-adjustments/2022.tsv: commits the rules get
+# wrong.  Rows are in commit order, each preceded by a comment.  A row
+# replaces every generated row for its commit; "normal" cancels them.
+# See README.md.
+hash	kind	details
+
+# Updated Unicode tables.
+1091b48cd76	mechanical
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+05d4cbf9b6b	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+8caf96de0b7	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+4667d97ca62	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+99164b7ea6b	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+0aaa7cf6989	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+0222be13718	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
+
+# Reverted in "Revert 56-bit relfilenode change and follow-up commits."
+6af08272327	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28

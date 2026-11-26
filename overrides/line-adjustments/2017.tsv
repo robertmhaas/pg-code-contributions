@@ -1,0 +1,8 @@
+# Corrections to data/line-adjustments/2017.tsv: commits the rules get
+# wrong.  Rows are in commit order, each preceded by a comment.  A row
+# replaces every generated row for its commit; "normal" cancels them.
+# See README.md.
+hash	kind	details
+
+# Markup conversion: no more SGML empty tags.
+c29c578908d	mechanical

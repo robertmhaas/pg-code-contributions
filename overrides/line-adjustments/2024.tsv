@@ -1,0 +1,17 @@
+# Corrections to data/line-adjustments/2024.tsv: commits the rules get
+# wrong.  Rows are in commit order, each preceded by a comment.  A row
+# replaces every generated row for its commit; "normal" cancels them.
+# See README.md.
+hash	kind	details
+
+# Reverted in "Revert recent ill-advised test case changes."
+6bf5c42b554	revert	reverted-by=82023d47de9,revert-date=2024-04-19
+
+# Reverted in "Revert recent ill-advised test case changes."
+fa7036dd664	revert	reverted-by=82023d47de9,revert-date=2024-04-19
+
+# A rename.
+3c905698114	mechanical
+
+# Reverted in "Perl scripts: revert 43ce181059d".
+43ce181059d	revert	reverted-by=4632e5cf4bc,revert-date=2024-09-16

@@ -48,6 +48,69 @@ def check_tag_fixes(data):
     return problems
 
 
+def check_line_adjustments(data):
+    problems = []
+    order = {h: i for i, h in enumerate(data.commits)}
+    generated = {}
+    for a in data.line_adjustments:
+        if not a.override:
+            generated.setdefault(a.hash, a)
+            if a.hash not in data.commits or a.kind not in commitdata.LINE_ADJUSTMENT_KINDS:
+                problems.append(f'{a.where}: bad generated row for {a.hash}')
+    reverting = {a.details.get('reverted-by') for a in data.line_adjustments
+                 if not a.override and a.kind == 'revert'}
+
+    seen, previous = set(), None
+    for a in (a for a in data.line_adjustments if a.override):
+        commit = data.commits.get(a.hash)
+        if commit is None:
+            problems.append(f'{a.where}: unknown commit {a.hash}')
+            continue
+        if commit.year != a.year:
+            problems.append(f'{a.where}: {a.hash} is a {commit.year} commit, not {a.year}')
+        if previous and order[a.hash] < order[previous]:
+            problems.append(f'{a.where}: {a.hash} is older than {previous}; '
+                            f'adjustments must be in commit order')
+        previous = a.hash
+        if a.hash in seen:
+            problems.append(f'{a.where}: second override for {a.hash}')
+        seen.add(a.hash)
+        if a.kind not in commitdata.LINE_ADJUSTMENT_KINDS:
+            problems.append(f'{a.where}: unknown kind {a.kind!r}')
+            continue
+
+        allowed = {'normal': set(), 'mechanical': {'residual'},
+                   'revert': {'reverted-by', 'revert-date', 'residual'}}[a.kind]
+        for key in sorted(set(a.details) - allowed):
+            problems.append(f'{a.where}: {key}= does not belong on a {a.kind} row')
+        if 'residual' in a.details:
+            r = a.details['residual']
+            if not r.isdigit():
+                problems.append(f'{a.where}: residual {r!r} is not a number')
+            elif int(r) > commit.insertions:
+                problems.append(f'{a.where}: residual {r} is more than the '
+                                f'{commit.insertions} lines inserted')
+        if a.kind == 'revert':
+            by = a.details.get('reverted-by')
+            if not by:
+                problems.append(f'{a.where}: revert row without reverted-by=')
+            elif by not in data.commits:
+                problems.append(f'{a.where}: unknown reverting commit {by}')
+            elif order[by] <= order[a.hash]:
+                problems.append(f'{a.where}: {by} is not later than {a.hash}')
+            elif 'revert-date' in a.details and a.details['revert-date'] != str(data.commits[by].utc_date):
+                problems.append(f'{a.where}: revert-date {a.details["revert-date"]} is not '
+                                f'{by}\'s date, {data.commits[by].utc_date}')
+
+        g = generated.get(a.hash)
+        same = {k: v for k, v in (g.details if g else {}).items() if k != 'rule'}
+        if g and g.kind == a.kind and same == a.details:
+            problems.append(f'{a.where}: same as the generated row ({g.where})')
+        if a.kind == 'normal' and not g and a.hash not in reverting:
+            problems.append(f'{a.where}: {a.hash} has no generated row to cancel')
+    return problems
+
+
 def main():
     try:
         data = commitdata.load()
@@ -55,13 +118,15 @@ def main():
         print(e, file=sys.stderr)
         sys.exit(1)
 
-    problems = check_tag_fixes(data)
+    problems = check_tag_fixes(data) + check_line_adjustments(data)
     for problem in problems:
         print(problem, file=sys.stderr)
 
     ntags = sum(len(c.tags) for c in data.commits.values())
+    noverrides = sum(1 for a in data.line_adjustments if a.override)
     print(f'{len(data.commits)} commits, {ntags} tags, '
-          f'{len(data.tag_fixes)} tag fixes, {len(problems)} problems',
+          f'{len(data.tag_fixes)} tag fixes, '
+          f'{noverrides} line-adjustment overrides, {len(problems)} problems',
           file=sys.stderr)
     sys.exit(1 if problems else 0)
 

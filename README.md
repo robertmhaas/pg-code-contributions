@@ -136,14 +136,94 @@ so tools keep working. `check-commits.py` reports the problems:
   the extraction now reads that line itself),
 - `replace` mixed with other verbs.
 
+### Line adjustments
+
+A commit's `insertions` overstate the effort behind it when the commit was
+later reverted, or when it's mechanical: translation updates, imported or
+generated files, pgindent runs, code moved from one file to another. Line
+adjustments say which commits those are. A commit's credited lines are its
+insertions after the adjustments.
+
+`data/line-adjustments/YYYY.tsv` is written by `classify-commits.py`:
+
+| column    | meaning                                                    |
+|-----------|------------------------------------------------------------|
+| `hash`    | the commit                                                 |
+| `kind`    | `revert` or `mechanical`                                   |
+| `details` | comma-separated `key=value` pairs, below                   |
+
+- `reverted-by=HASH`: the commit that reverts it.
+- `revert-date=YYYY-MM-DD`: that commit's date, in UTC like the year
+  files, so reverts can be counted in different ways, such as only within
+  the commit's own year.
+- `residual=N`: only part of the commit is discounted; `N` lines are still
+  credited. Absent when the whole commit is discounted.
+- `rule=NAME`: why the row was generated.
+
+The rules:
+
+- **Reverts**, at any size. A commit whose subject starts with "Revert"
+  or whose message says "This reverts commit" reverts:
+  - the commits it names by hash in a sentence about reverting
+    (`rule=revert-message`);
+  - the commits in a list of hashes, as in "The following commits are
+    reverted:" (`revert-list`);
+  - the commit whose subject it quotes, as in `Revert "..."`
+    (`revert-subject`);
+  - if it says it also reverts follow-up commits, the commits in between
+    that mention one of those by hash (`revert-follow-up`).
+
+  A revert counts as reverting another revert only if it says so plainly
+  ("This reverts commit X" or a quoted subject), not just because it
+  mentions one.
+- **Mechanical**, only for commits of 300 or more lines:
+  - the subject says it's pgindent, perltidy, a copyright update, a
+    translation update, or reformatting (`format-subject`);
+  - most of the lines are in generated or imported files, such as `.po`
+    files, Unicode tables, time zone data, Snowball, or `config.guess`
+    (`generated-files`; the residual is the lines in other files);
+  - at least 70% of the added lines match deleted lines (`code-motion`;
+    the residual is the rest);
+  - at least 97% of the added words match deleted words (`reformat`).
+
+  A residual under 50 lines isn't recorded.
+
+The rules are meant to be mostly right, not perfect.
+`overrides/line-adjustments/YYYY.tsv` corrects them, with `#` comments like
+the tag fixes. Its columns are the same, `details` may be left off, and its
+rows are in commit order. `revert-date` may be left off a revert row, but if
+it's there it must match the reverting commit. A row there replaces every generated row for its
+commit. Kind `normal` cancels them: the commit is credited in full.
+
+Credited lines are then:
+
+- a commit with no adjustment: its insertions;
+- a mechanical commit: its residual, or 0;
+- a reverted commit: its residual, or 0, unless the revert was itself
+  reverted;
+- a commit that reverts others: 0, unless it has a row of its own.
+
+`check-commits.py` also reports overrides for unknown commits, unknown
+kinds, residuals larger than the insertions, `reverted-by` commits that
+aren't later, overrides identical to the generated row, and `normal` rows
+that cancel nothing.
+
 ### Using the data
 
 ```python
 import commitdata
 data = commitdata.load()
 commit = data.commits['a8eeb22f171']
-commit.raw_tags   # [(tag, value)] as extracted
-commit.tags       # with tag fixes applied
+commit.raw_tags         # [(tag, value)] as extracted
+commit.tags             # with tag fixes applied
+commit.credited_lines   # insertions after line adjustments
+commit.adjustment       # the line adjustment in effect, if any
+commit.reverted_by      # the revert in effect, if any
+commit.reverted_at      # its date
+
+# credit that a later year's revert doesn't take away, as in the
+# yearly posts
+data.credited_lines(commit, reverts_until=datetime.date(commit.year, 12, 31))
 ```
 
 `commit.year` is the year of the file the commit came from. Run
@@ -153,8 +233,10 @@ commit.tags       # with tag fixes applied
 
 The `Extract commits` Action runs daily at 08:23 UTC. It also runs when
 `extract-commits.py` changes, and you can start it by hand. Each run clones
-PostgreSQL from the GitHub mirror, runs `extract-commits.py`, and commits
-`data/` if anything changed.
+PostgreSQL from the GitHub mirror, runs `extract-commits.py` and then
+`classify-commits.py`, and commits `data/` if anything changed.
+`classify-commits.py` rewrites every year each time, since a revert can
+reclassify a commit from an earlier year.
 
 A run rewrites only the years whose list of commits has changed, which in
 practice is the current year. The previous year can change too, around New

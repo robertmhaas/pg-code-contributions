@@ -1,0 +1,23 @@
+# Corrections to data/line-adjustments/2025.tsv: commits the rules get
+# wrong.  Rows are in commit order, each preceded by a comment.  A row
+# replaces every generated row for its commit; "normal" cancels them.
+# See README.md.
+hash	kind	details
+
+# Reformatted comments.
+3d17d7d7fb7	mechanical
+
+# Search and replace across format strings.
+a0ed19e0a9e	mechanical
+
+# Code moved to a new file.
+c1da7281060	mechanical
+
+# Code moved to a separate module.
+b0635bfda05	mechanical
+
+# The GUC tables are now generated from the .dat file.
+63599896545	mechanical	residual=210
+
+# A test file split in two.
+9dcf7f1172c	mechanical

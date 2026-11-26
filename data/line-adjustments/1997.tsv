@@ -1,0 +1,12 @@
+hash	kind	details
+7a14979f02f	mechanical	rule=reformat
+588ae64c440	mechanical	residual=232,rule=code-motion
+832c0a4ff1f	mechanical	residual=163,rule=code-motion
+8aefe097314	mechanical	rule=code-motion
+3267b4b767a	mechanical	rule=reformat
+fddc57bfcd0	mechanical	rule=format-subject
+1ccd423235a	mechanical	rule=format-subject
+319dbfa7364	mechanical	rule=format-subject
+c8bc4a4e63e	mechanical	rule=format-subject
+4a5b781d71b	mechanical	residual=1289,rule=code-motion
+f901971c86f	mechanical	residual=54,rule=code-motion
