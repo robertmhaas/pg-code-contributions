@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 b180144545c	Thomas G. Lockhart	1998-01-01 05:37:29 +0000	2	Include SPI module when cleaning.
 1ac6d462b20	Thomas G. Lockhart	1998-01-01 05:40:28 +0000	10	Bracket #define sigsetjmp() to avoid redefinition.  Linux starts out with  sigsetjmp as a macro, so gives compiler warning without bracketing.
 cc19151e3be	Thomas G. Lockhart	1998-01-01 05:42:40 +0000	9	Add substring function for text based on oracle_compat package but  closer to standard behavior. Substitute "text *" for "struct varlena *" in declarations.

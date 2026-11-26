@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 f82b3e58f88	Bruce Momjian	2010-12-31 20:42:29 -0500	6	In pg_upgrade, rename "CLUSTERNAME" to "CLUSTER_NAME".
 6e6bee987ff	Bruce Momjian	2011-01-01 12:06:36 -0500	181	In pg_upgrade, remove use of whichCluster, and just pass old/new cluster pointers, which simplifies the code.  This was not possible in 9.0 because everything was in a single nested struct, but is possible now.
 67c9e4442f2	Bruce Momjian	2011-01-01 12:28:48 -0500	20	Furter pg_upgrade optimizations to reduce function call argument count.

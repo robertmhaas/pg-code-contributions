@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 d747dc85aec	Tom Lane	2023-01-01 13:22:34 -0500	87	In plpgsql, don't preassign portal names to bound cursor variables.
 2ceea5adb02	Tom Lane	2023-01-01 14:16:07 -0500	25	Accept "+infinity" in date and timestamp[tz] input.
 72e0ff2677c	Peter Eisentraut	2023-01-02 08:48:21 +0100	57	doc: Re-order Table 28.2 "Collected Statistics Views"
@@ -1438,7 +1438,7 @@ f9f3bea1684	Peter Eisentraut	2023-08-24 08:24:53 +0200	1	pg_upgrade: Improve one
 9efcf442b9a	Peter Eisentraut	2023-08-24 10:25:51 +0200	3	Fix translation markers
 27449ccc4d3	Amit Kapila	2023-08-24 14:37:29 +0530	1	Fix the error message when failing to restore the snapshot.
 b575a26c66e	Daniel Gustafsson	2023-08-24 11:53:42 +0200	12	Add proargnames to multi-argument aggregate functions
-4f3514f201c	Thomas Munro	2023-08-24 22:25:49 +1200	8	Rename hook functions for debug_io_direct to match variable name.
+4f3514f201c	Peter Eisentraut	2023-08-24 22:25:49 +1200	8	Rename hook functions for debug_io_direct to match variable name.
 3c09d115948	Peter Eisentraut	2023-08-24 13:59:40 +0200	6	Update DECLARE_INDEX documentation
 d71e6055e45	Peter Eisentraut	2023-08-24 14:22:46 +0200	9	Fix lack of message pluralization
 b0bea38705b	Heikki Linnakangas	2023-08-24 17:03:05 +0300	11	Use FD_CLOEXEC on ListenSockets

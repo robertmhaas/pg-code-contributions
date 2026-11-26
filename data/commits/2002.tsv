@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 c546170e776	Thomas G. Lockhart	2002-01-01 02:54:33 +0000	7	Rename TIME token to ISOTIME to eliminate conflict with gram.y parser  token. Seems to be isolated to datetime.c and datetime.h.
 1ccc67600bc	Tom Lane	2002-01-01 20:32:37 +0000	24	Fix race condition that could allow two concurrent transactions to insert the same key into a supposedly unique index.  The bug is of low probability, and may not explain any of the recent reports of duplicated rows; but a bug is a bug.
 4764ae823b7	Tom Lane	2002-01-01 23:16:22 +0000	5	Do not accept interrupts in RESUME_INTERRUPTS() and END_CRIT_SECTION() macros, but only at explicit CHECK_FOR_INTERRUPTS() calls.  Not clear whether overenthusiastic acceptance of interrupts accounts for any real bugs, but it definitely seems risky and unnecessary.

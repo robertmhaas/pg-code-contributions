@@ -32,7 +32,7 @@ One file per year of each kind:
 | column         | source                                                    |
 |----------------|-----------------------------------------------------------|
 | `hash`         | `%h`, abbreviated to 11 digits (longer only if ambiguous)  |
-| `committer`    | `%cn`                                                     |
+| `author`       | `%an`, the git author                                     |
 | `committed_at` | `%ci`, the committer date as recorded, with its offset    |
 | `insertions`   | insertions from `git log --shortstat -w -M`; 0 if none    |
 | `subject`      | `%s`                                                      |
@@ -175,17 +175,31 @@ The rules:
 
   A revert counts as reverting another revert only if it says so plainly
   ("This reverts commit X" or a quoted subject), not just because it
-  mentions one.
-- **Mechanical**, only for commits of 300 or more lines:
-  - the subject says it's pgindent, perltidy, a copyright update, a
-    translation update, or reformatting (`format-subject`);
-  - most of the lines are in generated or imported files, such as `.po`
-    files, Unicode tables, time zone data, Snowball, or `config.guess`
-    (`generated-files`; the residual is the lines in other files);
-  - at least 70% of the added lines match deleted lines (`code-motion`;
-    the residual is the rest);
-  - at least 97% of the added words match deleted words (`reformat`).
+  mentions one. Reverting a revert puts back what that revert reverted,
+  so those commits are credited again, and aren't treated as reverted a
+  second time even if the message names them. A revert that deletes less than 30% of what its targets
+  inserted (for targets of 100 or more lines) only reverted part of them,
+  so they aren't treated as reverted.
+- **Translation updates**, at any size: a commit that touches only
+  translation files (`.po` files and the `nls.mk` that lists them) is
+  mechanical (`translation`).
+- **Mechanical**, only for commits of 300 or more lines. If the subject
+  says it's pgindent, perltidy, a copyright update, a translation update,
+  or reformatting, the whole commit is mechanical (`format-subject`).
+  Otherwise each file is judged on its own:
+  - a generated or imported file, such as a `.po` file, a Unicode table,
+    time zone data, Snowball, `config.guess`, or autoconf's `configure`, is
+    all mechanical
+    (`generated-files`);
+  - a file whose added words are at least 97% rearranged deleted words is
+    all mechanical (`reformat`): a reformat, or a bulk edit such as adding
+    a column to every entry of a catalog `.dat` file;
+  - in any other file, only the lines that match lines deleted elsewhere
+    in the commit are mechanical (`code-motion`).
 
+  If at least half the commit's lines are mechanical, the commit is, and
+  the rest of its lines are the residual. `rule=` names the biggest
+  share.
   A residual under 50 lines isn't recorded.
 
 The rules are meant to be mostly right, not perfect.
@@ -216,6 +230,8 @@ data = commitdata.load()
 commit = data.commits['a8eeb22f171']
 commit.raw_tags         # [(tag, value)] as extracted
 commit.tags             # with tag fixes applied
+commit.authors          # see below
+commit.primary_author   # authors[0], who is credited with the lines
 commit.credited_lines   # insertions after line adjustments
 commit.adjustment       # the line adjustment in effect, if any
 commit.reverted_by      # the revert in effect, if any
@@ -226,6 +242,14 @@ commit.reverted_at      # its date
 data.credited_lines(commit, reverts_until=datetime.date(commit.year, 12, 31))
 ```
 
+A commit's authors are all and only the people in its `Author` and
+`Co-authored-by` tags, after tag fixes, in the order listed; the git author
+is then disregarded. Only if there are no such tags is the commit credited
+to its git author. So a committer who wrote part of a patch has to list
+themselves. The first author listed is the primary author, who is credited
+with the commit's lines. Values are as written, emails and glosses
+included; mapping them to people is a later step.
+
 `commit.year` is the year of the file the commit came from. Run
 `python3 check-commits.py` after changing anything under `overrides/`.
 
@@ -235,8 +259,10 @@ The `Extract commits` Action runs daily at 08:23 UTC. It also runs when
 `extract-commits.py` changes, and you can start it by hand. Each run clones
 PostgreSQL from the GitHub mirror, runs `extract-commits.py` and then
 `classify-commits.py`, and commits `data/` if anything changed.
-`classify-commits.py` rewrites every year each time, since a revert can
-reclassify a commit from an earlier year.
+`classify-commits.py` classifies only the commits added since its last
+run, recorded in `data/classify-state.tsv`, and updates any older commits
+that those reverted. It reclassifies everything when `classify-commits.py`
+itself changes, or with `--all`.
 
 A run rewrites only the years whose list of commits has changed, which in
 practice is the current year. The previous year can change too, around New

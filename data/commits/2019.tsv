@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 d880b208e5f	Michael Paquier	2019-01-01 10:39:19 +0900	1	Fix generation of padding message before encrypting Elgamal in pgcrypto
 1707a0d2aa6	Michael Paquier	2019-01-01 20:05:51 +0900	41	Remove configure switch --disable-strong-random
 b6f3649bba9	Peter Eisentraut	2019-01-02 18:36:05 +0100	20	Convert unaccent tests to UTF-8
@@ -431,7 +431,7 @@ f2d84a4a6b4	Michael Paquier	2019-03-11 09:31:25 +0900	1	Adjust error message for
 08cecfaf60c	Michael Meskes	2019-03-11 16:11:16 +0100	1	Fix potential memory access violation in ecpg if filename of include file is shorter than 2 characters.
 b212245f964	Tom Lane	2019-03-11 11:25:26 -0400	7	In guc.c, ignore ERANGE errors from strtod().
 af38498d4c9	Alvaro Herrera	2019-03-11 13:17:50 -0300	690	Move hash_any prototype from access/hash.h to utils/hashutils.h
-a6e48da0884	Andres Freund	2019-03-11 09:58:46 -0700	5	Fix typos in commit 8586bf7ed8.
+a6e48da0884	Amit Kapila	2019-03-11 09:58:46 -0700	5	Fix typos in commit 8586bf7ed8.
 a4784152810	Andrew Dunstan	2019-03-11 13:18:37 -0400	21	pgbench: increase the maximum number of variables/arguments
 c2fe139c201	Andres Freund	2019-03-11 12:46:41 -0700	1965	tableam: Add and use scan APIs.
 8cacea7a725	Andres Freund	2019-03-11 14:26:43 -0700	18	Ensure sufficient alignment for ParallelTableScanDescData in BTShared.

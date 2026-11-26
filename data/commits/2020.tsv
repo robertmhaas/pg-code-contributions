@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 7559d8ebfa1	Bruce Momjian	2020-01-01 12:21:45 -0500	1781	Update copyrights for 2020
 c5f3b53b0ef	Peter Geoghegan	2020-01-01 11:32:07 -0800	6	Update btree_xlog_delete() comments.
 823e739d4a7	Tom Lane	2020-01-01 19:31:41 -0500	41	Test GROUP BY matching of join columns that are type-coerced by USING.

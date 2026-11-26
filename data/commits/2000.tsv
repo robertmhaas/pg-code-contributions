@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 7a877dfd2d1	Bruce Momjian	2000-01-02 01:37:28 +0000	6	Remove DATEDEBUG because it didn't look Y2K safe, and fix timestamp elog to be Y2K safe.
 a8587d02ebe	Bruce Momjian	2000-01-02 02:11:08 +0000	1	Update length of timestamp to 30.
 aae7b190777	Bruce Momjian	2000-01-02 02:32:37 +0000	2	Update DATEDEBUG removal.

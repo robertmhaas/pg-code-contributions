@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 6078770c1a6	Noah Misch	2017-12-31 21:58:29 -0800	7	In tests, await an LSN no later than the recovery target.
 93ea78b17c4	Andres Freund	2018-01-01 14:38:23 -0800	61	Fix EXPLAIN ANALYZE output for Parallel Hash.
 438036264a3	Peter Eisentraut	2018-01-02 12:20:56 -0500	21	Don't cast between GinNullCategory and bool

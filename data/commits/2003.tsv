@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 d2a522e4830	Bruce Momjian	2003-01-01 19:04:07 +0000	2	Update:
 a26ac42b766	Tom Lane	2003-01-01 20:35:39 +0000	20	Awhile back I wrote that freebsd.h was probably broken in the places where it diverged from netbsd.h and openbsd.h.  This has now been confirmed. Accordingly, make all three exactly alike.
 d6dbb6b2834	Tom Lane	2003-01-01 21:57:05 +0000	18	fastpath code neglected to check whether user has privileges to call the target function.  Also, move SetQuerySnapshot() call to avoid assert failure when a fastpath call is attempted in an aborted transaction.

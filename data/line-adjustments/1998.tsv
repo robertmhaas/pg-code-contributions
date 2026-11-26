@@ -1,5 +1,11 @@
 hash	kind	details
-48a61651b54	mechanical	residual=95,rule=code-motion
+38201e21d08	mechanical	residual=422,rule=code-motion
+24cab6bd0dd	mechanical	residual=196,rule=reformat
+fe521fbe761	mechanical	residual=171,rule=reformat
+48a61651b54	mechanical	residual=50,rule=code-motion
 a32450a5855	mechanical	rule=format-subject
+8afae11406f	mechanical	residual=64,rule=reformat
+8536c962614	mechanical	residual=202,rule=code-motion
 af74855a608	mechanical	rule=format-subject
 fa1a8d6a970	mechanical	rule=format-subject
+524f4b2d106	mechanical	residual=178,rule=code-motion

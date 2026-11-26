@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 d31084e9d11	Marc G. Fournier	1996-07-09 06:22:35 +0000	242656	Postgres95 1.01 Distribution - Virgin Sources
 25bb71835f1	Marc G. Fournier	1996-07-09 06:35:38 +0000	5	Fix: Can't drop tables with names longer than 16 characters.
 950b6ab0227	Marc G. Fournier	1996-07-09 06:39:19 +0000	8	Fixes: Using LIKE or ~ operator on text type files which are null valued        causes segmentation fault.

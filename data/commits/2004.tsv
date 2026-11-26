@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 b3c3b5464d7	Tom Lane	2004-01-01 19:27:15 +0000	55	Do an explicit fflush after writing a progress message with puts. This ensures stdout is kept in sync with messages on stderr. Per report from Olaf Ferger.
 037e2fcf8fb	Tom Lane	2004-01-03 05:47:44 +0000	3	Must test for __hppa__ as well as __hppa to make linux-hppa happy.
 6cb1c0238b2	Tom Lane	2004-01-04 00:07:32 +0000	439	Rewrite OR indexscan processing to be more flexible.  We can now for the first time generate an OR indexscan for a two-column index when the WHERE condition is like 'col1 = foo AND (col2 = bar OR col2 = baz)' --- before, the OR had to be on the first column of the index or we'd not notice the possibility of using it.  Some progress towards extracting OR indexscans from subclauses of an OR that references multiple relations, too, although this code is #ifdef'd out because it needs more work.

@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 2a0e33edc40	Bruce Momjian	2008-01-01 15:14:37 +0000	2	8.3 is possible release on 2008-01-??, not 2007.
 40f4bb5a2d0	Bruce Momjian	2008-01-01 19:36:20 +0000	30	Update release notes to match CVS HEAD.
 44ede1072df	Bruce Momjian	2008-01-01 19:41:14 +0000	38	Move a few release note items from "Utility Commands" to "Object Manipulation".

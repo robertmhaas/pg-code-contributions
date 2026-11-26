@@ -23,8 +23,9 @@ be0d0b457cb	revert	reverted-by=7ca548f23a6,revert-date=2026-06-18,rule=revert-li
 182cdf5aeaf	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-list
 c9babbc8816	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-list
 ecd9288624a	revert	reverted-by=b58a9a97fe7,revert-date=2026-11-06,rule=revert-message
-374a6394c6a	mechanical	residual=83,rule=code-motion
+374a6394c6a	mechanical	residual=67,rule=code-motion
 ec80215c033	revert	reverted-by=7ca548f23a6,revert-date=2026-06-18,rule=revert-list
+57ee3979539	mechanical	rule=generated-files
 040a56be4bc	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-list
 2e123e3c2bd	revert	reverted-by=a0354e29c41,revert-date=2026-06-08,rule=revert-message
 6b5b7eae3ae	revert	reverted-by=847336ba53a,revert-date=2026-04-13,rule=revert-message
@@ -36,13 +37,12 @@ a0dd0702e46	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-li
 273d26b75e7	revert	reverted-by=7ca548f23a6,revert-date=2026-06-18,rule=revert-list
 8e72d914c52	revert	reverted-by=a4b26b8f7cd,revert-date=2026-09-15,rule=revert-list
 a29fdd6c8d8	mechanical	rule=code-motion
-a9c350d9ee6	revert	reverted-by=962e0a723a2,revert-date=2026-09-11,rule=revert-message
-404db8f9edb	revert	reverted-by=962e0a723a2,revert-date=2026-09-11,rule=revert-message
 d516974840f	revert	reverted-by=f1920437cd4,revert-date=2026-09-11,rule=revert-message
 b6ccd30d8ff	revert	reverted-by=a4b26b8f7cd,revert-date=2026-09-15,rule=revert-list
 0d3dba38c77	revert	reverted-by=01a80f06214,revert-date=2026-05-24,rule=revert-message
 4a18907b412	revert	reverted-by=eec8e234bdc,revert-date=2026-04-10,rule=revert-message
 713e553e321	revert	reverted-by=7612ae8ed8c,revert-date=2026-08-26,rule=revert-message
+aa27a3331ab	mechanical	rule=translation
 2ff289d0393	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-list
 9082680c34e	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-list
 ac3bcc041c5	revert	reverted-by=b1f106c80cb,revert-date=2026-09-07,rule=revert-list
@@ -68,7 +68,7 @@ ecb2508aaf9	revert	reverted-by=7612ae8ed8c,revert-date=2026-08-26,rule=revert-me
 83df16f1fa5	revert	reverted-by=7612ae8ed8c,revert-date=2026-08-26,rule=revert-message
 d8af7301003	revert	reverted-by=0392fb900eb,revert-date=2026-05-20,rule=revert-message
 e64a9ba2b4f	revert	reverted-by=7612ae8ed8c,revert-date=2026-08-26,rule=revert-message
-ef6a95c7c64	mechanical	rule=format-subject
+ef6a95c7c64	mechanical	rule=translation
 993a7aa0e4a	revert	reverted-by=a4b26b8f7cd,revert-date=2026-09-15,rule=revert-list
 7ac030d5b15	revert	reverted-by=a4b26b8f7cd,revert-date=2026-09-15,rule=revert-list
 f0aedc7cb0e	revert	reverted-by=a4b26b8f7cd,revert-date=2026-09-15,rule=revert-list
@@ -130,3 +130,4 @@ cc9a8eb112f	revert	reverted-by=6fe9b62914b,revert-date=2026-09-03,rule=revert-me
 704ef84ef23	revert	reverted-by=7a0aa99e51c,revert-date=2026-09-12,rule=revert-message
 e73841ffbce	revert	reverted-by=2c6f2c5e177,revert-date=2026-09-24,rule=revert-message
 23e2a332dd2	revert	reverted-by=c07545dfe1a,revert-date=2026-11-06,rule=revert-message
+d0a4f66217c	mechanical	rule=translation

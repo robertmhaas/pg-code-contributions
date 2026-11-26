@@ -4,9 +4,6 @@
 # See README.md.
 hash	kind	details
 
-# Updated Unicode tables.
-1091b48cd76	mechanical
-
 # Reverted in "Revert 56-bit relfilenode change and follow-up commits."
 05d4cbf9b6b	revert	reverted-by=a448e49bcbe,revert-date=2022-09-28
 

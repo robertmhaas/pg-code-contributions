@@ -4,7 +4,7 @@ Extract per-commit metadata from a PostgreSQL git repository.
 
 For every year, writes
 
-    data/commits/YYYY.tsv   hash  committer  committed_at  insertions  subject
+    data/commits/YYYY.tsv   hash  author  committed_at  insertions  subject
     data/tags/YYYY.tsv      hash  tag  value
 
 in PostgreSQL COPY text format.  See README.md for the counting rules.
@@ -25,7 +25,7 @@ import sys
 # count.  git still lengthens a hash if 11 digits would be ambiguous.
 ABBREV = 11
 
-COMMIT_COLUMNS = ['hash', 'committer', 'committed_at', 'insertions', 'subject']
+COMMIT_COLUMNS = ['hash', 'author', 'committed_at', 'insertions', 'subject']
 TAG_COLUMNS = ['hash', 'tag', 'value']
 
 # A tag is "Key: value" at the start of a line.  The key is a word or
@@ -99,7 +99,7 @@ def extract(repo, full_hashes):
     """Return (commit_rows, tag_rows) for the given commits, in that order."""
     out = git(repo, 'log', '--no-walk=unsorted', '--stdin',
               '--shortstat', '-w', '-M',
-              f'--format={RS}%h{FS}%cn{FS}%ci{FS}%s{FS}%B{FS}',
+              f'--format={RS}%h{FS}%an{FS}%ci{FS}%s{FS}%B{FS}',
               input=''.join(h + '\n' for h in full_hashes))
     commit_rows = []
     tag_rows = []
@@ -107,10 +107,10 @@ def extract(repo, full_hashes):
         fields = record.split(FS)
         if len(fields) != 6:
             raise RuntimeError(f'unexpected git log output: {record[:200]!r}')
-        h, committer, committed_at, subject, message, stat = fields
+        h, author, committed_at, subject, message, stat = fields
         m = INSERTIONS_RE.search(stat)
         insertions = m.group(1) if m else '0'
-        commit_rows.append([h, committer, committed_at, insertions, subject])
+        commit_rows.append([h, author, committed_at, insertions, subject])
         tag_rows.extend([h, tag, value] for tag, value in parse_tags(message))
     if len(commit_rows) != len(full_hashes):
         raise RuntimeError(f'asked for {len(full_hashes)} commits, '

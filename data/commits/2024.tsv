@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 cea89c93a10	Peter Eisentraut	2024-01-01 19:17:18 +0100	29	Turn AT_PASS_* macros into an enum
 9a17be1e244	Amit Kapila	2024-01-02 08:08:46 +0530	1030	Allow upgrades to preserve the full subscription's state.
 a7928a57b9f	Alexander Korotkov	2024-01-02 09:48:50 +0200	24	Replace the relid in some missing fields during SJE

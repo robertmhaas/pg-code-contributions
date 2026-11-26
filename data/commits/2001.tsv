@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 473763e6760	Tom Lane	2001-01-01 21:22:54 +0000	5	Update comment.
 9315ff55492	Tom Lane	2001-01-01 21:33:31 +0000	9	Ensure attcacheoff is written out as -1 when writing pg_attribute tuples for a relation.  Needed to prevent Assert failure in CLUSTER.
 ad0169b1b7a	Tom Lane	2001-01-01 21:35:00 +0000	17	CLUSTER forgot to create a TOAST table for the clustered relation.

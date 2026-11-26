@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 741e4ad7de9	Magnus Hagander	2010-01-01 14:57:16 +0000	57	Make the win32 putenv() override update *all* present versions of the MSVCRxx runtime, not just the current + Visual Studio 6 (MSVCRT). Clearly there can be an almost unlimited number of runtimes loaded at the same time.
 2c4d456d51c	Peter Eisentraut	2010-01-01 16:54:48 +0000	6	Update SQL features supported list
 5069e959b01	Magnus Hagander	2010-01-01 16:58:53 +0000	2	Delete solution cache file on clean, if it exists.

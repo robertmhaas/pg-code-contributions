@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 74baa1e3b89	Tom Lane	2017-01-01 15:17:08 -0500	10	Avoid assuming that instr_time == struct timeval in pgbench logging.
 67a875355e4	Tom Lane	2017-01-02 12:26:03 -0500	83	In pgbench logging, avoid assuming that instr_times match Unix timestamps.
 1d63f7d2d18	Tom Lane	2017-01-02 13:41:51 -0500	163	Use clock_gettime(), if available, in instr_time measurements.

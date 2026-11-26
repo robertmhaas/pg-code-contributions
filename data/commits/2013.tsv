@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 f1abee6bc6b	Magnus Hagander	2013-01-01 16:16:20 +0100	1	Fix descrition of pg_resetxlog -l parameter
 a266f7dd93b	Heikki Linnakangas	2013-01-01 18:09:31 +0200	48	Winflex binary on FTP site doesn't work on 64-bit Windows, update docs.
 f5d4bdd3a5c	Magnus Hagander	2013-01-01 18:15:57 +0100	154	Unify some tar functionality across different parts
@@ -214,7 +214,7 @@ ff64fd49ce9	Peter Eisentraut	2013-02-13 23:12:21 -0500	8	doc: Add make target to
 fdaf44862be	Tom Lane	2013-02-14 20:35:08 -0500	19	Invent pre-commit/pre-prepare/pre-subcommit events for xact callbacks.
 8e6c8da16a5	Peter Eisentraut	2013-02-14 21:40:05 -0500	6	pgindent: Fix order in instructions
 c9cc7e05c6d	Heikki Linnakangas	2013-02-15 17:43:59 +0200	29	Don't delete unarchived WAL files during crash recovery.
-c2f79ba2691	Heikki Linnakangas	2013-02-15 19:28:06 +0200	79	Force archive_status of .done for xlogs created by dearchival/replication.
+c2f79ba2691	Simon Riggs	2013-02-15 19:28:06 +0200	79	Force archive_status of .done for xlogs created by dearchival/replication.
 1bd42cd70ab	Heikki Linnakangas	2013-02-15 19:33:31 +0200	1	Better fix for "unarchived WAL files get deleted on crash recovery" bug.
 17f15239325	Bruce Momjian	2013-02-16 18:52:50 -0500	51	Warn about initdb using mount-points
 9475db3a4eb	Peter Eisentraut	2013-02-17 23:45:36 -0500	59	Add ALTER ROLE ALL SET command
@@ -274,8 +274,8 @@ a4d3a504e73	Tom Lane	2013-03-01 21:34:17 -0500	68	Eliminate memory leaks in plpe
 b15a6da2921	Tom Lane	2013-03-03 19:05:47 -0500	101	Get rid of any toast table when converting a table to a view.
 3bf3ab8c563	Kevin Grittner	2013-03-03 18:23:31 -0600	4194	Add a materialized view relations.
 bc618786820	Tom Lane	2013-03-03 19:32:22 -0500	6	Fix map_sql_value_to_xml_value() to treat domains like their base types.
-54d6706ded5	Magnus Hagander	2013-03-04 15:17:13 +0000	0	Remove accidentally-committed .orig file.
-0ea1f6e98fc	Magnus Hagander	2013-03-04 15:17:40 +0000	30	psql: Let \\l accept a pattern
+54d6706ded5	Kevin Grittner	2013-03-04 15:17:13 +0000	0	Remove accidentally-committed .orig file.
+0ea1f6e98fc	Peter Eisentraut	2013-03-04 15:17:40 +0000	30	psql: Let \\l accept a pattern
 542eeba2699	Tom Lane	2013-03-04 15:13:31 -0500	6	Fix overflow check in tm2timestamp (this time for sure).
 c8056592bcb	Kevin Grittner	2013-03-05 05:32:03 -0600	1	Bump catversion because of new function in the materialized view patch.
 80b011ef0a1	Tom Lane	2013-03-05 13:02:30 -0500	120	Fix to_char() to use ASCII-only case-folding rules where appropriate.

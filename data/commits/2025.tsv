@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 50e6eb731d9	Bruce Momjian	2025-01-01 11:21:55 -0500	2613	Update copyright for 2025
 11012c50375	David Rowley	2025-01-02 12:42:01 +1300	27	Fix an assortment of spelling mistakes and typos
 d93bb8163c9	David Rowley	2025-01-02 22:04:09 +1300	3	Fix outdated CHUNKHDRSZ value in nodeAgg.c
@@ -521,7 +521,7 @@ e33969abc19	Andrew Dunstan	2025-03-06 10:24:03 -0500	1	Further fix for json_stri
 0f21db36d66	Tom Lane	2025-03-06 11:54:31 -0500	12	Fix some performance issues in GIN query startup.
 24503fa95cd	Álvaro Herrera	2025-03-06 19:40:06 +0100	10	reindexdb: move PQfinish() calls to the right place
 e2080261cc8	Michael Paquier	2025-03-07 08:12:45 +0900	6	Fix race condition in TAP test 007_pre_auth
-5f8eb25706b	John Naylor	2025-03-07 10:17:35 +0700	195	vacuumdb: Add option for analyzing only relations missing stats.
+5f8eb25706b	Nathan Bossart	2025-03-07 10:17:35 +0700	195	vacuumdb: Add option for analyzing only relations missing stats.
 fcabc3adf88	John Naylor	2025-03-07 10:22:56 +0700	3	Doc: correct aggressive vacuum threshold for multixact members storage
 19e57f4f78e	John Naylor	2025-03-07 10:35:21 +0700	0	Revert "vacuumdb: Add option for analyzing only relations missing stats."
 d611f8b1587	Jeff Davis	2025-03-06 19:39:14 -0800	68	CREATE INDEX: don't update table stats if autovacuum=off.

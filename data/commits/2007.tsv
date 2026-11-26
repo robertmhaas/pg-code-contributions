@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 f9ac414c35e	Bruce Momjian	2007-01-02 20:00:50 +0000	212	Fix float4/8 to handle Infinity and Nan consistently, e.g. Infinity is a valid result from a computation if one of the input values was infinity. The previous code assumed an operation that returned infinity was an overflow.
 7bb1cc50b2d	Bruce Momjian	2007-01-02 20:50:35 +0000	2	Add #include <float.h> for platforms that still need it.
 2955f1ebf4a	Bruce Momjian	2007-01-02 20:59:32 +0000	48	Add n_live_tuples and n_dead_tuples to pg_stat_all_tables.

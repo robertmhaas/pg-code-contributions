@@ -22,7 +22,8 @@ import glob
 import os
 import re
 
-COMMIT_COLUMNS = ['hash', 'committer', 'committed_at', 'insertions', 'subject']
+COMMIT_COLUMNS = ['hash', 'author', 'committed_at', 'insertions', 'subject']
+AUTHOR_TAGS = ('author', 'co-authored-by')
 TAG_COLUMNS = ['hash', 'tag', 'value']
 TAG_FIX_COLUMNS = ['hash', 'verb', 'tag', 'value']
 
@@ -38,7 +39,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 class Commit:
     hash: str
     year: int                       # the year of the file it came from
-    committer: str
+    git_author: str                 # %an; credited only if no author tags
     committed_at: datetime.datetime
     insertions: int
     subject: str
@@ -50,6 +51,23 @@ class Commit:
     credited_lines: int = 0         # insertions that count as effort
     is_revert: bool = False         # it reverts other commits
     utc_date: datetime.date = None  # committed_at's date in UTC
+
+
+    @property
+    def authors(self):
+        """
+        Every Author and Co-authored-by value, in the order listed, after tag
+        fixes; if there are none, the git author alone.  Values are as
+        written, emails and glosses included.
+        """
+        tagged = [v for t, v in self.tags
+                  if re.sub(r'[\s_]+', '-', t.strip().lower()) in AUTHOR_TAGS]
+        return tagged or [self.git_author]
+
+    @property
+    def primary_author(self):
+        """The first of authors: the one credited with the lines."""
+        return self.authors[0]
 
 
 @dataclasses.dataclass
@@ -104,7 +122,7 @@ def load(root=ROOT):
     commits = {}
     for path in sorted(glob.glob(os.path.join(root, 'data', 'commits', '*.tsv'))):
         year = int(os.path.basename(path)[:-4])
-        for where, (h, committer, committed_at, insertions, subject) \
+        for where, (h, git_author, committed_at, insertions, subject) \
                 in read_tsv(path, COMMIT_COLUMNS, root):
             if h in commits:
                 raise LoadError(f'{where}: duplicate commit {h}')
@@ -114,8 +132,8 @@ def load(root=ROOT):
                 insertions = int(insertions)
             except ValueError as e:
                 raise LoadError(f'{where}: {e}') from None
-            commits[h] = Commit(h, year, committer, committed_at, insertions,
-                                subject, [], [])
+            commits[h] = Commit(h, year, git_author, committed_at,
+                                insertions, subject, [], [])
             commits[h].utc_date = committed_at.astimezone(datetime.timezone.utc).date()
 
     for path in sorted(glob.glob(os.path.join(root, 'data', 'tags', '*.tsv'))):

@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 7c957ec83ee	Michael Meskes	2014-01-01 12:39:31 +0100	5	Do not use an empty hostname.
 4b351841fa0	Robert Haas	2014-01-01 20:17:00 -0500	9	Rename walLogHints to wal_log_hints for easier grepping.
 4cf81b737d5	Tom Lane	2014-01-02 14:20:28 -0500	3	Fix contrib/pg_upgrade to clean all the cruft made during "make check".

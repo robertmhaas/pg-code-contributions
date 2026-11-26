@@ -123,16 +123,16 @@ for c in data.commits.values():
         if (c.hash, t) in HAND:
             tagged = HAND[c.hash, t]
         else:
-            if t.lower() == 'patch' and (re.fullmatch(r'<[^>]+@[^>]+>', full.strip()) or not roles.people(full, c.committer, strict=False)):
+            if t.lower() == 'patch' and (re.fullmatch(r'<[^>]+@[^>]+>', full.strip()) or not roles.people(full, c.git_author, strict=False)):
                 continue    # "Patch: <message-id>" or stray prose, not a person
-            names = roles.people(full, c.committer, strict=False)
+            names = roles.people(full, c.git_author, strict=False)
             if names and len(names) == 1 and normkey(t) == normkey(canon) and full == v:
                 continue    # one name, key differs only in case/spacing: the next layer normalizes that
             if names:
                 tagged = [(canon, n, GLOSS.get(t)) for n in names]
             else:
                 # prose in the value: "A and B.  Some tweaks by C"
-                ptags, confident, _, _ = roles.parse(full if canon == 'Author' else f'{PREFIX[canon]} {full}', c.committer)
+                ptags, confident, _, _ = roles.parse(full if canon == 'Author' else f'{PREFIX[canon]} {full}', c.git_author)
                 plain = re.sub(r'"[^"]*"|\([^)]*\)|<[^>]*>', '', full)
                 if confident:
                     tagged = ptags

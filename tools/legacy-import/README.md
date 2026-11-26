@@ -11,7 +11,8 @@ checking them with `check-commits.py`.
 - `roles.py`: the prose credit parser. It turns sentences like "Report and
   patch by Jane Doe, reviewed by John Roe; some tweaks by me" into tags,
   with glosses, and marks a parse as confident only if every clause was
-  understood and every person named got a tag. `split_lists.py` uses it,
+  understood and every person named got a tag. "Me" is taken to be the
+  git author, who through 2025 is the committer in all but 8 commits. `split_lists.py` uses it,
   and it can be reused to parse credit in other commits.
 - `split_lists.py`: replaces non-canonical credit keys (`Authors:`,
   `Reviewed by:`, `Submitted by:`, ...) with one canonical tag per person,

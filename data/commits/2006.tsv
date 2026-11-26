@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 c20a9f25afb	Neil Conway	2006-01-01 01:41:42 +0000	4	Trim an obsolete comment: it is no longer relevant that "SELECT" was formerly "RETRIEVE", and so forth.
 0898033b1e3	Neil Conway	2006-01-01 10:13:56 +0000	2	Remove DOS line endings ("\\r\\n") from several .po files. DOS line endings are inconsistent with the rest of the .po files, and apparently cause problems for Sun's cc. Per report on IRC from "bitvector2".
 fc6da31ae1f	Tom Lane	2006-01-01 19:52:40 +0000	17	Rewrite ProcessConfigFile() to avoid misbehavior at EOF, as per report from Andrus Moor.  The former state-machine-style coding wasn't actually doing much except obscuring the control flow, and it didn't extend readily to fix this case, so I just took it out.  Also, add a YY_FLUSH_BUFFER call to ensure the lexer is reset correctly if the previous scan failed partway through the file.

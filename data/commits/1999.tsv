@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 d8ae7ffb2f8	Bruce Momjian	1999-01-01 04:17:13 +0000	13	Fix for no platform NAN.
 f0fbd7b87e4	Bruce Momjian	1999-01-01 04:48:49 +0000	15	   Some security, since we now have vsnprintf, I remade an old patch    with some extra ugly sprintfs fixed. More work in this area is    needed still.
 61e16adebc4	Bruce Momjian	1999-01-02 16:06:42 +0000	11	Mention 6.4.2 changes.

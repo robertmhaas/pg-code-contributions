@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 2daed8c5b3b	Bruce Momjian	2005-01-01 05:43:09 +0000	128	Update copyrights that were missed.
 f882247664a	Bruce Momjian	2005-01-01 16:36:57 +0000	5	Update:
 bfeaefd245a	Bruce Momjian	2005-01-01 17:25:01 +0000	2	Update:

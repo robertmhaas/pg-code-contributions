@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 f9769c719f7	Magnus Hagander	2015-01-03 13:18:54 +0100	1	Make path to pg_service.conf absolute in documentation
 d6657d2a107	Tom Lane	2015-01-03 13:14:03 -0500	12	Treat negative values of recovery_min_apply_delay as having no effect.
 ccb161b66ad	Andres Freund	2015-01-03 20:54:12 +0100	62	Add pg_string_endswith as the start of a string helper library in src/common.

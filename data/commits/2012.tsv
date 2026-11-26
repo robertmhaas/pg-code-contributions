@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 9f60880207c	Bruce Momjian	2012-01-01 17:56:51 -0500	8	Fix Perl copyright script to skip .git subdirectory;  running it on those files corrupts the index.
 6ba139dc5a8	Bruce Momjian	2012-01-01 17:59:44 -0500	0	Don't use tabs in Perl scripts, for consistency.
 e126958c2ef	Bruce Momjian	2012-01-01 18:01:58 -0500	1197	Update copyright notices for year 2012.

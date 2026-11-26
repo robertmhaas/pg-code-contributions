@@ -11935,3 +11935,14 @@ b8bf2880055	Discussion	https://postgr.es/m/CAN4CZFOqiZtHOHAgd1mA325XQrsShj0C%3Dv
 3b249c728fd	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
 3b249c728fd	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
 3b249c728fd	Discussion	https://www.postgresql.org/message-id/42b2c4f9-511e-4b5c-8edd-b474019ddf29@iki.fi
+73401447c34	Author	Andreas Karlsson <andreas@proxel.se>
+73401447c34	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+73401447c34	Reviewed-by	Daniel Gustafsson <daniel@yesql.se>
+73401447c34	Discussion	https://postgr.es/m/05950496-e557-42d4-a865-c578a5231930@proxel.se
+91993c160de	Author	Lukas Fittl <lukas@fittl.com>
+91993c160de	Discussion	https://postgr.es/m/CAP53Pkw3WcVbg61G29AmN=6XkuxGryoWKnhTyC1JmkT08i8qVA@mail.gmail.com
+b4548161b94	Author	Zsolt Parragi <zsolt.parragi@percona.com>
+b4548161b94	Discussion	https://www.postgresql.org/message-id/CAN4CZFOJzyQ73OxeyRs2QCh7FfBDWqEAsNDiKm1G0hB9Cn6fhw@mail.gmail.com
+b4548161b94	Backpatch-through	15
+d5fb939db80	Author	vignesh C <vignesh21@gmail.com>
+d5fb939db80	Discussion	https://postgr.es/m/CALDaNm1H+LOA=90TpzTtc9GBh5A_Pfij0wU_N5S0tSy7_xdDWg@mail.gmail.com

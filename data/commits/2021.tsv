@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 4d3f03f4222	Tom Lane	2021-01-01 15:51:09 -0500	16	Doc: improve explanation of EXTRACT(EPOCH) for timestamp without tz.
 ca3b37487be	Bruce Momjian	2021-01-02 13:06:25 -0500	1833	Update copyright for 2021
 a271a1b50e9	Amit Kapila	2021-01-04 08:34:50 +0530	1281	Allow decoding at prepare time in ReorderBuffer.

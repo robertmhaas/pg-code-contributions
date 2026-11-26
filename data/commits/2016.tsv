@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 805ac78aaba	Peter Eisentraut	2015-12-31 22:03:13 -0500	13	doc: Add index entries and better documentation link for Linux OOM
 253de19b841	Peter Eisentraut	2015-12-31 22:26:57 -0500	14	doc: Remove redundant duplicate URLs from ulink elements
 3cd1ba147e5	Noah Misch	2016-01-01 01:46:46 -0500	21	Fix comments about WAL rule "write xlog before data" versus pg_multixact.

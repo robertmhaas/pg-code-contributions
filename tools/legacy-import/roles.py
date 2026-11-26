@@ -346,12 +346,12 @@ if __name__ == '__main__':
             for s in sentences(p):
                 if CREDIT_SENTENCE.match(s):
                     extra.append(s.rstrip('.') + '.')
-        tags, confident, used, reasons = parse(mine[-1], c.committer)
+        tags, confident, used, reasons = parse(mine[-1], c.git_author)
         for e in extra:          # credit sentences elsewhere: used only if they parse cleanly
-            etags, _, eused, ereasons = parse(e, c.committer)
+            etags, _, eused, ereasons = parse(e, c.git_author)
             if etags and not [r for r in ereasons if r[0] != 'nothing parsed']:
                 tags += [t for t in etags if t not in tags]; used += [u for u in eused if u not in used]
-        proposals.append(dict(year=c.year, hash=f.hash, committer=c.committer,
+        proposals.append(dict(year=c.year, hash=f.hash, committer=c.git_author,
                               legacy=f.value, para=' '.join(body(mine[-1]).split()),
                               tags=tags, confident=confident, used=used, reasons=reasons))
     json.dump(proposals, open(dst, 'w'), ensure_ascii=False, indent=1)

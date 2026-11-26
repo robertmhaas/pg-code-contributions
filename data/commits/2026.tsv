@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 f3c9e341cdf	Andrew Dunstan	2026-01-01 12:13:59 -0500	165	Add paths of extensions to pg_available_extensions
 451c43974f8	Bruce Momjian	2026-01-01 13:24:10 -0500	2763	Update copyright for 2026
 094b61ce3eb	David Rowley	2026-01-02 17:53:07 +1300	2	Fix spelling mistake in fk-snapshot-3.spec
@@ -280,8 +280,8 @@ ba1e14134a7	Nathan Bossart	2026-02-06 16:24:21 -0600	5	Adjust style of some debu
 c0bf15729f4	Tom Lane	2026-02-07 20:05:52 -0500	1	meson: host_system value for Solaris is 'sunos' not 'solaris'.
 73dd7163c5d	Tom Lane	2026-02-07 23:15:20 -0500	4	Replace some hard-wired OID constants with corresponding macros.
 379695d3cc7	Michael Paquier	2026-02-09 08:00:59 +0900	599	pgcrypto: Fix buffer overflow in pgp_pub_decrypt_bytea()
-54598670fe0	Thomas Munro	2026-02-09 12:08:58 +1300	65	Remove 'charlen' argument from make_trigrams()
-00896ddaf41	Thomas Munro	2026-02-09 12:08:58 +1300	183	Fix buffer overflows in pg_trgm due to lower-casing
+54598670fe0	Heikki Linnakangas	2026-02-09 12:08:58 +1300	65	Remove 'charlen' argument from make_trigrams()
+00896ddaf41	Heikki Linnakangas	2026-02-09 12:08:58 +1300	183	Fix buffer overflows in pg_trgm due to lower-casing
 af79c30dc3e	Thomas Munro	2026-02-09 12:08:58 +1300	12	Fix encoding length for EUC_CN.
 74ee636cc93	Thomas Munro	2026-02-09 12:08:58 +1300	32	Fix mb2wchar functions on short input.
 1e7fe06c10c	Thomas Munro	2026-02-09 12:44:04 +1300	481	Replace pg_mblen() with bounds-checked versions.
@@ -1269,27 +1269,27 @@ a49b9cfd72d	Amit Kapila	2026-05-08 10:00:26 +0530	47	Use schema-qualified names 
 9d124a14b3d	Richard Guo	2026-05-08 17:21:48 +0900	35	Enforce RETURNING typmod for empty-set JSON_ARRAY(query)
 901ed9b352b	John Naylor	2026-05-08 16:44:25 +0700	1	Fix universal builds on MacOS
 c1fe2d1a383	Peter Eisentraut	2026-05-11 11:38:20 +0200	19	pg_upgrade: Message improvements
-2f1b16e867e	Noah Misch	2026-05-11 05:13:46 -0700	35	ltree: Fix overflows with lquery parsing
-d388e1d7f04	Noah Misch	2026-05-11 05:13:46 -0700	39	Fix overflows with ts_headline()
-46593aea0a5	Noah Misch	2026-05-11 05:13:46 -0700	358	Make palloc_array() and friends safe against integer overflow.
-0dc1fdc75eb	Noah Misch	2026-05-11 05:13:46 -0700	59	Harden our regex engine against integer overflow in size calculations.
-066b7b144f3	Noah Misch	2026-05-11 05:13:46 -0700	26	Prevent buffer overrun in unicode_normalize().
-c55cea52906	Noah Misch	2026-05-11 05:13:46 -0700	16	Fix assorted places that need to use palloc_array().
-b63f25bddfe	Noah Misch	2026-05-11 05:13:46 -0700	107	Fix unbounded recursive handling of SSL/GSS in ProcessStartupPacket()
-43451a7a2b3	Noah Misch	2026-05-11 05:13:46 -0700	132	Guard against overflow in "left" fields of query_int and ltxtquery.
-5924e256c49	Noah Misch	2026-05-11 05:13:46 -0700	10	Apply timingsafe_bcmp() in authentication paths
+2f1b16e867e	Michael Paquier	2026-05-11 05:13:46 -0700	35	ltree: Fix overflows with lquery parsing
+d388e1d7f04	Michael Paquier	2026-05-11 05:13:46 -0700	39	Fix overflows with ts_headline()
+46593aea0a5	Tom Lane	2026-05-11 05:13:46 -0700	358	Make palloc_array() and friends safe against integer overflow.
+0dc1fdc75eb	Tom Lane	2026-05-11 05:13:46 -0700	59	Harden our regex engine against integer overflow in size calculations.
+066b7b144f3	Tom Lane	2026-05-11 05:13:46 -0700	26	Prevent buffer overrun in unicode_normalize().
+c55cea52906	Tom Lane	2026-05-11 05:13:46 -0700	16	Fix assorted places that need to use palloc_array().
+b63f25bddfe	Michael Paquier	2026-05-11 05:13:46 -0700	107	Fix unbounded recursive handling of SSL/GSS in ProcessStartupPacket()
+43451a7a2b3	Tom Lane	2026-05-11 05:13:46 -0700	132	Guard against overflow in "left" fields of query_int and ltxtquery.
+5924e256c49	Michael Paquier	2026-05-11 05:13:46 -0700	10	Apply timingsafe_bcmp() in authentication paths
 46b4f5c11b0	Noah Misch	2026-05-11 05:13:46 -0700	43	Fix SQL injection in logical replication origin checks.
-76ab76f875a	Noah Misch	2026-05-11 05:13:46 -0700	9	Avoid passing unintended format codes to snprintf().
-ec8ded4b327	Noah Misch	2026-05-11 05:13:46 -0700	11	Guard against unsafe conditions in usage of pg_strftime().
-6d6348f0329	Noah Misch	2026-05-11 05:13:46 -0700	244	Fix MCV input array checks in statistics restore functions
-d389415ffad	Noah Misch	2026-05-11 05:13:47 -0700	8	pg_createsubscriber: Obstruct SQL injection via subscription names.
-4793fc41f82	Noah Misch	2026-05-11 05:13:47 -0700	39	Check CREATE privilege on multirange type schema in CREATE TYPE.
-6a985e71e92	Noah Misch	2026-05-11 05:13:47 -0700	5	Avoid overflow in size calculations in formatting.c.
-a1063eecedf	Noah Misch	2026-05-11 05:13:47 -0700	57	Prevent path traversal in pg_basebackup and pg_rewind
-b2869ebc43b	Noah Misch	2026-05-11 05:13:47 -0700	44	Fix integer-overflow and alignment hazards in locale-related code.
-6d68fcb28f9	Noah Misch	2026-05-11 05:13:47 -0700	10	Fix integer overflow in array_agg(), when the array grows too large
-bd48114937c	Noah Misch	2026-05-11 05:13:47 -0700	46	Mark PQfn() unsafe and fix overrun in frontend LO interface.
-260e97733bf	Noah Misch	2026-05-11 05:13:47 -0700	38	refint: Fix SQL injection and buffer overruns.
+76ab76f875a	Tom Lane	2026-05-11 05:13:46 -0700	9	Avoid passing unintended format codes to snprintf().
+ec8ded4b327	Tom Lane	2026-05-11 05:13:46 -0700	11	Guard against unsafe conditions in usage of pg_strftime().
+6d6348f0329	Michael Paquier	2026-05-11 05:13:46 -0700	244	Fix MCV input array checks in statistics restore functions
+d389415ffad	Nathan Bossart	2026-05-11 05:13:47 -0700	8	pg_createsubscriber: Obstruct SQL injection via subscription names.
+4793fc41f82	Nathan Bossart	2026-05-11 05:13:47 -0700	39	Check CREATE privilege on multirange type schema in CREATE TYPE.
+6a985e71e92	Nathan Bossart	2026-05-11 05:13:47 -0700	5	Avoid overflow in size calculations in formatting.c.
+a1063eecedf	Michael Paquier	2026-05-11 05:13:47 -0700	57	Prevent path traversal in pg_basebackup and pg_rewind
+b2869ebc43b	Tom Lane	2026-05-11 05:13:47 -0700	44	Fix integer-overflow and alignment hazards in locale-related code.
+6d68fcb28f9	Heikki Linnakangas	2026-05-11 05:13:47 -0700	10	Fix integer overflow in array_agg(), when the array grows too large
+bd48114937c	Nathan Bossart	2026-05-11 05:13:47 -0700	46	Mark PQfn() unsafe and fix overrun in frontend LO interface.
+260e97733bf	Nathan Bossart	2026-05-11 05:13:47 -0700	38	refint: Fix SQL injection and buffer overruns.
 906ea101d0d	Tom Lane	2026-05-11 12:12:03 -0400	0	Remove test cases for field overflows in intarray and ltree.
 36f52a59b31	Álvaro Herrera	2026-05-11 18:17:46 +0200	417	Fix REPACK with WITHOUT OVERLAPS replica identity indexes
 c3f7dde39e9	Heikki Linnakangas	2026-05-11 21:27:55 +0300	2	Use palloc_array() in a few more places to avoid overflow
@@ -2011,41 +2011,41 @@ b91f79cd08a	Michael Paquier	2026-08-10 09:01:46 +0900	47	Use explicit fetching f
 6e89028ec48	Daniel Gustafsson	2026-08-10 08:44:49 +0200	4	Fix errmsg grammar for publication membership
 94d32ce1a63	John Naylor	2026-08-10 17:25:45 +0700	47	Add ssup_datum_uint32_cmp for comparing OIDs
 19733fa0b42	John Naylor	2026-08-10 17:33:46 +0700	21	Rename sort support integer comparators for clarity
-3d724bf4fde	Noah Misch	2026-08-10 06:37:47 -0700	17	Guard against overlength time zone abbreviations in to_char().
-23d9ad77181	Noah Misch	2026-08-10 06:37:47 -0700	126	Harden tsvector code against overflows.
-90649b6f846	Noah Misch	2026-08-10 06:37:47 -0700	12	Harden tsquery code against overflows.
-343aabf1d95	Noah Misch	2026-08-10 06:37:48 -0700	12	Fix potential buffer overrun in regexp match/split functions.
-63cb15f40c6	Noah Misch	2026-08-10 06:37:48 -0700	14	Harden PL/Perl code against "tied" Perl arrays and hashes.
-8f0c3d2feb9	Noah Misch	2026-08-10 06:37:48 -0700	2	Be more wary about constant's datatype in scalarineqsel().
-7bd56f7a3bd	Noah Misch	2026-08-10 06:37:48 -0700	3	Replace fixed-size, too-short array with a palloc'd one.
-13bb73aeb68	Noah Misch	2026-08-10 06:37:48 -0700	138	pg_dump: avoid assuming how long pg_proc.protrftypes can be.
-60e7329b9b1	Noah Misch	2026-08-10 06:37:48 -0700	109	Protect some fixed-size arrays that have FUNC_MAX_ARGS elements.
-8f7e35b08ad	Noah Misch	2026-08-10 06:37:48 -0700	66	Reject calls from SQL to functions that take or return type internal.
-1aa601b4f55	Noah Misch	2026-08-10 06:37:48 -0700	40	Return nulls honestly in aggregate "combine" functions.
-6713a6e04cb	Noah Misch	2026-08-10 06:37:48 -0700	129	Preserve the owner of extended statistics rebuilt by ALTER TABLE.
-1e2795ddeaf	Noah Misch	2026-08-10 06:37:48 -0700	14	pg_stat_statements: Fix buffer overflow with query normalization
-66c2dbb2044	Noah Misch	2026-08-10 06:37:48 -0700	2	Fix pg_trgm's picksplit function with all-true datums
-776467301ea	Noah Misch	2026-08-10 06:37:49 -0700	24	Use palloc_array() in pltcl and plperl to avoid overflow
-c7da85fec96	Noah Misch	2026-08-10 06:37:49 -0700	66	ecpg: Fix out-of-bound writes due to processing of invalid bytea data
-3bf185b4bb6	Noah Misch	2026-08-10 06:37:49 -0700	7	Reject GSSEncRequest after direct SSL connection
-57835938fa9	Noah Misch	2026-08-10 06:37:49 -0700	43	Fix multirange type handling in pg_restore_attribute_stats()
-f9729b5078d	Noah Misch	2026-08-10 06:37:49 -0700	2	Obstruct EXTRACT() field name deparse injection.
-feb8b0182ff	Noah Misch	2026-08-10 06:37:49 -0700	14	Use value of scram_iterations in mock_scram_secret().
+3d724bf4fde	Tom Lane	2026-08-10 06:37:47 -0700	17	Guard against overlength time zone abbreviations in to_char().
+23d9ad77181	Tom Lane	2026-08-10 06:37:47 -0700	126	Harden tsvector code against overflows.
+90649b6f846	Tom Lane	2026-08-10 06:37:47 -0700	12	Harden tsquery code against overflows.
+343aabf1d95	Masahiko Sawada	2026-08-10 06:37:48 -0700	12	Fix potential buffer overrun in regexp match/split functions.
+63cb15f40c6	Tom Lane	2026-08-10 06:37:48 -0700	14	Harden PL/Perl code against "tied" Perl arrays and hashes.
+8f0c3d2feb9	Tom Lane	2026-08-10 06:37:48 -0700	2	Be more wary about constant's datatype in scalarineqsel().
+7bd56f7a3bd	Tom Lane	2026-08-10 06:37:48 -0700	3	Replace fixed-size, too-short array with a palloc'd one.
+13bb73aeb68	Tom Lane	2026-08-10 06:37:48 -0700	138	pg_dump: avoid assuming how long pg_proc.protrftypes can be.
+60e7329b9b1	Tom Lane	2026-08-10 06:37:48 -0700	109	Protect some fixed-size arrays that have FUNC_MAX_ARGS elements.
+8f7e35b08ad	Tom Lane	2026-08-10 06:37:48 -0700	66	Reject calls from SQL to functions that take or return type internal.
+1aa601b4f55	Tom Lane	2026-08-10 06:37:48 -0700	40	Return nulls honestly in aggregate "combine" functions.
+6713a6e04cb	Masahiko Sawada	2026-08-10 06:37:48 -0700	129	Preserve the owner of extended statistics rebuilt by ALTER TABLE.
+1e2795ddeaf	Álvaro Herrera	2026-08-10 06:37:48 -0700	14	pg_stat_statements: Fix buffer overflow with query normalization
+66c2dbb2044	Heikki Linnakangas	2026-08-10 06:37:48 -0700	2	Fix pg_trgm's picksplit function with all-true datums
+776467301ea	Heikki Linnakangas	2026-08-10 06:37:49 -0700	24	Use palloc_array() in pltcl and plperl to avoid overflow
+c7da85fec96	Michael Paquier	2026-08-10 06:37:49 -0700	66	ecpg: Fix out-of-bound writes due to processing of invalid bytea data
+3bf185b4bb6	Michael Paquier	2026-08-10 06:37:49 -0700	7	Reject GSSEncRequest after direct SSL connection
+57835938fa9	Michael Paquier	2026-08-10 06:37:49 -0700	43	Fix multirange type handling in pg_restore_attribute_stats()
+f9729b5078d	Nathan Bossart	2026-08-10 06:37:49 -0700	2	Obstruct EXTRACT() field name deparse injection.
+feb8b0182ff	Nathan Bossart	2026-08-10 06:37:49 -0700	14	Use value of scram_iterations in mock_scram_secret().
 0fbf785b13e	Noah Misch	2026-08-10 06:37:49 -0700	37	Empty search_path in amcheck.
-20e9dcefdc2	Noah Misch	2026-08-10 06:37:49 -0700	113	Move SplitGUCList() to fe_utils
-226e49cbed5	Noah Misch	2026-08-10 06:37:49 -0700	359	Add an output_plugin_libraries GUC to bless trusted output plugins
-9e02e2e1822	Noah Misch	2026-08-10 06:37:49 -0700	2	Cross-check the type of a portal running EXECUTE or FETCH.
-918683d12d8	Noah Misch	2026-08-10 06:37:49 -0700	77	Avoid overflow in Levenshtein distance calculations.
-a9f6e768ac2	Noah Misch	2026-08-10 06:37:49 -0700	38	Check for USAGE privilege on the subtype in CREATE TYPE AS RANGE.
-4fac4c1085a	Noah Misch	2026-08-10 06:37:50 -0700	318	Check for USAGE privilege on types used by stored expressions.
-53ed5ebd84f	Noah Misch	2026-08-10 06:37:50 -0700	16	Check for USAGE privilege on the composite type in ALTER TABLE OF.
-ffca23839cc	Noah Misch	2026-08-10 06:37:50 -0700	64	Invalidate plan cache after role changes.
-cf754f7414b	Noah Misch	2026-08-10 06:37:50 -0700	120	Save/restore more lexer state when skipping text due to \\if.
-3045a25ba81	Noah Misch	2026-08-10 06:37:50 -0700	308	Teach psql to skip in-line COPY ... FROM STDIN data after a failure.
-a16c31d39c8	Noah Misch	2026-08-10 06:37:50 -0700	51	Fix out-of-bound reads with ascii() for invalid multibyte characters
-d0ecee6de9a	Noah Misch	2026-08-10 06:37:50 -0700	206	Fix errorhandling for PGP encryption
-49e79541484	Noah Misch	2026-08-10 06:37:50 -0700	254	pgcrypto: Add option to revert to prior decryption behavior
-086f6f17601	Noah Misch	2026-08-10 06:37:50 -0700	20	psql: Don't do backquote expansion in \\unrestrict.
+20e9dcefdc2	Jacob Champion	2026-08-10 06:37:49 -0700	113	Move SplitGUCList() to fe_utils
+226e49cbed5	Jacob Champion	2026-08-10 06:37:49 -0700	359	Add an output_plugin_libraries GUC to bless trusted output plugins
+9e02e2e1822	Robert Haas	2026-08-10 06:37:49 -0700	2	Cross-check the type of a portal running EXECUTE or FETCH.
+918683d12d8	Nathan Bossart	2026-08-10 06:37:49 -0700	77	Avoid overflow in Levenshtein distance calculations.
+a9f6e768ac2	Nathan Bossart	2026-08-10 06:37:49 -0700	38	Check for USAGE privilege on the subtype in CREATE TYPE AS RANGE.
+4fac4c1085a	Nathan Bossart	2026-08-10 06:37:50 -0700	318	Check for USAGE privilege on types used by stored expressions.
+53ed5ebd84f	Nathan Bossart	2026-08-10 06:37:50 -0700	16	Check for USAGE privilege on the composite type in ALTER TABLE OF.
+ffca23839cc	Nathan Bossart	2026-08-10 06:37:50 -0700	64	Invalidate plan cache after role changes.
+cf754f7414b	Tom Lane	2026-08-10 06:37:50 -0700	120	Save/restore more lexer state when skipping text due to \\if.
+3045a25ba81	Tom Lane	2026-08-10 06:37:50 -0700	308	Teach psql to skip in-line COPY ... FROM STDIN data after a failure.
+a16c31d39c8	Michael Paquier	2026-08-10 06:37:50 -0700	51	Fix out-of-bound reads with ascii() for invalid multibyte characters
+d0ecee6de9a	Daniel Gustafsson	2026-08-10 06:37:50 -0700	206	Fix errorhandling for PGP encryption
+49e79541484	Jacob Champion	2026-08-10 06:37:50 -0700	254	pgcrypto: Add option to revert to prior decryption behavior
+086f6f17601	Nathan Bossart	2026-08-10 06:37:50 -0700	20	psql: Don't do backquote expansion in \\unrestrict.
 d29d469bece	David Rowley	2026-08-11 13:30:07 +1200	31	Show estimated number of groups for Incremental Sort in EXPLAIN
 370f3366c4c	Peter Eisentraut	2026-08-11 09:28:44 +0200	26	Remove useless/confusing const qualifiers
 0a92b9b7629	Peter Eisentraut	2026-08-11 09:28:44 +0200	1	Remove useless ENABLE_NLS conditionals
@@ -2913,89 +2913,89 @@ d0a4f66217c	Peter Eisentraut	2026-11-08 09:21:58 +0100	1	Avoid duplicate file re
 0091c241f6c	Michael Paquier	2026-11-09 17:03:59 +0900	62	pgstattuple: Reject unlogged and temporary relations during recovery
 8b529705d15	Peter Eisentraut	2026-11-09 10:22:21 +0100	7	psql: Stop scripts on Ctrl+C while waiting for COPY or prompt input
 ce43880d3b2	Daniel Gustafsson	2026-11-09 12:50:51 +0100	1	Fix incorrect Unicode code point in SASLprep comment
-4a18e9b5f36	Noah Misch	2026-11-09 06:20:29 -0800	2	pg_basebackup: Fix use of externally-controlled format string
-832857532f4	Noah Misch	2026-11-09 06:20:29 -0800	24	Fix type confusion in PL/Perl's get_perl_array_ref().
-4d93c03843f	Noah Misch	2026-11-09 06:20:29 -0800	38	Fix stale attribute pointer in COPY FROM error context.
-27dfe0e341c	Noah Misch	2026-11-09 06:20:29 -0800	21	Fix potential buffer overrun in tsvector_delete().
-c8d128858d2	Noah Misch	2026-11-09 06:20:29 -0800	11	Fix potential buffer overrun in ts_rank_cd().
-f22d6aba940	Noah Misch	2026-11-09 06:20:30 -0800	29	Prevent construction of invalid "name" values via element assignment.
-bc1fa1003f6	Noah Misch	2026-11-09 06:20:30 -0800	50	Avoid use-after-free hazards in re-entrant use of pltcl.
-daafcbd1143	Noah Misch	2026-11-09 06:20:30 -0800	588	Fix PL/Perl to cope with errors thrown from tied structures.
-bcb007a7213	Noah Misch	2026-11-09 06:20:30 -0800	106	Hold a reference on a Perl array or hash while scanning it.
-1388b0fbd4c	Noah Misch	2026-11-09 06:20:30 -0800	48	plperl: don't save and re-use temp context in return_next().
-41a3a980ee3	Noah Misch	2026-11-09 06:20:30 -0800	116	Further harden PL/Perl against tied-scalar mischief.
-4581711f38b	Noah Misch	2026-11-09 06:20:30 -0800	77	Treat application of a leaky function to CaseTestExpr/Param as leaky.
+4a18e9b5f36	Peter Eisentraut	2026-11-09 06:20:29 -0800	2	pg_basebackup: Fix use of externally-controlled format string
+832857532f4	Andrew Dunstan	2026-11-09 06:20:29 -0800	24	Fix type confusion in PL/Perl's get_perl_array_ref().
+4d93c03843f	Masahiko Sawada	2026-11-09 06:20:29 -0800	38	Fix stale attribute pointer in COPY FROM error context.
+27dfe0e341c	Tom Lane	2026-11-09 06:20:29 -0800	21	Fix potential buffer overrun in tsvector_delete().
+c8d128858d2	Tom Lane	2026-11-09 06:20:29 -0800	11	Fix potential buffer overrun in ts_rank_cd().
+f22d6aba940	Tom Lane	2026-11-09 06:20:30 -0800	29	Prevent construction of invalid "name" values via element assignment.
+bc1fa1003f6	Tom Lane	2026-11-09 06:20:30 -0800	50	Avoid use-after-free hazards in re-entrant use of pltcl.
+daafcbd1143	Tom Lane	2026-11-09 06:20:30 -0800	588	Fix PL/Perl to cope with errors thrown from tied structures.
+bcb007a7213	Tom Lane	2026-11-09 06:20:30 -0800	106	Hold a reference on a Perl array or hash while scanning it.
+1388b0fbd4c	Tom Lane	2026-11-09 06:20:30 -0800	48	plperl: don't save and re-use temp context in return_next().
+41a3a980ee3	Andrew Dunstan	2026-11-09 06:20:30 -0800	116	Further harden PL/Perl against tied-scalar mischief.
+4581711f38b	Tom Lane	2026-11-09 06:20:30 -0800	77	Treat application of a leaky function to CaseTestExpr/Param as leaky.
 7f854a31f75	Noah Misch	2026-11-09 06:20:30 -0800	340	Block ALTER SCHEMA RENAME attack on CREATE EXTENSION etc., via locking.
 7fad20ce337	Noah Misch	2026-11-09 06:20:30 -0800	126	Reject extnamespace if it's temporary or it's '$user'::regnamespace.
-208ea05a51b	Noah Misch	2026-11-09 06:20:30 -0800	41	Dispatch pre-auth cancel requests until _exit(1) handlers are disarmed
-7820c8c397d	Noah Misch	2026-11-09 06:20:30 -0800	39	reindexdb: Escape index names in parallel catalog query
-e27929e3b6d	Noah Misch	2026-11-09 06:20:30 -0800	5	Fix reusing large allocations in generation memory contexts
-3beee6e77c8	Noah Misch	2026-11-09 06:20:30 -0800	286	Handle composite type changes in ExecEvalFieldStore[De]Form
-fffd8a41f3c	Noah Misch	2026-11-09 06:20:30 -0800	26	Tighten CREATE AGGREGATE's checks on validity of a SORTOP option.
-3bb99318e56	Noah Misch	2026-11-09 06:20:30 -0800	14	find_or_make_matching_shared_tupledesc: Fix possible use-after-free.
-398eb35f001	Noah Misch	2026-11-09 06:20:30 -0800	190	Don't leave a stale slot in 'tcs_original_insert_tuple'
-99c7967a799	Noah Misch	2026-11-09 06:20:30 -0800	117	plperl: Refuse to free a prepared query that is being executed.
-d41c9fad085	Noah Misch	2026-11-09 06:20:30 -0800	381	Keep the relation open while importing its statistics.
-28e164e1de2	Noah Misch	2026-11-09 06:20:30 -0800	456	Check that commutator/negator operators return the same data type.
-f24a08ec13e	Noah Misch	2026-11-09 06:20:31 -0800	110	Fix crash in REINDEX CONCURRENTLY due to DDLs run in index functions
-5b23669ea34	Noah Misch	2026-11-09 06:20:31 -0800	463	Fix use-after-free issues due to drop of portals being set up
-296d035f4dc	Noah Misch	2026-11-09 06:20:31 -0800	54	Check EXECUTE privilege on type-to-json cast functions.
-e6695e2a767	Noah Misch	2026-11-09 06:20:31 -0800	53	Check EXECUTE privilege on foreign key cast functions.
-053e39d9349	Noah Misch	2026-11-09 06:20:31 -0800	12	dict_int: Return NULL for zero-length tokens.
-05680d41cc9	Noah Misch	2026-11-09 06:20:31 -0800	37	Check table ownership when DROP OWNED BY changes policies.
-1ce3bce608d	Noah Misch	2026-11-09 06:20:31 -0800	13	vacuumdb: Fully qualify the catalog query's operators.
-4056493220e	Noah Misch	2026-11-09 06:20:31 -0800	84	pg_restore: Fix out-of-bounds accesses and path traversal.
-91ede176883	Noah Misch	2026-11-09 06:20:31 -0800	67	Prevent creating types in pg_temp from restricted code.
-d7344264584	Noah Misch	2026-11-09 06:20:31 -0800	5	pg_dump: Quote not-null constraint names.
-60d3e3f1fea	Noah Misch	2026-11-09 06:20:31 -0800	45	Avoid out-of-bounds accesses in FDW batch inserts.
-2d4995f797b	Noah Misch	2026-11-09 06:20:31 -0800	31	Avoid out-of-bounds reads in parallel btree scans with array keys.
-f475710183f	Noah Misch	2026-11-09 06:20:31 -0800	105	Reject more unsafe names in extension script substitutions.
+208ea05a51b	Michael Paquier	2026-11-09 06:20:30 -0800	41	Dispatch pre-auth cancel requests until _exit(1) handlers are disarmed
+7820c8c397d	Michael Paquier	2026-11-09 06:20:30 -0800	39	reindexdb: Escape index names in parallel catalog query
+e27929e3b6d	Heikki Linnakangas	2026-11-09 06:20:30 -0800	5	Fix reusing large allocations in generation memory contexts
+3beee6e77c8	Tomas Vondra	2026-11-09 06:20:30 -0800	286	Handle composite type changes in ExecEvalFieldStore[De]Form
+fffd8a41f3c	Tom Lane	2026-11-09 06:20:30 -0800	26	Tighten CREATE AGGREGATE's checks on validity of a SORTOP option.
+3bb99318e56	Robert Haas	2026-11-09 06:20:30 -0800	14	find_or_make_matching_shared_tupledesc: Fix possible use-after-free.
+398eb35f001	Heikki Linnakangas	2026-11-09 06:20:30 -0800	190	Don't leave a stale slot in 'tcs_original_insert_tuple'
+99c7967a799	Masahiko Sawada	2026-11-09 06:20:30 -0800	117	plperl: Refuse to free a prepared query that is being executed.
+d41c9fad085	Masahiko Sawada	2026-11-09 06:20:30 -0800	381	Keep the relation open while importing its statistics.
+28e164e1de2	Tom Lane	2026-11-09 06:20:30 -0800	456	Check that commutator/negator operators return the same data type.
+f24a08ec13e	Michael Paquier	2026-11-09 06:20:31 -0800	110	Fix crash in REINDEX CONCURRENTLY due to DDLs run in index functions
+5b23669ea34	Michael Paquier	2026-11-09 06:20:31 -0800	463	Fix use-after-free issues due to drop of portals being set up
+296d035f4dc	Nathan Bossart	2026-11-09 06:20:31 -0800	54	Check EXECUTE privilege on type-to-json cast functions.
+e6695e2a767	Nathan Bossart	2026-11-09 06:20:31 -0800	53	Check EXECUTE privilege on foreign key cast functions.
+053e39d9349	Nathan Bossart	2026-11-09 06:20:31 -0800	12	dict_int: Return NULL for zero-length tokens.
+05680d41cc9	Nathan Bossart	2026-11-09 06:20:31 -0800	37	Check table ownership when DROP OWNED BY changes policies.
+1ce3bce608d	Nathan Bossart	2026-11-09 06:20:31 -0800	13	vacuumdb: Fully qualify the catalog query's operators.
+4056493220e	Nathan Bossart	2026-11-09 06:20:31 -0800	84	pg_restore: Fix out-of-bounds accesses and path traversal.
+91ede176883	Nathan Bossart	2026-11-09 06:20:31 -0800	67	Prevent creating types in pg_temp from restricted code.
+d7344264584	Nathan Bossart	2026-11-09 06:20:31 -0800	5	pg_dump: Quote not-null constraint names.
+60d3e3f1fea	Nathan Bossart	2026-11-09 06:20:31 -0800	45	Avoid out-of-bounds accesses in FDW batch inserts.
+2d4995f797b	Nathan Bossart	2026-11-09 06:20:31 -0800	31	Avoid out-of-bounds reads in parallel btree scans with array keys.
+f475710183f	Nathan Bossart	2026-11-09 06:20:31 -0800	105	Reject more unsafe names in extension script substitutions.
 146e03e79a5	Noah Misch	2026-11-09 06:20:31 -0800	280	Make \\restrict keys protective in pg_dump --format=tar restore.sql.
-016b63271fb	Noah Misch	2026-11-09 06:20:31 -0800	69	Replace typcache.c's buggy in_progress_list.
-7c0735bd343	Noah Misch	2026-11-09 06:20:31 -0800	68	Reject pseudo-types in extended statistics expressions.
-7becf1984f4	Noah Misch	2026-11-09 06:20:31 -0800	190	Reject system catalogs as logical replication targets.
-146771107cf	Noah Misch	2026-11-09 06:20:31 -0800	20	Fix use-after-free in pg_show_all_settings().
-abe3b910a12	Noah Misch	2026-11-09 06:20:31 -0800	380	dblink: Refuse to use a connection that a dblink call is already using.
-d4f9b1c3505	Noah Misch	2026-11-09 06:20:31 -0800	48	Allow SET LOGGED/UNLOGGED and changing AM when the rowtype is in use
-f70f28fec97	Noah Misch	2026-11-09 06:20:32 -0800	973	Add tests for find_composite_type_dependencies() bugs
-163cb48ffa8	Noah Misch	2026-11-09 06:20:32 -0800	113	Split find_composite_type_dependencies() into smaller functions
-f02b46fefe6	Noah Misch	2026-11-09 06:20:32 -0800	61	Avoid visiting a type twice in find_composite_type_dependencies()
-0b0f5c5af11	Noah Misch	2026-11-09 06:20:32 -0800	153	Forbid ALTERing column type by default when other objects depend on it
-882eb502595	Noah Misch	2026-11-09 06:20:32 -0800	90	Check for Consts in function DEFAULTs and body
-1ff5607e95f	Noah Misch	2026-11-09 06:20:32 -0800	44	Check for Consts in constraint definitions
-3a98781ba12	Noah Misch	2026-11-09 06:20:32 -0800	33	Check for Consts in domain DEFAULTs
-6e578eeb6d9	Noah Misch	2026-11-09 06:20:32 -0800	206	Check relation dependencies more carefully
-fbd9f77ec88	Noah Misch	2026-11-09 06:20:32 -0800	10	Forbid changing type if the rowtype is used in a foreign table
-ac460a144ac	Noah Misch	2026-11-09 06:20:32 -0800	152	Check for missing dependencies on types
-d98d99ba17b	Noah Misch	2026-11-09 06:20:32 -0800	64	Start to record type dependencies on index expressions et al
-b4e703af02c	Noah Misch	2026-11-09 06:20:32 -0800	273	Prevent ALTERing a row type that's concurrently used in a column
-ba6b3791860	Noah Misch	2026-11-09 06:20:32 -0800	12	Lock affected rowtype and dependent types on ALTER ATTRIBUTE
-af5f25e7b06	Noah Misch	2026-11-09 06:20:32 -0800	51	Fix race condition adding a DEFAULT expression to a function
-2f32e08adc7	Noah Misch	2026-11-09 06:20:32 -0800	73	Check ON CONFLICT target row against RLS policies before user quals.
-08010fa4f43	Noah Misch	2026-11-09 06:20:32 -0800	503	Validate all connection options before using libpqsrv_connect*
-c2439a04353	Noah Misch	2026-11-09 06:20:32 -0800	15	Teach equalRowTypes() to safely handle dropped columns.
-b93d8a554da	Noah Misch	2026-11-09 06:20:32 -0800	16	Avoid using a dangling pointer in expanded-record domain checks.
-ff2e66f4953	Noah Misch	2026-11-09 06:20:32 -0800	35	plpgsql: recheck record field's type after casting value.
-eb423d5987a	Noah Misch	2026-11-09 06:20:32 -0800	100	Reject pseudo-type output parameters in SQL functions.
-7bb89dbfde4	Noah Misch	2026-11-09 06:20:33 -0800	110	Protect against miscalculation of tuple sizes via int32 overflow
-315c4e4e85f	Noah Misch	2026-11-09 06:20:33 -0800	600	Enforce view row visibility for INSERT ... ON CONFLICT target rows.
-7a910b4e158	Noah Misch	2026-11-09 06:20:33 -0800	58	Close portals at end of trigger functions with transition tables.
+016b63271fb	Robert Haas	2026-11-09 06:20:31 -0800	69	Replace typcache.c's buggy in_progress_list.
+7c0735bd343	Masahiko Sawada	2026-11-09 06:20:31 -0800	68	Reject pseudo-types in extended statistics expressions.
+7becf1984f4	Masahiko Sawada	2026-11-09 06:20:31 -0800	190	Reject system catalogs as logical replication targets.
+146771107cf	Masahiko Sawada	2026-11-09 06:20:31 -0800	20	Fix use-after-free in pg_show_all_settings().
+abe3b910a12	Masahiko Sawada	2026-11-09 06:20:31 -0800	380	dblink: Refuse to use a connection that a dblink call is already using.
+d4f9b1c3505	Heikki Linnakangas	2026-11-09 06:20:31 -0800	48	Allow SET LOGGED/UNLOGGED and changing AM when the rowtype is in use
+f70f28fec97	Heikki Linnakangas	2026-11-09 06:20:32 -0800	973	Add tests for find_composite_type_dependencies() bugs
+163cb48ffa8	Heikki Linnakangas	2026-11-09 06:20:32 -0800	113	Split find_composite_type_dependencies() into smaller functions
+f02b46fefe6	Heikki Linnakangas	2026-11-09 06:20:32 -0800	61	Avoid visiting a type twice in find_composite_type_dependencies()
+0b0f5c5af11	Heikki Linnakangas	2026-11-09 06:20:32 -0800	153	Forbid ALTERing column type by default when other objects depend on it
+882eb502595	Heikki Linnakangas	2026-11-09 06:20:32 -0800	90	Check for Consts in function DEFAULTs and body
+1ff5607e95f	Heikki Linnakangas	2026-11-09 06:20:32 -0800	44	Check for Consts in constraint definitions
+3a98781ba12	Heikki Linnakangas	2026-11-09 06:20:32 -0800	33	Check for Consts in domain DEFAULTs
+6e578eeb6d9	Heikki Linnakangas	2026-11-09 06:20:32 -0800	206	Check relation dependencies more carefully
+fbd9f77ec88	Heikki Linnakangas	2026-11-09 06:20:32 -0800	10	Forbid changing type if the rowtype is used in a foreign table
+ac460a144ac	Heikki Linnakangas	2026-11-09 06:20:32 -0800	152	Check for missing dependencies on types
+d98d99ba17b	Heikki Linnakangas	2026-11-09 06:20:32 -0800	64	Start to record type dependencies on index expressions et al
+b4e703af02c	Heikki Linnakangas	2026-11-09 06:20:32 -0800	273	Prevent ALTERing a row type that's concurrently used in a column
+ba6b3791860	Heikki Linnakangas	2026-11-09 06:20:32 -0800	12	Lock affected rowtype and dependent types on ALTER ATTRIBUTE
+af5f25e7b06	Heikki Linnakangas	2026-11-09 06:20:32 -0800	51	Fix race condition adding a DEFAULT expression to a function
+2f32e08adc7	Peter Geoghegan	2026-11-09 06:20:32 -0800	73	Check ON CONFLICT target row against RLS policies before user quals.
+08010fa4f43	Jacob Champion	2026-11-09 06:20:32 -0800	503	Validate all connection options before using libpqsrv_connect*
+c2439a04353	Peter Geoghegan	2026-11-09 06:20:32 -0800	15	Teach equalRowTypes() to safely handle dropped columns.
+b93d8a554da	Tom Lane	2026-11-09 06:20:32 -0800	16	Avoid using a dangling pointer in expanded-record domain checks.
+ff2e66f4953	Tom Lane	2026-11-09 06:20:32 -0800	35	plpgsql: recheck record field's type after casting value.
+eb423d5987a	Peter Geoghegan	2026-11-09 06:20:32 -0800	100	Reject pseudo-type output parameters in SQL functions.
+7bb89dbfde4	Álvaro Herrera	2026-11-09 06:20:33 -0800	110	Protect against miscalculation of tuple sizes via int32 overflow
+315c4e4e85f	Peter Geoghegan	2026-11-09 06:20:33 -0800	600	Enforce view row visibility for INSERT ... ON CONFLICT target rows.
+7a910b4e158	Jeff Davis	2026-11-09 06:20:33 -0800	58	Close portals at end of trigger functions with transition tables.
 b2f1afd9f13	Noah Misch	2026-11-09 06:20:33 -0800	75	Align REASSIGN OWNED caller-privilege checks with ALTER ... OWNER TO.
-6f6e4a955cd	Noah Misch	2026-11-09 06:20:33 -0800	67	Fix type confusion with materialized set-returning functions
-4a95f56c04d	Noah Misch	2026-11-09 06:20:33 -0800	57	Harden some allocations against integer wraparound
-2387f43ba8a	Noah Misch	2026-11-09 06:20:33 -0800	717	plpgsql: Expand test coverage of assignments
-54568e4d8ce	Noah Misch	2026-11-09 06:20:33 -0800	237	Expand EPQ test coverage
-19db7bd096a	Noah Misch	2026-11-09 06:20:33 -0800	98	Add test for NOT NULL differing across partition hierarchy
-e874b27122a	Noah Misch	2026-11-09 06:20:33 -0800	162	Add some very basic tests for make_expanded_record_from_datum()
-3d855ce1ab3	Noah Misch	2026-11-09 06:20:33 -0800	417	Expand ALTER TABLE related tests
-b6b14f6424c	Noah Misch	2026-11-09 06:20:33 -0800	23	postgres_fdw: Test COPY ... TO (FORMAT json)
-ed121a1a43e	Noah Misch	2026-11-09 06:20:33 -0800	3643	Add tests for row type changes causing issues
-0f86e57d614	Noah Misch	2026-11-09 06:20:33 -0800	67	plpgsql: Check compatibility of source/target ERHs
-bcaef7edb41	Noah Misch	2026-11-09 06:20:33 -0800	26	Always acquire expanded record descriptors early
-245eb832f88	Noah Misch	2026-11-09 06:20:33 -0800	2630	Introduce attribute versioning to prevent unsafe deforming
-a3caa62309f	Noah Misch	2026-11-09 06:20:33 -0800	1473	Add attribute versioning specific tests
-17fc99f4e50	Noah Misch	2026-11-09 06:20:33 -0800	294	Add checks for cross-rowtype deforming and conversions
-6a3da13d376	Noah Misch	2026-11-09 06:20:33 -0800	178	Move per-attribute version to pg_attribute.attversion
+6f6e4a955cd	Robert Haas	2026-11-09 06:20:33 -0800	67	Fix type confusion with materialized set-returning functions
+4a95f56c04d	Álvaro Herrera	2026-11-09 06:20:33 -0800	57	Harden some allocations against integer wraparound
+2387f43ba8a	Andres Freund	2026-11-09 06:20:33 -0800	717	plpgsql: Expand test coverage of assignments
+54568e4d8ce	Andres Freund	2026-11-09 06:20:33 -0800	237	Expand EPQ test coverage
+19db7bd096a	Andres Freund	2026-11-09 06:20:33 -0800	98	Add test for NOT NULL differing across partition hierarchy
+e874b27122a	Andres Freund	2026-11-09 06:20:33 -0800	162	Add some very basic tests for make_expanded_record_from_datum()
+3d855ce1ab3	Andres Freund	2026-11-09 06:20:33 -0800	417	Expand ALTER TABLE related tests
+b6b14f6424c	Andres Freund	2026-11-09 06:20:33 -0800	23	postgres_fdw: Test COPY ... TO (FORMAT json)
+ed121a1a43e	Andres Freund	2026-11-09 06:20:33 -0800	3643	Add tests for row type changes causing issues
+0f86e57d614	Andres Freund	2026-11-09 06:20:33 -0800	67	plpgsql: Check compatibility of source/target ERHs
+bcaef7edb41	Andres Freund	2026-11-09 06:20:33 -0800	26	Always acquire expanded record descriptors early
+245eb832f88	Andres Freund	2026-11-09 06:20:33 -0800	2630	Introduce attribute versioning to prevent unsafe deforming
+a3caa62309f	Andres Freund	2026-11-09 06:20:33 -0800	1473	Add attribute versioning specific tests
+17fc99f4e50	Andres Freund	2026-11-09 06:20:33 -0800	294	Add checks for cross-rowtype deforming and conversions
+6a3da13d376	Andres Freund	2026-11-09 06:20:33 -0800	178	Move per-attribute version to pg_attribute.attversion
 c074737f687	Nathan Bossart	2026-11-09 14:44:39 -0600	40	doc: Rearrange the logical operator truth tables.
 edbb1d2dcb1	David Rowley	2026-11-10 17:28:29 +1300	345	Add memory/disk usage for Function Scan nodes in EXPLAIN
 58aecdd064c	Etsuro Fujita	2026-11-10 15:15:00 +0900	5	Improve comments for ExecAppendAsyncEventWait.
@@ -3164,3 +3164,7 @@ b8bf2880055	Amit Kapila	2026-11-26 11:17:01 +0530	136	Fix assorted issues in con
 060eebf4179	Álvaro Herrera	2026-11-26 11:55:06 +0100	6	Remove OldHeap argument from build_new_indexes()
 388f2db2994	Heikki Linnakangas	2026-11-26 13:46:58 +0200	1	pg_upgrade: Don't run the not-null inheritance check on v18 clusters
 3b249c728fd	Heikki Linnakangas	2026-11-26 14:24:51 +0200	25	Fix losing a sinval catchup signal that arrives during catchup
+73401447c34	Daniel Gustafsson	2026-11-26 13:38:22 +0100	3	Remove backwards compatibility ifdef for SSL_AD_NO_APPLICATION_PROTOCOL
+91993c160de	Tomas Vondra	2026-11-26 14:05:50 +0100	7	Fix query ID reporting in parallel workers for GIN index builds
+b4548161b94	Heikki Linnakangas	2026-11-26 15:19:54 +0200	4	Prevent stack overflow in exprLocation()
+d5fb939db80	Daniel Gustafsson	2026-11-26 14:32:35 +0100	0	Remove incorrect comment on UpdateDeadTupleRetentionStatus

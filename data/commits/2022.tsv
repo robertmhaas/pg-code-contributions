@@ -1,4 +1,4 @@
-hash	committer	committed_at	insertions	subject
+hash	author	committed_at	insertions	subject
 4ace4567765	Tom Lane	2022-01-01 16:12:03 -0500	92	Fix index-only scan plans when not all index columns can be returned.
 69872d0bbe6	Magnus Hagander	2022-01-02 17:06:32 +0100	1	Fix typo
 234ba627699	Michael Paquier	2022-01-03 17:34:45 +0900	0	pg_stat_statements: Remove obsolete comment
@@ -1895,8 +1895,8 @@ af51b2f042a	Amit Kapila	2022-09-26 08:47:00 +0530	3	Remove unused xid parameter.
 8999f5ed3cd	Peter Eisentraut	2022-09-26 15:25:59 +0200	30	Fix write/read of empty string fields in Nodes.
 c07785d458c	Peter Eisentraut	2022-09-26 15:56:47 +0200	1	catversion bump
 acd624644bc	Peter Eisentraut	2022-09-26 16:02:09 +0200	25	Don't lose precision for float fields of Nodes.
-40ad8f9deed	Peter Eisentraut	2022-09-26 16:32:16 +0200	15	Implement WRITE_READ_PARSE_PLAN_TREES for raw parse trees
-787102b5637	Peter Eisentraut	2022-09-26 16:32:16 +0200	4	Enable WRITE_READ_PARSE_PLAN_TREES of rewritten utility statements
+40ad8f9deed	Tom Lane	2022-09-26 16:32:16 +0200	15	Implement WRITE_READ_PARSE_PLAN_TREES for raw parse trees
+787102b5637	Tom Lane	2022-09-26 16:32:16 +0200	4	Enable WRITE_READ_PARSE_PLAN_TREES of rewritten utility statements
 fbd2bd15b01	Tom Lane	2022-09-26 14:19:21 -0400	4	Doc: further adjust notes about pg_upgrade_output.d.
 31d2c4716e6	Andres Freund	2022-09-26 11:38:02 -0700	0	windows: remove date from version number in win32ver.rc
 e1e6f8f3dfe	Michael Paquier	2022-09-27 09:15:07 +0900	14	Remove dependency to StringInfo in xlogbackup.{c.h}
