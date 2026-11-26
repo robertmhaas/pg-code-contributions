@@ -11569,3 +11569,369 @@ ba11c483900	Backpatch-through	19
 6ec71e1ad8c	Backpatch-through	15
 514bfe2c6df	Author	Chao Li <lic@highgo.com>
 514bfe2c6df	Discussion	https://www.postgresql.org/message-id/6E01C9AD-0446-4C2C-BA28-375FC4DA800A@gmail.com
+17550c8a714	Reported-by	Tender Wang <tndrwang@gmail.com>
+17550c8a714	Author	Tender Wang <tndrwang@gmail.com>
+17550c8a714	Reviewed-by	solai v <solai.cdac@gmail.com>
+17550c8a714	Discussion	https://postgr.es/m/CAHewXNkYF4dZ85mFwScSd%2BbMYPLg%3DzvfL1GJz47dxpwFPPjuOg%40mail.gmail.com
+17550c8a714	Backpatch-through	17
+61f6021b110	Author	Sergey Shinderuk <s.shinderuk@postgrespro.ru>
+61f6021b110	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+61f6021b110	Reviewed-by	Yuefei Shi <shiyuefei1004@gmail.com>
+61f6021b110	Discussion	https://www.postgresql.org/message-id/A96F1990-57F8-4566-B55D-43D6087EE313@postgrespro.ru
+61f6021b110	Backpatch-through	18
+5aa40dc6793	Author	Jelte Fennema-Nio <postgres@jeltef.nl>
+5aa40dc6793	Discussion	https://www.postgresql.org/message-id/flat/DEY0N7FS8NCU.1F7QXGG37MQ09@jeltef.nl
+a991c029eec	Co-authored-by	Henrik TJ <henrik@0x48.dk>
+a991c029eec	Discussion	https://www.postgresql.org/message-id/7ecd1d06-24ab-ec54-127c-93e4ec691b77@0x48.dk
+72b480e55d7	Author	Tomas Vondra <tomas@vondra.me>
+72b480e55d7	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+72b480e55d7	Reviewed-by	Kirill Reshke <reshkekirill@gmail.com>
+72b480e55d7	Discussion	https://postgr.es/m/0074fbf7-a92c-417a-937a-6b1fc27aed82@vondra.me
+72b480e55d7	Backpatch-through	15
+4226f1f01ad	Author	Baji Shaik <baji.pgdev@gmail.com>
+4226f1f01ad	Reviewed-by	Bharath Rupireddy <bharath.rupireddyforpostgres@gmail.com>
+4226f1f01ad	Discussion	https://postgr.es/m/CA%2Bfm-RPOMc-GHjpv4DpXO1eqMahCeZDpAgXWqVgnsB3s3arptA%40mail.gmail.com
+4226f1f01ad	Backpatch-through	19
+b443bc7406f	Suggested-by	Lukas Fittl <lukas@fittl.com>
+b443bc7406f	Discussion	https://postgr.es/m/CAP53PkzhhC4yQtmBLGHz41-Bs3ZqtQdtYGjxMh_xcTK6Z7eU9Q%40mail.gmail.com
+736ecc413b3	Author	Tomas Vondra <tomas@vondra.me>
+736ecc413b3	Reviewed-by	surya poondla <suryapoondla4@gmail.com>
+736ecc413b3	Reviewed-by	shihao zhong <zhong950419@gmail.com>
+736ecc413b3	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+736ecc413b3	Discussion	https://postgr.es/m/a797f236-286a-43e6-9b82-5f3d70bd5e99@vondra.me
+736ecc413b3	Backpatch-through	15
+882881ac1aa	ERROR	could not implement UNION
+882881ac1aa	DETAIL	Some of the datatypes only support hashing, while others only support sorting.
+882881ac1aa	Bug	#19916
+882881ac1aa	Reported-by	Robins Tharakan <tharakan@gmail.com>
+882881ac1aa	Author	Tom Lane <tgl@sss.pgh.pa.us>
+882881ac1aa	Discussion	https://postgr.es/m/19916-8097ca71b8aa4085@postgresql.org
+882881ac1aa	Backpatch-through	17
+db26517e79c	Reported-by	Matthias van de Meent <boekewurm+postgres@gmail.com>
+db26517e79c	Reported-by	Rogers Wang <rogers.ww@qq.com>
+db26517e79c	Reviewed-by	surya poondla <suryapoondla4@gmail.com>
+db26517e79c	Reviewed-by	Robert Haas <robertmhaas@gmail.com>
+db26517e79c	Reviewed-by	Zhijie Hou <houzhijie22@gmail.com>
+db26517e79c	Author	Melanie Plageman <melanieplageman@gmail.com>
+db26517e79c	Discussion	https://postgr.es/m/flat/CAEze2WgNjODiAiTU18E06_BrRK0nqwJ1kdS_bN61c2_DpFDSnQ%40mail.gmail.com
+db26517e79c	Backpatch-through	15
+0c9fc1a96be	Reported-by	Rui Zhao <zhaorui126@gmail.com>
+0c9fc1a96be	Author	Bilal Kahraman <kahramannbilal@gmail.com>
+0c9fc1a96be	Discussion	https://postgr.es/m/CAPkprsxXAapaJJHYVL=xLnntKDH6SZKxoxkNeDy3ZcHLqowfsw@mail.gmail.com
+0c9fc1a96be	Discussion	https://postgr.es/m/CAHWVJhHccsjcBFdgFemRu_x8n_o0_kn_MMx5g+uAnYtYxKxO5w@mail.gmail.com
+0c9fc1a96be	Discussion	https://postgr.es/m/CAPkprsycOwGY4tfU_14aX-3LyLS+D4++4a4umGS0QYgjW+hzMg@mail.gmail.com
+0c9fc1a96be	Backpatch-through	15
+0bfb84006e3	Reported-by	Melanie Plageman <melanieplageman@gmail.com>
+0bfb84006e3	Author	Melanie Plageman <melanieplageman@gmail.com>
+0bfb84006e3	Reviewed-by	shihao zhong <zhong950419@gmail.com>
+0bfb84006e3	Backpatch-through	17
+c266e204a7a	Reported-by	Jacky Nguyen <nktpro@gmail.com>
+c266e204a7a	Reviewed-by	Kirill Reshke <reshkekirill@gmail.com>
+c266e204a7a	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+c266e204a7a	Reviewed-by	Rahul Yadav <rahul@rhyadav.dev>
+c266e204a7a	Discussion	https://postgr.es/m/CAL4mQLAp562c1rCgg2Dqx6TBSdOk6vOvaLFjwFG9E6k4uwvJJw%40mail.gmail.com
+c266e204a7a	Backpatch-through	17
+a20d50a00ed	Author	Xiaoxuan Li <xioxuan@amazon.com>
+a20d50a00ed	Discussion	https://postgr.es/m/CANuORAZumpvu2PJwGhVWihKfmUTNcWEbknBZG5-O3aq0uuKbhw@mail.gmail.com
+a20d50a00ed	Backpatch-through	19
+d94964f14f3	Author	Michael Paquier <michael@paquier.xyz>
+d94964f14f3	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+d94964f14f3	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+d94964f14f3	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+d94964f14f3	Discussion	https://postgr.es/m/aver6A1EQEd2FaKq@paquier.xyz
+d94964f14f3	Backpatch-through	15
+e7e1835e6b0	Author	Chao Li <lic@highgo.com>
+e7e1835e6b0	Reviewed-by	Kirill Reshke <reshkekirill@gmail.com>
+e7e1835e6b0	Reviewed-by	Ishjaap Singh <ishjaap.singh07@gmail.com>
+e7e1835e6b0	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+e7e1835e6b0	Discussion	https://postgr.es/m/0B33F84F-6AA3-4A39-A45D-D8F31D4E44D8@gmail.com
+e7e1835e6b0	Backpatch-through	15
+47ca0f45e6f	Reported-by	Michael Malis <malis@pgrust.com>
+47ca0f45e6f	Author	Andrey Rachitskiy <pl0h0yp1@gmail.com>
+47ca0f45e6f	Reviewed-by	Aleksander Alekseev <aleksander@tigerdata.com>
+47ca0f45e6f	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+47ca0f45e6f	Discussion	https://postgr.es/m/19594-5d9bdc019e3f7f6e@postgresql.org
+47ca0f45e6f	Backpatch-through	15
+afdbe2596ce	Author	Karen Jex <karenhjex@gmail.com>
+afdbe2596ce	Reviewed-by	Laurenz Albe <laurenz.albe@cybertec.at>
+afdbe2596ce	Reviewed-by	Xavier Fischer <xavier_fischer@hotmail.fr>
+afdbe2596ce	Reviewed-by	Daniel Gustafsson <daniel@yesql.se>
+afdbe2596ce	Reviewed-by	Peter Smith <smithpb2250@gmail.com>
+afdbe2596ce	Discussion	https://postgr.es/m/D7B95A7B-88B8-43E6-9DFB-2261B0849337@yesql.se
+b6257924b13	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+b6257924b13	Discussion	https://www.postgresql.org/message-id/flat/70b86618-4038-4b19-8847-1a400d99d477%40eisentraut.org
+0ddda120e08	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+0ddda120e08	Discussion	https://www.postgresql.org/message-id/flat/70b86618-4038-4b19-8847-1a400d99d477%40eisentraut.org
+09b40d2cf07	Author	Bohyun Lee <bohyun.lee@databricks.com>
+09b40d2cf07	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+09b40d2cf07	Discussion	https://www.postgresql.org/message-id/8c65df31-345e-429c-98fa-867f08d703b6@iki.fi
+09b40d2cf07	Backpatch-through	16
+32dd742b075	Author	Bohyun Lee <bohyun.lee@databricks.com>
+32dd742b075	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+32dd742b075	Discussion	https://www.postgresql.org/message-id/8c65df31-345e-429c-98fa-867f08d703b6@iki.fi
+32dd742b075	Backpatch-through	16
+0cb41ee8070	Author	Fujii Masao <masao.fujii@gmail.com>
+0cb41ee8070	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+0cb41ee8070	Reviewed-by	Michael Paquier <michael@paquier.xyz>
+0cb41ee8070	Reviewed-by	Xuneng Zhou <xunengzhou@gmail.com>
+0cb41ee8070	Discussion	https://postgr.es/m/CAHGQGwHfCrEogr6=wr0nCkQevAJ9A3HBqQRjT9iJryO7EjF6Lw@mail.gmail.com
+0cb41ee8070	Backpatch-through	15
+4a26e36f87f	Author	ChangAo Chen <cca5507@qq.com>
+4a26e36f87f	Reviewed-by	Surya Poondla <suryapoondla4@gmail.com>
+4a26e36f87f	Reviewed-by	Kyotaro Horiguchi <horikyota.ntt@gmail.com>
+4a26e36f87f	Reviewed-by	Solai V <solai.cdac@gmail.com>
+4a26e36f87f	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+4a26e36f87f	Reviewed-by	Xuneng Zhou <xunengzhou@gmail.com>
+4a26e36f87f	Discussion	https://www.postgresql.org/message-id/tencent_A37630454CE614AFE640C56E33B4A0F0AE05%40qq.com
+4a26e36f87f	Backpatch-through	15
+67c10344ddb	Reported-by	Jasper Smit <jbsmit@gmail.com>
+67c10344ddb	Reported-by	Lionel Hamayon <lionel.hamayon@evolution-digitale.fr>
+67c10344ddb	Reported-by	RekGRpth <rekgrpth@gmail.com>
+67c10344ddb	Analyzed-by	Luc Vlaming Hummel <luc.vlaming@servicenow.com>
+67c10344ddb	Discussion	https://www.postgresql.org/message-id/CAOG+RQ6ECiiFH7bb7e1M0bkd0whprp=T0u=rvARSaPOGrY-NDQ@mail.gmail.com
+67c10344ddb	Discussion	https://www.postgresql.org/message-id/CAPgh2mJhTo2yq_vLrT6OZPn54hDxJpDVu=9L7Ay_M5qogNFuTw@mail.gmail.com
+67c10344ddb	Backpatch-through	15
+d27418375d6	Bug	#19922
+d27418375d6	Reported-by	Robins Tharakan <tharakan@gmail.com>
+d27418375d6	Diagnosed-by	Tom Lane <tgl@sss.pgh.pa.us>
+d27418375d6	Author	Nitin Motiani <nitinmotiani@google.com>
+d27418375d6	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+d27418375d6	Discussion	https://postgr.es/m/19922-a0d338245d361a4c@postgresql.org
+d27418375d6	Backpatch-through	15
+72146c7db15	Author	Manu <manuelreyesbravo@gmail.com>
+72146c7db15	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+72146c7db15	Reviewed-by	Masahiko Sawada <sawada.mshk@gmail.com>
+72146c7db15	Discussion	https://postgr.es/m/179489354788.348371.16745415952616502664@gmail.com
+65ebed1f5e2	Bug	#19923
+65ebed1f5e2	Reported-by	Robins Tharakan <tharakan@gmail.com>
+65ebed1f5e2	Author	Tom Lane <tgl@sss.pgh.pa.us>
+65ebed1f5e2	Discussion	https://postgr.es/m/19923-24cef1e958fa2370@postgresql.org
+65ebed1f5e2	Backpatch-through	15
+ecb26085352	Author	Melanie Plageman <melanieplageman@gmail.com>
+ecb26085352	Reviewed-by	surya poondla <suryapoondla4@gmail.com>
+ecb26085352	Discussion	https://postgr.es/m/CAAKRu_b9r-Pz9gzYvC%2B5EHnXqNgfsJhcH%3DhuUGbXzvcnbHtxCg%40mail.gmail.com
+3802b59db1f	does	a relative path is resolved against the base directory, i.e.,
+3802b59db1f	Author	Mahendrakar Srinivasarao <mahendrakarforpg@gmail.com>
+3802b59db1f	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+3802b59db1f	Reviewed-by	Matheus Alcantara <matheusssilv97@gmail.com>
+3802b59db1f	Discussion	https://postgr.es/m/CABkiuWpGiLzDg4D8zRBJ6DHnwYgHqkFxz2gDstXgeOdzh6bdZQ@mail.gmail.com
+3802b59db1f	Backpatch-through	18
+aa7d00fb754	Author	Matheus Alcantara <mths.dev@pm.me>
+aa7d00fb754	Reviewed-by	Mahendrakar Srinivasarao <mahendrakarforpg@gmail.com>
+aa7d00fb754	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+aa7d00fb754	Discussion	https://postgr.es/m/DMQTNLET8EKG.2BKGGLIOA4OQY@gmail.com
+aa7d00fb754	Backpatch-through	18
+207b5293b8d	Author	Mahendrakar Srinivasarao <mahendrakarforpg@gmail.com>
+207b5293b8d	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+207b5293b8d	Reviewed-by	Matheus Alcantara <matheusssilv97@gmail.com>
+207b5293b8d	Discussion	https://postgr.es/m/CABkiuWpGiLzDg4D8zRBJ6DHnwYgHqkFxz2gDstXgeOdzh6bdZQ@mail.gmail.com
+b291954ea5a	Bug	#19912
+b291954ea5a	Reported-by	Chunling Qin <303677365@qq.com>
+b291954ea5a	Author	Tender Wang <tndrwang@gmail.com>
+b291954ea5a	Author	Dean Rasheed <dean.a.rasheed@gmail.com>
+b291954ea5a	Discussion	https://postgr.es/m/19912-ceea4a1c0a7dd41c%40postgresql.org
+b291954ea5a	Backpatch-through	17
+af24adce91d	Author	s1ko <s1ko@riseup.net>
+af24adce91d	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+af24adce91d	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+af24adce91d	Discussion	https://postgr.es/m/f1743511-5fab-482e-94ec-1198ce18723e@riseup.net
+af24adce91d	Backpatch-through	15
+892cfb4cbfe	Author	s1ko <s1ko@riseup.net>
+892cfb4cbfe	Author	Chao Li <li.evan.chao@gmail.com>
+892cfb4cbfe	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+892cfb4cbfe	Discussion	https://postgr.es/m/f1743511-5fab-482e-94ec-1198ce18723e@riseup.net
+892cfb4cbfe	Backpatch-through	15
+9b5d4e33317	bug	since add_path and add_partial_path have somewhat different
+9b5d4e33317	Bug	#19924
+9b5d4e33317	Reported-by	Jeevan Chalke <jeevan.chalke@enterprisedb.com>
+9b5d4e33317	Reported-by	Zheng Hacker <hackerzheng666@gmail.com>
+9b5d4e33317	Author	Jeevan Chalke <jeevan.chalke@enterprisedb.com>
+9b5d4e33317	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+9b5d4e33317	Discussion	https://postgr.es/m/CAM2+6=XaYtMGwh27O7oDTfAw7kV4VdUVbxC2RVzWtKz_ysekKw@mail.gmail.com
+9b5d4e33317	Discussion	https://postgr.es/m/19924-8aecd924385fafcc@postgresql.org
+9b5d4e33317	Backpatch-through	15
+610b1a6efbb	Backpatch-through	15
+19db7e5b36e	Reported-by	Tender Wang <tndrwang@gmail.com>
+19db7e5b36e	Author	Tender Wang <tndrwang@gmail.com>
+19db7e5b36e	Author	Dean Rasheed <dean.a.rasheed@gmail.com>
+19db7e5b36e	Discussion	https://postgr.es/m/CAHewXNkZb5rBnen7ALsXX3d5JgdpzUjsNY9pqbxub3N-%2BNb%3DyQ%40mail.gmail.com
+19db7e5b36e	Backpatch-through	17
+732c475ff80	Reviewed-by	Sami Imseih <samimseih.pg@gmail.com>
+732c475ff80	Reviewed-by	Bertrand Drouvot <bertranddrouvot.pg@gmail.com>
+732c475ff80	Discussion	https://postgr.es/m/av9o1Fi3PQ-jqmGO%40nathan
+732c475ff80	Backpatch-through	15
+2df3d9e2b04	Note	This won't fix existing rules or SQL-standard function bodies,
+2df3d9e2b04	Reported-by	Henson Choi <assam258@gmail.com>
+2df3d9e2b04	Author	Henson Choi <assam258@gmail.com>
+2df3d9e2b04	Reviewed-by	Prashant Chinnam <crprashant@hotmail.com>
+2df3d9e2b04	Reviewed-by	Dean Rasheed <dean.a.rasheed@gmail.com>
+2df3d9e2b04	Discussion	https://postgr.es/m/CAAAe_zBHzEFR9bFSiJYfve7%3DQoWG_cL8%2BTWxx8vz47Jy0kUSHQ%40mail.gmail.com
+2df3d9e2b04	Backpatch-through	15
+1c4628d0b3c	Author	Chao Li <li.evan.chao@gmail.com>
+1c4628d0b3c	Discussion	https://postgr.es/m/6658AC8F-3AC7-4D93-811B-92F6853D3B72%40gmail.com
+15b3dc140d9	Bug	#19761
+15b3dc140d9	Reported-by	Alperen Keles <alpkeles99@gmail.com>
+15b3dc140d9	Author	Nitin Motiani <nitinmotiani@google.com>
+15b3dc140d9	Reviewed-by	Dilip Kumar <dilipbalaut@gmail.com>
+15b3dc140d9	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+15b3dc140d9	Discussion	https://postgr.es/m/19761-b72cfc453e487610@postgresql.org
+15b3dc140d9	Backpatch-through	15
+9931482364a	Author	Shihao Zhong <zhong950419@gmail.com>
+9931482364a	Author	Michael Paquier <michael@paquier.xyz>
+9931482364a	Reviewed-by	Surya Poondla <suryapoondla4@gmail.com>
+9931482364a	Reviewed-by	Joao Rito <joaovictor.rito@gmail.com>
+9931482364a	Discussion	https://postgr.es/m/CAGRkXqQ=W7TE2c+hpcBADdRYs0Vvdvcz51aV3gSwtQeBsPL=xg@mail.gmail.com
+7bb8cc295b5	Author	Zhijie Hou <houzhijie22@gmail.com>
+7bb8cc295b5	Co-authored-by	Masahiko Sawada <sawada.mshk@gmail.com>
+7bb8cc295b5	Reviewed-by	Amit Kapila <amit.kapila16@gmail.com>
+7bb8cc295b5	Discussion	https://postgr.es/m/b9b5bd27-6416-48b4-8f73-c5a60e2c97e2@gmail.com
+927939e924a	Reported-by	Noah <imchifan8@gmail.com>
+927939e924a	Author	Raja Sai Pranav <rajasaipranav0@gmail.com>
+927939e924a	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+927939e924a	Discussion	https://postgr.es/m/19881-cc00ace224a1fa3e@postgresql.org
+927939e924a	Backpatch-through	18
+f5ead259821	Suggested-by	Fujii Masao <masao.fujii@gmail.com>
+f5ead259821	Author	Raja Sai Pranav <rajasaipranav0@gmail.com>
+f5ead259821	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+f5ead259821	Discussion	https://postgr.es/m/CAHGQGwGhA-tzFGPV+oBQF1jK==tSkmwM=z_z9p+bhb-yYCAzLA@mail.gmail.com
+3e26b3cb251	Author	Manu <manuelreyesbravo@gmail.com>
+3e26b3cb251	Discussion	https://postgr.es/m/179489308882.313551.16760472116841542703@gmail.com
+fbbb2e05600	Author	Bertrand Drouvot <bertranddrouvot.pg@gmail.com>
+fbbb2e05600	Reviewed-by	Lukas Fittl <lukas@fittl.com>
+fbbb2e05600	Reviewed-by	Sami Imseih <samimseih.pg@gmail.com>
+fbbb2e05600	Reviewed-by	Michael Paquier <michael@paquier.xyz>
+fbbb2e05600	Discussion	https://postgr.es/m/auCYYbDyrQEwIsQq@bdtpg
+5fbff0e0890	Author	Bertrand Drouvot <bertranddrouvot.pg@gmail.com>
+5fbff0e0890	Reviewed-by	Lukas Fittl <lukas@fittl.com>
+5fbff0e0890	Reviewed-by	Sami Imseih <samimseih.pg@gmail.com>
+5fbff0e0890	Reviewed-by	Michael Paquier <michael@paquier.xyz>
+5fbff0e0890	Discussion	https://postgr.es/m/auCYYbDyrQEwIsQq@bdtpg
+6a0a66b3e7a	Author	Dilip Kumar <dilipbalaut@gmail.com>
+6a0a66b3e7a	Author	Nisha Moond <nisha.moond412@gmail.com>
+6a0a66b3e7a	Author	Zhijie Hou <houzhijie22@gmail.com>
+6a0a66b3e7a	Reviewed-by	shveta malik <shveta.malik@gmail.com>
+6a0a66b3e7a	Reviewed-by	Amit Kapila <amit.kapila16@gmail.com>
+6a0a66b3e7a	Reviewed-by	vignesh C <vignesh21@gmail.com>
+6a0a66b3e7a	Reviewed-by	shihao zhong <zhong950419@gmail.com>
+6a0a66b3e7a	Reviewed-by	Kedar Anavardekar <kedar.anavardekar@gmail.com>
+6a0a66b3e7a	Reviewed-by	Masahiko Sawada <sawada.mshk@gmail.com>
+6a0a66b3e7a	Reviewed-by	Narayanan Venkateswaran <narayananvpostgres@gmail.com>
+6a0a66b3e7a	Discussion	https://postgr.es/m/CAFiTN-u5D5o_AGNbHRZHaOqAMWkxLf+hSk_r9X3gv6HbLOB5+g@mail.gmail.com
+9ebc9a458c3	Bug	#19631
+9ebc9a458c3	Reported-by	Zheng Wang <hackerzheng666@gmail.com>
+9ebc9a458c3	Reported-by	Yanjie Zhao
+9ebc9a458c3	Reported-by	Yiyang Liu
+9ebc9a458c3	Author	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+9ebc9a458c3	Reviewed-by	Pierre Forstmann <pierre.forstmann@gmail.com>
+9ebc9a458c3	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+9ebc9a458c3	Discussion	https://postgr.es/m/19631-b443dd6cd8d4e40b@postgresql.org
+7720f61b7d6	Author	Chao Li <lic@highgo.com>
+7720f61b7d6	Reviewed-by	Denis Smirnov <darthunix@gmail.com>
+7720f61b7d6	Reviewed-by	ZizhuanLiu (X-MAN) <44973863@qq.com>
+7720f61b7d6	Commitfest	https://commitfest.postgresql.org/patch/6757/
+7720f61b7d6	Discussion	https://postgr.es/m/5B2C9B4C-EAE6-4F21-AF99-613A561D26DC@gmail.com
+4931dab89d3	Author	Zhijie Hou <houzhijie22@gmail.com>
+4931dab89d3	Reviewed-by	Masahiko Sawada <sawada.mshk@gmail.com>
+4931dab89d3	Discussion	https://postgr.es/m/11c3987c-0be9-4212-8347-9aba81f36580@gmail.com
+4931dab89d3	Backpatch-through	19
+8cfc2bdf314	Author	Lukas Fittl <lukas@fittl.com>
+8cfc2bdf314	Reviewed-by	Tomas Vondra <tomas@vondra.me>
+8cfc2bdf314	Reviewed-by	Peter Geoghegan <pg@bowt.ie>
+8cfc2bdf314	Discussion	https://postgr.es/m/CAP53PkxEZPeT_G7u-1qF-%3DouBvMxUNka-bN7cJowkv7gms9uCg%40mail.gmail.com
+8cfc2bdf314	Discussion	https://postgr.es/m/CAH2-Wz%3DUKBJ-f2oZpG8XJTnGbivmjM2nuyhw%2B5P3xBzeWmhSWw%40mail.gmail.com
+8cfc2bdf314	Backpatch-through	17
+51312a4999d	Author	Tomas Vondra <tomas@vondra.me>
+51312a4999d	Discussion	https://postgr.es/m/CAH2-Wz%3DUKBJ-f2oZpG8XJTnGbivmjM2nuyhw%2B5P3xBzeWmhSWw%40mail.gmail.com
+51312a4999d	Backpatch-through	17
+bae27968b76	Author	Lukas Fittl <lukas@fittl.com>
+bae27968b76	Reviewed-by	Tomas Vondra <tomas@vondra.me>
+bae27968b76	Reviewed-by	Peter Geoghegan <pg@bowt.ie>
+bae27968b76	Discussion	https://postgr.es/m/CAP53PkxEZPeT_G7u-1qF-%3DouBvMxUNka-bN7cJowkv7gms9uCg%40mail.gmail.com
+bae27968b76	Discussion	https://postgr.es/m/CAH2-Wz%3DUKBJ-f2oZpG8XJTnGbivmjM2nuyhw%2B5P3xBzeWmhSWw%40mail.gmail.com
+bae27968b76	Backpatch-through	18
+b4cc5e924b7	Author	Tomas Vondra <tomas@vondra.me>
+b4cc5e924b7	Discussion	https://postgr.es/m/CAH2-Wz%3DUKBJ-f2oZpG8XJTnGbivmjM2nuyhw%2B5P3xBzeWmhSWw%40mail.gmail.com
+b4cc5e924b7	Backpatch-through	18
+93e2b79f5f6	Reported-by	Anthropic OSS program
+93e2b79f5f6	Author	Tom Lane <tgl@sss.pgh.pa.us>
+93e2b79f5f6	Backpatch-through	15
+c7f5cf46c9e	Author	Bertrand Drouvot <bertranddrouvot.pg@gmail.com>
+c7f5cf46c9e	Reviewed-by	Andres Freund <andres@anarazel.de>
+c7f5cf46c9e	Reviewed-by	Michael Paquier <michael@paquier.xyz>
+c7f5cf46c9e	Discussion	https://postgr.es/m/anCjoFkGah/uB7lw@bdtpg
+bc85373ff13	Author	Fujii Masao <masao.fujii@gmail.com>
+bc85373ff13	Reviewed-by	Xuneng Zhou <xunengzhou@gmail.com>
+bc85373ff13	Discussion	https://postgr.es/m/mvx5bs7q.33b99c32-67d8-4373-8611-7a8250fb2fd3@we.are.superhuman.com
+bc85373ff13	Backpatch-through	16
+650925dad03	Author	Chao Li <lic@highgo.com>
+650925dad03	Reviewed-by	Xuneng Zhou <xunengzhou@gmail.com>
+650925dad03	Reviewed-by	Fujii Masao <masao.fujii@gmail.com>
+650925dad03	Discussion	https://postgr.es/m/9C37FACF-2D67-450D-864A-344F81229860@gmail.com
+650925dad03	Backpatch-through	15
+470d9948965	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+470d9948965	Discussion	https://www.postgresql.org/message-id/flat/70b86618-4038-4b19-8847-1a400d99d477%40eisentraut.org
+5ff67951c46	Reported-by	Chao Li <li.evan.chao@gmail.com>
+5ff67951c46	Discussion	https://www.postgresql.org/message-id/flat/70b86618-4038-4b19-8847-1a400d99d477%40eisentraut.org
+14644e12383	Reported-by	Philip Hofstetter <phofstetter@sensational.ch>
+14644e12383	Bug	#19932
+14644e12383	Backpatch-through	19
+14644e12383	Discussion	https://postgr.es/m/19932-b395d1cee4127098@postgresql.org
+2bdbde8b3bd	Author	Tender Wang <tndrwang@gmail.com>
+2bdbde8b3bd	Discussion	https://postgr.es/m/CAHewXNkxN0nZpQZBAJ=wNH-dOyo-9LkGPT0dbQhrLS=2KHG6UA@mail.gmail.com
+048c8725bf9	Author	Vignesh C <vignesh21@gmail.com>
+048c8725bf9	Discussion	https://www.postgresql.org/message-id/CALDaNm3vJ8QaHYZtqk+KbRomGWPYkAzxvWzyfs_=gnSVmyvW4g@mail.gmail.com
+048c8725bf9	Backpatch-through	15
+4483697be0e	Author	Chao Li <lic@highgo.com>
+4483697be0e	Reviewed-by	Jakub Wartak <jakub.wartak@enterprisedb.com>
+4483697be0e	Backpatch-through	19
+4483697be0e	Discussion	https://postgr.es/m/06F150E0-FDE9-4FC6-9EEF-79A759430471@gmail.com
+99d5d6ec65f	Author	Jian He <jian.universality@gmail.com>
+99d5d6ec65f	Reviewed-by	Matthias van de Meent <boekewurm+postgres@gmail.com>
+99d5d6ec65f	Backpatch-through	15
+99d5d6ec65f	Discussion	https://postgr.es/m/CACJufxGWVB6dwPaQz25eXm-sdcxOWNfbfTHUd5wG41-zDcG6OA@mail.gmail.com
+4255812efdb	Author	Atsushi Torikoshi <torikoshia@oss.nttdata.com>
+4255812efdb	Reviewed-by	Masahiko Sawada <sawada.mshk@gmail.com>
+4255812efdb	Reviewed-by	João Rito <joaovictor.rito@gmail.com>
+4255812efdb	Reviewed-by	solai v <solai.cdac@gmail.com>
+4255812efdb	Discussion	https://postgr.es/m/d99c688994ab3a998afe26e61fe4f69f@oss.nttdata.com
+31878ccc2cd	Author	Chengpeng Yan <chengpeng_yan@outlook.com>
+31878ccc2cd	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+31878ccc2cd	Discussion	https://postgr.es/m/124D8863-5FFE-412A-B2E1-D07ACBD8FA38@outlook.com
+0a06d04c29e	Bug	#19950
+0a06d04c29e	Reported-by	Qifan Liu <imchifan@163.com>
+0a06d04c29e	Author	Hayato Kuroda (Fujitsu) <kuroda.hayato@fujitsu.com>
+0a06d04c29e	Discussion	https://postgr.es/m/19950-6fa401d3ca2abf26@postgresql.org
+0a06d04c29e	Backpatch-through	15
+56227fd51c4	Author	David Rowley <dgrowleyml@gmail.com>
+56227fd51c4	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+56227fd51c4	Reviewed-by	David Steele <david@pgbackrest.org>
+56227fd51c4	Discussion	https://postgr.es/m/CAApHDvo-YKLqfHfjrCFJCBxMXni83Xsfn6Nbe79CWspCHKta_Q@mail.gmail.com
+b8bf2880055	Author	Zsolt Parragi <zsolt.parragi@percona.com>
+b8bf2880055	Author	Nisha Moond <nisha.moond412@gmail.com>
+b8bf2880055	Author	Dilip Kumar <dilipkumarb@google.com>
+b8bf2880055	Reviewed-by	shveta malik <shveta.malik@gmail.com>
+b8bf2880055	Reviewed-by	vignesh C <vignesh21@gmail.com>
+b8bf2880055	Reviewed-by	Hayato Kuroda <kuroda.hayato@fujitsu.com>
+b8bf2880055	Reviewed-by	Zhijie Hou <houzhijie22@gmail.com>
+b8bf2880055	Reviewed-by	Amit Kapila <amit.kapila16@gmail.com>
+b8bf2880055	Reviewed-by	Peter Smith <smithpb2250@gmail.com>
+b8bf2880055	Discussion	https://postgr.es/m/CAFiTN-sHeA%3DA%2B054KcOGue_q4tiT65rRvKxfdmJL3xjMwa2Kow%40mail.gmail.com
+b8bf2880055	Discussion	https://postgr.es/m/CAN4CZFOqiZtHOHAgd1mA325XQrsShj0C%3DvK2SBboUTFEmdoPZg%40mail.gmail.com
+9872a0de75b	Author	Mikhail Gribkov <youzhick@gmail.com>
+9872a0de75b	Reviewed-by	Xuneng Zhou <xunengzhou@gmail.com>
+9872a0de75b	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+9872a0de75b	Discussion	https://www.postgresql.org/message-id/CAMEv5_uzqc9=anZvJBvhXtd1ry3x71nDZn_irTq4uuAuD_qSqA@mail.gmail.com
+4244818f8ad	Author	Dean Rasheed <dean.a.rasheed@gmail.com>
+4244818f8ad	Reviewed-by	Álvaro Herrera <alvherre@kurilemu.de>
+4244818f8ad	Discussion	https://postgr.es/m/CAEZATCXcYV3CkR-CYvPs9iGHMCZUNjTxobF3RF4ePAHj%3DmuRmA%40mail.gmail.com#41d8396a367ac225d0225b10ed726518
+4244818f8ad	Backpatch-through	15
+060eebf4179	Author	Antonin Houska <ah@cybertec.at>
+060eebf4179	Discussion	https://postgr.es/m/109367.1781614382@localhost
+388f2db2994	Bug	#19928
+388f2db2994	Reported-by	Alexander Lakhin <exclusion@gmail.com>
+388f2db2994	Reviewed-by	Raja Sai Pranav <rajasaipranav0@gmail.com>
+388f2db2994	Discussion	https://www.postgresql.org/message-id/19928-c3f1f0dc1c0a44e9@postgresql.org
+388f2db2994	Backpatch-through	18
+3b249c728fd	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+3b249c728fd	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+3b249c728fd	Discussion	https://www.postgresql.org/message-id/42b2c4f9-511e-4b5c-8edd-b474019ddf29@iki.fi

@@ -3086,3 +3086,81 @@ ba11c483900	Amit Kapila	2026-11-19 08:37:02 +0530	35	Don't persist synced slots 
 2c077c7d602	Daniel Gustafsson	2026-11-19 10:14:51 +0100	5	Improve error message for to lrage LO read requests
 6ec71e1ad8c	Heikki Linnakangas	2026-11-19 12:26:06 +0200	1	Fix incorrect pointer increment in pgtypes_defmt_scan()
 514bfe2c6df	Heikki Linnakangas	2026-11-19 13:25:46 +0200	12	Avoid rescanning prefixes when choosing a dollar-quote delimiter
+17550c8a714	Dean Rasheed	2026-11-19 12:36:01 +0000	82	Fix varnullingrels in MERGE into trigger-updatable view.
+61f6021b110	Heikki Linnakangas	2026-11-19 14:42:20 +0200	2	Fix setting skip_fsync on temp tables
+5aa40dc6793	Peter Eisentraut	2026-11-19 15:08:18 +0100	74	psql: Replace cancel_pressed with CancelRequested
+a991c029eec	Heikki Linnakangas	2026-11-19 16:17:36 +0200	9	Update outdated paragraphs in README on how bgwriter works
+72b480e55d7	Tomas Vondra	2026-11-19 15:19:07 +0100	400	Fix FULL JOIN constant propagation with non-strict operands
+4226f1f01ad	Nathan Bossart	2026-11-19 09:20:19 -0600	14	Fix race in autovacuum freeze score calculations.
+b443bc7406f	Melanie Plageman	2026-11-19 11:34:01 -0500	13	Return NULL for unknown pgstattuple estimate
+736ecc413b3	Tomas Vondra	2026-11-19 19:06:32 +0100	98	Forget the prefetcher's current record in XLogPrefetcherBeginRead()
+882881ac1aa	Tom Lane	2026-11-19 15:49:00 -0500	63	Give a good error message when we can neither hash nor sort a UNION.
+db26517e79c	Melanie Plageman	2026-11-19 16:02:58 -0500	111	Fix WAL-logged CREATE DATABASE with nonstandard pages
+0c9fc1a96be	Peter Geoghegan	2026-11-19 16:10:00 -0500	36	Fix SP-GiST index-only scans with non-returnable keys.
+0bfb84006e3	Melanie Plageman	2026-11-19 17:10:59 -0500	1	Avoid overflow computing visibility map length
+c266e204a7a	Melanie Plageman	2026-11-19 17:10:59 -0500	60	Forget invalid VM pages during truncation replay
+a20d50a00ed	Peter Geoghegan	2026-11-19 17:53:10 -0500	16	Fix auto_explain index scan NULL pointer dereference.
+d94964f14f3	Michael Paquier	2026-11-20 13:45:46 +0900	84	Pin relations in phase 1 of REINDEX CONCURRENTLY
+e7e1835e6b0	Fujii Masao	2026-11-20 15:12:30 +0900	6	psql: Fix out-of-bounds reads in prompt expansion
+47ca0f45e6f	Fujii Masao	2026-11-20 15:20:00 +0900	35	Fix parsing mode tracking when recycling datetime format cache entries
+afdbe2596ce	Daniel Gustafsson	2026-11-20 10:09:36 +0100	56	doc: Standardise cleartext and plain text terms
+b6257924b13	Peter Eisentraut	2026-11-20 10:38:18 +0100	1	Fix accidentally casting away const
+0ddda120e08	Peter Eisentraut	2026-11-20 11:13:56 +0100	7	Fix -Wcast-qual warnings in regex module
+09b40d2cf07	Heikki Linnakangas	2026-11-20 12:21:04 +0200	0	pg_upgrade: Remove unnecessary checks on target cluster's version
+32dd742b075	Heikki Linnakangas	2026-11-20 12:21:04 +0200	77	pg_upgrade: Preserve template0 ICU rules
+0cb41ee8070	Fujii Masao	2026-11-20 20:29:15 +0900	15	pg_receivewal: Fix resource leaks and error reporting during cleanup
+4a26e36f87f	Fujii Masao	2026-11-20 20:41:36 +0900	28	pg_rewind: Fix recovery delays at WAL page boundaries
+67c10344ddb	Heikki Linnakangas	2026-11-20 17:07:37 +0200	128	Always prune dead members in MultiXactIdExpand, to fix assertion
+d27418375d6	Tom Lane	2026-11-20 11:52:14 -0500	103	Fix SEARCH/CYCLE when the recursive term has resjunk columns.
+72146c7db15	Masahiko Sawada	2026-11-20 10:21:08 -0800	16	Use an index scan in RemoveSubscriptionRel() when possible.
+65ebed1f5e2	Tom Lane	2026-11-20 14:53:07 -0500	30	Fix SEARCH/CYCLE when the recursive term is SELECT DISTINCT.
+ecb26085352	Melanie Plageman	2026-11-20 15:42:53 -0500	46	Reduce WAL generated when copying relation storage
+3802b59db1f	Daniel Gustafsson	2026-11-20 21:47:09 +0100	9	doc: Fix description of relative extension "directory" setting
+aa7d00fb754	Daniel Gustafsson	2026-11-20 21:47:30 +0100	8	doc: Fix description of $system in extension_control_path
+207b5293b8d	Daniel Gustafsson	2026-11-20 21:47:54 +0100	1	Fix long description of extension_control_path
+b291954ea5a	Dean Rasheed	2026-11-21 12:14:24 +0000	197	Fix stale source values in MERGE after a concurrent update.
+af24adce91d	Fujii Masao	2026-11-21 23:16:26 +0900	2	Fix libpq crashes on malformed target_session_attrs query results
+892cfb4cbfe	Fujii Masao	2026-11-21 23:19:53 +0900	12	pg_basebackup: Fix crashes on malformed server responses
+9b5d4e33317	Tom Lane	2026-11-21 14:07:51 -0500	32	Don't pfree a Path that belongs to a different parent relation.
+610b1a6efbb	Álvaro Herrera	2026-11-23 12:31:49 +0100	5	Adjust message style
+19db7e5b36e	Dean Rasheed	2026-11-23 12:17:45 +0000	164	Fix cross-partition source values in MERGE after a concurrent update.
+732c475ff80	Nathan Bossart	2026-11-23 12:30:41 -0600	24	pg_restore: Fix incompatibilities with extracted tar dumps.
+2df3d9e2b04	Dean Rasheed	2026-11-23 19:20:04 +0000	166	Record dependencies on the target columns of MERGE actions.
+1c4628d0b3c	Nathan Bossart	2026-11-23 14:09:30 -0600	1	Add missing #undef in simplehash.h.
+15b3dc140d9	Tom Lane	2026-11-23 17:53:56 -0500	290	Fix overflow problems in btree_gist's penalty and distance functions.
+9931482364a	Michael Paquier	2026-11-24 07:59:30 +0900	14	Avoid DELAY_CHKPT_START in smgr_bulk_finish()
+7bb8cc295b5	Masahiko Sawada	2026-11-23 15:10:35 -0800	132	Add an xid argument to the logical decoding message callbacks.
+927939e924a	Fujii Masao	2026-11-24 11:28:40 +0900	50	Honor enable_sort and enable_seqscan in CLUSTER and REPACK
+f5ead259821	Fujii Masao	2026-11-24 11:30:15 +0900	14	doc: Clarify scan method selection for REPACK and CLUSTER
+3e26b3cb251	Michael Paquier	2026-11-24 14:22:08 +0900	14	Reset progress counters at end of WaitForOlderSnapshots()
+fbbb2e05600	Michael Paquier	2026-11-24 15:05:56 +0900	21	Update buffer strategy descriptions in the buffer README
+5fbff0e0890	Michael Paquier	2026-11-24 15:54:48 +0900	51	doc: Describe buffer access strategy types in the glossary
+6a0a66b3e7a	Amit Kapila	2026-11-24 16:54:10 +0530	1584	Record logical replication conflicts in the conflict log table.
+9ebc9a458c3	Fujii Masao	2026-11-24 20:44:17 +0900	21	Improve SQLSTATE reporting for several error conditions
+7720f61b7d6	Álvaro Herrera	2026-11-24 21:37:24 +0100	14	Avoid unnecessary allocation for tablesync.c COPY buffer
+4931dab89d3	Masahiko Sawada	2026-11-24 14:23:05 -0800	120	Fix standby logical slot creation while enabling logical decoding.
+8cfc2bdf314	Tomas Vondra	2026-11-25 00:11:55 +0100	164	Fix broken HOT chain handling in parallel BRIN builds
+51312a4999d	Tomas Vondra	2026-11-25 00:11:55 +0100	8	Clarify the parallel BRIN merge comment
+bae27968b76	Tomas Vondra	2026-11-25 00:11:55 +0100	66	Fix broken HOT chain handling in parallel GIN builds
+b4cc5e924b7	Tomas Vondra	2026-11-25 00:11:55 +0100	8	Correct the parallel GIN merge comment
+93e2b79f5f6	Tom Lane	2026-11-24 21:19:36 -0500	22	Avoid null pointer crash after pg_localtime()/pg_gmtime() failure.
+c7f5cf46c9e	Michael Paquier	2026-11-25 13:28:11 +0900	385	Add more tests for backend statistics
+bc85373ff13	Fujii Masao	2026-11-25 16:13:28 +0900	37	Fix lost wakeups in logical WAL senders
+650925dad03	Fujii Masao	2026-11-25 16:18:36 +0900	14	pg_receivewal, pg_basebackup: Fix temporary file cleanup on errors
+470d9948965	Peter Eisentraut	2026-11-25 08:59:31 +0100	11	Fix -Wcast-qual warning in guc_funcs.c
+5ff67951c46	Peter Eisentraut	2026-11-25 08:59:31 +0100	2	Fix -Wcast-qual warnings in psql
+14644e12383	Álvaro Herrera	2026-11-25 10:22:51 +0100	2	Fix psql's non-autocommit mode for REPACK
+2bdbde8b3bd	Álvaro Herrera	2026-11-25 10:22:54 +0100	2	Adjust an error message to emphasize the inheritance relationship
+048c8725bf9	Heikki Linnakangas	2026-11-25 16:34:47 +0200	23	Report the correct table in publication duplicate-table errors
+4483697be0e	Álvaro Herrera	2026-11-25 17:31:36 +0100	4	Clarify final phase of concurrent mode in comment
+99d5d6ec65f	Álvaro Herrera	2026-11-25 18:42:20 +0100	5	Use indnkeyatts, not indnatts, in infer_collation_opclass_match()
+4255812efdb	Masahiko Sawada	2026-11-25 10:30:28 -0800	66	Use start LSN for transactional logical decoding messages.
+31878ccc2cd	Tom Lane	2026-11-25 17:16:54 -0500	57	Simplify pattern selectivity estimation.
+0a06d04c29e	David Rowley	2026-11-26 17:14:32 +1300	1	Fix incorrect data type in pg_terminate_backend()
+56227fd51c4	David Rowley	2026-11-26 17:55:09 +1300	21	Speedup pg_strtok() with a static lookup table
+b8bf2880055	Amit Kapila	2026-11-26 11:17:01 +0530	136	Fix assorted issues in conflict log table handling.
+9872a0de75b	Heikki Linnakangas	2026-11-26 10:02:38 +0200	2	Use logical OR (||) rather than bitwise OR (|) for bools
+4244818f8ad	Dean Rasheed	2026-11-26 09:02:38 +0000	0	doc: Remove incorrect sentence from MERGE docs for AND condition.
+060eebf4179	Álvaro Herrera	2026-11-26 11:55:06 +0100	6	Remove OldHeap argument from build_new_indexes()
+388f2db2994	Heikki Linnakangas	2026-11-26 13:46:58 +0200	1	pg_upgrade: Don't run the not-null inheritance check on v18 clusters
+3b249c728fd	Heikki Linnakangas	2026-11-26 14:24:51 +0200	25	Fix losing a sinval catchup signal that arrives during catchup
