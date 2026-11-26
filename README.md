@@ -338,3 +338,89 @@ python3 extract-mail.py --mbox-dir DIR
 It finds `pgsql-hackers.YYYYMM` files anywhere under `DIR` and rewrites
 the file for each year it finds, rebuilt from that year's mbox files
 alone; `--years` limits which. Ten years take about 20 seconds.
+
+## People
+
+`people.py` maps the names and addresses in commit tags, git authors and
+mail senders to people. It computes the mapping when loaded; nothing is
+written under `data/`.
+
+### How people are found
+
+A person tag is `Author` or any tag ending in `-by`. Each name and
+address in them, in git authors, and in mail senders is an identifier:
+
+- An **address** is compared case-insensitively, with the archive's
+  `(at)` and `(dot)` undone.
+- A **name** is compared by a key that ignores case, accents, punctuation,
+  word order, and initials if two other words are left. So `Zhou, Zhiguo`
+  and `zhiguo zhou` match, as do `Álvaro Herrera` and `Alvaro Herrera`,
+  and `Andrey M. Borodin` and `Andrey Borodin`. Addresses, quotes, and
+  glosses or affiliations in trailing parentheses are removed first. A
+  name written in two scripts, like `Hou Zhijie 侯志杰` or
+  `王海洋 (Haiyang Wang)`, also counts as each script's part.
+- A **one-word name**, like `MauMau` or `Michael`, is too weak to link
+  anything, and identifies no one unless it's pinned (below).
+
+A name and an address written together, in a mail `From` or a tag like
+`Jane Doe <jd@example.com>`, are the same person, and so is everything
+linked to either of them.
+
+A tag value naming several people, like `Jane Doe and John Roe` or
+`Jane Doe, John Roe`, is split. When the only separators are commas and
+there's an address, it takes two full names to make a list, so
+`Wong, Yi Wen <yw@example.com>` is one person.
+
+A person's display name is how they write it themselves, as git author
+or in mail, or failing that how commit tags write it, preferring the
+Latin alphabet. The most used spelling wins; among spellings differing
+only in case or accents, one that isn't all upper or lower case, then
+one with accents.
+
+### Overrides
+
+`overrides/people.tsv` has two columns, `person` and `identifier`, with
+`#` comments like the other overrides. Each row says the identifier (a
+name or an address, written either way) belongs to the person. The
+`person` column is also the display name, and if it's a full name it's
+pinned too. So:
+
+- Rows with the same person merge everything linked to their identifiers.
+  `Atsushi Torikoshi	torikoshia` joins the `torikoshia` mail account
+  to every `Atsushi Torikoshi` tag.
+- Links never join two different pinned people. An identifier that would
+  is ambiguous and identifies no one. Two people with the same name are
+  told apart by pinning their addresses to, say, `Jane Doe (Example)` and
+  `Jane Doe (Elsewhere)`; a bare `Jane Doe` tag is then ambiguous, and the
+  fix goes in the tag fixes.
+- Person `-` means the identifier identifies no one: tools such as
+  `Coverity`, AI tools such as `Claude`, or the web forms' shared address.
+  Their credits stay in the tags, and each use of the data decides what
+  to do with them; `authors()` skips them. Organizations that report
+  bugs, such as the `Anthropic OSS program`, are counted like people.
+- A row naming a person as themselves, `Jane Doe	Jane Doe`, keeps
+  them out of `check-people.py --review`'s near-matches.
+
+The mapping doesn't depend on where a value appears, so a name that means
+different people in different commits, like `Michael` or `Peter`, is fixed
+in the tag fixes, not here.
+
+`python3 check-people.py` reports rows that don't parse or whose
+identifier doesn't occur in the data, identifiers pinned to two people,
+and person tag values that identify no one. With `--review` it also lists
+pairs of people whose names are near-matches, like `Masahiko Sawada` and
+`Masahiko Sawasa`, to merge or keep apart.
+
+### Using it
+
+```python
+import people
+p = people.load()
+p.resolve_value('Jane Doe <jd@example.com> (test case)')
+                        # [(text, person id or None, status)], one per person named
+p.resolve('Jane Doe', 'jd(at)example(dot)com')   # (person id or None, status)
+p.persons['Jane Doe']   # Person: id, pinned, nodes, own_names, tag_names
+p.authors(commit)       # commit.authors split into people, without those
+                        # that identify no one, such as AI tools
+p.primary_author(commit)   # the first of those, credited with the lines
+```

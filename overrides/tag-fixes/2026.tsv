@@ -26,6 +26,13 @@ hash	verb	tag	value
 4321dcad475	delete	Analyzed-by	Tender Wang <tndrwang@gmail.com>
 4321dcad475	append	Diagnosed-by	Tender Wang <tndrwang@gmail.com>
 
+# "Calif.io in collaboration with Claude and Anthropic Research", with "Research"
+# on an unindented line; one tag per reporter.  Claude is an AI tool; the people
+# layer marks it as no one.
+b63f25bddfe	replace	Reported-by	Calif.io
+b63f25bddfe	replace	Reported-by	Claude
+b63f25bddfe	replace	Reported-by	Anthropic Research
+
 # "Analyzed-by: Tender Wang <tndrwang@gmail.com>", one tag per person.
 # "Analyzed-by: Ayush Tiwari <ayushtiwari.slg01@gmail.com>", one tag per person.
 b1901e2895e	delete	Analyzed-by	Tender Wang <tndrwang@gmail.com>
@@ -47,6 +54,45 @@ b1901e2895e	append	Diagnosed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
 # "Analyzed-by: Jeff Davis <pgsql@j-davis.com>", one tag per person.
 a3fed7608f7	delete	Analyzed-by	Jeff Davis <pgsql@j-davis.com>
 a3fed7608f7	append	Diagnosed-by	Jeff Davis <pgsql@j-davis.com>
+
+# "Ben Morris in collaboration with Claude and Anthropic Research", one tag per
+# reporter.  Claude is an AI tool; the people layer marks it as no one.
+f9729b5078d	replace	Reported-by	Ben Morris
+f9729b5078d	replace	Reported-by	Claude
+f9729b5078d	replace	Reported-by	Anthropic Research
+
+# "Ben Morris in collaboration with Claude and Anthropic Research", one tag per
+# reporter.  Claude is an AI tool; the people layer marks it as no one.
+9e02e2e1822	replace	Reported-by	Ben Morris
+9e02e2e1822	replace	Reported-by	Claude
+9e02e2e1822	replace	Reported-by	Anthropic Research
+9e02e2e1822	replace	Reported-by	Peter Geoghegan <pg@bowt.ie>
+
+# "Ben Morris in collaboration with Claude and Anthropic Research", one tag per
+# reporter.  Claude is an AI tool; the people layer marks it as no one.
+918683d12d8	replace	Reported-by	Ben Morris
+918683d12d8	replace	Reported-by	Claude
+918683d12d8	replace	Reported-by	Anthropic Research
+
+# "Claude Code (via Noah Misch)": the AI tool found it and Noah Misch passed it
+# on; one tag each.
+131444cd167	replace	Reported-by	Claude Code
+131444cd167	replace	Reported-by	Noah Misch
+
+# "Claude Code (via Noah Misch)": the AI tool found it and Noah Misch passed it
+# on; one tag each.
+e6cac7fab36	replace	Reported-by	Claude Code
+e6cac7fab36	replace	Reported-by	Noah Misch
+
+# "Claude Code (via Noah Misch)": the AI tool found it and Noah Misch passed it
+# on; one tag each.
+4921447bea7	replace	Reported-by	Claude Code
+4921447bea7	replace	Reported-by	Noah Misch
+
+# "Claude Code (via Noah Misch)": the AI tool found it and Noah Misch passed it
+# on; one tag each.
+c0641ae4e16	replace	Reported-by	Claude Code
+c0641ae4e16	replace	Reported-by	Noah Misch
 
 # "Fix-suggested-by: Andrew Dunstan <andrew@dunslane.net>", one tag per person.
 30d4a6daac8	delete	Fix-suggested-by	Andrew Dunstan <andrew@dunslane.net>

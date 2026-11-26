@@ -19,3 +19,10 @@ checking them with `check-commits.py`.
   and completes credit values cut off at an unindented continuation line.
   It has its own `HAND` entries for values it can't parse. It skips commits
   before 2011.
+- `compare_people.py`: compares the people layer with the legacy tables.
+  It recomputes how the legacy mail parser grouped pgsql-hackers messages
+  by sender (with each year's `%email_map`) and reports where that grouping
+  differs from the people here, `%email_map` entries whose address and name
+  are different people here, and commits whose legacy author is someone
+  else. `python3 tools/legacy-import/compare_people.py . contributions2025.dmp
+  ~/Documents/Contributions`
