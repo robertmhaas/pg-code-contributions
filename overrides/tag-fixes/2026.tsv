@@ -3,6 +3,14 @@
 # each preceded by a comment.  See README.md for what each verb does.
 hash	verb	tag	value
 
+# Misspelled key: "Co-authored-bu".
+96e2af60504	delete	Co-authored-bu	Srinath Reddy Sadipiralla <srinath2133@gmail.com>
+96e2af60504	append	Co-authored-by	Srinath Reddy Sadipiralla <srinath2133@gmail.com>
+
+# "Co-Author" is Co-authored-by.
+763aaa06f03	delete	Co-Author	Andrew Dunstan <andrew@dunslane.net>
+763aaa06f03	append	Co-authored-by	Andrew Dunstan <andrew@dunslane.net>
+
 # Repeated key: "Author: Author:".
 1887d822f14	replace	Author	Jelte Fennema-Nio <postgres@jeltef.nl>
 
@@ -57,6 +65,10 @@ b1901e2895e	append	Diagnosed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
 # Space in the key: "Backpatch through:".
 10911fde088	append	Backpatch-through	17
 
+# "Test-authored-by" is Co-authored-by.
+637aa273e63	delete	Test-authored-by	Maaz Syed Adeeb <maaz.adeeb@gmail.com>
+637aa273e63	append	Co-authored-by	Maaz Syed Adeeb <maaz.adeeb@gmail.com> (test)
+
 # "Reported-by: Phil" is Phil Gibbins, from the doc comment form.
 85df8c5bc7f	replace	Reported-by	Phil Gibbins
 
@@ -67,6 +79,17 @@ b1901e2895e	append	Diagnosed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
 # "Analyzed-by: Jeff Davis <pgsql@j-davis.com>", one tag per person.
 a3fed7608f7	delete	Analyzed-by	Jeff Davis <pgsql@j-davis.com>
 a3fed7608f7	append	Diagnosed-by	Jeff Davis <pgsql@j-davis.com>
+
+# "Reported-by" lists several people; one tag per person.
+23d9ad77181	replace	Reported-by	Yuhang Wu <yuhang@depthfirst.com>
+23d9ad77181	replace	Reported-by	Zhenpeng Lin
+23d9ad77181	replace	Reported-by	Zheng Yu <zheng@depthfirst.com>
+23d9ad77181	replace	Reported-by	Hcamael <baiyjrh@gmail.com>
+
+# "Reported-by" lists several people; one tag per person.
+776467301ea	replace	Reported-by	Tulya Project
+776467301ea	replace	Reported-by	Team Dhiutsa
+776467301ea	replace	Reported-by	Bitecope Technologies Private Ltd
 
 # "Ben Morris in collaboration with Claude and Anthropic Research", one tag per
 # reporter.  Claude is an AI tool; the people layer marks it as no one.
@@ -107,9 +130,33 @@ e6cac7fab36	replace	Reported-by	Noah Misch
 c0641ae4e16	replace	Reported-by	Claude Code
 c0641ae4e16	replace	Reported-by	Noah Misch
 
+# "Requested-by" is Suggested-by.
+e502f9aa817	delete	Requested-by	Daniel Verite <daniel@manitou-mail.org>
+e502f9aa817	delete	Requested-by	Noah Misch <noah@leadboat.com>
+e502f9aa817	append	Suggested-by	Daniel Verite <daniel@manitou-mail.org>
+e502f9aa817	append	Suggested-by	Noah Misch <noah@leadboat.com>
+
 # "Fix-suggested-by: Andrew Dunstan <andrew@dunslane.net>", one tag per person.
 30d4a6daac8	delete	Fix-suggested-by	Andrew Dunstan <andrew@dunslane.net>
 30d4a6daac8	append	Suggested-by	Andrew Dunstan <andrew@dunslane.net> (fix)
+
+# "Reported-by" lists several people; one tag per person.
+398eb35f001	replace	Reported-by	Jacek Bylina <jacek@enveritas.org>
+398eb35f001	replace	Reported-by	Timothy Ball <timball@enveritas.org>
+398eb35f001	replace	Reported-by	Claude
+398eb35f001	replace	Reported-by	Ada Logics
+
+# "Reported-by" lists several people; one tag per person.
+2d4995f797b	replace	Reported-by	Claude
+2d4995f797b	replace	Reported-by	Ada Logics
+
+# "Reported-by" lists several people; one tag per person.
+b93d8a554da	replace	Reported-by	Claude
+b93d8a554da	replace	Reported-by	Ada Logics
+
+# "Reported-by" lists several people; one tag per person.
+ff2e66f4953	replace	Reported-by	Claude
+ff2e66f4953	replace	Reported-by	Ada Logics
 
 # "Analyzed-by: Luc Vlaming Hummel <luc.vlaming@servicenow.com>", one tag per person.
 67c10344ddb	delete	Analyzed-by	Luc Vlaming Hummel <luc.vlaming@servicenow.com>

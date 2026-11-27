@@ -18,6 +18,10 @@ a1792320473	append	Reviewed-by	Amit Kapila
 a1792320473	append	Reviewed-by	Magnus Hagander
 a1792320473	append	Reviewed-by	Andres Freund
 
+# "Reviewed-by" lists several people; one tag per person.
+d42358efb16	replace	Reviewed-by	Álvaro Herrera
+d42358efb16	replace	Reviewed-by	Jim Nasby
+
 # "Reviewed-By: Michael Paquier, Andres Freund, Stephen Frost", one tag per person.
 296f3a60538	delete	Reviewed-By	Michael Paquier, Andres Freund, Stephen Frost
 296f3a60538	append	Reviewed-by	Michael Paquier
@@ -208,10 +212,16 @@ b488c580aef	append	Suggested-by	Pavel Stěhule
 5850b20f58a	append	Reviewed-by	Tomas Vondra
 
 # "Authors: Ian Barwick, Abhijit Menon-Sen, David Steele", one tag per person.
+# "Reviews by" is Reviewed-by; one tag per person.
 ac52bb0442f	delete	Authors	Ian Barwick, Abhijit Menon-Sen, David Steele
 ac52bb0442f	insert	Author	Ian Barwick
 ac52bb0442f	insert	Author	Abhijit Menon-Sen
 ac52bb0442f	insert	Author	David Steele
+ac52bb0442f	delete	Reviews by	Robert Haas, Tatsuo Ishii, Sawada Masahiko, Fujii Masao,
+ac52bb0442f	append	Reviewed-by	Robert Haas
+ac52bb0442f	append	Reviewed-by	Tatsuo Ishii
+ac52bb0442f	append	Reviewed-by	Sawada Masahiko
+ac52bb0442f	append	Reviewed-by	Fujii Masao
 
 # Was "Author: Emre Hasegeli.  Cosmetic changes by me".
 # "Review: Andreas Karlsson", one tag per person.
@@ -235,10 +245,30 @@ f3d31185321	append	Reviewed-by	Erik Rijkers
 f3d31185321	append	Reviewed-by	Marti Raudsepp
 f3d31185321	append	Reviewed-by	Pavel Stehule
 
+# "Author" lists several people; one tag per person.
+e4942f7a56e	replace	Author	Peter Geoghegan
+e4942f7a56e	replace	Author	Andres Freund
+
+# "Author" lists several people; one tag per person.
+284bef29773	replace	Author	Peter Geoghegan
+284bef29773	replace	Author	Andres Freund
+
+# "Found-By" is Reported-by.
+1b468a131bd	delete	Found-By	Robert Haas
+1b468a131bd	append	Reported-by	Robert Haas
+
+# "Spotted-by" is Reported-by.
+40282224686	delete	Spotted-by	Jeff Janes
+40282224686	append	Reported-by	Jeff Janes
+
 # "Reported-By: Olivier Gosseaume, Marko Tiikkaja", one tag per person.
 5c0de384d2c	delete	Reported-By	Olivier Gosseaume, Marko Tiikkaja
 5c0de384d2c	append	Reported-by	Olivier Gosseaume
 5c0de384d2c	append	Reported-by	Marko Tiikkaja
+
+# "Author" lists several people; one tag per person.
+f8d67ca8d4c	replace	Author	Michael Paquier
+f8d67ca8d4c	replace	Author	Álvaro Herrera
 
 # Was "Author: Peter Geoghegan, slightly edited by me".
 c1ca3a19df3	replace	Author	Peter Geoghegan
@@ -248,13 +278,29 @@ c1ca3a19df3	append	Co-authored-by	Andres Freund (slightly edited)
 faab14ecb8c	replace	Author	Andrew Gierth
 faab14ecb8c	append	Co-authored-by	Jeevan Chalke (tests)
 
+# "Noticed-By" is Reported-by.
+3bc9356ddd5	delete	Noticed-By	Robert Haas
+3bc9356ddd5	append	Reported-by	Robert Haas
+
 # "Analyzed-By: Heikki Linnakangas", one tag per person.
 7039760114d	delete	Analyzed-By	Heikki Linnakangas
 7039760114d	append	Diagnosed-by	Heikki Linnakangas
 
+# "Noticed-By" is Reported-by.
+a4b09af3e93	delete	Noticed-By	Heikki Linnakangas
+a4b09af3e93	append	Reported-by	Heikki Linnakangas
+
+# "Noticed-By" is Reported-by.
+073082bbb1a	delete	Noticed-By	Amit Kapila
+073082bbb1a	append	Reported-by	Amit Kapila
+
 # Was "Author: Marko Tiikkaja, editorialized by me".
 3f811c2d6f5	replace	Author	Marko Tiikkaja
 3f811c2d6f5	append	Co-authored-by	Andres Freund (editorialized)
+
+# "Spotted-By" is Reported-by.
+7685963eeb1	delete	Spotted-By	Coverity
+7685963eeb1	append	Reported-by	Coverity
 
 # Was "Author: Michael Paquier, while reviewing another sslinfo patch".
 d94c36a45ab	replace	Author	Michael Paquier
@@ -272,9 +318,13 @@ d94c36a45ab	replace	Author	Michael Paquier
 4f627f89736	append	Reviewed-by	Thomas Munro
 
 # "Reported-By: Peter Geoghegan, Geoff Winkless", one tag per person.
+# "Author" lists several people; one tag per person.
 ad227837924	delete	Reported-By	Peter Geoghegan, Geoff Winkless
 ad227837924	append	Reported-by	Peter Geoghegan
 ad227837924	append	Reported-by	Geoff Winkless
+ad227837924	replace	Author	Andres Freund
+ad227837924	replace	Author	Amit Langote
+ad227837924	replace	Author	Peter Geoghegan
 
 # Was "Author: Petr Jelinek, editorialized by Michael Paquier, Andres Freund".
 # "Reviewed-By: Michael Paquier, Andres Freund, Jeff Janes", one tag per person.
@@ -289,6 +339,18 @@ b67aaf21e8e	append	Reviewed-by	Jeff Janes
 # Was "Author: Petr Jelínek, with some further tweaks by Álvaro Herrera.".
 531d21b75ff	replace	Author	Petr Jelínek
 531d21b75ff	append	Co-authored-by	Álvaro Herrera (further tweaks)
+
+# "Revised by" is Co-authored-by.
+c15898c1d5d	delete	Revised by	Ian Barwick
+c15898c1d5d	append	Co-authored-by	Ian Barwick (revised)
+
+# "Author" lists several people; one tag per person.
+c31f1dc5599	replace	Author	Peter Geoghegan
+c31f1dc5599	replace	Author	Andres Freund
+
+# "Author" lists several people; one tag per person.
+edf68b2ed51	replace	Author	Peter Geoghegan
+edf68b2ed51	replace	Author	Andres Freund
 
 # "Review: Michael Paquier", one tag per person.
 92e38182d7c	delete	Review	Michael Paquier
@@ -311,9 +373,25 @@ e50cda78404	append	Reviewed-by	Michael Paquier
 820ddb2c2f1	insert	Author	Álvaro Herrera
 820ddb2c2f1	insert	Author	Petr Jelínek
 
+# "Author" lists several people; one tag per person.
+e3f4cfc7aa3	replace	Author	Andres Freund
+e3f4cfc7aa3	replace	Author	Michael Paquier
+
+# "Author" lists several people; one tag per person.
+84ac126ee72	replace	Author	Andres Freund
+84ac126ee72	replace	Author	Peter Geoghegan
+
+# "Author" lists several people; one tag per person.
+f54d0629ec8	replace	Author	Michael Paquier
+f54d0629ec8	replace	Author	Andres Freund
+
 # "Reported-By: Noah Misch, although this is not his preferred fix", one tag per person.
 cca705a5d93	delete	Reported-By	Noah Misch, although this is not his preferred fix
 cca705a5d93	append	Reported-by	Noah Misch
+
+# "Author" lists several people; one tag per person.
+130d94a7b86	replace	Author	Michael Paquier
+130d94a7b86	replace	Author	Andres Freund
 
 # Was "Author: Fornaroli Christophe with comments by me.".
 25bfa7efd03	replace	Author	Fornaroli Christophe

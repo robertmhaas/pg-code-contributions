@@ -3,9 +3,104 @@
 # each preceded by a comment.  See README.md for what each verb does.
 hash	verb	tag	value
 
+# "Reviewed-by" lists several people; one tag per person.
+c758119e5bf	replace	Reviewed-by	Sami Imseih
+c758119e5bf	replace	Reviewed-by	Justin Pryzby
+c758119e5bf	replace	Reviewed-by	Robert Haas
+c758119e5bf	replace	Reviewed-by	Andres Freund
+c758119e5bf	replace	Reviewed-by	Yogesh Sharma
+
+# "Author" lists several people; one tag per person.
+# "Reviewed-by" lists several people; one tag per person.
+f7e1b3828a9	replace	Author	Emanuele Musella
+f7e1b3828a9	replace	Author	Maurizio Boriani
+f7e1b3828a9	replace	Reviewed-by	Tomas Vondra
+f7e1b3828a9	replace	Reviewed-by	Bertrand Drouvot
+f7e1b3828a9	replace	Reviewed-by	Japin Li
+
+# "Reviewed-by" lists several people; one tag per person.
+3d0b4b10680	replace	Reviewed-by	Jingtang Zhang
+3d0b4b10680	replace	Reviewed-by	Andres Freund
+
+# "Reviewed-by" lists several people; one tag per person.
+a9dcbb4d5c0	replace	Reviewed-by	Nathan Bossart
+a9dcbb4d5c0	replace	Reviewed-by	David Rowley
+a9dcbb4d5c0	replace	Reviewed-by	Michael Paquier
+a9dcbb4d5c0	replace	Reviewed-by	Gurjeet Singh
+
+# "Reviewed-by" lists several people; one tag per person.
+f92c854cf40	replace	Reviewed-by	Bertrand Drouvot
+f92c854cf40	replace	Reviewed-by	Melanie Plageman
+
+# "Reviewed-by" lists several people; one tag per person.
+94b914f601b	replace	Reviewed-by	Hayato Kuroda
+94b914f601b	replace	Reviewed-by	Tom Lane
+
+# "Reviewed-by" lists several people; one tag per person.
+2ae98ea5ab8	replace	Reviewed-by	Álvaro Herrera
+2ae98ea5ab8	replace	Reviewed-by	Alena Rybakina
+
+# "Reviewed-by" lists several people; one tag per person.
+3edc67d337c	replace	Reviewed-by	Alena Rybakina
+3edc67d337c	replace	Reviewed-by	Robert Haas
+3edc67d337c	replace	Reviewed-by	Andres Freund
+3edc67d337c	replace	Reviewed-by	Bilal Yavuz
+
+# "Reviewed-by" lists several people; one tag per person.
+965b2cc0a40	replace	Reviewed-by	Laurenz Albe
+965b2cc0a40	replace	Reviewed-by	Amit Kapila
+
+# "Reviewed-by" lists several people; one tag per person.
+7b6468cc952	replace	Reviewed-by	Bertrand Drouvot
+7b6468cc952	replace	Reviewed-by	Tom Lane
+7b6468cc952	replace	Reviewed-by	Nazir Bilal Yavuz
+
+# "Reviewed-by" lists several people; one tag per person.
+286a365b9c2	replace	Reviewed-by	Peter Eisentraut
+286a365b9c2	replace	Reviewed-by	Daniel Verite
+
+# "Reviewed-by" lists several people; one tag per person.
+d3d09831691	replace	Reviewed-by	Peter Eisentraut
+d3d09831691	replace	Reviewed-by	Daniel Verite
+
+# "Author" lists several people; one tag per person.
+6cf1647d87e	replace	Author	Kyotaro Horiguchi
+6cf1647d87e	replace	Author	Alexander Kukushkin
+
+# "Author" lists several people; one tag per person.
+4feba03d8b9	replace	Author	Bertrand Drouvot
+4feba03d8b9	replace	Author	Michael Paquier
+
 # "Diagnosys-by: Sami Imseih <samimseih@gmail.com>", one tag per person.
 9b21f203dd8	delete	Diagnosys-by	Sami Imseih <samimseih@gmail.com>
 9b21f203dd8	append	Diagnosed-by	Sami Imseih <samimseih@gmail.com>
+
+# "Reviewed-by" lists several people; one tag per person.
+4a0e7314f11	replace	Reviewed-by	Peter Smith
+4a0e7314f11	replace	Reviewed-by	Shlok Kyal
+4a0e7314f11	replace	Reviewed-by	Amit Kapila
+
+# "Reviewed-by" lists several people; one tag per person.
+ce1b0f9da03	replace	Reviewed-by	Michael Paquier
+ce1b0f9da03	replace	Reviewed-by	Peter Smith
+ce1b0f9da03	replace	Reviewed-by	Euler Taveira
+
+# "Author" lists several people; one tag per person.
+eef4a33f62f	replace	Author	Dagfinn Ilmari Mannsåker
+eef4a33f62f	replace	Author	Michael Paquier
+
+# "Reviewed-by" lists several people; one tag per person.
+30a6ed0ce4b	replace	Reviewed-by	Bertrand Drouvot
+30a6ed0ce4b	replace	Reviewed-by	Michael Paquier
+
+# "Reviewed-by" lists several people; one tag per person.
+4f071349c0c	replace	Reviewed-by	Jacob Champion
+4f071349c0c	replace	Reviewed-by	Keisuke Kuroda
+4f071349c0c	replace	Reviewed-by	Tom Lane
+
+# "Reviewed-by" lists several people; one tag per person.
+d61b9662b09	replace	Reviewed-by	Ashutosh Bapat
+d61b9662b09	replace	Reviewed-by	Tom Lane
 
 # "Reviewed-by: Bertrand Drouvot, Nitin Jadhav, Amit Kapila, Michael" continues on the next, unindented line; one tag per person.
 a051e71e28a	replace	Reviewed-by	Bertrand Drouvot
@@ -14,6 +109,49 @@ a051e71e28a	replace	Reviewed-by	Amit Kapila
 a051e71e28a	replace	Reviewed-by	Michael Paquier
 a051e71e28a	replace	Reviewed-by	Melanie Plageman
 a051e71e28a	replace	Reviewed-by	Bharath Rupireddy
+
+# "Reviewed-by" lists several people; one tag per person.
+072ee847ad4	replace	Reviewed-by	Amit Kapila
+072ee847ad4	replace	Reviewed-by	Peter Smith
+072ee847ad4	replace	Reviewed-by	Vignesh C
+072ee847ad4	replace	Reviewed-by	Ajin Cherian
+072ee847ad4	replace	Reviewed-by	Dilip Kumar
+072ee847ad4	replace	Reviewed-by	Andres Freund
+
+# "Reviewed-by" lists several people; one tag per person.
+abfb29648f9	replace	Reviewed-by	Amit Kapila
+abfb29648f9	replace	Reviewed-by	Peter Smith
+
+# "Reviewed-by" lists several people; one tag per person.
+302cf157592	replace	Reviewed-by	Álvaro Herrera
+302cf157592	replace	Reviewed-by	Sami Imseih
+302cf157592	replace	Reviewed-by	Michael Paquier
+
+# "Reviewed-by" lists several people; one tag per person.
+a1b4f289bee	replace	Reviewed-by	Melanie Plageman
+a1b4f289bee	replace	Reviewed-by	Robert Haas
+
+# "Author" lists several people; one tag per person.
+1fd1bd87101	replace	Author	Corey Huinker
+1fd1bd87101	replace	Author	Jeff Davis
+
+# "Author" lists several people; one tag per person.
+# "Reviewed-by" lists several people; one tag per person.
+8492feb98f6	replace	Author	Tomas Vondra
+8492feb98f6	replace	Author	Matthias van de Meent
+8492feb98f6	replace	Reviewed-by	Matthias van de Meent
+8492feb98f6	replace	Reviewed-by	Andy Fan
+8492feb98f6	replace	Reviewed-by	Kirill Reshke
+
+# "Reviewed-by" lists several people; one tag per person.
+0b2a45a5d1f	replace	Reviewed-by	Matthias van de Meent
+0b2a45a5d1f	replace	Reviewed-by	Andy Fan
+0b2a45a5d1f	replace	Reviewed-by	Kirill Reshke
+
+# "Reviewed-by" lists several people; one tag per person.
+b229c101647	replace	Reviewed-by	Matthias van de Meent
+b229c101647	replace	Reviewed-by	Andy Fan
+b229c101647	replace	Reviewed-by	Kirill Reshke
 
 # "Diagnozed-by: Tender Wang <tndrwang@gmail.com>", one tag per person.
 # "Diagnozed-by: Dean Rasheed <dean.a.rasheed@gmail.com>", one tag per person.
@@ -26,8 +164,16 @@ a051e71e28a	replace	Reviewed-by	Bharath Rupireddy
 # No space after "Author:".
 a8eeb22f171	insert	Author	Jelte Fennema-Nio <github-tech@jeltef.nl>
 
+# "Reviweed-by" is Reviewed-by.
+8d5ceb113e3	delete	Reviweed-by	Andrei Lepikhov <lepihov@gmail.com> (who didn't like it)
+8d5ceb113e3	append	Reviewed-by	Andrei Lepikhov <lepihov@gmail.com> (who didn't like it)
+
 # "Author: Reviewed-by: Peter Smith"; Peter Smith is the author.
 d1d83827ba4	replace	Author	Peter Smith <smithpb2250@gmail.com>
+
+# "Confirmed-by" is Diagnosed-by.
+f104192e52f	delete	Confirmed-by	Ashutosh Bapat <ashutosh.bapat.oss@gmail.com>
+f104192e52f	append	Diagnosed-by	Ashutosh Bapat <ashutosh.bapat.oss@gmail.com>
 
 # Repeated key with no space: "Reviewed-by:Reviewed-by:".
 12eece5fd54	append	Reviewed-by	Amit Kapila <amit.kapila16@gmail.com>
@@ -36,8 +182,16 @@ d1d83827ba4	replace	Author	Peter Smith <smithpb2250@gmail.com>
 d98cefe1143	delete	Fix-suggested-by	Jacob Champion <jacob.champion@enterprisedb.com>
 d98cefe1143	append	Suggested-by	Jacob Champion <jacob.champion@enterprisedb.com> (fix)
 
+# "Investigated-by" is Diagnosed-by.
+e9a3615a522	delete	Investigated-by	Andres Freund <andres@anarazel.de>
+e9a3615a522	delete	Investigated-by	Alexander Lakhin <exclusion@gmail.com>
+e9a3615a522	delete	Investigated-by	Konstantin Knizhnik <knizhnik@garret.ru>
+e9a3615a522	append	Diagnosed-by	Andres Freund <andres@anarazel.de>
+e9a3615a522	append	Diagnosed-by	Alexander Lakhin <exclusion@gmail.com>
+e9a3615a522	append	Diagnosed-by	Konstantin Knizhnik <knizhnik@garret.ru>
+
 # The same person is in Reported-by twice, the second time as "Reported-By".
-ef03ea01fe4	delete	Reported-By	Shenhao Wang <wangsh.fnst@fujitsu.com>
+ef03ea01fe4	replace	Reported-by	Shenhao Wang <wangsh.fnst@fujitsu.com>
 
 # Repeated key: "Author: Author:".
 36aed19fd99	replace	Author	Corey Huinker <corey.huinker@gmail.com>
@@ -46,9 +200,21 @@ ef03ea01fe4	delete	Reported-By	Shenhao Wang <wangsh.fnst@fujitsu.com>
 8741e48e5dd	delete	Diagnozed-by	Fei Changhong <feichanghong@qq.com>
 8741e48e5dd	append	Diagnosed-by	Fei Changhong <feichanghong@qq.com>
 
+# "Co-Author" is Co-authored-by.
+b2922562726	delete	Co-Author	Andrew Dunstan <andrew@dunslane.net>
+b2922562726	append	Co-authored-by	Andrew Dunstan <andrew@dunslane.net>
+
+# "Test-authored-by" is Co-authored-by.
+27da1a796ff	delete	Test-authored-by	Tom Lane <tgl@sss.pgh.pa.us>
+27da1a796ff	append	Co-authored-by	Tom Lane <tgl@sss.pgh.pa.us> (test)
+
 # "Fix-suggested-by: Jacob Champion <jacob.champion@enterprisedb.com>", one tag per person.
 d4baa327a1c	delete	Fix-suggested-by	Jacob Champion <jacob.champion@enterprisedb.com>
 d4baa327a1c	append	Suggested-by	Jacob Champion <jacob.champion@enterprisedb.com> (fix)
+
+# "Author" lists several people; one tag per person.
+e8bfad4ca84	replace	Author	Daisuke Higuchi
+e8bfad4ca84	replace	Author	Erik Wienhold
 
 # "Author: idea from David Rowley" credits an idea, not authorship.
 5d4dc112c7c	delete	Author	idea from David Rowley

@@ -105,10 +105,13 @@ comment saying why:
 |---------|--------------------------------------------------|
 | `hash`  | the commit, as in `data/commits/`                |
 | `verb`  | `insert`, `append`, `delete` or `replace`        |
-| `tag`   | the tag, matched exactly as typed                |
+| `tag`   | the tag, ignoring case and spacing               |
 | `value` | the value to add or delete                       |
 
-Each tag of a commit is fixed separately:
+Each tag of a commit is fixed separately. A tag's key is compared
+ignoring case and spacing, as git does with trailers, so a fix to
+`Reviewed-by` also applies to values written as `Reviewed-By` or
+`Reviewed by`; values a fix adds are spelled as in the fix.
 
 - `insert` and `append` add a value before the tag's existing values or
   after them, in file order. If the commit has no values for that tag,
@@ -121,10 +124,26 @@ Each tag of a commit is fixed separately:
 So for a tag with values `a b c`, `insert d`, `insert e`, `append f`,
 `delete b` gives `d e a c f`.
 
-Where the prose allows, fixes put tags in a canonical form: one person per
-tag, with a parenthetical gloss saying what they did. "Bob Jones, with a
-test case from Fred Smith" becomes `Author: Bob Jones` and
-`Co-authored-by: Fred Smith (test case)`, and "me" becomes the committer.
+Fixes put credit tags in a canonical form, which the people layer relies
+on:
+
+- One person per tag, with a parenthetical gloss saying what they did
+  where the message says it. `Reviewed-by: Jane Doe, John Roe` becomes two
+  tags, "Bob Jones, with a test case from Fred Smith" becomes
+  `Author: Bob Jones` and `Co-authored-by: Fred Smith (test case)`, and
+  "Tom Lane, via buildfarm member skink" becomes
+  `Tom Lane (via buildfarm member skink)`.
+- The key is one of `Author`, `Co-authored-by`, `Reviewed-by`,
+  `Reported-by`, `Tested-by`, `Suggested-by` and `Diagnosed-by`.
+  Synonyms and misspellings get the canonical key: `Noticed-by` and
+  `Spotted-by` become `Reported-by`, `Investigated-by` and
+  `Reproduced-by` become `Diagnosed-by`, `Reivewed-by` becomes
+  `Reviewed-by`. Keys that differ only in case or spacing, like
+  `Reviewed-By`, are left alone; they're compared ignoring both.
+- "me", or the committer's own first name, becomes the committer, and
+  a first name spelled out elsewhere in the message becomes the full name.
+
+This is done for commits since 2011.
 
 `commitdata.py` applies fixes even when they're stale or contradictory,
 so tools keep working. `check-commits.py` reports the problems:
@@ -347,8 +366,9 @@ written under `data/`.
 
 ### How people are found
 
-A person tag is `Author` or any tag ending in `-by`. Each name and
-address in them, in git authors, and in mail senders is an identifier:
+A person tag is one of the canonical credit keys (see Tag fixes), compared
+ignoring case and spacing; each names one person. The name and address
+in each, in git authors, and in mail senders are identifiers:
 
 - An **address** is compared case-insensitively, with the archive's
   `(at)` and `(dot)` undone.
@@ -360,22 +380,26 @@ address in them, in git authors, and in mail senders is an identifier:
   name written in two scripts, like `Hou Zhijie 侯志杰` or
   `王海洋 (Haiyang Wang)`, also counts as each script's part.
 - A **one-word name**, like `MauMau` or `Michael`, is too weak to link
-  anything, and identifies no one unless it's pinned (below).
+  anything, and identifies no one unless it's pinned (below). A pinned
+  one-word name links like a full name, so `MauMau <maumau307@...>` in
+  mail joins the person `MauMau` is pinned to.
 
 A name and an address written together, in a mail `From` or a tag like
 `Jane Doe <jd@example.com>`, are the same person, and so is everything
 linked to either of them.
 
-A tag value naming several people, like `Jane Doe and John Roe` or
-`Jane Doe, John Roe`, is split. When the only separators are commas and
-there's an address, it takes two full names to make a list, so
-`Wong, Yi Wen <yw@example.com>` is one person.
+A value that still names several people, like `Jane Doe and John Roe`,
+identifies no one; the fix is to split it in the tag fixes. (When the
+only separators are commas and there's an address, it takes two full
+names to make a list, so `Wong, Yi Wen <yw@example.com>` is one person.)
 
 A person's display name is how they write it themselves, as git author
 or in mail, or failing that how commit tags write it, preferring the
 Latin alphabet. The most used spelling wins; among spellings differing
 only in case or accents, one that isn't all upper or lower case, then
-one with accents.
+one with accents. Someone known by no full name is shown by the one-word
+name they use, like `didier`, with their address added if someone else
+already has it, and failing that by their address.
 
 ### Overrides
 
@@ -406,9 +430,10 @@ different people in different commits, like `Michael` or `Peter`, is fixed
 in the tag fixes, not here.
 
 `python3 check-people.py` reports rows that don't parse or whose
-identifier doesn't occur in the data, identifiers pinned to two people,
-person tag values that identify no one, and anyone named twice in one
-tag of a commit. With `--review` it also lists
+identifier doesn't occur in the data, and identifiers pinned to two
+people. For commits since 2011 it also reports person tags that list
+several people or identify no one, credit keys that aren't canonical,
+and anyone named twice in one tag. With `--review` it also lists
 pairs of people whose names are near-matches, like `Masahiko Sawada` and
 `Masahiko Sawasa`, to merge or keep apart.
 
@@ -418,10 +443,10 @@ pairs of people whose names are near-matches, like `Masahiko Sawada` and
 import people
 p = people.load()
 p.resolve_value('Jane Doe <jd@example.com> (test case)')
-                        # [(text, person id or None, status)], one per person named
-p.resolve('Jane Doe', 'jd(at)example(dot)com')   # (person id or None, status)
+                        # (person id or None, status)
+p.resolve('Jane Doe', 'jd(at)example(dot)com')   # the same, from a name and address
 p.persons['Jane Doe']   # Person: id, pinned, nodes, own_names, tag_names
-p.authors(commit)       # commit.authors split into people, without those
-                        # that identify no one, such as AI tools
+p.authors(commit)       # [(value, person id, status)] for commit.authors,
+                        # without those that identify no one, such as AI tools
 p.primary_author(commit)   # the first of those, credited with the lines
 ```

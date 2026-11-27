@@ -117,9 +117,10 @@ for year in range(2016, 2026):
         if len(hs) != 1 or not author:
             continue
         c = data.commits[hs[0]]
-        ours = p.resolve_value(c.primary_author)[0][1] if c.primary_author else None
+        primary = p.primary_author(c)
+        ours = primary[1] if primary else None
         theirs = who(author)
         if ours and not theirs.startswith('?') and ours != theirs:
-            print(f'   {c.hash} legacy {author!r} ({theirs}) ours {c.primary_author!r} ({ours})')
+            print(f'   {c.hash} legacy {author!r} ({theirs}) ours {primary[0] if primary else None!r} ({ours})')
         elif theirs.startswith('?'):
-            print(f'   {c.hash} legacy {author!r} matches no one; ours {c.primary_author!r} ({ours})')
+            print(f'   {c.hash} legacy {author!r} matches no one; ours {primary[0] if primary else None!r} ({ours})')

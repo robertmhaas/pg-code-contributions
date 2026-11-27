@@ -11,10 +11,8 @@ person	identifier
 -	Claude
 -	Claude Code
 -	Coverity
--	discussion
 -	IRC
 -	Oversight
--	others
 -	sqlsmith
 -	TODO
 # The web forms send mail from one address for whoever filled them in.
@@ -100,6 +98,7 @@ Dmitry Vasiliev	Dmitry Vasilyev
 Fabien Coelho	Fabian Coelho
 Fabien Coelho	Fabien Coehlo
 Fabien Coelho	Fabien Coelh
+Gao Zengqi	Gao Zeng Qi
 Haribabu Kommi	Hari Babu Kommi
 Heikki Linnakangas	Heikki Linnankangas
 Jelte Fennema-Nio	Jelte Fenema-Nio

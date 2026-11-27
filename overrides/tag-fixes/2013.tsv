@@ -37,10 +37,13 @@ hash	verb	tag	value
 7dfd5cd21c0	append	Co-authored-by	Jeff Janes <jeff.janes@gmail.com> (earlier patch)
 
 # "Reviewers: Dean Rasheed, Jeevan Chalke, Stephen Frost", one tag per person.
+# "Author" lists several people; one tag per person.
 c62736cc37f	delete	Reviewers	Dean Rasheed, Jeevan Chalke, Stephen Frost
 c62736cc37f	append	Reviewed-by	Dean Rasheed
 c62736cc37f	append	Reviewed-by	Jeevan Chalke
 c62736cc37f	append	Reviewed-by	Stephen Frost
+c62736cc37f	replace	Author	Andrew Gierth
+c62736cc37f	replace	Author	David Fetter
 
 # "Based-on-patch-by: David Rowley <dgrowleyml@gmail.com>", one tag per person.
 c2316dcda1c	delete	Based-on-patch-by	David Rowley <dgrowleyml@gmail.com>

@@ -31,20 +31,23 @@ def check_tag_fixes(data):
         if fix.verb not in commitdata.TAG_FIX_VERBS:
             problems.append(f'{fix.where}: unknown verb {fix.verb!r}')
             continue
-        fixes_by_key[fix.hash, fix.tag].append(fix)
-        existing = [v for t, v in commit.raw_tags if t == fix.tag]
-        if fix.verb == 'delete' and fix.value not in existing:
-            problems.append(f'{fix.where}: {fix.hash} has no {fix.tag} '
-                            f'{fix.value!r} to delete')
-        if fix.verb in ('insert', 'append') and fix.value in existing:
-            problems.append(f'{fix.where}: {fix.hash} already has {fix.tag} '
-                            f'{fix.value!r}')
+        fixes_by_key[fix.hash, commitdata.tag_key(fix.tag)].append(fix)
 
-    for (h, tag), fixes in fixes_by_key.items():
+    for (h, key), fixes in fixes_by_key.items():
+        existing = [v for t, v in data.commits[h].raw_tags if commitdata.tag_key(t) == key]
+        deleted = {f.value for f in fixes if f.verb == 'delete'}
+        for fix in fixes:
+            if fix.verb == 'delete' and fix.value not in existing:
+                problems.append(f'{fix.where}: {fix.hash} has no {fix.tag} '
+                                f'{fix.value!r} to delete')
+            if fix.verb in ('insert', 'append') and fix.value in existing \
+                    and fix.value not in deleted:
+                problems.append(f'{fix.where}: {fix.hash} already has {fix.tag} '
+                                f'{fix.value!r}')
         if any(f.verb == 'replace' for f in fixes) and \
                 any(f.verb != 'replace' for f in fixes):
             problems.append(f'{fixes[0].where}: replace must be the only verb '
-                            f'for {h} {tag}')
+                            f'for {h} {fixes[0].tag}')
     return problems
 
 

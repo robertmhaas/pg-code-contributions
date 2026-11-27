@@ -3,14 +3,18 @@ Map the names and addresses in commits and mail to people.
 
     import people
     p = people.load()
-    p.resolve_value('Jane Doe <jd@example.com>')   # [(text, person id or None, status)]
-    p.resolve('Jane Doe', 'jd(at)example(dot)com')  # (person id or None, status)
+    p.resolve_value('Jane Doe <jd@example.com>')   # (person id or None, status)
+    p.resolve('Jane Doe', 'jd(at)example(dot)com')  # the same, from a name and address
     p.persons['Jane Doe']                          # Person
 
 People are found by linking identifiers: an address, or a name reduced to a
 key.  A name and an address that appear together in a mail From or a tag
 value are the same person.  overrides/people.tsv pins identifiers to people
 by hand; see README.md.
+
+Each person tag is expected to name one person under a canonical key; tag
+fixes make them so.  This module only reads the name and address in a
+value.
 """
 
 import collections
@@ -36,10 +40,16 @@ OTHER_LETTER = re.compile(r'(?![\d_])(?![A-Za-z\u00c0-\u024f\u1e00-\u1eff])\w')
 LIST_SEPARATOR = re.compile(r'\s*(?:,\s*(?:and\b)?|;|&|\+|\band\b)\s*', re.I)
 
 
+PERSON_TAGS = ('Author', 'Co-authored-by', 'Reviewed-by', 'Reported-by', 'Tested-by',
+               'Suggested-by', 'Diagnosed-by')
+
+
+tag_key = commitdata.tag_key
+
+
 def is_person_tag(tag):
-    """Author, Co-authored-by, Reviewed-by and the like."""
-    key = tag.lower().replace(' ', '-')
-    return key.endswith('-by') or key in ('author', 'authors', 'co-author', 'co-authors')
+    """Whether a tag is one of PERSON_TAGS, ignoring case and spacing."""
+    return tag_key(tag) in {t.lower() for t in PERSON_TAGS}
 
 
 def address_key(address):
@@ -137,32 +147,29 @@ def clean_name(text):
     return text.strip(' "\'`')
 
 
-def split_value(value):
+def parse_value(value):
+    """(name, address) of the person in a tag value."""
+    address = re.findall(r'<([^<>]*@[^<>]*)>', value) or ADDRESS.findall(value) or [None]
+    return clean_name(value), address[0]
+
+
+def looks_like_list(value):
     """
-    Return [(text, name, address)] for the people in a tag value.  Usually
-    there's one, but a value can be a list, as in "Jane Doe and John Roe".
-    Separators inside glosses, addresses and quotes don't count, and if the only
-    separators are commas and there's an address, as in "Wong, Yi Wen
-    <yw@example.com>", it takes two full names to make a list.
+    Whether a tag value names several people, as in "Jane Doe and John
+    Roe"; tag fixes should split those.  Separators inside glosses,
+    addresses and quotes don't count, and if the only separators are
+    commas and there's an address, as in "Wong, Yi Wen <yw@example.com>",
+    it takes two full names to make a list.
     """
     masked = re.sub(r'\([^()]*\)|<[^<>]*>|"[^"]*"', lambda m: 'x' * len(m.group()), value)
     masked = ADDRESS.sub(lambda m: 'x' * len(m.group()), masked)
-    parts, separators, pos = [], [], 0
-    for m in LIST_SEPARATOR.finditer(masked):
-        parts.append(value[pos:m.start()])
-        separators.append(m.group().strip().lower())
-        pos = m.end()
-    parts.append(value[pos:])
-    parts = [p for p in parts if p.strip()]
-    full = sum(1 for p in parts if name_key(clean_name(p)))
-    if len(parts) < 2 or full == 0 or (full < 2 and all(x == ',' for x in separators)
-                                       and (ADDRESS.search(value) or '<' in value)):
-        parts = [value]
-    out = []
-    for p in parts:
-        address = re.findall(r'<([^<>]*@[^<>]*)>', p) or ADDRESS.findall(p) or [None]
-        out.append((p.strip(), clean_name(p), address[0]))
-    return out
+    separators = [m.group().strip().lower() for m in LIST_SEPARATOR.finditer(masked)]
+    parts = [q for q in LIST_SEPARATOR.split(masked) if q.strip()]
+    full = sum(1 for q in parts if name_key(clean_name(q)))
+    if len(parts) < 2 or full == 0:
+        return False
+    return full >= 2 or not all(x == ',' for x in separators) or not (
+        ADDRESS.search(value) or '<' in value)
 
 
 def identifier_node(identifier):
@@ -234,19 +241,23 @@ class People:
         return None, 'single name' if node[0] == 's' else 'unknown'
 
     def resolve_value(self, value):
-        """[(text, person id or None, status)] for a tag value."""
-        return [(text, *self.resolve(name, address))
-                for text, name, address in split_value(value)]
+        """
+        (person id, 'ok') for a tag value, or (None, status) as for
+        resolve(), or (None, 'list') if the value names several people.
+        """
+        if looks_like_list(value):
+            return None, 'list'
+        return self.resolve(*parse_value(value))
 
     def authors(self, commit):
         """
-        [(text, person id or None, status)] for a commit's authors (see
-        commitdata.Commit.authors), one per person named, leaving out any
-        that identify no one, such as AI tools.  A value that names someone
-        who can't be identified is kept, with person None.
+        [(value, person id or None, status)] for a commit's authors (see
+        commitdata.Commit.authors), leaving out any that identify no one,
+        such as AI tools.  A value naming someone who can't be identified
+        is kept, with person None.
         """
-        return [r for value in commit.authors for r in self.resolve_value(value)
-                if r[2] != 'nobody']
+        return [(value, *r) for value in commit.authors
+                for r in [self.resolve_value(value)] if r[1] != 'nobody']
 
     def primary_author(self, commit):
         """The first of authors(), who is credited with the commit's lines, or None."""
@@ -283,6 +294,7 @@ def load(root=commitdata.ROOT, data=None):
     own_names = collections.defaultdict(collections.Counter)   # node: written names
     tag_names = collections.defaultdict(collections.Counter)
     edges = set()
+    single_edges = set()    # one-word names and their addresses; used if pinned
     nodes = set()
     seen = set()
 
@@ -291,8 +303,14 @@ def load(root=commitdata.ROOT, data=None):
         named = name_nodes(name)
         seen.update(named)
         linked = [n for n in named if n[0] == 'n']
+        single = [n for n in named if n[0] == 's']
         if linked:
             counter[linked[0]][name] += 1
+        elif single:
+            # Kept for the display name of someone known by no full name.
+            counter[('a', a) if a else single[0]][name] += 1
+            if a:
+                single_edges.add((single[0], ('a', a)))
         if a:
             linked.append(('a', a))
         nodes.update(linked)
@@ -302,9 +320,8 @@ def load(root=commitdata.ROOT, data=None):
     for c in data.commits.values():
         see(clean_name(c.git_author), None, own_names)
         for tag, value in c.tags:
-            if is_person_tag(tag):
-                for _, name, address in split_value(value):
-                    see(name, address, tag_names)
+            if is_person_tag(tag) and not looks_like_list(value):
+                see(*parse_value(value), tag_names)
     for _, (_, _, from_name, from_address) in mail_rows(root):
         see(clean_name(from_name), from_address, own_names)
 
@@ -343,6 +360,9 @@ def load(root=commitdata.ROOT, data=None):
     for n in nobody:
         people.node_person[n] = NOBODY
     nodes |= set(label_of)
+    # A one-word name that's pinned is as good as a full name, so it links
+    # the addresses it's sent from: "MauMau <maumau307@...>".
+    edges |= {e for e in single_edges if e[0] in label_of}
 
     blocked = nobody | ambiguous
     adjacency = collections.defaultdict(set)
@@ -403,10 +423,12 @@ def load(root=commitdata.ROOT, data=None):
             pid = label
         else:
             addresses = sorted(obfuscate(n[1]) for n in members if n[0] == 'a')
-            pid = display_name(person_own, person_tags) or (addresses or sorted(
+            full = display_name(person_own, person_tags)
+            pid = full or one_word_name(person_own, person_tags) or (addresses or sorted(
                 n[1] for n in members))[0]
             if pid in taken:
-                people.problems.append(f'two people would be called {pid!r}')
+                if full:
+                    people.problems.append(f'two people would be called {pid!r}')
                 pid = f'{pid} <{addresses[0]}>' if addresses else f'{pid} (2)'
         taken[pid] = True
         person = people.persons.get(pid)
@@ -423,6 +445,19 @@ def load(root=commitdata.ROOT, data=None):
 
 def obfuscate(address):
     return address.replace('@', '(at)').replace('.', '(dot)')
+
+
+def one_word_name(own_names, tag_names):
+    """
+    For someone known by no full name, the one-word name they use most,
+    such as "didier" or "BharatDB", or failing that the one commits use.
+    """
+    for counter in (own_names, tag_names):
+        words = collections.Counter({n: c for n, c in counter.items()
+                                     if n and single_key(n) and not ADDRESS.search(n)})
+        if words:
+            return max(words, key=lambda n: (words[n], n != n.lower(), n))
+    return None
 
 
 def display_name(own_names, tag_names):

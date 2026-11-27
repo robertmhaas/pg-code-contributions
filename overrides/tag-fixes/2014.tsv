@@ -9,13 +9,26 @@ b152c6cd0de	insert	Author	Pavel Stehule
 b152c6cd0de	insert	Author	Dean Rasheed
 b152c6cd0de	append	Co-authored-by	Álvaro Herrera (tweaks)
 
+# "Reviewed-by" lists several people; one tag per person.
+9067310cc5d	replace	Reviewed-by	Jeevan Chalke
+9067310cc5d	replace	Reviewed-by	Álvaro Herrera
+9067310cc5d	replace	Reviewed-by	Josh Kupershmidt
+
 # Was "Author: Pavel Stěhule, editorialized somewhat by Álvaro Herrera".
+# "Reviewed-by" lists several people; one tag per person.
 84df54b22e8	replace	Author	Pavel Stěhule
 84df54b22e8	append	Co-authored-by	Álvaro Herrera (editorialized somewhat)
+84df54b22e8	replace	Reviewed-by	Tomáš Vondra
+84df54b22e8	replace	Reviewed-by	Marko Tiikkaja
 
 # Was "Author: Christian Kruse, some tweaks by Álvaro Herrera".
+# "Reviewed-by" lists several people; one tag per person.
 f88d4cfc9d4	replace	Author	Christian Kruse
 f88d4cfc9d4	append	Co-authored-by	Álvaro Herrera (tweaks)
+f88d4cfc9d4	replace	Reviewed-by	Amit Kapila
+f88d4cfc9d4	replace	Reviewed-by	Andres Freund
+f88d4cfc9d4	replace	Reviewed-by	Tom Lane
+f88d4cfc9d4	replace	Reviewed-by	Robert Haas
 
 # "Authors: Oleg Bartunov,  Teodor Sigaev, Peter Geoghegan and Andrew Dunstan.", one tag per person.
 # "Review: Andres Freund", one tag per person.
@@ -59,6 +72,10 @@ f41872d0c12	append	Reviewed-by	Thom Brown
 07c8651dd91	append	Reviewed-by	Abhijit Menon-Sen
 07c8651dd91	append	Reviewed-by	Erik Rijkers
 
+# "Author" lists several people; one tag per person.
+311da16439e	replace	Author	Michael Paquier
+311da16439e	replace	Author	Andres Freund
+
 # Was "Author: Abhijit Menon-Sen, slightly editorialized by me".
 # "Reviewed-By: Álvaro Herrera, Andres Freund, and Heikki Linnakangas", one tag per person.
 728f152e07f	replace	Author	Abhijit Menon-Sen
@@ -95,9 +112,19 @@ fdf81c9a6cf	append	Co-authored-by	Andres Freund (editing)
 0c013e08cfb	replace	Author	Michael Paquier
 0c013e08cfb	append	Co-authored-by	Andres Freund (editing)
 
+# "Author" lists several people; one tag per person.
+c8b6cba84a9	replace	Author	Michael Paquier
+c8b6cba84a9	replace	Author	Andres Freund
+
 # Was "Author: Joachim Wieland, revised by Álvaro Herrera".
 0eea8047bf0	replace	Author	Joachim Wieland
 0eea8047bf0	append	Co-authored-by	Álvaro Herrera (revised)
+
+# "Patch reviewed by" is Reviewed-by; one tag per person.
+7516f525941	delete	Patch reviewed by	Amit Kapila, Heikki Linnakangas, Robert Haas.
+7516f525941	append	Reviewed-by	Amit Kapila
+7516f525941	append	Reviewed-by	Heikki Linnakangas
+7516f525941	append	Reviewed-by	Robert Haas
 
 # "Reviewer: Furuya Osamu", one tag per person.
 0f66d212015	delete	Reviewer	Furuya Osamu

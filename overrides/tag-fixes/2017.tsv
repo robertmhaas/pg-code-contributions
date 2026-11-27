@@ -140,6 +140,13 @@ d26fa4fd47a	append	Reported-by	Robert Haas
 e37360d5df2	insert	Author	Mithun Cy
 e37360d5df2	append	Co-authored-by	Robert Haas (other improvements)
 
+# "Author" lists several people; one tag per person.
+69f4b9c85f1	replace	Author	Tom Lane
+69f4b9c85f1	replace	Author	Andres Freund
+
+# "Reported-by" lists several people; one tag per person.
+30bcebbdcf2	replace	Reported-by	Andy Abelisto (in bug #14446)
+
 # "Patch by Michael Paquier, with some tweaking of the regression tests by me."
 bec96c82f8f	insert	Author	Michael Paquier
 bec96c82f8f	append	Co-authored-by	Stephen Frost (tweaking of the regression tests)
@@ -166,6 +173,10 @@ c3978149536	insert	Author	Amit Langote
 8eace46d34a	delete	Reviewed-By	Petr Jelínek, Peter Eisentraut
 8eace46d34a	append	Reviewed-by	Petr Jelínek
 8eace46d34a	append	Reviewed-by	Peter Eisentraut
+
+# "Author" lists several people; one tag per person.
+ea15e18677f	replace	Author	Andres Freund
+ea15e18677f	replace	Author	Tom Lane
 
 # Was "Author: Andres Freund, with input from Tom Lane".
 182200531a9	replace	Author	Andres Freund
@@ -266,6 +277,10 @@ ec4b975016b	insert	Author	Craig Ringer
 
 # "Reviewed-by: Petr Jelinek <petr.jelinek@2ndquadrant.com>"
 9c18104c744	insert	Author	Petr Jelinek
+
+# "Author" lists several people; one tag per person.
+5bcab111426	replace	Author	Peter Eisentraut
+5bcab111426	replace	Author	Andres Freund
 
 # Was "Author: Peter Eisentraut, with some minor changes by me".
 9ba8a9ce454	replace	Author	Peter Eisentraut
@@ -805,6 +820,13 @@ d9528604ccb	insert	Author	Thomas Munro
 d9528604ccb	append	Reported-by	Andres Freund
 d9528604ccb	append	Reported-by	Tom Lane
 
+# "Author" lists several people; one tag per person.
+# "Extensively reviewed by" is Reviewed-by.
+fcec6caafa2	replace	Author	Pavel Stehule
+fcec6caafa2	replace	Author	Álvaro Herrera
+fcec6caafa2	delete	Extensively reviewed by	Craig Ringer
+fcec6caafa2	append	Reviewed-by	Craig Ringer
+
 # "Amit Langote, reviewed by Ashutosh Bapat."
 0d130c7abc8	insert	Author	Amit Langote
 0d130c7abc8	append	Reviewed-by	Ashutosh Bapat
@@ -966,6 +988,10 @@ bb4a39637ac	append	Reviewed-by	Amit Kapila
 bb4a39637ac	append	Reviewed-by	Ashutosh Sharma
 bb4a39637ac	append	Co-authored-by	Robert Haas (tweaks)
 
+# "Author" lists several people; one tag per person.
+60f826c5e62	replace	Author	Tom Lane
+60f826c5e62	replace	Author	Andres Freund
+
 # "Ashutosh Bapat, reviewed and tested by Rajkumar Raghuwanshi and by me."
 c44c47a773b	insert	Author	Ashutosh Bapat
 c44c47a773b	append	Reviewed-by	Rajkumar Raghuwanshi
@@ -1045,6 +1071,10 @@ f7819baa618	append	Co-authored-by	Tom Lane (cosmetic adjustments)
 17f8ffa1e33	insert	Author	Jim Mlodgenski
 17f8ffa1e33	append	Co-authored-by	Tom Lane (adjusted a bit)
 
+# "Reviewed-by" lists several people; one tag per person.
+9cf6033281f	replace	Reviewed-by	Jim Nasby
+9cf6033281f	replace	Reviewed-by	Andres Freund
+
 # "Andres Freund, tweaked a bit by me."
 be6c3d19fd4	insert	Author	Andres Freund
 be6c3d19fd4	append	Co-authored-by	Tom Lane (tweaked a bit)
@@ -1072,8 +1102,11 @@ b6fb534f10e	append	Reviewed-by	Ashtosh Bapat
 aa740b59a68	insert	Author	Jeff Janes
 
 # Was "Author: Nikita Glukhov with minor editorization of tests by me".
+# "Reviewed-by" lists several people; one tag per person.
 d5286aa905c	replace	Author	Nikita Glukhov
 d5286aa905c	append	Co-authored-by	Teodor Sigaev (minor editorization of tests)
+d5286aa905c	replace	Reviewed-by	Kyotaro Horiguchi
+d5286aa905c	replace	Reviewed-by	Anastasia Lubennikova
 
 # "Amit Langote, reviewed by me."
 d3cc37f1d80	insert	Author	Amit Langote
@@ -1087,9 +1120,17 @@ eb2a6131bec	insert	Author	Craig Ringer
 1148e22a82e	append	Reviewed-by	Simon Riggs
 1148e22a82e	append	Reviewed-by	Andres Freund
 
+# "Author" lists several people; one tag per person.
+9b013dc238c	replace	Author	David Rowley
+9b013dc238c	replace	Author	Simon Riggs
+
 # "Michael Paquier. Reviewed by Albe Laurenz."
 96a7128b7b4	insert	Author	Michael Paquier
 96a7128b7b4	append	Reviewed-by	Albe Laurenz
+
+# "Author" lists several people; one tag per person.
+49bff5300d5	replace	Author	Simon Riggs
+49bff5300d5	replace	Author	David Rowley
 
 # "Review: Haribabu Kommi", one tag per person.
 af4b1a0869b	delete	Review	Haribabu Kommi
@@ -1148,8 +1189,18 @@ ea42cc18c35	append	Reviewed-by	Robert Haas
 
 # Was "Author: Tomas Vondra.  Some code rework by Álvaro.".
 # "Álvaro" is the committer, Álvaro Herrera.
+# "Reviewed-by" lists several people; one tag per person.
 7b504eb282c	replace	Author	Tomas Vondra
 7b504eb282c	append	Co-authored-by	Álvaro Herrera (code rework)
+7b504eb282c	replace	Reviewed-by	Dean Rasheed
+7b504eb282c	replace	Reviewed-by	David Rowley
+7b504eb282c	replace	Reviewed-by	Kyotaro Horiguchi
+7b504eb282c	replace	Reviewed-by	Jeff Janes
+7b504eb282c	replace	Reviewed-by	Ideriha Takeshi
+
+# "Reviewed-by" lists several people; one tag per person.
+70adf2fbe18	replace	Reviewed-by	Yugo Nagata
+70adf2fbe18	replace	Reviewed-by	Jim Nasby
 
 # "Rafia Sabih and Robert Haas, reviewed by Dilip Kumar and Amit Kapila."
 61c2e1a95f9	insert	Author	Rafia Sabih
@@ -1188,6 +1239,10 @@ f0a6046bcb1	append	Reviewed-by	Robert Haas
 b5635948ab1	delete	Reviewers	Mark Dilger, Andres Freund
 b5635948ab1	append	Reviewed-by	Mark Dilger
 b5635948ab1	append	Reviewed-by	Andres Freund
+
+# "Author" lists several people; one tag per person.
+2c3e47527a6	replace	Author	David Rowley
+2c3e47527a6	replace	Author	Álvaro Herrera
 
 # "Report by Rafia Sabih, fix by Dilip Kumar, adjusted by me."
 a171f01501e	insert	Author	Dilip Kumar
@@ -1241,6 +1296,10 @@ a6f22e83562	insert	Author	Lukas Fittl
 # "Craig Ringer."
 ff539da3169	insert	Author	Craig Ringer
 
+# "Reviewed-by" lists several people; one tag per person.
+ab89e465cb2	replace	Reviewed-by	Petr Jelínek
+ab89e465cb2	replace	Reviewed-by	Ashutosh Sharma
+
 # "Aleksander Alekseev."
 8cfeaecfc76	insert	Author	Aleksander Alekseev
 
@@ -1252,6 +1311,15 @@ fddf45b3809	append	Reported-by	Andreas Seltenreich
 9a095271643	insert	Author	Rafia Sabih
 9a095271643	append	Reported-by	Tom Lane
 9a095271643	append	Reviewed-by	Robert Haas
+
+# "Reviewed-by" lists several people; one tag per person.
+2fd8685e7fd	replace	Reviewed-by	Pavan Deolasee
+2fd8685e7fd	replace	Reviewed-by	Amit Kapila
+2fd8685e7fd	replace	Reviewed-by	Mithun CY
+
+# "Reviewed-by" lists several people; one tag per person.
+f90d23d0c51	replace	Reviewed-by	Julien Rouhaud
+f90d23d0c51	replace	Reviewed-by	Peter Geoghegan
 
 # Was "Author: Andres Freund, with contributions by Craig Ringer".
 # "Reviewed-By: Peter Eisentraut, Craig Ringer", one tag per person.
@@ -1274,6 +1342,12 @@ fddf45b3809	append	Reported-by	Andreas Seltenreich
 e984ef5861d	insert	Author	Corey Huinker
 e984ef5861d	append	Reviewed-by	Fabien Coelho
 e984ef5861d	append	Co-authored-by	Tom Lane (further hacking)
+
+# "Reviewed-by" lists several people; one tag per person.
+25fff40798f	replace	Reviewed-by	Stephen Frost
+25fff40798f	replace	Reviewed-by	Robert Haas
+25fff40798f	replace	Reviewed-by	Peter Eisentraut
+25fff40798f	replace	Reviewed-by	Simon Riggs
 
 # "Dmitry Dolgov, reviewed and lightly edited by me."
 c80b9920fcb	insert	Author	Dmitry Dolgov
@@ -1377,6 +1451,15 @@ a9a79491341	insert	Author	Dilip Kumar
 # "Other part of Beena Emerson's patch to allow testing"
 00b6b6feb12	insert	Author	Beena Emerson
 
+# "Author" lists several people; one tag per person.
+# "Reviewed-by" lists several people; one tag per person.
+2686ee1b7cc	replace	Author	Tomas Vondra
+2686ee1b7cc	replace	Author	David Rowley
+2686ee1b7cc	replace	Reviewed-by	Kyotaro HORIGUCHI
+2686ee1b7cc	replace	Reviewed-by	Álvaro Herrera
+2686ee1b7cc	replace	Reviewed-by	Dean Rasheed
+2686ee1b7cc	replace	Reviewed-by	Robert Haas
+
 # "Kyotaro Horiguchi and Tom Lane."
 df1a699e5ba	insert	Author	Kyotaro Horiguchi
 df1a699e5ba	insert	Author	Tom Lane
@@ -1404,6 +1487,10 @@ cf35346e813	append	Reviewed-by	Tom Lane
 
 # "Kyotaro Horiguchi."
 0c732850d22	insert	Author	Kyotaro Horiguchi
+
+# "Author" lists several people; one tag per person.
+8bf74967dab	replace	Author	Jinyu Zhang
+8bf74967dab	replace	Author	Álvaro Herrera
 
 # "David Rowley, reviewed and rather heavily editorialized on by me."
 9c7f5229ad6	insert	Author	David Rowley
@@ -1465,6 +1552,10 @@ ff7bce17439	append	Co-authored-by	Fujii Masao
 2c2ecddcffb	insert	Author	Amit Langote
 2c2ecddcffb	append	Co-authored-by	Simon Riggs (line)
 
+# "Author" lists several people; one tag per person.
+73c1748d833	replace	Author	Arjen Nienhuis
+73c1748d833	replace	Author	Pavel Stěhule
+
 # "Andreas Karlsson, with some small adjustments by me."
 5e39f06cfe6	insert	Author	Andreas Karlsson
 5e39f06cfe6	append	Co-authored-by	Tom Lane (small adjustments)
@@ -1482,11 +1573,19 @@ bfba563bc5d	insert	Author	Amit Kapila
 # "Michael Paquier."
 a1888b59b51	insert	Author	Michael Paquier
 
+# "Author" lists several people; one tag per person.
+8c5cdb7f4f6	replace	Author	David Rowley
+8c5cdb7f4f6	replace	Author	Álvaro Herrera
+
 # "Yugo Nagata."
 b2188575c59	insert	Author	Yugo Nagata
 
 # "Amit Langote."
 51175f36385	insert	Author	Amit Langote
+
+# "Author" lists several people; one tag per person.
+aa203e76004	replace	Author	Pavan Deolasee
+aa203e76004	replace	Author	Michael Paquier
 
 # "Michael Paquier did this in an earlier version of the SCRAM patch set already, but I didn't include that in the version that was committed."
 c727f120ff5	insert	Author	Michael Paquier
@@ -1497,6 +1596,10 @@ a790ed9f69e	append	Co-authored-by	Fujii Masao (heavily modified)
 
 # "Jaime Casanova."
 e68432a0e1a	insert	Author	Jaime Casanova
+
+# "Reviewed-by" lists several people; one tag per person.
+8bbc618b482	replace	Reviewed-by	Kyotaro Horiguchi
+8bbc618b482	replace	Reviewed-by	Fujii Masao
 
 # Was "Author: Andres Freund, per suggestion from Tom Lane".
 b182a4ae2f9	replace	Author	Andres Freund
@@ -1514,6 +1617,23 @@ b182a4ae2f9	append	Suggested-by	Tom Lane
 # "Kyotaro Horiguchi."
 914ae8d3cbb	insert	Author	Kyotaro Horiguchi
 
+# "Reported-by" lists several people; one tag per person.
+64f0f7cfc75	replace	Reported-by	David Rowley
+64f0f7cfc75	replace	Reported-by	Amit Langote
+64f0f7cfc75	replace	Reported-by	Ashutosh Bapat
+
+# "Reported-by" lists several people; one tag per person.
+cdd5bcad5ea	replace	Reported-by	Michael Paquier
+cdd5bcad5ea	replace	Reported-by	Felix Gerzaguet
+
+# "Reviewed-by" lists several people; one tag per person.
+346199dcab4	replace	Reviewed-by	Masahiko Sawada
+346199dcab4	replace	Reviewed-by	Kyotaro Horiguchi
+
+# "Reported-by" lists several people; one tag per person.
+3640cf5e1c8	replace	Reported-by	Tels
+3640cf5e1c8	replace	Reported-by	Andres Freund
+
 # Was "Author: Amit Langote, with some error message word-smithing by me".
 9139aa19423	replace	Author	Amit Langote
 9139aa19423	append	Co-authored-by	Stephen Frost (error message word-smithing)
@@ -1521,6 +1641,10 @@ b182a4ae2f9	append	Suggested-by	Tom Lane
 # Was "Author: Nikhil Sontakke, placed in new test file by me".
 0352c15e5ab	replace	Author	Nikhil Sontakke
 0352c15e5ab	append	Co-authored-by	Simon Riggs (placed in new test file)
+
+# "Reviewed-by" lists several people; one tag per person.
+49e92815497	replace	Reviewed-by	Tom Lane
+49e92815497	replace	Reviewed-by	Michael Paquier
 
 # Was "Author: Petr Jelinek, heavily editorialized by Andres Freund".
 # "Analyzed-By: Petr Jelinek", one tag per person.
@@ -1566,6 +1690,15 @@ bdac9836d3b	append	Reported-by	Kyotaro Horiguchi
 # "Based-on-patch-by: Thomas Munro <thomas.munro@enterprisedb.com>", one tag per person.
 0de791ed760	delete	Based-on-patch-by	Thomas Munro <thomas.munro@enterprisedb.com>
 0de791ed760	append	Co-authored-by	Thomas Munro <thomas.munro@enterprisedb.com> (earlier patch)
+
+# "Reported-by" lists several people; one tag per person.
+4f45beba7ae	replace	Reported-by	Andrew Borodin
+4f45beba7ae	replace	Reported-by	Fabien COELHO
+4f45beba7ae	replace	Reported-by	Dagfinn Ilmari Mannsaker
+
+# "Reported-by" lists several people; one tag per person.
+5469e44ffc2	replace	Reported-by	Masahiko Sawada
+5469e44ffc2	replace	Reported-by	Alvaro Herrera
 
 # Was "Author: Amit Langote, with some additional changes by me.".
 44c528810a1	replace	Author	Amit Langote
@@ -1826,6 +1959,10 @@ c6c33343649	delete	Reported-By	Fujii Masao, Andres Freund
 c6c33343649	append	Reported-by	Fujii Masao
 c6c33343649	append	Reported-by	Andres Freund
 
+# "Author" lists several people; one tag per person.
+6e1dd2773eb	replace	Author	Petr Jelinek
+6e1dd2773eb	replace	Author	Andres Freund
+
 # "Reviewed-By: Andres Freund, Michael Paquier", one tag per person.
 c1abe6c786d	delete	Reviewed-By	Andres Freund, Michael Paquier
 c1abe6c786d	append	Reviewed-by	Andres Freund
@@ -1833,7 +1970,9 @@ c1abe6c786d	append	Reviewed-by	Michael Paquier
 
 # "Changed by: Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>."
 # "Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>" is one person, the author.
+# "Changed by" repeats the Author tag
 0f33ee0e3b7	insert	Author	Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>
+0f33ee0e3b7	delete	Changed by	Tsunakawa, Takayuki <tsunakawa.takay@jp.fujitsu.com>
 
 # "Amit Langote, per a complaint from me."
 2186b608b3c	insert	Author	Amit Langote
@@ -1910,6 +2049,10 @@ f32d57fd708	append	Reported-by	Noah Misch
 # "Patch by Yugo Nagata."
 e800656d9a9	insert	Author	Yugo Nagata
 
+# "Reported-by" lists several people; one tag per person.
+0f33a719fdb	replace	Reported-by	Dmitriy Sarafannikov
+0f33a719fdb	replace	Reported-by	Sergey Burladyan
+
 # "Eugene Kazakov and Michael Paquier."
 c254970ad60	insert	Author	Eugene Kazakov
 c254970ad60	insert	Author	Michael Paquier
@@ -1966,6 +2109,10 @@ a4f06606a32	append	Co-authored-by	Alvaro Herrera (comment)
 6af9f1bd4bc	insert	Author	Etsuro Fujita
 6af9f1bd4bc	append	Co-authored-by	Robert Haas (slightly adjusted)
 
+# "Reported-by" lists several people; one tag per person.
+da2322883b9	replace	Reported-by	Atsushi Torikoshi
+da2322883b9	replace	Reported-by	Ashutosh Bapat
+
 # Was "Author: Yugo Nagata, with addition by me".
 a79122b0619	replace	Author	Yugo Nagata
 a79122b0619	append	Co-authored-by	Simon Riggs (addition)
@@ -1989,6 +2136,12 @@ c46c0e5202e	insert	Author	Thomas Munro
 
 # "Masahiko Sawada."
 7d4a1838efc	insert	Author	Masahiko Sawada
+
+# "Reviewed-by" lists several people; one tag per person.
+572d6ee6d41	replace	Reviewed-by	Masahiko Sawada
+572d6ee6d41	replace	Reviewed-by	Kyotaro Horiguchi
+572d6ee6d41	replace	Reviewed-by	Thomas Munro
+572d6ee6d41	replace	Reviewed-by	Robert Haas
 
 # "Michael Paquier and myself."
 647675228f2	insert	Author	Michael Paquier
@@ -2070,10 +2223,12 @@ a46fe6e8be0	append	Co-authored-by	Robert Haas (tweak)
 
 # "Reported by: Tom Lane."
 # "Authors: Petr Jelínek, Álvaro Herrera", one tag per person.
+# "Reported by: Tom Lane" repeats the Reported-by tag.
 9915de6c1cb	insert	Author	Petr Jelínek
 9915de6c1cb	append	Reported-by	Tom Lane
 9915de6c1cb	delete	Authors	Petr Jelínek, Álvaro Herrera
 9915de6c1cb	append	Author	Álvaro Herrera
+9915de6c1cb	delete	Reported by	Tom Lane
 
 # Was "Author: Chap Flackman, based on an earlier patch from Craig Ringer".
 54dacc74662	replace	Author	Chap Flackman
@@ -2103,6 +2258,14 @@ b884f629dcb	append	Co-authored-by	Tom Lane (memory leak fixes)
 
 # "Daniel Gustafsson."
 9dea962b3ef	insert	Author	Daniel Gustafsson
+
+# "Author" lists several people; one tag per person.
+d47cfef7116	replace	Author	Andres Freund
+d47cfef7116	replace	Author	Tom Lane
+
+# "Author" lists several people; one tag per person.
+cc9f08b6b81	replace	Author	Andres Freund
+cc9f08b6b81	replace	Author	Tom Lane
 
 # "Per Yugo Nagata. Minor editing by me."
 9fe63092b54	insert	Author	Yugo Nagata
@@ -2290,6 +2453,10 @@ c4b841ba6aa	append	Reviewed-by	Amit Langote
 1f6d515a67e	append	Reviewed-by	Ashutosh Bapat
 1f6d515a67e	append	Reviewed-by	Robert Haas
 1f6d515a67e	append	Co-authored-by	Robert Haas (minor formatting change)
+
+# "Author" lists several people; one tag per person.
+0052a0243d9	replace	Author	Andres Freund
+0052a0243d9	replace	Author	Thomas Munro
 
 # "Reviewed-By: John Gorman, Andres Freund, Dilip Kumar, Robert Haas", one tag per person.
 8c0d7bafad3	delete	Reviewed-By	John Gorman, Andres Freund, Dilip Kumar, Robert Haas
@@ -2485,6 +2652,10 @@ eaa4070543c	insert	Author	Thomas Munro
 60cd2f8a2d1	append	Reviewed-by	Marc Dilger
 60cd2f8a2d1	append	Reviewed-by	Ashutosh Bapat
 
+# "Reported-by" lists several people; one tag per person.
+04b64b8ddf9	replace	Reported-by	Stephen Frost
+04b64b8ddf9	replace	Reported-by	Magnus Hagander
+
 # "Mark Dilger, some further tweaks by me."
 4bd1994650f	insert	Author	Mark Dilger
 4bd1994650f	append	Co-authored-by	Tom Lane (further tweaks)
@@ -2593,6 +2764,10 @@ fc49e24fa69	append	Reviewed-by	Tushar Ahuja
 8d926029e81	append	Reported-by	Thomas Munro
 8d926029e81	append	Reported-by	Tom Lane
 
+# "Reported-by" lists several people; one tag per person.
+404ba54e8fd	replace	Reported-by	Nikolay Shaplov
+404ba54e8fd	replace	Reported-by	Tom Lane
+
 # "extracted from a patch by Michael Banck <michael.banck@credativ.de>."
 74ca8f9b907	insert	Author	Michael Banck <michael.banck@credativ.de>
 
@@ -2607,6 +2782,10 @@ f2ab3898f3a	append	Reviewed-by	Christian Ullrich
 
 # "Thomas Munro."
 5ea96efaa01	insert	Author	Thomas Munro
+
+# "Reviewed-by" lists several people; one tag per person.
+20b65522424	replace	Reviewed-by	Yi Wen Wong
+20b65522424	replace	Reviewed-by	Michaël Paquier
 
 # "Peter Geoghegan, with review and testing by Tomas Vondra and me."
 8b304b8b72b	insert	Author	Peter Geoghegan
@@ -2759,8 +2938,16 @@ cf1238cd976	append	Reviewed-by	Peter Eisentraut
 6393613b6a1	insert	Author	Dilip Kumar
 6393613b6a1	append	Reported-by	Tomas Vondra
 
+# "Author" lists several people; one tag per person.
+d133982d598	replace	Author	Andres Freund
+d133982d598	replace	Author	Tom Lane
+
 # "Author: Álvaro": the committer, Álvaro Herrera.
+# "Reviewed-by" lists several people; one tag per person.
 60a1d96ed7b	replace	Author	Álvaro Herrera
+60a1d96ed7b	replace	Reviewed-by	Robert Haas
+60a1d96ed7b	replace	Reviewed-by	Amit Langote
+60a1d96ed7b	replace	Reviewed-by	Michaël Paquier
 
 # "Thomas Munro, with minor editing by me. Per report from Hugo Mercier."
 7421f4b89a9	insert	Author	Thomas Munro
@@ -3052,6 +3239,17 @@ de1d042f597	append	Reviewed-by	Tom Lane
 16827d44244	append	Reviewed-by	Steve Singer
 16827d44244	append	Co-authored-by	Tom Lane (hacking)
 
+# "Author" lists several people; one tag per person.
+# "Reviewed-by" lists several people; one tag per person.
+05b6ec39d72	replace	Author	Amit Langote
+05b6ec39d72	replace	Author	Ashutosh Bapat
+05b6ec39d72	replace	Reviewed-by	Álvaro Herrera
+05b6ec39d72	replace	Reviewed-by	Simon Riggs
+
+# "Reviewed-by" lists several people; one tag per person.
+3bae43ca4dc	replace	Reviewed-by	Álvaro Herrera
+3bae43ca4dc	replace	Reviewed-by	Simon Riggs
+
 # "Daniel Gustafsson."
 2393194c0dd	insert	Author	Daniel Gustafsson
 
@@ -3276,9 +3474,12 @@ d329dc2ea4b	append	Reviewed-by	Ashutosh Bapat
 9c2f0a6c3cc	append	Reviewed-by	Michael Paquier
 
 # "Reviewed-By: Alvaro Herrera, Michael Paquier", one tag per person.
+# "Author" lists several people; one tag per person.
 699bf7d05c6	delete	Reviewed-By	Alvaro Herrera, Michael Paquier
 699bf7d05c6	append	Reviewed-by	Alvaro Herrera
 699bf7d05c6	append	Reviewed-by	Michael Paquier
+699bf7d05c6	replace	Author	Andres Freund
+699bf7d05c6	replace	Author	Alvaro Herrera
 
 # "Thomas Munro, reviewed and tested by Andreas Seltenreich, Amit Kapila, and by me."
 fd7c0fa732d	insert	Author	Thomas Munro
@@ -3290,9 +3491,12 @@ fd7c0fa732d	append	Reviewed-by	Robert Haas
 fd7c0fa732d	append	Tested-by	Robert Haas
 
 # "Reviewed-By: Robert Haas and Fujii Masao", one tag per person.
+# "Author" lists several people; one tag per person.
 56a95ee5118	delete	Reviewed-By	Robert Haas and Fujii Masao
 56a95ee5118	append	Reviewed-by	Robert Haas
 56a95ee5118	append	Reviewed-by	Fujii Masao
+56a95ee5118	replace	Author	Masahiko Sawada
+56a95ee5118	replace	Author	Michael Paquier
 
 # "Reviewed-By: Peter Geoghegan, Andres Freund, Robert Haas", one tag per person.
 ab9e0e718ac	delete	Reviewed-By	Peter Geoghegan, Andres Freund, Robert Haas
@@ -3338,17 +3542,23 @@ c98c35cd084	insert	Author	Christoph Berg
 c98c35cd084	insert	Author	Tom Lane
 
 # "Authors: me, Heikki Linnakangas, Alexander Korotkov, Nikita Glukhov", one tag per person.
+# "Reviewed-By" lists several people; one tag per person.
 854823fa334	delete	Authors	me, Heikki Linnakangas, Alexander Korotkov, Nikita Glukhov
 854823fa334	insert	Author	Teodor Sigaev
 854823fa334	insert	Author	Heikki Linnakangas
 854823fa334	insert	Author	Alexander Korotkov
 854823fa334	insert	Author	Nikita Glukhov
+854823fa334	replace	Reviewed-By	all authors
+854823fa334	replace	Reviewed-By	Darafei Praliaskouski
 
 # "Authors: Nikita Glukhov, Alexander Korotkov with minor editorization by me", one tag per person.
+# "Reviewed-By" lists several people; one tag per person.
 ff963b393ca	delete	Authors	Nikita Glukhov, Alexander Korotkov with minor editorization by me
 ff963b393ca	insert	Author	Nikita Glukhov
 ff963b393ca	insert	Author	Alexander Korotkov
 ff963b393ca	append	Co-authored-by	Teodor Sigaev (minor editorization)
+ff963b393ca	replace	Reviewed-By	all authors
+ff963b393ca	replace	Reviewed-By	Darafei Praliaskouski
 
 # "me" in "Reviewed-by: Ashutosh Sharma, me" is the committer; one tag per person.
 ad337c76b6f	replace	Reviewed-by	Ashutosh Sharma
@@ -3365,3 +3575,14 @@ ad337c76b6f	replace	Reviewed-by	Teodor Sigaev
 
 # "Etsuro Fujita."
 b726eaa37a5	insert	Author	Etsuro Fujita
+
+# "Author" lists several people; one tag per person.
+# "Reported-by" lists several people; one tag per person.
+# "Reviewed-by" lists several people; one tag per person.
+48c9f492656	replace	Author	Asim Rama Praveen
+48c9f492656	replace	Author	Ashwin Agrawal
+48c9f492656	replace	Reported-by	Xin Zhang
+48c9f492656	replace	Reported-by	Ashwin Agrawal
+48c9f492656	replace	Reported-by	Asim Rama Praveen
+48c9f492656	replace	Reviewed-by	Michael Paquier
+48c9f492656	replace	Reviewed-by	Masahiko Sawada

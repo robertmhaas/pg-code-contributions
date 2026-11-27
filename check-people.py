@@ -3,8 +3,10 @@
 Load the people layer and report anything that looks wrong.
 
 Reports pins that don't parse or name an identifier that never occurs,
-identifiers pinned to two people, commit tag values naming people who
-can't be identified, and people named twice in one tag of a commit.  With --review, also lists pairs of people whose
+and identifiers pinned to two people.  For commits since 2011, where the
+tag fixes start, also reports person tags that list several people or
+name someone who can't be identified, credit keys that aren't one of
+people.PERSON_TAGS, and people named twice in one tag.  With --review, also lists pairs of people whose
 names are near-matches, such as "Masahiko Sawada" and "Masahiko Sawasa",
 for checking by hand; pin a pair to one person to merge them, or each to
 its own to stop the suggestion.
@@ -20,6 +22,11 @@ import sys
 import commitdata
 import people
 
+SINCE = 2011
+
+# Keys that look like credits but aren't.
+NOT_CREDITS = {'brown-paper-bagged-by'}
+
 
 def check_pins(p):
     problems = list(p.problems)
@@ -33,11 +40,17 @@ def check_tags(data, p):
     """Person tag values that name someone who can't be identified."""
     bad = collections.defaultdict(list)
     for c in data.commits.values():
+        if c.year < SINCE:
+            continue
         for tag, value in c.tags:
+            key = people.tag_key(tag)
             if people.is_person_tag(tag):
-                for text, pid, status in p.resolve_value(value):
-                    if pid is None and status != 'nobody':
-                        bad[status, text].append(c.hash)
+                pid, status = p.resolve_value(value)
+                if pid is None and status != 'nobody':
+                    bad[status, value].append(c.hash)
+            elif (key.endswith('-by') or key.startswith(('author', 'co-author'))) \
+                    and key not in NOT_CREDITS:
+                bad['not a canonical key', f'{tag}: {value}'].append(c.hash)
     problems = []
     for (status, text), hashes in sorted(bad.items(), key=lambda kv: (kv[0][0], -len(kv[1]))):
         more = f' and {len(hashes) - 3} more' if len(hashes) > 3 else ''
@@ -49,12 +62,14 @@ def check_duplicates(data, p):
     """The same person named twice in one tag of a commit."""
     problems = []
     for c in data.commits.values():
+        if c.year < SINCE:
+            continue
         named = collections.defaultdict(list)
         for tag, value in c.tags:
             if people.is_person_tag(tag):
-                for text, pid, status in p.resolve_value(value):
-                    if pid:
-                        named[tag.lower(), pid].append(text)
+                pid, _ = p.resolve_value(value)
+                if pid:
+                    named[people.tag_key(tag), pid].append(value)
         for (tag, pid), texts in named.items():
             if len(texts) > 1:
                 problems.append(f'{c.hash}: {pid} is in {tag} {len(texts)} times: {texts}')

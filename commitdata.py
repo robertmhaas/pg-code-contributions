@@ -35,6 +35,14 @@ LINE_ADJUSTMENT_KINDS = ('revert', 'mechanical', 'normal')
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
+def tag_key(tag):
+    """
+    A tag's key for comparison.  Case and spacing don't matter, as with git
+    trailers, so "Reviewed By", "Reviewed-By" and "Reviewed-by" are one key.
+    """
+    return re.sub(r'[\s_-]+', '-', tag.strip()).lower()
+
+
 @dataclasses.dataclass
 class Commit:
     hash: str
@@ -60,8 +68,7 @@ class Commit:
         fixes; if there are none, the git author alone.  Values are as
         written, emails and glosses included.
         """
-        tagged = [v for t, v in self.tags
-                  if re.sub(r'[\s_]+', '-', t.strip().lower()) in AUTHOR_TAGS]
+        tagged = [v for t, v in self.tags if tag_key(t) in AUTHOR_TAGS]
         return tagged or [self.git_author]
 
     @property
@@ -241,7 +248,9 @@ def credit(commits, commit, until=None):
 
 def apply_tag_fixes(raw_tags, fixes):
     """
-    Return raw_tags with fixes applied, each tag separately.
+    Return raw_tags with fixes applied, each tag separately.  A fix's tag
+    matches any spelling of the same key (see tag_key); the values it adds
+    are spelled as in the fix.
 
     For a tag with a replace, the replace values, in file order, take the
     place of all its existing values, at the position of the first one.
@@ -256,25 +265,25 @@ def apply_tag_fixes(raw_tags, fixes):
     a value that's already present adds a second copy.
     """
     tags = list(raw_tags)
-    fixes_by_tag = {}
+    fixes_by_key = {}
     for fix in fixes:
-        fixes_by_tag.setdefault(fix.tag, []).append(fix)
+        fixes_by_key.setdefault(tag_key(fix.tag), []).append(fix)
 
-    for tag, tag_fixes in fixes_by_tag.items():
+    for key, key_fixes in fixes_by_key.items():
         def values(verb):
-            return [(tag, f.value) for f in tag_fixes if f.verb == verb]
-        positions = [i for i, (t, _) in enumerate(tags) if t == tag]
+            return [(f.tag, f.value) for f in key_fixes if f.verb == verb]
+        positions = [i for i, (t, _) in enumerate(tags) if tag_key(t) == key]
 
-        if any(f.verb == 'replace' for f in tag_fixes):
+        if any(f.verb == 'replace' for f in key_fixes):
             start = positions[0] if positions else len(tags)
-            others = [entry for entry in tags if entry[0] != tag]
+            others = [entry for entry in tags if tag_key(entry[0]) != key]
             tags = others[:start] + values('replace') + others[start:]
         else:
             start = positions[0] if positions else 0
             end = positions[-1] + 1 if positions else len(tags)
             deleted = {v for _, v in values('delete')}
             middle = [entry for entry in tags[start:end]
-                      if not (entry[0] == tag and entry[1] in deleted)]
+                      if not (tag_key(entry[0]) == key and entry[1] in deleted)]
             tags = (tags[:start] + values('insert') + middle
                     + values('append') + tags[end:])
     return tags
