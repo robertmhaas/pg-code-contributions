@@ -475,3 +475,46 @@ p.primary_author(commit)   # the first of those, credited with the lines
 
 A person id is the stanza's `Canonical:` value, so it changes if that's
 edited.
+
+## Reports
+
+`export-db.py` writes all of this as one PostgreSQL dump, to run reports
+against:
+
+```sh
+python3 export-db.py -o contributions.sql
+createdb contributions
+psql -q -f contributions.sql contributions
+```
+
+It takes a few seconds, and drops and recreates its own tables and views,
+so it can be loaded again over an earlier one.
+
+| table         | one row per                                              |
+|---------------|----------------------------------------------------------|
+| `people`      | stanza in `people.txt`: id (its `Canonical:` value), name, address, kind |
+| `commits`     | commit: the columns of `data/commits/`, plus the committer and primary author as people, credited lines with all reverts and with only same-year reverts, and the line adjustment |
+| `commit_tags` | tag, after tag fixes: as written, its key, its canonical role for person tags, and the person |
+| `emails`      | mailing list message, with the sender as a person        |
+
+The committer of a commit is its git author, which PostgreSQL's
+committers set to themselves; a commit pushed by someone else, such as a
+security release, keeps the committer of record.
+
+Views:
+
+- `committers`: everyone who is the git author of a commit, since their
+  first.
+- `top_authors`: credited lines and commits by primary author, by year,
+  counting only reverts made in the same year, as the yearly posts do.
+  `[*]` marks someone who wasn't yet a committer at the end of the year.
+- `top_opp_committers`: credited lines and commits of other people's
+  patches, by the committer who committed them.
+- `credits`: credits by role (`Author`, `Reviewed-by`, ...), person and
+  year.
+- `top_senders`: messages by sender, list and year.
+
+```sql
+SELECT "#", author, lines, pct_lines, cum_pct_lines, commits
+  FROM top_authors WHERE year = 2025 ORDER BY "#" LIMIT 30;
+```
