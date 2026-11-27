@@ -65,11 +65,15 @@ Canonical: Aaron Patterson <tenderlove(at)ruby-lang(dot)org>
 
 Canonical: Aaron W. Swenson <titanofold(at)gentoo(dot)org>
 
+Canonical: Aaryan Parik <aaryanparik124(at)gmail(dot)com>
+
 Canonical: aashi chawla <aashichawla111(at)gmail(dot)com>
 
 Canonical: Abbas Butt <abbas(dot)butt(at)enterprisedb(dot)com>
 
 Canonical: AbdelAziz Sharaf <mickelpower75(at)gmail(dot)com>
+
+Canonical: abdelsalam mostafa <abdelsalam(dot)lance(at)gmail(dot)com>
 
 Canonical: Abdoulaye Ba <abdoulayeba29(at)gmail(dot)com>
 
@@ -80,6 +84,8 @@ Canonical: Abdul Yadi AH-2 <abdulyadi(dot)datatrans(at)gmail(dot)com>
 Canonical: Abel Abraham Camarillo Ojeda <acamari(at)verlet(dot)org>
 
 Canonical: Abelard Hoffman <abelardhoffman(at)gmail(dot)com>
+
+Canonical: Abhi Kaki <abhikakipg(at)gmail(dot)com>
 
 Canonical: Abhi Mehta <abhi15(dot)mehta(at)gmail(dot)com>
 
@@ -103,6 +109,8 @@ Canonical: Abi KR <abi(dot)kr(dot)2016(at)gmail(dot)com>
 Canonical: Abinaya k <abinaya(dot)k(dot)496(at)gmail(dot)com>
 
 Canonical: Abinaya Kajendiran <abinayakajee(at)gmail(dot)com>
+
+Canonical: abrahim abrahao <a_abrahao(at)yahoo(dot)com(dot)br>
 
 Canonical: Achilleas Mantzios <achill(at)matrix(dot)gatewaynet(dot)com>
 
@@ -155,7 +163,11 @@ Canonical: Adé Heyward
 
 Canonical: Adelino Silva <adelino(dot)j(dot)silva(at)googlemail(dot)com>
 
+Canonical: Adesh T <adeshdb(at)amazon(dot)com>
+
 Canonical: adherent postgres <adherent_postgres(at)hotmail(dot)com>
+
+Canonical: Aditya Dave <daveaditya2004(at)gmail(dot)com>
 
 Canonical: aditya desai <admad123(at)gmail(dot)com>
 
@@ -191,10 +203,20 @@ Canonical: Afrah Razzak <mypg(dot)afrah(at)gmail(dot)com>
 
 Canonical: agharta agharta <agharta82(at)gmail(dot)com>
 
+Canonical: Agustín Martínez Fayó <amartinezfayo(at)gmail(dot)com>
+
 Canonical: Ahmad Mehmood <amd10agha(at)gmail(dot)com>
+
+Canonical: ahmed <gouda0x(at)gmail(dot)com>
+
+Canonical: Ahmed Amr <ahmedamr4f(at)gmail(dot)com>
 
 Canonical: Ahmed Ashour <a8087027(at)gmail(dot)com>
 Alternate: ahmedashour <a8087027(at)gmail(dot)com>
+
+Canonical: Ahmed Et-tanany <ahmed(dot)ettanany(at)aiven(dot)io>
+
+Canonical: Ahmed Gouda <ahmed(dot)gouda(at)cybertec(dot)at>
 
 Canonical: Ahmed Ibrahim <ahmed(dot)ibr(dot)hashim(at)gmail(dot)com>
 
@@ -207,6 +229,7 @@ Alternate: ahsan hadi <ahsan(dot)hadi(at)enterprisedb(dot)com>
 Alternate: Ahsan Hadi <ahsan(dot)hadi(at)highgo(dot)ca>
 
 Canonical: Aidar Imamov <a(dot)imamov(at)postgrespro(dot)ru>
+Alternate: Aidar Imamov <imamovaj22(at)gmail(dot)com>
 
 Canonical: <aitsygunka(at)yandex(dot)ru>
 
@@ -339,6 +362,8 @@ Canonical: Alex Kingsborough <kingsboa(at)amazon(dot)com>
 
 Canonical: Alex Kozhemyakin
 
+Canonical: Alex Liapychev <coder(dot)sam(at)gmail(dot)com>
+
 Canonical: alex lock <alock303(at)gmail(dot)com>
 
 Canonical: Alex Malek <magicagent(at)gmail(dot)com>
@@ -382,6 +407,7 @@ Canonical: Alexander Kozhemyakin <a(dot)kozhemyakin(at)postgrespro(dot)ru>
 Alternate: a.kozhemyakin <a(dot)kozhemyakin(at)postgrespro(dot)ru>
 Alternate: A. Kozhemyakin
 Alternate: a.kozhemyakin
+Alternate: Александр Кожемякин <a(dot)kozhemyakin(at)postgrespro(dot)ru>
 
 Canonical: Alexander Kukushkin <cyberdemn(at)gmail(dot)com>
 
@@ -403,6 +429,10 @@ Canonical: Alexander Lakhin as per buildfarm
 Canonical: Alexander Lebedev
 
 Canonical: Alexander Levsha <outcastatsabre(at)gmail(dot)com>
+
+Canonical: Alexander Melnikov <asmmp(at)protonmail(dot)com>
+
+Canonical: Alexander Nestorov <alexandernst(at)gmail(dot)com>
 
 Canonical: Alexander Ostrow <aj(at)epcylon(dot)com>
 
@@ -520,7 +550,8 @@ Alternate: Alvaro Herrera from 2ndQuadrant <alvherre(at)postgresql(dot)org>
 Alternate: Alvaro Herrera from 2ndQuadrant <alvherre(at)alvh(dot)no-ip(dot)org>
 Alternate: Alvaro Herrera <alvaro(dot)herrera(at)2ndquadrant(dot)com>
 
-Canonical: <alvaro(at)datadoghq(dot)com>
+Canonical: Álvaro Rodríguez <alvaro(at)datadoghq(dot)com>
+Alternate: Álvaro Rodríguez <alvarorodriguez(dot)garcia(at)datadoghq(dot)com>
 
 Canonical: Amaan Haque <amaanhaque(at)microsoft(dot)com>
 
@@ -582,6 +613,8 @@ Canonical: amutu
 
 Canonical: Amy Burnett
 
+Canonical: Ana Bobillo <anabobillo3(at)gmail(dot)com>
+
 Canonical: Anand Sowmithiran <anandsowmi2(at)gmail(dot)com>
 
 Canonical: Anandsaikrishnan Vaidyanathaswamy <avaidyanathaswamy(at)corelogic(dot)com>
@@ -602,6 +635,7 @@ Canonical: Anastasia Lubennikova <lubennikovaav(at)gmail(dot)com>
 Alternate: Anastasia Lubennikova <a(dot)lubennikova(at)postgrespro(dot)ru>
 
 Canonical: Anatoliy Kraev <anatoliy(dot)kraev(at)tantorlabs(dot)ru>
+Alternate: Анатолий Олегович Краев <anatoliy(dot)kraev(at)tantorlabs(dot)ru>
 
 Canonical: Anatoly Zaretsky <anatoly(dot)zaretsky(at)gmail(dot)com>
 
@@ -625,6 +659,8 @@ Canonical: Andre Mikulec <andre_mikulec(at)hotmail(dot)com>
 Alternate: Andre_Mikulec <andre_mikulec(at)hotmail(dot)com>
 
 Canonical: André Verwijs <dutchgigalo(at)gmail(dot)com>
+Alternate: André Verwijs <dutch(dot)glory(at)yahoo(dot)com>
+Alternate: Dutch Glory <dutch(dot)glory(at)yahoo(dot)com>
 
 Canonical: Andrea Adami <fol(at)fulcro(dot)net>
 
@@ -677,6 +713,8 @@ Alternate: Андрей Зубков <zubkov(at)moonset(dot)ru>
 
 Canonical: Andres Freund <andres(at)anarazel(dot)de>
 Alternate: Andres Freund <andres(at)citusdata(dot)com>
+
+Canonical: Andres Taylor <andres(at)taylor(dot)se>
 
 Canonical: Andrew <pgsqlhackers(at)andrewrepp(dot)com>
 
@@ -745,6 +783,8 @@ Canonical: Andrey Chernyy <andrey(dot)cherny(at)tantorlabs(dot)com>
 Canonical: Andrey Chudnovsky <achudnovskij(at)gmail(dot)com>
 Alternate: Andrey Chudnovskiy <andrey(dot)chudnovskiy(at)microsoft(dot)com>
 
+Canonical: Andrey Kazarinov <a(dot)kazarinov(at)postgrespro(dot)ru>
+
 # Misspellings and variant spellings in commit messages.
 Canonical: Andrey Klychkov <andrew(dot)a(dot)klychkov(at)gmail(dot)com>
 Alternate: Andrey Klychkov <aaklychkov(at)mail(dot)ru>
@@ -771,6 +811,8 @@ Alternate: Andrey Zhidenkov <pensnarik(at)gmail(dot)com>
 Canonical: <andrey(dot)arapov(at)nixaid(dot)com>
 
 Canonical: Andrii Tkach <and7ua(at)gmail(dot)com>
+
+Canonical: Andriy Dorokhin <andreumdorokhinum(at)gmail(dot)com>
 
 Canonical: Andrus Moor
 
@@ -861,6 +903,7 @@ Canonical: Anthropic Research
 
 Canonical: Antoine Violin <violin(dot)antuan(at)gmail(dot)com>
 Alternate: Антуан Виолин <violin(dot)antuan(at)gmail(dot)com>
+Alternate: Виолин Антуан <a(dot)violin(at)postgrespro(dot)ru>
 
 Canonical: Anton A. Melnikov <a(dot)melnikov(at)postgrespro(dot)ru>
 Alternate: Мельников Антон Андреевич <aamelnikov(at)inbox(dot)ru>
@@ -888,6 +931,8 @@ Canonical: Ants Aasma <ants(dot)aasma(at)cybertec(dot)at>
 Alternate: Ants Aasma <ants(dot)aasma(at)eesti(dot)ee>
 Alternate: Ants Aasma <ants(dot)aasma(at)gmail(dot)com>
 Alternate: Ants Aasma <ants(at)cybertec(dot)at>
+
+Canonical: anupam MEDIRATTA <mediratta01(dot)pally(at)gmail(dot)com>
 
 Canonical: Anushi Maheshwari <anushimaheshwari95(at)gmail(dot)com>
 
@@ -1021,7 +1066,10 @@ Canonical: atma ram <atmaramkp(at)gmail(dot)com>
 
 Canonical: Atri Sharma <atri(dot)jiit(at)gmail(dot)com>
 
-Canonical: Atsushi Ogawa <atsushi(dot)ogawa(at)gmail(dot)com>
+# Two addresses, both sending as Atsushi Ogawa.
+Canonical: Atsushi Ogawa <atsushi(dot)ogawa001(at)gmail(dot)com>
+Alternate: 小川淳 <atsushi(dot)ogawa001(at)gmail(dot)com>
+Alternate: Atsushi Ogawa <atsushi(dot)ogawa(at)gmail(dot)com>
 
 # Handles, with the person they belong to.
 Canonical: Atsushi Torikoshi <torikoshia(at)oss(dot)nttdata(dot)com>
@@ -1038,12 +1086,16 @@ Canonical: Atul Kumar <akumar14871(at)gmail(dot)com>
 
 Canonical: Auguste Comte <minasiedu(at)gmail(dot)com>
 
+Canonical: Austin Bonander <austin(dot)bonander(at)gmail(dot)com>
+
 Canonical: avatar28 <jckliszczak(at)gmail(dot)com>
 
 Canonical: Avi Weinberg <aviw(at)gilat(dot)com>
 
 Canonical: Avinash Kumar <avinash(dot)vallarapu(at)gmail(dot)com>
 Alternate: Avinash Vallarapu <avinash(dot)vallarapu(at)gmail(dot)com>
+
+Canonical: Aviral Asthana <aviral(dot)asthana0704(at)gmail(dot)com>
 
 Canonical: aviral1701 <aviral1701(at)gmail(dot)com>
 
@@ -1073,6 +1125,8 @@ Canonical: b.altawil <b(dot)altawil(at)proton(dot)me>
 
 Canonical: <b1000101(at)pm(dot)me>
 
+Canonical: Babak Ghadiri <bbkghadiri6(at)gmail(dot)com>
+
 Canonical: Bablu Kumar Nayak <bablukumarnayak1432(at)gmail(dot)com>
 
 Canonical: Baca Radim <rad(dot)baca(at)gmail(dot)com>
@@ -1087,6 +1141,8 @@ Canonical: Bakhtiyar Neyman <bakhtiyarneyman(at)gmail(dot)com>
 Alternate: Bəxtiyar Neyman <bakhtiyarneyman(at)gmail(dot)com>
 
 Canonical: <balazs(at)obiserver(dot)hu>
+
+Canonical: Baohong Min <baohong(dot)min(at)intel(dot)com>
 
 Canonical: Barry Lind
 
@@ -1126,6 +1182,8 @@ Canonical: Ben Cornett
 Canonical: Ben Dixon <uk(dot)bendixon(at)gmail(dot)com>
 
 Canonical: Ben Kanouse <kanobt61(at)gmail(dot)com>
+
+Canonical: Ben Mejia <benjamin(dot)arthur(dot)mejia(at)gmail(dot)com>
 
 Canonical: Ben Morris
 
@@ -1189,6 +1247,8 @@ Canonical: Bertrand Drouvot <bertranddrouvot(dot)pg(at)gmail(dot)com>
 Alternate: Bertrand DROUVOT <bdrouvot(at)gmail(dot)com>
 Alternate: Bertrand Drouvot <bdrouvot(at)amazon(dot)com>
 
+Canonical: best xmg <bestxmg(at)gmail(dot)com>
+
 Canonical: BF animals prairiedog
 
 Canonical: BharatDB <bharatdbpg(at)gmail(dot)com>
@@ -1217,6 +1277,7 @@ Canonical: Bill Smith <bill(dot)smith(at)enterprisedb(dot)com>
 Canonical: Bilva Sanaba <bilvas(at)amazon(dot)com>
 
 Canonical: Bingshuai Li <lucian1412(at)outlook(dot)com>
+Alternate: kid <lucian1412(at)outlook(dot)com>
 
 Canonical: Binguo Bao <djydewang(at)gmail(dot)com>
 
@@ -1237,6 +1298,8 @@ Canonical: Bjorn Munch <bjorn(dot)munch(at)oracle(dot)com>
 Canonical: Bjørnar Ness <bjornar(dot)ness(at)gmail(dot)com>
 
 Canonical: Blaz Merela <blaz(at)merela(dot)org>
+
+Canonical: Blessy Thomas <blessy456bthomas(at)gmail(dot)com>
 
 Canonical: Bo Anderson <mail(at)boanderson(dot)me>
 
@@ -1280,6 +1343,7 @@ Canonical: Bowen Shi <zxwsbg12138(at)gmail(dot)com>
 Canonical: bowenshi <zxwsbg(at)qq(dot)com>
 
 Canonical: Boyu Yang
+Alternate: Boyu Yang <pgsql(at)mail-yby(dot)icu>
 
 Canonical: Brad Arndt <brad(dot)arndt(at)gmail(dot)com>
 
@@ -1329,6 +1393,8 @@ Canonical: Brett Maton <matonb(at)ltresources(dot)co(dot)uk>
 Canonical: Brian Carpenter | Deep Fork Cyber <b(at)deepforkcyber(dot)com>
 
 Canonical: Brian Cloutier <brian(at)citusdata(dot)com>
+
+Canonical: Brian Cosgrove <cosgroveb(at)gmail(dot)com>
 
 Canonical: Brian Davis <brian(at)brianlikespostgres(dot)com>
 
@@ -1418,6 +1484,10 @@ Canonical: <bzm(at)2bz(dot)de>
 
 Canonical: C H C <a12321aabb(at)gmail(dot)com>
 
+Canonical: C W <clarklwilliamson(at)gmail(dot)com>
+
+Canonical: Cagri Biroglu <cagri(dot)biroglu(at)adyen(dot)com>
+
 # Known only by a handle, or an organization with a one-word name.
 Canonical: Calif.io
 
@@ -1438,6 +1508,8 @@ Canonical: Cameron Vogt <cvogt(at)automaticcontrols(dot)net>
 Canonical: Cándido Antonio Martínez Descalzo <candido(at)ninehq(dot)com>
 
 Canonical: Carl Andersen <carl(at)spearbit(dot)com>
+
+Canonical: Carlos Alves <carlos(at)alves(dot)inf(dot)br>
 
 Canonical: Carter Thaxton <carter(dot)thaxton(at)gmail(dot)com>
 
@@ -1521,6 +1593,7 @@ Canonical: Chauhan Dhruv <chauhandhruv351(at)gmail(dot)com>
 
 Canonical: Chee Wooson <chee(dot)wooson(at)gmail(dot)com>
 Alternate: Chee Wooson <wuqi(at)vastdata(dot)com(dot)cn>
+Alternate: chee.wooson <chee(dot)wooson(at)gmail(dot)com>
 
 Canonical: Chen Huajun
 
@@ -1539,6 +1612,8 @@ Canonical: Chengxi Sun <sunchengxi(at)highgo(dot)com>
 Alternate: Chengxi Sun <chengxisun92(at)gmail(dot)com>
 
 Canonical: chenhj <chjischj(at)163(dot)com>
+
+Canonical: ChenhuiMo <chenhuimo(dot)mch(at)qq(dot)com>
 
 Canonical: Chenxi Li <spiritlcx(at)gmail(dot)com>
 
@@ -1561,6 +1636,8 @@ Canonical: Chong Peng
 # Different people with similar names.
 Canonical: Chong Wang <chongwa(at)vmware(dot)com>
 Distinct: Wang Cheng <348448708(at)qq(dot)com>
+
+Canonical: chris <chris(at)chrisleephd(dot)us>
 
 Canonical: chris <yuanzefuwater(at)126(dot)com>
 
@@ -1637,6 +1714,7 @@ Canonical: Christos Maris <christos(dot)c(dot)maris(at)gmail(dot)com>
 Canonical: chuanting wang
 
 Canonical: Chuanwen Hu <463945512(at)qq(dot)com>
+Alternate: 胡传文 <463945512(at)qq(dot)com>
 
 Canonical: Chunling Qin <303677365(at)qq(dot)com>
 
@@ -1669,7 +1747,11 @@ Canonical: Clemens Ruck <clemens(dot)ruck(at)t-online(dot)de>
 
 Canonical: Clément Prévost <prevostclement(at)gmail(dot)com>
 
+Canonical: Clemenza Zhang <zxlmgsps2(at)gmail(dot)com>
+
 Canonical: Cleysson Lima <cleyssondba(at)gmail(dot)com>
+
+Canonical: Cliff Clark <cliff_clark(at)selinc(dot)com>
 
 Canonical: Clifford Hammerschmidt <tanglebones(at)gmail(dot)com>
 
@@ -1762,6 +1844,8 @@ Alternate: Daisuke Higuchi <higudai(at)amazon(dot)com>
 
 Canonical: Damien Clochard <damien(at)dalibo(dot)info>
 
+Canonical: Damil Shahzad <shahzaddamil(at)gmail(dot)com>
+
 Canonical: Damir Belyalov <dam(dot)bel07(at)gmail(dot)com>
 Alternate: Damir <dam(dot)bel07(at)gmail(dot)com>
 
@@ -1831,6 +1915,8 @@ Canonical: Daniel Kalchev <daniel(at)digsys(dot)bg>
 Canonical: Daniel Lenski <dlenski(at)gmail(dot)com>
 
 Canonical: Daniel Migowski <dmigowski(at)ikoffice(dot)de>
+
+Canonical: Daniel Schreiber <daniel(dot)schreiber(at)hrz(dot)tu-chemnitz(dot)de>
 
 Canonical: Daniel Shelepanov <deniel1495(at)mail(dot)ru>
 
@@ -1950,6 +2036,7 @@ Canonical: David HJ <chuxiongzhong(at)gmail(dot)com>
 Canonical: David Kamholz <lautgesetz(at)gmail(dot)com>
 
 Canonical: David Karapetyan <dkarapetyan(at)gmail(dot)com>
+Alternate: David K <dkarapetyan(at)gmail(dot)com>
 
 Canonical: David Kellum <david(at)gravitext(dot)com>
 
@@ -1978,6 +2065,8 @@ Alternate: David Rowley <david(dot)rowley(at)2ndquadrant(dot)com>
 Alternate: David Rowley <dgrowley(at)gmail(dot)com>
 Alternate: David Rowley <drowley(at)postgresql(dot)org>
 Alternate: David Rowley <drowleyml(at)gmail(dot)com>
+
+Canonical: David Shorten <shortenda(at)gmail(dot)com>
 
 # Misspellings and variant spellings in commit messages.
 Canonical: David Steele <david(at)pgbackrest(dot)org>
@@ -2043,6 +2132,9 @@ Canonical: Denis Laxalde <denis(dot)laxalde(at)dalibo(dot)com>
 Canonical: Denis Patron <denis(dot)patron(at)previnet(dot)it>
 Alternate: denis.patron <denis(dot)patron(at)previnet(dot)it>
 
+Canonical: Denis Rodionov <denis(dot)rodionov(at)tantorlabs(dot)com>
+Alternate: Denis Rodionov <denis(dot)rodionov(at)tantorlabs(dot)ru>
+
 Canonical: Denis Smirnov <darthunix(at)gmail(dot)com>
 Alternate: Смирнов Денис <sd(at)arenadata(dot)io>
 Alternate: Denis Smirnov <sd(at)arenadata(dot)io>
@@ -2074,14 +2166,13 @@ Canonical: Derry Hamilton <rasilon(dot)x(at)gmail(dot)com>
 
 Canonical: Devansh Gupta <devansh(dot)gupta(at)students(dot)iiit(dot)ac(dot)in>
 
-Canonical: DEVOPS_WwIT <devops(at)ww-it(dot)cn>
-Alternate: DEV_OPS <devops(at)ww-it(dot)cn>
-
 Canonical: Devrim Gündüz <devrim(at)gunduz(dot)org>
 
 Canonical: Dewei Dai <daidewei1970(at)163(dot)com>
 
 Canonical: Dharin Shah <dharinshah95(at)gmail(dot)com>
+
+Canonical: Dhruv Aron <dhruv(dot)aron(at)gmail(dot)com>
 
 Canonical: Dhruv Goel <goeldhru(at)amazon(dot)com>
 
@@ -2157,9 +2248,12 @@ Canonical: Dirk Rudolph <dirk(dot)rudolph(at)netcentric(dot)biz>
 
 Canonical: Dirkjan Bussink <d(dot)bussink(at)gmail(dot)com>
 
+Canonical: djka 66jsda <kjadasad(at)gmail(dot)com>
+
 Canonical: dl x <xray20161(at)gmail(dot)com>
 
 Canonical: Dmitrii Bondar <d(dot)bondar(at)postgrespro(dot)ru>
+Alternate: Бондарь Дмитрий <d(dot)bondar(at)postgrespro(dot)ru>
 
 Canonical: Dmitrii Golub <dmitrii(dot)golub(at)gmail(dot)com>
 
@@ -2288,6 +2382,8 @@ Canonical: Doug Reynolds <mav(at)wastegate(dot)net>
 
 Canonical: <doughale(at)gmail(dot)com>
 
+Canonical: Douglas Domingues da Silveira <douglas(at)f10(dot)com(dot)br>
+
 Canonical: Douglas Doole <dougdoole(at)gmail(dot)com>
 Alternate: Doug Doole <ddoole(at)salesforce(dot)com>
 Alternate: Doug Doole <dougdoole(at)gmail(dot)com>
@@ -2297,6 +2393,8 @@ Canonical: Douglas Hunley <douglas(dot)hunley(at)openscg(dot)com>
 Canonical: Dr K.G Yadav <drkkgy(at)gmail(dot)com>
 
 Canonical: Dr. Michael Meskes <michael(dot)meskes(at)credativ(dot)com>
+
+Canonical: Dragos Andriciuc <dragos(dot)andriciuc(at)percona(dot)com>
 
 Canonical: Drew Callahan
 
@@ -2335,14 +2433,22 @@ Canonical: Eduard Català <eduard(dot)catala(at)gmail(dot)com>
 Canonical: Eduard Stefes <eduard(dot)stefes(at)ibm(dot)com>
 Alternate: Eduard Stefes <eddy(at)linux(dot)ibm(dot)com>
 
+Canonical: Eduard Stepanov <crtxcz(at)gmail(dot)com>
+
 Canonical: Eduard Wirch <eduard(dot)w(at)smart-host(dot)com>
 
 Canonical: Eduardo Morras <emorrasg(at)yahoo(dot)es>
+
+Canonical: Edwin Polkerman <edwin(dot)polkerman(at)splendiddata(dot)com>
+
+Canonical: Efimtsev Fjodor <f(dot)efimtsev(at)ftdata(dot)ru>
 
 Canonical: Efrain J. Berdecia <ejberdecia(at)yahoo(dot)com>
 
 Canonical: Egor Chindyaskin <kyzevan23(at)mail(dot)ru>
 Alternate: Егор Чиндяскин <kyzevan23(at)mail(dot)ru>
+
+Canonical: Egor Ivkov <e(dot)ivkov(at)arenadata(dot)io>
 
 Canonical: Egor Rogov <e(dot)rogov(at)postgrespro(dot)ru>
 
@@ -2382,6 +2488,7 @@ Canonical: Emanuel Araújo
 Canonical: Emanuel Calvo <3manuek(at)gmail(dot)com>
 
 Canonical: Emanuele Musella <emamuse86(at)gmail(dot)com>
+Alternate: Emanuele <emamuse86(at)gmail(dot)com>
 
 Canonical: Emil Iggland <emil(at)iggland(dot)com>
 
@@ -2402,8 +2509,6 @@ Canonical: Emrul <emrul(at)emrul(dot)com>
 
 Canonical: Enes Özdeniz <enesozdeniz(at)gmail(dot)com>
 
-Canonical: eng eng <pspetrov91(at)gmail(dot)com>
-
 Canonical: Enrique Escobar <ethhsc(at)gmail(dot)com>
 
 Canonical: Enrique Kurth Schoenfeld Escobar <ekurth(at)live(dot)com(dot)mx>
@@ -2411,6 +2516,8 @@ Canonical: Enrique Kurth Schoenfeld Escobar <ekurth(at)live(dot)com(dot)mx>
 Canonical: Enrique Meneses <emmeneses(at)gmail(dot)com>
 
 Canonical: Enrique Sánchez <enriqueesanchz(at)gmail(dot)com>
+
+Canonical: Enrique Soriano <enrique(dot)soriano(at)gmail(dot)com>
 
 Canonical: Enzo Diletti <e(dot)diletti(at)selettra(dot)com>
 
@@ -2473,6 +2580,9 @@ Canonical: Ethan Mertz <ethan(dot)mertz(at)gmail(dot)com>
 
 Canonical: Ethan Waldo <ewaldo(at)healthetechs(dot)com>
 
+Canonical: <ethantran(at)quwin(dot)dev>
+Alternate: Ethan Tran <ethantran(at)quwin(dot)dev>
+
 Canonical: Etienne Adam <etienne(dot)adam(at)nokia(dot)com>
 
 Canonical: Étienne BERSAC <etienne(dot)bersac(at)dalibo(dot)com>
@@ -2505,7 +2615,10 @@ Canonical: Evan Montgomery-Recht <montge(at)mianetworks(dot)net>
 
 Canonical: Evan Rempel <erempel(at)uvic(dot)ca>
 
+# Two addresses, both sending as Evan Si.
 Canonical: Evan Si <evsi(at)amazon(dot)com>
+Alternate: Evan <evansi(dot)dev(at)gmail(dot)com>
+Alternate: Evan Si <evansi(dot)dev(at)gmail(dot)com>
 
 Canonical: Evangelos Karatarakis <baggeliskapa24(at)gmail(dot)com>
 
@@ -2524,6 +2637,9 @@ Alternate: Евгений Шишкин <itparanoia(at)gmail(dot)com>
 
 Canonical: Evgeny <evorop(at)gmail(dot)com>
 
+Canonical: Evgeny Kuzin <evgeny(dot)kuzin(at)outlook(dot)com>
+Alternate: Evgeny Kuzin <evgeny(at)hudson-trading(dot)com>
+
 Canonical: Evgeny Morozov <postgresql3(at)realityexists(dot)net>
 
 Canonical: Evgeny Smirnov <evgeny(dot)v(dot)smirnov(at)gmail(dot)com>
@@ -2534,6 +2650,7 @@ Alternate: Evgeny Voropaev <evorop(dot)wiki(at)gmail(dot)com>
 Canonical: Ewan Higgs <ewan_higgs(at)yahoo(dot)co(dot)uk>
 
 Canonical: Ewan Young <kdbase(dot)hack(at)gmail(dot)com>
+Alternate: kdbase <kdbase(dot)hack(at)gmail(dot)com>
 
 Canonical: Fabiano Machado Dias <fabiano(at)wolaksistemas(dot)com(dot)br>
 
@@ -2553,13 +2670,17 @@ Canonical: Fabio Pardi <f(dot)pardi(at)portavita(dot)eu>
 Canonical: Fabio R. Sluzala <fabio3rs(at)gmail(dot)com>
 
 Canonical: Fabrice Chapuis <fabrice636861(at)gmail(dot)com>
+Alternate: Fabrice Chapuis <commeilmeplait(at)gmail(dot)com>
 
 Canonical: Fabrice Fontaine <fontaine(dot)fabrice(at)gmail(dot)com>
+
+Canonical: Fabrizio Castelli <brizio(dot)castelli(at)gmail(dot)com>
 
 Canonical: Fabrízio de Royes Mello <fabriziomello(at)gmail(dot)com>
 Alternate: Fabrízio de Royes Mello <fabrizio(at)timbira(dot)com(dot)br>
 Alternate: Fabrízio Mello <fabriziomello(at)gmail(dot)com>
 Alternate: Fabrízio de Royes Mello <fabrizio(at)planetscale(dot)com>
+Alternate: Fabrizio Mello <fabrizio(at)planetscale(dot)com>
 
 Canonical: Fahar Abbas <syed(dot)fahar(dot)abbas(at)gmail(dot)com>
 
@@ -2687,6 +2808,8 @@ Canonical: Frank Streitzig <fstreitzig(at)gmx(dot)net>
 
 Canonical: <frank_limpert(at)yahoo(dot)com>
 
+Canonical: Franz-Josef Färber <franz-josef(dot)faerber(at)stmuk(dot)bayern(dot)de>
+
 Canonical: Fred .Flintstone <eldmannen(at)gmail(dot)com>
 
 Canonical: Fred Pratt <fpratt(at)microtechnologies(dot)com>
@@ -2759,6 +2882,7 @@ Canonical: Garima Natani <garima(dot)natani(at)gmail(dot)com>
 Canonical: Garrett Thornburg <film42(at)gmail(dot)com>
 
 Canonical: Garry Polley
+Alternate: Garry Polley <garrympolley(at)gmail(dot)com>
 
 Canonical: Gary M <garym(at)oedata(dot)com>
 Alternate: Garym <garym(at)oedata(dot)com>
@@ -2779,6 +2903,8 @@ Canonical: Gautham Raj <gauthamrajsunny(at)gmail(dot)com>
 Canonical: Gavan Schneider <list(dot)pg(dot)gavan(at)pendari(dot)org>
 
 Canonical: Gavin Flower <gavinflower(at)archidevsys(dot)co(dot)nz>
+
+Canonical: Gavin LYU <gavin790417(at)gmail(dot)com>
 
 Canonical: Gavin Panella <gavinpanella(at)gmail(dot)com>
 
@@ -2880,6 +3006,7 @@ Canonical: <grd(at)gmx(dot)net>
 Canonical: Greg Burd <greg(at)burd(dot)me>
 Alternate: Greg Burd <gregburd(at)amazon(dot)com>
 Alternate: Gregory Burd <greg(at)burd(dot)me>
+Alternate: Greg Burd <gregburd(at)protonmail(dot)com>
 
 Canonical: Greg Burek
 
@@ -2975,6 +3102,8 @@ Alternate: Gurjeet <gurjeet(at)singh(dot)im>
 
 Canonical: Gus Spier <gus(dot)spier(at)gmail(dot)com>
 
+Canonical: Gustavo William <gustavowilliam0805(at)gmail(dot)com>
+
 Canonical: Guy Burgess
 
 Canonical: Guyren Howe <guyren(at)gmail(dot)com>
@@ -3059,6 +3188,9 @@ Canonical: Haowu Ge <gehaowu(at)bitmoe(dot)com>
 # Different people with similar names.
 Canonical: Haoyan Wang <wanghaoyan20(at)163(dot)com>
 Distinct: Haiyang Wang <wanghaiyang(dot)001(at)bytedance(dot)com>
+Alternate: 王好燕 <wanghaoyan20(at)163(dot)com>
+
+Canonical: Haoyu Huang <haoyu(dot)huang(dot)68(at)gmail(dot)com>
 
 Canonical: Haozhou Wang <hawang(at)pivotal(dot)io>
 
@@ -3076,16 +3208,23 @@ Canonical: Hari Sankar <harisankars2003(at)gmail(dot)com>
 
 Canonical: hari.prasath <hari(dot)prasath(at)zohocorp(dot)com>
 
+Canonical: Hariadi Wicaksana <hariadi(dot)wicaksana(at)gmail(dot)com>
+
 # Misspellings and variant spellings in commit messages.
 Canonical: Haribabu Kommi <kommi(dot)haribabu(at)gmail(dot)com>
 Alternate: Hari Babu <kommi(dot)haribabu(at)gmail(dot)com>
 Alternate: Hari Babu Kommi
 
 Canonical: Harinath Kanchu <hkanchu(at)apple(dot)com>
+Alternate: harinath kanchu <kanchuharinath(at)gmail(dot)com>
 
 Canonical: hariprasath nallasamy <hariprasathnallasamy(at)gmail(dot)com>
 
+Canonical: Haris Okanovic <harisokn(at)amazon(dot)com>
+
 Canonical: Harisai Hari
+
+Canonical: Haritabh Gupta <haritabh1992(at)gmail(dot)com>
 
 Canonical: Harjyot Bagga <hsbagga28(dot)dev(at)gmail(dot)com>
 
@@ -3133,6 +3272,8 @@ Canonical: Hemanth Sandrana <hemanthforpostgres(at)gmail(dot)com>
 
 Canonical: Hendrik Visage <hvjunk(at)gmail(dot)com>
 Alternate: hvjunk <hvjunk(at)gmail(dot)com>
+
+Canonical: Henri GASC <henri(dot)gasc(at)airbus(dot)com>
 
 Canonical: Henrik TJ <henrik(at)0x48(dot)dk>
 
@@ -3191,6 +3332,8 @@ Canonical: Hu Xunqi <huxunqi(dot)08(at)gmail(dot)com>
 Canonical: Huailing Liu <liuhuailing(at)cn(dot)fujitsu(dot)com>
 
 Canonical: Huan Ruan
+
+Canonical: Huanbing Lu <luhuanbing(at)outlook(dot)com>
 
 Canonical: <huangning290(at)yahoo(dot)com>
 
@@ -3297,14 +3440,15 @@ Alternate: Ildus K <i(dot)kurbangaliev(at)gmail(dot)com>
 Canonical: Ilia Evdokimov <ilya(dot)evdokimov(at)tantorlabs(dot)com>
 Alternate: Илья Евдокимов <ilya(dot)evdokimov(at)tantorlabs(dot)com>
 Alternate: Ilia Evdokimov <ilya(dot)evdokimov(at)tantorlabs(dot)ru>
+Alternate: Ilia Evdokimov <ilidock95(at)gmail(dot)com>
 
 Canonical: Ilia Kashintsev <ilia(dot)kashintsev(at)gmail(dot)com>
 
 Canonical: Iliia Khaprov <i(dot)khaprov(at)gmail(dot)com>
 
-Canonical: Ilmar Y <tanswis42(at)gmail(dot)com>
+Canonical: Ilmar Yunusov <tanswis42(at)gmail(dot)com>
+Alternate: Ilmar Y <tanswis42(at)gmail(dot)com>
 Alternate: r314tive <tanswis42(at)gmail(dot)com>
-Alternate: Ilmar Yunusov <tanswis42(at)gmail(dot)com>
 
 Canonical: Ilya Anfimov <ilan(at)tzirechnoy(dot)com>
 
@@ -3323,6 +3467,7 @@ Canonical: Ilya Roublev <iroublev(at)gmail(dot)com>
 Canonical: Ilya Shkuratov <motr(dot)ilya(at)ya(dot)ru>
 
 Canonical: Ilya Staroverov <i(dot)staroverov(at)ftdata(dot)ru>
+Alternate: Staroverov Ilja <i(dot)staroverov(at)ftdata(dot)ru>
 
 Canonical: Ilyasov Ian <ianilyasov(at)outlook(dot)com>
 Alternate: Ильясов Ян <ianilyasov(at)outlook(dot)com>
@@ -3333,6 +3478,8 @@ Canonical: Imran Zaheer <imran(dot)zhir(at)gmail(dot)com>
 Alternate: Imran Zaheer <imran44dev(at)gmail(dot)com>
 
 Canonical: Imre Samu <pella(dot)samu(at)gmail(dot)com>
+
+Canonical: Induja Sreekanthan <indujas(at)google(dot)com>
 
 # Known only by a handle, or an organization with a one-word name.
 Canonical: inoas
@@ -3373,6 +3520,7 @@ Canonical: Ishii Ayumi <ishii(dot)ayumi(dot)pg(at)gmail(dot)com>
 Alternate: Ishii Ayumi <ayumi(dot)ishii(dot)pg(at)gmail(dot)com>
 
 Canonical: Ishjaap Singh <ishjaap(dot)singh07(at)gmail(dot)com>
+Alternate: Ishjaap Singh II <ishjaap(dot)singh07(at)gmail(dot)com>
 
 Canonical: Israa Odeh <israa(dot)k(dot)odeh(at)gmail(dot)com>
 Alternate: Israa Odeh <israa2110(at)hotmail(dot)com>
@@ -3453,6 +3601,8 @@ Alternate: Jacob Champion <jchampion(at)timescale(dot)com>
 Alternate: Jacob Champion <jchampion(at)postgresql(dot)org>
 Alternate: Jacob Champion <champion(dot)p(at)gmail(dot)com>
 
+Canonical: Jacob Jackson <jej(dot)jackson(dot)08(at)gmail(dot)com>
+
 Canonical: Jacob Robertson <jacob(at)enveritas(dot)org>
 
 Canonical: Jacob Speidel
@@ -3497,6 +3647,8 @@ Canonical: James Inform
 
 Canonical: James Keener <jim(at)jimkeener(dot)com>
 
+Canonical: James Locke <james(dot)locke(dot)uk(at)gmail(dot)com>
+
 Canonical: James McManus <jmpmcmanus(at)gmail(dot)com>
 
 # Different people with similar names.
@@ -3523,6 +3675,8 @@ Canonical: Jammie <shailesh(dot)jamloki(at)gmail(dot)com>
 
 Canonical: Jan Behrens
 
+Canonical: Jan Bjørge Løvland <janbjorge(at)gmail(dot)com>
+
 Canonical: Jan Chochol <jan(dot)chochol(at)gooddata(dot)com>
 
 Canonical: Jan Claeys <lists(at)janc(dot)be>
@@ -3541,6 +3695,7 @@ Alternate: Leknín Řepánek <godzilalalala(at)gmail(dot)com>
 Canonical: Jan Mußler <jan(dot)mussler(at)zalando(dot)de>
 
 Canonical: Jan Nidzwetzki <jan(at)planetscale(dot)com>
+Alternate: Jan Nidzwetzki <jnidzwetzki(at)gmx(dot)de>
 
 Canonical: Jan Nieuwenhuizen <janneke(at)gnu(dot)org>
 
@@ -3556,6 +3711,10 @@ Canonical: Japin Li <japinli(at)hotmail(dot)com>
 Alternate: japin <japinli(at)hotmail(dot)com>
 
 Canonical: Jared Rulison <jared(at)affinity(dot)co>
+
+Canonical: Jaroslav Novikov <njrslv(at)yandex-team(dot)ru>
+
+Canonical: Jaroslaw Ciba <jaroslaw(dot)ciba(at)carallon(dot)com>
 
 Canonical: Jarosław Torbicki <jaroslaw(dot)torbicki(at)symmetry(dot)pl>
 
@@ -3582,6 +3741,8 @@ Canonical: Jasper Smit <jbsmit(at)gmail(dot)com>
 Alternate: Jasper Smit <jasper(dot)smit(at)servicenow(dot)com>
 
 Canonical: jasrajd <jasrajd(at)microsoft(dot)com>
+
+Canonical: Javier Gutierrez-Maturana sanchez <fj(dot)gutierrezs91(at)gmail(dot)com>
 
 Canonical: Jay <jsudrikoss(at)gmail(dot)com>
 
@@ -3612,6 +3773,8 @@ Canonical: Jeevan Chalke <jeevan(dot)chalke(at)enterprisedb(dot)com>
 
 Canonical: Jeevan Ladhe <jeevanladhe(dot)os(at)gmail(dot)com>
 Alternate: Jeevan Ladhe <jeevan(dot)ladhe(at)enterprisedb(dot)com>
+
+Canonical: Jeff Anton <antonpgsql(at)hesiod(dot)org>
 
 Canonical: Jeff Davis <pgsql(at)j-davis(dot)com>
 Alternate: Jeff Davis <jdavis(at)postgresql(dot)org>
@@ -3685,6 +3848,8 @@ Alternate: Jesper Pedersen <jesperpedersen(dot)db(at)gmail(dot)com>
 
 Canonical: Jesse Zhang <sbjesse(at)gmail(dot)com>
 
+Canonical: Jeyaprakash Rajamani <jeyaprakash(dot)rajamani(at)chainsys(dot)com>
+
 Canonical: ji xu <thanksgreed(at)gmail(dot)com>
 
 Canonical: Jia Yu <jiayu198910(at)gmail(dot)com>
@@ -3710,6 +3875,7 @@ Alternate: 杨江华 <yjhjstz(at)gmail(dot)com>
 Canonical: jiankang liu <liujk1994(at)gmail(dot)com>
 
 Canonical: Jianqiao Han <hanjianqiao(at)gmail(dot)com>
+Alternate: 韩建桥 <hanjianqiao(at)gmail(dot)com>
 
 # Handles, with the person they belong to.
 Canonical: Jiao Shuntian <312199339(at)qq(dot)com>
@@ -3771,6 +3937,7 @@ Canonical: Jimmy <jimmyjack(at)gmail(dot)com>
 
 Canonical: Jimmy Angelakos <jimmy(at)2ndquadrant(dot)com>
 Alternate: Jimmy Angelakos <jimmy(dot)angelakos(at)enterprisedb(dot)com>
+Alternate: Jimmy Angelakos <jimmy(dot)angelakos(at)pgedge(dot)com>
 
 Canonical: Jimmy Yih <jyih(at)vmware(dot)com>
 Alternate: Jimmy Yih <jyih(at)pivotal(dot)io>
@@ -3799,6 +3966,8 @@ Canonical: Jinjing Zhou <allenzhou(at)tensorchord(dot)ai>
 Canonical: Jinlang Wang <wangjinlang226(at)gmail(dot)com>
 
 Canonical: Jinliang Zheng <alexjlzheng(at)gmail(dot)com>
+
+Canonical: Jinqing Kuang <kuangjinqingcn(at)gmail(dot)com>
 
 Canonical: jinser <aimer(at)purejs(dot)icu>
 
@@ -3840,6 +4009,8 @@ Alternate: Jochen Bandhauer <jb(at)jbitc(dot)de>
 
 Canonical: Joe Conway <mail(at)joeconway(dot)com>
 
+Canonical: Joe Hatcher <joe(dot)hatcher(at)sas(dot)com>
+
 Canonical: Joe Koshakow
 
 Canonical: Joe Nelson <joe(at)begriffs(dot)com>
@@ -3859,6 +4030,8 @@ Canonical: Joerg Sonnenberger <joerg(at)bec(dot)de>
 Canonical: joernbs <joern(dot)jaenecke(at)gmail(dot)com>
 
 Canonical: Joey Bodoia <jbodoia21(at)cmc(dot)edu>
+
+Canonical: Johannes Edmeier <johannes(dot)edmeier(at)steadybit(dot)com>
 
 Canonical: Johannes Graën <johannes(at)selfnet(dot)de>
 
@@ -3888,6 +4061,8 @@ Canonical: John Hutchins <john(dot)hutchins(at)wicourts(dot)gov>
 Canonical: John Klann
 
 Canonical: John Lumby <johnlumby(at)hotmail(dot)com>
+
+Canonical: John Mikk <jomikk2706(at)gmail(dot)com>
 
 Canonical: John Morris <john(dot)morris(at)crunchydata(dot)com>
 Alternate: John Morris <john(at)precision-gps(dot)com>
@@ -3945,6 +4120,7 @@ Alternate: Johnathan Katz
 Canonical: Jonathon Nelson <jdnelson(at)dyn(dot)com>
 
 Canonical: JoongHyuk Shin <sjh910805(at)gmail(dot)com>
+Alternate: Shin Berg <sjh910805(at)gmail(dot)com>
 
 Canonical: Jordan Deitch <jd(at)rsa(dot)pub>
 Alternate: Jordan Deitch <jwdeitch(at)gmail(dot)com>
@@ -3981,6 +4157,8 @@ Canonical: Joseph Koshakow <koshy44(at)gmail(dot)com>
 Canonical: Joseph Nahmias <joe(at)nahmias(dot)net>
 
 Canonical: Joseph Yu <kiddo831007(at)gmail(dot)com>
+
+Canonical: Josh Andrews <josh(dot)andrews(at)dorianinsights(dot)com>
 
 Canonical: Josh Berkus <josh(at)agliodbs(dot)com>
 Alternate: Joshua Berkus <josh(at)agliodbs(dot)com>
@@ -4120,6 +4298,7 @@ Canonical: <k(dot)man(dot)113(at)gmail(dot)com>
 Canonical: Kaare Rasmussen <kaare(at)jasonic(dot)dk>
 
 Canonical: Kacper Kuras
+Alternate: Kacper Kuras <kacperkuras(at)hotmail(dot)com>
 
 Canonical: Kai Kratz <kai(dot)kratz(at)swarm64(dot)com>
 
@@ -4206,12 +4385,14 @@ Canonical: Kaye Ann Ignacio <kaye(dot)ignacio(at)proceedit(dot)com>
 
 Canonical: KAZAR Ayoub <ma_kazar(at)esi(dot)dz>
 Alternate: Ayoub Kazar <ayoub(dot)kazar(at)data-bene(dot)io>
+Alternate: Ayoub Kazar <kazarayoub2004(at)gmail(dot)com>
 
 Canonical: Kazutaka Onishi <onishi(at)heterodb(dot)com>
 
 Canonical: Ke <kehan5800(at)gmail(dot)com>
 
 Canonical: Kedar Anavardekar <kedar(dot)anavardekar(at)gmail(dot)com>
+Alternate: Kedar Anavardekar <kedar(dot)anwardekar3(at)gmail(dot)com>
 
 Canonical: Kefan Yang <starordust(at)gmail(dot)com>
 
@@ -4232,6 +4413,8 @@ Canonical: Keith Paskett <keith(dot)paskett(at)logansw(dot)com>
 Canonical: kelan <ke_lan1(at)qq(dot)com>
 
 Canonical: Kelly Min <myzhmin(at)gmail(dot)com>
+
+Canonical: Ken Hibino <ken(dot)hibino7(at)gmail(dot)com>
 
 Canonical: Ken Huffman <khuffman(at)westell(dot)com>
 
@@ -4296,6 +4479,9 @@ Canonical: Khaled Anas <khaled(dot)anasabbas82(at)gmail(dot)com>
 
 Canonical: Khee Chin <kheechin(at)gmail(dot)com>
 
+Canonical: Khoa Nguyen <khoaduynguyen(at)gmail(dot)com>
+Alternate: Khoa Nguyen <kdnguyen9(dot)oss(at)gmail(dot)com>
+
 Canonical: Khushboo Vashi <khushboo(dot)vashi(at)enterprisedb(dot)com>
 
 Canonical: Kieran McCusker
@@ -4307,6 +4493,7 @@ Canonical: Kim Rose Carlsen <krc(at)hiper(dot)dk>
 Canonical: Kir Shatrov <sigkirs(at)gmail(dot)com>
 
 Canonical: Kiran Kaki <itskkpg(at)gmail(dot)com>
+Alternate: Kiran K <itskkpg(at)gmail(dot)com>
 
 Canonical: Kirill Berezin <enelar(at)exsul(dot)net>
 
@@ -4327,6 +4514,9 @@ Canonical: Kirk Jamison <k(dot)jamison(at)fujitsu(dot)com>
 Alternate: Kirk Jamison <k(dot)jamison(at)jp(dot)fujitsu(dot)com>
 
 Canonical: Kirk Parker <khp(at)equatoria(dot)us>
+
+Canonical: Kirk Roybal <kirk(dot)roybal(at)gmail(dot)com>
+Alternate: Kirk Roybal <kirk(at)webfinish(dot)com>
 
 Canonical: Kirk Wolak <wolakk(at)gmail(dot)com>
 
@@ -4437,6 +4627,8 @@ Canonical: Kshetrapaldesi Tutika <kshetra1(at)gmail(dot)com>
 
 Canonical: Kuan-Ting Kuo <m0935388420(at)gmail(dot)com>
 
+Canonical: Kuba Knysiak <thesniboy(at)gmail(dot)com>
+
 Canonical: Kubilay Kaan <heraklea(at)gmx(dot)de>
 
 Canonical: <kubilay(dot)dag(at)post(dot)ch>
@@ -4510,6 +4702,8 @@ Canonical: Lateef Sagar <lateef_sagar(at)yahoo(dot)com>
 
 Canonical: Lauren Fliksteen <dancernerd32(at)gmail(dot)com>
 
+Canonical: Laurence Newman <lenewman05(at)googlemail(dot)com>
+
 Canonical: Laurence Parry <greenreaper(at)hotmail(dot)com>
 
 Canonical: Laurent Laborde <kerdezixe(at)gmail(dot)com>
@@ -4561,6 +4755,7 @@ Canonical: Lev Kokotov <lev(at)hyperparam(dot)ai>
 Alternate: Lev Kokotov <lev(dot)kokotov(at)gmail(dot)com>
 
 Canonical: Lev Nikolaev <lev(dot)nikolaev(at)tantorlabs(dot)com>
+Alternate: Лев Николаев <lev(dot)nikolaev(at)tantorlabs(dot)com>
 
 Canonical: li carol <carol(dot)li2025(at)outlook(dot)com>
 Alternate: Yuan Li <carol(dot)li2025(at)outlook(dot)com>
@@ -4577,6 +4772,8 @@ Canonical: Lilian Ontowhee <ontowhee(at)gmail(dot)com>
 
 Canonical: Lily Liu <lilyliupku(at)gmail(dot)com>
 
+Canonical: lin teletele <teletele(dot)lin(at)gmail(dot)com>
+
 Canonical: Lingjie Qiang
 
 Canonical: Lionel Elie Mamane
@@ -4586,6 +4783,9 @@ Canonical: Lionel Hamayon <lionel(dot)hamayon(at)evolution-digitale(dot)fr>
 Canonical: Liran's Lab <androidlab3(at)gmail(dot)com>
 
 Canonical: liu xiaohui <liuxh(dot)zj(dot)cn(at)gmail(dot)com>
+Distinct: xiaoyu liu <xliu19163(at)gmail(dot)com>
+
+Canonical: liu zhilong <liuzhilong62(at)outlook(dot)com>
 
 Canonical: Liudmila Mantrova <l(dot)mantrova(at)postgrespro(dot)ru>
 Alternate: Liudmila Mantrova <l(dot)mantrova(at)gmail(dot)com>
@@ -4602,9 +4802,13 @@ Canonical: Lizeth Solis Aramayo <lizeth(dot)solis(at)elfec(dot)bo>
 
 Canonical: Lloyd Albin
 
+Canonical: lloyd thealbins.com <lloyd(at)thealbins(dot)com>
+
 Canonical: Logan Bowers <logan(dot)bowers(at)gmail(dot)com>
 
 Canonical: Logan MAUZAIZE <logan(dot)mauzaize(at)gmail(dot)com>
+
+Canonical: Logan Saso <logan(at)logan(dot)run>
 
 Canonical: Long Song <songlong88(at)126(dot)com>
 
@@ -4619,6 +4823,7 @@ Canonical: Lorraine Pocklington <lorraine(dot)pocklington(at)percona(dot)com>
 Canonical: Lou Picciano <loupicciano(at)comcast(dot)net>
 
 Canonical: ls7777 <ls7777(at)yandex(dot)ru>
+Alternate: Sergey <ls7777(at)yandex(dot)ru>
 
 Canonical: Lu Feng <fnlo1995(at)gmail(dot)com>
 
@@ -4714,6 +4919,8 @@ Canonical: M.Atıf Ceylan <mehmet(at)atifceylan(dot)com>
 
 Canonical: Ma Liangzhu
 
+Canonical: ma lz <ma100(at)hotmail(dot)com>
+
 Canonical: Ma Xueting <ma(at)sraoss(dot)co(dot)jp>
 
 Canonical: maayan mordehai <maayanmordehai3(at)gmail(dot)com>
@@ -4729,12 +4936,16 @@ Canonical: Madars Vitolins <madars(dot)vitolins(at)gmail(dot)com>
 
 Canonical: Madeleine Thompson <madeleineth(at)gmail(dot)com>
 
+Canonical: Madhav Madhusoodanan <madhavmadhusoodanan(at)gmail(dot)com>
+
 Canonical: Madhukar Prasad <madhukarprasad(at)google(dot)com>
 Alternate: Madhukar . <madhukarprasad(at)google(dot)com>
 
 Canonical: Madhumitha C <madhumitha(at)titan(dot)co(dot)in>
 
 Canonical: Madusudanan.B.N <b(dot)n(dot)madusudanan(at)gmail(dot)com>
+
+Canonical: Madyshev Egor <e(dot)madyshev(at)ftdata(dot)ru>
 
 Canonical: Maeldron T. <maeldron(at)gmail(dot)com>
 
@@ -4771,6 +4982,8 @@ Canonical: Mahmoud Ayman <mahmoud(dot)ayman(dot)fcai(at)gmail(dot)com>
 Canonical: Mahmoud Sakr <mahmoud(dot)sakr(at)ulb(dot)be>
 
 Canonical: Mai Peng <maily(dot)peng(at)webedia-group(dot)com>
+
+Canonical: mailinglists <lists(at)database(dot)one>
 
 Canonical: Maiquel Grassi <grassi(at)hotmail(dot)com(dot)br>
 
@@ -4873,6 +5086,8 @@ Canonical: Marco Atzeri <marco(dot)atzeri(at)gmail(dot)com>
 
 Canonical: Marco Garavello <marco(dot)garavello(at)carel(dot)com>
 
+Canonical: Marco Matteucci <marco(dot)matteucci(dot)1972(at)gmail(dot)com>
+
 Canonical: Marco Nenciarini <marco(dot)nenciarini(at)enterprisedb(dot)com>
 Alternate: Marco Nenciarini <marco(dot)nenciarini(at)2ndquadrant(dot)it>
 
@@ -4938,6 +5153,8 @@ Canonical: Marius RAICU <mariusraicu(at)laposte(dot)net>
 Canonical: Marius Timmer <marius(dot)timmer(at)uni-muenster(dot)de>
 
 Canonical: mariusz <marius(at)mtvk(dot)pl>
+
+Canonical: Mariyan Clement S <softclement(at)gmail(dot)com>
 
 Canonical: mark <dvlhntr(at)gmail(dot)com>
 
@@ -5044,6 +5261,8 @@ Canonical: Martín Fernández <fmartin91(at)gmail(dot)com>
 
 Canonical: Martin Heistermann <martin(dot)heistermann(at)unibe(dot)ch>
 
+Canonical: Martin Huang <jjja5555(at)gmail(dot)com>
+
 Canonical: Martin Jonsson <martinerikjonsson(at)yahoo(dot)fr>
 
 Canonical: Martin Kalcher <martin(dot)kalcher(at)aboutsource(dot)net>
@@ -5105,6 +5324,8 @@ Canonical: Matemática A3K <matematica(dot)a3k(at)gmail(dot)com>
 
 Canonical: Mateusz Guzik <mjguzik(at)gmail(dot)com>
 
+Canonical: Mateusz Kosek <mateusz(dot)kosek(at)gmail(dot)com>
+
 Canonical: Mateusz Starzycki <mstarzycki(at)gmail(dot)com>
 
 Canonical: Mateusz Stefek <mateusz(dot)stefek(at)gmail(dot)com>
@@ -5130,6 +5351,8 @@ Alternate: Mats Kindahl <mats(dot)kindahl(at)gmail(dot)com>
 Canonical: Mats Taraldsvik <mats(dot)taraldsvik(at)gmail(dot)com>
 
 Canonical: matshyeq <matshyeq(at)gmail(dot)com>
+
+Canonical: Matt Blewitt <mble(at)planetscale(dot)com>
 
 Canonical: Matt Carter <matt(dot)carter(at)twosigma(dot)com>
 
@@ -5179,6 +5402,8 @@ Canonical: Matthew Woodcraft <matthew(at)woodcraft(dot)me(dot)uk>
 Canonical: <matthew(dot)alton(at)gmail(dot)com>
 
 Canonical: Matthias Apitz <guru(at)unixarea(dot)de>
+
+Canonical: Matthias Dötsch <matze(at)mdoetsch(dot)de>
 
 Canonical: Matthias Kuhn <matthias(at)opengis(dot)ch>
 
@@ -5238,6 +5463,8 @@ Canonical: Maximilian Chrzan <maximilian(dot)chrzan(at)here(dot)com>
 Canonical: Maxym Kharchenko <maxymkharchenko(at)gmail(dot)com>
 
 Canonical: maxzor <maxzor(at)maxzor(dot)eu>
+
+Canonical: Mayrom Rabinovich <mayromrabinovich(at)gmail(dot)com>
 
 Canonical: <md(at)chewy(dot)com>
 
@@ -5373,6 +5600,8 @@ Alternate: Michal Novotny <michal(dot)novotny(at)greycortex(dot)com>
 
 Canonical: Michał Wadas <michalwadas(at)gmail(dot)com>
 
+Canonical: <michal(dot)dtz(at)gmail(dot)com>
+
 Canonical: <michal(dot)palenik(at)freemap(dot)sk>
 
 Canonical: Michel Pelletier <pelletier(dot)michel(at)gmail(dot)com>
@@ -5382,7 +5611,11 @@ Canonical: Michelle Caisse <michelle(dot)caisse(at)sun(dot)com>
 
 Canonical: <mickiewicz(at)syncad(dot)com>
 
+Canonical: Midhush Karthic <mimosk25(at)gmail(dot)com>
+
 Canonical: Miguel Ferreira <miguelmbferreira(at)gmail(dot)com>
+
+Canonical: Miguel Pinto1 <miguel1(dot)pinto(at)haringey(dot)gov(dot)uk>
 
 # How these people write their names now, or in full.
 Canonical: Mihail Nikalayeu <mihailnikalayeu(at)gmail(dot)com>
@@ -5449,12 +5682,20 @@ Canonical: Miles Elam <mileselam(at)gmail(dot)com>
 
 Canonical: Miłosz Bieniek <bieniek(dot)milosz(at)proton(dot)me>
 Alternate: Miłosz Bieniek <bieniek(dot)milosz0(at)gmail(dot)com>
+Alternate: Miłosz Bieniek <milosz(at)bieniek(dot)cc>
 
 Canonical: Miłosz Chmura <mieszko4(at)gmail(dot)com>
 
 Canonical: <mimidatabase(at)gmail(dot)com>
 
 Canonical: Ming Li <mli(at)apache(dot)org>
+
+Canonical: Mingjie Gao <mingjie(dot)gmj(at)gmail(dot)com>
+
+# Two addresses, both sending as 贾明伟.
+Canonical: Mingwei Jia <i(at)nayishan(dot)top>
+Alternate: 贾明伟 <i(at)nayishan(dot)top>
+Alternate: 贾明伟 <wei19860922(at)163(dot)com>
 
 Canonical: Mingyu Li <lmy2010lmy(at)gmail(dot)com>
 
@@ -5513,6 +5754,11 @@ Canonical: Mohammed Zeeshan <mohammed(dot)zee1000(at)gmail(dot)com>
 
 Canonical: mohand oubelkacem makhoukhene <mohand-oubelkacem(at)outlook(dot)com>
 
+Canonical: Mohit Kumar <mohit(dot)bash(at)gmail(dot)com>
+
+Canonical: Mok <gurmokh(at)protonmail(dot)com>
+Alternate: Gurmokh <gurmokh(at)protonmail(dot)com>
+
 Canonical: Moksh Chadha <chadhamoksh(at)gmail(dot)com>
 
 Canonical: Montana Low <montana(at)postgresml(dot)org>
@@ -5529,6 +5775,7 @@ Canonical: Mostafa <mostafa(dot)nabil(dot)nafie(at)gmail(dot)com>
 
 Canonical: Movead Li <movead(dot)li(at)highgo(dot)ca>
 Alternate: movead li <lchch1990(at)sina(dot)cn>
+Alternate: Movead <lchch1990(at)sina(dot)cn>
 
 Canonical: Mr.Bim <bmopat(at)yahoo(dot)com>
 
@@ -5545,6 +5792,7 @@ Canonical: Muhammad Imtiaz <imtiazpg712(at)gmail(dot)com>
 Canonical: Muhammad Malik <muhammad(dot)malik1(at)hotmail(dot)com>
 
 Canonical: Muhammad Taha Naveed <m(dot)taha(dot)naveed27(at)gmail(dot)com>
+Alternate: Taha Naveed <m(dot)taha(dot)naveed27(at)gmail(dot)com>
 
 Canonical: Muhammad Usama <m(dot)usama(at)gmail(dot)com>
 Alternate: Muhammad Usama <muhammad(dot)usama(at)percona(dot)com>
@@ -5567,6 +5815,8 @@ Canonical: Murat Tuncer <mtuncer(at)citusdata(dot)com>
 Canonical: Murtuza Zabuawala <murtuza(dot)zabuawala(at)enterprisedb(dot)com>
 
 Canonical: Mutaamba Maasha <maasha(at)gmail(dot)com>
+
+Canonical: Muzzammil Sarwar <muzzammil(at)umaish(dot)com>
 
 Canonical: mxbi <mmailbox6(at)gmail(dot)com>
 
@@ -5660,6 +5910,7 @@ Alternate: Bilal Yavuz <byavuz81(at)gmail(dot)com>
 Canonical: Nazli Ugur Koyluoglu
 
 Canonical: Nazneen Jafri <nazjafri(at)amazon(dot)com>
+Alternate: Nazneen Jafri <jafrinazneen(at)gmail(dot)com>
 
 Canonical: Neel Patel <neel(dot)patel(at)enterprisedb(dot)com>
 
@@ -5720,6 +5971,7 @@ Canonical: Nick Babadzhanian <pgnickb(at)gmail(dot)com>
 Alternate: Nikolai <pgnickb(at)gmail(dot)com>
 
 Canonical: Nick Cleaton
+Alternate: Nick Cleaton <nick(at)cleaton(dot)net>
 
 Canonical: Nick Dro <postgresql(at)walla(dot)co(dot)il>
 
@@ -5757,15 +6009,19 @@ Canonical: Nigel Gott <nigel(at)enveritas(dot)org>
 
 Canonical: Nikhil Benesch <nikhil(dot)benesch(at)gmail(dot)com>
 
+Canonical: Nikhil Chawla <chawlanikhil24(at)gmail(dot)com>
+
 Canonical: Nikhil Kumar Veldanda <veldanda(dot)nikhilkumar17(at)gmail(dot)com>
 
 Canonical: nikhil raj <nikhilraj474(at)gmail(dot)com>
 
 Canonical: Nikhil Shetty
+Alternate: Nikhil Shetty <nikhil(dot)dba04(at)gmail(dot)com>
 
 Canonical: Nikhil Sontakke <nikhil(at)planetscale(dot)com>
 Alternate: Nikhil Sontakke <nikhil(dot)sontakke(at)2ndquadrant(dot)com>
 Alternate: Nikhil Sontakke <nikhils(at)2ndquadrant(dot)com>
+Alternate: Nikhil Sontakke <nikkhils(at)gmail(dot)com>
 
 Canonical: Nikita <pm91(dot)arapov(at)gmail(dot)com>
 
@@ -5858,6 +6114,8 @@ Canonical: Nuko Yokohama <nuko(dot)yokohama(at)gmail(dot)com>
 
 Canonical: nummervet nummervet <nummervet(at)mail(dot)ru>
 
+Canonical: Nurlan Tulemisov <nurlan(dot)tulemisov(at)gmail(dot)com>
+
 Canonical: Nurul Karim Rafi <rafikarim1414(at)gmail(dot)com>
 
 Canonical: ocean_li_996 <ocean_li_996(at)163(dot)com>
@@ -5909,6 +6167,8 @@ Canonical: Oliver Rice <oliver(at)oliverrice(dot)com>
 
 Canonical: Oliver Yang <olilent2ctw(at)gmail(dot)com>
 
+Canonical: olivier cano <kindermoumoute(at)gmail(dot)com>
+
 Canonical: Olivier Gautherot <olivier(at)gautherot(dot)net>
 Alternate: Olivier Gautherot <ogautherot(at)gautherot(dot)net>
 
@@ -5958,6 +6218,7 @@ Canonical: Osahon Oduware <osahon(dot)gis(at)gmail(dot)com>
 Alternate: Osahon Oduware <oduwareosahon(at)gmail(dot)com>
 
 Canonical: Osama Abdul Qader <osamaabdulqader(dot)cs(at)gmail(dot)com>
+Alternate: Osama Abdul Qader <osamaabdulqaderpostgres(at)gmail(dot)com>
 
 # Known only by a handle, or an organization with a one-word name.
 Canonical: osdba <mailtch(at)163(dot)com>
@@ -5991,6 +6252,8 @@ Canonical: P C <puravc(at)gmail(dot)com>
 Canonical: P M <petermittere(at)gmail(dot)com>
 
 Canonical: p.b uday <uday(dot)pb26(at)gmail(dot)com>
+
+Canonical: <p(dot)gilev(at)postgrespro(dot)ru>
 
 Canonical: p4p3r <kbfanta(at)naver(dot)com>
 
@@ -6060,6 +6323,8 @@ Canonical: Patrick McHardy <kaber(at)trash(dot)net>
 
 Canonical: Patrick REED <patrickreed352(at)gmail(dot)com>
 
+Canonical: Patrick Reinhart <patrick(dot)reinhart(at)gmail(dot)com>
+
 Canonical: Patrick Reynolds <piki(at)planetscale(dot)com>
 
 Canonical: Patrick Stählin <me(at)packi(dot)ch>
@@ -6091,6 +6356,7 @@ Alternate: Paul Guo <guopa(at)vmware(dot)com>
 Canonical: Paul Howells <paul(dot)steven(dot)howells(at)gmail(dot)com>
 
 Canonical: Paul Kim <mok03127(at)gmail(dot)com>
+Alternate: 김선동 <mok03127(at)gmail(dot)com>
 
 Canonical: Paul Martinez <paulmtz(at)google(dot)com>
 Alternate: Paul Martinez <hellopfm(at)gmail(dot)com>
@@ -6160,11 +6426,15 @@ Alternate: Pavlo Golub <pavlo(dot)golub(at)gmail(dot)com>
 Canonical: Pawan Kumar <pawan(dot)kumar(at)nokia(dot)com>
 
 Canonical: Payal Singh <payal(at)omniti(dot)com>
+Alternate: Payal Singh <payals1(at)umbc(dot)edu>
+Alternate: Payal Singh <payal(dot)unike(at)gmail(dot)com>
 
 Canonical: Peifeng Qiu <pgsql(at)qiupf(dot)dev>
 Alternate: Peifeng Qiu <pqiu(at)pivotal(dot)io>
 Alternate: Peifeng Qiu <peifengq(at)vmware(dot)com>
 Alternate: Peifeng Qiu <peifeng(dot)qiu(at)openpie(dot)com>
+
+Canonical: Peipei YIN <yinpeipei0426(at)gmail(dot)com>
 
 # Handles, with the person they belong to.
 Canonical: Pengcheng Liu <pengchengliu(at)tju(dot)edu(dot)cn>
@@ -6186,7 +6456,8 @@ Canonical: Pete Stevenson <etep(dot)nosnevets(at)gmail(dot)com>
 
 Canonical: Pete Storer
 
-Canonical: Peter <pmc(at)citylink(dot)dinoex(dot)sub(dot)org>
+Canonical: Peter 'PMc' Much <pmc(at)citylink(dot)dinoex(dot)sub(dot)org>
+Alternate: Peter <pmc(at)citylink(dot)dinoex(dot)sub(dot)org>
 
 Canonical: Peter Baumann <p(dot)baumann(at)jacobs-university(dot)de>
 
@@ -6230,6 +6501,8 @@ Canonical: Peter Smith <smithpb2250(at)gmail(dot)com>
 Alternate: Peter Smith <peters(at)fast(dot)au(dot)fujitsu(dot)com>
 Alternate: Peter Smith <peter(dot)b(dot)smith(at)fujitsu(dot)com>
 
+Canonical: Peter Travers <traverspw(at)gmail(dot)com>
+
 Canonical: Peter van Hardenberg <pvh(at)pvh(dot)ca>
 
 Canonical: Peter Volk <peterb(dot)volk(at)gmx(dot)net>
@@ -6247,6 +6520,11 @@ Alternate: Petr Jelinek et al <petr(dot)jelinek(at)2ndquadrant(dot)com>
 Alternate: Petr Jelinek <petr(at)2ndquadrant(dot)com>
 
 Canonical: Petr Korobeinikov <pkorobeinikov(at)gmail(dot)com>
+
+# Also writes from pspetrov91@gmail.com, as "Peter Petrov".
+Canonical: Petr Petrov <p(dot)petrov(at)postgrespro(dot)ru>
+Alternate: eng eng <pspetrov91(at)gmail(dot)com>
+Alternate: Peter Petrov <pspetrov91(at)gmail(dot)com>
 
 Canonical: Petr Vejsada <pve(at)paymorrow(dot)com>
 
@@ -6266,6 +6544,8 @@ Canonical: <pg(at)kirasoft(dot)com>
 Canonical: pgchem pgchem <pgchem(at)tuschehund(dot)de>
 
 Canonical: <pgerber(at)tocco(dot)ch>
+
+Canonical: pgsql-hackers <pgsql-hackers(at)alibaba-inc(dot)com>
 
 Canonical: <pgsql(at)postgresql(dot)org>
 
@@ -6327,6 +6607,7 @@ Alternate: Pierre Ducroquet <pierre(dot)ducroquet(at)people-doc(dot)com>
 Alternate: Pierre <p(dot)psql(at)pinaraf(dot)info>
 
 Canonical: Pierre Forstmann <pierre(dot)forstmann(at)gmail(dot)com>
+Alternate: Pierre <pierre(dot)forstmann(at)gmail(dot)com>
 
 Canonical: Pierre Giraud <pierre(dot)giraud(at)dalibo(dot)com>
 
@@ -6367,6 +6648,11 @@ Canonical: Polina Bungina <bungina(at)gmail(dot)com>
 Alternate: Полина Бунгина <bungina(at)gmail(dot)com>
 Alternate: Полина Бунгина Polina Bungina <bungina(at)gmail(dot)com>
 
+# A team at Cybrosys, writing from two addresses.
+Canonical: Postgres Cybrosys <postgress(at)cybrosys(dot)com>
+Alternate: Postgress Cybrosys <postgress(at)cybrosys(dot)com>
+Alternate: Postgres Cybrosys <postgres(at)cybrosys(dot)com>
+
 Canonical: <postgres(at)coyotebush(dot)net>
 
 Canonical: postgres_sure <postgres_sure(at)163(dot)com>
@@ -6385,6 +6671,8 @@ Canonical: <postgresql_2016(at)163(dot)com>
 
 Canonical: Potapov Alexander <a(dot)potapov(at)postgrespro(dot)com>
 
+Canonical: PP L <flowerstair(at)gmail(dot)com>
+
 # Misspellings and variant spellings in commit messages.
 Canonical: Prabhat Sahu <prabhat(dot)sahu(at)enterprisedb(dot)com>
 Alternate: Prabhat Sabu
@@ -6393,21 +6681,30 @@ Canonical: Prabhu R <prabhu(dot)nokia(at)gmail(dot)com>
 
 Canonical: Pradeep Kumar <spradeepkumar29(at)gmail(dot)com>
 
+Canonical: Prafulla Ranadive <pprandive(dot)pgsql(at)gmail(dot)com>
+
 Canonical: Prajwal A V <prajwal450(at)gmail(dot)com>
 
 Canonical: Prakash Itnal <prakash074(at)gmail(dot)com>
 
 Canonical: Pranav Negi <negi_pranav(at)ymail(dot)com>
 
+Canonical: prankware <esavelievcode(at)gmail(dot)com>
+
 Canonical: Prashant Chinnam <crprashant(at)hotmail(dot)com>
+Alternate: Prashant Kumar <crprashant(at)hotmail(dot)com>
 
 Canonical: Pratheej Chandrika <pratheej(dot)chandrika(at)motorolasolutions(dot)com>
+
+Canonical: Pratik Thakare <thisguy(at)pratikthakare(dot)com>
 
 Canonical: preTham <prezza672(at)gmail(dot)com>
 
 Canonical: Pritam Baral <pritam(at)pritambaral(dot)com>
 
 Canonical: Private Information Retrieval <postgresql-pir(at)pm(dot)me>
+
+Canonical: Priyanka S <developerette(at)gmail(dot)com>
 
 Canonical: Projat Banerjee <banerjeeprojat(dot)pb(at)gmail(dot)com>
 
@@ -6435,6 +6732,8 @@ Canonical: Qiuyan Huang <huangqy(dot)fnst(at)cn(dot)fujitsu(dot)com>
 
 Canonical: QL Zhuo <zhuo(dot)dev(at)gmail(dot)com>
 Alternate: ZHUO QL <zhuoql(at)yahoo(dot)com>
+
+Canonical: QQ Mail <781408517(at)qq(dot)com>
 
 Canonical: Quan Tran <account(at)itscaro(dot)me>
 Alternate: Quan TRAN <qtran(at)itscaro(dot)me>
@@ -6486,6 +6785,8 @@ Canonical: Rafsun Masud <rafsun(dot)masud(dot)99(at)gmail(dot)com>
 
 Canonical: Raghav Jajodia <jajodia(dot)raghav(at)gmail(dot)com>
 
+Canonical: Raghav Mittal <mittalr086(at)gmail(dot)com>
+
 Canonical: Raghu Dev Ramaiah <rramaiah(at)opentext(dot)com>
 
 Canonical: Raghuveer Devulapalli <raghuveer(dot)devulapalli(at)intel(dot)com>
@@ -6502,6 +6803,8 @@ Canonical: Rahul Pandey <rahul(dot)it(dot)cloud(dot)architect(at)gmail(dot)com>
 Canonical: Rahul Uniyal <rahul(dot)uniyal00(at)gmail(dot)com>
 
 Canonical: Rahul Yadav <rahul(at)rhyadav(dot)dev>
+Alternate: Rahul Yadav <rahul(at)rhyadav(dot)com>
+Alternate: Rahul <rahul(at)rhyadav(dot)dev>
 
 Canonical: Rainer Orth
 
@@ -6540,6 +6843,8 @@ Canonical: Rajith Rao .B <ranjithraob(at)medha(dot)com>
 Canonical: Rajkumar Raghuwanshi <rajkumar(dot)raghuwanshi(at)enterprisedb(dot)com>
 Alternate: Rajkumar Raghuanshi
 
+Canonical: Rajni Baliyan <saan654(at)gmail(dot)com>
+
 Canonical: Rakshit R <rakshit(dot)r(at)intel(dot)com>
 
 Canonical: Ram Charan Kallem <ramcharan(dot)kallem(at)non(dot)se(dot)com>
@@ -6548,6 +6853,8 @@ Canonical: Ram Pratap Maurya <ram(dot)maurya(at)lavainternational(dot)in>
 
 Canonical: Rama Malladi <ramamalladi(at)hotmail(dot)com>
 Alternate: Rama Malladi <rvmallad(at)amazon(dot)com>
+
+Canonical: Ramakrishna Reddy Nandyala <rkreddy(dot)n(at)gmail(dot)com>
 
 Canonical: Ramanathan <sivakrishnathan(at)gmail(dot)com>
 
@@ -6636,9 +6943,13 @@ Canonical: Renan Soares Lopes <renans(dot)l(at)icloud(dot)com>
 
 Canonical: Renato dos Santos <shazaum(at)gmail(dot)com>
 
+Canonical: Renaud Métrich <rmetrich(at)redhat(dot)com>
+
 Canonical: Renaud Navarro
 
 Canonical: Renzo Dani <arons7(at)gmail(dot)com>
+
+Canonical: Reshmithaa <reshmithaa(dot)b(at)zohocorp(dot)com>
 
 Canonical: Rey <623669878(at)qq(dot)com>
 
@@ -6671,6 +6982,8 @@ Canonical: Rick Otten <rottenwindfish(at)gmail(dot)com>
 Canonical: Ricky Stevens <ristevenj(at)gmail(dot)com>
 
 Canonical: Rider <oceanustz(at)gmail(dot)com>
+
+Canonical: Rıdvan Korkmaz <serkan(dot)ridvan(dot)korkmaz(at)gmail(dot)com>
 
 Canonical: <rightfold(at)gmail(dot)com>
 
@@ -6716,6 +7029,8 @@ Canonical: Rob Bygrave <robin(dot)bygrave(at)gmail(dot)com>
 Canonical: Rob Gansevles <rgansevles(at)gmail(dot)com>
 
 Canonical: Rob McColl <rob(at)robmccoll(dot)com>
+
+Canonical: Rob Moore <robmoore121(at)gmail(dot)com>
 
 Canonical: Rob Sargent <robjsargent(at)gmail(dot)com>
 
@@ -6932,6 +7247,7 @@ Canonical: Ryo Kanbayashi <kanbayashi(dot)dev(at)gmail(dot)com>
 Canonical: Ryo Matsumura <matsumura(dot)ryo(at)fujitsu(dot)com>
 Alternate: Ryo Matsumura <matsumura(dot)ryo(at)jp(dot)fujitsu(dot)com>
 Alternate: Matsumura-san <matsumura(dot)ryo(at)jp(dot)fujitsu(dot)com>
+Alternate: Ryo/松村 量 Matsumura <matsumura(dot)ryo(at)fujitsu(dot)com>
 
 Canonical: Ryo Yamaji <yamaji(dot)ryo(at)fujitsu(dot)com>
 Alternate: Ryo Yamaji <yamaji(dot)ryo(at)jp(dot)fujitsu(dot)com>
@@ -6983,6 +7299,8 @@ Canonical: Sahil Harpal <sahilharpal1234(at)gmail(dot)com>
 
 Canonical: Sahil Sojitra <sahilsojitra4555(at)gmail(dot)com>
 
+Canonical: sahil verma <sahilvermatokyo1(at)gmail(dot)com>
+
 Canonical: Sahitya Chandra <sahityajb(at)gmail(dot)com>
 
 Canonical: Saicharanreddy Chinthareddy <saicharh(at)amazon(dot)com>
@@ -7008,9 +7326,13 @@ Canonical: Sakshi Munjal <sakshi1499(at)gmail(dot)com>
 
 Canonical: Salek Talangi <salek(dot)talangi(at)googlemail(dot)com>
 
+Canonical: Salma El-Sayed <salmasayed182003(at)gmail(dot)com>
+Alternate: Salma Elsayed <salmasayed182003(at)gmail(dot)com>
+
 Canonical: Salvador Fandiño <sfandino(at)gmail(dot)com>
 
 Canonical: Salvatore Dipietro <dipietro(dot)salvatore(at)gmail(dot)com>
+Alternate: Salvatore Dipietro <dipiets(at)amazon(dot)it>
 
 Canonical: Sam Gabrielsson <sam(at)movsom(dot)se>
 
@@ -7035,6 +7357,8 @@ Alternate: Sami Imseih <simseih(at)amazon(dot)com>
 Alternate: Sami Imseih (AWS) <samimseih(at)gmail(dot)com>
 Alternate: Sami Imseih <sanmimseih(at)gmail(dot)com>
 Alternate: Sami Imseih <samimseih(dot)pg(at)gmail(dot)com>
+
+Canonical: Samil C <samillcinar(at)gmail(dot)com>
 
 Canonical: Samuel Bassaly <shkshk90(at)gmail(dot)com>
 
@@ -7110,6 +7434,8 @@ Alternate: Satyanarayana Narlapuram <satyanarayana(dot)narlapuram(at)microsoft(d
 Alternate: Satya Narlapuram <satya(dot)narlapuram(at)gmail(dot)com>
 Alternate: Satya Narlapuram <satyanarlapuram(at)gmail(dot)com>
 
+Canonical: saurabh singh <saurabh(dot)singh214(at)gmail(dot)com>
+
 Canonical: Sayyid Ali Sajjad Rizavi <sasrizavi(at)gmail(dot)com>
 
 Canonical: Schoemans Maxime <maxime(dot)schoemans(at)enterprisedb(dot)com>
@@ -7150,6 +7476,9 @@ Canonical: Sean Jezewski <sjezewski(at)salesforce(dot)com>
 Canonical: Sean Johnston <sean(dot)johnston(at)edgeintelligence(dot)com>
 
 Canonical: <sean(at)materialize(dot)io>
+
+Canonical: Sebastiaan Mannem <sebas(at)mannem(dot)nl>
+Alternate: Sebas Mannem <sebas(at)mannem(dot)nl>
 
 Canonical: Sebastian Cabot <scabot(at)gmail(dot)com>
 
@@ -7211,6 +7540,8 @@ Canonical: Sergey Fedchenko <seregayoga(at)bk(dot)ru>
 Canonical: Sergey Fukanchik <s(dot)fukanchik(at)postgrespro(dot)ru>
 Alternate: Фуканчик Сергей <s(dot)fukanchik(at)postgrespro(dot)ru>
 
+Canonical: Sergey Glushchenko <gsserge(at)gmail(dot)com>
+
 Canonical: Sergey Koposov <sergey(dot)koposov(at)ed(dot)ac(dot)uk>
 
 Canonical: Sergey Mirvoda <sergey(at)mirvoda(dot)com>
@@ -7224,6 +7555,7 @@ Canonical: Sergey Sargsyan <sergey(dot)sargsyan(dot)2001(at)gmail(dot)com>
 Canonical: Sergey Sergey <ioxgrey(at)gmail(dot)com>
 
 Canonical: Sergey Shinderuk <s(dot)shinderuk(at)postgrespro(dot)ru>
+Alternate: Сергей Шиндерук <s(dot)shinderuk(at)postgrespro(dot)ru>
 
 Canonical: Sergey Soloviev <sergey(dot)soloviev(at)tantorlabs(dot)ru>
 Alternate: Sergey Solovev <sergey(dot)soloviev(at)tantorlabs(dot)ru>
@@ -7254,6 +7586,8 @@ Canonical: Shallow <theshallow27(at)gmail(dot)com>
 
 Canonical: Shao Bret <bret(dot)shao(at)outlook(dot)com>
 
+Canonical: shaobo zhang <zshaoo224(at)gmail(dot)com>
+
 Canonical: Shaoqi Bai <sbai(at)pivotal(dot)io>
 
 Canonical: Shardul Borhade <shardul(at)dbtune(dot)com>
@@ -7266,6 +7600,7 @@ Canonical: Shashishekar Hullahally Anantharamu <shashi(dot)h(dot)ananth(at)gmail
 
 Canonical: Shaun Thomas <shaun(dot)thomas(at)2ndquadrant(dot)com>
 Alternate: Shaun Thomas <shaun(dot)thomas(at)enterprisedb(dot)com>
+Alternate: Shaun Thomas <shaun(dot)thomas(at)pgedge(dot)com>
 
 Canonical: shaurya jain <12345shaurya(at)gmail(dot)com>
 
@@ -7299,6 +7634,8 @@ Canonical: Shichao Jin <jsc0218(at)gmail(dot)com>
 Canonical: Shigeru Hanada
 
 Canonical: Shihao Zhong <zhong950419(at)gmail(dot)com>
+
+Canonical: Shiju Sivadazz <shijusivadazz86(at)gmail(dot)com>
 
 # Mail sent with an address in place of a name; the legacy %email_map
 # knew who these are.
@@ -7340,6 +7677,8 @@ Canonical: Shohei Mochizuki <shohei(dot)mochizuki(at)toshiba(dot)co(dot)jp>
 
 Canonical: Shouyu Luo
 
+Canonical: Shreeya Sharma <shreeya2304(at)gmail(dot)com>
+
 Canonical: Shruthi Gowda <gowdashru(at)gmail(dot)com>
 
 Canonical: Shruthi KC
@@ -7354,6 +7693,8 @@ Alternate: Shubham Khanna <shubham(dot)khanna(at)fujitsu(dot)com>
 Canonical: Shubham Shingne <shubham(dot)s(dot)shingne(at)gmail(dot)com>
 
 Canonical: Shubhankar Anand Kulkarni <shubhankar(dot)ak(at)zohocorp(dot)com>
+
+Canonical: Shubhra Jain <shubhra(dot)jain(at)ksolves(dot)com>
 
 # Misspellings and variant spellings in commit messages.
 Canonical: Shveta Malik <shveta(dot)malik(at)gmail(dot)com>
@@ -7396,9 +7737,13 @@ Canonical: Sirisha Chamarthi <sirichamarthi22(at)gmail(dot)com>
 
 Canonical: Siva R <sivasubr(at)amazon(dot)com>
 
+Canonical: Sivaprasad <sivaprasad(dot)off(at)gmail(dot)com>
+
 Canonical: Sivaprasad <sivaprasad(dot)postgres(at)gmail(dot)com>
 
 Canonical: Sivasubramanian Ramasubramanian
+
+Canonical: Sivirilova Marija <m(dot)sivirilova(at)ftdata(dot)ru>
 
 Canonical: sixela <sixela(at)google(dot)com>
 
@@ -7422,6 +7767,8 @@ Canonical: Song Hongyu
 
 Canonical: Song Jinzhou
 
+Canonical: song yanli <songyanlili(at)outlook(dot)com>
+
 # Known only by a handle, or an organization with a one-word name.
 Canonical: Songjinzhou <tsinghualucky912(at)foxmail(dot)com>
 Alternate: 孤傲小二～阿沐 <2903807914(at)qq(dot)com>
@@ -7433,6 +7780,10 @@ Canonical: Sonya Valchuk <sonya(dot)valchuk(at)cloudkitchens(dot)com>
 Canonical: Sophie Alpert <pg(at)sophiebits(dot)com>
 
 Canonical: Sophie Herold <sophie_h(at)hemio(dot)de>
+
+Canonical: Soumen <soumenkforpostgres(at)gmail(dot)com>
+
+Canonical: Soumen Kumar <soumenkumar9503(at)gmail(dot)com>
 
 Canonical: Soumya Ghosh <soumya_online(at)outlook(dot)com>
 
@@ -7478,6 +7829,8 @@ Alternate: Srinath Reddy <srinath2133(at)gmail(dot)com>
 
 Canonical: Srinivas Karthik V <skarthikv(dot)iitb(at)gmail(dot)com>
 
+Canonical: Srinivas Kumar <srinivasnerusu(at)gmail(dot)com>
+
 Canonical: Sriram RK <sriram(dot)rk(at)outlook(dot)com>
 
 Canonical: Srirama Kucherlapati <sriram(dot)rk(at)in(dot)ibm(dot)com>
@@ -7505,6 +7858,8 @@ Canonical: Stefan Fercot <stefan(dot)fercot(at)protonmail(dot)com>
 Alternate: Stefan Fercot <stefan(dot)fercot(at)dalibo(dot)com>
 Alternate: Stefan Fercot <stefan(dot)fercot(at)dataegret(dot)com>
 
+Canonical: Stefan Guha <stefan(at)stefanguha(dot)com>
+
 Canonical: Stefan Huehner <stefan(at)huehner(dot)org>
 
 Canonical: Stefan Kaltenbrunner <stefan(at)kaltenbrunner(dot)cc>
@@ -7517,6 +7872,8 @@ Alternate: Stefan Scheid <stefan(dot)scheid(at)4braincells(dot)de>
 Canonical: Stefan Stefanov <stefanov(dot)sm(at)abv(dot)bg>
 
 Canonical: Stefan Wolf <sw(at)zpmt(dot)de>
+
+Canonical: <stefangrassl(at)gmx(dot)net>
 
 Canonical: Stefanie Janine Stölting <stefanie(at)proopensource(dot)eu>
 
@@ -7535,6 +7892,8 @@ Alternate: Stepan Neretin <sncfmgg(at)gmail(dot)com>
 Alternate: Степан <slpmcf(at)gmail(dot)com>
 
 Canonical: Stepan Rutz <stepan(dot)rutz(at)gmx(dot)de>
+
+Canonical: Stepan Tyagushev <stepa20060226(at)gmail(dot)com>
 
 Canonical: Stepan Yankevych <stepan_yankevych(at)epam(dot)com>
 
@@ -7647,6 +8006,9 @@ Canonical: Sumit Chaturvedi <sumit(dot)chaturvedi(at)gmail(dot)com>
 Canonical: Sumukha Pk <sumukhapk46(at)gmail(dot)com>
 
 Canonical: sundayjiang <sundayjiang(at)tencent(dot)com>
+
+Canonical: SungJun Jang <sjjang112233(at)gmail(dot)com>
+Alternate: 장성준 <sjjang112233(at)gmail(dot)com>
 
 Canonical: Sungwoo Chang <swchangdev(at)gmail(dot)com>
 
@@ -7862,6 +8224,8 @@ Canonical: there's no need
 
 Canonical: These oversights are ancient
 
+Canonical: Thiago Caserta <caserta(at)movestax(dot)com>
+
 Canonical: Thibaud W. <thibaud(dot)walkowiak(at)dalibo(dot)com>
 
 Canonical: Thibaud Walkowiak
@@ -7935,6 +8299,9 @@ Canonical: tianbing <tian_bing_0531(at)163(dot)com>
 Canonical: Tianchen Zhang <zhang_tian_chen(at)163(dot)com>
 
 Canonical: Tiancheng Ge <getiancheng_2012(at)163(dot)com>
+Alternate: getiancheng <getiancheng_2012(at)163(dot)com>
+
+Canonical: Tianyi Gao <gtydoit(at)gmail(dot)com>
 
 Canonical: Tianzhou Chen <tianzhouchen(at)gmail(dot)com>
 Alternate: 陈天舟 <tianzhouchen(at)gmail(dot)com>
@@ -7972,6 +8339,8 @@ Canonical: <tim(dot)colles(at)ed(dot)ac(dot)uk>
 
 Canonical: Timmy Siu <timmy(dot)siu(at)aol(dot)com>
 
+Canonical: Timo J. Rinne <tr-pg(at)rinne(dot)mobi>
+
 Canonical: Timofey <tim-shlyap(at)yandex-team(dot)ru>
 
 Canonical: Timothy Ball <timball(at)enveritas(dot)org>
@@ -7983,6 +8352,8 @@ Canonical: Timur Birsh <taem(at)linukz(dot)org>
 Canonical: Timur Magomedov <t(dot)magomedov(at)postgrespro(dot)ru>
 
 Canonical: Tingchuan Sun <suntingchuan1996(at)163(dot)com>
+
+Canonical: Tình Trần <tranvantinhnbk(at)gmail(dot)com>
 
 Canonical: TipTop Labs <office(at)tiptop-labs(dot)com>
 
@@ -8092,11 +8463,20 @@ Canonical: Tomohiro Hiramitsu
 
 Canonical: Tomonari Katsumata <t(dot)katsumata1122(at)gmail(dot)com>
 
+Canonical: Tony Finch <dot(at)dotat(dot)at>
+
 Canonical: Tony Locke <tlocke(at)tlocke(dot)org(dot)uk>
 
 Canonical: Tony REIX <tony(dot)reix(at)atos(dot)net>
 
 Canonical: Tony Wayne <anonymouslydark3(at)gmail(dot)com>
+
+# Tony Zhu, also from the devops address at the same company.
+Canonical: Tony Zhu <tony(dot)zhu(at)ww-it(dot)cn>
+Alternate: ZHU XIAN WEN <tony(dot)zhu(at)ww-it(dot)cn>
+Alternate: DEVOPS_WwIT <devops(at)ww-it(dot)cn>
+Alternate: DEV_OPS <devops(at)ww-it(dot)cn>
+Alternate: Tony ZHU <devops(at)ww-it(dot)cn>
 
 Canonical: too many
 
@@ -8114,6 +8494,8 @@ Alternate: Torsten Zühlsdorff <mailinglists(at)toco-domains(dot)de>
 
 Canonical: Toshi Harada <harada(dot)toshi(at)po(dot)ntt-tx(dot)co(dot)jp>
 Alternate: Toshi Harada <harada(dot)toshi(at)po(dot)ntts(dot)co(dot)jp>
+
+Canonical: Toshiki Toda <toshiki(dot)toda(dot)pgtech(at)gmail(dot)com>
 
 Canonical: Toto guyoyg <thomas(dot)bessou(at)hotmail(dot)fr>
 
@@ -8139,6 +8521,8 @@ Canonical: Triveni N <triveni(dot)n(at)enterprisedb(dot)com>
 Canonical: Troy Frericks
 
 Canonical: <troy(at)frericks(dot)us>
+
+Canonical: Trương Hoàng Quân <truonghoangquan456(at)gmail(dot)com>
 
 Canonical: Tsahi Zidenberg <tsahee(at)amazon(dot)com>
 
@@ -8181,10 +8565,15 @@ Canonical: using valgrind
 Canonical: Utsav Parmar <utsavp0213(at)gmail(dot)com>
 
 Canonical: V N G Samba Siva Reddy Chinta <sambasivareddychinta(at)gmail(dot)com>
+Alternate: Samba Siva Reddy Chinta <sambasivareddy(dot)ch(at)zohomail(dot)in>
 
 Canonical: Vadim B. Mikheev
 
 Canonical: Vadim Lakt <vadim(dot)lakt(at)gmail(dot)com>
+
+Canonical: Vadim Ponomarev <vbponomarev(at)gmail(dot)com>
+
+Canonical: Vadim Shakirov <vadimsakirov5(at)gmail(dot)com>
 
 Canonical: Vaibhav Dalvi <vaibhav(dot)dalvi(at)enterprisedb(dot)com>
 
@@ -8203,6 +8592,8 @@ Alternate: Vaishnavi Prabakaran <vaishnavip(at)fast(dot)au(dot)fujitsu(dot)com>
 Canonical: Valentin Gatien-Baron <valentin(dot)gatienbaron(at)gmail(dot)com>
 
 Canonical: valeriof <valerio_farruggio(at)hotmail(dot)com>
+
+Canonical: Valeriy Degtyarev <vdegtyarev(at)tradingview(dot)com>
 
 Canonical: Valeriy Meleshkin <valeriy(at)meleshk(dot)in>
 
@@ -8230,6 +8621,10 @@ Canonical: Vasya <m7onov(at)yandex(dot)ru>
 Canonical: Vedant Gokhale <gokhalevedant06(at)gmail(dot)com>
 
 Canonical: velagandula sravan kumar <sravan_velag(at)yahoo(dot)com>
+
+Canonical: vellaipandiyan sm <vellaipandiyan(dot)sm(at)gmail(dot)com>
+
+Canonical: Venkat Venkatakrishnan <tvvraghavan(at)gmail(dot)com>
 
 Canonical: Venkata B Nagothi <nag1010(at)gmail(dot)com>
 Alternate: Venkata Balaji N <nag1010(at)gmail(dot)com>
@@ -8306,6 +8701,8 @@ Canonical: Vince Vielhaber <vev(at)chives(dot)michvhf(dot)com>
 Canonical: Vincent Mirian <vince(dot)mirian(at)gmail(dot)com>
 
 Canonical: Vincent Moreau <vincentneko(at)gmail(dot)com>
+
+Canonical: Vincent Veyron <vv(dot)lists(at)wanadoo(dot)fr>
 
 Canonical: Vinícius Abrahão <vinnix(dot)bsd(at)gmail(dot)com>
 
@@ -8417,22 +8814,32 @@ Canonical: Wang Hao <whberet(at)gmail(dot)com>
 Canonical: Wang Ke <krking(at)zju(dot)edu(dot)cn>
 
 Canonical: Wang Peng <215722532(at)qq(dot)com>
+Alternate: wangpeng <215722532(at)qq(dot)com>
 
 Canonical: wangchuanting <wangchuanting(at)huawei(dot)com>
 
 Canonical: <wanghaitao0125(at)zju(dot)edu(dot)cn>
 
+Canonical: wanghongyan <wanghongyan2025(at)iscas(dot)ac(dot)cn>
+Alternate: 王红岩 <wanghongyan2025(at)iscas(dot)ac(dot)cn>
+
 Canonical: <wangyukun(at)fujitsu(dot)com>
 
 Canonical: <wangzk(dot)fnstxz(at)fujitsu(dot)com>
 
+Canonical: warda Bibi <wardabibi221(at)gmail(dot)com>
+
 Canonical: Warner, Gary, Jr <gar(at)uab(dot)edu>
+
+Canonical: Wataru Naotsuka <naotsukawataru(at)gmail(dot)com>
 
 Canonical: wcting <wcting163(at)163(dot)com>
 
 Canonical: <web+postgresql(at)modin(dot)io>
 
 Canonical: Webbo Han <1105066510(at)qq(dot)com>
+
+Canonical: webbohan <webbohan(at)qq(dot)com>
 
 Canonical: Wei Sun <936739278(at)qq(dot)com>
 Alternate: sunw.fnst <936739278(at)qq(dot)com>
@@ -8445,6 +8852,8 @@ Canonical: Weiping Qu
 Canonical: Wells Oliver <wells(dot)oliver(at)gmail(dot)com>
 
 Canonical: Wen Yi <wen-yi(at)qq(dot)com>
+
+Canonical: Wenbo Lin <linwenbo1994(at)gmail(dot)com>
 
 Canonical: Wenchao Zhang <zwcpostgres(at)gmail(dot)com>
 
@@ -8463,6 +8872,8 @@ Canonical: Wensheng Zhang
 Canonical: Wesley Aptekar-Cassels <me(at)wesleyac(dot)com>
 
 Canonical: Wesley Massuda <wesley(dot)massuda(at)gmail(dot)com>
+
+Canonical: WGH <wgh(at)bushwhackers(dot)ru>
 
 Canonical: Wh isere <whisere(at)gmail(dot)com>
 Alternate: Where is Where <whisere(at)gmail(dot)com>
@@ -8513,22 +8924,29 @@ Canonical: Wyatt Alt <wyatt(dot)alt(at)gmail(dot)com>
 
 Canonical: Xavier Fischer <xavier_fischer(at)hotmail(dot)fr>
 
+Canonical: Xianbin Zhu <xianbin(dot)aaronzhu(at)gmail(dot)com>
+
 Canonical: Xiang Gao <xiang(dot)gao(at)arm(dot)com>
 
 Canonical: Xiang Xiao <xxiao23(at)gmail(dot)com>
 
 Canonical: Xiangxin Zeng <xiangxin_zeng(at)qq(dot)com>
+Alternate: zengxx <xiangxin_zeng(at)qq(dot)com>
 
 Canonical: Xiangyu Liang <liangxiangyu_2013(at)163(dot)com>
 
 Canonical: xiaolongc <xiaolong(dot)ch(at)gmail(dot)com>
 
 Canonical: Xiaopeng Wang <wxp_728(at)163(dot)com>
+Alternate: wang.xiao.peng <wxp_728(at)163(dot)com>
 
 Canonical: Xiaoran Wang <fanfuxiaoran(at)gmail(dot)com>
 Alternate: Xiaoran Wang <wxiaoran(at)vmware(dot)com>
 
 Canonical: Xiaoxuan Li <xioxuan(at)amazon(dot)com>
+
+Canonical: xiaoyu liu <xliu19163(at)gmail(dot)com>
+Distinct: liu xiaohui <liuxh(dot)zj(dot)cn(at)gmail(dot)com>
 
 Canonical: Xiaozhe Yao <askxzyao(at)gmail(dot)com>
 
@@ -8589,12 +9007,16 @@ Alternate: Yang Jie <yonj1e(at)163(dot)com>
 Distinct: Jie Wang <jugierwang(at)gmail(dot)com>
 
 Canonical: yang lei <ylshiyu(at)126(dot)com>
+Alternate: lei yang <yanglei(dot)ovo(at)gmail(dot)com>
 
 Canonical: Yang Xiao <yangx92(at)hotmail(dot)com>
 
 Canonical: YANG Xudong <yangxudong(at)ymatrix(dot)cn>
 
 Canonical: Yang Yuanzhuo <1197620467(at)qq(dot)com>
+Alternate: yangyz <1197620467(at)qq(dot)com>
+
+Canonical: Yanis AGGOUNE <y-aggoune(at)uem-metz(dot)fr>
 
 Canonical: Yanjie Zhao
 
@@ -8603,6 +9025,8 @@ Canonical: Yanliang Lei <msdnchina(at)163(dot)com>
 Canonical: Yannick Collette <yannickcollette(at)gmail(dot)com>
 
 Canonical: Yannick Goetschel <yannick(dot)goetschel(at)tradition(dot)ch>
+
+Canonical: Yao Feng <fengyao0087(at)gmail(dot)com>
 
 Canonical: Yao Wang <yao-yw(dot)wang(at)broadcom(dot)com>
 Alternate: Wang Yao <yaowangm(at)outlook(dot)com>
@@ -8619,6 +9043,8 @@ Alternate: Y. Saburov <y(dot)saburov(at)gmail(dot)com>
 Canonical: Yaroslav Schekin
 
 Canonical: Yaroslav Syrytsia <me(at)ys(dot)lc>
+
+Canonical: Yash Jadhav <yash(dot)jadhav8008(at)gmail(dot)com>
 
 Canonical: Yash Jain <jainism987e(at)gmail(dot)com>
 
@@ -8668,6 +9094,7 @@ Canonical: Yong Li <yoli(at)ebay(dot)com>
 # Different people with similar names.
 Canonical: Yonghao Lee <yonghao_lee(at)qq(dot)com>
 Distinct: Yonghwa Lee <underdog(at)theori(dot)io>
+Alternate: yonghao_lee <yonghao_lee(at)qq(dot)com>
 
 # Different people with similar names.
 Canonical: Yonghwa Lee <underdog(at)theori(dot)io>
@@ -8800,6 +9227,8 @@ Alternate: Yuki Fujii
 Canonical: Yuxiao Guo <dllggyx(at)outlook(dot)com>
 Alternate: BugForge <dllggyx(at)outlook(dot)com>
 
+Canonical: Yuya Shinde <yuya(dot)shinde(at)gmail(dot)com>
+
 Canonical: Yuya Watari <watari(dot)yuya(at)gmail(dot)com>
 
 Canonical: Yuzuko Hosoya <yuzukohosoya(at)gmail(dot)com>
@@ -8810,6 +9239,8 @@ Canonical: Yves Goergen
 
 Canonical: yxq <yxq(at)o2(dot)pl>
 
+Canonical: Zach Manifold <zachlweaver00(at)gmail(dot)com>
+
 Canonical: Zaeem Hussain <zaeem(dot)hussain(at)gmail(dot)com>
 
 Canonical: zafiirah jumeen <zafiirahjumeen(at)gmail(dot)com>
@@ -8817,6 +9248,8 @@ Canonical: zafiirah jumeen <zafiirahjumeen(at)gmail(dot)com>
 Canonical: Zaid Shabbir <zaidshabbir(at)gmail(dot)com>
 
 Canonical: zaidagilist <zaidagilist(at)gmail(dot)com>
+
+Canonical: Zakariyah Ali <zakariyahali100(at)gmail(dot)com>
 
 Canonical: <zam6ak(at)gmail(dot)com>
 
@@ -8848,6 +9281,7 @@ Canonical: Zeyuan Hu <ferrishu3886(at)gmail(dot)com>
 Canonical: zfmohz <zfmohz(at)163(dot)com>
 
 Canonical: Zhang Hu <kongbaik228(at)gmail(dot)com>
+Alternate: zhanghu <kongbaik228(at)gmail(dot)com>
 
 Canonical: zhang listar <zhanglinuxstar(at)gmail(dot)com>
 
@@ -8859,6 +9293,8 @@ Canonical: Zhang Wenjie
 Canonical: zhanglihui <zlh21343(at)163(dot)com>
 
 Canonical: zhangqiang <zhang_qiang81(at)163(dot)com>
+
+Canonical: Zhao Song <songzhao(dot)asm(at)icloud(dot)com>
 
 # Known only by a handle, or an organization with a one-word name.
 Canonical: zhaoqigui
@@ -8916,14 +9352,13 @@ Alternate: Zhijie Hou <houzhijie22(at)gmail(dot)com>
 
 Canonical: Zhiyuan Su <suzhiyuan_pg(at)126(dot)com>
 
+Canonical: Zhongpu Chen <chenloveit(at)gmail(dot)com>
+
 Canonical: Zhou Digoal <digoal(at)126(dot)com>
 
 Canonical: Zhou Pengyu <ericzpy1998(at)outlook(dot)com>
 
 Canonical: <zhoushulin1992(at)gmail(dot)com>
-
-Canonical: ZHU XIAN WEN <tony(dot)zhu(at)ww-it(dot)cn>
-Alternate: Tony Zhu <tony(dot)zhu(at)ww-it(dot)cn>
 
 Canonical: Zi Yi Xu <jennyziyi(dot)xu(at)mail(dot)utoronto(dot)ca>
 
@@ -8939,12 +9374,14 @@ Canonical: Zizhuan Liu <44973863(at)qq(dot)com>
 Alternate: X-MAN
 Alternate: ZizhuanLiu X-MAN <44973863(at)qq(dot)com>
 Alternate: ZizhuanLiu <44973863(at)qq(dot)com>
+Alternate: X-MAN <44973863(at)qq(dot)com>
 
 Canonical: zk.wang <zackery(dot)wang(at)qq(dot)com>
 
 Canonical: zkbp712 <zkbp712(at)proton(dot)me>
 
 Canonical: zmuxuny <xiahoumuxuan(at)gmail(dot)com>
+Alternate: 夏侯莯昍 <xiahoumuxuan(at)gmail(dot)com>
 
 Canonical: Zohar Gofer <zohar(dot)gofer(at)amdocs(dot)com>
 
@@ -8968,6 +9405,9 @@ Canonical: Александр Аникин <anikin24(at)list(dot)ru>
 Canonical: Александр Асафов <asafofalexander(at)gmail(dot)com>
 
 Canonical: Алена Васильева <gorcom2012(at)gmail(dot)com>
+Alternate: Eugeny Goryachev <gorcom2012(at)gmail(dot)com>
+
+Canonical: Андрей Казаринов <kazarandrey(at)yandex(dot)ru>
 
 Canonical: Андрей Казачков <andrey(dot)kazachkov(at)tantorlabs(dot)ru>
 
@@ -8982,6 +9422,10 @@ Canonical: Антон Пацев <patsev(dot)anton(at)gmail(dot)com>
 Canonical: Арсен Арутюнян <arutar(at)bk(dot)ru>
 
 Canonical: Виктория Шепард <we(dot)viktory(at)gmail(dot)com>
+
+Canonical: Влад Медведицков <vladmedveditskov(at)yandex(dot)ru>
+
+Canonical: Галкин Сергей <galkin(at)rutoken(dot)ru>
 
 Canonical: Господарський суд Одеської області <inbox(at)od(dot)arbitr(dot)gov(dot)ua>
 
@@ -9005,7 +9449,10 @@ Canonical: Ильдар <igaraev77(at)yandex(dot)com>
 
 Canonical: Илья Жарков <izharkov1243(at)gmail(dot)com>
 
+Canonical: Илья Сербин <serbin(dot)ilia(at)gmail(dot)com>
+
 Canonical: Илья Чердаков <i(dot)cherdakov(dot)pg(at)gmail(dot)com>
+Alternate: Ilya Cherdakov <i(dot)cherdakov(dot)pg(at)gmail(dot)com>
 
 Canonical: Кирилл Бороздин <borozdin(dot)kirill(at)gmail(dot)com>
 
@@ -9022,6 +9469,10 @@ Canonical: Матвеев Алексей <amatveev(at)global-system(dot)ru>
 Canonical: Мельников Игорь <melnikov_ii(at)mail(dot)ru>
 
 Canonical: Михаил Бахтерев <mob(at)k(dot)imm(dot)uran(dot)ru>
+
+Canonical: Михаил Купцов <mr(dot)cuptsov2018(at)yandex(dot)ru>
+
+Canonical: Михаил Сироткин <vbifsir03(at)gmail(dot)com>
 
 Canonical: Никита Старовойтов <nikstarall(at)gmail(dot)com>
 
@@ -9042,6 +9493,11 @@ Canonical: Святослав Ермилин <munakoiso(at)yandex-team(dot)ru>
 
 Canonical: Тарасов Георгий Витальевич <tarasov-g(at)gaz-is(dot)ru>
 
+Canonical: Тестова Екатерина <e(dot)testova(at)postgrespro(dot)ru>
+
+Canonical: Филиппов Степан <stepan(dot)filippov(at)yandex(dot)ru>
+Alternate: Stepan Filippov <stepan(dot)filippov(at)yandex(dot)ru>
+
 Canonical: Хамидуллин Рустам <r(dot)khamidullin(at)postgrespro(dot)ru>
 
 Canonical: Чумак Антон <a(dot)chumak(at)postgrespro(dot)ru>
@@ -9055,11 +9511,23 @@ Canonical: 김명준 <rayjun0525(at)gmail(dot)com>
 
 Canonical: 노명석 <stan(dot)num(at)kakaocorp(dot)com>
 
+Canonical: 민영재 <dudwo990413(at)gmail(dot)com>
+
+Canonical: 반지현 <rring0727(at)gmail(dot)com>
+Alternate: jihyun bahn <rring0727(at)gmail(dot)com>
+
 Canonical: 서정협 <juemcc(at)hanmail(dot)net>
 
 Canonical: 송기훈 <songky08(at)gmail(dot)com>
 
+Canonical: 신성준 <shinsj4653(at)gmail(dot)com>
+
 Canonical: 안지용 <jfdg1y76(at)gmail(dot)com>
+
+Canonical: 유도건 <ehrjs023(at)gmail(dot)com>
+Alternate: dogeon yoo <ehrjs023(at)gmail(dot)com>
+
+Canonical: 이민재 <mmj9808(at)gmail(dot)com>
 
 Canonical: 이재훈 <ljhh0611(at)gmail(dot)com>
 
@@ -9076,6 +9544,8 @@ Canonical: 何柯文 <hekewen(dot)hkw(at)alibaba-inc(dot)com>
 Canonical: 余森彬 <justdoit920823(at)gmail(dot)com>
 
 Canonical: 刘庄 <lzwp0521(at)163(dot)com>
+
+Canonical: 南拓弥 <minamitakuya(at)lifull(dot)com>
 
 Canonical: 吴亚飞 <wuyf41619(at)hundsun(dot)com>
 
@@ -9097,12 +9567,19 @@ Canonical: 小威 <zxw110876189(at)qq(dot)com>
 
 Canonical: 席冲 <xichong(dot)xc(at)alibaba-inc(dot)com>
 
+Canonical: 张 子鸣 <toren(dot)zhang(at)outlook(dot)com>
+Alternate: zhang ziming <toren(dot)zhang(at)outlook(dot)com>
+
 Canonical: 张文杰 <757634191(at)qq(dot)com>
 Alternate: zwj <757634191(at)qq(dot)com>
 
 Canonical: 张连壮 <lianzhuangzhang(at)gmail(dot)com>
 
+Canonical: 张鹏超 <zhangpengchao(at)highgo(dot)com>
+
 Canonical: 彭冲 <chong(dot)peng(at)enmotech(dot)com>
+
+Canonical: 慈超云 <cichaoyun(at)halodbtech(dot)com>
 
 Canonical: 成之焕 <zhcheng(at)ceresdata(dot)com>
 
@@ -9120,6 +9597,9 @@ Canonical: 李海龙 <hailong(dot)li(at)qunar(dot)com>
 Alternate: hailong.li <hailong(dot)li(at)qunar(dot)com>
 
 Canonical: 杨伯宇 <yangboyu(dot)yby(at)alibaba-inc(dot)com>
+Alternate: yangboyu <yangboyu(dot)yby(at)alibaba-inc(dot)com>
+
+Canonical: 杨磊 <yanglei(at)halodbtech(dot)com>
 
 Canonical: 杨逸存 <1057206466(at)qq(dot)com>
 
@@ -9135,6 +9615,8 @@ Canonical: 汪洋 <ocean(dot)wy(at)alibaba-inc(dot)com>
 
 Canonical: 油屋 <yw987194828(at)gmail(dot)com>
 Alternate: ywgrit <yw987194828(at)gmail(dot)com>
+
+Canonical: 洪伊 <zouzou0208(at)gmail(dot)com>
 
 Canonical: 熊艳辉 <yanhui(dot)xiong(at)enmotech(dot)com>
 Alternate: yanhui.xiong <yanhui(dot)xiong(at)enmotech(dot)com>
@@ -9161,6 +9643,7 @@ Canonical: 程ゆき <yukiteipg(at)gmail(dot)com>
 
 Canonical: 章晨曦 <zhangchenxi(at)halodbtech(dot)com>
 Alternate: 章晨曦@易景科技 <zhangchenxi(at)halodbtech(dot)com>
+Alternate: Jet <zhangchenxi(at)halodbtech(dot)com>
 
 Canonical: 胡常齐 <huchangqi(at)loongson(dot)cn>
 Alternate: 胡常齐 <huchangqiqi(at)gmail(dot)com>
@@ -9174,13 +9657,13 @@ Canonical: 荒井元成 <n2029(at)ndensan(dot)co(dot)jp>
 
 Canonical: 謝東霖 <douenergy(at)gmail(dot)com>
 
-Canonical: 贾明伟 <wei19860922(at)163(dot)com>
-
 Canonical: 赵其桂 <zhaoqg45023(at)hundsun(dot)com>
 
 Canonical: 赵宇鹏 <zhaoyupeng(dot)zyp(at)alibaba-inc(dot)com>
 
 Canonical: 赵庭海 <zhaotinghai(dot)zth(at)alibaba-inc(dot)com>
+
+Canonical: 达劳里亚斯 <ihaveabigdoor(at)gmail(dot)com>
 
 Canonical: 近藤雄太 <kondo(at)sraoss(dot)co(dot)jp>
 
@@ -9196,6 +9679,8 @@ Canonical: 閬閬イふ <paaple(at)foxmail(dot)com>
 Canonical: 陈亚杰 <1441147871(at)qq(dot)com>
 
 Canonical: 陈佳昕 <buzhen(dot)cjx(at)alibaba-inc(dot)com>
+
+Canonical: 陈列行 <2320415112(at)qq(dot)com>
 
 Canonical: 陈宗志 <baotiao(at)gmail(dot)com>
 

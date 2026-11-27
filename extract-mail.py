@@ -2,8 +2,8 @@
 """
 Extract per-message sender metadata from PostgreSQL mailing list archives.
 
-Reads the archive's monthly mbox files, named LIST.YYYYMM (for example
-pgsql-hackers.202503), from anywhere under --mbox-dir, and for every year
+Reads the archive's monthly mbox files, named LIST.YYYYMM or LIST.YYYYMM.mbox
+(for example pgsql-hackers.202503), from anywhere under --mbox-dir, and for every year
 writes
 
     data/mail/LIST/YYYY.tsv   message_id  sent_at  from_name  from_address
@@ -221,8 +221,8 @@ def write_tsv(path, columns, rows):
 
 
 def find_mboxes(directory, mailing_list):
-    """Return {year: [(month, path)]} for LIST.YYYYMM files under directory."""
-    name = re.compile(re.escape(mailing_list) + r'\.(\d{4})(\d\d)$')
+    """Return {year: [(month, path)]} for LIST.YYYYMM[.mbox] files under directory."""
+    name = re.compile(re.escape(mailing_list) + r'\.(\d{4})(\d\d)(?:\.mbox)?$')
     found = collections.defaultdict(list)
     for root, _, files in os.walk(directory):
         for f in files:

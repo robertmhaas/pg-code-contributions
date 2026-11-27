@@ -101,12 +101,12 @@ def main():
 
     with open(path, encoding='utf-8') as f:
         header, stanzas = split_blocks(f.read())
-    for block in stanzas:
+    for block in stanzas:     # people already in the file; new ones get theirs below
         block += [f'Alternate: {v}' for v in added.get(canonical(block), [])]
     for value in created:
         key = sort_key(value)
         at = next((i for i, b in enumerate(stanzas) if sort_key(canonical(b)) > key), len(stanzas))
-        stanzas.insert(at, [f'Canonical: {value}'])
+        stanzas.insert(at, [f'Canonical: {value}'] + [f'Alternate: {v}' for v in added.get(value, [])])
     with open(path, 'w', encoding='utf-8') as f:
         f.write('\n\n'.join('\n'.join(b) for b in header + stanzas) + '\n')
 

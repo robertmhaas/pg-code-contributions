@@ -356,7 +356,8 @@ want written, from the mbox link on the archive's month pages, then run
 python3 extract-mail.py --mbox-dir DIR
 ```
 
-It finds `pgsql-hackers.YYYYMM` files anywhere under `DIR` and rewrites
+It finds `pgsql-hackers.YYYYMM` files (with or without `.mbox` on the end)
+anywhere under `DIR` and rewrites
 the file for each year it finds, rebuilt from that year's mbox files
 alone; `--years` limits which. Ten years take about 20 seconds.
 

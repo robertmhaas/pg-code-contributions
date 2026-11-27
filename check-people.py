@@ -137,7 +137,8 @@ def review(p, observations):
         if person.kind == 'none':
             continue
         keys[pid] = {n[1] for name, _ in person.identities for n in people.name_nodes(name) if n[0] == 'n'}
-        squashed[pid] = {re.sub(r'\W|\d|_', '', people.fold(name)) for name, _ in person.identities if name} - {''}
+        squashed[pid] = {re.sub(r'\W|\d|_', '', people.fold(name)) for name, _ in person.identities
+                         if people.name_key(name)} - {''}
         for k in keys[pid]:
             for t in k.split():
                 if len(t) >= 3:
