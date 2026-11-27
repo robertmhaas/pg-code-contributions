@@ -3168,3 +3168,6 @@ b8bf2880055	Amit Kapila	2026-11-26 11:17:01 +0530	136	Fix assorted issues in con
 91993c160de	Tomas Vondra	2026-11-26 14:05:50 +0100	7	Fix query ID reporting in parallel workers for GIN index builds
 b4548161b94	Heikki Linnakangas	2026-11-26 15:19:54 +0200	4	Prevent stack overflow in exprLocation()
 d5fb939db80	Daniel Gustafsson	2026-11-26 14:32:35 +0100	0	Remove incorrect comment on UpdateDeadTupleRetentionStatus
+496311a7e37	Tom Lane	2026-11-26 14:53:57 -0500	10	Don't try to cache the result of parseTypeString in pg_input_is_valid.
+3b60740cc25	Heikki Linnakangas	2026-11-26 22:38:22 +0200	58	Fix composite type dependency check for index expressions
+ad33a140c76	Heikki Linnakangas	2026-11-26 23:02:18 +0200	51	Don't report idle stats while starting a transaction

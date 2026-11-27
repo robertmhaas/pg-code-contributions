@@ -11946,3 +11946,16 @@ b4548161b94	Discussion	https://www.postgresql.org/message-id/CAN4CZFOJzyQ73OxeyR
 b4548161b94	Backpatch-through	15
 d5fb939db80	Author	vignesh C <vignesh21@gmail.com>
 d5fb939db80	Discussion	https://postgr.es/m/CALDaNm1H+LOA=90TpzTtc9GBh5A_Pfij0wU_N5S0tSy7_xdDWg@mail.gmail.com
+496311a7e37	Author	Xnerv Wang <xnervwang@gmail.com>
+496311a7e37	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+496311a7e37	Reviewed-by	Andreas Karlsson <andreas@proxel.se>
+496311a7e37	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+496311a7e37	Discussion	https://postgr.es/m/CAFEh72DTdqrHwe01V+Y2xdL=fj3LJwvyp6yYzTCCUWWdDP19UA@mail.gmail.com
+496311a7e37	Backpatch-through	16
+3b60740cc25	Author	Zhijie Hou <houzhijie22@gmail.com>
+3b60740cc25	Reviewed-by	Chao Li <li.evan.chao@gmail.com>
+3b60740cc25	Discussion	https://postgr.es/m/1ffe1c34-4518-4305-bb8c-9b162da6c453@gmail.com
+3b60740cc25	Backpatch-through	15
+ad33a140c76	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+ad33a140c76	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+ad33a140c76	Discussion	https://postgr.es/m/42b2c4f9-511e-4b5c-8edd-b474019ddf29@iki.fi

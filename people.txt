@@ -8545,6 +8545,8 @@ Canonical: Xint Code
 
 Canonical: XlabAI Team of Tencent Xuanwu Lab
 
+Canonical: Xnerv Wang <xnervwang(at)gmail(dot)com>
+
 Canonical: xu jian <jamesxu(at)outlook(dot)com>
 Alternate: xujian <jamesxu(at)outlook(dot)com>
 
