@@ -11959,3 +11959,18 @@ d5fb939db80	Discussion	https://postgr.es/m/CALDaNm1H+LOA=90TpzTtc9GBh5A_Pfij0wU_
 ad33a140c76	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
 ad33a140c76	Reviewed-by	Ayush Tiwari <ayushtiwari.slg01@gmail.com>
 ad33a140c76	Discussion	https://postgr.es/m/42b2c4f9-511e-4b5c-8edd-b474019ddf29@iki.fi
+e9526740926	Reviewed-by	Heikki Linnakangas <hlinnaka@iki.fi>
+e9526740926	Reviewed-by	Andreas Karlsson <andreas@proxel.se>
+e9526740926	Discussion	https://www.postgresql.org/message-id/flat/953bceb7-340d-4717-9682-0ebe65c4b57e@eisentraut.org
+e347dae2d40	Author	Anthony Hsu <erwaman@gmail.com>
+e347dae2d40	Reported-by	Anthony Hsu <erwaman@gmail.com>
+e347dae2d40	Reviewed-by	Dmytro Astapov <dastapov@gmail.com>
+e347dae2d40	Reviewed-by	Shihao Zhong <zhong950419@gmail.com>
+e347dae2d40	Reviewed-by	Andrey Borodin <x4mmm@yandex-team.ru>
+e347dae2d40	Reviewed-by	João Rito <joaovictor.rito@gmail.com>
+e347dae2d40	Reviewed-by	Xuneng Zhou <xunengzhou@gmail.com>
+e347dae2d40	Discussion	https://postgr.es/m/CALQc50gi-Kw9m1r6hytf12473-fCECy=q9JtKS4ANeJFEyCBTw@mail.gmail.com
+e347dae2d40	Backpatch-through	15
+20ad1c5b610	Discussion	https://postgr.es/m/3D6FDDEE-2E4D-4CBE-98EC-32689EC33B1A@yandex-team.ru
+d140a3a666a	Author	Tomas Vondra <tomas@vondra.me>
+d140a3a666a	Discussion	https://www.postgresql.org/message-id/flat/DKBEBF32QLUA.3L2DJRPUYNKHZ%40partin.io

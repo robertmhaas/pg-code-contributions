@@ -3171,3 +3171,8 @@ d5fb939db80	Daniel Gustafsson	2026-11-26 14:32:35 +0100	0	Remove incorrect comme
 496311a7e37	Tom Lane	2026-11-26 14:53:57 -0500	10	Don't try to cache the result of parseTypeString in pg_input_is_valid.
 3b60740cc25	Heikki Linnakangas	2026-11-26 22:38:22 +0200	58	Fix composite type dependency check for index expressions
 ad33a140c76	Heikki Linnakangas	2026-11-26 23:02:18 +0200	51	Don't report idle stats while starting a transaction
+e9526740926	Peter Eisentraut	2026-11-27 09:13:16 +0100	29	Let OpenSSL auto-select DH parameters by default
+e347dae2d40	Álvaro Herrera	2026-11-27 11:23:42 +0100	129	Arrange for signal to be resent in ResolveRecoveryConflictWithBufferPin
+20ad1c5b610	Álvaro Herrera	2026-11-27 14:00:56 +0100	5	Disable new test
+ca6c0383754	Heikki Linnakangas	2026-11-27 16:23:20 +0200	7	Remove unnecessary #include from tcopprot.h
+d140a3a666a	Tomas Vondra	2026-11-27 17:48:30 +0100	3	Avoid a spurious UBSan failure for empty parallel XID lists
