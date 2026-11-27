@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
-Load the people layer and report anything that looks wrong.
+Load people.txt and report anything that looks wrong.
 
-Reports pins that don't parse or name an identifier that never occurs,
-and identifiers pinned to two people.  For commits since 2011, where the
-tag fixes start, also reports person tags that list several people or
-name someone who can't be identified, credit keys that aren't one of
-people.PERSON_TAGS, and people named twice in one tag.  With --review, also lists pairs of people whose
-names are near-matches, such as "Masahiko Sawada" and "Masahiko Sawasa",
-for checking by hand; pin a pair to one person to merge them, or each to
-its own to stop the suggestion.
+Reports stanzas that don't parse, addresses listed for two people, and
+names and addresses in the data that people.txt doesn't have yet (run
+update-people.py).  For commits since 2011, where the tag fixes start,
+also reports person tags that list several people, name someone who
+can't be identified, or start with a gloss; credit keys that aren't one
+of people.PERSON_TAGS; and people named twice in one tag.
+
+With --review, also lists things to check by hand: pairs of people whose
+names are near-matches, such as "Masahiko Sawada" and "Masahiko Sawasa";
+names that several people have; people whose Canonical name isn't how
+they've been writing it lately; and lines matching nothing in the data.
+A Distinct line in either stanza keeps a pair off the first two lists.
 
 Exits with status 1 if there are problems.
 """
@@ -28,16 +32,8 @@ SINCE = 2011
 NOT_CREDITS = {'brown-paper-bagged-by'}
 
 
-def check_pins(p):
-    problems = list(p.problems)
-    for pin in p.pins:
-        if pin.node not in p.seen:
-            problems.append(f'{pin.where}: {pin.identifier!r} doesn\'t occur in the data')
-    return problems
-
-
 def check_tags(data, p):
-    """Person tag values that name someone who can't be identified."""
+    """Person tags since SINCE that don't identify one person cleanly."""
     bad = collections.defaultdict(list)
     for c in data.commits.values():
         if c.year < SINCE:
@@ -48,11 +44,15 @@ def check_tags(data, p):
                 pid, status = p.resolve_value(value)
                 if pid is None and status != 'nobody':
                     bad[status, value].append(c.hash)
+                elif value.lstrip().startswith(('(', '[')):
+                    bad['starts with a gloss', value].append(c.hash)
             elif (key.endswith('-by') or key.startswith(('author', 'co-author'))) \
                     and key not in NOT_CREDITS:
                 bad['not a canonical key', f'{tag}: {value}'].append(c.hash)
     problems = []
     for (status, text), hashes in sorted(bad.items(), key=lambda kv: (kv[0][0], -len(kv[1]))):
+        if status == 'unknown':
+            status = 'not in people.txt (run update-people.py)'
         more = f' and {len(hashes) - 3} more' if len(hashes) > 3 else ''
         problems.append(f'{status}: {text!r} in {", ".join(hashes[:3])}{more}')
     return problems
@@ -74,6 +74,19 @@ def check_duplicates(data, p):
             if len(texts) > 1:
                 problems.append(f'{c.hash}: {pid} is in {tag} {len(texts)} times: {texts}')
     return problems
+
+
+def check_observations(p, observations):
+    """Mail senders and git authors that people.txt doesn't have yet."""
+    missing = collections.Counter()
+    for when, source, name, address, ref in observations:
+        if source == 'tag':
+            continue        # check_tags reports those, by commit
+        pid, status = p.find(name, address)
+        if pid is None and status == 'unknown' and (address or people.name_key(name)):
+            missing[source] += 1
+    return [f'{n} {source} names and addresses not in people.txt (run update-people.py)'
+            for source, n in missing.items()]
 
 
 def distance(a, b):
@@ -101,15 +114,30 @@ def near(k1, k2, w1, w2):
     return min(len(a), len(b)) >= 4 and distance(a, b) <= (1 if min(len(a), len(b)) < 6 else 2)
 
 
-def review(p):
-    """[(person, person)] whose names are near-matches, least-used first."""
-    keys, squashed, uses, by_token = {}, {}, {}, collections.defaultdict(set)
+def review(p, observations):
+    uses = collections.Counter()
+    recent = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
+    seen_pairs, seen_bare = set(), set()
+    for when, source, name, address, ref in observations:
+        pid, _ = p.find(name, address)
+        nodes = people.name_nodes(name)
+        node = nodes[0] if nodes else None
+        if address:
+            seen_pairs.add((node, address))
+        elif node:
+            seen_bare.add(node)
+        if pid:
+            uses[pid] += 1
+            if source != 'tag' and people.name_key(name):
+                recent[pid][when.year][name] += 1
+
+    keys, squashed = {}, {}
+    by_token = collections.defaultdict(set)
     for pid, person in p.persons.items():
-        keys[pid] = {n[1] for n in person.nodes if n[0] == 'n'}
-        written = person.own_names + person.tag_names
-        squashed[pid] = {re.sub(r'\W|\d|_', '', people.fold(n)) for n in written if n}
-        squashed[pid].discard('')
-        uses[pid] = sum(written.values())
+        if person.kind == 'none':
+            continue
+        keys[pid] = {n[1] for name, _ in person.identities for n in people.name_nodes(name) if n[0] == 'n'}
+        squashed[pid] = {re.sub(r'\W|\d|_', '', people.fold(name)) for name, _ in person.identities if name} - {''}
         for k in keys[pid]:
             for t in k.split():
                 if len(t) >= 3:
@@ -121,35 +149,73 @@ def review(p):
         members = sorted(members)
         for i, a in enumerate(members):
             for b in members[i + 1:]:
-                if (a, b) in pairs or (p.persons[a].pinned and p.persons[b].pinned):
-                    continue
-                if any(near(k1, k2, squashed[a], squashed[b]) for k1 in keys[a] for k2 in keys[b]):
+                pa, pb = p.persons[a], p.persons[b]
+                if (a, b) not in pairs and not keys[a] & keys[b] and not pa.is_not(pb) \
+                        and not pb.is_not(pa) and any(
+                        near(k1, k2, squashed[a], squashed[b]) for k1 in keys[a] for k2 in keys[b]):
                     pairs.add((a, b))
-    return sorted(pairs, key=lambda ab: (min(uses[ab[0]], uses[ab[1]]), ab)), uses
+    out = [f'{len(pairs)} near-matches:']
+    out += [f'   {a!r} ({uses[a]})  ~  {b!r} ({uses[b]})'
+            for a, b in sorted(pairs, key=lambda ab: (min(uses[ab[0]], uses[ab[1]]), ab))]
+
+    def apart(ids):
+        return all(p.persons[a].is_not(p.persons[b]) or p.persons[b].is_not(p.persons[a])
+                   for i, a in enumerate(ids) for b in ids[i + 1:])
+    shared = [(node, sorted(ids)) for node, ids in p.by_name.items()
+              if node[0] == 'n' and len(ids) > 1 and any(p.persons[i].kind != 'none' for i in ids)
+              and not apart(sorted(ids))]
+    out.append(f'{len(shared)} names that several people have:')
+    out += [f'   {node[1]!r}: ' + ', '.join(f'{i!r} ({uses[i]})' for i in ids) for node, ids in sorted(shared)]
+
+    drift = []
+    for pid, years in recent.items():
+        person = p.persons[pid]
+        last = sorted(years)[-2:]
+        written = sum((years[y] for y in last), collections.Counter())
+        name, count = written.most_common(1)[0]
+        same = people.name_key(name) == people.name_key(person.name) or (
+            people.OTHER_LETTER.search(name) and not people.LATIN.search(name)
+            and people.LATIN.search(person.name))      # the Latin spelling is preferred
+        if not same and count >= 5 and count > sum(written.values()) / 2:
+            drift.append(f'   {pid!r} has written {name!r} {count} times in {"-".join(map(str, last))}')
+    out.append(f'{len(drift)} people writing their name differently from Canonical lately:')
+    out += sorted(drift)
+
+    stale = []
+    for pid, person in p.persons.items():
+        for name, address in person.identities[1:]:
+            nodes = people.name_nodes(name)
+            node = nodes[0] if nodes else None
+            if (address and (node, address) not in seen_pairs) or (not address and node not in seen_bare):
+                stale.append(f'   {person.where}: {pid!r}: {people.identity_text(name, address)!r}')
+    out.append(f'{len(stale)} Alternate lines that match nothing in the data:')
+    out += stale
+    return out
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.strip().split('\n')[0])
     parser.add_argument('--review', action='store_true',
-                        help='also list near-matching names to check by hand')
+                        help='also list things to check by hand')
     args = parser.parse_args()
     try:
         data = commitdata.load()
     except commitdata.LoadError as e:
         print(e, file=sys.stderr)
         sys.exit(1)
-    p = people.load(data=data)
+    p = people.load()
+    observations = list(people.observations(data=data))
 
-    problems = check_pins(p) + check_tags(data, p) + check_duplicates(data, p)
+    problems = (p.problems + check_observations(p, observations)
+                + check_tags(data, p) + check_duplicates(data, p))
     for problem in problems:
         print(problem, file=sys.stderr)
     if args.review:
-        pairs, uses = review(p)
-        print(f'{len(pairs)} near-matches:', file=sys.stderr)
-        for a, b in pairs:
-            print(f'   {a!r} ({uses[a]})  ~  {b!r} ({uses[b]})', file=sys.stderr)
-    print(f'{len(p.persons)} people, {len(p.pins)} pins, {len(problems)} problems',
-          file=sys.stderr)
+        for line in review(p, observations):
+            print(line, file=sys.stderr)
+    npeople = sum(1 for x in p.persons.values() if x.kind != 'none')
+    print(f'{npeople} people, {len(p.persons) - npeople} not people, '
+          f'{len(problems)} problems', file=sys.stderr)
     sys.exit(1 if problems else 0)
 
 

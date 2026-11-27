@@ -1640,7 +1640,7 @@ b64b857f50f	replace	Reviewed-by	Peter Eisentraut
 
 # "Reviewed-by" lists several people; one tag per person.
 709d003fbd9	replace	Reviewed-by	Álvaro Herrera
-709d003fbd9	replace	Reviewed-by	(older versions) Robert Haas
+709d003fbd9	replace	Reviewed-by	Robert Haas (older versions)
 
 # "Analyzed-by: Thomas Munro, Michael Paquier", one tag per person.
 736b84eede6	delete	Analyzed-by	Thomas Munro, Michael Paquier

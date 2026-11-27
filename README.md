@@ -9,7 +9,9 @@ files.
   fix the script and regenerate.
 - `overrides/` holds hand-written corrections. Lines starting with `#` are
   comments, used to explain the rows that follow.
-- Files use PostgreSQL's COPY text format: tab separated, backslash
+- `people.txt` is the exception: scripts add to it and people edit it,
+  so it's in neither. Scripts only ever add to it. See People.
+- Files under `data/` and `overrides/` use PostgreSQL's COPY text format: tab separated, backslash
   escapes, UTF-8, with a header row. Row order is meaningful, so the files
   aren't meant to be loaded into a database as they are.
 - Values are recorded as found, not cleaned up. Normalizing names and
@@ -360,82 +362,102 @@ alone; `--years` limits which. Ten years take about 20 seconds.
 
 ## People
 
-`people.py` maps the names and addresses in commit tags, git authors and
-mail senders to people. It computes the mapping when loaded; nothing is
-written under `data/`.
+`people.txt` lists the people named in commits and mail, a stanza each.
+`update-people.py` adds what new commits and mail bring; people edit it
+by hand to merge, split and rename. `people.py` reads it and maps the
+names and addresses in commit tags, git authors and mail senders to
+people.
 
-### How people are found
+### people.txt
 
-A person tag is one of the canonical credit keys (see Tag fixes), compared
-ignoring case and spacing; each names one person. The name and address
-in each, in git authors, and in mail senders are identifiers:
+```
+Canonical: Robert Haas <robertmhaas(at)gmail(dot)com>
+Alternate: Robert Hass <robertmhaas(at)gmail(dot)com>
+Alternate: Robert Haas <rhaas(at)postgresql(dot)org>
+```
 
-- An **address** is compared case-insensitively, with the archive's
-  `(at)` and `(dot)` undone.
-- A **name** is compared by a key that ignores case, accents, punctuation,
-  word order, and initials if two other words are left. So `Zhou, Zhiguo`
-  and `zhiguo zhou` match, as do `Álvaro Herrera` and `Alvaro Herrera`,
-  and `Andrey M. Borodin` and `Andrey Borodin`. Addresses, quotes, and
-  glosses or affiliations in trailing parentheses are removed first. A
-  name written in two scripts, like `Hou Zhijie 侯志杰` or
-  `王海洋 (Haiyang Wang)`, also counts as each script's part.
-- A **one-word name**, like `MauMau` or `Michael`, is too weak to link
-  anything, and identifies no one unless it's pinned (below). A pinned
-  one-word name links like a full name, so `MauMau <maumau307@...>` in
-  mail joins the person `MauMau` is pinned to.
+- `Canonical:` is how to show the person: a name, and an address if
+  they have one. It's also how other code refers to them, so it's unique.
+- `Alternate:` is another name and address the person has been seen
+  with, or a name or address on its own.
+- `Kind: none` marks something that isn't a person: a tool such as
+  `Coverity`, an AI tool such as `Claude`, the web forms' shared
+  address, a stray word. Their credits stay in the tags, and each use of
+  the data decides what to do with them; `authors()` skips them.
+  Organizations that report bugs, such as the `Anthropic OSS program`,
+  are people for this purpose.
+- `Distinct:` names someone else with a similar name who isn't this
+  person, so `check-people.py --review` stops suggesting them.
 
-A name and an address written together, in a mail `From` or a tag like
-`Jane Doe <jd@example.com>`, are the same person, and so is everything
-linked to either of them.
+Stanzas are separated by blank lines, and `#` lines are comments.
+Addresses are written as in `data/mail/`, or plainly.
 
-A value that still names several people, like `Jane Doe and John Roe`,
-identifies no one; the fix is to split it in the tag fixes. (When the
-only separators are commas and there's an address, it takes two full
-names to make a list, so `Wong, Yi Wen <yw@example.com>` is one person.)
+### Finding people
 
-A person's display name is how they write it themselves, as git author
-or in mail, or failing that how commit tags write it, preferring the
-Latin alphabet. The most used spelling wins; among spellings differing
-only in case or accents, one that isn't all upper or lower case, then
-one with accents. Someone known by no full name is shown by the one-word
-name they use, like `didier`, with their address added if someone else
-already has it, and failing that by their address.
+An address belongs to one person. A name usually does; when several
+people have it, it identifies none of them on its own. Names are compared
+by a key that ignores case, accents, punctuation, word order, and
+initials if two other words are left, so `Zhou, Zhiguo` and
+`zhiguo zhou` match, as do `Álvaro Herrera` and `Alvaro Herrera`, and
+`Andrey M. Borodin` and `Andrey Borodin`. Addresses, quotes, and glosses
+or affiliations in trailing parentheses are removed first, and a name
+written in two scripts, like `Hou Zhijie 侯志杰` or
+`王海洋 (Haiyang Wang)`, also counts as each script's part.
 
-### Overrides
+A name and address are looked up like this:
 
-`overrides/people.tsv` has two columns, `person` and `identifier`, with
-`#` comments like the other overrides. Each row says the identifier (a
-name or an address, written either way) belongs to the person. The
-`person` column is also the display name, and if it's a full name it's
-pinned too. So:
+- An address listed for someone is theirs, whatever the name.
+- Otherwise the name decides: a stanza listing it on its own first,
+  then one listing it with an address.
+- A one-word name, like `MauMau` or `Michael`, identifies someone only
+  where it's listed on its own. So a handle can be listed, but a bare
+  first name in a commit tag identifies no one unless a tag fix spells
+  it out; which Michael is meant depends on the commit.
 
-- Rows with the same person merge everything linked to their identifiers.
-  `Atsushi Torikoshi	torikoshia` joins the `torikoshia` mail account
-  to every `Atsushi Torikoshi` tag.
-- Links never join two different pinned people. An identifier that would
-  is ambiguous and identifies no one. Two people with the same name are
-  told apart by pinning their addresses to, say, `Jane Doe (Example)` and
-  `Jane Doe (Elsewhere)`; a bare `Jane Doe` tag is then ambiguous, and the
-  fix goes in the tag fixes.
-- Person `-` means the identifier identifies no one: tools such as
-  `Coverity`, AI tools such as `Claude`, or the web forms' shared address.
-  Their credits stay in the tags, and each use of the data decides what
-  to do with them; `authors()` skips them. Organizations that report
-  bugs, such as the `Anthropic OSS program`, are counted like people.
-- A row naming a person as themselves, `Jane Doe	Jane Doe`, keeps
-  them out of `check-people.py --review`'s near-matches.
+A person tag is one of the canonical credit keys (see Tag fixes), and
+names one person. A value that still names several, like
+`Jane Doe and John Roe`, identifies no one; the fix is to split it in
+the tag fixes. (When the only separators are commas and there's an
+address, it takes two full names to make a list, so
+`Wong, Yi Wen <yw@example.com>` is one person.)
 
-The mapping doesn't depend on where a value appears, so a name that means
-different people in different commits, like `Michael` or `Peter`, is fixed
-in the tag fixes, not here.
+### Updating
 
-`python3 check-people.py` reports rows that don't parse or whose
-identifier doesn't occur in the data, and identifiers pinned to two
-people. For commits since 2011 it also reports person tags that list
-several people or identify no one, credit keys that aren't canonical,
-and anyone named twice in one tag. With `--review` it also lists
-pairs of people whose names are near-matches, like `Masahiko Sawada` and
-`Masahiko Sawasa`, to merge or keep apart.
+`python3 update-people.py` reads every name and address in the data,
+oldest first, and adds only what's new:
+
+- a new name at a known address joins that address's person;
+- a new address joins the one person with that name, or else starts a
+  new person, even when several people already have the name;
+- a full name seen without an address starts a new person if no one has
+  it, or if several people do and none lists it on its own.
+
+It never merges, moves or removes anything, so a split made by hand
+stays split, and a merge is always a human decision. `--dry-run` shows
+what it would add. The `Extract commits` Action runs it after
+classifying, so new commits' credits are added daily; after loading new
+mail, run it by hand.
+
+`people.txt` was first written from the people layer that came before
+it, which found people on the fly; that code is in the git history.
+
+### Checking
+
+`python3 check-people.py` reports stanzas that don't parse, addresses
+listed for two people, and names and addresses in the data that
+`people.txt` doesn't have yet. For commits since 2011 it also reports
+person tags that list several people, identify no one, or start with a
+gloss; credit keys that aren't canonical; and anyone named twice in one
+tag.
+
+With `--review` it also lists things to check by hand:
+
+- pairs of people whose names are near-matches, like `Masahiko Sawada`
+  and `Masahiko Sawasa`: merge them, or add a `Distinct:` line;
+- names that several people have;
+- people whose `Canonical:` name isn't how they've been writing it
+  lately;
+- `Alternate:` lines that match nothing in the data.
 
 ### Using it
 
@@ -445,8 +467,11 @@ p = people.load()
 p.resolve_value('Jane Doe <jd@example.com> (test case)')
                         # (person id or None, status)
 p.resolve('Jane Doe', 'jd(at)example(dot)com')   # the same, from a name and address
-p.persons['Jane Doe']   # Person: id, pinned, nodes, own_names, tag_names
+p.persons[pid]          # Person: id, name, address, kind, identities
 p.authors(commit)       # [(value, person id, status)] for commit.authors,
                         # without those that identify no one, such as AI tools
 p.primary_author(commit)   # the first of those, credited with the lines
 ```
+
+A person id is the stanza's `Canonical:` value, so it changes if that's
+edited.

@@ -1,24 +1,26 @@
 """
-Map the names and addresses in commits and mail to people.
+The people named in commits and mail, as listed in people.txt.
 
     import people
     p = people.load()
     p.resolve_value('Jane Doe <jd@example.com>')   # (person id or None, status)
     p.resolve('Jane Doe', 'jd(at)example(dot)com')  # the same, from a name and address
-    p.persons['Jane Doe']                          # Person
+    p.persons[pid]                                 # Person
+    p.authors(commit), p.primary_author(commit)
 
-People are found by linking identifiers: an address, or a name reduced to a
-key.  A name and an address that appear together in a mail From or a tag
-value are the same person.  overrides/people.tsv pins identifiers to people
-by hand; see README.md.
+people.txt has a stanza per person: the name and address to show them by,
+and every other name and address they're known by.  An address belongs to
+one person; a name usually does.  update-people.py adds what new commits
+and mail bring, and people edit it by hand to merge, split or rename; see
+README.md.  This module only reads it.
 
 Each person tag is expected to name one person under a canonical key; tag
-fixes make them so.  This module only reads the name and address in a
-value.
+fixes make them so.
 """
 
 import collections
 import dataclasses
+import datetime
 import glob
 import os
 import re
@@ -26,9 +28,10 @@ import unicodedata
 
 import commitdata
 
-PEOPLE_COLUMNS = ['person', 'identifier']
 MAIL_COLUMNS = ['message_id', 'sent_at', 'from_name', 'from_address']
-NOBODY = '-'
+REGISTRY = 'people.txt'
+REGISTRY_KEYS = ('Canonical', 'Alternate', 'Kind', 'Distinct')
+KINDS = ('none',)
 
 # Letters NFKD doesn't take apart.
 FOLD = str.maketrans({'ø': 'o', 'ł': 'l', 'đ': 'd', 'ð': 'd', 'þ': 'th',
@@ -172,73 +175,106 @@ def looks_like_list(value):
         ADDRESS.search(value) or '<' in value)
 
 
-def identifier_node(identifier):
-    """The node an overrides identifier names: ('a', address) or ('n', key)."""
-    a = address_key(identifier) if ADDRESS.fullmatch(identifier.strip().strip('<>')) else None
-    if a:
-        return ('a', a)
-    nodes = name_nodes(clean_name(identifier))
-    return nodes[0] if nodes else None
+def obfuscate(address):
+    return address.replace('@', '(at)').replace('.', '(dot)')
+
+
+
+def parse_identity(value):
+    """(name, address) from "Name <address>", "Name" or "<address>"."""
+    m = re.fullmatch(r'(.*?)\s*<([^<>]*)>\s*', value)
+    if m:
+        return m.group(1).strip(), address_key(m.group(2))
+    return value.strip(), None
+
+
+def identity_text(name, address):
+    """The inverse of parse_identity, with the address written as in data/mail."""
+    return ' '.join(x for x in (name, f'<{obfuscate(address)}>' if address else '') if x)
 
 
 @dataclasses.dataclass
 class Person:
-    id: str                     # the display name, unique
-    pinned: bool                # named in overrides/people.tsv
-    nodes: set
-    own_names: collections.Counter  # as written by them: git author, mail
-    tag_names: collections.Counter  # as written in others' commit tags
+    id: str             # its Canonical value, as written; unique
+    name: str           # the name to show it by
+    address: str        # its canonical address, or None
+    kind: str           # 'person', or 'none' for what isn't one
+    identities: list    # [(name, address)], the Canonical first
+    where: str          # file:line of the stanza
+    distinct: list = dataclasses.field(default_factory=list)   # [(name, address)] of others it isn't
 
-
-@dataclasses.dataclass
-class Pin:
-    person: str
-    identifier: str
-    node: tuple
-    where: str
+    def is_not(self, other):
+        """Whether this stanza says it isn't the other person."""
+        names = {n for name, _ in other.identities for n in name_nodes(name)}
+        addresses = {a for _, a in other.identities if a}
+        return any((a in addresses) if a else bool(set(name_nodes(n)) & names)
+                   for n, a in self.distinct)
 
 
 class People:
     def __init__(self):
-        self.persons = {}       # id: Person
-        self.node_person = {}   # node: person id, or NOBODY
-        self.ambiguous = {}     # node: sorted person ids it would join
-        self.pins = []
-        self.problems = []      # found while loading; check-people.py reports them
-        self.seen = set()       # nodes that occur in the data
+        self.persons = {}                            # id: Person
+        self.by_address = {}                         # address: id
+        self.by_name = collections.defaultdict(set)  # name node: ids
+        self.by_bare_name = collections.defaultdict(set)   # ... in identities without an address
+        self.pairs = collections.defaultdict(set)    # id: {(name node, address)}
+        self.problems = []
 
-    def node_for(self, name, address):
-        """The address's node if there is one with an answer, else the name's."""
-        nodes = []
+    def add_person(self, person):
+        if person.id in self.persons:
+            self.problems.append(f'{person.where}: another person is {person.id!r}')
+            return
+        self.persons[person.id] = person
+        for name, address in person.identities:
+            self.index(person.id, name, address, person.where)
+
+    def index(self, pid, name, address, where=None):
+        nodes = name_nodes(name)
+        if address:
+            other = self.by_address.setdefault(address, pid)
+            if other != pid:
+                self.problems.append(f'{where}: {obfuscate(address)} belongs to {other!r} too')
+        for node in nodes:
+            self.by_name[node].add(pid)
+            if not address:
+                self.by_bare_name[node].add(pid)
+            self.pairs[pid].add((node, address))
+        if not nodes and address:
+            self.pairs[pid].add((None, address))
+
+    def answer(self, pid):
+        if self.persons[pid].kind == 'none':
+            return None, 'nobody'
+        return pid, 'ok'
+
+    def find(self, name, address=None):
+        """
+        (person id, None) for the stanza a name and address belong to,
+        whatever its Kind, or (None, status) as for resolve().
+        """
         a = address_key(address) if address else None
-        if a:
-            nodes.append(('a', a))
-        nodes += name_nodes(name)
+        if a in self.by_address:
+            return self.by_address[a], None
+        nodes = name_nodes(name)
         for node in nodes:
-            if node in self.node_person and self.node_person[node] != NOBODY:
-                return node
-        for node in nodes:
-            if node in self.node_person or node in self.ambiguous:
-                return node
-        return nodes[0] if nodes else None
+            # A one-word name counts only where it's listed on its own.
+            for index in (self.by_bare_name,) if node[0] == 's' else (self.by_bare_name, self.by_name):
+                ids = index.get(node)
+                if ids:
+                    return (next(iter(ids)), None) if len(ids) == 1 else (None, 'ambiguous')
+        return None, 'single name' if any(n[0] == 's' for n in nodes) else 'unknown'
 
     def resolve(self, name, address=None):
         """
         Return (person id, 'ok'), or (None, status) where status is
-        'nobody' (pinned to "-"), 'ambiguous' (would join two pinned
-        people), 'single name' (one word, not pinned) or 'unknown'.
+        'nobody' (Kind: none), 'ambiguous' (a name several people have),
+        'single name' (one word, not listed) or 'unknown'.  An address
+        decides if it's listed; otherwise the name does, a listing of the
+        name on its own winning over one with an address.  A one-word name,
+        such as a handle, counts only where it's listed on its own.
         """
-        node = self.node_for(name, address)
-        if node is None:
-            return None, 'unknown'
-        if node in self.ambiguous:
-            return None, 'ambiguous'
-        person = self.node_person.get(node)
-        if person == NOBODY:
-            return None, 'nobody'
-        if person:
-            return person, 'ok'
-        return None, 'single name' if node[0] == 's' else 'unknown'
+        pid, status = self.find(name, address)
+        return self.answer(pid) if pid else (None, status)
 
     def resolve_value(self, value):
         """
@@ -265,21 +301,51 @@ class People:
         return authors[0] if authors else None
 
 
-class _UnionFind:
-    def __init__(self):
-        self.parent = {}
+def read_stanzas(path):
+    """
+    Yield (line number, [(key, value)]) for each stanza in people.txt,
+    without comments.  Stanzas are separated by blank lines.
+    """
+    stanza, first = [], None
+    with open(path, encoding='utf-8') as f:
+        for n, line in enumerate(f, 1):
+            line = line.rstrip('\n')
+            if not line.strip():
+                if stanza:
+                    yield first, stanza
+                stanza, first = [], None
+            elif not line.startswith('#'):
+                key, colon, value = line.partition(':')
+                stanza.append((key.strip(), value.strip() if colon else None))
+                first = first or n
+    if stanza:
+        yield first, stanza
 
-    def find(self, x):
-        self.parent.setdefault(x, x)
-        while self.parent[x] != x:
-            self.parent[x] = self.parent[self.parent[x]]
-            x = self.parent[x]
-        return x
 
-    def union(self, a, b):
-        a, b = self.find(a), self.find(b)
-        if a != b:
-            self.parent[max(a, b)] = min(a, b)
+def load(root=commitdata.ROOT, path=None):
+    """Read people.txt, or the registry at path."""
+    people = People()
+    path = path or os.path.join(root, REGISTRY)
+    rel = os.path.relpath(path, root)
+    for n, stanza in read_stanzas(path):
+        where = f'{rel}:{n}'
+        canonical = [v for k, v in stanza if k == 'Canonical']
+        bad = [k for k, v in stanza if k not in REGISTRY_KEYS or v is None]
+        if bad:
+            people.problems.append(f'{where}: unknown line {bad[0]!r}')
+        if len(canonical) != 1:
+            people.problems.append(f'{where}: needs one Canonical line, has {len(canonical)}')
+            if not canonical:
+                continue
+        kinds = [v for k, v in stanza if k == 'Kind']
+        if any(v not in KINDS for v in kinds):
+            people.problems.append(f'{where}: unknown Kind {kinds}')
+        name, address = parse_identity(canonical[0])
+        identities = [(name, address)] + [parse_identity(v) for k, v in stanza if k == 'Alternate']
+        people.add_person(Person(canonical[0], name, address, 'none' if 'none' in kinds else 'person',
+                                 identities, where,
+                                 [parse_identity(v) for k, v in stanza if k == 'Distinct']))
+    return people
 
 
 def mail_rows(root):
@@ -287,213 +353,24 @@ def mail_rows(root):
         yield from commitdata.read_tsv(path, MAIL_COLUMNS, root)
 
 
-def load(root=commitdata.ROOT, data=None):
-    """Build People from data/ and overrides/people.tsv."""
+
+
+def observations(root=commitdata.ROOT, data=None):
+    """
+    Yield (when, source, name, address, ref) for every person named in the
+    data: each git author, each person tag value since tag fixes (lists
+    left out), and each mail sender.  when is UTC; source is 'git', 'tag'
+    or 'mail'; ref is the commit or Message-ID.  Names are cleaned up as
+    by clean_name.
+    """
     data = data or commitdata.load(root)
-    people = People()
-    own_names = collections.defaultdict(collections.Counter)   # node: written names
-    tag_names = collections.defaultdict(collections.Counter)
-    edges = set()
-    single_edges = set()    # one-word names and their addresses; used if pinned
-    nodes = set()
-    seen = set()
-
-    def see(name, address, counter):
-        a = address_key(address) if address else None
-        named = name_nodes(name)
-        seen.update(named)
-        linked = [n for n in named if n[0] == 'n']
-        single = [n for n in named if n[0] == 's']
-        if linked:
-            counter[linked[0]][name] += 1
-        elif single:
-            # Kept for the display name of someone known by no full name.
-            counter[('a', a) if a else single[0]][name] += 1
-            if a:
-                single_edges.add((single[0], ('a', a)))
-        if a:
-            linked.append(('a', a))
-        nodes.update(linked)
-        for x, y in zip(linked, linked[1:]):
-            edges.add((x, y))
-
     for c in data.commits.values():
-        see(clean_name(c.git_author), None, own_names)
+        when = c.committed_at.astimezone(datetime.timezone.utc)
+        yield when, 'git', clean_name(c.git_author), None, c.hash
         for tag, value in c.tags:
             if is_person_tag(tag) and not looks_like_list(value):
-                see(*parse_value(value), tag_names)
-    for _, (_, _, from_name, from_address) in mail_rows(root):
-        see(clean_name(from_name), from_address, own_names)
-
-    # Pins.  The person column is a name too, and is pinned along with
-    # the identifier; if two people's names share a key, that name is
-    # ambiguous, as it would be in the data.
-    pinned = collections.defaultdict(set)
-    explicit = collections.defaultdict(set)
-    path = os.path.join(root, 'overrides', 'people.tsv')
-    if os.path.exists(path):
-        for where, (person, identifier) in commitdata.read_tsv(
-                path, PEOPLE_COLUMNS, root, comments=True):
-            node = identifier_node(identifier)
-            if node is None:
-                people.problems.append(f'{where}: no name or address in {identifier!r}')
-                continue
-            people.pins.append(Pin(person, identifier, node, where))
-            explicit[node].add(person)
-            pinned[node].add(person)
-            if person != NOBODY:
-                label = identifier_node(person)
-                if label and label[0] == 'n':   # a one-word name pins nothing
-                    pinned[label].add(person)
-    people.seen = nodes | seen
-    for node, persons in explicit.items():
-        if len(persons) > 1:
-            people.problems.append(
-                f'{node[1]!r} is pinned to more than one person: {sorted(persons)}')
-
-    nobody = {n for n, ps in pinned.items() if NOBODY in ps}
-    ambiguous = {n for n, ps in pinned.items() if len(ps) > 1 and n not in nobody}
-    label_of = {n: next(iter(ps)) for n, ps in pinned.items()
-                if len(ps) == 1 and n not in nobody}
-    for n in ambiguous:
-        people.ambiguous[n] = sorted(pinned[n])
-    for n in nobody:
-        people.node_person[n] = NOBODY
-    nodes |= set(label_of)
-    # A one-word name that's pinned is as good as a full name, so it links
-    # the addresses it's sent from: "MauMau <maumau307@...>".
-    edges |= {e for e in single_edges if e[0] in label_of}
-
-    blocked = nobody | ambiguous
-    adjacency = collections.defaultdict(set)
-    uf = _UnionFind()
-    for n in nodes - blocked:
-        uf.find(n)
-    for a, b in edges:
-        if a not in blocked and b not in blocked:
-            adjacency[a].add(b)
-            adjacency[b].add(a)
-            uf.union(a, b)
-    first = {}
-    for n, label in label_of.items():
-        if label in first:
-            uf.union(first[label], n)
-        else:
-            first[label] = n
-
-    components = collections.defaultdict(set)
-    for n in nodes - blocked:
-        components[uf.find(n)].add(n)
-
-    groups = []                 # (label or None, nodes)
-    for members in components.values():
-        labels = {label_of[n] for n in members if n in label_of}
-        if len(labels) <= 1:
-            groups.append((next(iter(labels), None), members))
-            continue
-        # The component would join people pinned apart.  Each unpinned
-        # identifier goes to the person whose pinned identifiers reach it
-        # without passing through another person's; if more than one
-        # reaches it, it's ambiguous.
-        reached = collections.defaultdict(set)
-        for label in labels:
-            seen = {n for n in members if label_of.get(n) == label}
-            todo = list(seen)
-            while todo:
-                for m in adjacency[todo.pop()]:
-                    if m not in seen and m not in label_of:
-                        seen.add(m)
-                        todo.append(m)
-            for n in seen:
-                reached[n].add(label)
-        for label in labels:
-            groups.append((label, {n for n in members
-                                   if label_of.get(n) == label
-                                   or (n not in label_of and reached[n] == {label})}))
-        for n in members:
-            if n not in label_of and len(reached[n]) > 1:
-                people.ambiguous[n] = sorted(reached[n])
-
-    taken = {}
-    groups.sort(key=lambda g: g[0] is None)     # pinned people keep their names
-    for label, members in groups:
-        person_own = sum((own_names[n] for n in members), collections.Counter())
-        person_tags = sum((tag_names[n] for n in members), collections.Counter())
-        if label:
-            pid = label
-        else:
-            addresses = sorted(obfuscate(n[1]) for n in members if n[0] == 'a')
-            full = display_name(person_own, person_tags)
-            pid = full or one_word_name(person_own, person_tags) or (addresses or sorted(
-                n[1] for n in members))[0]
-            if pid in taken:
-                if full:
-                    people.problems.append(f'two people would be called {pid!r}')
-                pid = f'{pid} <{addresses[0]}>' if addresses else f'{pid} (2)'
-        taken[pid] = True
-        person = people.persons.get(pid)
-        if person is None:
-            person = people.persons[pid] = Person(
-                pid, bool(label), set(), collections.Counter(), collections.Counter())
-        person.nodes |= members
-        person.own_names += person_own
-        person.tag_names += person_tags
-        for n in members:
-            people.node_person[n] = pid
-    return people
-
-
-def obfuscate(address):
-    return address.replace('@', '(at)').replace('.', '(dot)')
-
-
-def one_word_name(own_names, tag_names):
-    """
-    For someone known by no full name, the one-word name they use most,
-    such as "didier" or "BharatDB", or failing that the one commits use.
-    """
-    for counter in (own_names, tag_names):
-        words = collections.Counter({n: c for n, c in counter.items()
-                                     if n and single_key(n) and not ADDRESS.search(n)})
-        if words:
-            return max(words, key=lambda n: (words[n], n != n.lower(), n))
-    return None
-
-
-def display_name(own_names, tag_names):
-    """
-    Choose how to write an unpinned person's name: as they write it
-    themselves, as git author or in mail, or failing that as commit tags
-    do, preferring the Latin alphabet either way.  A name in two scripts
-    counts as its Latin part.  The most used spelling wins; among those
-    differing only in accents or case, one that isn't all upper or lower
-    case (taken from commits if need be), then one with accents.
-    """
-    def latin(n):
-        parts = script_parts(n)
-        return parts[0] if parts and name_key(parts[0]) else n
-
-    pools = []
-    for counter in (own_names, tag_names):
-        counter = collections.Counter({latin(n): c for n, c in counter.items() if name_key(n)})
-        pools.append(collections.Counter({n: c for n, c in counter.items()
-                                          if not OTHER_LETTER.search(n)}))
-        pools.append(counter)
-    pools = [pools[0], pools[2], pools[1], pools[3]]
-    for counter in pools:
-        if not counter:
-            continue
-        ordered = collections.defaultdict(collections.Counter)
-        for n, count in counter.items():
-            ordered[' '.join(re.findall(r'\w+', fold(n)))][n] += count
-        spelling = max(ordered.items(), key=lambda kv: (sum(kv[1].values()), kv[0]))[0]
-
-        def variants(c):
-            return collections.Counter({latin(n): k for n, k in c.items()
-                                        if ' '.join(re.findall(r'\w+', fold(latin(n)))) == spelling})
-        found = variants(counter)
-        if all(n in (n.lower(), n.upper()) for n in found):
-            found += variants(tag_names)     # borrow capitals from commits
-        return max(found, key=lambda n: (n != n.lower() and n != n.upper(), not n.isascii(),
-                                         found[n], n))
-    return None
+                name, address = parse_value(value)
+                yield when, 'tag', name, address_key(address) if address else None, c.hash
+    for _, (message_id, sent_at, name, address) in mail_rows(root):
+        when = datetime.datetime.strptime(sent_at, '%Y-%m-%d %H:%M:%S %z').astimezone(datetime.timezone.utc)
+        yield when, 'mail', clean_name(name), address_key(address), message_id

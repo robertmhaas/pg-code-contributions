@@ -40,11 +40,14 @@ jobs:
       - name: Classify
         run: python3 classify-commits.py --repo ../postgres
 
+      - name: Update people
+        run: python3 update-people.py
+
       # Pushes made with GITHUB_TOKEN don't trigger workflows, so this
       # can't loop.
       - name: Commit and push
         run: |
-          git add -A data
+          git add -A data people.txt
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'Commit Extractor'
           git config user.email 'contributions@rhaas.dev'

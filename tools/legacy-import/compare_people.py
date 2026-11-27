@@ -42,7 +42,7 @@ def dump_tables(path):
 
 
 data = commitdata.load(ROOT)
-p = people.load(ROOT, data)
+p = people.load(ROOT)
 tables = dump_tables(DUMP)
 
 
