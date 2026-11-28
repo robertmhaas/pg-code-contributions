@@ -374,7 +374,7 @@ def load(root=commitdata.ROOT, path=None):
 
 
 def mail_rows(root):
-    for path in sorted(glob.glob(os.path.join(root, 'data', 'mail', '*', '*.tsv'))):
+    for path in sorted(glob.glob(os.path.join(root, 'data', 'mail', '*', '[0-9]' * 4 + '.tsv'))):
         yield from commitdata.read_tsv(path, MAIL_COLUMNS, root)
 
 

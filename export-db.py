@@ -229,7 +229,7 @@ def main():
                     yield c.hash, position, tag, key, None, value, None, None
 
     def email_rows():
-        for path in sorted(glob.glob(os.path.join(root, 'data', 'mail', '*', '*.tsv'))):
+        for path in sorted(glob.glob(os.path.join(root, 'data', 'mail', '*', '[0-9]' * 4 + '.tsv'))):
             mailing_list = os.path.basename(os.path.dirname(path))
             year = int(os.path.basename(path)[:4])
             for _, (message_id, sent_at, name, address) in commitdata.read_tsv(
