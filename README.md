@@ -50,8 +50,7 @@ part of a patch has to list themselves. Only a commit with neither tag is
 credited to its git author.
 
 The **first author listed is the primary author**, and is credited with
-all of the commit's lines. The other authors get credit for authorship
-but no lines.
+all of the commit's lines.
 
 Other people are credited by role, with no lines: `Reviewed-by`,
 `Reported-by`, `Tested-by`, `Suggested-by` and `Diagnosed-by`.
