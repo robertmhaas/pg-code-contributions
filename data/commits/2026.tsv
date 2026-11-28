@@ -3179,3 +3179,5 @@ d140a3a666a	Tomas Vondra	2026-11-27 17:48:30 +0100	3	Avoid a spurious UBSan fail
 b59ec01d944	Heikki Linnakangas	2026-11-27 22:30:10 +0200	2	Reset SIGCHLD in standalone backends too
 3ee29a60253	Tom Lane	2026-11-27 20:01:20 -0500	83	Fix overflow problems in btree_gist's gbt_numeric_penalty().
 cf9d92d1f75	Tom Lane	2026-11-27 20:14:27 -0500	24	Introduce get_numeric_infinity() and get_numeric_nan().
+7622c7db525	Michael Paquier	2026-11-28 15:54:42 +0900	9	libpq: Do not leave residue in result of passwordFromFile()
+e87b024bfb8	Michael Paquier	2026-11-28 16:48:44 +0900	11	pg_receivewal: Skip LZ4-compressed segments with incomplete frames

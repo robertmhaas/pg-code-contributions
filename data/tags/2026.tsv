@@ -11980,3 +11980,9 @@ b59ec01d944	Discussion	https://www.postgresql.org/message-id/CAN4CZFOHfK1dpJijJw
 3ee29a60253	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
 3ee29a60253	Discussion	https://postgr.es/m/CAON2xHN4hdndi-b3H=X-wRyRVbLzcC2ABMxFoQLnuBa72zqZRg@mail.gmail.com
 3ee29a60253	Backpatch-through	15
+7622c7db525	Reported-by	Denis Smirnov <darthunix@gmail.com>
+7622c7db525	Author	Diego <mrstephenamell@gmail.com>
+7622c7db525	Discussion	https://postgr.es/m/6b0862c1.b637b9d2.21af8a.37cc@mx.google.com
+e87b024bfb8	Author	Raja Sai Pranav <rajasaipranav0@gmail.com>
+e87b024bfb8	Discussion	https://postgr.es/m/19890-293babc93c520dc8@postgresql.org
+e87b024bfb8	Backpatch-through	15
