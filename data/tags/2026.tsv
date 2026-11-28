@@ -11974,3 +11974,9 @@ e347dae2d40	Backpatch-through	15
 20ad1c5b610	Discussion	https://postgr.es/m/3D6FDDEE-2E4D-4CBE-98EC-32689EC33B1A@yandex-team.ru
 d140a3a666a	Author	Tomas Vondra <tomas@vondra.me>
 d140a3a666a	Discussion	https://www.postgresql.org/message-id/flat/DKBEBF32QLUA.3L2DJRPUYNKHZ%40partin.io
+b59ec01d944	Author	Zsolt Parragi <zsolt.parragi@percona.com>
+b59ec01d944	Discussion	https://www.postgresql.org/message-id/CAN4CZFOHfK1dpJijJwH4j8yMEHS5xier=9UAhB2BU_vWZ9x3qQ@mail.gmail.com
+3ee29a60253	Author	Ewan Young <kdbase.hack@gmail.com>
+3ee29a60253	Reviewed-by	Tom Lane <tgl@sss.pgh.pa.us>
+3ee29a60253	Discussion	https://postgr.es/m/CAON2xHN4hdndi-b3H=X-wRyRVbLzcC2ABMxFoQLnuBa72zqZRg@mail.gmail.com
+3ee29a60253	Backpatch-through	15

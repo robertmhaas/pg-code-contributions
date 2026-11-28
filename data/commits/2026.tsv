@@ -3176,3 +3176,6 @@ e347dae2d40	Álvaro Herrera	2026-11-27 11:23:42 +0100	129	Arrange for signal to 
 20ad1c5b610	Álvaro Herrera	2026-11-27 14:00:56 +0100	5	Disable new test
 ca6c0383754	Heikki Linnakangas	2026-11-27 16:23:20 +0200	7	Remove unnecessary #include from tcopprot.h
 d140a3a666a	Tomas Vondra	2026-11-27 17:48:30 +0100	3	Avoid a spurious UBSan failure for empty parallel XID lists
+b59ec01d944	Heikki Linnakangas	2026-11-27 22:30:10 +0200	2	Reset SIGCHLD in standalone backends too
+3ee29a60253	Tom Lane	2026-11-27 20:01:20 -0500	83	Fix overflow problems in btree_gist's gbt_numeric_penalty().
+cf9d92d1f75	Tom Lane	2026-11-27 20:14:27 -0500	24	Introduce get_numeric_infinity() and get_numeric_nan().
