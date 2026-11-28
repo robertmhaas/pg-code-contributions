@@ -317,6 +317,11 @@ from the list archive's monthly mbox files.
 | `from_name`    | the display name in `From`, decoded; empty if there's none |
 | `from_address` | the address in `From`                                      |
 
+`data/mail/pgsql-hackers/months.tsv`, one `month` column, `YYYY-MM`: the
+months whose mbox files the year files were built from, so a year that's
+missing months, such as the current one, can be told apart from a quiet
+one.
+
 ### Rules
 
 **Messages.** The archive starts each message with a `From ` line whose
@@ -359,7 +364,9 @@ python3 extract-mail.py --mbox-dir DIR
 It finds `pgsql-hackers.YYYYMM` files (with or without `.mbox` on the end)
 anywhere under `DIR` and rewrites
 the file for each year it finds, rebuilt from that year's mbox files
-alone; `--years` limits which. Ten years take about 20 seconds.
+alone; `--years` limits which. It replaces those years' months in
+`months.tsv` with the months it found, and keeps the other years'. Ten
+years take about 20 seconds.
 
 ## People
 
@@ -519,3 +526,33 @@ Views:
 SELECT "#", author, lines, pct_lines, cum_pct_lines, commits
   FROM top_authors WHERE year = 2025 ORDER BY "#" LIMIT 30;
 ```
+
+`export-json.py` writes the same yearly figures as JSON, every row of
+them, for a page or a script to show:
+
+```sh
+python3 export-json.py -o contributions.json
+```
+
+```
+{"generated": ..., "latest_commit": {"hash": ..., "committed_at": ...},
+ "mail": {"pgsql-hackers": {"months": ["2016-01", ...]}},
+ "years": {"2025": {
+   "commits": {"count", "first", "last", "complete",
+               "authors": [{"person", "name", "lines", "commits", "committer"}],
+               "for_others": [{"person", "name", "lines", "commits"}]},
+   "mail": {"pgsql-hackers": {"count", "months", "complete",
+                              "senders": [{"person", "name", "messages"}]}}}}}
+```
+
+- `authors` is `top_authors`, `for_others` is `top_opp_committers`, and
+  `senders` is `top_senders`, without the percentages, which are left
+  to whatever shows them. `committer` is false where `top_authors` shows
+  `[*]`.
+- `person` is the person id, or null for `(no one)` and
+  `(unidentified)`. Since it's a `Canonical:` value, it includes the
+  person's address if they have one.
+- `complete` says whether the year is over: for commits, whether there
+  are commits from a later year; for mail, whether all twelve months
+  were read. A mail `count` leaves out messages from what isn't a
+  person, as `senders` does.

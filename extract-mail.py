@@ -8,7 +8,8 @@ writes
 
     data/mail/LIST/YYYY.tsv   message_id  sent_at  from_name  from_address
 
-in PostgreSQL COPY text format.  See README.md for the rules.
+in PostgreSQL COPY text format, and records the months it read in
+data/mail/LIST/months.tsv.  See README.md for the rules.
 
 A year's file is rebuilt from all of that year's mbox files found, so give
 it every month of the years you want written.
@@ -27,6 +28,7 @@ import re
 import sys
 
 COLUMNS = ['message_id', 'sent_at', 'from_name', 'from_address']
+MONTH_COLUMNS = ['month']
 
 # The archive starts every message with a "From " line whose envelope sender
 # is a list's owner address: pgsql-hackers-owner+archive@lists.postgresql.org
@@ -237,6 +239,17 @@ def find_mboxes(directory, mailing_list):
     return found
 
 
+def read_months(path):
+    """Return the YYYY-MM values in an existing months.tsv, or []."""
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding='utf-8') as f:
+        lines = f.read().splitlines()
+    if not lines or lines[0].split('\t') != MONTH_COLUMNS:
+        sys.exit(f'{path}: expected a header row {MONTH_COLUMNS}')
+    return lines[1:]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.strip().split('\n')[0])
     parser.add_argument('--mbox-dir', required=True,
@@ -257,6 +270,10 @@ def main():
     with concurrent.futures.ProcessPoolExecutor(os.cpu_count()) as pool:
         parsed = dict(zip(paths, pool.map(parse_mbox, paths)))
 
+    months_path = os.path.join(args.data, 'mail', args.list, 'months.tsv')
+    loaded = [m for m in read_months(months_path) if int(m[:4]) not in years]
+    for year in years:
+        loaded += [f'{year}-{m:02d}' for m, _ in found[year]]
     for year in years:
         rows = []
         stats = collections.Counter()
@@ -280,6 +297,7 @@ def main():
                         if k != 'messages')
               + (f'; no file for months {missing}' if missing else ''),
               file=sys.stderr)
+    write_tsv(months_path, MONTH_COLUMNS, [[m] for m in sorted(loaded)])
 
 
 if __name__ == '__main__':
