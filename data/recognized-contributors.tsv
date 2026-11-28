@@ -1,0 +1,297 @@
+section	username	name	address
+Core Team	petere	Peter Eisentraut	peter.eisentraut at enterprisedb.com
+Core Team	andresfreund	Andres Freund	andres at anarazel.de
+Core Team	mha	Magnus Hagander	magnus at hagander.net
+Core Team	jkatz05	Jonathan Katz	jonathan.katz at excoventures.com
+Core Team	tgl	Tom Lane	tgl at sss.pgh.pa.us
+Core Team	bmomjian	Bruce Momjian	bruce at momjian.us
+Core Team	dpage	Dave Page	dpage at pgadmin.org
+Major Contributors	laurenz	Laurenz Albe	laurenz.albe at cybertec.at
+Major Contributors	ashutoshbapat	Ashutosh Bapat	ashutosh.bapat.oss at gmail.com
+Major Contributors	oleg	Oleg Bartunov	obartunov at gmail.com
+Major Contributors	myon	Christoph Berg	myon at debian.org
+Major Contributors	x4m	Andrey Borodin	x4mmm at yandex-team.ru
+Major Contributors	bossartn	Nathan Bossart	nathandbossart at gmail.com
+Major Contributors	jchampion	Jacob Champion	champion.p at gmail.com
+Major Contributors	jconway	Joe Conway	mail at joeconway.com
+Major Contributors	dcramer	Dave Cramer	davec at postgresintl.com
+Major Contributors	jdavis	Jeff Davis	pgsql at j-davis.com
+Major Contributors	bertranddrouvot.pg	Bertrand Drouvot	bertranddrouvot.pg at gmail.com
+Major Contributors	adunstan	Andrew Dunstan	andrew at dunslane.net
+Major Contributors	xocolatl	Vik Fearing	
+Major Contributors	jeltef	Jelte Fennema-Nio	postgres at jeltef.nl
+Major Contributors	efujita	Etsuro Fujita	etsuro.fujita at gmail.com
+Major Contributors	pgeoghegan	Peter Geoghegan	pg at bowt.ie
+Major Contributors	devrimgunduz	Devrim Gündüz	devrim at gunduz.org
+Major Contributors	richardguo	Richard Guo	guofenglinux at gmail.com
+Major Contributors	d_gustafsson	Daniel Gustafsson	daniel at yesql.se
+Major Contributors	shaysler	Stacey Haysler	shayslerpgx at gmail.com
+Major Contributors	alvherre	Álvaro Herrera	alvherre at kurilemu.de
+Major Contributors	horiguti	Kyotaro Horiguchi	horikyota_ntt at gmail.com
+Major Contributors	houzj	Zhijie Hou	houzhijie22 at gmail.com
+Major Contributors	ishii	Tatsuo Ishii	ishii at postgresql.org
+Major Contributors	pjmodos	Petr Jelinek	petr.jelinek at enterprisedb.com
+Major Contributors	mastermind	Stefan Kaltenbrunner	stefan at kaltenbrunner.cc
+Major Contributors	amitkapila	Amit Kapila	amit.kapila16 at gmail.com
+Major Contributors	smagen	Alexander Korotkov	aekorotkov at gmail.com
+Major Contributors	law	Alexander Lakhin	exclusion at gmail.com
+Major Contributors	amitlan	Amit Langote	amitlangote09 at gmail.com
+Major Contributors	gleu	Guillaume Lelarge	guillaume at lelarge.info
+Major Contributors	heikki	Heikki Linnakangas	heikki.linnakangas at iki.fi
+Major Contributors	lubennikovaav	Anastasia Lubennikova	lubennikovaav at gmail.com
+Major Contributors	masaofujii	Fujii Masao	masao.fujii at gmail.com
+Major Contributors	nmisch	Noah Misch	noah at leadboat.com
+Major Contributors	macdice	Thomas Munro	thomas.munro at gmail.com
+Major Contributors	john.naylor	John Naylor	john.naylor at postgresql.org
+Major Contributors	michael-kun	Michael Paquier	michael at paquier.xyz
+Major Contributors	melanieplageman	Melanie Plageman	
+Major Contributors	pramsey	Paul Ramsey	pramsey at cleverelephant.ca
+Major Contributors	deanr	Dean Rasheed	dean.a.rasheed at gmail.com
+Major Contributors	rjuju	Julien Rouhaud	rjuju123 at gmail.com
+Major Contributors	davidrowley	David Rowley	dgrowleyml at gmail.com
+Major Contributors	greg	Greg Sabino Mullane	greg at turnstep.com
+Major Contributors	masahikosawada	Masahiko Sawada	sawada.mshk at gmail.com
+Major Contributors	ads	Andreas 'ads' Scherbaum	ads at pgug.de
+Major Contributors	sigaev	Teodor Sigaev	teodor at sigaev.ru
+Major Contributors	ssinger	Steve Singer	steve at ssinger.info
+Major Contributors	dsteele	David Steele	david at pgbackrest.org
+Major Contributors	okbobcz	Pavel Stehule	pavel.stehule at gmail.com
+Major Contributors	xzilla	Robert Treat	rob at xzilla.net
+Major Contributors	fuzzycz	Tomas Vondra	tomas at vondra.me
+Major Contributors	markwkm	Mark Wong	markwkm at gmail.com
+Significant Contributors	jubilee	Jubilee .	workingjubilee at gmail.com
+Significant Contributors	ants	Ants Aasma	ants.aasma at cybertec.at
+Significant Contributors	ashwinstar	Ashwin Agrawal	ashwinstar at gmail.com
+Significant Contributors	a.alekseev	Aleksander Alekseev	aleksander at tigerdata.com
+Significant Contributors	vyruss	Jimmy Angelakos	vyruss at hellug.gr
+Significant Contributors	arkhena	Lætitia AVROT	laetitia.avrot at gmail.com
+Significant Contributors	rajnib	Rajni Baliyan	saan654 at gmail.com
+Significant Contributors	mbanck	Michael Banck	mbanck at gmx.net
+Significant Contributors	gbartolini	Gabriele Bartolini	gabriele.bartolini at enterprisedb.com
+Significant Contributors	barwick	Ian Barwick	barwick at gmail.com
+Significant Contributors	cyberteccob	Cornelia Biacsics	cbiacsics at microsoft.com
+Significant Contributors	dennis	Dennis Björklund	
+Significant Contributors	bonnefoa	Anthonin Bonnefoy	anthonin.bonnefoy at gmail.com
+Significant Contributors	brsa	Erwin Brandstetter	brsaweda at gmail.com
+Significant Contributors	mbrewer	Michael Brewer	mbrewer at gmail.com
+Significant Contributors	hughcapet	Polina Bungina	bungina at gmail.com
+Significant Contributors	vignesh.postgres	Vigneshwaran C	vignesh21 at gmail.com
+Significant Contributors	jcasanov	Jaime Casanova	jcasanov at systemguards.com.ec
+Significant Contributors	leonardoce	Leonardo Cecchi	leonardo.cecchi at enterprisedb.com
+Significant Contributors	jeevan.chalke	Jeevan Chalke	
+Significant Contributors	ajinc	Ajin Cherian	ajin.cherian at fujitsu.com
+Significant Contributors	michristofides	Michael Christofides	michael at pgmustard.com
+Significant Contributors	daamien	Damien Clochard	damien at dalibo.info
+Significant Contributors	calvin	Fabien Coelho	coelho at cri.ensmp.fr
+Significant Contributors	jcole1989	James Coleman	
+Significant Contributors	sarahc	Sarah Conway	talktomeabouttech at gmail.com
+Significant Contributors	mattcornillon	Matt Cornillon	cornillon at google.com
+Significant Contributors	darold	Gilles Darold	gilles at darold.net
+Significant Contributors	pavan	Pavan Deolasee	pavan.deolasee at enterprisedb.com
+Significant Contributors	mark.dilger	Mark Dilger	
+Significant Contributors	erthalion	Dmitry Dolgov	
+Significant Contributors	henr33	Henrietta Dombrovskaya	henr33 at gmail.com
+Significant Contributors	floord	Floor Drees	floordrees at gmail.com
+Significant Contributors	intrbiz	Chris Ellis	chris at intrbiz.com
+Significant Contributors	andy2	Andy Fan	zhihuifan1213 at 163.com
+Significant Contributors	stefan.fercot	Stefan Fercot	pgstef at fercot.be
+Significant Contributors	lfittl	Lukas Fittl	lukas at fittl.com
+Significant Contributors	chap	Chapman Flack	
+Significant Contributors	dim	Dimitri Fontaine	dim at tapoueh.org
+Significant Contributors	elizabethg	Elizabeth Garrett Christensen	elizabethannegarrett at gmail.com
+Significant Contributors	clairegiordano	Claire Giordano	claire.giordano at microsoft.com
+Significant Contributors	n.glukhov	Nikita Glukhov	n.gluhov at postgrespro.ru
+Significant Contributors	mic.goldberg	Michael Goldberg	mic.goldberg at gmail.com
+Significant Contributors	pasha_golub	Pavlo Golub	pavlo.golub at cybertec.at
+Significant Contributors	sxd	Jonathan Gonzalez V.	jonathan at abdiel.eu
+Significant Contributors	harukat	Takatsuka Haruka	harukat at sraoss.co.jp
+Significant Contributors	hasegeli	Emre Hasegeli	emre at hasegeli.com
+Significant Contributors	stayreal	Jian He	jian.universality at gmail.com
+Significant Contributors	psoo	Bernd Helmle	mailings at oopsware.de
+Significant Contributors	a.houska	Antonin Houska	
+Significant Contributors	cary	Cary Huang	cary.huang at highgo.ca
+Significant Contributors	coreyh	Corey Huinker	corey.huinker at gmail.com
+Significant Contributors	simseih	Sami Imseih	samimseih.pg at gmail.com
+Significant Contributors	jjanes	Jeff Janes	jeff.janes at gmail.com
+Significant Contributors	karenjex	Karen Jex	karenjex at hotmail.com
+Significant Contributors	polobo	David Johnston	david.g.johnston at gmail.com
+Significant Contributors	akshay.joshi	Akshay Joshi	akshay.joshi at enterprisedb.com
+Significant Contributors	pjungwir	Paul Jungwirth	pj at illuminatedcomputing.com
+Significant Contributors	ankane	Andrew Kane	andrew at ankane.org
+Significant Contributors	valeriak	Valeria Kaplan	vk at dataegret.com
+Significant Contributors	kandreas	Andreas Karlsson	andreas at proxel.se
+Significant Contributors	shinyakato	Shinya Kato	shinya11.kato at gmail.com
+Significant Contributors	amitdkhan	Amit Khandekar	amitdkhan.pg at gmail.com
+Significant Contributors	kkida	Kosuke Kida	
+Significant Contributors	aklaver	Adrian Klaver	adrian.klaver at aklaver.com
+Significant Contributors	alexk	Oleksii Kliukin	alexk at hintbits.com
+Significant Contributors	knizhnik	Konstantin Knizhnik	
+Significant Contributors	kaigai	KaiGai Kohei	kaigai at heterodb.com
+Significant Contributors	gkokolatos	Georgios Kokolatos	
+Significant Contributors	ololobus	Alexey Kondratov	kondratov.aleksey at gmail.com
+Significant Contributors	melkij	Sergei Kornilov	sk at zsrv.org
+Significant Contributors	jkoshakow	Joseph Koshakow	koshy44 at gmail.com
+Significant Contributors	hydrobiont	Ilya Kosmodemiansky	ik at dataegret.com
+Significant Contributors	d33k4y	Dirk Krautschick	dee-kay at gmx.de
+Significant Contributors	hannukrosing	Hannu Krosing	hannuk at google.com
+Significant Contributors	cyberdem0n	Alexander Kukushkin	cyberdemn at gmail.com
+Significant Contributors	dilip.kumar	Dilip Kumar	dilipbalaut at gmail.com
+Significant Contributors	ha-kun	Hayato Kuroda	kuroda.hayato at fujitsu.com
+Significant Contributors	jeevanladhe	Jeevan Ladhe	jeevanladhe.os at gmail.com
+Significant Contributors	rlathia	Rushabh Lathia	rushabh.lathia at gmail.com
+Significant Contributors		Andrei Lepikhov	lepihov at gmail.com
+Significant Contributors	japin	Japin Li	japinli at hotmail.com
+Significant Contributors	teresamdl	Teresa Lopes	teresamdl at gmail.com
+Significant Contributors	depesz	hubert lubaczewski	depesz at depesz.com
+Significant Contributors	shvetam	Shveta Malik	shveta.malik at gmail.com
+Significant Contributors	ilmari	Dagfinn Ilmari Mannsåker	ilmari at ilmari.org
+Significant Contributors	bmejias	Boriss Mejias	tchorix at gmail.com
+Significant Contributors		Abhijit Menon-Sen	ams at 2ndQuadrant.com
+Significant Contributors	zml	Zhang Mingli	mingli.zhang at enterprisedb.com
+Significant Contributors	yugo.nagata	Yugo Nagata	nagata at sraoss.co.jp
+Significant Contributors	decibel	Jim Nasby	nasbyj at amazon.com
+Significant Contributors	mnencia	Marco Nenciarini	mnencia at debian.org
+Significant Contributors	rl	Regina Obe	rl at pcorp.us
+Significant Contributors	eulerto	Euler Taveira de Oliveira	euler.taveira at enterprisedb.com
+Significant Contributors	xof	Christophe Pettus	christophe.pettus at pgexperts.com
+Significant Contributors	justinpryzby	Justin Pryzby	
+Significant Contributors	juergen@purtz.de	Jürgen Purtz	
+Significant Contributors	eebbrr	Eric Ridge	eebbrr at gmail.com
+Significant Contributors	ringerc	Craig Ringer	craig at 2ndQuadrant.com
+Significant Contributors	ioguix	Jehan-Guillaume de Rorthais	jgdr at dalibo.com
+Significant Contributors	fabriziomello	Fabrízio de Royes Mello	fabrizio at timbira.com.br
+Significant Contributors	bharathrupireddy	Bharath Rupireddy	bharath.rupireddyforpostgres at gmail.com
+Significant Contributors	a.rybakina	Alena Rybakina	lena.ribackina at yandex.ru
+Significant Contributors	nikolay	Nikolay Samokhvalov	nik at postgres.ai
+Significant Contributors	juanjo.santamaria.gmail.com	Juan José Santamaría Flecha	
+Significant Contributors	strk	Sandro Santilli	strk at kbt.io
+Significant Contributors	sehrope	Sehrope Sarkuni	sehrope at jackdb.com
+Significant Contributors	jer	Jeremy Schneider	schneider at ardentperf.com
+Significant Contributors	postgresql_007	Hans-Jürgen Schönig	hs at cybertec.at
+Significant Contributors	ansel	Andreas Seltenreich	seltenreich at gmx.de
+Significant Contributors	ashu_coek	Ashutosh Sharma	ashu.coek88 at gmail.com
+Significant Contributors		Vladimir Sitnikov	sitnikov.vladimir at gmail.com
+Significant Contributors	smithpb2250	Peter Smith	peter.b.smith at fujitsu.com
+Significant Contributors	soudai	Taketomo Sone	alftaketomo at gmail.com
+Significant Contributors		Greg Stark	stark at mit.edu
+Significant Contributors	sulamul	Amul Sul	sulamul at gmail.com
+Significant Contributors	koichi	Koichi Suzuki	koichi.dbms at gmail.com
+Significant Contributors	johto	Marko Tiikkaja	
+Significant Contributors	atsushitorikoshi	Atsushi Torikoshi	torikoshia at oss.nttdata.com
+Significant Contributors	maumau	Takayuki Tsunakawa	maumau307 at gmail.com
+Significant Contributors	mmeent	Matthias van de Meent	boekewurm+postgres at gmail.com
+Significant Contributors	derk	Derk van Veen	dvanveen85 at gmail.com
+Significant Contributors	dvarrazzo	Daniele Varrazzo	daniele.varrazzo at gmail.com
+Significant Contributors	danielverite	Daniel Vérité	daniel at manitou-mail.org
+Significant Contributors	raniervilela	Ranier Vilela	ranier.vf at gmail.com
+Significant Contributors	tndrwang	Tender Wang	tndrwang at gmail.com
+Significant Contributors	jakub.wartak.tomtom	Jakub Wartak	jakub.wartak at enterprisedb.com
+Significant Contributors	sukhadukkham	Daniel Westermann	daniel.westermann at gmail.com
+Significant Contributors	theory	David Wheeler	david at justatheory.com
+Significant Contributors	ewie	Erik Wienhold	ewie at ewie.name
+Significant Contributors	tatsuro_yamada	Tatsuro Yamada	yamatattsu at gmail.com
+Significant Contributors	nbyavuz	Nazir Bilal Yavuz	byavuz81 at gmail.com
+Significant Contributors	apatheticmagpie	Gülçin Yıldırım Jelínek	yildirim.gulcin88 at gmail.com
+Significant Contributors	zhjwpku	Junwang Zhao	zhjwpku at gmail.com
+Past Major Contributors	aglio	Josh Berkus	josh at agliodbs.com
+Past Major Contributors	dfetter	David Fetter	david at fetter.org
+Past Major Contributors	scrappy	Marc G. Fournier	marc.fournier at enterprisedb.com
+Past Major Contributors	sfrost	Stephen Frost	sfrost at snowman.net
+Past Major Contributors	rhodiumtoad	Andrew Gierth	andrew at tao11.riddles.org.uk
+Past Major Contributors		Thomas G. Lockhart	lockhart at alumni.caltech.edu
+Past Major Contributors	meskes	Michael Meskes	meskes at postgresql.org
+Past Major Contributors		Vadim B. Mikheev	vadim4o at yahoo.com
+Past Major Contributors	simon	Simon Riggs	
+Past Major Contributors	wieck	Jan Wieck	jan at wi3ck.info
+Past Contributors		Julian Assange	
+Past Contributors		Gevik Babakhani	
+Past Contributors		David Bennett	
+Past Contributors		Alexey Borzov	
+Past Contributors	zboszor	Zoltán Böszörményi	
+Past Contributors		Emily Boyd	
+Past Contributors		Christopher Browne	
+Past Contributors		Tim Bunce	
+Past Contributors		D'Arcy Cain	
+Past Contributors		Marc Cave-Ayland	
+Past Contributors		Emmanuel Checchet	
+Past Contributors		Andrew Chernow	
+Past Contributors	seanc	Sean Chittenden	
+Past Contributors	justinclift	Justin Clift	
+Past Contributors		Neil Conway	
+Past Contributors	mithun.cy	Mithun Cy	
+Past Contributors		Massimo Dal Zotto	
+Past Contributors	selena	Selena Deckelmann	
+Past Contributors		Dr. George D Detlefsen	
+Past Contributors		Korry Douglas	
+Past Contributors	linuxpoet	Joshua Drake	
+Past Contributors		Chris Dunlop	
+Past Contributors		J. Douglas Dunlop	
+Past Contributors		Oliver Elphick	
+Past Contributors		Francisco Figueiredo	
+Past Contributors		Michael Fuhr	
+Past Contributors		Brian E. Gallew	
+Past Contributors		Michael Glaesemann	
+Past Contributors	kgrittn	Kevin Grittner	
+Past Contributors		Cees de Groot	
+Past Contributors	thhal	Thomas Hallgren	
+Past Contributors		John Hansen	
+Past Contributors	umitanuki	Hitoshi Harada	
+Past Contributors	jonah.harris	Jonah Harris	
+Past Contributors		Alex Hunsaker	
+Past Contributors		Hiroshi Inoue	
+Past Contributors	direvus	Brendan Jurd	
+Past Contributors		Kris Jurka	
+Past Contributors		Christopher Kings-Lynne	
+Past Contributors		Mark Kirkwood	
+Past Contributors		Manfred Koizar	
+Past Contributors	haribabu	Haribabu Kommi	
+Past Contributors		Sergey E. Koposov	
+Past Contributors	hlipa	Zdenek Kotala	
+Past Contributors	markokr	Marko Kreen	
+Past Contributors		Anoop Kumar	
+Past Contributors		Randy Kunkee	
+Past Contributors	dvl	Dan Langille	
+Past Contributors	leonardof	Francalanci Leonardo	
+Past Contributors		Kurt J. Lidl	
+Past Contributors		Barry Lind	
+Past Contributors		Robert Lor	
+Past Contributors		Dan McGuirk	
+Past Contributors		Roberto Mello	
+Past Contributors	emolitor	Ernst Molitor	
+Past Contributors	petermount	Peter Mount	
+Past Contributors		Fernando Nasser	
+Past Contributors		Claudio Natoli	
+Past Contributors		Matthew T. O'Connor	
+Past Contributors		Lamar Owen	
+Past Contributors	mpalmiotto	Mike Palmiotto	
+Past Contributors		Andreas Pflug	
+Past Contributors	intgr	Marti Raudsepp	
+Past Contributors		Ross J. Reedstrom	
+Past Contributors		Thomas van Reimersdahl	
+Past Contributors	lrosenman	Larry Rosenman	
+Past Contributors	hiroshi	Hiroshi Saito	
+Past Contributors		Sergej Sergeev	
+Past Contributors		Jignesh Shah	
+Past Contributors		Gavin Sherry	
+Past Contributors		Michael Siebenborn	
+Past Contributors		Guillaume Smet	
+Past Contributors		Greg Smith	
+Past Contributors		Erich Stamberger	
+Past Contributors		Adam Sussman	
+Past Contributors		Sven Suursoho	
+Past Contributors		Stephan Szabo	
+Past Contributors		ITAGAKI Takahiro	
+Past Contributors	rbt	Rod Taylor	
+Past Contributors	surafel	Surafel Temesgen	
+Past Contributors		Yamada Tsutomu	
+Past Contributors		Reini Urban	
+Past Contributors	wulczer	Jan Urbański	
+Past Contributors	kleptog	Martijn van Oosterhout	
+Past Contributors		Paul "Shag" Walmsley	
+Past Contributors		Philip Warner	
+Past Contributors		Rick Weldon	
+Past Contributors	jwieland	Joachim Wieland	
+Past Contributors		Jason Wright	
+Past Contributors		Karel Zak	
+Past Contributors		Andreas Zeugswetter	
+Past Contributors		Qingqing Zhou	

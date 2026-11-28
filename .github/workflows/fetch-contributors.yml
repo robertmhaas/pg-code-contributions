@@ -1,0 +1,33 @@
+name: Fetch contributors
+
+on:
+  schedule:
+    - cron: '41 9 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: fetch-contributors
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-contributors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Fetch
+        run: python3 fetch-contributors.py
+
+      - name: Commit and push
+        run: |
+          git add data/recognized-contributors.tsv
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'Contributor Fetcher'
+          git config user.email 'contributions@rhaas.dev'
+          python3 contributors-message.py > ../message
+          git commit -q -F ../message
+          git pull -q --rebase
+          git push -q

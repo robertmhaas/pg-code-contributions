@@ -225,6 +225,7 @@ To change how someone is shown, edit `Canonical:`.
 | `classify-commits.py` | writes `data/line-adjustments/`: reverted and mechanical commits |
 | `extract-mail.py`     | writes `data/mail/` from the archive's mbox files         |
 | `update-people.py`    | adds new names and addresses to `people.txt`              |
+| `fetch-contributors.py` | writes `data/recognized-contributors.tsv` from the website's Recognized Contributors page |
 | `commitdata.py`       | loads the commit data with the overrides applied          |
 | `people.py`           | loads `people.txt` and maps names and addresses to people |
 | `check-commits.py`    | reports problems with the commit data and overrides       |
@@ -239,7 +240,10 @@ A GitHub Action (`.github/workflows/extract-commits.yml`) keeps the commit
 data current. It runs `extract-commits.py`, `classify-commits.py` and
 `update-people.py`, and commits the result. Mail isn't automated, because
 downloading the archive needs a postgresql.org community account. After
-`extract-mail.py`, run `update-people.py` by hand.
+`extract-mail.py`, run `update-people.py` by hand. A second Action
+(`.github/workflows/fetch-contributors.yml`) runs `fetch-contributors.py`
+weekly and commits with a message from `contributors-message.py`, which
+names who was added or moved.
 
 To run reports:
 
