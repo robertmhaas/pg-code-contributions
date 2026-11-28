@@ -8,6 +8,26 @@ The same figures as export-db.py's top_authors, top_opp_committers and
 top_senders views, with every row, and what the data covers: the latest
 commit, and which months of each list's archive were read.  Leaving rows
 out, and saying so, is up to whatever shows them.
+
+    {"generated": ..., "latest_commit": {"hash": ..., "committed_at": ...},
+     "mail": {"pgsql-hackers": {"months": ["2016-01", ...]}},
+     "years": {"2025": {
+       "commits": {"count", "first", "last", "complete",
+                   "authors": [{"person", "name", "lines", "commits", "committer"}],
+                   "for_others": [{"person", "name", "lines", "commits"}]},
+       "mail": {"pgsql-hackers": {"count", "months", "complete",
+                                  "senders": [{"person", "name", "messages"}]}}}}}
+
+- authors is top_authors, for_others is top_opp_committers, and senders is
+  top_senders, without the percentages, which are left to whatever shows
+  them.  committer is false where top_authors shows [*].
+- person is the person id, or null for "(no one)" and "(unidentified)".
+  Since it's a Canonical: value, it includes the person's address if they
+  have one.
+- complete says whether the year is over: for commits, whether there are
+  commits from a later year; for mail, whether all twelve months were
+  read.  A mail count leaves out messages from what isn't a person, as
+  senders does.
 """
 
 import argparse

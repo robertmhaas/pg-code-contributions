@@ -2,17 +2,56 @@
 """
 Extract per-message sender metadata from PostgreSQL mailing list archives.
 
+    python3 extract-mail.py --mbox-dir DIR
+
 Reads the archive's monthly mbox files, named LIST.YYYYMM or LIST.YYYYMM.mbox
 (for example pgsql-hackers.202503), from anywhere under --mbox-dir, and for every year
 writes
 
     data/mail/LIST/YYYY.tsv   message_id  sent_at  from_name  from_address
 
-in PostgreSQL COPY text format, and records the months it read in
-data/mail/LIST/months.tsv.  See README.md for the rules.
+in PostgreSQL COPY text format, one row per message in archive order:
 
-A year's file is rebuilt from all of that year's mbox files found, so give
-it every month of the years you want written.
+- message_id is the Message-ID, without angle brackets, as in a
+  Discussion: link.
+- sent_at is the Date, as YYYY-MM-DD HH:MM:SS +hhmm with the sender's
+  offset; if there's no usable Date, when the archive received it, in UTC.
+- from_name is the display name in From, decoded; empty if there's none.
+- from_address is the address in From.
+
+It also records the months it read in data/mail/LIST/months.tsv, one
+month column, YYYY-MM, so a year that's missing months can be told apart
+from a quiet one.  It replaces the months of the years it writes and keeps
+the others'.
+
+Downloading the mbox files needs a postgresql.org community account, so
+this isn't automated: download them from the mbox link on the archive's
+month pages.  A year's file is rebuilt from all of that year's mbox files
+found, so give it every month of the years you want written; --years
+limits which are written.  Ten years take about 20 seconds.
+
+The archive starts each message with a "From " line whose envelope sender
+is a list's owner address (pgsql-hackers-owner+..., or another list's for
+a cross-posted message), and only those lines start a message.  The
+archive doesn't escape "From " in message bodies, so other lines that look
+like the start of a message are part of the message they're in.  Most are
+the "From <sha1> Mon Sep 17 00:00:00 2001" line that begins git
+format-patch output, 700 to 2,300 a year; the counts behind the 2019-2025
+posts took each of those for a message from the patch's author.
+
+A message belongs to the year of the archive file it's in.  The archive
+files a message under the UTC month of its Date, except, it seems, when
+that's later than when the message arrived.
+
+Encoded words (RFC 2047) are decoded wherever they are, including inside
+quotes, where many clients put them, and bytes labelled Latin-1 or another
+single-byte charset are read as UTF-8 if they're valid UTF-8.
+"Name <address>", "address (Name)" and a bare address are all understood.
+Otherwise names are as written: "Zhou, Zhiguo", "Hayato Kuroda (Fujitsu)"
+and an address used as a name are left for people.py.  Addresses are
+written the way the archive's web pages write them,
+tgl(at)sss(dot)pgh(dot)pa(dot)us, including any that appear in a name.
+Like the archive's own, that only deters trivial scraping.
 """
 
 import argparse

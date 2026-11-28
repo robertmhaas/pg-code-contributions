@@ -6,9 +6,27 @@ Write a PostgreSQL dump of the contribution data, for running reports.
     createdb contributions
     psql -q -f contributions.sql contributions
 
-Tables people, commits, commit_tags and emails, and views for the usual
-reports; see README.md.  The dump drops and recreates its own tables and
-views, so it can be loaded again over an earlier one.
+The dump drops and recreates its own tables and views, so it can be
+loaded again over an earlier one.  Tables, each described in SCHEMA:
+
+- people: a stanza of people.txt each, with its Canonical: value as id.
+- commits: the columns of data/commits/, plus the committer and primary
+  author as people, credited lines with all reverts and with only
+  same-year reverts, and the line adjustment.
+- commit_tags: a tag each, after tag fixes, with its canonical role and
+  person for person tags.
+- emails: a mailing list message each, with the sender as a person.
+
+The committer of a commit is its git author, which PostgreSQL's committers
+set to themselves; a commit pushed by someone else, such as a security
+release, keeps the committer of record.
+
+Views, in INDEXES_AND_VIEWS, for the usual reports: committers,
+top_authors (as in the yearly posts), top_opp_committers, credits and
+top_senders.
+
+    SELECT "#", author, lines, pct_lines, cum_pct_lines, commits
+      FROM top_authors WHERE year = 2025 ORDER BY "#" LIMIT 30;
 """
 
 import argparse

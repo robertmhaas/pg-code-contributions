@@ -3,8 +3,19 @@ Load commit data and its overrides into memory.
 
     import commitdata
     data = commitdata.load()
-    for commit in data.commits.values():
-        print(commit.hash, commit.tags)
+    commit = data.commits['a8eeb22f171']
+    commit.raw_tags         # [(tag, value)] as extracted
+    commit.tags             # with tag fixes applied
+    commit.authors          # Author and Co-authored-by values, else the git author
+    commit.primary_author   # authors[0], who is credited with the lines
+    commit.credited_lines   # insertions after line adjustments
+    commit.adjustment       # the line adjustment in effect, if any
+    commit.reverted_by      # the revert in effect, if any
+    commit.reverted_at      # its date
+
+    # credit that a later year's revert doesn't take away, as in the
+    # yearly posts
+    data.credited_lines(commit, reverts_until=datetime.date(commit.year, 12, 31))
 
 Reads data/commits/*.tsv and data/tags/*.tsv, as written by
 extract-commits.py, and applies overrides/tag-fixes/*.tsv.  Also reads

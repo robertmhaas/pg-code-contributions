@@ -2,15 +2,49 @@
 """
 Extract per-commit metadata from a PostgreSQL git repository.
 
+    python3 extract-commits.py --repo ~/pgsql --ref origin/master          # changed years
+    python3 extract-commits.py --repo ~/pgsql --ref origin/master --all    # everything
+
 For every year, writes
 
     data/commits/YYYY.tsv   hash  author  committed_at  insertions  subject
     data/tags/YYYY.tsv      hash  tag  value
 
-in PostgreSQL COPY text format.  See README.md for the counting rules.
+in PostgreSQL COPY text format, rows in master order, oldest first.
+
+- hash is %h, pinned to 11 digits (longer only if ambiguous).
+- author is %an, the git author.
+- committed_at is %ci, the committer date as recorded, with its offset.
+- insertions is from git log --shortstat -w -M; a commit that only
+  changes whitespace has no stat line and gets 0.
+- subject is %s.  Some older commits have no blank line after the first
+  line, so their subject runs on into the rest of that paragraph.
+- tag and value are a structured tag's key and the rest of its line, both
+  as typed, one row per tag, in message order.
+
+Every commit reachable from the ref is included.  A commit belongs to the
+UTC year of its committer date, except that it's never dated earlier than
+the commit before it, which guards against skewed clocks and author dates
+carried over as committer dates.  So a few commits sit in a file whose
+year differs from the date in committed_at: 2019-01-01 08:53:02 +0900 is
+in 2018.
+
+A tag is any line "Key: value" except the first line.  The key is a word
+or hyphenated words (Author, Reviewed-by, Backpatch-through) or, for older
+commits, a phrase of up to four words ending in "by" (Submitted by,
+Pointed out by).  Spaces may come before the colon, and at least one space
+or tab must follow it, which rules out URLs and times.  An indented line
+right after a tag continues its value, as with a Discussion: tag followed
+by a list of URLs.  A tag with no value is dropped.  Prose such as "Patch
+by Jane Doe, reviewed by John Roe" isn't captured, and lines that only
+look like tags, such as "ERROR: ..." pasted from psql, are; tag fixes deal
+with the first, and readers pick tags by key.
 
 By default only years whose list of commits has changed are rewritten,
-which in practice means the current year.  --all rewrites every year.
+which in practice means the current year, and the previous one around New
+Year.  --all rewrites every year, in parallel; that takes about 40 seconds
+on an 8-core laptop.  Use an up-to-date clone: a stale one rewrites the
+current year without the commits it's missing.
 """
 
 import argparse

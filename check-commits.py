@@ -2,6 +2,18 @@
 """
 Load the commit data and overrides, and report anything that looks wrong.
 
+For tag fixes: an unknown commit or verb, a fix in the wrong year's file
+or out of commit order, a delete that matches nothing, an insert or append
+of a value that's already there (most likely the extraction now reads
+that line itself), and replace mixed with other verbs for one tag.
+
+For line adjustment overrides: an unknown commit or kind, a row in the
+wrong year's file or out of commit order, a second row for one commit,
+details that don't belong to the kind, a residual larger than the
+insertions, a reverted-by commit that isn't later or a revert-date that
+isn't its date, a row identical to the generated one, and a normal row
+that cancels nothing.
+
 Exits with status 1 if there are problems.
 """
 

@@ -8,10 +8,61 @@ reverted or mechanical:
     hash  kind  details
 
 where kind is "revert" or "mechanical" and details is a comma-separated
-list of key=value pairs: reverted-by=HASH and revert-date=YYYY-MM-DD (UTC)
-for reverts, residual=N when only part of the commit is discounted (N lines
-are still credited), and rule=NAME saying which rule fired.  The file for a year holds that year's commits,
-oldest first.  See README.md for the rules.
+list of key=value pairs:
+
+- reverted-by=HASH: the commit that reverts it.
+- revert-date=YYYY-MM-DD: that commit's date, in UTC like the year files,
+  so reverts can be counted in different ways, such as only within the
+  commit's own year.
+- residual=N: only part of the commit is discounted; N lines are still
+  credited.  Absent when the whole commit is discounted.
+- rule=NAME: which rule below produced the row.
+
+The file for a year holds that year's commits, oldest first.
+
+Reverts, at any size.  A commit whose subject starts with "Revert" or
+whose message says "This reverts commit" reverts:
+
+- the commits it names by hash in a sentence about reverting
+  (revert-message);
+- the commits in a list of hashes, as in "The following commits are
+  reverted:" (revert-list);
+- the commit whose subject it quotes, as in Revert "..." (revert-subject);
+- if it says it also reverts follow-up commits, the commits in between
+  that mention one of those by hash (revert-follow-up).
+
+A revert counts as reverting another revert only if it says so plainly
+("This reverts commit X" or a quoted subject), not just because it
+mentions one.  Reverting a revert puts back what that revert reverted, so
+those commits are credited again, and aren't treated as reverted a second
+time even if the message names them.  A revert that deletes less than 30%
+of what its targets inserted (for targets of 100 or more lines) only
+reverted part of them, so they aren't treated as reverted.
+
+Translation updates, at any size: a commit that touches only translation
+files (.po files and the nls.mk that lists them) is mechanical
+(translation).
+
+Mechanical, only for commits of 300 or more lines.  If the subject says
+it's pgindent, perltidy, a copyright update, a translation update, or
+reformatting, the whole commit is mechanical (format-subject).  Otherwise
+each file is judged on its own:
+
+- a generated or imported file, such as a .po file, a Unicode table, time
+  zone data, Snowball, config.guess, or autoconf's configure, is all
+  mechanical (generated-files);
+- a file whose added words are at least 97% rearranged deleted words is
+  all mechanical (reformat): a reformat, or a bulk edit such as adding a
+  column to every entry of a catalog .dat file;
+- in any other file, only the lines that match lines deleted elsewhere in
+  the commit are mechanical (code-motion).
+
+If at least half the commit's lines are mechanical, the commit is, and the
+rest of its lines are the residual; rule= names the biggest share.  A
+residual under 50 lines isn't recorded.
+
+The rules are meant to be mostly right, not perfect;
+overrides/line-adjustments/ corrects them.
 
 Only new commits can change how an old commit is classified, by reverting
 it, so a run looks only at commits added since the last one (recorded in

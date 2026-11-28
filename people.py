@@ -3,19 +3,44 @@ The people named in commits and mail, as listed in people.txt.
 
     import people
     p = people.load()
-    p.resolve_value('Jane Doe <jd@example.com>')   # (person id or None, status)
-    p.resolve('Jane Doe', 'jd(at)example(dot)com')  # the same, from a name and address
-    p.persons[pid]                                 # Person
-    p.authors(commit), p.primary_author(commit)
+    p.resolve_value('Jane Doe <jd@example.com> (test case)')
+                            # (person id or None, status)
+    p.resolve('Jane Doe', 'jd(at)example(dot)com')   # the same, from a name and address
+    p.persons[pid]          # Person: id, name, address, kind, identities
+    p.authors(commit)       # [(value, person id, status)] for commit.authors,
+                            # without those that identify no one, such as AI tools
+    p.primary_author(commit)   # the first of those, credited with the lines
 
-people.txt has a stanza per person: the name and address to show them by,
-and every other name and address they're known by.  An address belongs to
-one person; a name usually does.  update-people.py adds what new commits
-and mail bring, and people edit it by hand to merge, split or rename; see
-README.md.  This module only reads it.
+A person id is the stanza's Canonical: value, so it changes if that's
+edited.  update-people.py adds what new commits and mail bring, and people
+edit the file by hand to merge, split or rename; see README.md.  This
+module only reads it.
 
-Each person tag is expected to name one person under a canonical key; tag
-fixes make them so.
+An address belongs to one person.  A name usually does; when several
+people have it, it identifies none of them on its own.  Names are compared
+by a key that ignores case, accents, punctuation, word order, and initials
+if two other words are left, so "Zhou, Zhiguo" and "zhiguo zhou" match, as
+do "Álvaro Herrera" and "Alvaro Herrera", and "Andrey M. Borodin" and
+"Andrey Borodin".  Addresses, quotes, and glosses or affiliations in
+trailing parentheses are removed first, and a name written in two scripts,
+like "Hou Zhijie 侯志杰" or "王海洋 (Haiyang Wang)", also counts as each
+script's part.
+
+A name and address are looked up like this:
+
+- An address listed for someone is theirs, whatever the name.
+- Otherwise the name decides: a stanza listing it on its own first, then
+  one listing it with an address.
+- A one-word name, like "MauMau" or "Michael", identifies someone only
+  where it's listed on its own.  So a handle can be listed, but a bare
+  first name in a commit tag identifies no one unless a tag fix spells it
+  out.
+
+A person tag is one of PERSON_TAGS and names one person; tag fixes make
+them so.  A value that still names several, like "Jane Doe and John Roe",
+identifies no one.  (When the only separators are commas and there's an
+address, it takes two full names to make a list, so
+"Wong, Yi Wen <yw@example.com>" is one person.)
 """
 
 import collections
